@@ -1,0 +1,39 @@
+{
+  "id": "harbourline-marketing-assistant-sample",
+  "company": "Harbourline",
+  "role": "Marketing Assistant",
+  "location": "Leeds, UK",
+  "url": null,
+  "sample": true,
+  "snapshot": { "source": null, "fetchedAt": "2026-10-27T13:00:00Z", "note": "A sample form for a made-up employer, written for the demo. Harbourline is not a real company." },
+  "documents": [
+    {
+      "id": "answer",
+      "title": "Why this role",
+      "fieldId": "why_this_role",
+      "question": "Why do you want this role, and what from your experience will you bring to it?",
+      "wordLimit": 250,
+      "requirements": [
+        { "id": "why", "text": "Why you want this role" },
+        { "id": "experience", "text": "The experience you would bring" },
+        { "id": "result", "text": "A result you achieved, and how you got it" },
+        { "id": "contribution", "text": "What you did yourself, if it was a team effort", "personal": true }
+      ],
+      "limitSource": "form"
+    },
+    {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": "cover_letter_text",
+      "question": "Cover letter (optional)",
+      "wordLimit": 350,
+      "requirements": [
+        { "id": "motivation", "text": "Why this role and this company, in your own words" },
+        { "id": "evidence", "text": "The experience that shows you can do the job" }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The form sets no limit; 350 words keeps a letter to one page."
+    }
+  ],
+  "portalTasks": ["Full name", "Email", "Phone", "CV upload", "Right to work in the UK", "Notice period", "Salary expectations", "Where did you hear about this role?"]
+}

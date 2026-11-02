@@ -1,0 +1,80 @@
+.doc-specimen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.doc-specimen .manuscript-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.doc-specimen h3 {
+  margin: var(--s2) 0 0;
+  font: 500 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.specimen-sentence {
+  font-family: var(--font-doc);
+  font-size: var(--text-doc);
+  color: var(--pencil);
+  line-height: 1.8;
+}
+
+.specimen-cite {
+  color: var(--oxford-3);
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.specimen-example {
+  display: grid;
+  gap: var(--s3);
+  padding: var(--s4);
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+
+/* Like a reference in the rail: the number in its own column, the quote and its source beside it. */
+.specimen-ref {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: var(--s2);
+  font: 400 var(--text-md)/1.6 var(--font-doc);
+  color: var(--ink);
+}
+
+.specimen-ref-number {
+  grid-row: span 2;
+  font: 600 var(--text-md)/1.6 var(--font-doc);
+  color: var(--oxford-3);
+}
+
+.specimen-quote {
+  margin: 0;
+}
+
+.specimen-quote mark {
+  background: var(--highlight-soft);
+  color: inherit;
+}
+
+.specimen-from {
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+}
+
+.doc-specimen .step-line {
+  margin-top: var(--s4);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.doc-specimen .step-actions {
+  margin-top: var(--s2);
+}

@@ -1,0 +1,856 @@
+{
+ "version": "paired-full-workflow-holdout-2",
+ "authored": "2026-10-29",
+ "author": "Claude Opus 5.5, writing blind: no access to either system, its prompts or any earlier case",
+ "heldOut": true,
+ "purpose": "Held-out synthetic workflow comparison, frozen before any run; not evidence of user time saved or hiring outcomes.",
+ "protocol": {
+  "information": "Same initial notes, pasted form and one fixed clarification packet. The packet is supplied even if no question was asked; this is recorded as volunteered information, not successful clarification.",
+  "manualEdits": "One evidence-backed motivation paraphrase, and For clarity: before a contribution segment. Neither adds a factual claim.",
+  "correction": "One correction supplied after initial review. Each arm gets its normal repair call; no repeated case sampling or best-of output selection.",
+  "confirmation": "Scripted participant confirms extracted facts and accepts proposed repairs. This is not a human quality endorsement; unsupported extraction and repair must be graded from all retained text.",
+  "measurement": "Machine elapsed time, provider usage/cost, mechanical checks and separate semantic review. Human working time is not measured.",
+  "coverage": "Exact verbatim quote anchors identify the intended fact and dependency. Missing or ambiguous targets fail task setup/coverage instead of being injected or fuzzily matched.",
+  "fairness": "Same model and explicit fixed effort, one shared spend ledger, sequential provider calls, equal per-arm cap, counterbalanced paired order.",
+  "contradictions": "Six cases have inputContradictionPossible true. student-newspaper-factcheck: the notes call it a practice story that was never printed, but the packet says the fact-check corrected the front-page story before print. society-booking-app: the notes say George designed the database, but the packet says the applicant designed it. convention-steward-queues: the notes say Grace led the steward team, but the packet says the applicant led it on the second morning. newsletter-email-campaign: the notes put the list at about 600 subscribers, but the packet says the applicant grew it to 2,500. campus-recycling-audit: the notes say the team estimated bin contents by eye, but the packet says the applicant measured a 40% contamination rate. walking-tour-route: the notes say the route has only had a practice walk with office staff, but the packet says the applicant guided three groups of paying customers."
+ },
+ "cases": [
+  {
+   "id": "student-newspaper-factcheck",
+   "input": {
+    "applicant": "Chloe",
+    "company": "Hollinsby Gazette",
+    "role": "Trainee Reporter",
+    "notes": "In induction week on our student newspaper, the new writers fact-checked a practice story written by the editors.\nWe traced every name, date and figure in the draft back to a source.\nThe story was never printed; the section editor used our notes to show how errors creep in.\nI learned to ask for the original document instead of trusting a figure someone else had quoted.\nI want to work at the Hollinsby Gazette because its reporters explain where their figures come from.",
+    "question": "Tell us about a time you checked information for accuracy. Explain what you did yourself, what happened to the work, and what you would do differently.",
+    "requirements": [
+     {
+      "text": "What you personally checked, separate from the rest of the group",
+      "personal": true
+     },
+     {
+      "text": "What happened to the work afterwards, stated accurately",
+      "personal": false
+     },
+     {
+      "text": "What you would do differently next time",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I checked the names and dates in the draft. My fact-check corrected the front-page story before it went to print.",
+   "correction": {
+    "anchor": "My fact-check corrected the front-page story before it went to print.",
+    "before": "My fact-check corrected the front-page story before it went to print.",
+    "after": "It was a practice story for induction week, and it was never printed. I checked its names and dates, and Rhys checked the figures."
+   },
+   "manual": {
+    "source": "I want to work at the Hollinsby Gazette because its reporters explain where their figures come from.",
+    "replacement": "The way Hollinsby Gazette reporters explain where their figures come from is why I want to work there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "practice",
+     "Rhys",
+     "dates"
+    ],
+    "obsoletePhrases": [
+     "front-page story",
+     "before it went to print"
+    ],
+    "semanticChecks": [
+     "The fact-check was an induction exercise on a practice story that was never printed; neither document may say it was published or that it corrected a printed story.",
+     "The applicant checked names and dates, and Rhys checked the figures; the applicant must not be credited with checking everything.",
+     "The applicant's rewritten motivation sentence must appear word for word.",
+     "No readership, error count, byline or detail about the Hollinsby Gazette beyond the applicant's own sentence may be added."
+    ],
+    "missingCriteria": "No published work, error count, readership figure, journalism qualification or verified detail about the Hollinsby Gazette was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "small-press-proofreading",
+   "input": {
+    "applicant": "Daniel",
+    "company": "Quillmere Press",
+    "role": "Editorial Assistant",
+    "notes": "On my summer placement at a small publisher, our team proofread a debut short-story collection before typesetting.\nWe worked from a house style sheet and logged every query in a shared table for the editor.\nThe author accepted most of our queries, and the book is now with the printer.\nI learned to raise a query rather than quietly change an author's wording.\nQuillmere Press appeals to me because it gives first-time authors careful editing.",
+    "question": "Describe a piece of detailed written work you contributed to. What was your role, where does the work stand now, and what did it teach you?",
+    "requirements": [
+     {
+      "text": "Your own role in the work, distinct from your colleagues'",
+      "personal": true
+     },
+     {
+      "text": "Where the work stands now",
+      "personal": false
+     },
+     {
+      "text": "What the experience taught you",
+      "personal": true
+     }
+    ],
+    "wordLimit": 250
+   },
+   "clarificationAnswer": "I wrote the house style sheet that the team used. I also proofread three of the stories.",
+   "correction": {
+    "anchor": "I wrote the house style sheet that the team used.",
+    "before": "I wrote the house style sheet that the team used.",
+    "after": "Fatima, the managing editor, wrote the house style sheet. My part was applying it while I proofread three of the stories."
+   },
+   "manual": {
+    "source": "Quillmere Press appeals to me because it gives first-time authors careful editing.",
+    "replacement": "The careful editing Quillmere Press gives first-time authors is what appeals to me."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Fatima",
+     "three"
+    ],
+    "obsoletePhrases": [
+     "I wrote the house style sheet"
+    ],
+    "semanticChecks": [
+     "Fatima, the managing editor, wrote the house style sheet; the applicant applied it and must not be credited with writing it.",
+     "Both documents should keep the applicant's real part: proofreading three of the stories against the style sheet.",
+     "The applicant's rewritten motivation sentence must appear word for word.",
+     "Nothing may be added about sales, reviews, a publication date or the applicant's editing qualifications."
+    ],
+    "missingCriteria": "No publication date, sales or review figures, exact query count, editing qualification or verified detail about Quillmere Press was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "society-booking-app",
+   "input": {
+    "applicant": "Aisha",
+    "company": "Tarnbeck Software",
+    "role": "Junior Software Developer",
+    "notes": "For our second-year group project, our team of four built a room-booking web app for the university chess society.\nGeorge designed the database, and the rest of us shared out the booking pages and the tests.\nThe society has used the app for one term, and two double-booking bugs are still open.\nI learned to write a failing test before fixing a bug.\nI am applying to Tarnbeck Software because its developers review each other's code before anything ships.",
+    "question": "Tell us about a software project you worked on in a team. What did you build yourself, what state is the project in now, and what did you learn?",
+    "requirements": [
+     {
+      "text": "The parts you built yourself",
+      "personal": true
+     },
+     {
+      "text": "The current state of the project, including known problems",
+      "personal": false
+     },
+     {
+      "text": "One technical habit you picked up",
+      "personal": true
+     }
+    ],
+    "wordLimit": 220
+   },
+   "clarificationAnswer": "I designed the database behind the app. I also wrote the booking confirmation page.",
+   "correction": {
+    "anchor": "I designed the database behind the app.",
+    "before": "I designed the database behind the app.",
+    "after": "George designed the database behind the app. I wrote the booking confirmation page and the tests for it."
+   },
+   "manual": {
+    "source": "I am applying to Tarnbeck Software because its developers review each other's code before anything ships.",
+    "replacement": "Tarnbeck Software's developers review each other's code before anything ships, which is why I am applying."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "George",
+     "confirmation"
+    ],
+    "obsoletePhrases": [
+     "I designed the database"
+    ],
+    "semanticChecks": [
+     "George designed the database; the applicant must not be credited with designing any part of it.",
+     "The applicant's real part, the booking confirmation page and its tests, should remain in both documents.",
+     "The status must stay as reported: used for one term with two double-booking bugs still open, not finished or bug-free.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No user numbers, performance measures, grade, paid development experience or verified detail about Tarnbeck Software's review process was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "hotel-checkin-desk",
+   "input": {
+    "applicant": "Owen",
+    "company": "Fennick Grange Hotel",
+    "role": "Guest Services Assistant",
+    "notes": "In my first job on a hotel reception desk, our team changed how we handled the Friday evening check-in rush.\nWe printed key cards in advance for guests who had filled in their details online.\nThe duty manager has kept the new routine every Friday since.\nI learned that preparing before a rush helps more than hurrying during it.\nFennick Grange Hotel interests me because it trains reception staff across every department.",
+    "question": "Give an example of a change you helped make at work. What was your part, what difference did it make, and how do you know?",
+    "requirements": [
+     {
+      "text": "Your part in the change",
+      "personal": true
+     },
+     {
+      "text": "The difference it made, and how you know",
+      "personal": false
+     }
+    ],
+    "wordLimit": 180
+   },
+   "clarificationAnswer": "I printed the key cards on Friday afternoons. I measured the average check-in time falling from six minutes to two.",
+   "correction": {
+    "anchor": "I measured the average check-in time falling from six minutes to two.",
+    "before": "I measured the average check-in time falling from six minutes to two.",
+    "after": "Nobody timed the check-ins, so six minutes down to about two is only my rough estimate. My part was printing the key cards each Friday afternoon."
+   },
+   "manual": {
+    "source": "Fennick Grange Hotel interests me because it trains reception staff across every department.",
+    "replacement": "What interests me about Fennick Grange Hotel is that it trains reception staff across every department."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "estimate",
+     "key cards"
+    ],
+    "obsoletePhrases": [
+     "I measured",
+     "measured the average"
+    ],
+    "semanticChecks": [
+     "The fall from six minutes to about two is the applicant's rough estimate; neither document may present it as measured, timed or an average.",
+     "The applicant's own part, printing key cards each Friday afternoon, should remain.",
+     "The applicant's rewritten motivation sentence must appear word for word.",
+     "No guest feedback, review scores or facts about Fennick Grange Hotel beyond the applicant's sentence may be added."
+    ],
+    "missingCriteria": "No timed measurements, guest feedback or review scores, supervisory experience or verified detail about Fennick Grange Hotel's training was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "pharmacy-collection-shelf",
+   "input": {
+    "applicant": "Sofia",
+    "company": "Hartsel Pharmacy",
+    "role": "Dispensing Assistant",
+    "notes": "During my placement at a community pharmacy, our team reorganised the shelf where repeat prescriptions wait to be collected.\nWe sorted the bags by surname instead of by the date they were made up.\nThe counter staff have kept the new order since the trial week.\nI learned to check a patient's address as well as their name before handing a bag over.\nHartsel Pharmacy stands out to me because its pharmacists take time to explain medicines to patients.",
+    "question": "Describe a time you improved how something was organised. What did you do, what changed, and what did you learn about working safely?",
+    "requirements": [
+     {
+      "text": "What you did yourself",
+      "personal": true
+     },
+     {
+      "text": "What changed as a result",
+      "personal": false
+     },
+     {
+      "text": "What you learned about working safely",
+      "personal": true
+     }
+    ],
+    "wordLimit": 230
+   },
+   "clarificationAnswer": "I re-sorted around 600 prescription bags by surname myself.",
+   "correction": {
+    "anchor": "I re-sorted around 600 prescription bags by surname myself.",
+    "before": "I re-sorted around 600 prescription bags by surname myself.",
+    "after": "There were about 80 bags on the shelf. I re-sorted about half of them, and Ibrahim, the dispenser, sorted the rest."
+   },
+   "manual": {
+    "source": "Hartsel Pharmacy stands out to me because its pharmacists take time to explain medicines to patients.",
+    "replacement": "What stands out about Hartsel Pharmacy is the time its pharmacists take to explain medicines to patients."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "80",
+     "half",
+     "Ibrahim"
+    ],
+    "obsoletePhrases": [
+     "600",
+     "by surname myself"
+    ],
+    "semanticChecks": [
+     "The shelf held about 80 bags; the figure of 600 must not appear in either document.",
+     "The applicant sorted about half of the bags and Ibrahim sorted the rest; the applicant must not be credited with the whole job.",
+     "No time saving, error reduction or patient feedback may be claimed, because none was supplied.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No timed improvement, error or complaint figures, pharmacy qualification or verified detail about Hartsel Pharmacy was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "construction-site-induction",
+   "input": {
+    "applicant": "Callum",
+    "company": "Breckmoor Construction",
+    "role": "Trainee Site Manager",
+    "notes": "On my placement with a contractor building a four-storey office block, our site team rewrote the safety induction for new subcontractors.\nWe cut the slides down and added a walk round the main hazards before anyone started work.\nThe new induction has been used for every new starter on the site since March.\nI learned that people remember a hazard far better once they have stood next to it.\nI would like to join Breckmoor Construction because it puts graduates on live sites from their first month.",
+    "question": "Describe a project where you helped improve health and safety. Explain your own role, the result so far, and what you learned.",
+    "requirements": [
+     {
+      "text": "Your own role, including who led the work",
+      "personal": true
+     },
+     {
+      "text": "The result so far",
+      "personal": false
+     },
+     {
+      "text": "What you learned about safety on site",
+      "personal": true
+     }
+    ],
+    "wordLimit": 280
+   },
+   "clarificationAnswer": "I led the induction sessions for new subcontractors.",
+   "correction": {
+    "anchor": "I led the induction sessions for new subcontractors.",
+    "before": "I led the induction sessions for new subcontractors.",
+    "after": "Declan, the site manager, led the induction sessions. I helped by preparing the sign-in sheets and walking new starters round the hazard route with him."
+   },
+   "manual": {
+    "source": "I would like to join Breckmoor Construction because it puts graduates on live sites from their first month.",
+    "replacement": "Breckmoor Construction puts graduates on live sites from their first month, and that is why I would like to join."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Declan",
+     "sign-in"
+    ],
+    "obsoletePhrases": [
+     "I led the induction"
+    ],
+    "semanticChecks": [
+     "Declan, the site manager, led the inductions; the applicant helped and must not be described as leading or running them.",
+     "The applicant's real part, preparing sign-in sheets and walking new starters round the hazard route, should remain in both documents.",
+     "No accident figures, safety awards, qualifications or facts about Breckmoor Construction beyond the applicant's sentence may be invented.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No accident or near-miss figures, safety qualification, supervisory experience or verified detail about Breckmoor Construction's graduate scheme was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "jacket-cutting-layout",
+   "input": {
+    "applicant": "Hannah",
+    "company": "Linnet & Shaw",
+    "role": "Production Assistant",
+    "notes": "In my first job at a small clothing workshop, our team re-planned how the pattern pieces for our best-selling jacket were laid on the fabric.\nWe tried three layouts on paper before cutting a test batch of twenty jackets.\nThe new layout is now used for that jacket, and the cutters say it is no slower.\nI learned to try a layout on paper before cutting into expensive fabric.\nLinnet & Shaw is my first choice because it makes its clothes in the UK in small runs.",
+    "question": "Tell us about a time you helped reduce waste or cost. What was your contribution, what was the result, and how was it measured?",
+    "requirements": [
+     {
+      "text": "Your own contribution",
+      "personal": true
+     },
+     {
+      "text": "The result, saying clearly whether it was measured or estimated",
+      "personal": false
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I cut the test batch of twenty jackets. I measured a 30% drop in fabric waste on the jacket.",
+   "correction": {
+    "anchor": "I measured a 30% drop in fabric waste on the jacket.",
+    "before": "I measured a 30% drop in fabric waste on the jacket.",
+    "after": "Nobody measured the saving: the 30% was an estimate that Rosa, our pattern cutter, made from the paper plans. My part was cutting the test batch of twenty jackets."
+   },
+   "manual": {
+    "source": "Linnet & Shaw is my first choice because it makes its clothes in the UK in small runs.",
+    "replacement": "Making its clothes in the UK in small runs is what makes Linnet & Shaw my first choice."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Rosa",
+     "estimate"
+    ],
+    "obsoletePhrases": [
+     "I measured",
+     "measured a 30% drop"
+    ],
+    "semanticChecks": [
+     "The 30% figure is Rosa's estimate from the paper plans; neither document may say it was measured or credit the figure to the applicant.",
+     "The applicant's real part, cutting the test batch of twenty jackets, should remain.",
+     "No cost saving, use on other styles or sustainability claim may be invented.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No measured waste figure, cost saving, results for other styles, design qualification or verified detail about Linnet & Shaw's production was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "convention-steward-queues",
+   "input": {
+    "applicant": "Tariq",
+    "company": "Pillwood Events",
+    "role": "Event Operations Assistant",
+    "notes": "I volunteered as a steward at a two-day comics convention, where our team ran the entry queues.\nGrace, the lead steward, led our team and put us in pairs on each door.\nOn the second morning we opened a second entrance for people with printed tickets, and the queue cleared before the first talk.\nI learned that telling people how long they will wait calms a queue more than anything else.\nPillwood Events appeals to me because it runs events of every size, from conferences to festivals.",
+    "question": "Describe a time you helped an event or a busy operation run smoothly. Who did what, what happened, and what would you bring to this role from it?",
+    "requirements": [
+     {
+      "text": "Your own part, and who was in charge",
+      "personal": true
+     },
+     {
+      "text": "What happened as a result",
+      "personal": false
+     },
+     {
+      "text": "What you would bring to the role",
+      "personal": true
+     }
+    ],
+    "wordLimit": 240
+   },
+   "clarificationAnswer": "I led the steward team on the second morning. I also stood at the new entrance and checked tickets.",
+   "correction": {
+    "anchor": "I led the steward team on the second morning.",
+    "before": "I led the steward team on the second morning.",
+    "after": "Grace led the steward team throughout, including the second morning. I was one of the pair she put on the new entrance, checking printed tickets."
+   },
+   "manual": {
+    "source": "Pillwood Events appeals to me because it runs events of every size, from conferences to festivals.",
+    "replacement": "What appeals to me about Pillwood Events is that it runs events of every size, from conferences to festivals."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Grace",
+     "tickets"
+    ],
+    "obsoletePhrases": [
+     "I led the steward team"
+    ],
+    "semanticChecks": [
+     "Grace led the steward team throughout; the applicant must not be described as leading, supervising or managing it.",
+     "The applicant's real part, checking printed tickets at the new entrance as one of a pair, should remain.",
+     "No attendance figure, waiting time or detail about Pillwood Events beyond the applicant's sentence may be added.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No attendance or waiting-time figures, paid events experience, supervisory role or verified detail about Pillwood Events was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "newsletter-email-campaign",
+   "input": {
+    "applicant": "Megan",
+    "company": "Merrow & Pike",
+    "role": "Junior Marketing Executive",
+    "notes": "On my marketing placement at a small software firm, our team relaunched its monthly customer newsletter.\nThe newsletter goes to about 600 subscribers, so we tested two subject lines on a small group first.\nThe open rate went from 21% to 26% over the first two issues.\nI learned that a plain subject line often beats a clever one.\nMerrow & Pike interests me because it writes for small businesses in plain language.",
+    "question": "Share an example of marketing work you contributed to. Explain your role, the results with any figures, and what you learned.",
+    "requirements": [
+     {
+      "text": "Your specific role in the work",
+      "personal": true
+     },
+     {
+      "text": "Results, using only figures that were actually recorded",
+      "personal": false
+     },
+     {
+      "text": "A lesson you would apply in this job",
+      "personal": true
+     }
+    ],
+    "wordLimit": 260
+   },
+   "clarificationAnswer": "I grew the mailing list to 2,500 subscribers during my placement.",
+   "correction": {
+    "anchor": "I grew the mailing list to 2,500 subscribers during my placement.",
+    "before": "I grew the mailing list to 2,500 subscribers during my placement.",
+    "after": "The list stayed at about 600 subscribers throughout my placement. My part was writing the two subject lines that Kieran tested."
+   },
+   "manual": {
+    "source": "Merrow & Pike interests me because it writes for small businesses in plain language.",
+    "replacement": "Merrow & Pike's plain-language writing for small businesses is what interests me."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "600",
+     "Kieran"
+    ],
+    "obsoletePhrases": [
+     "2,500",
+     "grew the mailing list"
+    ],
+    "semanticChecks": [
+     "The list stayed at about 600 subscribers; neither document may say the applicant grew it or mention 2,500.",
+     "The applicant wrote the two subject lines and Kieran ran the test; both documents should keep that split.",
+     "The open-rate rise from 21% to 26% over two issues may be used, but must not be inflated or credited to the applicant alone.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No sales or revenue impact, list growth, marketing qualification or verified detail about Merrow & Pike's clients was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "campus-recycling-audit",
+   "input": {
+    "applicant": "Joseph",
+    "company": "Greyling Waste Services",
+    "role": "Trainee Recycling Officer",
+    "notes": "As a student sustainability volunteer, I joined a team that checked the recycling bins in three halls of residence.\nWe opened each bin and estimated by eye how much of what was inside did not belong there.\nWe then put clearer signs above the bins, and the halls manager has asked us to repeat the check next term.\nI learned that a short sign with pictures works better than a long list of rules.\nI want to work for Greyling Waste Services because it talks to residents about recycling as well as collecting it.",
+    "question": "Tell us about a time you gathered information to solve a problem. How did you gather it, what was your own part, and what happened next?",
+    "requirements": [
+     {
+      "text": "How the information was gathered, including any limits on its accuracy",
+      "personal": false
+     },
+     {
+      "text": "Your own part in the work",
+      "personal": true
+     },
+     {
+      "text": "What happened next",
+      "personal": false
+     }
+    ],
+    "wordLimit": 210
+   },
+   "clarificationAnswer": "I measured a contamination rate of 40% across the three halls. I also drafted the wording for the new signs.",
+   "correction": {
+    "anchor": "I measured a contamination rate of 40% across the three halls.",
+    "before": "I measured a contamination rate of 40% across the three halls.",
+    "after": "Nobody measured it; 40% was the team's rough estimate by eye across the three halls. I drafted the wording for the new signs, and Holly drew the pictures."
+   },
+   "manual": {
+    "source": "I want to work for Greyling Waste Services because it talks to residents about recycling as well as collecting it.",
+    "replacement": "I want to work for Greyling Waste Services because, as well as collecting recycling, it talks to residents about it."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "estimate",
+     "Holly",
+     "wording"
+    ],
+    "obsoletePhrases": [
+     "I measured",
+     "measured a contamination rate"
+    ],
+    "semanticChecks": [
+     "The 40% figure is the team's rough visual estimate; neither document may call it measured or precise.",
+     "The applicant drafted the sign wording and Holly drew the pictures; the applicant must not be credited with the whole sign design.",
+     "The only stated outcome is the halls manager's request to repeat the check; no fall in contamination may be claimed.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No measured contamination figure, evidence that the signs changed behaviour, waste-industry qualification or verified detail about Greyling Waste Services was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "soap-packaging-brief",
+   "input": {
+    "applicant": "Leah",
+    "company": "Thrushcombe Studio",
+    "role": "Junior Graphic Designer",
+    "notes": "On a live brief in the second year of my design course, our team of three designed new packaging for a small handmade soap company.\nWe showed the owner three label concepts, and she chose one to print for a trial batch.\nSoaps with the trial labels are on sale at two craft markets, and the owner has not yet decided on a full print run.\nI learned to print mock-ups at full size, because colours and small text look different on paper.\nThrushcombe Studio is where I want to start because it designs for small independent makers.",
+    "question": "Describe a design project you worked on with others. What was your contribution, how did the client respond, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your contribution to the design",
+      "personal": true
+     },
+     {
+      "text": "The client's response and the project's current status",
+      "personal": false
+     },
+     {
+      "text": "What you learned about designing for print",
+      "personal": true
+     }
+    ],
+    "wordLimit": 230
+   },
+   "clarificationAnswer": "The owner picked my concept, so the final label is my design.",
+   "correction": {
+    "anchor": "The owner picked my concept, so the final label is my design.",
+    "before": "The owner picked my concept, so the final label is my design.",
+    "after": "The owner picked Amara's concept. I adapted it to fit the three soap sizes and prepared the print files."
+   },
+   "manual": {
+    "source": "Thrushcombe Studio is where I want to start because it designs for small independent makers.",
+    "replacement": "Because Thrushcombe Studio designs for small independent makers, it is where I want to start."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Amara",
+     "print files"
+    ],
+    "obsoletePhrases": [
+     "picked my concept",
+     "the final label is my design"
+    ],
+    "semanticChecks": [
+     "The owner chose Amara's concept; the applicant must not be credited with the chosen design.",
+     "The applicant's real part, adapting the label to three soap sizes and preparing the print files, should remain.",
+     "The full print run is undecided; no sales, launch or client praise may be invented.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No sales figures, client testimonial, confirmed full print run or verified detail about Thrushcombe Studio's clients was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "robotics-gripper-redesign",
+   "input": {
+    "applicant": "Kwame",
+    "company": "Sorrelby Automation",
+    "role": "Graduate Robotics Technician",
+    "notes": "Our university robotics society built a robot arm for a regional pick-and-place competition.\nOur team redesigned the gripper after the first version kept dropping smooth parts.\nWe came fifth out of eleven teams, and the gripper still dropped two parts in the final round.\nI learned to change one thing at a time when testing, so we knew what had made the difference.\nSorrelby Automation appeals to me because its engineers build and test their own machines.",
+    "question": "Tell us about an engineering problem you worked on in a team. What was the problem, what did you personally do, and how did it turn out?",
+    "requirements": [
+     {
+      "text": "The problem the team was solving",
+      "personal": false
+     },
+     {
+      "text": "What you personally did",
+      "personal": true
+     },
+     {
+      "text": "How it turned out, including anything that did not work",
+      "personal": false
+     },
+     {
+      "text": "What you learned about testing",
+      "personal": true
+     }
+    ],
+    "wordLimit": 300
+   },
+   "clarificationAnswer": "I led the gripper redesign. I also 3D-printed the test fingers.",
+   "correction": {
+    "anchor": "I led the gripper redesign.",
+    "before": "I led the gripper redesign.",
+    "after": "Nathan led the gripper redesign. I helped by printing four versions of the fingers and recording how often each one dropped a part."
+   },
+   "manual": {
+    "source": "Sorrelby Automation appeals to me because its engineers build and test their own machines.",
+    "replacement": "I am drawn to Sorrelby Automation because its engineers build and test their own machines."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Nathan",
+     "four"
+    ],
+    "obsoletePhrases": [
+     "I led the gripper redesign"
+    ],
+    "semanticChecks": [
+     "Nathan led the gripper redesign; the applicant helped and must not be described as leading it.",
+     "The applicant's real part, printing four finger versions and recording how often each dropped a part, should remain.",
+     "The result, fifth of eleven with two dropped parts in the final round, must not be turned into a win or a flawless run.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No grip success rate, industry experience, engineering qualification or verified detail about Sorrelby Automation was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "new-starter-guide",
+   "input": {
+    "applicant": "Niamh",
+    "company": "Wrenfield Group",
+    "role": "HR Assistant",
+    "notes": "In my first job as an HR administrator at a cleaning and facilities firm, our team rebuilt the welcome pack for new starters.\nWe replaced a forty-page handbook with a short first-week guide and a checklist for managers.\nEleven people have started with the new pack so far, and two managers have asked for a printable checklist.\nI learned to test instructions on someone who has never seen them before.\nI am applying to Wrenfield Group because it promotes many of its managers from within.",
+    "question": "Describe a process you helped improve for colleagues. What was your part, and what has happened since?",
+    "requirements": [
+     {
+      "text": "Your part in the improvement",
+      "personal": true
+     },
+     {
+      "text": "What has happened since",
+      "personal": false
+     }
+    ],
+    "wordLimit": 150
+   },
+   "clarificationAnswer": "I wrote the new first-week guide from scratch.",
+   "correction": {
+    "anchor": "I wrote the new first-week guide from scratch.",
+    "before": "I wrote the new first-week guide from scratch.",
+    "after": "Samuel, the HR manager, wrote the first-week guide. I put together the managers' checklist and tried the guide out on two new starters before it went to everyone else."
+   },
+   "manual": {
+    "source": "I am applying to Wrenfield Group because it promotes many of its managers from within.",
+    "replacement": "The reason I am applying to Wrenfield Group is that it promotes many of its managers from within."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Samuel",
+     "checklist"
+    ],
+    "obsoletePhrases": [
+     "I wrote the new first-week guide",
+     "from scratch"
+    ],
+    "semanticChecks": [
+     "Samuel, the HR manager, wrote the first-week guide; the applicant must not be credited with writing it.",
+     "The applicant's real part, putting together the managers' checklist and trying the guide out on two new starters, should remain.",
+     "Only eleven starters and two managers' requests are known; no retention, satisfaction or time-saving figure may be invented.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No retention or satisfaction figures, HR qualification or verified detail about Wrenfield Group's promotion record was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "walking-tour-route",
+   "input": {
+    "applicant": "Arjun",
+    "company": "Cobbleway Tours",
+    "role": "Tour Guide",
+    "notes": "In my first summer job at a city walking tour company, our team planned a new evening route along the old canal.\nWe timed each stop and cut the route from two hours to ninety minutes.\nSo far it has only been run as a practice walk with office staff, and it opens to paying customers next spring.\nI learned to plan where a group can stand safely before planning what to say there.\nCobbleway Tours attracts me because its guides research their own stories rather than reading from a script.",
+    "question": "Tell us about something you planned or prepared for customers. What did you do, what stage has it reached, and what did you learn?",
+    "requirements": [
+     {
+      "text": "What you did yourself",
+      "personal": true
+     },
+     {
+      "text": "The stage the work has reached",
+      "personal": false
+     },
+     {
+      "text": "What you learned about planning for groups",
+      "personal": true
+     }
+    ],
+    "wordLimit": 190
+   },
+   "clarificationAnswer": "I guided three groups of paying customers on the new route.",
+   "correction": {
+    "anchor": "I guided three groups of paying customers on the new route.",
+    "before": "I guided three groups of paying customers on the new route.",
+    "after": "No paying customers have taken the route yet; it has only had one practice walk with office staff. On that walk I gave the talk at two of the stops, and Freya guided the rest."
+   },
+   "manual": {
+    "source": "Cobbleway Tours attracts me because its guides research their own stories rather than reading from a script.",
+    "replacement": "I am attracted to Cobbleway Tours because its guides research their own stories instead of reading from a script."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "practice",
+     "Freya"
+    ],
+    "obsoletePhrases": [
+     "three groups",
+     "groups of paying customers"
+    ],
+    "semanticChecks": [
+     "The route has only had a practice walk with office staff; neither document may say that customers have taken it or that the applicant guided paying groups.",
+     "The applicant gave the talk at two stops and Freya guided the rest; that real part should remain.",
+     "The route opens to paying customers next spring, so no reviews, bookings or ratings may be invented.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No customer reviews, booking numbers, guiding qualification or verified detail about Cobbleway Tours' guides was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "flood-map-tracing",
+   "input": {
+    "applicant": "Bethany",
+    "company": "Meridale Mapping",
+    "role": "Junior GIS Technician",
+    "notes": "At a weekend mapping event run by a flood-relief charity, our team traced building outlines from aerial photos of two river valleys.\nExperienced mappers checked our work before it was added to the charity's map.\nThe map now covers both valleys, and the charity plans to use it when deciding where to send supplies.\nI learned to zoom in on corners, because a quick trace often joins two buildings into one.\nMeridale Mapping is the company I want to join because emergency planners use its maps.",
+    "question": "Describe a task where accuracy mattered. Explain what you did, how your work was checked, and what you learned.",
+    "requirements": [
+     {
+      "text": "What you did, including how much of the work was yours",
+      "personal": true
+     },
+     {
+      "text": "How the work was checked",
+      "personal": false
+     },
+     {
+      "text": "What you learned about accuracy",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I traced 1,200 buildings over the weekend.",
+   "correction": {
+    "anchor": "I traced 1,200 buildings over the weekend.",
+    "before": "I traced 1,200 buildings over the weekend.",
+    "after": "I traced about 140 buildings over the weekend, and Imogen, one of the experienced mappers, corrected nine of them before they were added."
+   },
+   "manual": {
+    "source": "Meridale Mapping is the company I want to join because emergency planners use its maps.",
+    "replacement": "Meridale Mapping, whose maps emergency planners use, is the company I want to join."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "140",
+     "Imogen",
+     "nine"
+    ],
+    "obsoletePhrases": [
+     "1,200"
+    ],
+    "semanticChecks": [
+     "The applicant traced about 140 buildings; the figure of 1,200 must not appear.",
+     "Imogen corrected nine of the applicant's traces, so neither document may suggest the work was error-free.",
+     "The charity's use of the map is a plan, not a result; no supplies delivered or people helped may be claimed.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No measured accuracy rate, evidence that the map has been used, GIS qualification or verified detail about Meridale Mapping's clients was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "short-film-edit",
+   "input": {
+    "applicant": "Marek",
+    "company": "Halberd Lane Films",
+    "role": "Assistant Editor",
+    "notes": "I volunteered on the crew of a ten-minute short film made by a local film collective.\nOur team shot it over four weekends, and I backed up the footage each evening.\nThe finished film was shown at a regional short film festival in the summer.\nI learned to label every clip on the day, because nobody remembers which take was which a week later.\nI would like to work at Halberd Lane Films because it gives assistants time in the edit suite from the start.",
+    "question": "Tell us about a creative project you were part of. What was your role, what happened to the finished work, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your role on the project",
+      "personal": true
+     },
+     {
+      "text": "What happened to the finished work",
+      "personal": false
+     },
+     {
+      "text": "What you learned that you would use in post-production",
+      "personal": true
+     }
+    ],
+    "wordLimit": 350
+   },
+   "clarificationAnswer": "I backed up and labelled all the footage. My edit was the version shown at the festival.",
+   "correction": {
+    "anchor": "My edit was the version shown at the festival.",
+    "before": "My edit was the version shown at the festival.",
+    "after": "Ewan edited the version shown at the festival. My own edit of the opening scene was a practice exercise he set me, and it was not used."
+   },
+   "manual": {
+    "source": "I would like to work at Halberd Lane Films because it gives assistants time in the edit suite from the start.",
+    "replacement": "I would like to work at Halberd Lane Films since assistants there get time in the edit suite from the start."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Ewan",
+     "practice"
+    ],
+    "obsoletePhrases": [
+     "My edit was the version shown"
+    ],
+    "semanticChecks": [
+     "Ewan edited the film shown at the festival; the applicant's edit of the opening scene was a practice exercise that was not used.",
+     "The applicant's real part, backing up and labelling the footage and practising an edit of the opening scene, should remain.",
+     "No awards, audience figures or festival details beyond the screening may be added.",
+     "The applicant's rewritten motivation sentence must appear word for word."
+    ],
+    "missingCriteria": "No awards, audience figures, paid production experience, editing qualification or verified detail about Halberd Lane Films was supplied.",
+    "inputContradictionPossible": false
+   }
+  }
+ ]
+}

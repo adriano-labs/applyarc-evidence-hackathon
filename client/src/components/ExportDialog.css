@@ -1,0 +1,266 @@
+.export-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(14 42 71 / 0.45);
+  display: grid;
+  place-items: center;
+  padding: var(--s5);
+  z-index: 50;
+}
+
+.export-dialog {
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sheet);
+  width: min(760px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  /* No bottom padding: the sticky footer carries it, so nothing scrolls into view below the buttons. */
+  padding: var(--s6) var(--s6) 0;
+  animation: export-dialog-in var(--mid) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes export-dialog-in {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .export-dialog {
+    animation: none;
+  }
+}
+
+.stamp {
+  font: 700 var(--text-sm) var(--font-ui);
+  letter-spacing: 0.12em;
+  color: var(--danger);
+  border: 2px solid var(--danger);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  display: inline-block;
+  align-self: flex-start;
+  justify-self: start;
+  margin: var(--s2) 0;
+}
+
+.export-doc p {
+  font-family: var(--font-doc);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  max-width: var(--measure);
+  margin: 0 0 var(--s3);
+}
+
+.export-doc h3 {
+  font: 600 var(--text-sm) var(--font-ui);
+  color: var(--ink);
+  margin: 0;
+}
+
+.ref-n {
+  font-family: var(--font-doc);
+  color: var(--oxford-3);
+  font-weight: 600;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-dialog header {
+  position: relative;
+  margin-bottom: var(--s5);
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.export-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.export-dialog h2 {
+  margin: 0;
+  font-family: var(--font-doc);
+  font-weight: 600;
+  font-size: var(--text-xl);
+}
+
+.export-header-top h2 {
+  margin: 0;
+  font-family: var(--font-doc);
+  font-weight: 600;
+  font-size: var(--text-xl);
+}
+
+.export-for {
+  margin: var(--s2) 0;
+}
+
+.export-notice {
+  font-size: 15px;
+  color: var(--ink);
+  max-width: 66ch;
+  margin: var(--s2) 0;
+}
+
+.export-contents {
+  color: var(--muted);
+  font-size: 13px;
+  margin: var(--s4) 0 0 0;
+}
+
+.export-dialog header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.export-dialog header > * {
+  margin: 0;
+}
+
+.export-doc + .export-doc {
+  margin-top: var(--s6);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--rule);
+}
+
+.export-doc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
+}
+
+.export-doc-head h3 {
+  font: 600 var(--text-sm) var(--font-ui);
+  color: var(--muted);
+  margin: 0;
+}
+
+.export-refs {
+  list-style: none;
+  padding: 0;
+  margin: var(--s4) 0;
+}
+
+.export-refs li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  grid-template-areas:
+    'num stmt'
+    'num quote';
+  column-gap: var(--s3);
+  row-gap: var(--s2);
+  margin-bottom: var(--s3);
+  align-items: start;
+}
+
+.export-refs li .ref-n {
+  grid-area: num;
+}
+
+.export-refs li .export-ref-statement {
+  grid-area: stmt;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.export-refs li .export-quote {
+  grid-area: quote;
+  font-family: var(--font-doc);
+}
+
+.export-refs li .export-quote mark {
+  background: var(--highlight-soft);
+}
+
+.export-doc h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: var(--s5) 0 var(--s3) 0;
+  letter-spacing: 0.06em;
+}
+
+.export-tasks {
+  font-size: 13px;
+  color: var(--ink);
+  padding-left: var(--s5);
+  margin: var(--s3) 0 var(--s6) 0;
+}
+
+@media (min-width: 768px) {
+  .export-tasks {
+    column-count: 2;
+    column-gap: var(--s6);
+  }
+}
+
+.export-dialog footer {
+  position: sticky;
+  bottom: 0;
+  background: var(--sheet);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  gap: var(--s3);
+  padding: var(--s4) 0 var(--s6);
+  margin-top: var(--s5);
+}
+
+@media (max-width: 767px) {
+  .export-dialog {
+    inset: 0;
+    border-radius: 0;
+    padding: 16px 16px 0;
+    max-height: 100dvh;
+    width: 100%;
+  }
+  .export-backdrop {
+    padding: 0;
+  }
+  .export-dialog footer {
+    padding-bottom: 16px;
+  }
+}
+
+/* What the applicant should know about a document before pasting it: their own unchecked words, requirements not answered. */
+.export-doc-note {
+  margin: 0 0 var(--s2, 8px);
+  color: var(--danger);
+  font-size: var(--text-sm);
+}
+
+.export-copy-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.export-copy-error {
+  color: var(--danger);
+  font-size: var(--text-sm);
+}

@@ -1,0 +1,23 @@
+.own-input { border-top: 1px solid var(--rule); margin-top: var(--s5); padding-top: var(--s5); }
+.own-input summary { cursor: pointer; font-weight: 600; font-size: var(--text-sm); padding: var(--s2) 0; }
+.own-input summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.own-application { margin-top: var(--s4); display: grid; gap: var(--s4); }
+.own-fields { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: var(--s4); }
+.own-application h3, .own-application p { margin: 0; }
+.own-application h3 { font-family: var(--font-doc); font-size: var(--text-lg); }
+.own-identity { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s4); }
+.own-identity > :last-child { grid-column: 1 / -1; }
+.own-field { display: grid; gap: var(--s2); min-width: 0; }
+.own-field label { font-weight: 600; }
+.own-field input, .own-field textarea { box-sizing: border-box; width: 100%; max-width: 100%; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet); color: var(--ink); padding: var(--s3); font: inherit; }
+.own-field textarea { resize: vertical; line-height: 1.6; }
+.own-field input:focus-visible, .own-field textarea:focus-visible, .own-check input:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.own-hint, .own-requirements p { color: var(--muted); font-size: var(--text-sm); line-height: 1.55; }
+.own-requirements { min-width: 0; display: grid; gap: var(--s3); border: 1px solid var(--rule); border-radius: var(--radius); padding: var(--s4); }
+.own-requirements legend { font-weight: 600; padding: 0 var(--s2); }
+.notes-compose .own-check { display: flex; gap: var(--s3); align-items: flex-start; margin: 0; }
+.own-check { display: flex; gap: var(--s3); align-items: flex-start; line-height: 1.5; }
+.own-check input { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 3px; accent-color: var(--ink); }
+.own-check span { overflow-wrap: anywhere; }
+.own-application > button { justify-self: start; }
+@media (max-width: 560px) { .own-identity { grid-template-columns: 1fr; } .own-requirements { padding: var(--s3); } }

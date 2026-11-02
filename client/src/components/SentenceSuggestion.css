@@ -1,0 +1,26 @@
+.sentence-suggestion {
+  margin-top: var(--s6);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink);
+  max-width: var(--measure);
+}
+.sentence-suggestion h3 { margin: 0 0 var(--s2); font: 600 var(--text-lg)/1.4 var(--font-doc); }
+.sentence-suggestion h4 { margin: var(--s4) 0 var(--s1); font: 600 var(--text-sm)/1.5 var(--font-ui); }
+.suggestion-intro, .suggestion-reason, .suggestion-help, .suggestion-progress { font: 400 var(--text-sm)/1.5 var(--font-ui); color: var(--muted); }
+.suggestion-wording p { margin: 0; font: 400 var(--text-md)/1.6 var(--font-doc); overflow-wrap: anywhere; }
+.suggestion-wording del { color: var(--danger); background: var(--danger-soft); text-decoration-thickness: 1.5px; }
+.suggestion-wording ins { color: var(--confirmed); background: var(--confirmed-soft); text-decoration-thickness: 1.5px; text-underline-offset: .15em; }
+.sentence-suggestion form { margin-top: var(--s5); }
+.sentence-suggestion label { display: block; font: 500 var(--text-sm)/1.5 var(--font-ui); margin-bottom: var(--s2); }
+.sentence-suggestion textarea { width: 100%; box-sizing: border-box; padding: var(--s3); border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet); color: var(--ink); caret-color: var(--oxford-3); font: 400 var(--text-md)/1.5 var(--font-ui); resize: vertical; }
+.sentence-suggestion textarea::placeholder { color: var(--muted); }
+.sentence-suggestion textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.suggestion-help { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2); margin: var(--s1) 0 var(--s3); font-variant-numeric: tabular-nums; }
+.suggestion-evidence ul { list-style: none; padding: 0; margin: 0; }
+.suggestion-evidence li { display: flex; align-items: baseline; gap: var(--s2); margin-top: var(--s2); }
+.suggestion-evidence q { font: 400 var(--text-sm)/1.6 var(--font-doc); color: var(--pencil); overflow-wrap: anywhere; }
+.suggestion-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--s2); margin-top: var(--s4); }
+.suggestion-warning { color: var(--danger); font: 400 var(--text-sm)/1.5 var(--font-ui); }
+.edit-actions { flex-wrap: wrap; }
+.edit-suggestion-hint { display: block; margin-top: var(--s2); color: var(--muted); font: 400 var(--text-sm)/1.5 var(--font-ui); }

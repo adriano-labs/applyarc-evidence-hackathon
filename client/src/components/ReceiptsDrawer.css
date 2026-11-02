@@ -1,0 +1,90 @@
+.receipts {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s3);
+}
+
+.receipts-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: var(--s2) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.receipts-title {
+  font: 600 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oxford-3);
+}
+
+.receipts-line {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.receipt {
+  padding: var(--s2) 0 var(--s2) var(--s3);
+  border-left: 1px solid var(--rule-strong);
+}
+
+.receipt.failed {
+  border-left-color: var(--danger);
+}
+
+.receipt-step {
+  font: 500 var(--text-sm) var(--font-ui);
+  margin: 0 0 var(--s1) 0;
+}
+
+.receipt-step span {
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.receipt-tokens,
+.receipt-time {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin: var(--s1) 0;
+}
+
+.receipt-tools {
+  font: 400 var(--text-xs) var(--font-data);
+  color: var(--pencil);
+  margin: var(--s1) 0;
+  padding-left: var(--s4);
+}
+
+.receipt-error {
+  font-size: var(--text-xs);
+  color: var(--danger);
+  margin: var(--s1) 0;
+}
+
+.receipt-ids {
+  font: 400 11px var(--font-data);
+  color: var(--muted);
+  word-break: break-all;
+  margin: var(--s1) 0;
+}
+
+.receipts-note,
+.receipt-injected {
+  margin: 0 0 var(--s2);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}

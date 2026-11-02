@@ -1,0 +1,607 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T10:40:36.703983+00:00",
+  "title": "Design System: ApplyArc Evidence",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(97.2% 0.005 258.3)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#3f4041",
+          "#5c5e5f",
+          "#7f8082",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff1"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(91.1% 0.012 259.8)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#222428",
+          "#3d4044",
+          "#5b5e63",
+          "#7d8086",
+          "#a1a5ab",
+          "#c6cbd2",
+          "#eaeff7"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Firm Rule",
+        "canonical": "oklch(83.7% 0.017 259.4)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21242a",
+          "#3c4046",
+          "#595e65",
+          "#7b8189",
+          "#9fa5af",
+          "#c4cbd6",
+          "#e8effa"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(21.6% 0.027 258.3)",
+        "tonalRamp": [
+          "#050b16",
+          "#1c2431",
+          "#38404d",
+          "#565e6b",
+          "#79818d",
+          "#9ea5b1",
+          "#c4cbd6",
+          "#e8eff9"
+        ]
+      },
+      "pencil": {
+        "role": "neutral",
+        "displayName": "Pencil",
+        "canonical": "oklch(44.2% 0.035 257.8)",
+        "tonalRamp": [
+          "#040b17",
+          "#1a2433",
+          "#354052",
+          "#525f71",
+          "#748194",
+          "#99a6b8",
+          "#c0ccdd",
+          "#e4efff"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(50.1% 0.028 259.8)",
+        "tonalRamp": [
+          "#060b15",
+          "#1d2430",
+          "#38404e",
+          "#545e6e",
+          "#778191",
+          "#9ca5b4",
+          "#c2cbda",
+          "#e6effd"
+        ]
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint Graphite",
+        "canonical": "oklch(66.1% 0.026 262.1)",
+        "tonalRamp": [
+          "#070b13",
+          "#1f242e",
+          "#3a404b",
+          "#575e6b",
+          "#788190",
+          "#9ca5b5",
+          "#c2cbda",
+          "#e7effd"
+        ]
+      },
+      "oxford": {
+        "role": "primary",
+        "displayName": "Oxford Blue",
+        "canonical": "oklch(28.0% 0.063 251.8)",
+        "tonalRamp": [
+          "#000a22",
+          "#092541",
+          "#27415f",
+          "#46607d",
+          "#6a839e",
+          "#90a7c2",
+          "#b7cde6",
+          "#ddf1ff"
+        ]
+      },
+      "oxford-2": {
+        "role": "primary",
+        "displayName": "Oxford Blue, Hover",
+        "canonical": "oklch(34.2% 0.075 251.5)",
+        "tonalRamp": [
+          "#000a26",
+          "#032545",
+          "#1f4165",
+          "#406084",
+          "#6483a6",
+          "#8aa8c9",
+          "#b2ceed",
+          "#d8f1ff"
+        ]
+      },
+      "oxford-3": {
+        "role": "primary",
+        "displayName": "Reference Blue",
+        "canonical": "oklch(42.3% 0.090 251.2)",
+        "tonalRamp": [
+          "#000929",
+          "#002449",
+          "#17416c",
+          "#36608d",
+          "#5c84af",
+          "#82a8d2",
+          "#abcef6",
+          "#d1f2ff"
+        ]
+      },
+      "on-oxford": {
+        "role": "neutral",
+        "displayName": "On-Oxford",
+        "canonical": "oklch(95.3% 0.011 252.1)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3d4044",
+          "#5a5e62",
+          "#7c8186",
+          "#a0a5ab",
+          "#c6cbd1",
+          "#e9eff6"
+        ]
+      },
+      "on-oxford-muted": {
+        "role": "neutral",
+        "displayName": "On-Oxford Muted",
+        "canonical": "oklch(77.7% 0.035 255.2)",
+        "tonalRamp": [
+          "#060b14",
+          "#1c2530",
+          "#37414e",
+          "#535f6e",
+          "#748193",
+          "#97a6ba",
+          "#bccce1",
+          "#e1f0ff"
+        ]
+      },
+      "highlight": {
+        "role": "secondary",
+        "displayName": "Highlighter Yellow",
+        "canonical": "oklch(91.6% 0.140 96.0)",
+        "tonalRamp": [
+          "#150900",
+          "#302200",
+          "#4f3e00",
+          "#6f5c00",
+          "#947f1e",
+          "#bca43e",
+          "#e4ca5b",
+          "#ffee7d"
+        ]
+      },
+      "highlight-soft": {
+        "role": "secondary",
+        "displayName": "Highlighter Wash",
+        "canonical": "oklch(96.2% 0.077 98.9)",
+        "tonalRamp": [
+          "#0f0b00",
+          "#292407",
+          "#464020",
+          "#655e39",
+          "#898157",
+          "#afa676",
+          "#d6cc96",
+          "#fbf0b5"
+        ]
+      },
+      "needs": {
+        "role": "tertiary",
+        "displayName": "Needs-You Pink",
+        "canonical": "oklch(51.0% 0.197 3.5)",
+        "tonalRamp": [
+          "#320005",
+          "#59001b",
+          "#820035",
+          "#ac0052",
+          "#d44174",
+          "#f97099",
+          "#ff9cbf",
+          "#ffc4e4"
+        ]
+      },
+      "needs-soft": {
+        "role": "tertiary",
+        "displayName": "Pink Wash",
+        "canonical": "oklch(94.2% 0.034 350.0)",
+        "tonalRamp": [
+          "#11080c",
+          "#2c2025",
+          "#493b41",
+          "#695860",
+          "#8e7a82",
+          "#b49da7",
+          "#dcc2cd",
+          "#ffe6f2"
+        ]
+      },
+      "confirmed": {
+        "role": "tertiary",
+        "displayName": "Confirmed Green",
+        "canonical": "oklch(48.2% 0.113 153.7)",
+        "tonalRamp": [
+          "#001400",
+          "#003009",
+          "#004f23",
+          "#166f3e",
+          "#489263",
+          "#73b788",
+          "#9ddcb0",
+          "#c5ffd6"
+        ]
+      },
+      "confirmed-soft": {
+        "role": "tertiary",
+        "displayName": "Green Wash",
+        "canonical": "oklch(94.9% 0.022 160.2)",
+        "tonalRamp": [
+          "#070d09",
+          "#1f2622",
+          "#39423d",
+          "#56615a",
+          "#78847d",
+          "#9ba9a0",
+          "#c0cfc6",
+          "#e2f3e9"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Struck Red",
+        "canonical": "oklch(50.0% 0.182 29.5)",
+        "tonalRamp": [
+          "#330000",
+          "#5a0000",
+          "#820000",
+          "#ac1c12",
+          "#d34d3e",
+          "#f87968",
+          "#ffa492",
+          "#ffccba"
+        ]
+      },
+      "danger-soft": {
+        "role": "tertiary",
+        "displayName": "Red Wash",
+        "canonical": "oklch(95.6% 0.019 25.6)",
+        "tonalRamp": [
+          "#0f0a09",
+          "#292221",
+          "#463d3c",
+          "#655b5a",
+          "#897d7c",
+          "#afa19f",
+          "#d6c6c5",
+          "#fbeae8"
+        ]
+      },
+      "focus": {
+        "role": "tertiary",
+        "displayName": "Focus Blue",
+        "canonical": "oklch(50.2% 0.138 255.8)",
+        "tonalRamp": [
+          "#000137",
+          "#001f5b",
+          "#003d80",
+          "#1f5da8",
+          "#4881cc",
+          "#71a7ee",
+          "#9bceff",
+          "#c2f2ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Manuscript title and the notes heading."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Rail section titles and the form panel title."
+      },
+      "question": {
+        "displayName": "Question",
+        "purpose": "The one clarifying question; the largest text in the rail."
+      },
+      "manuscript": {
+        "displayName": "Manuscript",
+        "purpose": "Drafted documents and the applicant's notes at 66ch."
+      },
+      "document-small": {
+        "displayName": "Document small",
+        "purpose": "Corrigendum fact line and diffs, the form question, export preview, answer fields."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "purpose": "Verbatim quotes under references and facts."
+      },
+      "citation": {
+        "displayName": "Citation",
+        "purpose": "Superscript reference numerals after the last word of a claim."
+      },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "The product name in the top bar."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Working UI text, tabular figures."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Buttons and tabs."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Counts, versions, hints."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small uppercase section headings and inline state marks; never above another heading."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Tool calls and request ids only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 1px 1px rgb(14 42 71 / 0.04), 0 10px 30px -14px rgb(14 42 71 / 0.22)",
+        "purpose": "Paper that holds a document: manuscript, notes, export dialog, command menu."
+      },
+      {
+        "name": "lift",
+        "value": "0 1px 2px rgb(14 42 71 / 0.06), 0 6px 18px -6px rgb(14 42 71 / 0.18)",
+        "purpose": "Working panels in the rail, the status line and notices."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition in the system."
+      },
+      {
+        "name": "fast",
+        "value": "160ms",
+        "purpose": "Hover backgrounds, the active citation and reference highlight, highlighter marks."
+      },
+      {
+        "name": "mid",
+        "value": "240ms",
+        "purpose": "Word meter width and the export dialog entrance (translateY 8px to 0 with a fade)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration and transition-duration 1ms under prefers-reduced-motion: reduce",
+        "purpose": "Global clamp."
+      },
+      {
+        "name": "working-stroke",
+        "value": "2.4s linear infinite; static under reduced motion; paused when hidden",
+        "purpose": "Thin Oxford-blue stroke during actual work; no fabricated completion percentage."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1440px",
+        "purpose": "From here up: the brief becomes its own 280px column left of the document and the rail."
+      },
+      {
+        "name": "laptop",
+        "value": "1023px",
+        "purpose": "At and below: 16px workspace padding and gaps."
+      },
+      {
+        "name": "phone",
+        "value": "767px",
+        "purpose": "At and below: one column (brief, document, evidence), a 44px bottom bar between Writing and Evidence, short tab names, static rails."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The next step, named as a verb. One per region.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Apply 2 changes</button>",
+      "css": ".ds-btn-primary { font: 500 0.8125rem/1.2 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--oxford, #0e2a47); background: var(--oxford, #0e2a47); color: var(--on-oxford, #eaf0f7); cursor: pointer; transition: background 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--oxford-2, #173a5e); } .ds-btn-primary:focus-visible { outline: 2px solid var(--focus, #2563b0); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary and Link Buttons",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Alternatives beside a primary; small inside rail items; link for in-place actions.",
+      "html": "<div class=\"ds-row\"><button class=\"ds-btn\" type=\"button\">Keep as is</button><button class=\"ds-btn ds-btn-small\" type=\"button\" aria-pressed=\"true\">Take the rewrite</button><button class=\"ds-btn-link\" type=\"button\">Correct this fact</button></div>",
+      "css": ".ds-row { display: flex; gap: 8px; align-items: center; } .ds-btn { font: 500 0.8125rem/1.2 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--rule-strong, #c3cad5); background: var(--sheet, #ffffff); color: var(--ink, #121a26); cursor: pointer; transition: background 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--paper, #f4f6f9); } .ds-btn-small { padding: 5px 10px; } .ds-btn[aria-pressed=\"true\"] { background: var(--oxford, #0e2a47); color: var(--on-oxford, #eaf0f7); border-color: var(--oxford, #0e2a47); } .ds-btn:focus-visible, .ds-btn-link:focus-visible { outline: 2px solid var(--focus, #2563b0); outline-offset: 2px; } .ds-btn-link { font: 500 0.8125rem/1.2 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); background: transparent; border: none; padding: 8px 0; color: var(--oxford-3, #24507d); text-decoration: underline; text-underline-offset: 0.18em; cursor: pointer; }"
+    },
+    {
+      "name": "Top Bar with Mode Badge",
+      "kind": "nav",
+      "refersTo": "topbar",
+      "description": "The Oxford shell: brand mark, application crumb, the always-visible run mode, spend and commands.",
+      "html": "<header class=\"ds-topbar\"><span class=\"ds-brand\"><span class=\"ds-brand-mark\">[1]</span> ApplyArc Evidence</span><span class=\"ds-crumb\"><strong>Graphcore</strong> · Graduate Cloud Platform Engineer 2027</span><span class=\"ds-end\"><span class=\"ds-mode ds-fixture\">Fixture: hand-written outputs, not a model</span><span class=\"ds-mode ds-meta\">Meta Muse Spark 1.3</span><span class=\"ds-spend\">$0.00 of $2.00</span><button class=\"ds-topbtn\" type=\"button\">Start again</button></span></header>",
+      "css": ".ds-topbar { display: flex; align-items: center; gap: 16px; min-height: 52px; padding: 8px 24px; background: var(--oxford, #0e2a47); color: var(--on-oxford, #eaf0f7); font: 400 0.8125rem/1.5 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); } .ds-brand { font: 600 0.9375rem/1 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); letter-spacing: -0.01em; white-space: nowrap; } .ds-brand-mark { font: 600 0.8125rem/1 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--oxford, #0e2a47); background: var(--highlight, #ffe36e); padding: 3px 5px 2px; border-radius: 3px; } .ds-crumb { color: var(--on-oxford-muted, #a8b8cd); } .ds-crumb strong { color: var(--on-oxford, #eaf0f7); font-weight: 500; } .ds-end { margin-left: auto; display: flex; gap: 12px; align-items: center; } .ds-mode { font: 500 0.75rem/1.5 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--oxford-3, #24507d); } .ds-fixture { border-style: dashed; } .ds-meta { background: var(--highlight, #ffe36e); color: var(--oxford, #0e2a47); border: none; } .ds-spend { font-size: 0.75rem; color: var(--on-oxford-muted, #a8b8cd); font-variant-numeric: tabular-nums; } .ds-topbtn { background: transparent; border: 1px solid var(--oxford-3, #24507d); color: inherit; font: 500 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 4px 10px; border-radius: 6px; cursor: pointer; } .ds-topbtn:hover { background: var(--oxford-2, #173a5e); } .ds-topbtn:focus-visible { outline: 2px solid var(--focus, #2563b0); outline-offset: 2px; }"
+    },
+    {
+      "name": "Document Tabs",
+      "kind": "nav",
+      "refersTo": "tab",
+      "description": "Notes, project answer and cover letter, each on two lines: the name and its state (pink when it needs the applicant, green when approved). Keys 1-3 are announced, not drawn; phones use short names.",
+      "html": "<nav class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"false\" aria-keyshortcuts=\"1\" title=\"Press 1\" type=\"button\"><span class=\"ds-tab-name\">Your notes</span><span class=\"ds-tab-state\">14 facts confirmed</span></button><button role=\"tab\" aria-selected=\"true\" aria-keyshortcuts=\"2\" title=\"Press 2\" type=\"button\"><span class=\"ds-tab-name\">Project answer</span><span class=\"ds-tab-state\" data-tone=\"approved\">Approved · version 1</span></button><button role=\"tab\" aria-selected=\"false\" aria-keyshortcuts=\"3\" title=\"Press 3\" type=\"button\"><span class=\"ds-tab-name\">Cover letter</span><span class=\"ds-tab-state\" data-tone=\"needs\">Change proposed</span></button></nav>",
+      "css": ".ds-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--rule, #dde2ea); } .ds-tabs button { background: transparent; border: none; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 8px 12px; font: 500 0.8125rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); color: var(--muted, #5a6474); display: flex; align-items: center; gap: 6px; cursor: pointer; } .ds-tabs button[aria-selected=\"true\"] { color: var(--ink, #121a26); border-bottom-color: var(--oxford, #0e2a47); } .ds-tabs button[aria-selected=\"true\"] svg { color: var(--confirmed, #17703f); } .ds-tabs button:focus-visible { outline: 2px solid var(--focus, #2563b0); outline-offset: 2px; } .ds-tabs .ds-tab-kbd-unused { font: 500 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); color: var(--muted, #5a6474); }\n.ds-tabs button{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px}.ds-tab-name{font:500 15px/1.3 var(--font-ui)}.ds-tab-state{font-size:13px;color:var(--muted)}.ds-tab-state[data-tone=\"needs\"]{color:var(--needs)}.ds-tab-state[data-tone=\"approved\"]{color:var(--confirmed)}"
+    },
+    {
+      "name": "Cited Sentence",
+      "kind": "custom",
+      "refersTo": "citation",
+      "description": "Signature: drafted sentences in pencil with live superscript citations; the applicant's own sentence in ink with the pen mark.",
+      "html": "<p class=\"ds-ms\">We used Python and FastAPI for the API, Redis for the queue, Helm charts for deployment, and Prometheus and Grafana for <span class=\"ds-nowrap\">monitoring.<sup class=\"ds-cites\"><button class=\"ds-cite\" type=\"button\">4</button></sup></span> <span class=\"ds-user\">I wrote that per-course quota check in the scheduler <span class=\"ds-nowrap\">extender.<sup class=\"ds-cites\"><button class=\"ds-cite\" type=\"button\">5</button><button class=\"ds-cite\" type=\"button\">6</button></sup></span><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-label=\"Your words\" role=\"img\"><path d=\"M12 20h9\"/><path d=\"M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z\"/></svg></span></p>",
+      "css": ".ds-ms { font: 400 1.125rem/1.7 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--pencil, #475467); max-width: 66ch; margin: 0; } .ds-user { color: var(--ink, #121a26); } .ds-user svg { margin-left: 2px; vertical-align: 0.1em; } .ds-nowrap { white-space: nowrap; } .ds-cites { font-size: 0.68em; line-height: 0; vertical-align: super; } .ds-cite { border: none; background: transparent; padding: 0; margin: 0; border-radius: 3px; font: 600 1em var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--oxford-3, #24507d); cursor: pointer; transition: background 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-cite + .ds-cite::before { content: ','; } .ds-cite:hover, .ds-cite:focus-visible { background: var(--highlight, #ffe36e); color: var(--ink, #121a26); outline: none; }"
+    },
+    {
+      "name": "Reference Entry",
+      "kind": "custom",
+      "refersTo": "reference-active",
+      "description": "Signature: a numbered fact with the applicant's verbatim quote; lifts in Highlighter Wash when its citation is inspected.",
+      "html": "<ol class=\"ds-refs\"><li class=\"ds-ref\"><span class=\"ds-ref-n\">4</span><div><p class=\"ds-ref-st\">The stack: Python and FastAPI, Redis, Helm, Prometheus and Grafana.</p><p class=\"ds-ref-q\">“<mark>Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.</mark>”</p><p class=\"ds-ref-src\">From your notes</p></div></li><li class=\"ds-ref\" data-active=\"true\"><span class=\"ds-ref-n\">5</span><div><p class=\"ds-ref-st\">Chose Kubernetes Jobs with a scheduler extender over Slurm.</p><p class=\"ds-ref-q\">“<mark>we used Kubernetes Jobs with a scheduler extender instead of Slurm</mark>”</p><p class=\"ds-ref-src\">From your notes</p></div></li></ol>",
+      "css": ".ds-refs { list-style: none; margin: 0; padding: 0; } .ds-ref { display: grid; grid-template-columns: 28px 1fr; gap: 8px; padding: 12px; border-radius: 6px; transition: background 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-ref:hover, .ds-ref[data-active=\"true\"] { background: var(--highlight-soft, #fff4b8); } .ds-ref p { margin: 0; } .ds-ref-n { font: 600 0.9375rem var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--oxford-3, #24507d); text-align: right; } .ds-ref-st { font: 500 0.8125rem/1.45 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); color: var(--ink, #121a26); } .ds-ref-q { font: 400 0.8125rem/1.55 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--pencil, #475467); margin-top: 4px !important; } .ds-ref-q mark { background: var(--highlight-soft, #fff4b8); color: inherit; padding: 0 2px; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; } .ds-ref[data-active=\"true\"] .ds-ref-q mark { background: var(--highlight, #ffe36e); } .ds-ref-src { font: 400 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); color: var(--muted, #5a6474); margin-top: 4px !important; }"
+    },
+    {
+      "name": "Corrigendum Change",
+      "kind": "custom",
+      "refersTo": "diff-inserted",
+      "description": "Signature: the changed fact struck and inserted under a plain summary of what reopened and what stayed untouched; each reopened sentence as a Was line and a Now line with the changed words marked, then the three choices as small buttons.",
+      "html": "<section class=\"ds-queue\"><h2>Corrigendum</h2><p class=\"ds-q-sub\">What changes when a fact changes</p><p class=\"ds-q-sum\">Correcting [10] reopened the 2 sentences that cite it: 1 in the project answer, 1 in the cover letter. The other 17 sentences are untouched.</p><p class=\"ds-q-fact\"><span class=\"ds-q-ref\">[10]</span><del>I wrote the Helm change that mounts a memory-backed emptyDir for each job.</del> <ins>My teammate Sam wrote the Helm change; I tested it on two of the lab nodes.</ins></p><div class=\"ds-q-item\"><div class=\"ds-q-head\"><span class=\"ds-q-doc\">Project answer</span><span class=\"ds-q-chip\">Proposed</span></div><p class=\"ds-q-diff\"><del>I wrote the Helm change that mounts a memory-backed emptyDir with a size limit for each job, which fixed it.</del> <ins>My teammate Sam wrote the Helm change that mounts a memory-backed emptyDir with a size limit for each job; I tested it on two of the lab nodes.</ins></p><div class=\"ds-q-acts\"><button type=\"button\" aria-pressed=\"true\">Take the rewrite</button><button type=\"button\">Keep as is</button><button type=\"button\">Write my own</button></div></div></section>",
+      "css": ".ds-queue { background: var(--sheet, #ffffff); border-radius: 10px; padding: 24px; box-shadow: 0 1px 2px rgb(14 42 71 / 0.06), 0 6px 18px -6px rgb(14 42 71 / 0.18); font: 400 0.9375rem/1.5 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); color: var(--ink, #121a26); } .ds-queue h2 { font: 600 1.25rem/1.5 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); margin: 0; } .ds-queue p { margin: 0; } .ds-q-sum { font-size: 0.8125rem; color: var(--muted, #5a6474); font-variant-numeric: tabular-nums; } .ds-q-fact { font: 400 0.9375rem/1.6 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); margin: 12px 0 16px !important; padding: 12px; background: var(--paper, #f4f6f9); border-radius: 6px; } .ds-q-ref { color: var(--oxford-3, #24507d); font-weight: 600; margin-right: 6px; } .ds-queue del { color: var(--danger, #b42318); text-decoration: line-through; text-decoration-thickness: 1.5px; background: var(--danger-soft, #fdecea); padding: 0 2px; border-radius: 2px; } .ds-queue ins { color: var(--confirmed, #17703f); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; background: var(--confirmed-soft, #e2f3e9); padding: 0 2px; border-radius: 2px; } .ds-q-item { border-top: 1px solid var(--rule, #dde2ea); padding: 12px 0; } .ds-q-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; } .ds-q-doc { font: 600 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted, #5a6474); } .ds-q-chip { font: 500 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 2px 8px; border-radius: 999px; color: var(--oxford-3, #24507d); background: var(--paper, #f4f6f9); } .ds-q-diff { font: 400 0.9375rem/1.6 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); } .ds-q-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; } .ds-q-acts button { font: 500 0.8125rem/1.2 var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 5px 10px; border-radius: 6px; border: 1px solid var(--rule-strong, #c3cad5); background: var(--sheet, #ffffff); color: var(--ink, #121a26); cursor: pointer; } .ds-q-acts button:hover { background: var(--paper, #f4f6f9); } .ds-q-acts button[aria-pressed=\"true\"] { background: var(--oxford, #0e2a47); color: var(--on-oxford, #eaf0f7); border-color: var(--oxford, #0e2a47); } .ds-q-acts button:focus-visible { outline: 2px solid var(--focus, #2563b0); outline-offset: 2px; }"
+    },
+    {
+      "name": "Status Chips and Inline Marks",
+      "kind": "chip",
+      "refersTo": "chip-approved",
+      "description": "Approval state on the manuscript head; corrected and change-proposed marks after a sentence.",
+      "html": "<div class=\"ds-chips\"><span class=\"ds-approval ds-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Approved · version 2</span><span class=\"ds-approval ds-stale\">Changed since you approved: review again</span><span class=\"ds-mark ds-corrected\">corrected</span><span class=\"ds-mark ds-pending\">change proposed</span></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ds-approval { display: inline-flex; align-items: center; gap: 6px; font: 500 0.8125rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); padding: 4px 10px; border-radius: 999px; } .ds-ok { color: var(--confirmed, #17703f); background: var(--confirmed-soft, #e2f3e9); } .ds-stale { color: var(--needs, #b8125a); background: var(--needs-soft, #ffe3ef); } .ds-mark { font: 500 0.75rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 5px; border-radius: 3px; } .ds-corrected { color: var(--confirmed, #17703f); background: var(--confirmed-soft, #e2f3e9); } .ds-pending { color: var(--needs, #b8125a); background: var(--needs-soft, #ffe3ef); }"
+    },
+    {
+      "name": "NOT SUBMITTED Stamp",
+      "kind": "custom",
+      "refersTo": "stamp-not-submitted",
+      "description": "The export is stamped, never sent.",
+      "html": "<span class=\"ds-stamp\">NOT SUBMITTED</span>",
+      "css": ".ds-stamp { display: inline-block; font: 700 0.8125rem var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif); letter-spacing: 0.12em; color: var(--danger, #b42318); border: 2px solid var(--danger, #b42318); padding: 4px 10px; border-radius: 4px; transform: rotate(-2deg); }"
+    },
+    {
+      "name": "Answer Field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "Where the applicant writes in their own words; set in the document face.",
+      "html": "<textarea class=\"ds-field\" rows=\"3\" placeholder=\"In your own words…\" aria-label=\"Your answer\"></textarea>",
+      "css": ".ds-field { width: 100%; font: 400 0.9375rem/1.55 var(--font-doc, 'STIX Two Text', 'Iowan Old Style', Georgia, serif); color: var(--ink, #121a26); background: var(--sheet, #ffffff); border: 1px solid var(--rule-strong, #c3cad5); border-radius: 6px; padding: 12px; caret-color: var(--oxford-3, #24507d); resize: vertical; } .ds-field::placeholder { color: var(--muted, #5a6474); } .ds-field:focus { outline: none; border-color: var(--focus, #2563b0); }"
+    },
+    {
+      "name": "Working State",
+      "kind": "custom",
+      "description": "Actual stage, next review action and optional timing; only real streamed events.",
+      "html": "<section class=\"ds-working\"><div class=\"ds-working-stroke\" aria-hidden=\"true\"></div><p role=\"status\">Checking your saved step</p><p class=\"ds-working-next\">You can review the result when this step finishes.</p></section>",
+      "css": ".ds-working { padding:var(--s4) 0; color:var(--ink); font-family:var(--font-ui); } .ds-working-stroke { height:2px; background:var(--rule); overflow:hidden; margin-bottom:var(--s4); } .ds-working-stroke::after { content:\"\"; display:block; width:28%; height:100%; background:var(--oxford-3); } .ds-working p { margin:0; font-weight:600; } .ds-working .ds-working-next { margin-top:var(--s1); color:var(--muted); font-size:var(--text-sm); font-weight:400; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Referenced Paper",
+    "overview": "An application is set the way a well-referenced paper is set. Every drafted sentence carries a numbered citation to a fact the applicant confirmed in their own words. The references sit beside the manuscript, and the quoted words are marked with a highlighter. When a fact changes, a corrigendum lists exactly the sentences that cite it, and nothing is silently rewritten. The workspace is a desk: a cool paper ground, white sheets for documents, and an Oxford-blue shell that frames the work without competing with it.\n\nDensity is that of a working document, not a dashboard. Three columns hold the form being answered, the manuscript at a fixed reading measure, and the evidence rail. Hierarchy comes from the two type voices and from scale, not from colour blocks or decoration. Colour is semantic and sparse: yellow is evidence, pink is \"needs you\", green is confirmed, red is struck. The confirmed anti-references are the chat-bubble AI writer and the card dashboard with a purple glow.\n\nStates leave a trace. Superseded wording is struck through rather than deleted, the export is stamped NOT SUBMITTED, and the run mode (fixture or Meta) is always labelled in the shell.",
+    "keyCharacteristics": [
+      "Cool paper ground with white sheets and an Oxford-blue top bar.",
+      "STIX Two Text for everything that is a document; system UI sans for controls and metadata.",
+      "Inline superscript citations after each claim, each linked live to a numbered reference.",
+      "Highlighter yellow only on words the applicant wrote that a fact quotes.",
+      "A corrigendum queue that strikes old wording and inserts new wording, with the applicant deciding each change.",
+      "Ink for the applicant's own words, pencil for drafted words, with a pen mark as the second signal."
+    ],
+    "rules": [
+      {
+        "name": "The Highlighter Means Evidence Rule",
+        "body": "Yellow marks only the applicant's own words that a fact quotes, the citation being inspected, and the selection. It never marks status, emphasis or brand decoration beyond the [1] mark.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pink Means You Rule",
+        "body": "Pink appears only where the next move belongs to the applicant. If nothing waits on them, no pink is on screen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink and Pencil Rule",
+        "body": "The applicant's words are ink and carry the pen mark; drafted words are pencil. Colour is never the only signal.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Anything the applicant would print sets in STIX Two Text: documents, notes, quotes, reference numbers, rail titles. Anything they operate sets in the system sans. Never swap them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Manuscript and notes prose sits at 66ch, on every width that allows it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Is a Heading Rule",
+        "body": "A small uppercase label is a heading in its own right. It never sits above another heading or above the text it introduces.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper and Panel Rule",
+        "body": "Documents lie on the desk as sheets; tools sit on lifted panels. Two shadows, no third.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do cite every drafted claim with superscript numerals that link to a numbered reference quoting the applicant verbatim.",
+      "Do keep Highlighter Yellow (#ffe36e) and its wash (#fff4b8) for quoted evidence and the citation being inspected.",
+      "Do strike old wording and insert new wording (Struck Red and Confirmed Green with 1.5px lines) instead of replacing text silently.",
+      "Do label the run mode in the top bar at all times: dashed for fixture, yellow only for Meta.",
+      "Do set documents in STIX Two Text at 66ch and controls in the system sans with tabular figures.",
+      "Do mark the applicant's own sentences in ink with the pen icon, so colour is never the only signal.",
+      "Do stamp the export NOT SUBMITTED in Struck Red.",
+      "Do give every control the 2px Focus Blue ring and a keyboard path (1, 2 and 3 for tabs, Enter and Backspace for facts, j, k, y and n for the corrigendum, Cmd or Ctrl and K for commands)."
+    ],
+    "donts": [
+      "Don't build a chat-bubble AI writer or a card dashboard with a purple glow.",
+      "Don't use yellow for status or decoration, or pink for anything that does not wait on the applicant.",
+      "Don't nest a bordered box inside a lifted panel; items inside a panel are rows divided by hairlines.",
+      "Don't set a label above a heading or above the question or text it introduces.",
+      "Don't draw a coloured rule or inset stripe wider than 1px down the left of a block or a list item.",
+      "Don't set text that must be read in Faint Graphite (#8a93a3); it is 3.1:1 on white.",
+      "Don't add a third shadow, a hard offset shadow or a glow.",
+      "Don't present fixture output as Meta output, in copy or in colour."
+    ]
+  }
+}

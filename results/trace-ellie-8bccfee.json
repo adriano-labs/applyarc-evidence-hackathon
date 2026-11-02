@@ -1,0 +1,826 @@
+{
+  "steps": [
+    {
+      "name": "start fresh",
+      "ms": 239
+    },
+    {
+      "name": "load the sample notes",
+      "ms": 103
+    },
+    {
+      "name": "add notes",
+      "ms": 144
+    },
+    {
+      "name": "read the notes",
+      "ms": 2339
+    },
+    {
+      "name": "confirm the facts",
+      "ms": 970
+    },
+    {
+      "name": "check what the form still needs",
+      "ms": 2331
+    },
+    {
+      "name": "answer the question",
+      "ms": 104
+    },
+    {
+      "name": "read the answer",
+      "ms": 1755
+    },
+    {
+      "name": "confirm the new facts",
+      "ms": 439
+    },
+    {
+      "name": "check again",
+      "ms": 100
+    },
+    {
+      "name": "write both documents",
+      "ms": 29826
+    },
+    {
+      "name": "edit a letter sentence by hand",
+      "ms": 353
+    },
+    {
+      "name": "correct a fact",
+      "ms": 167
+    },
+    {
+      "name": "propose the changes",
+      "ms": 15118
+    },
+    {
+      "name": "decide what needs you",
+      "ms": 253
+    },
+    {
+      "name": "apply the changes",
+      "ms": 134
+    },
+    {
+      "name": "approve the project answer",
+      "ms": 138
+    },
+    {
+      "name": "approve the cover letter",
+      "ms": 135
+    },
+    {
+      "name": "export the pack",
+      "ms": 138
+    }
+  ],
+  "notes": [
+    "notes: 9 facts admitted, 0 refused (none)",
+    "questions: contribution: For your final-year GPU job runner project with four people from Sept 2025 to March 2026, what did you personally build or take responsibility for?",
+    "answer: 232 of 300 words",
+    "letter: 285 of 400 words",
+    "repair: 2 reliant sentences (answer-10, letter-11)",
+    "proposals: answer-10=proposed, letter-11=conflict"
+  ],
+  "pack": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "exportId": "e1",
+    "createdAt": "2026-10-30T18:29:16.231Z",
+    "application": {
+      "company": "Graphcore",
+      "role": "Graduate Cloud Platform Engineer 2027",
+      "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+      "snapshotFetchedAt": "2026-10-26T22:41:53Z"
+    },
+    "documents": [
+      {
+        "id": "answer",
+        "title": "Project answer",
+        "fieldId": "question_38884073002",
+        "revision": 2,
+        "approvedAt": "2026-10-30T18:29:15.957Z",
+        "words": 243,
+        "wordLimit": 300,
+        "text": "We built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026. We saw 140 students use it in the spring term and the average wait for a GPU went from about two days to under 20 minutes.\n\nWe let students submit training jobs through a small web form and the runner queued them on Kubernetes with k3s on six old lab workstations with GPUs. We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, and Prometheus and Grafana for monitoring.\n\nWe used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas.\n\nWe had jobs start dying at random in week 9, pods OOMKilled even with tiny models and it took us three days to resolve. We had the default /dev/shm in the pods at 64 MB so the PyTorch data loaders crashed. We learned to check the node's kernel log first, as dmesg showed the OOM kills straight away and we wasted two days before looking.\n\nI found the /dev/shm problem by reading dmesg on the nodes and seeing the OOM kills. My teammate Sam wrote the Helm change that mounts a memory-backed emptyDir for each job; I tested it on two of the lab nodes. I also wrote the per-course quota check in the scheduler extender.",
+        "references": [
+          {
+            "n": 1,
+            "factId": "f1",
+            "statement": "We built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026.",
+            "quote": "Final-year group project, four of us, Sept 2025 to March 2026. We built a self-service GPU job runner for the department's machine learning teaching cluster.",
+            "from": "notes"
+          },
+          {
+            "n": 2,
+            "factId": "f7",
+            "statement": "140 students used it in spring term and average wait for GPU went from about two days to under 20 minutes.",
+            "quote": "140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.",
+            "from": "notes"
+          },
+          {
+            "n": 3,
+            "factId": "f2",
+            "statement": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+            "quote": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+            "from": "notes"
+          },
+          {
+            "n": 4,
+            "factId": "f3",
+            "statement": "We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+            "quote": "Stack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+            "from": "notes"
+          },
+          {
+            "n": 5,
+            "factId": "f4",
+            "statement": "We used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "quote": "we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "from": "notes"
+          },
+          {
+            "n": 6,
+            "factId": "f5",
+            "statement": "In week 9 jobs started dying at random, pods OOMKilled even with tiny models and it took three days to resolve.",
+            "quote": "in week 9 jobs started dying at random, pods OOMKilled even with tiny models. Took us three days.",
+            "from": "notes"
+          },
+          {
+            "n": 7,
+            "factId": "f6",
+            "statement": "Default /dev/shm in pods was 64 MB so PyTorch data loaders crashed, fixed by mounting memory-backed emptyDir with size limit per job.",
+            "quote": "Turned out the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed. Fixed it by mounting a memory-backed emptyDir with a size limit per job.",
+            "from": "notes"
+          },
+          {
+            "n": 8,
+            "factId": "f8",
+            "statement": "We learned to check node's kernel log first, dmesg showed OOM kills straight away and we wasted two days before looking.",
+            "quote": "Learned: check the node's kernel log first. dmesg showed the OOM kills straight away and we wasted two days before looking.",
+            "from": "notes"
+          },
+          {
+            "n": 9,
+            "factId": "f10",
+            "statement": "I found the /dev/shm problem",
+            "quote": "I found the /dev/shm problem: I read dmesg on the nodes and saw the OOM kills.",
+            "from": "answer"
+          },
+          {
+            "n": 10,
+            "factId": "f11",
+            "statement": "I read dmesg on the nodes and saw OOM kills",
+            "quote": "I read dmesg on the nodes and saw the OOM kills",
+            "from": "answer"
+          },
+          {
+            "n": 11,
+            "factId": "f12",
+            "statement": "My teammate Sam wrote the Helm change; I tested it on two of the lab nodes.",
+            "quote": "My teammate Sam wrote the Helm change; I tested it on two of the lab nodes.",
+            "from": "correction"
+          },
+          {
+            "n": 12,
+            "factId": "f13",
+            "statement": "I wrote per-course quota check in scheduler extender",
+            "quote": "I also wrote the per-course quota check in the scheduler extender.",
+            "from": "answer"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "We built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026.",
+            "refs": [
+              1
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "We saw 140 students use it in the spring term and the average wait for a GPU went from about two days to under 20 minutes.",
+            "refs": [
+              2
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We let students submit training jobs through a small web form and the runner queued them on Kubernetes with k3s on six old lab workstations with GPUs.",
+            "refs": [
+              3
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, and Prometheus and Grafana for monitoring.",
+            "refs": [
+              4
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "refs": [
+              5
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "We had jobs start dying at random in week 9, pods OOMKilled even with tiny models and it took us three days to resolve.",
+            "refs": [
+              6
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "We had the default /dev/shm in the pods at 64 MB so the PyTorch data loaders crashed.",
+            "refs": [
+              7
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We learned to check the node's kernel log first, as dmesg showed the OOM kills straight away and we wasted two days before looking.",
+            "refs": [
+              8
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "I found the /dev/shm problem by reading dmesg on the nodes and seeing the OOM kills.",
+            "refs": [
+              9,
+              10
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "My teammate Sam wrote the Helm change that mounts a memory-backed emptyDir for each job; I tested it on two of the lab nodes.",
+            "refs": [
+              11,
+              7
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "I also wrote the per-course quota check in the scheduler extender.",
+            "refs": [
+              12
+            ],
+            "startsParagraph": false
+          }
+        ],
+        "ownWords": 0,
+        "notAnswered": []
+      },
+      {
+        "id": "letter",
+        "title": "Cover letter",
+        "fieldId": "cover_letter_text",
+        "revision": 3,
+        "approvedAt": "2026-10-30T18:29:16.096Z",
+        "words": 295,
+        "wordLimit": 400,
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nI liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.\n\nWe built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026. Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs). We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring. We used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas. I wrote the per-course quota check in the scheduler extender.\n\nIn week 9 jobs started dying at random, pods OOMKilled even with tiny models and it took three days to resolve. I read dmesg on the nodes and saw the OOM kills, which identified the /dev/shm problem. For context: The default /dev/shm in the pods was 64 MB so the PyTorch data loaders crashed, and my teammate Sam wrote the Helm change that mounts a memory-backed emptyDir with a size limit per job; I tested it on two of the lab nodes. 140 students used it in the spring term and the average wait for a GPU went from about two days on the old sign-up sheet to under 20 minutes. We learned to check the node's kernel log first, dmesg showed the OOM kills straight away and we wasted two days before looking.\n\nThank you for considering my application.\n\nKind regards, Ellie",
+        "references": [
+          {
+            "n": 1,
+            "factId": "f1",
+            "statement": "We built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026.",
+            "quote": "Final-year group project, four of us, Sept 2025 to March 2026. We built a self-service GPU job runner for the department's machine learning teaching cluster.",
+            "from": "notes"
+          },
+          {
+            "n": 2,
+            "factId": "f7",
+            "statement": "140 students used it in spring term and average wait for GPU went from about two days to under 20 minutes.",
+            "quote": "140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.",
+            "from": "notes"
+          },
+          {
+            "n": 3,
+            "factId": "f2",
+            "statement": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+            "quote": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+            "from": "notes"
+          },
+          {
+            "n": 4,
+            "factId": "f3",
+            "statement": "We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+            "quote": "Stack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+            "from": "notes"
+          },
+          {
+            "n": 5,
+            "factId": "f4",
+            "statement": "We used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "quote": "we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "from": "notes"
+          },
+          {
+            "n": 6,
+            "factId": "f5",
+            "statement": "In week 9 jobs started dying at random, pods OOMKilled even with tiny models and it took three days to resolve.",
+            "quote": "in week 9 jobs started dying at random, pods OOMKilled even with tiny models. Took us three days.",
+            "from": "notes"
+          },
+          {
+            "n": 7,
+            "factId": "f6",
+            "statement": "Default /dev/shm in pods was 64 MB so PyTorch data loaders crashed, fixed by mounting memory-backed emptyDir with size limit per job.",
+            "quote": "Turned out the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed. Fixed it by mounting a memory-backed emptyDir with a size limit per job.",
+            "from": "notes"
+          },
+          {
+            "n": 8,
+            "factId": "f8",
+            "statement": "We learned to check node's kernel log first, dmesg showed OOM kills straight away and we wasted two days before looking.",
+            "quote": "Learned: check the node's kernel log first. dmesg showed the OOM kills straight away and we wasted two days before looking.",
+            "from": "notes"
+          },
+          {
+            "n": 9,
+            "factId": "f10",
+            "statement": "I found the /dev/shm problem",
+            "quote": "I found the /dev/shm problem: I read dmesg on the nodes and saw the OOM kills.",
+            "from": "answer"
+          },
+          {
+            "n": 10,
+            "factId": "f11",
+            "statement": "I read dmesg on the nodes and saw OOM kills",
+            "quote": "I read dmesg on the nodes and saw the OOM kills",
+            "from": "answer"
+          },
+          {
+            "n": 11,
+            "factId": "f12",
+            "statement": "My teammate Sam wrote the Helm change; I tested it on two of the lab nodes.",
+            "quote": "My teammate Sam wrote the Helm change; I tested it on two of the lab nodes.",
+            "from": "correction"
+          },
+          {
+            "n": 12,
+            "factId": "f13",
+            "statement": "I wrote per-course quota check in scheduler extender",
+            "quote": "I also wrote the per-course quota check in the scheduler extender.",
+            "from": "answer"
+          },
+          {
+            "n": 13,
+            "factId": "f9",
+            "statement": "I liked infrastructure side more than machine learning side, and Graphcore builds both hardware and cloud platform that models run on.",
+            "quote": "I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.",
+            "from": "notes"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "Dear Graphcore hiring team,",
+            "refs": [],
+            "startsParagraph": true
+          },
+          {
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "refs": [],
+            "startsParagraph": true
+          },
+          {
+            "text": "I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.",
+            "refs": [
+              13
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "We built a self-service GPU job runner for the department's machine learning teaching cluster as a final-year group project with four people from Sept 2025 to March 2026.",
+            "refs": [
+              1
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+            "refs": [
+              3
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We used Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+            "refs": [
+              4
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We used Kubernetes Jobs with a scheduler extender instead of Slurm because the department wanted everything in containers and we needed per-course GPU quotas.",
+            "refs": [
+              5
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "I wrote the per-course quota check in the scheduler extender.",
+            "refs": [
+              12
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "In week 9 jobs started dying at random, pods OOMKilled even with tiny models and it took three days to resolve.",
+            "refs": [
+              6
+            ],
+            "startsParagraph": true
+          },
+          {
+            "text": "I read dmesg on the nodes and saw the OOM kills, which identified the /dev/shm problem.",
+            "refs": [
+              9,
+              10
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "For context: The default /dev/shm in the pods was 64 MB so the PyTorch data loaders crashed, and my teammate Sam wrote the Helm change that mounts a memory-backed emptyDir with a size limit per job; I tested it on two of the lab nodes.",
+            "refs": [
+              7,
+              11
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "140 students used it in the spring term and the average wait for a GPU went from about two days on the old sign-up sheet to under 20 minutes.",
+            "refs": [
+              2
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "We learned to check the node's kernel log first, dmesg showed the OOM kills straight away and we wasted two days before looking.",
+            "refs": [
+              8
+            ],
+            "startsParagraph": false
+          },
+          {
+            "text": "Thank you for considering my application.",
+            "refs": [],
+            "startsParagraph": true
+          },
+          {
+            "text": "Kind regards, Ellie",
+            "refs": [],
+            "startsParagraph": true
+          }
+        ],
+        "ownWords": 0,
+        "notAnswered": []
+      }
+    ],
+    "portalTasks": [
+      "First Name",
+      "Last Name",
+      "Email",
+      "Phone",
+      "Resume/CV",
+      "Do you have the legal right to work in the UK without sponsorship?",
+      "Have you added your full legal name and surname (including any middle names)?",
+      "What is your predicted/final degree classification?",
+      "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+      "Would you need to relocate to work regularly from this office?",
+      "How did you first hear about Graphcore?",
+      "Please select your right to work status"
+    ],
+    "applicant": "Ellie"
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "656b7d122aed471e8ab8bf3d408608dd"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1580,
+        "cached": 0,
+        "output": 754,
+        "reasoning": 0
+      },
+      "costUsd": 0.0051795,
+      "firstEventMs": 618,
+      "firstOutputMs": 1016,
+      "totalMs": 2209,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-10-30T18:28:24.278Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "d4ec85b041a54683922a7af2199fdb60"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1886,
+        "cached": 0,
+        "output": 707,
+        "reasoning": 0
+      },
+      "costUsd": 0.00536225,
+      "firstEventMs": 488,
+      "firstOutputMs": 1673,
+      "totalMs": 2183,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-10-30T18:28:27.560Z"
+    },
+    {
+      "step": "extract",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "4d40aaa7056847609024fb15098f42a1"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1458,
+        "cached": 0,
+        "output": 499,
+        "reasoning": 0
+      },
+      "costUsd": 0.00394325,
+      "firstEventMs": 290,
+      "firstOutputMs": 1164,
+      "totalMs": 1626,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-10-30T18:28:29.438Z"
+    },
+    {
+      "step": "draft",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "f824b786a96e4f27bfe45bcc65af9e05"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2296,
+        "cached": 0,
+        "output": 7474,
+        "reasoning": 0
+      },
+      "costUsd": 0.0346345,
+      "firstEventMs": 386,
+      "firstOutputMs": 22215,
+      "totalMs": 23118,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-10-30T18:28:53.224Z"
+    },
+    {
+      "step": "draft",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "d5ab2181c4a0486fa82aabb295449d2b"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2139,
+        "cached": 0,
+        "output": 7274,
+        "reasoning": 0
+      },
+      "costUsd": 0.03358825,
+      "firstEventMs": 588,
+      "firstOutputMs": 21543,
+      "totalMs": 23227,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-10-30T18:28:53.389Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "bc1aeff3c00f40a981fdedd8eb19b8a6"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3776,
+        "cached": 0,
+        "output": 949,
+        "reasoning": 0
+      },
+      "costUsd": 0.00875325,
+      "firstEventMs": 845,
+      "firstOutputMs": 2677,
+      "totalMs": 3468,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-10-30T18:28:56.873Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "fc49c29016874a33a1ab01aec4e24a36"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4057,
+        "cached": 0,
+        "output": 1414,
+        "reasoning": 0
+      },
+      "costUsd": 0.01108075,
+      "firstEventMs": 1047,
+      "firstOutputMs": 3238,
+      "totalMs": 4223,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-10-30T18:28:57.463Z"
+    },
+    {
+      "step": "revise",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "ee1fd46ce69b4712b0e6b00cee8c334c"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1369,
+        "cached": 0,
+        "output": 754,
+        "reasoning": 0
+      },
+      "costUsd": 0.00491575,
+      "firstEventMs": 329,
+      "firstOutputMs": 2088,
+      "totalMs": 2278,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-10-30T18:28:59.762Z"
+    },
+    {
+      "step": "repair",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "58c046ec47ed425a82fce64d4acfbb6d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3041,
+        "cached": 0,
+        "output": 1805,
+        "reasoning": 0
+      },
+      "costUsd": 0.0114725,
+      "firstEventMs": 636,
+      "firstOutputMs": 5267,
+      "totalMs": 5668,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-10-30T18:29:06.153Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "18981bbcd4fc443c9f56bf8194659da0"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2798,
+        "cached": 0,
+        "output": 3136,
+        "reasoning": 0
+      },
+      "costUsd": 0.0168255,
+      "firstEventMs": 602,
+      "firstOutputMs": 8596,
+      "totalMs": 9151,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-10-30T18:29:15.386Z"
+    }
+  ],
+  "mode": {
+    "id": "compatible",
+    "label": "Meta Muse Spark Open on Modal",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "isMeta": true
+  },
+  "budget": {
+    "capUsd": 80,
+    "spentUsd": 4.106058,
+    "reservedUsd": 0,
+    "remainingUsd": 75.893942
+  }
+}

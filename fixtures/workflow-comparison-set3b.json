@@ -1,0 +1,447 @@
+{
+ "version": 1,
+ "authored": "2026-10-29",
+ "author": "separate blind agent",
+ "heldOut": true,
+ "purpose": "Set 3B: eight held-out career-changer cases for the paired correction check in scripts/workflow-comparison/ACCEPTANCE-SET3B.md, written blind and frozen before any run; not evidence of user time saved or hiring outcomes.",
+ "protocol": "paired-full-workflow-v5",
+ "cases": [
+  {
+   "id": "ride-safety-callouts",
+   "input": {
+    "applicant": "Dylan",
+    "company": "Kelderby Rail",
+    "role": "Trainee Signaller",
+    "notes": "I'm 27 and I've worked at a theme park for six years, the last four as a ride operator on the big wooden rollercoaster.\nTwo summers ago we had a near miss when a train was sent out with one lap bar that hadn't fully locked.\nAfter that, I led the rewrite of the safety checks we do before every train leaves the station.\nWe changed the checks to call and response over the radio, so one operator reads out each step and the other confirms it before the train is released.\nIn the eighteen months since, we haven't had another lap bar incident, and the park's other two coasters now use the same routine.\nI've done the opening checks myself well over a thousand times, and I still read every step out rather than going from memory.\nI learned that a check is only as good as the words people use for it, so everyone has to say the same thing every time.\nI want to train as a signaller with Kelderby Rail because its new starters spend six weeks in a full-size simulator before they work a live panel.",
+    "question": "Signallers must follow procedures exactly and communicate without ambiguity. Describe a time you helped make a safety-critical routine more reliable. Tell us what had gone wrong, what you personally did, who led the work, and what difference the change has made.",
+    "requirements": [
+     {
+      "text": "What had gone wrong before, and why it mattered for safety",
+      "personal": false
+     },
+     {
+      "text": "What you personally did, and who led the work",
+      "personal": true
+     },
+     {
+      "text": "The difference the change has made, with evidence",
+      "personal": false
+     },
+     {
+      "text": "How you would apply this when working alone in a signal box",
+      "personal": true
+     }
+    ],
+    "wordLimit": 300
+   },
+   "clarificationAnswer": "I kept the trial log as well, writing down every check we did during the first four weeks of the new routine.",
+   "correction": {
+    "anchor": "I led the rewrite of the safety checks",
+    "before": "After that, I led the rewrite of the safety checks we do before every train leaves the station.",
+    "after": "Lorna, our ride supervisor, led the rewrite of the safety checks. I wrote the radio call cards we read from, and I filmed the training video that new operators now watch."
+   },
+   "manual": {
+    "source": "I want to train as a signaller with Kelderby Rail because its new starters spend six weeks in a full-size simulator before they work a live panel.",
+    "replacement": "Kelderby Rail is where I want to train as a signaller, because new starters there spend six weeks in a full-size simulator before working a live panel."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "call cards",
+     "training video"
+    ],
+    "obsoletePhrases": [
+     "I led the rewrite"
+    ],
+    "semanticChecks": [
+     "Lorna, the ride supervisor, led the rewrite of the safety checks; neither document may say or imply that the applicant led or ran it.",
+     "Each document that relied on the rewrite should keep the applicant's real part: writing the radio call cards and filming the training video for new operators.",
+     "The results stay as stated: no further lap bar incident in eighteen months and the same routine on the park's other two coasters; no other safety figure may be added.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No railway experience, signalling qualification, incident figures beyond the eighteen months stated, or verified detail about Kelderby Rail's simulator training was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "depot-defibrillator-scheme",
+   "input": {
+    "applicant": "Desmond",
+    "company": "Pellingham Ambulance Service",
+    "role": "Trainee Emergency Medical Technician",
+    "notes": "I've driven buses out of the same depot for nineteen years, and I'll be 48 this spring.\nThree years ago a passenger collapsed on my bus, and while we waited for the ambulance none of us knew where the nearest defibrillator was.\nThat's why I started the defibrillator scheme at our depot.\nWe now have two defibrillators, one in the drivers' canteen and one on the gatehouse wall where anyone passing can use it.\nSo far 64 drivers have done a basic life support session with a trainer from a first aid charity.\nLast winter one of our drivers used the gatehouse defibrillator on a man at the bus station before the crew arrived, and he survived.\nWhat I took from it is that people freeze less when they've practised on a dummy than when they've only been told what to do.\nI'm applying to Pellingham Ambulance Service because it supports its technicians to go on and qualify as paramedics.",
+    "question": "Emergency medical technicians work alongside paramedics, drive under emergency conditions and help keep patients and the public safe. Tell us about a time you helped people get ready to respond to an emergency. What did you do yourself, how did others contribute, and what has happened as a result?",
+    "requirements": [
+     {
+      "text": "What you did yourself, as distinct from others involved",
+      "personal": true
+     },
+     {
+      "text": "How other people contributed",
+      "personal": false
+     },
+     {
+      "text": "What has happened as a result, using only things that actually happened",
+      "personal": false
+     },
+     {
+      "text": "What it taught you about how people act under pressure",
+      "personal": true
+     }
+    ],
+    "wordLimit": 250
+   },
+   "clarificationAnswer": "I did the very first basic life support session myself, and I've done the refresher every year since.",
+   "correction": {
+    "anchor": "I started the defibrillator scheme",
+    "before": "That's why I started the defibrillator scheme at our depot.",
+    "after": "Bernadette, our union rep, started the scheme and booked the trainers. My part was marking every public defibrillator on our route maps and filling in the weekly check sheet for both machines."
+   },
+   "manual": {
+    "source": "I'm applying to Pellingham Ambulance Service because it supports its technicians to go on and qualify as paramedics.",
+    "replacement": "The support Pellingham Ambulance Service gives technicians who want to qualify as paramedics is the reason I am applying."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "route map",
+     "check sheet"
+    ],
+    "obsoletePhrases": [
+     "I started the defibrillator scheme"
+    ],
+    "semanticChecks": [
+     "Bernadette, the union rep, started the scheme and booked the trainers; the applicant must not be credited with starting, setting up or running it.",
+     "Each document that relied on the scheme should keep the applicant's real part: marking public defibrillators on the route maps and filling in the weekly check sheet.",
+     "The rescue at the bus station was carried out by another driver; neither document may credit it to the applicant or add survival or response-time figures.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No clinical or first aid qualification beyond the session described, ambulance or healthcare experience, driving licence category or verified detail about how Pellingham Ambulance Service supports technicians to qualify as paramedics was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "aphasia-picture-boards",
+   "input": {
+    "applicant": "Farah",
+    "company": "Ravensholt Community Health",
+    "role": "Speech and Language Therapy Assistant",
+    "notes": "I've been a team leader in a call centre for eight years, and for the last two I've volunteered on Thursday evenings at a conversation group for people with aphasia after a stroke.\nMany of our members know exactly what they want to say but can't get the words out, and conversations used to stall after a few minutes.\nI designed the picture boards that every table at the group now uses.\nMembers point to pictures of places, food, family and feelings, and the topic changes each week so there's always something new to talk about.\nSince the boards came in, regular attendance has gone up from about eight members to fifteen.\nRunning a call-centre team has taught me to listen for what someone means, not just the words they use.\nAt the group I've learned to wait longer than feels comfortable, because the answer is often on its way.\nI'd love to work for Ravensholt Community Health because its therapy assistants see people at home, where they actually need to talk.",
+    "question": "Speech and language therapy assistants deliver activities planned by a qualified therapist and adapt them to each person's needs. Describe a time you helped someone with a communication difficulty take part in conversation. Tell us what you did yourself, how the work was planned and by whom, and what difference it made.",
+    "requirements": [
+     {
+      "text": "What you did yourself",
+      "personal": true
+     },
+     {
+      "text": "How the work was planned, and by whom",
+      "personal": false
+     },
+     {
+      "text": "The difference it made for the people involved",
+      "personal": false
+     },
+     {
+      "text": "What you have learned about communicating with someone who has aphasia",
+      "personal": true
+     }
+    ],
+    "wordLimit": 260
+   },
+   "clarificationAnswer": "Every week I greet new members at the door and sit with them through their first session.",
+   "correction": {
+    "anchor": "I designed the picture boards",
+    "before": "I designed the picture boards that every table at the group now uses.",
+    "after": "Moira, the speech and language therapist who volunteers with us, designed the picture boards. I took the photos of local places for them and laminated a set for every table."
+   },
+   "manual": {
+    "source": "I'd love to work for Ravensholt Community Health because its therapy assistants see people at home, where they actually need to talk.",
+    "replacement": "Seeing people at home, where they actually need to talk, is what draws me to working as a therapy assistant at Ravensholt Community Health."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "photo",
+     "laminated"
+    ],
+    "obsoletePhrases": [
+     "I designed the picture boards"
+    ],
+    "semanticChecks": [
+     "Moira, the volunteer speech and language therapist, designed the picture boards; the applicant must not be credited with designing or planning them.",
+     "Each document that relied on the boards should keep the applicant's real part: taking the photos of local places and laminating a set for every table.",
+     "The only stated outcome is regular attendance rising from about eight members to fifteen; no improvement in members' speech may be claimed.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No clinical training, therapy qualification, paid healthcare experience, measured change in members' communication or verified detail about Ravensholt Community Health's home visits was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "resettlement-job-drop-in",
+   "input": {
+    "applicant": "Jermaine",
+    "company": "Calderwick Probation Service",
+    "role": "Probation Services Officer",
+    "notes": "I've sold houses for fifteen years, and for the last three I've volunteered with a charity that supports men in their first months out of prison.\nMost of the men we meet want to work, but they don't know which employers will even look at someone with a conviction.\nI set up the weekly job-search drop-in that now runs every Tuesday at the charity's office.\nWe help people write a short disclosure letter, look for vacancies together and practise for interviews.\nIn the first year, 14 of the men who came along found paid work, and nine of them were still in the job six months later.\nTwo men stopped coming after a few weeks, and we never found out why.\nI learned to be straight with people about what an employer will ask, and never to promise someone a job I can't get them.\nI want to join Calderwick Probation Service because its officers stay with the same person from sentence through to the end of their licence.",
+    "question": "Probation services officers supervise people on licence, assess risk and help them deal with the things that led to their offending. Describe a time you supported people through a difficult change in their lives. What did you do yourself, who else was involved, what was the outcome, and what did you learn about being honest with the people you support?",
+    "requirements": [
+     {
+      "text": "What you did yourself, separate from the rest of the team",
+      "personal": true
+     },
+     {
+      "text": "Who else was involved and what their role was",
+      "personal": false
+     },
+     {
+      "text": "The outcome, including anything that did not work",
+      "personal": false
+     },
+     {
+      "text": "What you learned about being honest with the people you support",
+      "personal": true
+     }
+    ],
+    "wordLimit": 350
+   },
+   "clarificationAnswer": "When one of the men is nervous, I go with him to his first jobcentre appointment.",
+   "correction": {
+    "anchor": "I set up the weekly job-search drop-in",
+    "before": "I set up the weekly job-search drop-in that now runs every Tuesday at the charity's office.",
+    "after": "Tunde, the charity's caseworker, set up the drop-in and still runs it. I built the list of 40 local employers who will interview people with convictions, and I take the mock interviews on Tuesday afternoons."
+   },
+   "manual": {
+    "source": "I want to join Calderwick Probation Service because its officers stay with the same person from sentence through to the end of their licence.",
+    "replacement": "What draws me to Calderwick Probation Service is that its officers stay with the same person from sentence through to the end of their licence."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "40",
+     "mock interview"
+    ],
+    "obsoletePhrases": [
+     "I set up the weekly job-search drop-in"
+    ],
+    "semanticChecks": [
+     "Tunde, the charity's caseworker, set up the drop-in and still runs it; the applicant must not be described as setting up, running or leading it.",
+     "Each document that relied on the drop-in should keep the applicant's real part: building the list of 40 local employers and taking the mock interviews.",
+     "The outcome stays as stated: 14 men in paid work in the first year, nine still in work six months later, and two who stopped coming; none of it may be inflated or credited to the applicant alone.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No probation or criminal justice qualification, paid casework or risk assessment experience, or verified detail about Calderwick Probation Service's caseload arrangements was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "store-cleaning-tender",
+   "input": {
+    "applicant": "Pauline",
+    "company": "Gadsby & Marr Foods",
+    "role": "Procurement Assistant",
+    "notes": "I'm 52 and I've managed the same branch of a homeware chain for twenty years.\nLast year our old cleaning contractor kept missing its early-morning visits, so the company re-tendered the cleaning contract for all twelve stores in our region.\nI ran the tender for the new cleaning contract across the region.\nThree firms bid, and the regional panel picked the one that guaranteed every store would be cleaned before 7am.\nOur missed-visit log went from 31 entries in the last quarter of the old contract to 4 in the first quarter of the new one.\nI've ordered stock and agreed small local deals for my own store for years, but this was the first full tender I'd been part of.\nI learned that the contract you end up with depends on how clearly you write down what you need.\nGadsby & Marr appeals to me because it buys from local growers and suppliers wherever it can.",
+    "question": "Procurement assistants support buyers with sourcing, tendering and supplier management, and keep records that stand up to audit. Tell us about a time you were involved in choosing or managing a supplier. Explain the problem, what you personally did, who made the final decision, and how you know whether it worked.",
+    "requirements": [
+     {
+      "text": "The problem that needed solving",
+      "personal": false
+     },
+     {
+      "text": "What you personally did, and who made the final decision",
+      "personal": true
+     },
+     {
+      "text": "How you know whether it worked, with any figures",
+      "personal": false
+     }
+    ],
+    "wordLimit": 220
+   },
+   "clarificationAnswer": "I kept the missed-visit log for my own store, and head office used it to show the old contractor wasn't keeping to the contract.",
+   "correction": {
+    "anchor": "I ran the tender for the new cleaning contract",
+    "before": "I ran the tender for the new cleaning contract across the region.",
+    "after": "Colette, the regional buyer at head office, ran the tender. I wrote the cleaning specification for our stores, and I drew up the scoring sheet the panel marked the three bids against."
+   },
+   "manual": {
+    "source": "Gadsby & Marr appeals to me because it buys from local growers and suppliers wherever it can.",
+    "replacement": "What appeals to me about Gadsby & Marr is that it buys from local growers and suppliers wherever it can."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "specification",
+     "scoring"
+    ],
+    "obsoletePhrases": [
+     "I ran the tender"
+    ],
+    "semanticChecks": [
+     "Colette, the regional buyer, ran the tender and the regional panel chose the winner; the applicant must not be credited with running the tender or making the decision.",
+     "Each document that relied on the tender should keep the applicant's real part: writing the cleaning specification and drawing up the scoring sheet for the three bids.",
+     "The missed-visit log fell from 31 entries to 4 between the two quarters; this must not be turned into a cost saving or credited to the applicant alone.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No procurement qualification, contract value, cost saving, purchasing system experience or verified detail about Gadsby & Marr Foods' suppliers was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "lido-roof-grant",
+   "input": {
+    "applicant": "Isla",
+    "company": "Elmswick Hospice",
+    "role": "Trusts Fundraising Officer",
+    "notes": "I graduated in history last year and I've worked in a café since, but most of my spare time goes on the campaign to reopen our town's lido.\nThe lido closed in 2019, and when the council said it would fill the pool in, a group of us formed a charity to take it over.\nWe've spent two years raising money through quiz nights, a crowdfunder and grant applications.\nI wrote the bid that won us £18,000 from a local charitable trust towards the changing rooms.\nThe money paid for new roofs on the changing rooms, and the lido is due to reopen next June.\nIf I did it again I'd start gathering evidence months earlier, because we were still chasing paperwork the week before the deadline.\nI learned that funders want to see exactly what their money will buy, right down to the invoice.\nI'm applying to Elmswick Hospice because almost all of its care is paid for by people in the local area.",
+    "question": "Trusts fundraisers research funders, write applications and report on how each grant is spent. Tell us about a funding application or fundraising campaign you have been involved in. What was your part, what did the application raise, and what would you do differently when applying to a larger funder?",
+    "requirements": [
+     {
+      "text": "Your part in the application, distinct from other people's",
+      "personal": true
+     },
+     {
+      "text": "How much the application raised, stated exactly",
+      "personal": false
+     },
+     {
+      "text": "What you would do differently when applying to a larger funder",
+      "personal": true
+     }
+    ],
+    "wordLimit": 240
+   },
+   "clarificationAnswer": "Most weekends I run our campaign stall at the Saturday market and sign people up to the crowdfunder.",
+   "correction": {
+    "anchor": "I wrote the bid",
+    "before": "I wrote the bid that won us £18,000 from a local charitable trust towards the changing rooms.",
+    "after": "Gwen, our chair, wrote the bid, and the grant was actually £12,000. I gathered the quotes from three roofers for it, and I collected the letters of support from people who used to swim there."
+   },
+   "manual": {
+    "source": "I'm applying to Elmswick Hospice because almost all of its care is paid for by people in the local area.",
+    "replacement": "Almost all of Elmswick Hospice's care is paid for by people in the local area, and that is why I am applying."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "roofers",
+     "letters"
+    ],
+    "obsoletePhrases": [
+     "I wrote the bid",
+     "£18,000"
+    ],
+    "semanticChecks": [
+     "Gwen, the chair, wrote the bid; the applicant must not be credited with writing or leading it.",
+     "The grant was £12,000; the figure of £18,000 must not appear, and the lido must not be described as already reopened.",
+     "Each document that relied on the bid should keep the applicant's real part: gathering the quotes from three roofers and collecting the letters of support.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No fundraising qualification, paid fundraising experience, campaign total, name of the trust or verified detail about how Elmswick Hospice's care is funded was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "office-led-lighting",
+   "input": {
+    "applicant": "Roisin",
+    "company": "Kemble Brook Electrical",
+    "role": "Adult Apprentice Electrician",
+    "notes": "I'm 30 and I've been the facilities coordinator for a five-floor insurance office for six years, so every contractor who comes into the building goes through me.\nLast year we replaced all the old fluorescent tubes in the building with LED panels and motion sensors.\nI managed the LED upgrade from start to finish.\nThe work was done one floor at a time over eight weekends, so the office never had to close.\nGoing by the meter readings, the electricity we use for lighting has roughly halved.\nWatching the electricians test and certify each circuit is what made me want to do the job myself instead of booking it.\nI learned that isolating a circuit properly takes as long as it takes, and nobody on that job ever rushed it.\nKemble Brook Electrical stands out to me because it takes on adult apprentices and pairs each one with the same electrician for their first year.",
+    "question": "Our apprentices work alongside qualified electricians on commercial and domestic installations, and safe isolation comes before everything. Tell us about a practical project you have been involved in. What did you do yourself, who was responsible for the work, what was the result, and what did you learn about working safely?",
+    "requirements": [
+     {
+      "text": "What you did yourself, in practical work or planning",
+      "personal": true
+     },
+     {
+      "text": "Who was responsible for the work",
+      "personal": false
+     },
+     {
+      "text": "The result of the project",
+      "personal": false
+     },
+     {
+      "text": "What you learned about working safely",
+      "personal": true
+     }
+    ],
+    "wordLimit": 280
+   },
+   "clarificationAnswer": "I sent the Friday emails telling staff which floor would be shut that weekend and where they could work instead.",
+   "correction": {
+    "anchor": "I managed the LED upgrade",
+    "before": "I managed the LED upgrade from start to finish.",
+    "after": "Darren, the contractor's lead electrician, managed the upgrade. Before the work started I surveyed every light fitting on all five floors, and while it was going on I kept the access log so his team could get into every locked room."
+   },
+   "manual": {
+    "source": "Kemble Brook Electrical stands out to me because it takes on adult apprentices and pairs each one with the same electrician for their first year.",
+    "replacement": "Kemble Brook Electrical takes on adult apprentices and pairs each one with the same electrician for their first year, which is why it stands out to me."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "light fitting",
+     "access log"
+    ],
+    "obsoletePhrases": [
+     "I managed the LED upgrade"
+    ],
+    "semanticChecks": [
+     "Darren, the contractor's lead electrician, managed the upgrade; the applicant must not be credited with managing it or with doing any of the electrical work.",
+     "Each document that relied on the upgrade should keep the applicant's real part: surveying every light fitting on all five floors and keeping the access log during the work.",
+     "The lighting saving is a rough halving read from the meters; it must not be presented as an exact or audited figure or credited to the applicant.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No electrical qualification, hands-on wiring experience, exact energy or cost figures or verified detail about Kemble Brook Electrical's apprenticeship was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "branch-bereavement-appointments",
+   "input": {
+    "applicant": "Malcolm",
+    "company": "Lindell & Daughters Funeral Directors",
+    "role": "Trainee Funeral Arranger",
+    "notes": "I worked at the same high street bank branch for thirty-one years, until it closed this spring.\nA lot of our customers were older, and when someone died, the family often came to us before they'd even registered the death.\nFor years we dealt with them at the counter with a queue behind them, which never felt right.\nI introduced bereavement appointments at our branch three years ago.\nFamilies got a set time in the quiet room, and we closed or transferred every account and sorted the paperwork in one sitting.\nIn the branch's last year, we held about 150 of those appointments.\nI learned to slow down, explain one thing at a time and write it down, because grief makes it hard to take anything in.\nI'm drawn to Lindell & Daughters because it's still a family firm and the same arranger looks after a family from the first call to the funeral itself.",
+    "question": "Funeral arrangers are often the first person a bereaved family speaks to. They take details accurately, explain choices clearly and stay with the family throughout. Tell us about a time you supported people at a difficult moment. What did you do yourself, how was the support organised and by whom, and what did you learn about explaining things to someone who is grieving?",
+    "requirements": [
+     {
+      "text": "What you did yourself to support people",
+      "personal": true
+     },
+     {
+      "text": "How the support was organised, and by whom",
+      "personal": false
+     },
+     {
+      "text": "What you learned about explaining things to someone who is grieving",
+      "personal": true
+     }
+    ],
+    "wordLimit": 230
+   },
+   "clarificationAnswer": "I sat in on most of the appointments myself to deal with the account paperwork.",
+   "correction": {
+    "anchor": "I introduced bereavement appointments",
+    "before": "I introduced bereavement appointments at our branch three years ago.",
+    "after": "Philippa, our branch manager, introduced the bereavement appointments and ran them. I wrote the step-by-step leaflet we gave every family, and I kept the diary for the quiet room."
+   },
+   "manual": {
+    "source": "I'm drawn to Lindell & Daughters because it's still a family firm and the same arranger looks after a family from the first call to the funeral itself.",
+    "replacement": "Lindell & Daughters is still a family firm, and the same arranger looks after a family from the first call to the funeral itself, which is what draws me to it."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "leaflet",
+     "diary"
+    ],
+    "obsoletePhrases": [
+     "I introduced bereavement appointments"
+    ],
+    "semanticChecks": [
+     "Philippa, the branch manager, introduced and ran the bereavement appointments; the applicant must not be credited with introducing, setting up or running them.",
+     "Each document that relied on the appointments should keep the applicant's real part: writing the step-by-step leaflet for families and keeping the diary for the quiet room.",
+     "About 150 appointments were held in the branch's last year; no satisfaction score, complaint figure or funeral experience may be added.",
+     "The applicant's hand-written sentence must appear character for character."
+    ],
+    "missingCriteria": "No funeral industry experience, bereavement training, qualification, customer feedback figures or verified detail about how Lindell & Daughters assigns its arrangers was supplied.",
+    "inputContradictionPossible": false
+   }
+  }
+ ]
+}

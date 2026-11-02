@@ -1,0 +1,10 @@
+.source-correction .source-earlier {
+  margin-block: var(--s4);
+  color: var(--pencil);
+  font: 400 var(--text-sm)/1.6 var(--font-doc);
+  overflow-wrap: anywhere;
+}
+.source-correction label { font-weight: 600; }
+.source-correction textarea { margin-top: var(--s2); }
+.source-correction .question-actions { flex-wrap: wrap; }
+.source-correction .correction-error { color: var(--danger); }

@@ -1,0 +1,656 @@
+{
+ "version": "paired-full-workflow-holdout-1",
+ "authored": "2026-10-29",
+ "author": "Claude Opus 5.5 (claude-opus-5-5), writing blind: no access to either system, its prompts or any earlier case, apart from the one format example in the authoring brief",
+ "heldOut": true,
+ "purpose": "Held-out synthetic workflow comparison, frozen before any run; not evidence of user time saved or hiring outcomes.",
+ "protocol": {
+  "information": "Same initial notes, pasted form and one fixed clarification packet. The packet is supplied even if no question was asked; this is recorded as volunteered information, not successful clarification.",
+  "manualEdits": "One evidence-backed motivation paraphrase, and For clarity: before a contribution segment. Neither adds a factual claim.",
+  "correction": "One correction supplied after initial review. Each arm gets its normal repair call; no repeated case sampling or best-of output selection.",
+  "confirmation": "Scripted participant confirms extracted facts and accepts proposed repairs. This is not a human quality endorsement; unsupported extraction and repair must be graded from all retained text.",
+  "measurement": "Machine elapsed time, provider usage/cost, mechanical checks and separate semantic review. Human working time is not measured.",
+  "coverage": "Exact verbatim quote anchors identify the intended fact and dependency. Missing or ambiguous targets fail task setup/coverage instead of being injected or fuzzily matched.",
+  "fairness": "Same model and explicit fixed effort, one shared spend ledger, sequential provider calls, equal per-arm cap, counterbalanced paired order.",
+  "contradictions": "Four cases have inputContradictionPossible true. formula-student-pedals: the notes say Callum's pedal box design passed the team's design review, but the packet says Chloe designed the pedal box. law-clinic-interviews: the notes say the tenants were actors in mock interviews, but the packet claims Kwame advised real tenants. spelling-group-scores: the notes show the quiz average rising from 11 to 13 out of 20, about 18%, but the packet claims Leah raised the scores by 50%. flats-heating-timers: the notes call the 20% Dylan's calculator estimate with the first bills not due until spring, but the packet claims Yusuf measured a 20% drop."
+ },
+ "cases": [
+  {
+   "id": "theatre-scene-changes",
+   "input": {
+    "applicant": "Arjun",
+    "company": "Tallowmere Playhouse",
+    "role": "Assistant Stage Manager",
+    "notes": "Our university drama society staged a two-act play for four nights in the students' union hall.\nOur stage management team of four looked after the props, the scene changes and the backstage running order.\nThere were nine scene changes, and by the last night we had each one down to under a minute.\nI learned to check every prop against the list before each show, not only before the first.\nI want to work at Tallowmere Playhouse because it puts on new plays and I want to learn how a professional backstage team runs.",
+    "question": "Tell us about a production or event you helped to run. What was your own role, how did it go, and what did you take from it?",
+    "requirements": [
+     {
+      "text": "Your own role, as distinct from the rest of the stage management team",
+      "personal": true
+     },
+     {
+      "text": "How the production went, using only what actually happened",
+      "personal": false
+     },
+     {
+      "text": "What you took from the experience",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I planned all nine scene changes. I was backstage for all four nights.",
+   "correction": {
+    "anchor": "I planned all nine scene changes.",
+    "before": "I planned all nine scene changes.",
+    "after": "Owen planned the scene changes. I ran the stage-left props table and reset 22 props during the changes."
+   },
+   "manual": {
+    "source": "I want to work at Tallowmere Playhouse because it puts on new plays and I want to learn how a professional backstage team runs.",
+    "replacement": "Learning how a professional backstage team runs, at a theatre that puts on new plays, is why I want to work at Tallowmere Playhouse."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Owen",
+     "props",
+     "22"
+    ],
+    "obsoletePhrases": [
+     "I planned all nine scene changes",
+     "I planned the scene changes"
+    ],
+    "semanticChecks": [
+     "Owen planned the scene changes; Arjun's own part was running the stage-left props table and resetting 22 props during the changes.",
+     "Neither document may describe Arjun as planning, designing or leading the scene changes, in any wording.",
+     "The only outcome supplied is that each change was under a minute by the last night; no audience numbers, reviews or ticket sales may be added.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No audience figures, reviews, ticket sales, paid backstage work or stage management training were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "formula-student-pedals",
+   "input": {
+    "applicant": "Chloe",
+    "company": "Calderwick Vehicle Engineering",
+    "role": "Graduate Mechanical Engineer",
+    "notes": "Our university Formula Student team built a single-seater car for this summer's competition.\nCallum's pedal box design passed our team's design review in February, and we fitted it to the chassis in April.\nAt the first seat fitting the pedals sat too far away for our two shortest drivers, so the mounting was changed to slide.\nI learned that a quick cardboard mock-up can show a problem before anyone cuts metal.\nI want to join Calderwick Vehicle Engineering because it designs braking systems, the part of the car I most enjoyed working on.",
+    "question": "Describe an engineering project you have contributed to. What did you personally do, what was the result, and what did you learn?",
+    "requirements": [
+     {
+      "text": "What you personally did on the project",
+      "personal": true
+     },
+     {
+      "text": "The result or the project's current state, without overstating it",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 300
+   },
+   "clarificationAnswer": "I designed the pedal box for the car.",
+   "correction": {
+    "anchor": "I designed the pedal box for the car.",
+    "before": "I designed the pedal box for the car.",
+    "after": "Callum designed the pedal box. I built the cardboard mock-up, and at the seat fitting I recorded each driver's pedal reach."
+   },
+   "manual": {
+    "source": "I want to join Calderwick Vehicle Engineering because it designs braking systems, the part of the car I most enjoyed working on.",
+    "replacement": "Braking systems were the part of the car I most enjoyed working on, so I want to join Calderwick Vehicle Engineering, which designs them."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Callum",
+     "mock-up",
+     "pedal reach"
+    ],
+    "obsoletePhrases": [
+     "I designed the pedal box"
+    ],
+    "semanticChecks": [
+     "Callum designed the pedal box, as the notes already said; both documents should keep Chloe's real part, building the cardboard mock-up and recording each driver's pedal reach.",
+     "Neither document may say or imply that Chloe designed the pedal box or the sliding mounting.",
+     "No competition placing, lap time or test result may be invented, because none was supplied.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No competition result, lap time, test data, industry experience or engineering qualification was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "law-clinic-interviews",
+   "input": {
+    "applicant": "Kwame",
+    "company": "Wrenfield Ashcott Solicitors",
+    "role": "Housing Paralegal",
+    "notes": "In our second-year skills module, our group prepared for client interviews about tenancy deposit disputes.\nOur tutor ran mock interviews with actors playing the tenants, and each pair of us interviewed one of them.\nAfterwards each pair wrote a short advice letter, and the group compared how clearly we had explained the deposit protection rules.\nI learned to check the dates in a tenancy agreement before saying anything about deadlines.\nI am applying to Wrenfield Ashcott Solicitors because its housing team acts for tenants, which is the work I want to train in.",
+    "question": "Tell us about some practical legal work you have done. What was your contribution, and what did it teach you about working with clients?",
+    "requirements": [
+     {
+      "text": "Your own contribution to the work",
+      "personal": true
+     },
+     {
+      "text": "The setting of the work and what came of it",
+      "personal": false
+     },
+     {
+      "text": "What it taught you about working with clients",
+      "personal": true
+     }
+    ],
+    "wordLimit": 250
+   },
+   "clarificationAnswer": "I advised real tenants on their deposit disputes.",
+   "correction": {
+    "anchor": "I advised real tenants on their deposit disputes.",
+    "before": "I advised real tenants on their deposit disputes.",
+    "after": "They were mock interviews with actors, not real tenants. Grace and I ran one practice interview together, and I drafted our pair's advice letter."
+   },
+   "manual": {
+    "source": "I am applying to Wrenfield Ashcott Solicitors because its housing team acts for tenants, which is the work I want to train in.",
+    "replacement": "Wrenfield Ashcott Solicitors has a housing team that acts for tenants, the work I want to train in, which is why I am applying."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "mock",
+     "Grace",
+     "advice letter"
+    ],
+    "obsoletePhrases": [
+     "I advised real tenants"
+    ],
+    "semanticChecks": [
+     "The interviews were a training exercise with actors, as the notes already said; neither document may present them as advice to real tenants or clients.",
+     "Kwame's own part, running one practice interview with Grace and drafting their pair's advice letter, should stay in both documents.",
+     "No case outcome, client feedback, mark or legal qualification may be invented.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No real client work, case outcome, mark, legal qualification or law firm experience was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "hedgerow-survey-length",
+   "input": {
+    "applicant": "Siobhan",
+    "company": "Brindlecombe Ecology",
+    "role": "Seasonal Field Survey Assistant",
+    "notes": "Last spring I joined a volunteer group surveying the hedgerows on a mixed farm for its owner.\nOur team of six walked the hedges over four Saturdays, recording the woody species and any gaps.\nWe sent the farmer a short report showing which stretches were thin enough to need replanting.\nI learned to tell hawthorn, blackthorn and field maple apart from their buds before the leaves were out.\nBrindlecombe Ecology appeals to me because its surveys feed straight into habitat plans for farms.",
+    "question": "Describe some fieldwork you have taken part in. What did you do, what did the work produce, and which skills did you build?",
+    "requirements": [
+     {
+      "text": "What you did yourself in the fieldwork",
+      "personal": true
+     },
+     {
+      "text": "What the work produced, without claiming results that were not observed",
+      "personal": false
+     },
+     {
+      "text": "The identification or survey skills you built",
+      "personal": true
+     }
+    ],
+    "wordLimit": 220
+   },
+   "clarificationAnswer": "I measured 3.2 kilometres of hedgerow on the farm. I went on all four Saturdays.",
+   "correction": {
+    "anchor": "I measured 3.2 kilometres of hedgerow on the farm.",
+    "before": "I measured 3.2 kilometres of hedgerow on the farm.",
+    "after": "Nobody measured the hedgerows; the 3.2 kilometres was Anita's estimate from the farm map. I recorded the woody species in 14 sample sections, each 30 metres long."
+   },
+   "manual": {
+    "source": "Brindlecombe Ecology appeals to me because its surveys feed straight into habitat plans for farms.",
+    "replacement": "Survey work that feeds straight into habitat plans for farms is what draws me to Brindlecombe Ecology."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Anita",
+     "estimate",
+     "14"
+    ],
+    "obsoletePhrases": [
+     "I measured 3.2 kilometres",
+     "measured 3.2"
+    ],
+    "semanticChecks": [
+     "The 3.2 kilometre length is Anita's estimate from the farm map; it may appear only as an estimate, never as a measurement.",
+     "Siobhan's own part, recording the woody species in 14 sample sections of 30 metres, should stay in both documents.",
+     "No replanting, habitat gain or reply from the farmer may be claimed, because the notes only say a report was sent.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No measured hedgerow length, replanting result, farmer response, paid survey work or ecology qualification was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "rescue-dog-enrichment",
+   "input": {
+    "applicant": "Tomasz",
+    "company": "Brookmallow Animal Centre",
+    "role": "Animal Care Assistant",
+    "notes": "On Saturday mornings our volunteer team at a dog rehoming centre ran a six-week enrichment routine for the long-stay dogs.\nWe used puzzle feeders and scent games, and kept a sheet for each dog so staff could see what it enjoyed.\nTwo of the long-stay dogs were rehomed during those six weeks, but we cannot say the routine caused that.\nI learned to watch a dog's body language and end a session early if it starts to look stressed.\nI would like to work at Brookmallow Animal Centre because it takes in cats and rabbits as well as dogs, so I would learn to care for more kinds of animal.",
+    "question": "Give an example of caring for animals as part of a team. What did you do yourself, and what did you notice about their welfare?",
+    "requirements": [
+     {
+      "text": "What you did yourself, separate from the rest of the team",
+      "personal": true
+     },
+     {
+      "text": "What you noticed about the animals' welfare, without claiming results you cannot show",
+      "personal": false
+     }
+    ],
+    "wordLimit": 180
+   },
+   "clarificationAnswer": "I led the enrichment routine for the long-stay dogs. I was there every Saturday for the six weeks.",
+   "correction": {
+    "anchor": "I led the enrichment routine for the long-stay dogs.",
+    "before": "I led the enrichment routine for the long-stay dogs.",
+    "after": "Kirsty led the enrichment routine. I ran scent games with three of the dogs each Saturday and filled in their sheets."
+   },
+   "manual": {
+    "source": "I would like to work at Brookmallow Animal Centre because it takes in cats and rabbits as well as dogs, so I would learn to care for more kinds of animal.",
+    "replacement": "Brookmallow Animal Centre takes in cats and rabbits as well as dogs, and learning to care for more kinds of animal is why I would like to work there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Kirsty",
+     "scent games",
+     "sheets"
+    ],
+    "obsoletePhrases": [
+     "I led the enrichment routine"
+    ],
+    "semanticChecks": [
+     "Kirsty led the enrichment routine; Tomasz's part was running scent games with three of the dogs each Saturday and filling in their sheets.",
+     "Neither document may describe Tomasz as leading, organising or setting up the routine.",
+     "The two rehomings must not be presented as a result of the routine, because the notes say that cannot be shown.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No measured change in the dogs' behaviour, evidence that the routine led to the rehomings, paid animal care work or animal care qualification was supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "hospital-radio-requests",
+   "input": {
+    "applicant": "Bethan",
+    "company": "Brackenhythe Audio",
+    "role": "Production Assistant",
+    "notes": "I volunteer at our local hospital radio station, which plays patients' song requests every Tuesday evening.\nOur team visits the wards in the afternoon to collect requests, then builds the two-hour show around them.\nLast winter we started adding short dedications from patients' families, recorded over the phone.\nI learned to keep my links short, because patients mostly want the music and the dedications.\nI would love to work at Brackenhythe Audio because it makes speech programmes for local stations, and I want to learn that craft properly.",
+    "question": "What is something you have helped to make on a regular schedule? Explain your own part and what it taught you.",
+    "requirements": [
+     {
+      "text": "Your own part, separate from the team's",
+      "personal": true
+     },
+     {
+      "text": "What it taught you about making a programme for its listeners",
+      "personal": true
+     }
+    ],
+    "wordLimit": 150
+   },
+   "clarificationAnswer": "I collected 300 requests a month from the wards.",
+   "correction": {
+    "anchor": "I collected 300 requests a month from the wards.",
+    "before": "I collected 300 requests a month from the wards.",
+    "after": "The whole team collected about 90 requests a month. I collected around 20 of them on the two wards I visit."
+   },
+   "manual": {
+    "source": "I would love to work at Brackenhythe Audio because it makes speech programmes for local stations, and I want to learn that craft properly.",
+    "replacement": "Brackenhythe Audio makes speech programmes for local stations, a craft I want to learn properly, so I would love to work there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "90",
+     "20",
+     "two wards"
+    ],
+    "obsoletePhrases": [
+     "300 requests",
+     "I collected 300"
+    ],
+    "semanticChecks": [
+     "The team collected about 90 requests a month and Bethan around 20 of them; the figure of 300 must not appear or be implied.",
+     "Bethan's own part, collecting requests on two wards, should stay in both documents.",
+     "No listener numbers, patient feedback or effect of the dedications may be invented.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No listener figures, patient or staff feedback, paid broadcasting work or media qualification were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "rugby-warm-up-programme",
+   "input": {
+    "applicant": "Imran",
+    "company": "Pellbridge Sports Clinic",
+    "role": "Graduate Sports Therapist",
+    "notes": "On my second-year placement, our group of three sports therapy students supported a women's rugby club through pre-season.\nWe ran a warm-up programme twice a week and taped ankles before the two friendly matches.\nThe coach has kept the programme going this season, but nobody has tracked injury numbers.\nI learned to explain each exercise in one sentence, because players at the side of a pitch want to get moving.\nPellbridge Sports Clinic interests me because it treats grassroots players as well as professionals.",
+    "question": "Describe a placement where you put your training into practice. What did you do, what difference did it make, and what did you learn about working with athletes?",
+    "requirements": [
+     {
+      "text": "What you did yourself during the placement",
+      "personal": true
+     },
+     {
+      "text": "Any difference the work made, without claiming results that were not measured",
+      "personal": false
+     },
+     {
+      "text": "What you learned about working with athletes",
+      "personal": true
+     }
+    ],
+    "wordLimit": 240
+   },
+   "clarificationAnswer": "I designed the warm-up programme for the club.",
+   "correction": {
+    "anchor": "I designed the warm-up programme for the club.",
+    "before": "I designed the warm-up programme for the club.",
+    "after": "Rosa designed the warm-up programme. I demonstrated the exercises at 12 sessions and taped ankles before both friendlies."
+   },
+   "manual": {
+    "source": "Pellbridge Sports Clinic interests me because it treats grassroots players as well as professionals.",
+    "replacement": "What interests me about Pellbridge Sports Clinic is that it treats grassroots players as well as professionals."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Rosa",
+     "12",
+     "exercises"
+    ],
+    "obsoletePhrases": [
+     "I designed the warm-up programme"
+    ],
+    "semanticChecks": [
+     "Rosa designed the warm-up programme; Imran's part was demonstrating the exercises at 12 sessions and taping ankles before both friendlies.",
+     "Neither document may say Imran designed, wrote or created the programme.",
+     "No fall in injuries may be claimed, because the notes say nobody has tracked injury numbers.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No injury figures, player or coach feedback, clinical outcome, paid work or professional registration were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "spelling-group-scores",
+   "input": {
+    "applicant": "Leah",
+    "company": "Quillfield Primary School",
+    "role": "Teaching Assistant",
+    "notes": "On my university placement at a primary school, our Year 4 team ran four short spelling sessions a week for eight children who were behind.\nWe used a weekly 20-word quiz, and the group's average went from 11 to 13 over six weeks.\nThe class teacher is keeping the sessions going for the rest of the term.\nI learned that some children do better when they say a word aloud before writing it.\nI want to work at Quillfield Primary School because, like my placement school, it gives teaching assistants time to work with small groups.",
+    "question": "Describe a time you supported a group of learners. What did you do, what changed for them, how do you know, and what would you keep doing?",
+    "requirements": [
+     {
+      "text": "What you did yourself with the group",
+      "personal": true
+     },
+     {
+      "text": "What changed for the learners",
+      "personal": false
+     },
+     {
+      "text": "How you know, using only the evidence you have",
+      "personal": false
+     },
+     {
+      "text": "What you would keep doing in your own practice",
+      "personal": true
+     }
+    ],
+    "wordLimit": 260
+   },
+   "clarificationAnswer": "I ran the Tuesday and Thursday sessions. I raised the group's spelling scores by 50%.",
+   "correction": {
+    "anchor": "I raised the group's spelling scores by 50%.",
+    "before": "I raised the group's spelling scores by 50%.",
+    "after": "The group's average went from 11 to 13 out of 20, about 18%, across all the team's sessions. Femi and I each ran two of the four weekly sessions, and I marked the weekly quiz."
+   },
+   "manual": {
+    "source": "I want to work at Quillfield Primary School because, like my placement school, it gives teaching assistants time to work with small groups.",
+    "replacement": "Like my placement school, Quillfield Primary School gives teaching assistants time to work with small groups, and that is why I want to work there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Femi",
+     "13",
+     "quiz"
+    ],
+    "obsoletePhrases": [
+     "50%",
+     "50 per cent"
+    ],
+    "semanticChecks": [
+     "The rise was from 11 to 13 out of 20, about 18%, as the notes already showed; the 50% figure must not appear or be implied.",
+     "The rise came from all the team's sessions and must not be credited to Leah alone; Leah's part was running two of the four weekly sessions and marking the quiz.",
+     "No claim may be made that the children caught up, reached the expected standard or improved in other work.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No national test results, comparison group, teaching qualification or evidence beyond the weekly quiz averages were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "flats-heating-timers",
+   "input": {
+    "applicant": "Yusuf",
+    "company": "Wythenmere Homes",
+    "role": "Graduate Sustainability Officer",
+    "notes": "On my placement year with a city council, our small energy team looked into why one block of 24 council flats had such high heating costs.\nWe checked the communal boiler settings and found the heating was running overnight in empty corridors.\nDylan used the boiler supplier's calculator to estimate that new timer settings could save about 20% on heating.\nThe new timings went in last month, and the first bills will not arrive until spring.\nI learned that residents often notice heating problems before any data shows them.\nI want to join Wythenmere Homes because it is trying to cut heating costs in its older blocks, and that is the work I want to do.",
+    "question": "Tell us about a problem you helped to investigate. What was your part, and where does the work stand now?",
+    "requirements": [
+     {
+      "text": "Your part in the investigation",
+      "personal": true
+     },
+     {
+      "text": "Where the work stands now",
+      "personal": false
+     }
+    ],
+    "wordLimit": 350
+   },
+   "clarificationAnswer": "I measured a 20% drop in the block's heating use.",
+   "correction": {
+    "anchor": "I measured a 20% drop in the block's heating use.",
+    "before": "I measured a 20% drop in the block's heating use.",
+    "after": "Nothing has been measured yet; the 20% is Dylan's estimate from the supplier's calculator. I logged corridor temperatures on six floors for two weeks and asked residents about their heating."
+   },
+   "manual": {
+    "source": "I want to join Wythenmere Homes because it is trying to cut heating costs in its older blocks, and that is the work I want to do.",
+    "replacement": "Wythenmere Homes is trying to cut heating costs in its older blocks, and I want to join because that is the work I want to do."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Dylan",
+     "estimate",
+     "temperatures"
+    ],
+    "obsoletePhrases": [
+     "I measured a 20% drop",
+     "measured a 20%"
+    ],
+    "semanticChecks": [
+     "The 20% is Dylan's calculator estimate of a possible saving, as the notes already said; it must not be presented as a measured or achieved drop.",
+     "Nothing has been measured yet because the first bills arrive in spring, so the work must be described as still awaiting results.",
+     "Yusuf's own part, logging corridor temperatures on six floors for two weeks and asking residents about their heating, should stay in both documents.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No measured energy saving, bill data, resident survey, energy qualification or paid role was supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "billing-induction-calls",
+   "input": {
+    "applicant": "Niamh",
+    "company": "Kelderby Energy",
+    "role": "Complaints Resolution Adviser",
+    "notes": "In my first job, at a water company's contact centre, our induction group of ten spent four weeks learning a new billing system.\nPart of the induction was handling complaint calls, and together we wrote a guide to the six most common billing questions.\nThe guide is now pinned in our team chat for new starters.\nI learned to repeat the customer's problem back to them before I start explaining a bill.\nKelderby Energy stands out to me because its advisers stay with a complaint from the first call until it is resolved.",
+    "question": "Tell us about a time you helped people understand something complicated. What did you do, what was the result, and how would you use it in this role?",
+    "requirements": [
+     {
+      "text": "What you did yourself",
+      "personal": true
+     },
+     {
+      "text": "The result, described honestly",
+      "personal": false
+     },
+     {
+      "text": "How you would use this experience in a complaints role",
+      "personal": true
+     }
+    ],
+    "wordLimit": 170
+   },
+   "clarificationAnswer": "I resolved real customer complaints during the induction.",
+   "correction": {
+    "anchor": "I resolved real customer complaints during the induction.",
+    "before": "I resolved real customer complaints during the induction.",
+    "after": "The complaint calls in the induction were role-play practice, not calls from real customers. Joel played the customer, and I took 12 practice calls and wrote the guide's section on estimated bills."
+   },
+   "manual": {
+    "source": "Kelderby Energy stands out to me because its advisers stay with a complaint from the first call until it is resolved.",
+    "replacement": "What makes Kelderby Energy stand out to me is that its advisers stay with a complaint from the first call until it is resolved."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Joel",
+     "role-play",
+     "12"
+    ],
+    "obsoletePhrases": [
+     "I resolved real customer complaints"
+    ],
+    "semanticChecks": [
+     "The induction complaint calls were role-play practice, so neither document may describe Niamh resolving real customer complaints.",
+     "Niamh's own part, taking 12 practice calls and writing the guide's section on estimated bills, should stay in both documents.",
+     "No live call figures, satisfaction scores or resolution rates may be invented.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No live call figures, customer satisfaction scores, resolution rates or customer service qualification were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "peat-free-compost",
+   "input": {
+    "applicant": "Elif",
+    "company": "Gorsewold Growers",
+    "role": "Assistant Grower",
+    "notes": "In my first job at a wholesale plant nursery, our propagation team moved the bedding plants from peat to a peat-free compost this year.\nWe grew a trial batch of geraniums and petunias in both mixes before switching the whole glasshouse.\nThe peat-free trays dried out faster, so we changed the watering schedule to twice a day in warm weather.\nI learned to judge watering by the weight of a tray instead of the look of the surface.\nGorsewold Growers is my first choice because it is already fully peat-free, so I could build on what we learned.",
+    "question": "Describe a change at work that you were part of. What was your role, how did the change go, what did you learn, and why is it relevant to us?",
+    "requirements": [
+     {
+      "text": "Your role in the change",
+      "personal": true
+     },
+     {
+      "text": "How the change went",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     },
+     {
+      "text": "Why the experience is relevant to growing at Gorsewold Growers",
+      "personal": false
+     }
+    ],
+    "wordLimit": 280
+   },
+   "clarificationAnswer": "I led the switch to peat-free compost. I also checked the trial trays every morning.",
+   "correction": {
+    "anchor": "I led the switch to peat-free compost.",
+    "before": "I led the switch to peat-free compost.",
+    "after": "Gareth, our head grower, led the switch. I potted up and labelled the 300 trial plants and weighed their trays each morning."
+   },
+   "manual": {
+    "source": "Gorsewold Growers is my first choice because it is already fully peat-free, so I could build on what we learned.",
+    "replacement": "Because Gorsewold Growers is already fully peat-free, I could build on what we learned, which makes it my first choice."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Gareth",
+     "300",
+     "trial plants"
+    ],
+    "obsoletePhrases": [
+     "I led the switch"
+    ],
+    "semanticChecks": [
+     "Gareth, the head grower, led the switch to peat-free compost; Elif potted up and labelled the 300 trial plants and weighed their trays each morning.",
+     "Neither document may describe Elif as leading, managing or deciding the switch.",
+     "No plant survival rate, cost saving or sales result may be invented.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No plant survival figures, cost or sales data, horticulture qualification or employer detail beyond the motivation sentence were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "bike-manual-translation",
+   "input": {
+    "applicant": "Freya",
+    "company": "Inkbourne Translation Studio",
+    "role": "Junior Technical Translator",
+    "notes": "At the agency where I started last year, our team of three translated a 60-page electric bike manual from Spanish into English.\nWe worked from a shared glossary so that parts like the torque sensor had one name all the way through.\nThe client's engineers checked the safety section, and the manual went to print in March.\nI learned to query an unclear source sentence instead of guessing what the engineer meant.\nI am drawn to Inkbourne Translation Studio because it specialises in technical manuals, which is the work I enjoy most.",
+    "question": "Tell us about a piece of work where accuracy mattered. What did you contribute, how did you make sure it was right, and what happened to the finished work?",
+    "requirements": [
+     {
+      "text": "What you contributed yourself",
+      "personal": true
+     },
+     {
+      "text": "How you checked that your part was accurate",
+      "personal": true
+     },
+     {
+      "text": "What happened to the finished work",
+      "personal": false
+     }
+    ],
+    "wordLimit": 230
+   },
+   "clarificationAnswer": "I led the translation of the manual.",
+   "correction": {
+    "anchor": "I led the translation of the manual.",
+    "before": "I led the translation of the manual.",
+    "after": "Lukas led the translation and split the manual between us. I translated the 12-page charging and battery section and kept the glossary up to date."
+   },
+   "manual": {
+    "source": "I am drawn to Inkbourne Translation Studio because it specialises in technical manuals, which is the work I enjoy most.",
+    "replacement": "Technical manuals are the work I enjoy most, and Inkbourne Translation Studio specialises in them, which is what draws me there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Lukas",
+     "battery",
+     "glossary"
+    ],
+    "obsoletePhrases": [
+     "I led the translation"
+    ],
+    "semanticChecks": [
+     "Lukas led the translation; Freya translated the 12-page charging and battery section and kept the glossary up to date.",
+     "Neither document may describe Freya as leading, managing or coordinating the translation.",
+     "Going to print in March is the only outcome supplied; no client praise, error rates or repeat work may be invented.",
+     "The motivation sentence the applicant rewrote by hand must appear exactly as written."
+    ],
+    "missingCriteria": "No client feedback, error or revision counts, translation qualification or employer detail beyond the motivation sentence were supplied.",
+    "inputContradictionPossible": false
+   }
+  }
+ ]
+}

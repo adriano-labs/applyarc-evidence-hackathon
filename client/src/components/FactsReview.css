@@ -1,0 +1,129 @@
+.facts-review {
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  padding: var(--s5);
+}
+
+.facts-review:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.facts-review h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.facts-review .facts-count {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.facts-review .fact-cards {
+  display: grid;
+  list-style: none;
+  margin: var(--s4) 0 0 0;
+  padding: 0;
+}
+
+.facts-review .fact-card {
+  padding: var(--s3) var(--s4);
+  background: var(--sheet);
+  outline: 1px solid var(--oxford-3);
+  border-radius: 6px;
+  outline-offset: 0;
+}
+
+.facts-review .fact-card:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.facts-review .fact-statement {
+  font: 500 var(--text-md)/1.45 var(--font-ui);
+  color: var(--ink);
+  margin-top: var(--s3);
+}
+
+.facts-review .fact-quote {
+  font: 400 var(--text-sm)/1.55 var(--font-doc);
+  color: var(--pencil);
+  margin-top: var(--s2);
+}
+
+.facts-review .fact-quote mark {
+  background: var(--highlight-soft);
+  color: var(--ink);
+  padding: 0 2px;
+  border-radius: 2px;
+  box-decoration-break: clone;
+}
+
+.facts-review .fact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--s2);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.facts-review .fact-tag {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--oxford-3);
+}
+
+.facts-review .fact-actions {
+  display: flex;
+  gap: var(--s2);
+}
+
+.facts-review .fact-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: var(--s3);
+}
+
+.facts-review .facts-confirm-rest {
+  margin-top: var(--s3);
+}
+
+.facts-review .facts-next-section {
+  margin-top: var(--s4);
+}
+
+.facts-review .facts-next-section h3 {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin: 0 0 var(--s2) 0;
+  color: var(--ink);
+}
+
+.facts-review .facts-next {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.facts-review .facts-next li {
+  font-size: 13px;
+  color: var(--muted);
+  padding: var(--s2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.facts-review .facts-next li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.facts-review .facts-foot {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-top: var(--s4);
+}

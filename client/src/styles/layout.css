@@ -1,0 +1,168 @@
+/* The shell: brief + manuscript + evidence rail. */
+.app { min-height: 100dvh; display: grid; grid-template-rows: auto auto 1fr; grid-template-columns: minmax(0, 1fr); }
+
+.topbar {
+  display: flex; align-items: center; gap: var(--s4);
+  padding: var(--s2) var(--s5); min-height: 52px;
+  background: var(--oxford); color: var(--on-oxford);
+}
+.brand { display: flex; align-items: baseline; gap: var(--s2); font: 600 var(--text-md)/1 var(--font-doc); letter-spacing: -0.01em; white-space: nowrap; }
+.brand-mark { font: 600 var(--text-sm)/1 var(--font-doc); color: var(--oxford); background: var(--highlight); padding: 3px 5px 2px; border-radius: 3px; }
+.crumb { color: var(--on-oxford-muted); font-size: var(--text-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.crumb strong { color: var(--on-oxford); font-weight: 500; }
+.topbar-end { margin-left: auto; display: flex; align-items: center; gap: var(--s3); }
+
+.workspace {
+  display: grid; align-items: start;
+  grid-template-columns: minmax(0, 1fr) var(--rail-right);
+  grid-template-areas: "brief evidence" "doc evidence";
+  gap: var(--s5);
+  padding: var(--s5);
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-panel { grid-area: brief; }
+.document-pane { grid-area: doc; min-width: 0; display: grid; gap: var(--s4); }
+.rail { grid-area: evidence; position: sticky; top: var(--s5); max-height: calc(100dvh - 52px - var(--s5) * 2); overflow-y: auto; }
+
+.form-panel {
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 10px 16px;
+  position: static;
+  max-height: none;
+}
+
+.form-panel .brief-summary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.form-panel .strip-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.form-panel .strip-row .btn-link {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.form-panel .brief-body {
+  display: none;
+}
+
+.form-panel[data-open="true"] .brief-body {
+  display: block;
+}
+
+.form-panel .brief-body .form-question {
+  max-width: var(--measure);
+}
+
+.form-panel { border-right: none; }
+
+.manuscript,
+.notes { padding: var(--sheet-pad) var(--sheet-pad) var(--s6); }
+
+@media (min-width: 768px) {
+  .app:has(.workspace[data-repair]) {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  .app:has(.workspace[data-repair]) > :not(.workspace) { flex-shrink: 0; }
+  /* Give the correction as much room as the document it changes. */
+  .workspace[data-repair] {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    align-items: stretch;
+    grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas: "brief brief" "doc evidence";
+  }
+  .workspace[data-repair] .document-pane,
+  .workspace[data-repair] .rail {
+    position: static;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    align-content: start;
+  }
+  .workspace[data-repair] .form-panel { max-height: 40dvh; overflow-y: auto; }
+  .workspace[data-repair] .manuscript { padding: clamp(20px, 2.5vw, 36px); }
+}
+
+@media (min-width: 1440px) {
+  .workspace:not([data-repair]) {
+    grid-template-columns: var(--brief) minmax(0, 1fr) var(--rail-right);
+    grid-template-areas: "brief doc evidence";
+  }
+  .workspace:not([data-repair]) .form-panel {
+    position: sticky;
+    top: var(--s5);
+    max-height: calc(100dvh - 52px - var(--s5) * 2);
+    overflow-y: auto;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  .workspace:not([data-repair]) .form-panel .brief-body {
+    display: block;
+  }
+  .workspace:not([data-repair]) .form-panel .strip-row .btn-link {
+    display: none;
+  }
+  .rail {
+    position: sticky;
+    top: var(--s5);
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .workspace {
+    gap: var(--s4);
+    padding: var(--s4);
+  }
+}
+
+@media (max-height: 820px) {
+  .workspace {
+    padding-top: var(--s4);
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar { padding: var(--s2) var(--s4); flex-wrap: wrap; }
+  .crumb { display: none; order: 3; width: 100%; }
+  .mode-long { display: none; }
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "brief" "doc" "evidence";
+    padding: var(--s4);
+    padding-bottom: calc(var(--phone-bar-h) + 72px);
+    gap: var(--s4);
+  }
+  .form-panel,
+  .rail {
+    position: static;
+    max-height: none;
+  }
+  .phone-hidden { display: none; }
+  .workspace[data-pane="doc"] > :not(.document-pane):not(.form-panel) {
+    display: none;
+  }
+  .workspace[data-pane="rail"] > :not(.rail) {
+    display: none;
+  }
+}

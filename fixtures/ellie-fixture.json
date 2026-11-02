@@ -1,0 +1,63 @@
+{
+  "note": "Hand-written outputs for the sample applicant Ellie, used in fixture mode and labelled as such on screen. Never presented as model output.",
+  "answer": "I found the /dev/shm problem: I read dmesg on the nodes and saw the OOM kills. I wrote the Helm change that mounts a memory-backed emptyDir for each job. I also wrote the per-course quota check in the scheduler extender.",
+  "correction": {
+    "quote": "I wrote the Helm change that mounts a memory-backed emptyDir for each job.",
+    "text": "My teammate Sam wrote the Helm change; I tested it on two of the lab nodes."
+  },
+  "facts": [
+    { "key": "team", "statement": "A final-year group project of four, September 2025 to March 2026.", "quote": "Final-year group project, four of us, Sept 2025 to March 2026.", "requirementIds": ["goal"] },
+    { "key": "goal", "statement": "Built a self-service GPU job runner for the department's machine learning teaching cluster.", "quote": "We built a self-service GPU job runner for the department's machine learning teaching cluster.", "requirementIds": ["goal", "evidence"] },
+    { "key": "cluster", "statement": "Jobs were queued on Kubernetes (k3s) across six lab workstations with GPUs.", "quote": "the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs)", "requirementIds": ["tech"] },
+    { "key": "stack", "statement": "The stack: Python and FastAPI, Redis, Helm, Prometheus and Grafana.", "quote": "Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.", "requirementIds": ["tech"] },
+    { "key": "decision", "statement": "Chose Kubernetes Jobs with a scheduler extender over Slurm, for containers and per-course GPU quotas.", "quote": "we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.", "requirementIds": ["decision"] },
+    { "key": "symptom", "statement": "In week 9, jobs were OOMKilled at random, even with tiny models.", "quote": "in week 9 jobs started dying at random, pods OOMKilled even with tiny models.", "requirementIds": ["problem"] },
+    { "key": "cause", "statement": "The cause: /dev/shm defaulted to 64 MB, which crashed the PyTorch data loaders.", "quote": "the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.", "requirementIds": ["problem"] },
+    { "key": "fix", "statement": "The fix mounted a memory-backed emptyDir with a size limit per job.", "quote": "Fixed it by mounting a memory-backed emptyDir with a size limit per job.", "requirementIds": ["problem"] },
+    { "key": "lesson", "statement": "Lesson: check the node's kernel log first; the team lost two days before looking.", "quote": "check the node's kernel log first. dmesg showed the OOM kills straight away and we wasted two days before looking.", "requirementIds": ["problem"] },
+    { "key": "result", "statement": "140 students used it; the average wait for a GPU fell from about two days to under 20 minutes.", "quote": "140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.", "requirementIds": ["goal", "evidence"] },
+    { "key": "motivation", "statement": "I liked the infrastructure side more than the machine learning side; Graphcore builds the hardware and the cloud platform.", "quote": "I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.", "requirementIds": ["motivation"] }
+  ],
+  "answerFacts": [
+    { "key": "diagnosed", "statement": "I found the /dev/shm problem by reading dmesg on the nodes.", "quote": "I found the /dev/shm problem: I read dmesg on the nodes and saw the OOM kills.", "requirementIds": ["contribution", "evidence"] },
+    { "key": "helm", "statement": "I wrote the Helm change that mounts a memory-backed emptyDir for each job.", "quote": "I wrote the Helm change that mounts a memory-backed emptyDir for each job.", "requirementIds": ["contribution", "evidence"] },
+    { "key": "quota", "statement": "I wrote the per-course quota check in the scheduler extender.", "quote": "I also wrote the per-course quota check in the scheduler extender.", "requirementIds": ["contribution"] }
+  ],
+  "questions": {
+    "contribution": {
+      "question": "Your notes say what the team did. What did you do yourself, especially when the jobs started failing in week 9?",
+      "why": "The form asks for your individual contribution, and every sentence in your notes describes the team."
+    }
+  },
+  "drafts": {
+    "answer": [
+      { "kind": "claim", "cite": ["team", "goal"], "text": "For our final-year group project, four of us built a self-service GPU job runner for the department's machine learning teaching cluster." },
+      { "kind": "claim", "cite": ["cluster"], "text": "Students submitted training jobs through a web form, and the runner queued them on Kubernetes (k3s) across six lab workstations with GPUs." },
+      { "kind": "claim", "cite": ["stack"], "text": "We used Python and FastAPI for the API, Redis for the queue, Helm charts for deployment, and Prometheus and Grafana for monitoring.", "startsParagraph": true },
+      { "kind": "claim", "cite": ["decision"], "text": "Our main technical decision was to use Kubernetes Jobs with a scheduler extender instead of Slurm: the department wanted every workload in a container, and we needed GPU quotas per course.", "startsParagraph": true },
+      { "kind": "claim", "cite": ["quota"], "text": "I wrote that per-course quota check in the scheduler extender." },
+      { "kind": "claim", "cite": ["symptom"], "text": "In week 9, jobs started being OOMKilled at random, even with tiny models.", "startsParagraph": true },
+      { "kind": "claim", "cite": ["diagnosed", "cause"], "text": "I found the cause by reading dmesg on the nodes: /dev/shm defaulted to 64 MB, which crashed the PyTorch data loaders." },
+      { "kind": "claim", "cite": ["helm", "fix"], "text": "I wrote the Helm change that mounts a memory-backed emptyDir with a size limit for each job, which fixed it." },
+      { "kind": "claim", "cite": ["lesson"], "text": "The lesson was to check the node's kernel log first: we lost two days before looking." },
+      { "kind": "claim", "cite": ["result"], "text": "In the spring term 140 students used the runner, and the average wait for a GPU fell from about two days on the old sign-up sheet to under 20 minutes.", "startsParagraph": true }
+    ],
+    "letter": [
+      { "kind": "frame", "cite": [], "text": "Dear Graphcore hiring team," },
+      { "kind": "frame", "cite": [], "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role in Bristol.", "startsParagraph": true },
+      { "kind": "claim", "cite": ["team", "goal", "cluster"], "text": "In my final-year group project, four of us built a self-service GPU job runner for our department's machine learning teaching cluster, running on Kubernetes across six lab workstations.", "startsParagraph": true },
+      { "kind": "claim", "cite": ["symptom", "diagnosed", "cause", "helm"], "text": "When jobs started dying in week 9, I traced the failures through dmesg to a 64 MB /dev/shm and wrote the Helm change that fixed them." },
+      { "kind": "claim", "cite": ["quota"], "text": "I also wrote the per-course quota check in our scheduler extender." },
+      { "kind": "claim", "cite": ["result"], "text": "By the spring term, 140 students were using it, and the average wait for a GPU had fallen from about two days to under 20 minutes." },
+      { "kind": "claim", "cite": ["motivation"], "text": "I enjoyed the infrastructure side of that project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on, which is why this role appeals to me.", "startsParagraph": true },
+      { "kind": "frame", "cite": [], "text": "Thank you for considering my application.", "startsParagraph": true },
+      { "kind": "frame", "cite": [], "text": "Yours sincerely, Ellie", "startsParagraph": true }
+    ]
+  },
+  "repairs": {
+    "helm": {
+      "answer": "My teammate Sam wrote the Helm change that mounts a memory-backed emptyDir with a size limit for each job; I tested it on two of the lab nodes.",
+      "letter": "When jobs started dying in week 9, I traced the failures through dmesg to a 64 MB /dev/shm, then tested the fix my teammate Sam wrote."
+    }
+  }
+}

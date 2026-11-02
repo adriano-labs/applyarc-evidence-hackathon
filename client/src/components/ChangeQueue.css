@@ -1,0 +1,229 @@
+.queue {
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  padding: var(--s4);
+  outline: none;
+  overflow-wrap: anywhere;
+}
+
+.queue h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.queue-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s3);
+}
+
+.queue-fact {
+  font-family: var(--font-doc);
+  font-size: var(--text-md);
+  margin: var(--s3) 0 var(--s3);
+  padding: var(--s3);
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+
+.queue-impact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s3);
+  align-items: center;
+  padding: var(--s2) var(--s3);
+  background: var(--paper);
+  border-radius: var(--radius);
+  margin-bottom: var(--s3);
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+
+.queue-impact-item {
+  white-space: nowrap;
+}
+
+.queue-ref {
+  color: var(--oxford-3);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.queue del {
+  color: var(--danger);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  background: var(--danger-soft);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.queue ins {
+  color: var(--confirmed);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1.5px;
+  background: var(--confirmed-soft);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.queue-items {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.queue-item {
+  padding: var(--s3) 0;
+  background: var(--sheet);
+  border-bottom: 1px solid var(--rule);
+}
+
+.queue:focus-within .queue-item[data-focused="true"] {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+.queue-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s2);
+}
+
+.queue .doc-name {
+  font: 600 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.queue .chip {
+  font: 500 var(--text-xs) var(--font-ui);
+  padding: 2px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.queue .chip.proposed {
+  color: var(--oxford-3);
+  background: var(--paper);
+}
+
+.queue .chip.needs,
+.queue .chip.chip-needs {
+  color: var(--needs);
+  background: var(--needs-soft);
+}
+
+.queue .chip.decided {
+  color: var(--confirmed);
+  background: var(--confirmed-soft);
+}
+
+.queue .chip.waiting {
+  color: var(--muted);
+  background: var(--paper);
+}
+
+.queue-line {
+  margin: var(--s2) 0 0;
+}
+
+/* The label sits above its line, so the sentence gets the rail's full width. */
+.queue-line-label {
+  display: block;
+  font: 600 11px/1.4 var(--font-ui);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.queue-line-text {
+  font: 400 var(--text-md)/1.55 var(--font-doc);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+@container queue (min-width: 420px) {
+  .queue-diff-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s3);
+    align-items: start;
+  }
+}
+
+.queue-none {
+  display: block;
+  font: italic var(--text-sm) var(--font-ui);
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.queue-note {
+  font-size: var(--text-sm);
+  color: var(--needs);
+  margin-top: var(--s2);
+}
+
+.queue-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin-top: var(--s3);
+}
+
+.queue textarea {
+  width: 100%;
+  font: 400 var(--text-md) var(--font-doc);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s3);
+  margin-top: var(--s2);
+  box-sizing: border-box;
+}
+
+.queue-foot {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-top: var(--s4);
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .workspace[data-repair] .queue-foot {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    padding: var(--s3) 0;
+    margin-bottom: calc(-1 * var(--s4));
+    background: var(--sheet);
+    border-top: 1px solid var(--rule);
+  }
+}
+
+.queue-show {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  margin-top: var(--s2);
+  min-height: 32px;
+}
+
+@supports (container-type: inline-size) {
+  .queue {
+    container-type: inline-size;
+    container-name: queue;
+  }
+}

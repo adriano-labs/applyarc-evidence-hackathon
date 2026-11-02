@@ -1,0 +1,272 @@
+.manuscript {
+  background: var(--sheet);
+  box-shadow: var(--shadow-sheet);
+  border-radius: var(--radius-lg);
+  padding: var(--sheet-pad) var(--sheet-pad) var(--s6);
+}
+
+.manuscript-body {
+  font: 400 var(--text-doc)/1.7 var(--font-doc);
+  max-width: var(--measure);
+  hanging-punctuation: first;
+  text-wrap: pretty;
+}
+
+.manuscript-body .para {
+  margin: 0 0 var(--s4) 0;
+}
+
+.manuscript-body .para:last-child {
+  margin-bottom: 0;
+}
+
+.sentence {
+  position: relative;
+}
+
+.sentence.draft,
+.sentence.repair {
+  color: var(--pencil);
+}
+
+.sentence.user {
+  color: var(--ink);
+}
+
+.sentence:hover,
+.sentence:focus-within {
+  background: var(--paper);
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.cites {
+  font-size: 0.68em;
+  line-height: 0;
+  margin-left: 0.06em;
+  vertical-align: super;
+}
+
+.cite {
+  border: none;
+  background: transparent;
+  color: var(--oxford-3);
+  font: 600 1em var(--font-doc);
+  padding: 0;
+  margin: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* A 24px-plus tap area that changes nothing you see: the numeral stays tight. */
+.cite::after {
+  content: '';
+  position: absolute;
+  inset: -8px -7px;
+}
+
+.cite:hover,
+.cite[data-active="true"] {
+  background: var(--highlight);
+  color: var(--ink);
+  transition: background var(--fast) var(--ease-out);
+}
+
+.mark-yours {
+  display: inline;
+  color: var(--ink);
+  margin-left: 2px;
+  vertical-align: 0.1em;
+}
+
+.approval del {
+  color: var(--muted);
+}
+
+.approval.stale del {
+  margin-right: var(--s1);
+}
+
+.mark-corrected {
+  font: 500 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--confirmed);
+  background: var(--confirmed-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: 0.15em;
+}
+
+.sentence.editing {
+  display: block;
+  background: transparent;
+}
+
+.sentence.editing textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--sheet);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s3);
+  box-sizing: border-box;
+}
+
+.sentence.editing textarea:focus {
+  outline: none;
+  border-color: var(--focus);
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s2);
+  margin-top: var(--s2);
+}
+
+.approval {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  row-gap: 2px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  font: 500 var(--text-sm) var(--font-ui);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.approval.approved {
+  color: var(--confirmed);
+  background: var(--confirmed-soft);
+}
+
+.approval.stale {
+  color: var(--needs);
+  background: var(--needs-soft);
+}
+
+.manuscript-head .approval.stale {
+  grid-area: auto;
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.manuscript-foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--s3);
+  margin-top: var(--s6);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s4);
+}
+
+.over-limit {
+  color: var(--needs);
+  font-size: var(--text-sm);
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sentence-text {
+  cursor: text;
+}
+
+.sentence-text[title="Click to edit"] {
+  cursor: text;
+}
+
+.cite + .cite::before {
+  content: ',';
+}
+
+.cite-anchor {
+  white-space: nowrap;
+}
+
+.sentence.pending {
+  text-decoration: underline wavy var(--needs);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.mark-pending {
+  font: 500 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--needs);
+  background: var(--needs-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: 0.15em;
+}
+
+.sentence-edit {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sentence-edit:focus-visible {
+  position: static;
+  width: 22px;
+  height: 22px;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.sentence-text[data-editable="true"] {
+  cursor: text;
+}
+
+.sentence.flash {
+  animation: sentence-flash 1.2s ease-out;
+}
+
+@keyframes sentence-flash {
+  from {
+    background-color: var(--highlight);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sentence.flash {
+    animation: none;
+    background-color: var(--highlight);
+  }
+}
+
+
+.sentence[data-cites-active="true"] {
+  background: var(--paper);
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

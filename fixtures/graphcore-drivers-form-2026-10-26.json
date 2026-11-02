@@ -1,0 +1,77 @@
+{
+  "id": "graphcore-graduate-software-engineer-drivers-utilities-2027",
+  "company": "Graphcore",
+  "role": "Graduate Software Engineer, Drivers and Utilities 2027",
+  "location": "Bristol, UK",
+  "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894887002",
+  "snapshot": {
+    "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894887002?questions=true",
+    "fetchedAt": "2026-10-26T23:57:13Z",
+    "postingUpdatedAt": "2026-10-26T05:34:28-04:00",
+    "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+  },
+  "documents": [
+    {
+      "id": "answer",
+      "title": "Project answer",
+      "fieldId": "question_38847809002",
+      "question": "Tell us about a systems software project you have worked on. \n\nBriefly explain the project and your role, then describe:\n(a) The most interesting thing you learned and why.\n(b) What you would do differently if you were starting again, and why.\n\n(Max 300 words)",
+      "wordLimit": 300,
+      "limitSource": "form",
+      "requirements": [
+        {
+          "id": "project",
+          "text": "The project, briefly"
+        },
+        {
+          "id": "role",
+          "text": "Your role in it",
+          "personal": true
+        },
+        {
+          "id": "learned",
+          "text": "The most interesting thing you learned, and why"
+        },
+        {
+          "id": "differently",
+          "text": "What you would do differently if you were starting again, and why",
+          "personal": true
+        }
+      ]
+    },
+    {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": "cover_letter_text",
+      "question": "Cover Letter (required)",
+      "wordLimit": 400,
+      "limitSource": "guide",
+      "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter.",
+      "requirements": [
+        {
+          "id": "motivation",
+          "text": "Why this role and this company, in your own words"
+        },
+        {
+          "id": "evidence",
+          "text": "The experience that shows you can do the job"
+        }
+      ]
+    }
+  ],
+  "portalTasks": [
+    "First Name",
+    "Last Name",
+    "Email",
+    "Phone",
+    "Resume/CV",
+    "Have you added your full legal name and surname (including any middle names)?",
+    "What is your predicted/final degree classification?",
+    "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+    "Would you need to relocate to work regularly from this office?",
+    "How did you first hear about Graphcore?",
+    "Please select your right to work status",
+    "Do you have the legal right to work in the UK without sponsorship?"
+  ],
+  "coverLetterRequired": true
+}

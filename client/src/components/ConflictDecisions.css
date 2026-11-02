@@ -1,0 +1,27 @@
+/* The one decision drafting waits for, so it stands apart from the evidence list. */
+.conflict-card {
+  background: var(--sheet);
+  border-left: 3px solid var(--needs);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+  padding: var(--s3) var(--s4);
+  margin-bottom: var(--s4);
+}
+
+.conflict-card p {
+  margin: 0;
+  font: 500 var(--text-sm) var(--font-ui);
+  color: var(--needs);
+}
+
+.conflict-card .conflict-quote {
+  font: 400 var(--text-md)/1.5 var(--font-doc);
+  color: var(--ink);
+  margin: var(--s2) 0 var(--s3);
+}
+
+.conflict-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}

@@ -1,0 +1,67 @@
+.cite-peek {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: var(--phone-bar-h);
+  background: var(--sheet);
+  box-shadow: var(--shadow-lift);
+  border-radius: 10px 10px 0 0;
+  padding: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  outline: none;
+}
+
+.cite-peek.inline {
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  box-shadow: var(--shadow-lift);
+  border-radius: 10px;
+  margin-top: var(--s4);
+  display: flex;
+}
+
+.cite-peek:focus {
+  outline: none;
+}
+
+.peek-n {
+  font-family: var(--doc-font);
+  font-weight: 600;
+  color: var(--oxford-3);
+}
+
+.peek-statement {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.peek-quote {
+  margin: 0;
+  font-size: 13px;
+}
+
+.peek-quote mark {
+  background: var(--highlight);
+}
+
+.peek-source {
+  margin: 0;
+  font-size: 13px;
+}
+
+.peek-actions {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cite-peek:not(.inline) {
+    display: none;
+  }
+}

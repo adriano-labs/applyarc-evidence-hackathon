@@ -1,0 +1,24 @@
+.welcome {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--s6) var(--s5);
+}
+
+@media (max-width: 560px) {
+  .welcome {
+    padding: var(--s4);
+  }
+}
+
+/* What Meta did, under the welcome and the walk-through, on the same column. */
+.guided-receipts {
+  max-width: 720px;
+  margin: 0 auto var(--s6);
+  padding: 0 var(--s6);
+}
+
+@media (max-width: 560px) {
+  .guided-receipts {
+    padding: 0 var(--s4);
+  }
+}

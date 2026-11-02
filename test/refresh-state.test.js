@@ -1,0 +1,26 @@
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { expect, it } from 'vitest';
+import { createApp } from '../server/app.js';
+const form = { id: 'f', company: 'Example', role: 'Engineer', documents: [{ id: 'answer', title: 'Project answer', requirements: [] }, { id: 'letter', title: 'Cover letter', requirements: [] }] };
+it('state reports only the current owner’s running step, then the saved result or failure', async () => {
+  let release, began;
+  const started = new Promise((r) => { began = r; });
+  const held = new Promise((r) => { release = r; });
+  const agent = { provider: { id: 'fixture' }, extract: async () => { began(); await held; return { facts: [] }; } };
+  const app = createApp({ dataDir: mkdtempSync(join(tmpdir(), 'refresh-')), form, agent, trustEasyAuth: true });
+  const headers = { 'x-ms-client-principal-id': 'alice', 'content-type': 'application/json' };
+  const state = async (h = headers) => (await app.request('/api/state', { headers: h })).json();
+  const notes = await (await app.request('/api/actions/notes', { method: 'POST', headers, body: JSON.stringify({ revision: 0, text: 'I tested the service.' }) })).json();
+  const response = await app.request('/api/run/read', { method: 'POST', headers, body: JSON.stringify({ revision: notes.workspace.revision, sourceId: notes.result.id }) });
+  const completed = response.text();
+  await started;
+  expect((await state()).working).toBe(true);
+  expect((await state({ 'x-ms-client-principal-id': 'bob' })).working).toBe(false);
+  release();
+  await completed;
+  const final = await state();
+  expect(final.working).toBe(false);
+  expect(final.workspace.applicant.sources[0].read).toBe(true);
+});

@@ -1,0 +1,154 @@
+.references {
+  padding: var(--s2) 0;
+}
+
+.references h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--s3);
+}
+
+.references h3 {
+  font: 600 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: var(--s4) 0 var(--s2);
+}
+
+.ref-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.references ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ref {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: var(--s2);
+  padding: var(--s3);
+  border-radius: var(--radius);
+  transition: background var(--fast) var(--ease-out);
+}
+
+.ref.uncited {
+  grid-template-columns: 1fr;
+  padding-left: calc(var(--s3) + 28px);
+}
+
+.ref[data-active="true"] {
+  background: var(--highlight-soft);
+}
+
+.ref-n {
+  font: 600 var(--text-md) var(--font-doc);
+  color: var(--oxford-3);
+  text-align: right;
+  padding-top: 1px;
+}
+
+.ref-body {
+  min-width: 0;
+}
+
+.ref-statement {
+  font: 500 var(--text-sm)/1.45 var(--font-ui);
+  color: var(--ink);
+  margin: 0;
+}
+
+.ref-quote {
+  font: 400 var(--text-sm)/1.55 var(--font-doc);
+  color: var(--pencil);
+  margin: 4px 0 0 0;
+}
+
+.ref-quote mark {
+  background-color: transparent;
+  background-image: linear-gradient(var(--highlight), var(--highlight)), linear-gradient(var(--highlight-soft), var(--highlight-soft));
+  background-repeat: no-repeat;
+  background-size: 0% 100%, 100% 100%;
+  padding: 0 2px;
+  border-radius: 2px;
+  box-decoration-break: slice;
+  -webkit-box-decoration-break: slice;
+  transition: background-size var(--mid) var(--ease-out);
+}
+
+.ref[data-active="true"] .ref-quote mark {
+  background-size: 100% 100%, 100% 100%;
+}
+
+.ref-source {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.ref-rejected summary {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  cursor: pointer;
+  margin-top: var(--s4);
+}
+
+.ref.rejected {
+  display: block;
+  padding: var(--s2) var(--s3);
+}
+
+.ref.rejected s {
+  color: var(--faint);
+  font-size: var(--text-sm);
+}
+
+.references label {
+  display: block;
+  font: 500 var(--text-sm) var(--font-ui);
+  color: var(--ink);
+  margin-bottom: var(--s2);
+}
+
+.references textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: 400 var(--text-sm)/1.5 var(--font-ui);
+  color: var(--ink);
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s3);
+  resize: vertical;
+  min-height: 72px;
+}
+
+.references textarea:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--focus);
+}
+
+.ref-help {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-top: var(--s2);
+}
+
+.ref-actions {
+  display: flex;
+  gap: var(--s2);
+  margin-top: var(--s3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ref-quote mark {
+    transition: none;
+  }
+}

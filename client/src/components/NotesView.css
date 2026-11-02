@@ -1,0 +1,180 @@
+.notes {
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sheet);
+  padding: var(--sheet-pad) var(--sheet-pad) var(--s6);
+}
+
+
+.notes h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0;
+}
+
+.notes-headline {
+  font-family: var(--font-doc);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0 0 var(--s4) 0;
+}
+
+.notes-how {
+  list-style: decimal;
+  margin: var(--s3) 0;
+  padding-left: 1.25em;
+  display: grid;
+  gap: var(--s2);
+  max-width: 60ch;
+}
+
+.notes-promise {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  max-width: 60ch;
+}
+.notes-sample {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: var(--s3) 0 var(--s5) 0;
+}
+
+.notes-divider {
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s5);
+  margin-bottom: var(--s5);
+}
+
+.notes-section {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin: 0 0 var(--s3) 0;
+}
+
+.notes-compose label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  margin-bottom: var(--s2);
+}
+
+.notes .source + .source {
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s5);
+  padding-top: var(--s5);
+}
+
+.source-text,
+.notes textarea {
+  font: 400 var(--text-doc)/1.7 var(--font-doc);
+  white-space: pre-wrap;
+  max-width: var(--measure);
+  color: var(--ink);
+}
+
+.notes textarea {
+  width: 100%;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: var(--s4);
+  background: var(--sheet);
+  box-sizing: border-box;
+}
+
+.notes textarea:focus {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.notes mark {
+  background: var(--highlight-soft);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  cursor: default;
+}
+
+.notes mark[data-status="confirmed"] {
+  background-color: transparent;
+  background-image: linear-gradient(var(--highlight), var(--highlight)), linear-gradient(var(--highlight-soft), var(--highlight-soft));
+  background-repeat: no-repeat;
+  background-size: 0% 100%, 100% 100%;
+  box-decoration-break: slice;
+  -webkit-box-decoration-break: slice;
+  transition: background-size var(--mid) var(--ease-out);
+}
+
+.notes mark[data-status="confirmed"][data-active="true"] {
+  background-size: 100% 100%, 100% 100%;
+}
+
+.notes mark[data-status="proposed"] {
+  background: none;
+  border-bottom: 2px dotted var(--faint);
+}
+
+.notes mark[data-status="proposed"][data-active="true"] {
+  background: var(--highlight);
+}
+
+.notes-help {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: var(--s2) 0 var(--s4);
+}
+
+.notes-actions {
+  display: flex;
+  gap: var(--s2);
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: var(--s4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notes mark[data-status="confirmed"] {
+    transition: none;
+  }
+}
+
+.notes-add {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s5);
+}
+
+.notes-add > summary {
+  display: list-item;
+  list-style-position: inside;
+  min-height: 44px;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  cursor: pointer;
+  padding: var(--s3) 0;
+}
+
+.notes-add > summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.notes-add .notes-compose {
+  padding: var(--s3) 0 var(--s4) 0;
+}

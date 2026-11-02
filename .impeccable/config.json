@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "\\s*var\\(--font-doc\\)/)",
+        "createdAt": "2026-10-28T11:57:51.556Z",
+        "reason": "Codex verified this is an existing CSS assertion regexp in test/ui/r9.test.jsx, not a font declaration or design change."
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+.manuscript-head {
+  padding-bottom: var(--s3);
+  margin-bottom: var(--s3);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.manuscript-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+.manuscript-head h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.manuscript-meta {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: 0;
+}
+
+.correction-notice {
+  font: italic var(--text-sm) var(--font-doc);
+  color: var(--muted);
+  margin: 0;
+}
+
+.manuscript-evidence {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: var(--text-sm);
+  color: var(--ink);
+  margin: 0;
+}
+
+.manuscript-hint {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: 0;
+}
+
+.manuscript-stamp {
+  font: inherit;
+  line-height: 1.4; /* it wraps on phones */
+}
+
+.manuscript-help { font-size: var(--text-sm); color: var(--muted); }
+.manuscript-help summary { cursor: pointer; padding-block: 4px; }
+.manuscript-help[open] > p { margin-top: var(--s2); }
+
+.manuscript-head .approval {
+  align-self: start;
+}
+
+.manuscript-missing {
+  font-size: var(--text-sm);
+  color: var(--danger);
+  margin: 0;
+}

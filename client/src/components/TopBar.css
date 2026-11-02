@@ -1,0 +1,120 @@
+.crumb-sep {
+  margin: 0 6px;
+}
+
+.receipt-short { display: inline; }
+.receipt-summary { display: none; }
+.mode.meta .mode-long { display: none; }
+
+.receipts-pill {
+  font: 500 var(--text-xs) var(--font-ui);
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--oxford-3);
+  background: transparent;
+  color: var(--on-oxford);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: var(--text-xs);
+}
+
+.mode {
+  font: 500 var(--text-xs) var(--font-ui);
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--oxford-3);
+  color: var(--on-oxford);
+  white-space: nowrap;
+}
+
+.mode.fixture {
+  border-style: dashed;
+}
+
+.mode.meta {
+  background: var(--highlight);
+  color: var(--oxford);
+  border: none;
+}
+
+.spend {
+  font-size: var(--text-xs);
+  color: var(--on-oxford-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.topbar-btn {
+  background: transparent;
+  border: 1px solid var(--oxford-3);
+  color: var(--on-oxford);
+  font: 500 var(--text-xs) var(--font-ui);
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.topbar-btn:hover {
+  background: var(--oxford-2);
+}
+
+.topbar-btn kbd {
+  font: 500 var(--text-xs) var(--font-ui);
+  opacity: 0.8;
+}
+
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s2) var(--s4);
+  background: var(--sheet);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+}
+
+.notice.error {
+  background: var(--danger-soft);
+}
+
+.notice.error p {
+  color: var(--danger);
+  margin: 0;
+}
+
+.notice.info {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+
+.notice p {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.earlier {
+  margin-left: var(--s3);
+  font-size: var(--text-xs);
+  color: var(--on-oxford-muted);
+}
+
+@media (max-width: 1023px) {
+  .crumb .crumb-sep,
+  .crumb .crumb-sep + span {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar-end { width: 100%; margin-left: 0; flex-wrap: wrap; gap: var(--s2); }
+  .topbar-btn[aria-label*="⌘K"],
+  .topbar-btn[aria-label*="Ctrl K"] {
+    display: none;
+  }
+}

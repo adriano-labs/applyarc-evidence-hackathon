@@ -1,0 +1,437 @@
+{
+  "description": "Known synthetic hosted browser rehearsal, not a fresh comparison or human time-saving measurement. Request time is summed, not elapsed journey time.",
+  "sourceCommit": "3547156a3faa7caa67b16b6392f0215e11f8cc50",
+  "sourceDate": "2026-11-02",
+  "laterSafetyFix": "a404886ef80daadd24306fda526582e0b218e9a4 was not included in this recording.",
+  "exportedAt": "2026-11-02T19:30:17.430Z",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "sourceTraceSha256": "e9d27f886cd6b9d1df0e37a0c29648ab8c04dd8c51cdb3e31024bbdc07e054e2",
+  "sanitization": "Removed provider request IDs, account budget and rate-limit balances. No cookies or local paths included.",
+  "total": {
+    "applicationReceipts": 12,
+    "providerAttempts": 20,
+    "nativeToolCalls": 20,
+    "summedRequestMs": 121545,
+    "estimatedCostUsd": 0.4556288,
+    "usage": {
+      "input": 58936,
+      "cached": 25804,
+      "output": 15897,
+      "reasoning": 10792
+    }
+  },
+  "repair": {
+    "applicationReceipts": 4,
+    "providerAttempts": 4,
+    "nativeToolCalls": 0,
+    "summedRequestMs": 28884,
+    "estimatedCostUsd": 0.1071672,
+    "usage": {
+      "input": 10010,
+      "cached": 1256,
+      "output": 3595,
+      "reasoning": 3046
+    }
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8472,
+        "cached": 5596,
+        "output": 2242,
+        "reasoning": 759
+      },
+      "costUsd": 0.0574632,
+      "firstEventMs": 1462,
+      "firstOutputMs": 1865,
+      "totalMs": 12630,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T19:05:42.041Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 4863,
+        "cached": 1908,
+        "output": 695,
+        "reasoning": 531
+      },
+      "costUsd": 0.026101600000000003,
+      "firstEventMs": 1109,
+      "firstOutputMs": 3471,
+      "totalMs": 6297,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-02T19:06:53.093Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4286,
+        "cached": 2408,
+        "output": 612,
+        "reasoning": 406
+      },
+      "costUsd": 0.0202336,
+      "firstEventMs": 1525,
+      "firstOutputMs": 3196,
+      "totalMs": 8129,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T19:08:41.874Z"
+    },
+    {
+      "step": "draft",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "147 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6023,
+        "cached": 2292,
+        "output": 2061,
+        "reasoning": 1340
+      },
+      "costUsd": 0.056602400000000004,
+      "firstEventMs": 1334,
+      "firstOutputMs": 9115,
+      "totalMs": 15374,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T19:09:53.367Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2896,
+        "cached": 628,
+        "output": 557,
+        "reasoning": 342
+      },
+      "costUsd": 0.020337599999999997,
+      "firstEventMs": 1236,
+      "firstOutputMs": 2926,
+      "totalMs": 3829,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T19:09:57.218Z"
+    },
+    {
+      "step": "draft",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 3,
+      "attempts": 3,
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "215 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "230 of 300"
+        }
+      ],
+      "usage": {
+        "input": 13922,
+        "cached": 7656,
+        "output": 4360,
+        "reasoning": 3104
+      },
+      "costUsd": 0.1137952,
+      "firstEventMs": 1881,
+      "firstOutputMs": 19795,
+      "totalMs": 30259,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T19:10:08.181Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 4380,
+        "cached": 628,
+        "output": 955,
+        "reasoning": 690
+      },
+      "costUsd": 0.034233599999999996,
+      "firstEventMs": 1275,
+      "firstOutputMs": 6116,
+      "totalMs": 7801,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T19:10:16.004Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4084,
+        "cached": 3432,
+        "output": 820,
+        "reasoning": 574
+      },
+      "costUsd": 0.0196944,
+      "firstEventMs": 2171,
+      "firstOutputMs": 4250,
+      "totalMs": 8342,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T19:14:23.428Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2958,
+        "cached": 0,
+        "output": 1000,
+        "reasoning": 855
+      },
+      "costUsd": 0.031832,
+      "firstEventMs": 1870,
+      "firstOutputMs": 6366,
+      "totalMs": 6849,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T19:16:26.137Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2425,
+        "cached": 628,
+        "output": 1058,
+        "reasoning": 910
+      },
+      "costUsd": 0.028473599999999998,
+      "firstEventMs": 1651,
+      "firstOutputMs": 7345,
+      "totalMs": 8109,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T19:16:34.272Z"
+    },
+    {
+      "step": "revise",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 1986,
+        "cached": 0,
+        "output": 692,
+        "reasoning": 576
+      },
+      "costUsd": 0.021784,
+      "firstEventMs": 2049,
+      "firstOutputMs": 5482,
+      "totalMs": 5999,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T19:16:40.320Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2641,
+        "cached": 628,
+        "output": 845,
+        "reasoning": 705
+      },
+      "costUsd": 0.0250776,
+      "firstEventMs": 3312,
+      "firstOutputMs": 6843,
+      "totalMs": 7927,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T19:16:48.268Z"
+    }
+  ]
+}

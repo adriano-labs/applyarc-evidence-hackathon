@@ -1,0 +1,187 @@
+{
+  "note": "Hand-written outputs for Ellie's second application (Graphcore Graduate Software Engineer, Drivers and Utilities 2027), used in fixture mode and labelled as such on screen. Never presented as model output. Keys refer to facts in ellie-fixture.json; differently* facts come from the new answer below.",
+  "formId": "graphcore-graduate-software-engineer-drivers-utilities-2027",
+  "coverage": [
+    {
+      "requirementId": "project",
+      "keys": [
+        "team",
+        "goal",
+        "cluster"
+      ]
+    },
+    {
+      "requirementId": "role",
+      "keys": [
+        "diagnosed",
+        "quota"
+      ]
+    },
+    {
+      "requirementId": "learned",
+      "keys": [
+        "cause",
+        "lesson"
+      ]
+    },
+    {
+      "requirementId": "motivation",
+      "keys": [
+        "motivation"
+      ]
+    },
+    {
+      "requirementId": "evidence",
+      "keys": [
+        "goal",
+        "result"
+      ]
+    }
+  ],
+  "questions": {
+    "differently": {
+      "question": "If you started the GPU job runner again, what would you do differently, and why?",
+      "why": "The form asks what you would do differently, and none of your confirmed facts says."
+    }
+  },
+  "answer": "I would add the memory limits and a /dev/shm check to our job template from day one. I would also set up node log alerts before launch, because we only found the OOM kills after students lost work.",
+  "answerFacts": [
+    {
+      "key": "templates",
+      "statement": "I would add memory limits and a /dev/shm check to the job template from day one.",
+      "quote": "I would add the memory limits and a /dev/shm check to our job template from day one.",
+      "requirementIds": [
+        "differently"
+      ]
+    },
+    {
+      "key": "alerts",
+      "statement": "I would set up node log alerts before launch, because the OOM kills were only found after students lost work.",
+      "quote": "I would also set up node log alerts before launch, because we only found the OOM kills after students lost work.",
+      "requirementIds": [
+        "differently"
+      ]
+    }
+  ],
+  "drafts": {
+    "answer": [
+      {
+        "kind": "claim",
+        "cite": [
+          "team",
+          "goal"
+        ],
+        "text": "For our final-year group project, four of us built a self-service GPU job runner for the department's machine learning teaching cluster."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "cluster"
+        ],
+        "text": "The runner queued students' training jobs on Kubernetes (k3s) across six lab workstations with GPUs."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "diagnosed"
+        ],
+        "text": "When jobs started failing, I found the cause by reading dmesg on the nodes.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "quota"
+        ],
+        "text": "I also wrote the per-course quota check in our scheduler extender."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "cause"
+        ],
+        "text": "The most interesting lesson came from that failure: the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "lesson"
+        ],
+        "text": "It taught me to check the node's kernel log first, because dmesg showed the OOM kills straight away and we lost two days before looking."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "templates"
+        ],
+        "text": "If I started again, I would put memory limits and a /dev/shm check into our job template from day one.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "alerts"
+        ],
+        "text": "I would also set up node log alerts before launch, because we only found the OOM kills after students had lost work."
+      }
+    ],
+    "letter": [
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Dear Graphcore hiring team,"
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "I am applying for the Graduate Software Engineer, Drivers and Utilities 2027 role.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "team",
+          "goal"
+        ],
+        "text": "In my final-year group project, four of us built a self-service GPU job runner for our department's machine learning teaching cluster.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "diagnosed",
+          "cause"
+        ],
+        "text": "When jobs started failing, I traced the crashes through dmesg to a 64 MB /dev/shm in the pods."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "result"
+        ],
+        "text": "By the spring term, 140 students were using it, and the average wait for a GPU had fallen from about two days to under 20 minutes."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "motivation"
+        ],
+        "text": "I enjoyed the infrastructure side of that project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Thank you for considering my application.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Yours sincerely, Ellie",
+        "startsParagraph": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,882 @@
+{
+ "version": "paired-full-workflow-holdout-3",
+ "authored": "2026-10-29",
+ "author": "Claude Fable 5.1, writing blind: no access to either system, its prompts or any earlier case",
+ "heldOut": true,
+ "purpose": "Held-out synthetic workflow comparison, frozen before any run; not evidence of user time saved or hiring outcomes.",
+ "protocol": {
+  "information": "Same initial notes, pasted form and one fixed clarification packet. The packet is supplied even if no question was asked; this is recorded as volunteered information, not successful clarification.",
+  "manualEdits": "One evidence-backed motivation paraphrase, and For clarity: before a contribution segment. Neither adds a factual claim.",
+  "correction": "One correction supplied after initial review. Each arm gets its normal repair call; no repeated case sampling or best-of output selection.",
+  "confirmation": "Scripted participant confirms extracted facts and accepts proposed repairs. This is not a human quality endorsement; unsupported extraction and repair must be graded from all retained text.",
+  "measurement": "Machine elapsed time, provider usage/cost, mechanical checks and separate semantic review. Human working time is not measured.",
+  "coverage": "Exact verbatim quote anchors identify the intended fact and dependency. Missing or ambiguous targets fail task setup/coverage instead of being injected or fuzzily matched.",
+  "fairness": "Same model and explicit fixed effort, one shared spend ledger, sequential provider calls, equal per-arm cap, counterbalanced paired order.",
+  "contradictions": "Seven cases. care-home-activity-sessions: the notes name Marcus as the person who led the sessions, so the packet's claim to have led them clashes with the applicant's own notes. salon-reminder-texts: the notes credit Carys with the idea and record roughly a quarter fewer missed appointments, against the packet's almost half and personal credit. laundry-dryer-log: the notes say the 15 minutes was Marta's reckoning from the display and that nobody timed it, against the packet's claim to have measured it. shopfront-sign-lettering: the notes say Tomasz agreed the lettering style and colours with the owner, against the packet's claim to have chosen them. guitar-setup-practice: the notes say Nadia did every customer and stock setup while the others practised on the shop's own guitars, against the packet's customer work. water-sampling-duplicates: the notes say Fatima took the compliance samples and the trainees took duplicates, against the packet's claim to have taken the compliance samples. rain-gauge-resite: the notes say Leah picked the new site after her exposure survey, against the packet's claim to have decided it."
+ },
+ "cases": [
+  {
+   "id": "dental-recall-check",
+   "input": {
+    "applicant": "Jess",
+    "company": "Ashcombe Dental Practice",
+    "role": "Dental Receptionist",
+    "notes": "Over the summer our reception team tidied up the patient recall list before the new recall letters went out.\nWe went through 120 patient records and found 9 with no recall date at all.\nThe 9 were passed to the practice manager; we did not touch any clinical details ourselves.\nI learned to query a blank field instead of filling it with a guess.\nI want to work at Ashcombe Dental Practice because the front desk there is calm and organised, which is how I like to work.",
+    "question": "Describe a task you completed as part of a team. Tell us what you did yourself, what the team actually found or recorded, and what you learned.",
+    "requirements": [
+     {
+      "text": "Your own part in the work, as distinct from what the team did",
+      "personal": true
+     },
+     {
+      "text": "What was actually found or recorded, without adding results that were not observed",
+      "personal": false
+     },
+     {
+      "text": "One thing you learned that you would carry into this role",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I designed the recall letter template that the practice now uses.",
+   "correction": {
+    "anchor": "I designed the recall letter template that the practice now uses.",
+    "before": "I designed the recall letter template that the practice now uses.",
+    "after": "Hannah designed the recall letter template. I checked the 120 patient records against it and flagged the 9 with no recall date."
+   },
+   "manual": {
+    "source": "I want to work at Ashcombe Dental Practice because the front desk there is calm and organised, which is how I like to work.",
+    "replacement": "A calm, organised front desk is how I like to work, and that is why Ashcombe Dental Practice is where I want to be."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Hannah",
+     "flagged",
+     "120 patient records"
+    ],
+    "obsoletePhrases": [
+     "I designed the recall letter template"
+    ],
+    "semanticChecks": [
+     "Hannah is credited with the template and Jess is described as checking the records against it and flagging the gaps.",
+     "The 120 records and the 9 flagged ones may be stated, but no further figures such as letters sent or appointments booked may appear.",
+     "Jess's checking work stays in both documents rather than being cut along with the design claim.",
+     "The motivation sentence the applicant rewrote appears unchanged, and nothing suggests Jess handled clinical details."
+    ],
+    "missingCriteria": "No outcome of the recall letters, no appointment or income effect, no qualification and no role beyond the summer were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "care-home-activity-sessions",
+   "input": {
+    "applicant": "Tom",
+    "company": "Hollins Court Care Home",
+    "role": "Activities Assistant",
+    "notes": "I volunteered at Hollins Court for six weeks, helping with the Thursday afternoon activity sessions.\nMarcus, the activities coordinator, led the sessions and chose what we did each week.\nOur team of three set up the lounge, handed out the quiz sheets and sat with residents who needed a hand.\nAttendance went in the signing-in book each week, usually between 10 and 14 residents.\nI learned to slow down and let residents answer in their own time.\nHollins Court matters to me because the staff treat the residents as people first, and I want to be part of that.",
+    "question": "Tell us about a time you supported other people as part of a team. What did you do yourself, what was recorded about the sessions, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own role, separate from what the coordinator and the rest of the team did",
+      "personal": true
+     },
+     {
+      "text": "Attendance or outcome figures only as they were actually recorded",
+      "personal": false
+     },
+     {
+      "text": "What you learned about working with residents",
+      "personal": true
+     },
+     {
+      "text": "Why you want this role at this home",
+      "personal": true
+     }
+    ],
+    "wordLimit": 250
+   },
+   "clarificationAnswer": "I led the weekly activity sessions for the residents.",
+   "correction": {
+    "anchor": "I led the weekly activity sessions for the residents.",
+    "before": "I led the weekly activity sessions for the residents.",
+    "after": "Marcus led the weekly activity sessions. I set up the lounge, read out the quiz questions on two of the six weeks and sat with residents who needed help."
+   },
+   "manual": {
+    "source": "Hollins Court matters to me because the staff treat the residents as people first, and I want to be part of that.",
+    "replacement": "I want to be part of Hollins Court because its staff treat the residents as people first."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Marcus",
+     "two of the six",
+     "set up the lounge"
+    ],
+    "obsoletePhrases": [
+     "I led the weekly activity sessions"
+    ],
+    "semanticChecks": [
+     "Marcus is named as the session leader and Tom's part is setting up, reading the quiz questions on two weeks and sitting with residents.",
+     "Attendance appears only as recorded in the signing-in book, 10 to 14 residents, with no rise in attendance or wellbeing claimed.",
+     "Tom's smaller role is kept in both documents instead of being dropped with the leadership claim.",
+     "The applicant's own wording of the motivation sentence survives exactly, and no care qualification or paid experience is implied."
+    ],
+    "missingCriteria": "No measured effect on residents, no training certificate, no safeguarding check and no paid care experience were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "salon-reminder-texts",
+   "input": {
+    "applicant": "Amira",
+    "company": "Birchmoor Hair Studio",
+    "role": "Salon Assistant",
+    "notes": "At my apprenticeship salon our team tried text reminders the day before appointments to cut missed slots.\nCarys, the senior stylist, suggested it and kept a tally of missed appointments in the back of the diary for six weeks.\nHer tally showed roughly a quarter fewer missed appointments than in the six weeks before.\nI learned that a small routine done every day beats a big plan nobody keeps up.\nI'd love to join Birchmoor Hair Studio because the team there keeps training its assistants rather than leaving them on the basin.",
+    "question": "Describe something you helped change at work. Be clear about your part, whose idea it was if not yours, and what the records actually showed.",
+    "requirements": [
+     {
+      "text": "Your own contribution, stated honestly",
+      "personal": true
+     },
+     {
+      "text": "The recorded result, using only figures that were actually counted",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 180
+   },
+   "clarificationAnswer": "I cut missed appointments by almost half with the reminder texts.",
+   "correction": {
+    "anchor": "I cut missed appointments by almost half with the reminder texts.",
+    "before": "I cut missed appointments by almost half with the reminder texts.",
+    "after": "Carys suggested the reminder texts and her tally showed roughly a quarter fewer missed appointments, not half. I sent the reminder texts each morning from the appointment book."
+   },
+   "manual": {
+    "source": "I'd love to join Birchmoor Hair Studio because the team there keeps training its assistants rather than leaving them on the basin.",
+    "replacement": "Birchmoor Hair Studio keeps training its assistants instead of leaving them on the basin, and that is why I want to join."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Carys",
+     "quarter",
+     "sent the reminder texts"
+    ],
+    "obsoletePhrases": [
+     "I cut missed appointments",
+     "almost half"
+    ],
+    "semanticChecks": [
+     "The reduction is given as roughly a quarter from Carys's tally and the idea is credited to her; nothing presents it as half or as Amira's achievement.",
+     "Amira's real part, sending the reminder texts each morning, is kept in both documents.",
+     "The tally is described as a count kept in the diary, not as a formal measurement or a precise percentage.",
+     "The motivation sentence edited by the applicant stays word for word."
+    ],
+    "missingCriteria": "No exact counts, no takings effect, no client feedback and no completed apprenticeship qualification were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "laundry-dryer-log",
+   "input": {
+    "applicant": "Kieran",
+    "company": "Pennant Linen Services",
+    "role": "Laundry Operative",
+    "notes": "On my two-week placement at a commercial laundry our team tried loading the tumble dryers to a set weight instead of by eye.\nMarta, the shift supervisor, set up a log sheet for cycle start and end times and reckoned from the machine display that it saved about 15 minutes a load, though nobody timed it against the old way.\nWe ran the new loading on two of the five dryers so the other three could carry on as normal.\nI learned that a log sheet is only useful if the times are written down straight away, not from memory.\nPennant Linen Services appeals to me because the placement showed me a team that fixes small things on the shop floor instead of waiting.",
+    "question": "Give an example of a process change you were involved in. Say exactly what your role was, what was measured and what was only estimated, and what you learned.",
+    "requirements": [
+     {
+      "text": "Your individual role in the change",
+      "personal": true
+     },
+     {
+      "text": "A clear line between what was measured and what was estimated",
+      "personal": false
+     },
+     {
+      "text": "What you learned about record keeping",
+      "personal": true
+     }
+    ],
+    "wordLimit": 220
+   },
+   "clarificationAnswer": "I measured a saving of 15 minutes per drying load from the new loading method.",
+   "correction": {
+    "anchor": "I measured a saving of 15 minutes per drying load from the new loading method.",
+    "before": "I measured a saving of 15 minutes per drying load from the new loading method.",
+    "after": "The 15 minutes was Marta's estimate from the machine display, not something I measured. I filled in the cycle log sheet she set up for the two dryers over the two weeks."
+   },
+   "manual": {
+    "source": "Pennant Linen Services appeals to me because the placement showed me a team that fixes small things on the shop floor instead of waiting.",
+    "replacement": "My placement showed me a Pennant Linen Services team that fixes small things on the shop floor rather than waiting, and that is what draws me to it."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Marta",
+     "estimate",
+     "log sheet"
+    ],
+    "obsoletePhrases": [
+     "I measured a saving"
+    ],
+    "semanticChecks": [
+     "The 15 minutes appears only as Marta's untested estimate, never as a measurement or as Kieran's finding.",
+     "Kieran's actual job, writing the cycle times on the log sheet for two dryers, stays in both documents.",
+     "No yearly saving, energy figure or cost figure is extrapolated from the estimate.",
+     "The applicant's reworded motivation sentence is kept exactly."
+    ],
+    "missingCriteria": "No timed comparison, no energy or cost data, no supervisor reference and no paid employment were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "shopfront-sign-lettering",
+   "input": {
+    "applicant": "Sofia",
+    "company": "Greyhurst Signs",
+    "role": "Trainee Sign Maker",
+    "notes": "For my college placement our workshop team made a new fascia sign for a bakery on the high street.\nTomasz, the senior sign maker, agreed the lettering style and colours with the owner before we started.\nWe measured the fascia on site twice, cut the vinyl letters and fitted the sign in one morning.\nThe owner signed the job off on the day and we heard of no problems afterwards.\nI learned to measure twice on site rather than trust the drawing from the office.\nGreyhurst Signs is where I want to start because the workshop does the whole job in house, from survey to fitting.",
+    "question": "Tell us about a job you worked on with others. Who decided what, what did you do with your own hands, and how did the job end?",
+    "requirements": [
+     {
+      "text": "Which decisions were yours and which were a colleague's",
+      "personal": true
+     },
+     {
+      "text": "The practical work you did yourself",
+      "personal": true
+     },
+     {
+      "text": "How the job was signed off, without adding results you did not see",
+      "personal": false
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I chose the final lettering style and colours for the bakery sign.",
+   "correction": {
+    "anchor": "I chose the final lettering style and colours for the bakery sign.",
+    "before": "I chose the final lettering style and colours for the bakery sign.",
+    "after": "Tomasz chose the lettering style and colours with the owner. I measured the fascia on site and cut the vinyl letters to the sizes he set."
+   },
+   "manual": {
+    "source": "Greyhurst Signs is where I want to start because the workshop does the whole job in house, from survey to fitting.",
+    "replacement": "I want to start at Greyhurst Signs because the whole job, from survey to fitting, is done in its own workshop."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Tomasz",
+     "measured the fascia",
+     "cut the vinyl"
+    ],
+    "obsoletePhrases": [
+     "I chose the final lettering style"
+    ],
+    "semanticChecks": [
+     "Tomasz is credited with the lettering and colour decision, and Sofia with measuring on site and cutting the vinyl.",
+     "The outcome stays as the owner signing the job off on the day; no repeat orders, footfall or praise are added.",
+     "Sofia's measuring and cutting survive in both documents rather than being removed with the design claim.",
+     "The applicant's own version of the motivation sentence is kept."
+    ],
+    "missingCriteria": "No customer feedback beyond the sign-off, no design qualification, no paid work and no second job were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "studio-jewellery-shoot",
+   "input": {
+    "applicant": "Lucy",
+    "company": "Oriel Lane Studio",
+    "role": "Studio Assistant",
+    "notes": "On my placement at a small photography studio our team shot a jeweller's new range for their website over two days.\nWe photographed about 60 pieces on a white background and delivered the edited files a week later.\nThe jeweller asked for three pieces to be reshot because of reflections, which we did on a third morning.\nI learned to check a test frame on the big screen before shooting a whole batch.\nOriel Lane Studio is the studio I want to work in because the small team does commercial work without losing care over each frame.",
+    "question": "Describe a client job you have worked on. What was your own role, what needed redoing, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own role on the job, distinct from the lead photographer's",
+      "personal": true
+     },
+     {
+      "text": "What needed redoing and how it was handled",
+      "personal": false
+     },
+     {
+      "text": "What you learned for next time",
+      "personal": true
+     },
+     {
+      "text": "What draws you to this studio",
+      "personal": true
+     }
+    ],
+    "wordLimit": 240
+   },
+   "clarificationAnswer": "I led the two-day shoot for the jeweller's new range.",
+   "correction": {
+    "anchor": "I led the two-day shoot for the jeweller's new range.",
+    "before": "I led the two-day shoot for the jeweller's new range.",
+    "after": "Arjun led the shoot and set the lighting. I prepared and cleaned each piece before it went in front of the camera, and renamed and backed up the files at the end of each day."
+   },
+   "manual": {
+    "source": "Oriel Lane Studio is the studio I want to work in because the small team does commercial work without losing care over each frame.",
+    "replacement": "I want to work at Oriel Lane Studio because its small team does commercial work while still caring about every frame."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Arjun",
+     "cleaned each piece",
+     "backed up"
+    ],
+    "obsoletePhrases": [
+     "I led the two-day shoot"
+    ],
+    "semanticChecks": [
+     "Arjun is named as leading the shoot and setting the lighting; Lucy's part is preparing the pieces and renaming and backing up the files.",
+     "The reshoot of three pieces is kept as what happened, neither hidden nor reframed as a success.",
+     "No claim that the images lifted sales or that the jeweller rebooked is added.",
+     "The applicant's hand-written motivation sentence remains exact."
+    ],
+    "missingCriteria": "No sales or client-satisfaction result, no editing qualification and no paid studio work were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "joinery-cafe-benches",
+   "input": {
+    "applicant": "Dan",
+    "company": "Hollowell Joinery",
+    "role": "Apprentice Joiner",
+    "notes": "In my first year at a joinery workshop our team of three made twelve oak benches for a cafe fit-out.\nWe worked from the owner's drawings and finished the set in four weeks, a few days later than planned because the oak arrived late.\nAll twelve benches were delivered and the cafe has not reported any faults so far.\nI learned that sanding is not the boring bit, it is where a bench gets its finish.\nI want to move to Hollowell Joinery because the workshop still does hand finishing instead of sending everything through the machine shop.",
+    "question": "Tell us about something you have made as part of a team. What share of the work was yours, how did the job go, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own share of the work, stated plainly",
+      "personal": true
+     },
+     {
+      "text": "How the job went, including anything that slipped",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 180
+   },
+   "clarificationAnswer": "I sanded and oiled all twelve benches myself.",
+   "correction": {
+    "anchor": "I sanded and oiled all twelve benches myself.",
+    "before": "I sanded and oiled all twelve benches myself.",
+    "after": "I sanded and oiled five of the twelve benches. Callum built the frames, and Callum and Zara finished the other seven."
+   },
+   "manual": {
+    "source": "I want to move to Hollowell Joinery because the workshop still does hand finishing instead of sending everything through the machine shop.",
+    "replacement": "Hollowell Joinery still hand finishes rather than sending everything through the machine shop, which is why I want to move there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "five of the twelve",
+     "Callum",
+     "Zara"
+    ],
+    "obsoletePhrases": [
+     "all twelve benches myself"
+    ],
+    "semanticChecks": [
+     "Dan's finishing work is stated as five of the twelve benches, with Callum and Zara credited for the frames and the other seven.",
+     "The late oak delivery and the few days' overrun are kept rather than smoothed over.",
+     "The outcome stays at delivered with no faults reported so far; no customer praise or repeat order is invented.",
+     "The applicant's reworded motivation sentence is retained exactly."
+    ],
+    "missingCriteria": "No customer feedback, no completed apprenticeship qualification and no evidence of frame-building skill were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "guitar-setup-practice",
+   "input": {
+    "applicant": "Ben",
+    "company": "Fretline Guitar Workshop",
+    "role": "Workshop Assistant",
+    "notes": "On Saturdays at a guitar repair shop our workshop team worked through a backlog of second-hand guitars that needed setting up before they could be sold.\nNadia, the repair tech, did all the setups on customer and stock guitars; the rest of us practised on the shop's own beaten-up guitars.\nOver about eight Saturdays the backlog of 18 stock guitars was cleared.\nI learned that a setup is a series of small adjustments checked one at a time, not one big fix.\nI'd like to work at Fretline Guitar Workshop because the techs there explain every job instead of just doing it.",
+    "question": "Describe practical experience relevant to this role. Be exact about what was customer work and what was practice, what you did yourself, and what you learned.",
+    "requirements": [
+     {
+      "text": "What you did yourself, and whether it was customer work or practice",
+      "personal": true
+     },
+     {
+      "text": "What the team achieved, without claiming it as your own",
+      "personal": false
+     },
+     {
+      "text": "What you learned about the craft",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I set up guitars for paying customers during the Saturday sessions.",
+   "correction": {
+    "anchor": "I set up guitars for paying customers during the Saturday sessions.",
+    "before": "I set up guitars for paying customers during the Saturday sessions.",
+    "after": "The guitars I worked on were the shop's own practice guitars, not customer jobs. Nadia did the customer and stock setups; I restrung and cleaned the practice guitars and adjusted the action on two of them with her checking."
+   },
+   "manual": {
+    "source": "I'd like to work at Fretline Guitar Workshop because the techs there explain every job instead of just doing it.",
+    "replacement": "The techs at Fretline Guitar Workshop explain every job rather than just doing it, and that is why I would like to work there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Nadia",
+     "practice guitars",
+     "two of them"
+    ],
+    "obsoletePhrases": [
+     "set up guitars for paying customers"
+    ],
+    "semanticChecks": [
+     "Ben's work is described as practice on the shop's own guitars, with Nadia doing every customer and stock setup.",
+     "The restringing, cleaning and two supervised action adjustments remain in both documents as Ben's real contribution.",
+     "The cleared backlog of 18 stock guitars is attributed to Nadia and the team, never to Ben.",
+     "The applicant's own wording of the motivation sentence is unchanged."
+    ],
+    "missingCriteria": "No customer-facing repair work, no qualification, no reference from Nadia and no statement of whether the Saturdays were paid were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "climbing-wall-reset",
+   "input": {
+    "applicant": "Megan",
+    "company": "Crag House Climbing",
+    "role": "Climbing Centre Assistant",
+    "notes": "In my first month at the climbing centre our team stripped and reset the bouldering wall over three evenings.\nWe washed around 400 holds, sorted them by colour and the setters put up 28 new problems.\nThe new set opened on a Friday and the centre was busy that weekend.\nI learned to tag each crate of holds as it came off the wall so nothing went back up in the wrong grade.\nI want to stay on at Crag House Climbing because the staff look after the wall properly, not just the till.",
+    "question": "Tell us about a task you did with colleagues. What did you do yourself, what was actually known about the result, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own hands-on part",
+      "personal": true
+     },
+     {
+      "text": "What was known about the result, keeping estimates separate from measurements",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 170
+   },
+   "clarificationAnswer": "I measured a 30 percent rise in climbers using the wall after the reset.",
+   "correction": {
+    "anchor": "I measured a 30 percent rise in climbers using the wall after the reset.",
+    "before": "I measured a 30 percent rise in climbers using the wall after the reset.",
+    "after": "The rise in climbers was Rhys's rough estimate from watching the busy evenings, not something measured. I washed and sorted the holds and tagged the crates as they came off the wall."
+   },
+   "manual": {
+    "source": "I want to stay on at Crag House Climbing because the staff look after the wall properly, not just the till.",
+    "replacement": "The staff at Crag House Climbing look after the wall properly, not just the till, which is why I want to stay on."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Rhys",
+     "rough estimate",
+     "tagged the crates"
+    ],
+    "obsoletePhrases": [
+     "I measured a 30 percent rise",
+     "30 percent rise in climbers"
+    ],
+    "semanticChecks": [
+     "No percentage rise in climbers appears anywhere; a busier weekend may be mentioned only as an impression or as Rhys's rough estimate.",
+     "Megan's washing, sorting and tagging of holds is kept as her contribution.",
+     "Setting the 28 problems stays credited to the setters, not to Megan.",
+     "The applicant's reworded motivation sentence remains exact."
+    ],
+    "missingCriteria": "No entry counts, no takings, no route-setting qualification and no first-aid or belay certificate were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "water-sampling-duplicates",
+   "input": {
+    "applicant": "Yusuf",
+    "company": "Eastmere Water Services",
+    "role": "Trainee Water Quality Technician",
+    "notes": "On my summer placement at a water treatment works our sampling team ran the daily round at the final water tap and three points out in the distribution zone.\nFatima, the qualified sampler, took the samples that went to the lab for the compliance record; we trainees took duplicate samples alongside hers so our technique could be checked.\nOver four weeks our duplicates matched hers on turbidity within the tolerance the works uses.\nI learned that labelling and chain of custody matter as much as the sample itself.\nEastmere Water Services is where I want to train because the sampling team takes trainees through every step rather than leaving them to watch.",
+    "question": "Describe work you have done where records had to be right. What was your own role, how was your work checked, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own role, separate from the qualified sampler's",
+      "personal": true
+     },
+     {
+      "text": "How your work was checked and what the check showed",
+      "personal": false
+     },
+     {
+      "text": "What you learned about record keeping",
+      "personal": true
+     },
+     {
+      "text": "Why you want to train here",
+      "personal": true
+     }
+    ],
+    "wordLimit": 260
+   },
+   "clarificationAnswer": "I took the samples used for the works' compliance record.",
+   "correction": {
+    "anchor": "I took the samples used for the works' compliance record.",
+    "before": "I took the samples used for the works' compliance record.",
+    "after": "Fatima took the compliance samples. I took the duplicate training samples alongside hers and labelled and logged them, and they matched hers on turbidity within tolerance."
+   },
+   "manual": {
+    "source": "Eastmere Water Services is where I want to train because the sampling team takes trainees through every step rather than leaving them to watch.",
+    "replacement": "I want to train at Eastmere Water Services because its sampling team takes trainees through every step instead of leaving them to watch."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Fatima",
+     "duplicate",
+     "labelled and logged"
+    ],
+    "obsoletePhrases": [
+     "I took the samples used for the works' compliance record"
+    ],
+    "semanticChecks": [
+     "Fatima is named as taking every compliance sample, and Yusuf's samples are described as training duplicates.",
+     "The turbidity match is kept as a recorded check on technique, not as a compliance result or a pass of any kind.",
+     "Yusuf's labelling and logging is retained as his real contribution.",
+     "The applicant's reworded motivation sentence appears unchanged."
+    ],
+    "missingCriteria": "No sampling qualification, no sign-off as a competent sampler, no lab results beyond the turbidity comparison and no paid role were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "rain-gauge-resite",
+   "input": {
+    "applicant": "Chloe",
+    "company": "Wold Edge Weather Observers",
+    "role": "Data Assistant",
+    "notes": "Our university weather society moved the campus rain gauge after a new building started shading the old site.\nLeah, who runs the station, picked the new site after she did the exposure survey with the obstruction angles.\nWe took readings from both gauges side by side for four weeks before the old one was retired.\nThe two gauges agreed to within 0.2 mm on most days; the days they differed were windy.\nI learned that a reading without a time and the observer's initials is close to useless later on.\nWold Edge Weather Observers appeals to me because volunteer readings there are checked and used, not just filed.",
+    "question": "Tell us about observational or recording work you have done in a group. Who made the key decisions, what did you do yourself, and what did the records show?",
+    "requirements": [
+     {
+      "text": "Which decisions were yours and which were someone else's",
+      "personal": true
+     },
+     {
+      "text": "Your own observing or recording work",
+      "personal": true
+     },
+     {
+      "text": "What the records showed, stated without over-interpretation",
+      "personal": false
+     }
+    ],
+    "wordLimit": 220
+   },
+   "clarificationAnswer": "I decided where the new rain gauge should go.",
+   "correction": {
+    "anchor": "I decided where the new rain gauge should go.",
+    "before": "I decided where the new rain gauge should go.",
+    "after": "Leah decided the new gauge site from her exposure survey. I took the morning readings from both gauges for four weeks and wrote them up with the time and my initials."
+   },
+   "manual": {
+    "source": "Wold Edge Weather Observers appeals to me because volunteer readings there are checked and used, not just filed.",
+    "replacement": "Volunteer readings at Wold Edge Weather Observers are checked and used rather than just filed, and that is what appeals to me."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Leah",
+     "morning readings",
+     "four weeks"
+    ],
+    "obsoletePhrases": [
+     "I decided where the new rain gauge should go"
+    ],
+    "semanticChecks": [
+     "Leah is credited with the siting decision and the exposure survey; Chloe's part is the four weeks of readings and the write-up.",
+     "The 0.2 mm agreement and the windy-day differences are kept as observed, with no claim that the new site was proven better.",
+     "Chloe's readings are not removed in the course of removing the siting claim.",
+     "The applicant's own wording of the motivation sentence is retained."
+    ],
+    "missingCriteria": "No calibration certificate, no confirmation that any network accepted the data and no paid observing experience were supplied.",
+    "inputContradictionPossible": true
+   }
+  },
+  {
+   "id": "grain-store-moisture",
+   "input": {
+    "applicant": "Liam",
+    "company": "Thistledown Farm",
+    "role": "Farm Assistant",
+    "notes": "During harvest our team of four brought the wheat into the grain store and checked each trailer load before it was tipped.\nWe filled three bays over about ten days and kept a record of which field each load came from.\nThe farmer decided which bay each load went into from how wet it looked and the meter reading.\nI learned to write the trailer number on the sheet before it tipped, because afterwards nobody remembers.\nI want to come back to Thistledown Farm because it is a farm that keeps proper records and expects everyone to help with them.",
+    "question": "Describe seasonal or practical work you have done as part of a team. What did you personally do, what was recorded and by whom, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your personal tasks",
+      "personal": true
+     },
+     {
+      "text": "What was recorded and who took the readings",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 190
+   },
+   "clarificationAnswer": "I measured the moisture content of every load that came into the store.",
+   "correction": {
+    "anchor": "I measured the moisture content of every load that came into the store.",
+    "before": "I measured the moisture content of every load that came into the store.",
+    "after": "Ewan took the moisture readings with the farm meter on a sample from most loads, and the rest were judged by eye. I wrote the trailer number, field and reading on the sheet for each load."
+   },
+   "manual": {
+    "source": "I want to come back to Thistledown Farm because it is a farm that keeps proper records and expects everyone to help with them.",
+    "replacement": "Thistledown Farm keeps proper records and expects everyone to help with them, which is why I want to come back."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Ewan",
+     "trailer number",
+     "most loads"
+    ],
+    "obsoletePhrases": [
+     "I measured the moisture content of every load"
+    ],
+    "semanticChecks": [
+     "Ewan is named as taking the meter readings on most loads, with the rest judged by eye; Liam is never the one measuring every load.",
+     "Liam's record keeping, the trailer number, field and reading on the sheet, is kept.",
+     "No drying cost, grain price or storage loss figure is invented.",
+     "The applicant's reworded motivation sentence is unchanged."
+    ],
+    "missingCriteria": "No moisture figures, no bay totals, no machinery ticket and no reference from the farmer were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "college-trip-booking",
+   "input": {
+    "applicant": "Grace",
+    "company": "Harland Travel",
+    "role": "Trainee Travel Consultant",
+    "notes": "In my first few months at a travel agency our team put together a coach and ferry trip for a college group of 42 students and 5 staff.\nWe collected the passenger forms, checked passport dates and sent the college a draft itinerary, which they changed twice.\nThe trip went ahead in June and the college has rebooked for next year.\nI learned to check passport expiry dates against the return date, not the departure date.\nHarland Travel is where I want to build my career because group bookings are done by a small team who see the whole trip through.",
+    "question": "Give an example of a booking or project you worked on with colleagues. What did you do yourself, how did it turn out, and what did you learn?",
+    "requirements": [
+     {
+      "text": "Your own contribution, distinct from the lead consultant's",
+      "personal": true
+     },
+     {
+      "text": "How the booking turned out, using only what you know happened",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 230
+   },
+   "clarificationAnswer": "I led the group booking for the college trip from the first enquiry to departure.",
+   "correction": {
+    "anchor": "I led the group booking for the college trip from the first enquiry to departure.",
+    "before": "I led the group booking for the college trip from the first enquiry to departure.",
+    "after": "Aisha led the booking and dealt with the college. I collected the 47 passenger forms, checked the passport dates and typed up each version of the itinerary."
+   },
+   "manual": {
+    "source": "Harland Travel is where I want to build my career because group bookings are done by a small team who see the whole trip through.",
+    "replacement": "I want to build my career at Harland Travel because its group bookings are handled by a small team who see the whole trip through."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Aisha",
+     "47",
+     "passport dates"
+    ],
+    "obsoletePhrases": [
+     "I led the group booking"
+    ],
+    "semanticChecks": [
+     "Aisha is named as leading the booking and the client contact; Grace's part is the forms, the passport checks and typing up the itinerary.",
+     "The two itinerary changes and the rebooking for next year are kept as stated, with no added value or satisfaction claim.",
+     "Grace's passport-date check and the lesson about the return date are not lost.",
+     "The applicant's reworded motivation sentence is retained exactly."
+    ],
+    "missingCriteria": "No booking value, no commission, no travel qualification and no customer feedback beyond the rebooking were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "regatta-berth-radio",
+   "input": {
+    "applicant": "Ethan",
+    "company": "Saltcote Marina",
+    "role": "Marina Assistant",
+    "notes": "Over the summer our marina office team handled visiting boats for the August regatta weekend, when around 70 extra boats came in.\nWe kept the berth board up to date, took arrivals on the radio and walked the pontoons to check boats were where the board said.\nEvery visiting boat got a berth and the only mix-up was two boats rafted the wrong way round.\nI learned to repeat a berth number back on the radio so the skipper hears it twice.\nI'd like a permanent place at Saltcote Marina because the office runs on clear routines and people who actually go out on the pontoons.",
+    "question": "Tell us about a busy period you worked through with a team. What did you personally do, what was practice and what was live, and how did it go?",
+    "requirements": [
+     {
+      "text": "Your own tasks, with practice kept separate from live work",
+      "personal": true
+     },
+     {
+      "text": "How the period went, including any mix-ups",
+      "personal": false
+     },
+     {
+      "text": "What you learned",
+      "personal": true
+     }
+    ],
+    "wordLimit": 210
+   },
+   "clarificationAnswer": "I took the radio calls from arriving boats during the regatta.",
+   "correction": {
+    "anchor": "I took the radio calls from arriving boats during the regatta.",
+    "before": "I took the radio calls from arriving boats during the regatta.",
+    "after": "Owen took the live radio calls that weekend. I practised the calls with him beforehand on the training channel, and during the regatta I updated the berth board from his notes and walked the pontoons."
+   },
+   "manual": {
+    "source": "I'd like a permanent place at Saltcote Marina because the office runs on clear routines and people who actually go out on the pontoons.",
+    "replacement": "Saltcote Marina's office runs on clear routines and on people who actually go out on the pontoons, and that is why I would like a permanent place there."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Owen",
+     "training channel",
+     "berth board"
+    ],
+    "obsoletePhrases": [
+     "I took the radio calls from arriving boats"
+    ],
+    "semanticChecks": [
+     "Owen is named as taking the live radio calls, and Ethan's radio work is described as practice on the training channel.",
+     "Ethan's berth board updates and pontoon checks are kept as his contribution during the regatta.",
+     "The outcome stays at every visiting boat berthed with one rafting mix-up; no zero-error or customer-praise claim is added.",
+     "The applicant's own motivation wording remains unchanged."
+    ],
+    "missingCriteria": "No radio operator certificate, no boat-handling qualification and no permanent role were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "brewery-rinse-cycle",
+   "input": {
+    "applicant": "Oscar",
+    "company": "Kelder Brewing",
+    "role": "Trainee Brewer",
+    "notes": "On my brewing placement our team changed the rinse sequence on the fermenter cleaning cycle to stop the final rinse running twice.\nWe ran the changed cycle on two fermenters for three weeks while the other four stayed on the old cycle.\nNobody metered the water; the head brewer worked out a rough figure from the tank volume and the number of rinses.\nI learned that a cleaning log you actually fill in is worth more than a clever cycle nobody records.\nKelder Brewing is where I want to start because the brewers there run small changes carefully instead of changing everything at once.",
+    "question": "Describe a change you were part of in a production setting. Whose change was it, what was actually known about its effect, and what did you do?",
+    "requirements": [
+     {
+      "text": "Your own part in the change",
+      "personal": true
+     },
+     {
+      "text": "What was known about the effect, with rough figures labelled as rough",
+      "personal": false
+     },
+     {
+      "text": "What you learned about keeping records",
+      "personal": true
+     }
+    ],
+    "wordLimit": 200
+   },
+   "clarificationAnswer": "I halved the water used per cleaning cycle by changing the rinse sequence.",
+   "correction": {
+    "anchor": "I halved the water used per cleaning cycle by changing the rinse sequence.",
+    "before": "I halved the water used per cleaning cycle by changing the rinse sequence.",
+    "after": "Hamza changed the rinse sequence, and his rough figure was about a fifth less water per cycle, not half. I timed the rinse stages on the two changed fermenters and wrote them in the cleaning log."
+   },
+   "manual": {
+    "source": "Kelder Brewing is where I want to start because the brewers there run small changes carefully instead of changing everything at once.",
+    "replacement": "I want to start at Kelder Brewing because its brewers make small changes carefully rather than changing everything at once."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Hamza",
+     "a fifth",
+     "cleaning log"
+    ],
+    "obsoletePhrases": [
+     "I halved the water used",
+     "half the water"
+    ],
+    "semanticChecks": [
+     "Hamza is credited with the rinse sequence change, and the saving appears only as his rough figure of about a fifth; nothing says half.",
+     "The figure is described as unmetered and rough, never as a measured result.",
+     "Oscar's timing of the rinse stages and his cleaning log entries stay in both documents.",
+     "The applicant's reworded motivation sentence is kept word for word."
+    ],
+    "missingCriteria": "No metered water data, no cost saving, no brewing qualification and no paid role were supplied.",
+    "inputContradictionPossible": false
+   }
+  },
+  {
+   "id": "escape-room-test-runs",
+   "input": {
+    "applicant": "Niamh",
+    "company": "Puzzlebox Rooms",
+    "role": "Games Master",
+    "notes": "While at university I worked part time at an escape room where our team built a new room over the summer.\nWe ran test sessions with staff and friends before the room opened, and logged where each group got stuck and how long they took.\nThe average test time came down from 74 minutes to 58 after the team changed two clues.\nI learned that if three groups get stuck on the same clue, the clue is wrong, not the groups.\nPuzzlebox Rooms is where I'd like to keep working because the owners rebuild a weak puzzle rather than hint their way round it.",
+    "question": "Tell us about a project you tested with others. What was your own job, what was practice and what was with real customers, and what did the test records show?",
+    "requirements": [
+     {
+      "text": "Your own job on the project",
+      "personal": true
+     },
+     {
+      "text": "Practice or test sessions kept distinct from customer sessions",
+      "personal": true
+     },
+     {
+      "text": "What the test records showed, without adding results from after opening",
+      "personal": false
+     }
+    ],
+    "wordLimit": 250
+   },
+   "clarificationAnswer": "I ran the new room for paying customers through the summer.",
+   "correction": {
+    "anchor": "I ran the new room for paying customers through the summer.",
+    "before": "I ran the new room for paying customers through the summer.",
+    "after": "The sessions I ran were test runs with staff and friends before the room opened; Freya ran the first customer sessions. I reset the props between test runs and logged where each group got stuck."
+   },
+   "manual": {
+    "source": "Puzzlebox Rooms is where I'd like to keep working because the owners rebuild a weak puzzle rather than hint their way round it.",
+    "replacement": "I would like to keep working at Puzzlebox Rooms because the owners rebuild a weak puzzle instead of hinting their way round it."
+   },
+   "expected": {
+    "correctedMarkers": [
+     "Freya",
+     "test runs",
+     "reset the props"
+    ],
+    "obsoletePhrases": [
+     "I ran the new room for paying customers"
+    ],
+    "semanticChecks": [
+     "Niamh's sessions are described as test runs before opening, with Freya credited for the first customer sessions.",
+     "The 74 to 58 minute change is kept as a test-session figure credited to the team's clue changes, not to Niamh.",
+     "Niamh's prop resets and stuck-point logging are kept as her real part.",
+     "The applicant's reworded motivation sentence appears exactly."
+    ],
+    "missingCriteria": "No customer reviews, no booking numbers after opening and no record of hosting public sessions were supplied.",
+    "inputContradictionPossible": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+.command-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(14 42 71 / 0.45);
+  z-index: 60;
+  display: flex;
+  align-items: start;
+  padding-top: 33vh;
+  justify-content: center;
+}
+
+.command-menu {
+  width: min(560px, 100%);
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sheet);
+  overflow: hidden;
+}
+
+.command-menu input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: var(--s4) var(--s5);
+  font: 400 var(--text-lg) var(--font-ui);
+  outline: none;
+}
+
+.command-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.command-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s3) var(--s5);
+  font-size: var(--text-md);
+  cursor: pointer;
+}
+
+.command-menu li[aria-selected="true"] {
+  background: var(--paper);
+}
+
+.command-menu li[aria-disabled="true"] {
+  color: var(--faint);
+  cursor: not-allowed;
+}
+
+.command-menu kbd {
+  font: 500 var(--text-xs) var(--font-ui);
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--muted);
+}
+
+.command-empty {
+  padding: var(--s5);
+  color: var(--muted);
+  margin: 0;
+}

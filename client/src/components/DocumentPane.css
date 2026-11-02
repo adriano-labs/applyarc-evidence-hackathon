@@ -1,0 +1,128 @@
+.next-step {
+  position: sticky;
+  bottom: 0;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding: var(--s2) var(--s3);
+}
+
+.next-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: min(100%, 18rem);
+}
+
+.next-now {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.next-then {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.next-warn {
+  margin: 0;
+  color: var(--danger);
+  font-size: var(--text-sm);
+}
+
+.next-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 100%;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .next-step {
+    bottom: var(--phone-bar-h);
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--s2);
+  }
+  .next-actions { justify-content: flex-end; flex-wrap: wrap; }
+  /* Phones: the bar keeps the Now line and the buttons, so less of the document hides under it. */
+  .next-then { display: none; }
+}
+.doc-tabs button[role="tab"] {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.tab-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--pencil);
+}
+
+.doc-tabs button[role="tab"][aria-selected="true"] .tab-name {
+  color: var(--ink);
+}
+
+.tab-state {
+  font-size: 13px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tab-state[data-tone="needs"] {
+  color: var(--needs);
+}
+
+.tab-state[data-tone="approved"] {
+  color: var(--confirmed);
+}
+
+.tab-short {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .doc-tabs {
+    width: 100%;
+  }
+
+  .doc-tabs button[role="tab"] {
+    flex: 1 1 0;
+    align-items: flex-start;
+  }
+
+  .tab-name {
+    display: none;
+  }
+
+  .tab-short {
+    display: inline;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Phones show the short state ("v2", "14 facts"); the full text stays for screen readers. */
+  .tab-state {
+    font-size: 0;
+  }
+
+  .tab-state::after {
+    content: attr(data-short);
+    font-size: 12px;
+  }
+}

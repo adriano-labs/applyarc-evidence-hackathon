@@ -1,0 +1,38 @@
+.next-application {
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  padding: var(--s5);
+}
+
+.next-application h2 {
+  font-family: var(--font-doc);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0 0 var(--s2) 0;
+}
+
+.next-application p {
+  margin: 0 0 var(--s3) 0;
+}
+
+.next-form {
+  width: 100%;
+  text-align: left;
+  font: 500 var(--text-md) var(--font-ui);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  margin-top: var(--s2);
+  cursor: pointer;
+}
+
+.next-form:hover {
+  border-color: var(--oxford-3);
+}
+
+.next-form:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

@@ -1,0 +1,41 @@
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { describe, expect, it } from 'vitest';
+import { apiClient, runJourney } from '../scripts/journey.mjs';
+import { buildApp } from '../server/build.js';
+
+describe('Ellie’s second application on fixture mode', () => {
+  it('reuses her confirmed facts and asks only what the new form needs', async () => {
+    const app = buildApp({ dataDir: mkdtempSync(join(tmpdir(), 'journey2-')), env: {} });
+    const request = (method, path, body) => app.request(path, { method, headers: { 'content-type': 'application/json' }, body: body && JSON.stringify(body) });
+    await runJourney(request);
+    const api = apiClient(request);
+    const forms = await api.get('/api/forms');
+    const next = forms.forms.find((f) => !f.current);
+    expect(next.role).toBe('Graduate Software Engineer, Drivers and Utilities 2027');
+    let state = await api.get('/api/state');
+    const factsBefore = state.workspace.applicant.facts.length;
+    state = await api.act('nextApplication', { formId: next.id });
+    expect(state.view.next).toBe('check');
+    state = await api.run('check');
+    const questions = state.workspace.application.questions;
+    expect(questions.map((q) => q.requirementId)).toEqual(['differently']);
+    expect(state.result.linked.length).toBeGreaterThan(5);
+    const sample = await api.get('/api/sample');
+    state = await api.act('answer', { questionId: questions[0].id, text: sample.answers[next.id] });
+    state = await api.run('read', { sourceId: state.result.source.id });
+    for (const id of state.result.accepted) state = await api.act('decideFact', { factId: id, decision: 'confirm' });
+    expect(state.workspace.applicant.facts.length).toBe(factsBefore + 2);
+    state = await api.run('check');
+    expect(state.result.modelCalled).toBe(false);
+    state = await api.run('draft');
+    const { answer, letter } = state.workspace.application.documents;
+    expect(answer.segments.some((s) => /If I started again/.test(s.text))).toBe(true);
+    state = await api.act('approve', { docId: 'answer', docRevision: answer.revision });
+    state = await api.act('approve', { docId: 'letter', docRevision: letter.revision });
+    const pack = await api.act('export');
+    expect(pack.result.application.role).toBe('Graduate Software Engineer, Drivers and Utilities 2027');
+    expect(pack.workspace.archive).toHaveLength(1);
+  });
+});

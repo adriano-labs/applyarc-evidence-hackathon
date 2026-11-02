@@ -1,0 +1,55 @@
+/* ApplyArc Evidence: the referenced-paper world. A cool paper ground, an
+   Oxford-blue shell, ink for the applicant's own words, pencil for drafted
+   text, highlighter for quoted evidence. */
+:root {
+  --paper: #f4f6f9;
+  --sheet: #ffffff;
+  --rule: #dde2ea;
+  --rule-strong: #c3cad5;
+  --ink: #121a26;
+  --pencil: #475467;
+  --muted: #5a6474;
+  --faint: #8a93a3;
+
+  --oxford: #0e2a47;
+  --oxford-2: #173a5e;
+  --oxford-3: #24507d;
+  --on-oxford: #eaf0f7;
+  --on-oxford-muted: #a8b8cd;
+
+  --highlight: #ffe36e;
+  --highlight-soft: #fff4b8;
+  --needs: #b8125a;
+  --needs-soft: #ffe3ef;
+  --confirmed: #17703f;
+  --confirmed-soft: #e2f3e9;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --focus: #2563b0;
+
+  --font-doc: 'STIX Two Text', 'Iowan Old Style', Georgia, serif;
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-data: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-doc: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow-lift: 0 1px 2px rgb(14 42 71 / 0.06), 0 6px 18px -6px rgb(14 42 71 / 0.18);
+  --shadow-sheet: 0 1px 1px rgb(14 42 71 / 0.04), 0 10px 30px -14px rgb(14 42 71 / 0.22);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --fast: 160ms;
+  --mid: 240ms;
+
+  --brief: 280px;
+  --rail-right: clamp(280px, 26vw, 380px);
+  --sheet-pad: clamp(24px, 3vw, 48px);
+  --measure: 66ch;
+  --phone-bar-h: 44px;
+}

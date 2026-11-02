@@ -1,0 +1,66 @@
+.working-state {
+  min-width: 0;
+  margin: 0 0 var(--s5);
+  padding: var(--s4) 0 0;
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+.working-stroke {
+  height: 2px;
+  background: var(--rule);
+  overflow: hidden;
+  margin-bottom: var(--s4);
+}
+.working-stroke::after {
+  content: '';
+  display: block;
+  width: 28%;
+  height: 100%;
+  background: var(--oxford-3);
+  animation: working-stroke 2.4s linear infinite;
+}
+@keyframes working-stroke {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(358%); }
+}
+.working-state[data-paused='true'] .working-stroke::after { animation-play-state: paused; }
+.working-current { margin: 0; font-size: var(--text-md); font-weight: 600; }
+.working-current span { display: block; }
+.working-retry { margin-top: var(--s2); font-weight: 400; font-size: var(--text-sm); }
+.working-next, .working-history, .working-details {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.working-next { margin: var(--s1) 0 var(--s3); }
+.working-history { list-style: none; margin: 0; padding: 0; }
+.working-history li + li { margin-top: var(--s1); }
+.working-details summary {
+  cursor: pointer;
+  width: fit-content;
+  min-height: 44px;
+  align-content: center;
+  color: var(--oxford-3);
+}
+.working-details summary:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.working-details summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.working-details p { margin: 0 0 var(--s2); font-variant-numeric: tabular-nums; }
+.checked-draft { padding: var(--s5) 0; border-top: 1px solid var(--rule); min-width: 0; }
+.checked-draft h3 { margin: 0; font: 600 var(--text-lg) / 1.5 var(--font-doc); color: var(--ink); }
+.checked-draft-state, .checked-draft-notice { margin: var(--s1) 0; font: 400 var(--text-sm) / 1.5 var(--font-ui); color: var(--muted); }
+.checked-draft-text {
+  margin: var(--s4) 0 0;
+  font: 400 var(--text-doc) / 1.7 var(--font-doc);
+  color: var(--pencil);
+  max-width: var(--measure);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  .working-state { margin-bottom: var(--s4); }
+  .checked-draft { padding-block: var(--s4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .working-stroke::after { animation: none; }
+}

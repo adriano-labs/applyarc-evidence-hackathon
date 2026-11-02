@@ -1,0 +1,579 @@
+{
+  "version": 1,
+  "authored": "2026-10-30T07:19:10Z",
+  "author": "Independent fresh-context corpus author",
+  "heldOut": true,
+  "purpose": "Ten fictional applicant-writing scenarios for a paired comparison of drafting and revision workflows; this corpus tests writing fidelity and handling of explicit edits, not people or employment decisions.",
+  "protocol": "paired workflow v5 with unrelated manual wording step; no inference during authoring",
+  "cases": [
+    {
+      "id": "retail-to-appointments",
+      "input": {
+        "applicant": "Nadia Vale",
+        "company": "Mosswell Health",
+        "role": "Appointment Coordinator",
+        "notes": "I have worked at the fictional homeware shop Cedar Basket for three years. We were short of staff over a bank holiday weekend and needed to keep the returns desk covered. I created the weekend rota and decided which colleagues covered each shift. I also handled a customer whose replacement kettle had not arrived, checked the delivery record and agreed a collection time with the stockroom. I wrote the agreed time on the order and called the customer when it was ready. I do not know whether this affected our overall complaint figures. I am interested in Mosswell Health because I enjoy helping people understand their next practical step.",
+        "question": "Tell us about a time priorities changed at work. What did you personally do to organise the work, how did you communicate with a customer, and why does the Appointment Coordinator role at Mosswell Health interest you?",
+        "requirements": [
+          {
+            "text": "Describe a time work priorities changed.",
+            "personal": false
+          },
+          {
+            "text": "Explain your own actions to organise the work.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you personally communicated with a customer.",
+            "personal": true
+          },
+          {
+            "text": "Explain your interest in this role at Mosswell Health.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 250
+      },
+      "clarificationAnswer": "The delivery record showed the replacement was on the afternoon van. I told the customer I would confirm its arrival before they travelled, rather than promise that it was already in the shop. They collected it that evening.",
+      "correction": {
+        "anchor": "I created the weekend rota and decided which colleagues covered each shift.",
+        "before": "I created the weekend rota and decided which colleagues covered each shift.",
+        "after": "I collected colleagues' shift availability and flagged a gap at the returns desk; the branch manager created the weekend rota and chose the shift assignments."
+      },
+      "manual": {
+        "source": "I am interested in Mosswell Health because I enjoy helping people understand their next practical step.",
+        "replacement": "Helping people understand what to do next is what attracts me to Mosswell Health."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "collected colleagues' shift availability",
+          "flagged a gap at the returns desk",
+          "branch manager"
+        ],
+        "obsoletePhrases": [
+          "created the weekend rota",
+          "decided which colleagues covered each shift"
+        ],
+        "semanticChecks": [
+          "Credit Nadia with collecting availability and flagging the coverage gap, while attributing rota creation and shift decisions to the branch manager.",
+          "Keep the customer delivery example accurate and separate from the rota responsibility.",
+          "Explain the change in priorities, personal organisation, customer communication and motivation without inventing complaint statistics."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "electrical-to-facilities",
+      "input": {
+        "applicant": "Ben Sethi",
+        "company": "Alderfen Properties",
+        "role": "Junior Facilities Technician",
+        "notes": "I have been an electrical mate with the fictional contractor Lowbank Services for eighteen months. Our main office is in Halewick. I completed a lockout-awareness refresher in February. We maintain small shops and rented offices. During a planned lighting replacement I found a damaged cable cover while setting out the work area. I stopped setting up that section, kept people away and told the supervising electrician. I prepared the access area and replaced four light fittings under supervision. I keep a pocket list of tools and check it before leaving each site. Alderfen Properties appeals to me because the role combines practical repairs with regular contact with building users.",
+        "question": "Using one maintenance example, explain your personal practical contribution, how you responded to a safety concern, how relevant training helped you, and why you want to join Alderfen Properties.",
+        "requirements": [
+          {
+            "text": "Explain your personal practical contribution to a maintenance task.",
+            "personal": true
+          },
+          {
+            "text": "Explain your response to a safety concern.",
+            "personal": true
+          },
+          {
+            "text": "Explain how relevant training helped your work.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want to join Alderfen Properties.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 230
+      },
+      "clarificationAnswer": "The refresher reminded me to stop and report unexpected damage before work continued. The electrician assessed the cable cover and made the area safe. I did not test or certify the installation.",
+      "correction": {
+        "anchor": "I prepared the access area and replaced four light fittings under supervision.",
+        "before": "I prepared the access area and replaced four light fittings under supervision.",
+        "after": "I prepared the access area and replaced two light fittings under supervision; the electrician replaced the other two."
+      },
+      "manual": {
+        "source": "Alderfen Properties appeals to me because the role combines practical repairs with regular contact with building users.",
+        "replacement": "I want to join Alderfen Properties for the combination of practical repair work and regular contact with people using the buildings."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "two light fittings",
+          "under supervision",
+          "electrician replaced the other two"
+        ],
+        "obsoletePhrases": [
+          "replaced four light fittings"
+        ],
+        "semanticChecks": [
+          "Attribute two fitting replacements to Ben under supervision and the other two to the electrician.",
+          "Describe Ben stopping setup, keeping people away and reporting the damage without claiming independent testing or certification.",
+          "Explain the relevance of the February refresher without inferring that it took place in Halewick from the office address."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "kitchen-to-quality",
+      "input": {
+        "applicant": "Marta Fenwick",
+        "company": "Juniper Table Foods",
+        "role": "Production Quality Assistant",
+        "notes": "I am a kitchen assistant at the fictional cafe Harbour Spoon and have worked there for two years. We changed sandwich suppliers and had to update the counter information before the new stock went on sale. I introduced the new allergen labels and trained the whole team to use them. I compared the delivery sheets against the tubs in the fridge and noticed that one sauce now contained mustard. I put that tub aside and asked the chef to check it before service. I also record fridge temperatures at opening and tell the chef if a reading is outside our posted range. I want to join Juniper Table Foods because I like careful, repeatable work that helps customers trust what they are buying.",
+        "question": "Describe an example of spotting a food-information problem. What checks did you personally carry out, how did you help a colleague follow the process, and why does this quality role at Juniper Table Foods appeal to you?",
+        "requirements": [
+          {
+            "text": "Describe a food-information problem you spotted.",
+            "personal": true
+          },
+          {
+            "text": "Explain the checks you personally carried out.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you helped a colleague follow the process.",
+            "personal": true
+          },
+          {
+            "text": "Explain your interest in the quality role at Juniper Table Foods.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 260
+      },
+      "clarificationAnswer": "The chef confirmed the mustard change against the supplier sheet before the sauce was used. When a colleague was unsure which sheet to check, I showed them how to match the product name and pack code. I do not have a count of errors prevented.",
+      "correction": {
+        "anchor": "I introduced the new allergen labels and trained the whole team to use them.",
+        "before": "I introduced the new allergen labels and trained the whole team to use them.",
+        "after": "I checked the new labels against the supplier sheets and showed one colleague how to match a pack code; the head chef selected the labels and the cafe manager ran the team training."
+      },
+      "manual": {
+        "source": "I want to join Juniper Table Foods because I like careful, repeatable work that helps customers trust what they are buying.",
+        "replacement": "Careful, repeatable work that helps customers trust their purchases is why I want to work at Juniper Table Foods."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "checked the new labels",
+          "showed one colleague",
+          "head chef selected the labels",
+          "cafe manager ran the team training"
+        ],
+        "obsoletePhrases": [
+          "introduced the new allergen labels",
+          "trained the whole team"
+        ],
+        "semanticChecks": [
+          "Show both Marta's label checking and her help to one colleague, while giving label selection and team training to the chef and manager.",
+          "Retain the mustard discrepancy and escalation as evidence of her own checking process.",
+          "Do not turn assistance to one colleague into responsibility for a training programme or invent an error-reduction figure."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "warehouse-to-learning-support",
+      "input": {
+        "applicant": "Eli Mercer",
+        "company": "Northglen Learning",
+        "role": "Learning Support Assistant",
+        "notes": "I work on dispatch at the fictional wholesaler Stonepath Supplies and volunteer at an adult digital-skills drop-in on Saturday mornings. We help people with basic computer tasks at their own pace. I supported six learners with saving and finding documents during one session. One learner kept losing their file because they clicked through the save window too quickly. I asked them to choose a short filename, wrote down the folder location and let them repeat the steps on their own. The session leader plans the lessons. I help set up laptops and return them to the cabinet afterwards. I am drawn to Northglen Learning because I enjoy seeing adults become more comfortable asking questions.",
+        "question": "Describe your personal experience supporting a learner, explain how you adapted your explanation, say what you observed afterwards, and tell us why you want this role at Northglen Learning.",
+        "requirements": [
+          {
+            "text": "Describe your own experience supporting a learner.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you adapted your explanation.",
+            "personal": true
+          },
+          {
+            "text": "Describe what you observed afterwards.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want this role at Northglen Learning.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 220
+      },
+      "clarificationAnswer": "The learner asked me to slow down, so we worked through one step at a time. At the end they closed the document and found it again without me pointing at the screen. I only saw them in that session, so I cannot say how they managed later.",
+      "correction": {
+        "anchor": "I supported six learners with saving and finding documents during one session.",
+        "before": "I supported six learners with saving and finding documents during one session.",
+        "after": "I supported four learners with saving and finding documents during that session; six people attended altogether."
+      },
+      "manual": {
+        "source": "I am drawn to Northglen Learning because I enjoy seeing adults become more comfortable asking questions.",
+        "replacement": "I want to work at Northglen Learning because I enjoy helping adults feel more comfortable asking questions."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "four learners",
+          "six people attended altogether"
+        ],
+        "obsoletePhrases": [
+          "supported six learners"
+        ],
+        "semanticChecks": [
+          "Distinguish the four people Eli supported from the six attendees.",
+          "Use the learner's request to slow down and the successful document retrieval as the adaptation and observed result.",
+          "Keep the result limited to the session rather than claiming lasting independence or lesson-planning responsibility."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "workshop-to-fleet-coordination",
+      "input": {
+        "applicant": "Tessa Rahman",
+        "company": "Rowbank Fleet",
+        "role": "Fleet Maintenance Coordinator",
+        "notes": "I have worked as a workshop assistant at the fictional garage Moorlane Motors for three years. We had a delivery van come back with an intermittent starting problem just before its next booked route. I diagnosed the failed starter and approved the repair so the van could return to service. I wrote the driver's description on the job card and checked that we had the vehicle registration and contact number right. I keep a shared parts-arrival sheet up to date and call customers when the service adviser asks me to confirm a booking. The driver was worried about losing the whole next morning. Rowbank Fleet interests me because I like organising practical work and keeping drivers informed.",
+        "question": "Tell us about a maintenance job involving time pressure. Explain your own contribution to coordinating it, how you kept the driver informed, and why you want to work for Rowbank Fleet.",
+        "requirements": [
+          {
+            "text": "Describe a maintenance job involving time pressure.",
+            "personal": false
+          },
+          {
+            "text": "Explain your own contribution to coordinating the job.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you kept the driver informed.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want to work for Rowbank Fleet.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 240
+      },
+      "clarificationAnswer": "I called the driver after the service adviser confirmed the revised collection time. I explained that the workshop still had to complete its checks, so I would call again when collection was confirmed. The van was collected the following morning; I do not know whether the delivery route ran on time.",
+      "correction": {
+        "anchor": "I diagnosed the failed starter and approved the repair so the van could return to service.",
+        "before": "I diagnosed the failed starter and approved the repair so the van could return to service.",
+        "after": "I logged the starting symptoms and phoned the parts supplier to check starter availability; the senior technician diagnosed the fault and the service manager approved the repair."
+      },
+      "manual": {
+        "source": "Rowbank Fleet interests me because I like organising practical work and keeping drivers informed.",
+        "replacement": "I want to work for Rowbank Fleet because I enjoy organising practical jobs and keeping drivers up to date."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "logged the starting symptoms",
+          "phoned the parts supplier",
+          "senior technician diagnosed the fault",
+          "service manager approved the repair"
+        ],
+        "obsoletePhrases": [
+          "I diagnosed the failed starter",
+          "approved the repair so the van could return to service"
+        ],
+        "semanticChecks": [
+          "Credit Tessa with logging symptoms and checking parts availability, and preserve the technician's diagnostic and manager's approval responsibilities.",
+          "Explain the driver updates without promising collection before checks were complete.",
+          "Use the next-morning collection as the known outcome without claiming the delivery route was on time."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "grounds-work-to-community-projects",
+      "input": {
+        "applicant": "Jonah Pike",
+        "company": "Bracken Reach",
+        "role": "Community Project Assistant",
+        "notes": "I am a grounds maintenance worker with the fictional firm Fernway Grounds. I also help a local volunteer group look after a streamside path. For one Saturday clean-up I made a list of gloves, litter pickers and sacks, checked it with the group organiser and collected the agreed supplies. We found one section too muddy to use safely, so I marked the usable meeting point on the noticeboard map and told arriving volunteers about the change. The organiser decided which areas the group would cover. We removed visible litter from the accessible path. I did not revisit the area or take before-and-after measurements. Bracken Reach appeals to me because I want to help local people take part in practical outdoor projects.",
+        "question": "Describe your own contribution to planning a volunteer activity, explain an adjustment you made on the day, say what evidence you have of a lasting improvement to the site, and explain why you want to join Bracken Reach.",
+        "requirements": [
+          {
+            "text": "Describe your personal contribution to planning a volunteer activity.",
+            "personal": true
+          },
+          {
+            "text": "Explain an adjustment you made on the day.",
+            "personal": true
+          },
+          {
+            "text": "State what evidence you have of a lasting improvement to the site.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want to join Bracken Reach.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 250
+      },
+      "clarificationAnswer": "I collected the equipment on Friday and checked it against my list. Eighteen volunteers attended the clean-up. The group thanked us at the end, but I have no follow-up inspection, photographs or feedback about the condition of the path later.",
+      "correction": {
+        "anchor": "Eighteen volunteers attended the clean-up.",
+        "before": "Eighteen volunteers attended the clean-up.",
+        "after": "Fourteen volunteers attended the clean-up; eighteen had signed up beforehand."
+      },
+      "manual": {
+        "source": "Bracken Reach appeals to me because I want to help local people take part in practical outdoor projects.",
+        "replacement": "I want to join Bracken Reach to help local people get involved in practical outdoor projects."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "Fourteen volunteers attended",
+          "eighteen had signed up"
+        ],
+        "obsoletePhrases": [
+          "Eighteen volunteers attended"
+        ],
+        "semanticChecks": [
+          "Distinguish the fourteen attendees from the eighteen advance sign-ups.",
+          "Explain Jonah's equipment preparation and communication of the changed meeting point while leaving area-selection responsibility with the organiser.",
+          "Acknowledge the lack of evidence about lasting site improvement; visible litter removal and thanks on the day do not establish a lasting environmental result."
+        ],
+        "missingCriteria": "No follow-up evidence establishes whether the site improvement lasted; the answer should state this limitation rather than invent a lasting result.",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "hotel-to-service-desk",
+      "input": {
+        "applicant": "Rina Ellis",
+        "company": "Cobalt Orchard IT",
+        "role": "Junior Service Desk Analyst",
+        "notes": "I have worked at reception at the fictional hotel Lantern Quay for two years and have finished an introductory IT support evening course. We lost access to the booking screen during a busy check-in period. I restored the booking server and got reception back online. I kept a paper list of arriving guests using our agreed outage process and asked my colleague to handle phone calls while I gathered the error details. I recorded the time, the error message and which reception terminals were affected. I handed the temporary arrival list to the duty manager when normal service returned. I am interested in Cobalt Orchard IT because I enjoy helping people stay calm while a technical problem is being worked through.",
+        "question": "Give an example of a technical problem you helped with. What did you personally check or do, how did you communicate during the interruption, and why do you want this service desk role at Cobalt Orchard IT?",
+        "requirements": [
+          {
+            "text": "Describe a technical problem you helped with.",
+            "personal": true
+          },
+          {
+            "text": "Explain the checks or actions you personally performed.",
+            "personal": true
+          },
+          {
+            "text": "Explain your communication during the interruption.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want this service desk role at Cobalt Orchard IT.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 260
+      },
+      "clarificationAnswer": "I followed the helpdesk's instruction to restart my reception terminal and read the exact error message to them. I told waiting guests we were using the temporary arrival process and gave updates when the duty manager had confirmed information. I was not given a root-cause report.",
+      "correction": {
+        "anchor": "I restored the booking server and got reception back online.",
+        "before": "I restored the booking server and got reception back online.",
+        "after": "I restarted my reception terminal as instructed and documented the error message and affected terminals; the external support supplier restored the booking server."
+      },
+      "manual": {
+        "source": "I am interested in Cobalt Orchard IT because I enjoy helping people stay calm while a technical problem is being worked through.",
+        "replacement": "Helping people stay calm while a technical problem is being resolved is what interests me about Cobalt Orchard IT."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "restarted my reception terminal",
+          "documented the error message",
+          "external support supplier restored the booking server"
+        ],
+        "obsoletePhrases": [
+          "I restored the booking server"
+        ],
+        "semanticChecks": [
+          "Describe both Rina's instructed terminal restart and her documentation, and credit server restoration to the external supplier.",
+          "Explain the temporary arrival process and factual guest updates without inventing a diagnosis or administrator access.",
+          "Connect her experience of supporting people during an interruption to her interest in the service desk role."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "print-room-to-publishing",
+      "input": {
+        "applicant": "Owen Dacre",
+        "company": "Willowglass Books",
+        "role": "Publishing Production Assistant",
+        "notes": "I work in the print room at the fictional company Baymill Print. The company's sales office is in Dunmere. I completed an evening proofreading course in September. We produce school booklets and short print runs for small publishers. In June I checked a revised contents page against the final page proofs and found that two chapter references were still using the old page numbers. I put the mismatches on the job sheet and sent them to the production supervisor before the files were released. The supervisor returned the files to the customer for correction. I want to join Willowglass Books because I enjoy the detailed work that helps turn a manuscript into a finished book.",
+        "question": "Tell us about a publishing or print task where your attention to detail mattered. What did you personally check, how did you handle the problem and its deadline, and how do your training and interests relate to Willowglass Books?",
+        "requirements": [
+          {
+            "text": "Describe a print or publishing task requiring attention to detail.",
+            "personal": true
+          },
+          {
+            "text": "Explain what you personally checked.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you handled the problem and its deadline.",
+            "personal": true
+          },
+          {
+            "text": "Explain how your training and interests relate to Willowglass Books.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 230
+      },
+      "clarificationAnswer": "The job sheet said the files were due to be released that afternoon, so I took the sheet straight to the supervisor rather than leave it in the next-day tray. I completed the check on 12 June. The September course later gave me a more consistent way to mark corrections, including distinguishing an error from an editorial suggestion.",
+      "correction": {
+        "anchor": "I completed the check on 12 June.",
+        "before": "I completed the check on 12 June.",
+        "after": "I completed the check on 14 June; 12 June was the date the revised files arrived."
+      },
+      "manual": {
+        "source": "I want to join Willowglass Books because I enjoy the detailed work that helps turn a manuscript into a finished book.",
+        "replacement": "The detailed work of turning a manuscript into a finished book is what attracts me to Willowglass Books."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "check on 14 June",
+          "12 June was the date the revised files arrived"
+        ],
+        "obsoletePhrases": [
+          "completed the check on 12 June"
+        ],
+        "semanticChecks": [
+          "Place Owen's check on 14 June and treat 12 June as the file-arrival date.",
+          "Describe his checking and urgent escalation without claiming he personally amended the customer's files.",
+          "Keep the later September course separate from the June task, and do not infer the course location from the company's Dunmere sales office.",
+          "Connect the training and interest in detailed book production to the requested role."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "nursery-to-training-admin",
+      "input": {
+        "applicant": "Leila Marsh",
+        "company": "Westhaven Skills",
+        "role": "Training Administrator",
+        "notes": "I work as a nursery assistant at the fictional nursery Maple Steps and help at a community centre's adult evening classes once a month. We had people arrive for a basic budgeting class with different information about the start time. I designed the revised course timetable and delivered the welcome briefing. I checked the booking list, wrote the confirmed room and time on a sign by the entrance and showed late arrivals to the room quietly. I use a spreadsheet at the nursery to track craft supplies and record what has been ordered. I enjoy helping adults feel clear about learning arrangements, which is why Westhaven Skills interests me.",
+        "question": "Describe an example of organising information for learners. What was your own contribution, how did you communicate a change, what did you observe as a result, and why does Westhaven Skills interest you?",
+        "requirements": [
+          {
+            "text": "Describe an example of organising information for learners.",
+            "personal": true
+          },
+          {
+            "text": "Explain your personal contribution.",
+            "personal": true
+          },
+          {
+            "text": "Explain how you communicated a change.",
+            "personal": true
+          },
+          {
+            "text": "Describe the result you observed.",
+            "personal": true
+          },
+          {
+            "text": "Explain why Westhaven Skills interests you.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 240
+      },
+      "clarificationAnswer": "The centre coordinator confirmed the correct time to me. I used that time on the entrance sign and pointed it out to arriving learners. Everyone who arrived while I was on the desk reached the correct room; I do not know whether people who never arrived had seen the earlier information.",
+      "correction": {
+        "anchor": "I designed the revised course timetable and delivered the welcome briefing.",
+        "before": "I designed the revised course timetable and delivered the welcome briefing.",
+        "after": "I checked the booking list against the confirmed room details and prepared the entrance sign; the centre coordinator revised the timetable and the tutor delivered the welcome briefing."
+      },
+      "manual": {
+        "source": "I enjoy helping adults feel clear about learning arrangements, which is why Westhaven Skills interests me.",
+        "replacement": "Westhaven Skills interests me because I enjoy making learning arrangements clear for adults."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "checked the booking list",
+          "prepared the entrance sign",
+          "centre coordinator revised the timetable",
+          "tutor delivered the welcome briefing"
+        ],
+        "obsoletePhrases": [
+          "designed the revised course timetable",
+          "delivered the welcome briefing"
+        ],
+        "semanticChecks": [
+          "Credit Leila with checking the booking details and preparing the sign, while crediting the coordinator with the revised timetable and the tutor with the briefing.",
+          "Explain her communication of the confirmed room and time to arriving learners.",
+          "Limit the observed result to arrivals during her desk duty rather than claiming all booked learners received the change."
+        ],
+        "missingCriteria": "",
+        "inputContradictionPossible": false
+      }
+    },
+    {
+      "id": "outdoor-retail-to-field-assistant",
+      "input": {
+        "applicant": "Marcus Tan",
+        "company": "Fenbrook Water",
+        "role": "Environmental Field Assistant",
+        "notes": "I work at the fictional outdoor shop Ridgepost and volunteer on a footpath survey with a local walking group. We use a shared spreadsheet to record damaged signs and blocked access points. I note the map reference, take a photograph and check that the photo number matches the row before I hand the sheet to our organiser. I surveyed eight access points during our most recent outing. When heavy rain started, I put the paper sheet in a waterproof sleeve and checked with the group leader before we continued. I took an outdoor first aid course some time ago, but I do not have the certificate here and cannot remember its expiry date. Fenbrook Water interests me because I want a practical outdoor role that also requires careful record keeping.",
+        "question": "Explain how your own outdoor experience would help you keep accurate field records and respond to poor weather. State the expiry date of your current first aid certificate, or explain if you cannot confirm it, and tell us why you want to join Fenbrook Water.",
+        "requirements": [
+          {
+            "text": "Explain how your own outdoor experience supports accurate field records.",
+            "personal": true
+          },
+          {
+            "text": "Explain your personal response to poor weather.",
+            "personal": true
+          },
+          {
+            "text": "State your current first aid certificate expiry date or explain that you cannot confirm it.",
+            "personal": true
+          },
+          {
+            "text": "Explain why you want to join Fenbrook Water.",
+            "personal": true
+          }
+        ],
+        "wordLimit": 220
+      },
+      "clarificationAnswer": "The group leader ended the outing when the rain became heavier. I checked that the completed rows and photographs were saved before sending the file to the organiser at home. I still need to find my first aid certificate, so I cannot confirm whether it is currently valid.",
+      "correction": {
+        "anchor": "I surveyed eight access points during our most recent outing.",
+        "before": "I surveyed eight access points during our most recent outing.",
+        "after": "I surveyed five access points during our most recent outing; eight were on the planned route, but the group stopped early because of the rain."
+      },
+      "manual": {
+        "source": "Fenbrook Water interests me because I want a practical outdoor role that also requires careful record keeping.",
+        "replacement": "I want to join Fenbrook Water for the combination of practical outdoor work and careful record keeping."
+      },
+      "expected": {
+        "correctedMarkers": [
+          "surveyed five access points",
+          "eight were on the planned route",
+          "stopped early because of the rain"
+        ],
+        "obsoletePhrases": [
+          "surveyed eight access points"
+        ],
+        "semanticChecks": [
+          "Distinguish the five points Marcus surveyed from the eight on the planned route.",
+          "Explain his map-reference and photograph checks, weather precautions and file handover without claiming that he decided whether the group should continue.",
+          "State that first aid certificate validity and expiry cannot yet be confirmed; do not invent a date or describe the qualification as current."
+        ],
+        "missingCriteria": "The first aid certificate expiry date and current validity remain unconfirmed; the form explicitly allows the applicant to acknowledge that gap.",
+        "inputContradictionPossible": false
+      }
+    }
+  ]
+}

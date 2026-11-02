@@ -1,0 +1,576 @@
+{
+  "schemaVersion": "fresh-wonder-final-comparison-v1",
+  "createdAt": "2026-11-02T19:32:58.521391+00:00",
+  "verdict": "No superiority demonstrated. The app met five of six scoped correction/hold outcomes; the same-Wonder capable assistant met six. Blind preference: five ties and one assistant win.",
+  "candidateSha": "3547156a3faa7caa67b16b6392f0215e11f8cc50",
+  "sourceUnchangedDuringBothRuns": true,
+  "model": "muse-wonder-1.0",
+  "appEffort": "native per-step low/medium",
+  "baselineEffort": "medium",
+  "scope": "Prepared-state correction only; initial facts/documents authored, not model-generated. No full-preparation, hosted UX, human-effort, human-time-saving, market-demand or prize-success claim.",
+  "gradeMethod": "Two independent fresh-context AI graders; case-wise A/B randomisation; frozen hashes verified before mapping reconciliation. No human-user study.",
+  "runWindowsUtc": [
+    {
+      "start": "2026-11-02T18:56:07.169Z",
+      "end": "2026-11-02T18:59:46.674Z"
+    },
+    {
+      "start": "2026-11-02T19:10:42.319Z",
+      "end": "2026-11-02T19:11:27.878Z"
+    }
+  ],
+  "fairCaseIds": [
+    "FW01",
+    "FW02",
+    "FW03",
+    "FW04",
+    "FW07",
+    "FW08"
+  ],
+  "excludedCaseIds": [
+    "FW05",
+    "FW06"
+  ],
+  "rows": [
+    {
+      "caseId": "FW01",
+      "publicLabel": "Shared authorship",
+      "expectedOutcome": "repair",
+      "blindPreference": "tie",
+      "blindPreferenceReason": "Both move design ownership to Mara Bell while preserving all four of Nia's actions and quantities, context, result, lesson and manual sentence. The difference between direct verbs and the original equivalent paraphrase is not a material task advantage.",
+      "app": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 18680,
+        "providerWaitMs": 18651,
+        "transportCalls": 2,
+        "ledgerCostEstimateUsd": 0.072364,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives.",
+        "exportStatus": "NOT SUBMITTED",
+        "exportBlocked": null
+      },
+      "baseline": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 22775,
+        "providerWaitMs": 22773,
+        "transportCalls": 3,
+        "ledgerCostEstimateUsd": 0.078306,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives."
+      }
+    },
+    {
+      "caseId": "FW02",
+      "publicLabel": "Weight-unit correction",
+      "expectedOutcome": "repair",
+      "blindPreference": "tie",
+      "blindPreferenceReason": "Both fix every unit to kg, retain 80 to 50, 30 kg per week, 37.5%, both four-week measurement periods and the head baker's authority. A has a small copy-edit issue; it does not establish a material correction-quality advantage.",
+      "app": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 26502,
+        "providerWaitMs": 26472,
+        "transportCalls": 2,
+        "ledgerCostEstimateUsd": 0.070874,
+        "scopeQualification": "Complete repair of the requested unit correction; the separate answer-completeness score records an inherited form omission.",
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives.",
+        "exportStatus": "NOT SUBMITTED",
+        "exportBlocked": null
+      },
+      "baseline": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 13230,
+        "providerWaitMs": 13228,
+        "transportCalls": 3,
+        "ledgerCostEstimateUsd": 0.058683,
+        "scopeQualification": "Complete repair of the requested unit correction; the separate answer-completeness score records an inherited form omission.",
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives."
+      }
+    },
+    {
+      "caseId": "FW03",
+      "publicLabel": "Scope and context introduction",
+      "expectedOutcome": "repair",
+      "blindPreference": "tie",
+      "blindPreferenceReason": "Both accurately limit Safe Return to a North Road pilot, introduce the brake-and-torque purpose within the letter itself, and retain Owen's checklist, two mechanics and 18 job cards. No material difference is supported.",
+      "app": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 41308,
+        "providerWaitMs": 41276,
+        "transportCalls": 4,
+        "ledgerCostEstimateUsd": 0.130513,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives.",
+        "exportStatus": "NOT SUBMITTED",
+        "exportBlocked": null
+      },
+      "baseline": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 14754,
+        "providerWaitMs": 14752,
+        "transportCalls": 3,
+        "ledgerCostEstimateUsd": 0.076934,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives."
+      }
+    },
+    {
+      "caseId": "FW04",
+      "publicLabel": "Credential correction",
+      "expectedOutcome": "repair",
+      "blindPreference": "tie",
+      "blindPreferenceReason": "Both remove the false credential while preserving completion, duration, practical work and the architect's design authority. Both share the same inherited specificity gap in the unchanged letter; neither gains a comparative advantage.",
+      "app": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 27661,
+        "providerWaitMs": 27643,
+        "transportCalls": 4,
+        "ledgerCostEstimateUsd": 0.085859,
+        "scopeQualification": "Complete repair of the requested credential correction. The shared inherited map-layer omission is recorded separately because the frozen rubric also requires its containing paragraph l4 to remain unchanged.",
+        "uncertainty": "Whether the rubric intends general mapping as a sufficient paraphrase of using map layers is ambiguous. The specific technique is not explicit, so it is not silently marked fully retained; the preservation conflict prevents treating this as an arm-specific repair failure.",
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives.",
+        "exportStatus": "NOT SUBMITTED",
+        "exportBlocked": null
+      },
+      "baseline": {
+        "recordedStatus": "completed",
+        "blindOutcome": "complete correct repair",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 12365,
+        "providerWaitMs": 12364,
+        "transportCalls": 3,
+        "ledgerCostEstimateUsd": 0.069462,
+        "scopeQualification": "Complete repair of the requested credential correction. The shared inherited map-layer omission is recorded separately because the frozen rubric also requires its containing paragraph l4 to remain unchanged.",
+        "uncertainty": "Whether the rubric intends general mapping as a sufficient paraphrase of using map layers is ambiguous. The specific technique is not explicit, so it is not silently marked fully retained; the preservation conflict prevents treating this as an arm-specific repair failure.",
+        "outcomeReason": "The specific confirmed correction is made in both documents, correct actors and quantities are retained, and protected wording survives."
+      }
+    },
+    {
+      "caseId": "FW07",
+      "publicLabel": "Ambiguous personal contribution",
+      "expectedOutcome": "hold",
+      "blindPreference": "baseline",
+      "blindPreferenceReason": "Both arms preserve the same text, but B supplies the precise missing attribution question and completes the expected hold response. A supplies no question and is unfinished.",
+      "app": {
+        "recordedStatus": "unresolved-without-verified-safe-hold",
+        "blindOutcome": "incomplete",
+        "taskSuccess": false,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 13739,
+        "providerWaitMs": 13719,
+        "transportCalls": 4,
+        "ledgerCostEstimateUsd": 0.036262,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "The saved documents are preserved, but there is no useful question and the supplied output reports the task unfinished. This is an incomplete response, not a newly completed answer or an unsafe rewrite.",
+        "exportStatus": "UNSAFE EXPORT ALLOWED; update unresolved",
+        "exportBlocked": false
+      },
+      "baseline": {
+        "recordedStatus": "held-for-clarification",
+        "blindOutcome": "correct useful hold",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 7348,
+        "providerWaitMs": 7346,
+        "transportCalls": 1,
+        "ledgerCostEstimateUsd": 0.033804,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "Returns a clarification hold, asks the required substantive question, and leaves both saved documents unchanged. The correction itself remains unresolved."
+      }
+    },
+    {
+      "caseId": "FW08",
+      "publicLabel": "Ambiguous energy figure",
+      "expectedOutcome": "hold",
+      "blindPreference": "tie",
+      "blindPreferenceReason": "Both arms preserve the same documents and ask an equally sufficient hall-versus-hall-and-workshops question about the corrected monthly figure. The wording difference does not justify a preference.",
+      "app": {
+        "recordedStatus": "held-for-clarification",
+        "blindOutcome": "correct useful hold",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": true
+        },
+        "machineElapsedMs": 12036,
+        "providerWaitMs": 12026,
+        "transportCalls": 3,
+        "ledgerCostEstimateUsd": 0.029992,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "Returns a clarification hold, asks the required substantive question, and leaves both saved documents unchanged. The correction itself remains unresolved.",
+        "exportStatus": "BLOCKED; update unresolved",
+        "exportBlocked": true
+      },
+      "baseline": {
+        "recordedStatus": "held-for-clarification",
+        "blindOutcome": "correct useful hold",
+        "taskSuccess": true,
+        "newUnsupportedClaimCount": 0,
+        "manualExactPreserved": true,
+        "mechanicalManualMetric": {
+          "idRetained": true,
+          "exactText": true,
+          "samePosition": true,
+          "userOwnershipRetained": "NOT APPLICABLE: no persistent ownership store"
+        },
+        "machineElapsedMs": 12320,
+        "providerWaitMs": 12319,
+        "transportCalls": 1,
+        "ledgerCostEstimateUsd": 0.033776,
+        "scopeQualification": null,
+        "uncertainty": null,
+        "outcomeReason": "Returns a clarification hold, asks the required substantive question, and leaves both saved documents unchanged. The correction itself remains unresolved."
+      }
+    }
+  ],
+  "metrics": {
+    "app": {
+      "correctTaskOutcomes": 5,
+      "denominator": 6,
+      "repairSuccesses": 4,
+      "repairDenominator": 4,
+      "holdSuccesses": 1,
+      "holdDenominator": 2,
+      "exactManualPreserved": 6,
+      "newUnsupportedClaims": 0,
+      "allAttemptMedianMachineMs": 22591.0,
+      "repairMedianMachineMs": 27081.5,
+      "holdMedianMachineMs": 12887.5,
+      "allAttemptMedianProviderWaitMs": 22561.5,
+      "costAndCalls": {
+        "armAttempts": 6,
+        "transportCalls": 19,
+        "providerAttempts": 19,
+        "unsettledCalls": 0,
+        "requestFailures": 0,
+        "ledgerCostEstimateUsd": 0.425864,
+        "receiptUsagePricedEstimateUsd": 0.425861,
+        "conservativeMaximumReservationsUsd": 3.388276,
+        "machineElapsedMs": 139926,
+        "providerWaitMs": 139787,
+        "usage": {
+          "inputTokens": 35155,
+          "cachedInputTokens": 17484,
+          "outputTokensIncludingReasoning": 17584,
+          "reasoningTokensIncludedInOutput": 15106
+        }
+      }
+    },
+    "baseline": {
+      "correctTaskOutcomes": 6,
+      "denominator": 6,
+      "repairSuccesses": 4,
+      "repairDenominator": 4,
+      "holdSuccesses": 2,
+      "holdDenominator": 2,
+      "exactManualPreserved": 6,
+      "newUnsupportedClaims": 0,
+      "allAttemptMedianMachineMs": 12797.5,
+      "repairMedianMachineMs": 13992.0,
+      "holdMedianMachineMs": 9834.0,
+      "allAttemptMedianProviderWaitMs": 12796.0,
+      "costAndCalls": {
+        "armAttempts": 6,
+        "transportCalls": 14,
+        "providerAttempts": 14,
+        "unsettledCalls": 0,
+        "requestFailures": 0,
+        "ledgerCostEstimateUsd": 0.350965,
+        "receiptUsagePricedEstimateUsd": 0.350964,
+        "conservativeMaximumReservationsUsd": 4.387456,
+        "machineElapsedMs": 82792,
+        "providerWaitMs": 82782,
+        "usage": {
+          "inputTokens": 47120,
+          "cachedInputTokens": 14020,
+          "outputTokensIncludingReasoning": 10788,
+          "reasoningTokensIncludedInOutput": 4641
+        }
+      }
+    }
+  },
+  "blindPreferences": {
+    "app": 0,
+    "baseline": 1,
+    "tie": 5
+  },
+  "costAndCalls": {
+    "fairRepairs": {
+      "armAttempts": 8,
+      "transportCalls": 24,
+      "providerAttempts": 24,
+      "unsettledCalls": 0,
+      "requestFailures": 0,
+      "ledgerCostEstimateUsd": 0.642995,
+      "receiptUsagePricedEstimateUsd": 0.642992,
+      "conservativeMaximumReservationsUsd": 5.701084,
+      "machineElapsedMs": 177275,
+      "providerWaitMs": 177159,
+      "usage": {
+        "inputTokens": 61063,
+        "cachedInputTokens": 19300,
+        "outputTokensIncludingReasoning": 23604,
+        "reasoningTokensIncludedInOutput": 17288
+      }
+    },
+    "fairReplacementHolds": {
+      "armAttempts": 4,
+      "transportCalls": 9,
+      "providerAttempts": 9,
+      "unsettledCalls": 0,
+      "requestFailures": 0,
+      "ledgerCostEstimateUsd": 0.133834,
+      "receiptUsagePricedEstimateUsd": 0.133833,
+      "conservativeMaximumReservationsUsd": 2.074648,
+      "machineElapsedMs": 45443,
+      "providerWaitMs": 45410,
+      "usage": {
+        "inputTokens": 21212,
+        "cachedInputTokens": 12204,
+        "outputTokensIncludingReasoning": 4768,
+        "reasoningTokensIncludedInOutput": 2459
+      }
+    },
+    "allFair": {
+      "armAttempts": 12,
+      "transportCalls": 33,
+      "providerAttempts": 33,
+      "unsettledCalls": 0,
+      "requestFailures": 0,
+      "ledgerCostEstimateUsd": 0.776829,
+      "receiptUsagePricedEstimateUsd": 0.776825,
+      "conservativeMaximumReservationsUsd": 7.775732,
+      "machineElapsedMs": 222718,
+      "providerWaitMs": 222569,
+      "usage": {
+        "inputTokens": 82275,
+        "cachedInputTokens": 31504,
+        "outputTokensIncludingReasoning": 28372,
+        "reasoningTokensIncludedInOutput": 19747
+      }
+    },
+    "excludedOriginalHolds": {
+      "armAttempts": 4,
+      "transportCalls": 9,
+      "providerAttempts": 9,
+      "unsettledCalls": 0,
+      "requestFailures": 0,
+      "ledgerCostEstimateUsd": 0.149547,
+      "receiptUsagePricedEstimateUsd": 0.149547,
+      "conservativeMaximumReservationsUsd": 1.898852,
+      "machineElapsedMs": 41862,
+      "providerWaitMs": 41828,
+      "usage": {
+        "inputTokens": 18044,
+        "cachedInputTokens": 7876,
+        "outputTokensIncludingReasoning": 5365,
+        "reasoningTokensIncludedInOutput": 3299
+      }
+    },
+    "allAttemptsIncludingInvalid": {
+      "armAttempts": 16,
+      "transportCalls": 42,
+      "providerAttempts": 42,
+      "unsettledCalls": 0,
+      "requestFailures": 0,
+      "ledgerCostEstimateUsd": 0.926376,
+      "receiptUsagePricedEstimateUsd": 0.926372,
+      "conservativeMaximumReservationsUsd": 9.674584,
+      "machineElapsedMs": 264580,
+      "providerWaitMs": 264397,
+      "usage": {
+        "inputTokens": 100319,
+        "cachedInputTokens": 39380,
+        "outputTokensIncludingReasoning": 33737,
+        "reasoningTokensIncludedInOutput": 23046
+      }
+    }
+  },
+  "excludedRows": [
+    {
+      "caseId": "FW05",
+      "method": "baseline",
+      "recordedStatus": "held-for-clarification",
+      "machineElapsedMs": 5074,
+      "providerWaitMs": 5074,
+      "transportCalls": 1,
+      "ledgerCostEstimateUsd": 0.028924,
+      "comparativeValidity": "EXCLUDED: app original source omitted by initial fixture metadata; baseline received it."
+    },
+    {
+      "caseId": "FW05",
+      "method": "app",
+      "recordedStatus": "unresolved-without-verified-safe-hold",
+      "machineElapsedMs": 18390,
+      "providerWaitMs": 18368,
+      "transportCalls": 4,
+      "ledgerCostEstimateUsd": 0.059967,
+      "comparativeValidity": "EXCLUDED: app original source omitted by initial fixture metadata; baseline received it."
+    },
+    {
+      "caseId": "FW06",
+      "method": "app",
+      "recordedStatus": "unresolved-without-verified-safe-hold",
+      "machineElapsedMs": 12020,
+      "providerWaitMs": 12009,
+      "transportCalls": 3,
+      "ledgerCostEstimateUsd": 0.02782,
+      "comparativeValidity": "EXCLUDED: app original source omitted by initial fixture metadata; baseline received it."
+    },
+    {
+      "caseId": "FW06",
+      "method": "baseline",
+      "recordedStatus": "held-for-clarification",
+      "machineElapsedMs": 6378,
+      "providerWaitMs": 6377,
+      "transportCalls": 1,
+      "ledgerCostEstimateUsd": 0.032836,
+      "comparativeValidity": "EXCLUDED: app original source omitted by initial fixture metadata; baseline received it."
+    }
+  ],
+  "knownQualifications": [
+    "FW02 repair succeeded in both arms, but the starting answer omitted a reason for interest asked by the form; both retained that omission.",
+    "FW04 repair succeeded in both arms, but a frozen contribution criterion asks for map-layer specificity that an unchanged starting paragraph did not explicitly contain. The grader flagged the conflicting preservation/completeness expectations; no arm advantage.",
+    "FW07 introduced no new unsupported prose, but failed to ask the needed clarification and left the disputed old claim exportable. Zero new-claim count is not zero risk.",
+    "FW05/FW06 original hold attempts are preserved and excluded from the fair metric; two new source-blind replacement hold cases were frozen before running.",
+    "A subsequent guard change is outside this candidate/evaluation. Deterministic guard tests do not establish better semantic detection, and this comparison score must not be reassigned to that later change."
+  ],
+  "subsequentGuardFixEvaluatedByThisComparison": false,
+  "costMeaning": "Local ledger usage-priced estimates from returned usage, not a provider invoice or current billing balance. Reasoning tokens are already in output tokens; do not add twice. All 42 calls settled; no retries or unsettled usage.",
+  "gradedArtifactsVerified": [
+    {
+      "label": "blind-grading-artifact-1",
+      "sha256": "625579ba43e4fefab21315995577f56e632efffe619afc04356de29b0f89918d"
+    },
+    {
+      "label": "blind-grading-artifact-2",
+      "sha256": "feb9d53951a19a4a963653c5117f66a430b55f4e282970be4279d978244f6f77"
+    },
+    {
+      "label": "blind-grading-artifact-3",
+      "sha256": "b90c83272b359b758583ea1b0f8845296e455cbfdcfb5e6744799f596b04f688"
+    },
+    {
+      "label": "blind-grading-artifact-4",
+      "sha256": "13503657a022007204ec9042533281112b1f46d5b06a56d4014b3d9c7565e9ea"
+    }
+  ],
+  "sourceArtifactHashes": {
+    "originalReport": "e92eeb509694d698c8b8adf739ea3c17a4056ad0e9e45767584483f412464915",
+    "replacementReport": "07ab32c07e67552ac6753cd0b517bf9d457217f4e04170a5ef1cee3084c0f7fb",
+    "originalGrades": "625579ba43e4fefab21315995577f56e632efffe619afc04356de29b0f89918d",
+    "replacementGrades": "b90c83272b359b758583ea1b0f8845296e455cbfdcfb5e6744799f596b04f688",
+    "originalMapping": "cb23e2f4e28148cdb450bfdd6955d4a7c98fd0bd28c08dc57d380107b7e2a0fb",
+    "replacementMapping": "f70916b21e728f7c20e55d0c3063023d5a592cd9f15ebd571f5f995bf6610b92",
+    "originalSeal": "5af7ed0ba89789925d5c3f5bc0a8c03e9b81cf0b9ee95f2778ba5f0fdea6459e",
+    "replacementSeal": "03f6d7eb184062061a752886f336f5a77730efc0834fcba0ac5a95f7bab337d0",
+    "excludedHoldAudit": "a0a062633f641ea0efcd83df40334ba461dd405332a7b6c9133a31dde0ef791b",
+    "validHoldAudit": "248623931755105f8063cea357504171c45cc90594c971d881a4aba63ab0fc9e"
+  },
+  "originalComparisonSha256": "3422a0c57e58c6d05101f8c76b917e274be0058647ffddcfd37642edb7b5cc86",
+  "sanitization": "Local file paths removed; outcomes, timing, costs, qualifications and source hashes retained."
+}
