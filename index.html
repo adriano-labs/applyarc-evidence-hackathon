@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApplyArc Evidence — working demo</title>
+    <style>
+        :root {
+            --navy: #0f1f3d;
+            --cream: #f8f6f1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, system-ui, sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.6;
+            padding: 1.5rem 1rem;
+        }
+
+        main {
+            max-width: 1120px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.3;
+        }
+
+        .description {
+            margin: 0 0 0.75rem 0;
+            font-size: 1rem;
+        }
+
+        .length {
+            margin: 0 0 1.25rem 0;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .video-container {
+            width: 100%;
+            margin: 0 0 1rem 0;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 65vh;
+            display: block;
+            object-fit: contain;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .note {
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .facts {
+            margin: 0 0 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .facts ul {
+            margin: 0.5rem 0 0 1.25rem;
+            padding: 0;
+        }
+
+        .facts li {
+            margin: 0.5rem 0;
+        }
+
+        .facts a {
+            color: var(--navy);
+            text-decoration: underline;
+            text-decoration-color: var(--navy);
+            text-decoration-thickness: 2px;
+        }
+
+        .facts a:focus {
+            outline: 3px solid var(--navy);
+            outline-offset: 2px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .links a {
+            color: var(--navy);
+            text-decoration: underline;
+            text-decoration-color: var(--navy);
+            text-decoration-thickness: 2px;
+            padding: 0.25rem 0;
+            width: fit-content;
+        }
+
+        .links a:focus {
+            outline: 3px solid var(--navy);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>One correction. Two documents. Your words kept.</h1>
+        <p class="description">Watch a fictional applicant correct who did the work, review both repaired documents, and approve the final writing.</p>
+        <p class="length">2 min 06 sec</p>
+        
+        <div class="video-container">
+            <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="ApplyArc Evidence working demo" aria-describedby="video-note">
+                <source src="video.mp4" type="video/mp4">
+                <track src="captions.en.vtt" kind="captions" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <section class="facts" aria-label="Quick facts">
+            <ul>
+                <li>The real form asks: <a href="https://github.com/adriano-labs/applyarc-evidence-hackathon/blob/main/fixtures/graphcore-form-2026-10-26.json">“Your individual contribution, if you worked as part of a team.”</a> (Graphcore, 26 October snapshot.)</li>
+                <li>Muse Wonder 1.0 uses native tools to check quoted text against the provided notes, read form requirements and count words. This recorded journey cost about $0.395 (token-priced estimate, not an invoice).</li>
+                <li>Application code controls review, fresh approvals and export. The model proposes wording.</li>
+            </ul>
+            <p><a href="https://github.com/adriano-labs/applyarc-evidence-hackathon/blob/main/results/wonder-20261102/comparison.md">Six-case comparison</a>: five ties and one assistant win. Human time savings are not established.</p>
+        </section>
+        
+        <p class="note" id="video-note">Fictional applicant and synthetic narration. This recording shows the hosted application. Initial preparation, processing waits and navigation were shortened; one recorded result is paused for reading. Nothing is submitted to an employer. Subtitles are built into the video; an optional English caption track is also available.</p>
+        
+        <nav class="links" aria-label="Related links">
+            <a href="https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/">Try the demo</a>
+            <a href="https://github.com/adriano-labs/applyarc-evidence-hackathon">View source code</a>
+            <a href="video.mp4" download>Download video</a>
+            <a href="transcript.txt">Read transcript</a>
+            <a href="captions.en.vtt">English captions</a>
+        </nav>
+    </main>
+</body>
+</html>

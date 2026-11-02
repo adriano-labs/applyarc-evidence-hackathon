@@ -1,0 +1,19 @@
+ApplyArc Evidence — working demo
+
+Fictional applicant. Synthetic Ollie narration. Recorded hosted journey; initial preparation, waits and navigation shortened. One recorded letter proposal is paused for reading. Nothing is submitted to an employer.
+
+ApplyArc existed before. We built this standalone application during the hackathon.
+
+Ellie's form asks what she did herself. These drafts were prepared earlier in this same hosted session. First, I save her own opening and approve both documents.
+
+Now her account changes. Sam wrote the patch. She reproduced the failure, tested his fix, and wrote the incident notes. I add that once.
+
+Wonder catches the conflict. The complete correction is already here. I check it and choose Use this correction.
+
+The agent proposes repairs in both documents. The project answer gives Sam credit and keeps Ellie's contribution. The cover letter also explains the failure, so the correction makes sense on its own.
+
+I review the changes before applying them. Her opening survives. Each updated document needs a fresh approval.
+
+Here is the finished letter, with its evidence beside it. I approve that version and open the pack. Both documents now reflect her correction.
+
+Nothing has been submitted. The employer's portal still needs the remaining steps. The applicant keeps control of the final words, and what happens next.
