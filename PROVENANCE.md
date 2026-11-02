@@ -5,8 +5,9 @@ This is a standalone ApplyArc Evidence submission for the Meta Global AI Develop
 | Record | Evidence |
 |---|---|
 | Event build opened | 26 October 2026, 16:24 UTC / London, following the organisers’ post-kickoff announcement. |
-| First repository commit | `925f815`, 26 October 2026, 21:20:04 UTC. Inspect with `git log --reverse`. |
-| Implementation history | Starts with the event repository. The project record states the implementation was written fresh, without copying the earlier private prototype. This is a development record, not an independent provenance audit. |
+| First development commit | The private event development record begins at `925f815`, 26 October 2026, 21:20:04 UTC. This public snapshot does not include that private Git history. |
+| Publication snapshot | Prepared on 2 November from reviewed source `378128d5c51fd884e51847cd15e3232f8447ce5c`. The initial publication snapshot has identical file contents and modes; this provenance note and the README were then updated for public packaging. This is not the original development history and is not backdated. |
+| Implementation history | The event development record states the implementation was written fresh, without copying the earlier private prototype. The private history remains private because it contains personal Git identity details. This disclosure is a development record, not an independent provenance audit. |
 | Development tools | Claude Code, OpenAI Codex and GitHub Copilot CLI, directed by ApplyArc’s founder. Model generation does not replace source review and tests. |
 | Runtime models | Meta Muse Wonder 1.0 and Spark 1.3 through Meta’s API; Meta Muse Spark Open through a compatible endpoint. Fixture mode is handwritten and labelled. |
 | Current filmed hosted run | Source `a404886`, 2 November: real Wonder clarification, two repairs with 17 passages untouched, targeted review/revision, renewed approvals and NOT SUBMITTED export. [Sanitized evidence](results/wonder-20261102/). |

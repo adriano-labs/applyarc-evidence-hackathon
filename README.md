@@ -66,7 +66,7 @@ docker build -t applyarc-evidence .
 docker run --rm -p 127.0.0.1:3000:3000 -e PROVIDER=fixture applyarc-evidence
 ```
 
-The container runs as an unprivileged user; `/app/data` is its writable state directory. This command uses temporary container storage. The Docker launch itself has not been verified in the current test environment. A clean archive of `3547156` passed a fresh locked install, 950 tests, build and fixture journey; that receipt predates the latest guard.
+The container runs as an unprivileged user; `/app/data` is its writable state directory. This command uses temporary container storage. The Docker launch itself has not been verified in the current test environment. The clean `378128d` source archive passed a fresh locked install, 965 tests, build and the complete 19-step no-key fixture journey. This publication snapshot has identical runtime files; only README and provenance wording changed for packaging. [Publication and development history](PROVENANCE.md).
 
 For real Meta calls, copy `.env.example` to `.env`, set `PROVIDER=meta`, `META_API_KEY` and `META_MODEL=muse-wonder-1.0`, then start with `node --env-file=.env server/index.js`. Keep keys outside source control. With no global effort override, extraction/clarification use low and the other steps medium. `.env.example` also documents the compatible-host settings.
 
