@@ -23,7 +23,9 @@ The live model can vary its wording. If it asks a different useful question, ans
 
 A separate [hosted HTTP check](results/wonder-20261102/hosted-a404886-proof.json) completed 19 commands in 145.182 seconds, verified that new evidence clears approvals and blocks export, and cleaned its synthetic workspace. These are known-case runs, not human time-saving measurements. [Evidence and version boundaries](results/wonder-20261102/).
 
-**Public submission links:** repository publication **PENDING**; final accessible video **PENDING**. The hosted demo alone is not a completed submission.
+**Public submission materials:** [watch the 2:06 demo](https://adriano-labs.github.io/applyarc-evidence-hackathon/) · [source repository](https://github.com/adriano-labs/applyarc-evidence-hackathon). Both are public. Publication is not final competition submission.
+
+The video uses the actual hosted interface and Wonder outputs, a fictional applicant and disclosed synthetic narration. Initial preparation and some waits/navigation are shortened; one result is paused for reading. It is not an uninterrupted live run. The viewing page includes captions, transcript and the unchanged approved video.
 
 ## What the comparison actually found
 
@@ -66,15 +68,19 @@ docker build -t applyarc-evidence .
 docker run --rm -p 127.0.0.1:3000:3000 -e PROVIDER=fixture applyarc-evidence
 ```
 
-The container runs as an unprivileged user; `/app/data` is its writable state directory. This command uses temporary container storage. The Docker launch itself has not been verified in the current test environment. The clean `378128d` source archive passed a fresh locked install, 965 tests, build and the complete 19-step no-key fixture journey. This publication snapshot has identical runtime files; only README and provenance wording changed for packaging. [Publication and development history](PROVENANCE.md).
+The container runs as an unprivileged user; `/app/data` is its writable state directory. This command uses temporary container storage. The Docker launch itself has not been verified in the current test environment. The clean `378128d` source archive passed a fresh locked install, 965 tests, build and the complete 19-step no-key fixture journey. This publication snapshot has identical runtime files; README, provenance and comparison notes changed for packaging and recorded action counts. [Publication and development history](PROVENANCE.md).
 
 For real Meta calls, copy `.env.example` to `.env`, set `PROVIDER=meta`, `META_API_KEY` and `META_MODEL=muse-wonder-1.0`, then start with `node --env-file=.env server/index.js`. Keep keys outside source control. With no global effort override, extraction/clarification use low and the other steps medium. `.env.example` also documents the compatible-host settings.
 
 `SPEND_CAP_USD` is an application reservation threshold, not an absolute provider billing ceiling: input tokens are estimated. Leave allowance headroom and verify provider controls. Cost receipts are token-priced estimates, not invoices. Real calls require usable provider access; fixture checks do not establish it.
 
+In the recording, the `$80` meter is the cumulative shared demo allowance, not this journey's price or the provider's remaining credit. This journey's 12 step receipts contain 19 model turns and 19 provider attempts, including tool-result continuations, for about `$0.395`. Those counts do not imply 19 retries; the trace records no extra transport retry attempts. Summed model-request time is not human time saved.
+
 ## Reliability and limits
 
 Saved state uses atomic writes and revision checks; stale saves are refused. Interrupted work can be retried without silently discarding saved text. Retries and model loops are bounded. Keys stay server-side. A user’s manual writing remains explicitly theirs; it is not silently certified by the evidence checker. A dated form snapshot may differ from the employer’s current portal.
+
+An edited sentence can retain its earlier numbered evidence references for context. The pen/“Your words” label and export notice mean that the edited wording has not been re-verified; a reference is not certification of the sentence or the applicant's story.
 
 The work has been exercised with synthetic applicants, automated tests, a hosted rehearsal and small AI-graded comparisons. It has not established human time savings, customer demand or better hiring outcomes. [Product scope](PRODUCT.md), [MIT licence](LICENSE).
 
