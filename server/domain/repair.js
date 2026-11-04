@@ -5,6 +5,7 @@
 import { checkContext, citedFacts, claimProblem } from './claims.js';
 import { refuse } from './errors.js';
 import { normalise } from './text.js';
+import { undoCoverageReview } from './facts.js';
 import { confirmedFacts, DOC_IDS, findFact } from './workspace.js';
 import { reviewKey } from '../agent/evidenceReview.js';
 
@@ -102,17 +103,29 @@ export function undecided(repair) {
   return repair.items.filter((i) => i.status !== 'proposed' && !i.decision);
 }
 
+function sameIds(a = [], b = []) {
+  return a.length === b.length && a.every((id, i) => id === b[i]);
+}
+
+// Keeping the wording is separate from whether the document changed. A kept sentence
+// stays word for word, but it becomes hers and drops the corrected fact, so the
+// document's revision still moves. A rewrite that changes nothing does not.
 function applyItem(ws, item, factId) {
   const decision = item.decision ?? 'take';
   const segment = ws.application.documents[item.docId].segments.find((s) => s.id === item.segmentId);
+  const before = { text: segment.text, author: segment.author, factIds: segment.factIds };
   if (decision === 'keep') {
     // Her own words stay exactly, but no longer cite the corrected fact, which no longer supports them.
     Object.assign(segment, { author: 'user', factIds: segment.factIds.filter((id) => id !== factId) });
-    return false;
-  }
-  if (decision === 'write') Object.assign(segment, { text: item.written, author: 'user' });
+  } else if (decision === 'write') Object.assign(segment, { text: item.written, author: 'user' });
   else Object.assign(segment, { text: item.after, factIds: item.afterFactIds, author: item.after === item.before ? segment.author : 'repair' });
-  return true;
+  const kept = decision === 'keep';
+  return {
+    kept,
+    applied: !kept,
+    changed: segment.text !== before.text || segment.author !== before.author || !sameIds(segment.factIds, before.factIds),
+    wordingChanged: !kept && (decision === 'write' || item.after !== item.before),
+  };
 }
 
 export function applyRepair(ws, now = new Date().toISOString()) {
@@ -120,18 +133,19 @@ export function applyRepair(ws, now = new Date().toISOString()) {
   const waiting = undecided(repair);
   if (waiting.length) refuse('undecided', 'Decide every change marked “needs you” first.', { items: waiting.map((i) => i.id) });
   const changedDocs = new Set();
+  const revisionDocs = new Set();
   const changedSegments = [];
   let kept = 0;
   for (const item of repair.items) {
-    if (applyItem(ws, item, repair.factId)) {
-      changedDocs.add(item.docId);
-      // A still-true sentence gets its citations renewed, not rewritten.
-      if (item.decision === 'write' || item.after !== item.before) changedSegments.push({ docId: item.docId, segmentId: item.segmentId });
-    } else {
-      kept += 1;
-    }
+    const result = applyItem(ws, item, repair.factId);
+    if (result.kept) kept += 1;
+    if (result.applied) changedDocs.add(item.docId);
+    // One bump per document, whether one sentence or several changed.
+    if (result.changed) revisionDocs.add(item.docId);
+    // A still-true sentence gets its citations renewed, not rewritten.
+    if (result.wordingChanged) changedSegments.push({ docId: item.docId, segmentId: item.segmentId });
   }
-  for (const docId of changedDocs) ws.application.documents[docId].revision += 1;
+  for (const docId of revisionDocs) ws.application.documents[docId].revision += 1;
   // What the correction reopened and what it left alone, so the finish can say so from saved state.
   const sentences = Object.values(ws.application.documents).reduce((n, doc) => n + (doc?.segments?.length ?? 0), 0);
   const summary = { factId: repair.factId, at: now, changed: changedSegments.length, kept, docs: [...changedDocs], changedSegments, reopened: repair.items.length, untouched: sentences - repair.items.length };
@@ -159,6 +173,7 @@ export function cancelRepair(ws) {
   }
   ws.applicant.sources = ws.applicant.sources.filter((s) => !(s.id === fact.sourceId && s.kind === 'correction'));
   Object.assign(fact, { statement: previous.statement, quote: previous.quote, sourceId: previous.sourceId, ...(previous.actor ? { actor: previous.actor } : {}) });
+  undoCoverageReview(ws, fact.id, previous);
   ws.application.repair = null;
   return fact;
 }

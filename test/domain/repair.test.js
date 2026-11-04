@@ -62,7 +62,8 @@ describe('repair', () => {
     expect(answer.segments[0].text).toBe(untouched);
     expect(letter.segments[1].author).toBe('user');
     expect(answer.revision).toBe(2);
-    expect(letter.revision).toBe(2);
+    // The edit had already moved the letter to version 2. Keeping it drops the corrected citation, so the version moves once more.
+    expect(letter.revision).toBe(3);
     expect(ws.application.repair).toBeNull();
   });
 
@@ -88,6 +89,9 @@ describe('repair', () => {
     decideItem(ws, 'c2', 'keep');
     expect(applyRepair(ws)).toMatchObject({ changed: 0, kept: 1, changedSegments: [] });
     expect(ws.application.documents.answer.segments[2]).toEqual(sentence);
+    // The answer was still true, so its version stays. Keeping the letter drops the corrected citation, so that version moves once.
+    expect(ws.application.documents.answer.revision).toBe(1);
+    expect(ws.application.documents.letter.revision).toBe(2);
   });
 
   it('blocks edits while changes are under review', async () => {
