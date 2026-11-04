@@ -1,0 +1,2127 @@
+{
+  "host": "wonder",
+  "persona": "leo",
+  "style": "very short notes",
+  "startedAt": "2026-11-03T14:01:11.365Z",
+  "completed": false,
+  "abortedAt": "propose the changes",
+  "abortReason": {
+    "code": "incomplete",
+    "message": "incomplete: The answer was cut short (max_output_tokens). Nothing was changed.",
+    "httpStatus": 502
+  },
+  "probe": false,
+  "plain": true,
+  "correctionText": "Mira set up the cluster. I wrote the containerd proxy fix.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T14:01:11.365Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T14:01:11.367Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T14:01:11.369Z",
+      "ms": 9675,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 6,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 6493,
+            "cached": 4956,
+            "output": 1281,
+            "reasoning": 699
+          },
+          "costUsd": 0.0327592,
+          "firstEventMs": 1398,
+          "totalMs": 9671,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T14:01:21.047Z",
+      "ms": 11,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T14:01:21.060Z",
+      "ms": 10953,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "form_requirements:read"
+          ],
+          "usage": {
+            "input": 3393,
+            "cached": 2152,
+            "output": 1368,
+            "reasoning": 1059
+          },
+          "costUsd": 0.032754399999999996,
+          "firstEventMs": 1015,
+          "totalMs": 10950,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T14:01:32.021Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T14:01:32.025Z",
+      "ms": 7961,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 3,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 6248,
+            "cached": 4444,
+            "output": 839,
+            "reasoning": 550
+          },
+          "costUsd": 0.0248848,
+          "firstEventMs": 522,
+          "totalMs": 7958,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T14:01:39.989Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T14:01:39.995Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "No question needed: 2 requirements will be left out of the drafts"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T14:01:39.999Z",
+      "ms": 29011,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:61 of 300"
+          ],
+          "usage": {
+            "input": 6099,
+            "cached": 3176,
+            "output": 2301,
+            "reasoning": 1933
+          },
+          "costUsd": 0.0583472,
+          "firstEventMs": 1288,
+          "totalMs": 17377,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1375,
+            "cached": 628,
+            "output": 721,
+            "reasoning": 557
+          },
+          "costUsd": 0.0175336,
+          "firstEventMs": 631,
+          "totalMs": 4792,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:88 of 400"
+          ],
+          "usage": {
+            "input": 6477,
+            "cached": 3304,
+            "output": 3263,
+            "reasoning": 2678
+          },
+          "costUsd": 0.07861280000000001,
+          "firstEventMs": 691,
+          "totalMs": 22178,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1401,
+            "cached": 628,
+            "output": 687,
+            "reasoning": 492
+          },
+          "costUsd": 0.0169576,
+          "firstEventMs": 3279,
+          "totalMs": 6826,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T14:02:09.014Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T14:02:09.019Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T14:02:09.022Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T14:02:09.026Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T14:02:09.029Z",
+      "ms": 6413,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 3,
+          "toolNotes": [
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "form_requirements:read"
+          ],
+          "usage": {
+            "input": 4136,
+            "cached": 2920,
+            "output": 827,
+            "reasoning": 545
+          },
+          "costUsd": 0.021988,
+          "firstEventMs": 719,
+          "totalMs": 6408,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "keep the earlier account (skip the conflict)",
+      "startedAt": "2026-11-03T14:02:15.446Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/skip",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "correct the fact directly",
+      "startedAt": "2026-11-03T14:02:15.451Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/changeFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T14:02:15.455Z",
+      "ms": 51101,
+      "ok": false,
+      "retries": 0,
+      "firstError": null,
+      "error": {
+        "code": "incomplete",
+        "message": "incomplete: The answer was cut short (max_output_tokens). Nothing was changed.",
+        "httpStatus": 502
+      },
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2108,
+            "cached": 884,
+            "output": 1217,
+            "reasoning": 1112
+          },
+          "costUsd": 0.0294128,
+          "firstEventMs": 595,
+          "totalMs": 8197,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1599,
+            "cached": 628,
+            "output": 1427,
+            "reasoning": 1263
+          },
+          "costUsd": 0.0325496,
+          "firstEventMs": 630,
+          "totalMs": 9984,
+          "unsettled": 0
+        },
+        {
+          "step": "revise",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 0,
+          "attempts": 0,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 0,
+            "cached": 0,
+            "output": 0,
+            "reasoning": 0
+          },
+          "costUsd": 0,
+          "firstEventMs": null,
+          "totalMs": 32914,
+          "unsettled": 0,
+          "error": "incomplete"
+        }
+      ],
+      "stages": [
+        "Revising 2 unsupported repair sentences"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "kind": "no-correction-offer",
+      "note": "the conflict was raised but \"Use this correction\" was not offered (the earlier quote did not match exactly one confirmed fact)",
+      "priorQuote": "I set up the cluster and wrote the containerd proxy fix; the other members ran their jobs on it."
+    }
+  ],
+  "route": "skip-then-correct-fact",
+  "correctedFactId": "f6",
+  "intendedTargetId": "f6",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "decision",
+      "text": "Why did you choose k3s for the three-node cluster on the old office desktops for the robotics society?",
+      "status": "open",
+      "askedBy": "model"
+    },
+    {
+      "id": "q2",
+      "requirementId": "contribution",
+      "text": "In the robotics society k3s cluster project, what did you do yourself rather than as part of the team?",
+      "status": "open",
+      "askedBy": "model"
+    },
+    {
+      "id": "q3",
+      "requirementId": "motivation",
+      "text": "Why do you want this role at this company, in your own words?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "q1",
+      "requirementId": "decision",
+      "text": "Why did you choose k3s for the three-node cluster on the old office desktops for the robotics society?"
+    },
+    {
+      "id": "q3",
+      "requirementId": "motivation",
+      "text": "Why do you want this role at this company, in your own words?"
+    }
+  ],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "Set up a three-node k3s cluster on old office desktops for the robotics society.",
+        "quote": "Set up a three-node k3s cluster on old office desktops for our robotics society",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "Members could run simulation jobs without fighting over one laptop.",
+        "quote": "so members could run simulation jobs without fighting over one laptop",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "Pods could not pull images for a whole week.",
+        "quote": "Pods could not pull images for a whole week",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "The university proxy settings were missing from containerd.",
+        "quote": "it turned out to be the university proxy settings missing from containerd",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "We fixed it in the end.",
+        "quote": "we fixed it in the end",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "I set up the cluster.",
+        "quote": "I set up the cluster and wrote the containerd proxy fix",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "The other members ran their jobs on it.",
+        "quote": "the other members ran their jobs on it",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "Set up a three-node k3s cluster on old office desktops for our robotics society so members could run simulation jobs without fighting over one laptop. Pods could not pull images for a whole week; it turned out to be the university proxy settings missing from containerd, and we fixed it in the end.",
+        "at": "2026-11-03T14:01:11.368Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I set up the cluster and wrote the containerd proxy fix; the other members ran their jobs on it.",
+        "at": "2026-11-03T14:01:32.022Z",
+        "questionId": "q2",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "I set up a three-node k3s cluster on old office desktops for the robotics society so members could run simulation jobs without fighting over one laptop.",
+            "factIds": [
+              "f1",
+              "f2",
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Pods could not pull images for a whole week.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "It turned out to be the university proxy settings missing from containerd.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "We fixed it in the end.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "The other members ran their jobs on it.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "A three-node k3s cluster was set up on old office desktops for the robotics society.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "Members could run simulation jobs without fighting over one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The other members ran their jobs on it.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "Pods could not pull images for a whole week.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "The university proxy settings were missing from containerd.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I wrote the containerd proxy fix.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "We fixed it in the end.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "frame",
+            "text": "Yours sincerely, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 61,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [
+          {
+            "id": "decision",
+            "text": "One technical decision you made and why"
+          }
+        ],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 88,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [
+          {
+            "id": "motivation",
+            "text": "Why this role and this company, in your own words"
+          }
+        ],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "I set up a three-node k3s cluster on old office desktops for the robotics society so members could run simulation jobs without fighting over one laptop.",
+            "factIds": [
+              "f1",
+              "f2",
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Our robotics society needed somewhere to run simulation jobs other than one shared laptop, so three old office desktops became a three-node k3s cluster.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "It turned out to be the university proxy settings missing from containerd.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "We fixed it in the end.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "The other members ran their jobs on it.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "A three-node k3s cluster was set up on old office desktops for the robotics society.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "Members could run simulation jobs without fighting over one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The other members ran their jobs on it.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "Pods could not pull images for a whole week.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "The university proxy settings were missing from containerd.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I wrote the containerd proxy fix.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "We fixed it in the end.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "frame",
+            "text": "Yours sincerely, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/skip",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/skip",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/skip",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/changeFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 10,
+    "spentUsd": 6.275578,
+    "reservedUsd": 0.507108,
+    "remainingUsd": 3.217314
+  },
+  "extraction": {
+    "accepted": 5,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q2",
+    "requirementId": "contribution",
+    "text": "In the robotics society k3s cluster project, what did you do yourself rather than as part of the team?",
+    "answer": "I set up the cluster and wrote the containerd proxy fix; the other members ran their jobs on it."
+  },
+  "answerExtraction": {
+    "accepted": 2,
+    "refused": [
+      {
+        "quote": "I set up the cluster and wrote the containerd proxy fix",
+        "reason": "Duplicate of an existing fact."
+      }
+    ],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f2"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f4",
+        "f6"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": false,
+      "factIds": []
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f3",
+        "f4",
+        "f5"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f6",
+        "f7"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": false,
+      "factIds": []
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f5"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f6",
+    "quote": "I set up the cluster and wrote the containerd proxy fix",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-2",
+    "before": "Pods could not pull images for a whole week.",
+    "factIds": [
+      "f3"
+    ],
+    "text": "Our robotics society needed somewhere to run simulation jobs other than one shared laptop, so three old office desktops became a three-node k3s cluster."
+  },
+  "correctionExtraction": {
+    "accepted": 0,
+    "refused": [],
+    "conflict": true
+  },
+  "conflictQuestion": {
+    "text": "Who set up the cluster: you, Mira, or did you each set up different parts?",
+    "priorSourceId": "s2",
+    "priorQuote": "I set up the cluster and wrote the containerd proxy fix; the other members ran their jobs on it.",
+    "quote": "Mira set up the cluster. I wrote the containerd proxy fix."
+  },
+  "correctedFact": {
+    "id": "f6",
+    "statement": "Mira set up the cluster. I wrote the containerd proxy fix.",
+    "quote": "Mira set up the cluster. I wrote the containerd proxy fix.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "I set up the cluster.",
+        "quote": "I set up the cluster and wrote the containerd proxy fix",
+        "sourceId": "s2",
+        "at": "2026-11-03T14:02:15.452Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-1",
+      "before": "I set up a three-node k3s cluster on old office desktops for the robotics society so members could run simulation jobs without fighting over one laptop.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-8",
+      "before": "I wrote the containerd proxy fix.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "budgetEnd": {
+    "capUsd": 10,
+    "spentUsd": 7.018732,
+    "reservedUsd": 0,
+    "remainingUsd": 2.981268
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "f4099310-9ef1-4ea0-8059-d72a4e8c56f4",
+        "23a4ed4c-ca2d-4534-bd62-9e7c391cb025",
+        "c635b3b3-444f-4d40-815b-311b0986b559"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 6493,
+        "cached": 4956,
+        "output": 1281,
+        "reasoning": 699
+      },
+      "costUsd": 0.0327592,
+      "firstEventMs": 1398,
+      "firstOutputMs": 2018,
+      "totalMs": 9671,
+      "rateLimit": {
+        "remainingRequests": 2972,
+        "remainingTokens": 3938763
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:01:21.041Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "c3a522de-1282-42a0-a152-41e34efee5bf",
+        "ce8327f7-d919-4200-9161-9cc0930d8196"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 3393,
+        "cached": 2152,
+        "output": 1368,
+        "reasoning": 1059
+      },
+      "costUsd": 0.032754399999999996,
+      "firstEventMs": 1015,
+      "firstOutputMs": 2931,
+      "totalMs": 10950,
+      "rateLimit": {
+        "remainingRequests": 2970,
+        "remainingTokens": 3937044
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T14:01:32.010Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "a523cd8f-1f0d-427a-b44b-f2e43fc8f5fa",
+        "9925c9c1-6a3a-4479-a11a-cdce2e7419bb",
+        "d0255111-f38f-40da-9721-4fe6e06dd244"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 6248,
+        "cached": 4444,
+        "output": 839,
+        "reasoning": 550
+      },
+      "costUsd": 0.0248848,
+      "firstEventMs": 522,
+      "firstOutputMs": 1953,
+      "totalMs": 7958,
+      "rateLimit": {
+        "remainingRequests": 2968,
+        "remainingTokens": 3935321
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:01:39.984Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "a30287b8-d764-48d0-8d41-ae948612f5ca",
+        "6b8e0042-fb5d-43cb-b6d8-5bf131d959d3"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "61 of 300"
+        }
+      ],
+      "usage": {
+        "input": 6099,
+        "cached": 3176,
+        "output": 2301,
+        "reasoning": 1933
+      },
+      "costUsd": 0.0583472,
+      "firstEventMs": 1288,
+      "firstOutputMs": 14501,
+      "totalMs": 17377,
+      "rateLimit": {
+        "remainingRequests": 2970,
+        "remainingTokens": 3942563
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:01:57.377Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "ee32c4ec-ba2c-49ec-befc-f502ff39f2d1"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1375,
+        "cached": 628,
+        "output": 721,
+        "reasoning": 557
+      },
+      "costUsd": 0.0175336,
+      "firstEventMs": 631,
+      "firstOutputMs": 4283,
+      "totalMs": 4792,
+      "rateLimit": {
+        "remainingRequests": 2970,
+        "remainingTokens": 3941796
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:02:02.170Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "9ed3a671-4e74-4e79-a394-66387dfe24d8",
+        "f5a46321-6f90-4834-b639-e6f2bdbd3f83"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "88 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6477,
+        "cached": 3304,
+        "output": 3263,
+        "reasoning": 2678
+      },
+      "costUsd": 0.07861280000000001,
+      "firstEventMs": 691,
+      "firstOutputMs": 18203,
+      "totalMs": 22178,
+      "rateLimit": {
+        "remainingRequests": 2969,
+        "remainingTokens": 3938532
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:02:02.179Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "75ce23e5-1950-4975-8fef-c855b3242fc5"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1401,
+        "cached": 628,
+        "output": 687,
+        "reasoning": 492
+      },
+      "costUsd": 0.0169576,
+      "firstEventMs": 3279,
+      "firstOutputMs": 6222,
+      "totalMs": 6826,
+      "rateLimit": {
+        "remainingRequests": 2970,
+        "remainingTokens": 3941699
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:02:09.005Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "ee6e30d8-79c3-42ff-a684-441890864a68",
+        "998bf21d-1d78-4caf-86c6-fefd75d7dd16"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 4136,
+        "cached": 2920,
+        "output": 827,
+        "reasoning": 545
+      },
+      "costUsd": 0.021988,
+      "firstEventMs": 719,
+      "firstOutputMs": 2448,
+      "totalMs": 6408,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3942534
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:02:15.438Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "3453fac6-c868-40ef-9dfd-b2f63182d73b"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2108,
+        "cached": 884,
+        "output": 1217,
+        "reasoning": 1112
+      },
+      "costUsd": 0.0294128,
+      "firstEventMs": 595,
+      "firstOutputMs": 7951,
+      "totalMs": 8197,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3945662
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:02:23.653Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "01d7bba3-3ee2-4356-bc08-6f365486ac57"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1599,
+        "cached": 628,
+        "output": 1427,
+        "reasoning": 1263
+      },
+      "costUsd": 0.0325496,
+      "firstEventMs": 630,
+      "firstOutputMs": 9463,
+      "totalMs": 9984,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3952694
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:02:33.638Z"
+    },
+    {
+      "step": "revise",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 0,
+      "attempts": 0,
+      "requestIds": [],
+      "toolCalls": [],
+      "usage": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "reasoning": 0
+      },
+      "costUsd": 0,
+      "firstEventMs": null,
+      "firstOutputMs": null,
+      "totalMs": 32914,
+      "rateLimit": null,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "error": "incomplete",
+      "flow": "repair",
+      "at": "2026-11-03T14:03:06.554Z"
+    }
+  ],
+  "endedAt": "2026-11-03T14:03:06.562Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 7,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "61/300",
+          "letter": "88/400"
+        },
+        "afterDraft": {
+          "answer": "61/300",
+          "letter": "88/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": false,
+      "evaluable": false,
+      "detail": {
+        "sentences": 0,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": false,
+      "evaluable": false,
+      "detail": {
+        "reason": "journey did not reach the correction"
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": false,
+      "evaluable": false,
+      "detail": {
+        "reason": "no manual edit recorded"
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": false,
+      "evaluable": false,
+      "detail": {
+        "status": null
+      }
+    },
+    "noServerErrors": {
+      "pass": false,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [
+          "propose the changes: incomplete"
+        ],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": false,
+      "evaluable": false,
+      "detail": {
+        "checked": 0,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 18,
+    "stepRetries": 0,
+    "providerAttempts": 18,
+    "providerTurns": 18,
+    "toolCalls": 15,
+    "receipts": 11,
+    "receiptErrors": 1,
+    "usage": {
+      "input": 39329,
+      "cached": 23720,
+      "output": 13931,
+      "reasoning": 10888
+    },
+    "costReceiptsUsd": 0.34580000000000005,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.743154,
+    "wallMs": 115197,
+    "modelStepMs": {
+      "read the notes": 9675,
+      "check what the form still needs": 10953,
+      "read the answer": 7961,
+      "write both documents": 29011,
+      "read the correcting note": 6413,
+      "propose the changes": 51101
+    },
+    "medianModelStepMs": 10314,
+    "worstModelStep": "propose the changes",
+    "worstModelStepMs": 51101
+  }
+}

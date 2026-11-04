@@ -1,0 +1,45 @@
+recording live-1: main https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/, open https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/ (started 2026-11-04T00:00:58Z)
+01 01-welcome: ok (6.5 s, 124 frames)
+02 02-ana-speaks: ok (14.5 s, 287 frames)
+03 03-check-her-words: ok (10.6 s, 206 frames)
+04 04-reading-her-words: ok (153.0 s, 3060 frames)
+05 05-fact-cards: ok (25.2 s, 506 frames)
+06 06-question-and-answer: ok (39.8 s, 796 frames)
+07 07-answer-facts: ok (87.3 s, 1746 frames)
+08 08-writing: ok (30.9 s, 620 frames)
+09 09-cited-sentence: ok (14.6 s, 293 frames)
+10 10-her-correction: ERROR locator.waitFor: Timeout 30000ms exceeded. (47.8 s, 958 frames)
+--- controls now:
+button "What Meta did: 11 steps, 28 tool calls, 5 min 43 s total model time, $0.397"
+button "Commands (Ctrl K)"
+button "Start again"
+button "Back"
+button "Open the full workspace"
+button "Notes"
+button "Facts"
+button "Question"
+button "Answer"
+h1 "Facts change. Watch what happens."
+h2 "Choose the right account"
+textarea "TEXTAREA"
+button "Use this correction"
+button "Keep the earlier account"
+button "Explain instead"
+button "WHAT META DID muse-voice-transcribe-1.0, muse-wonder-1.0 · 8 runs · 11 steps · 28 tool cal"
+01 o1-open-welcome: ERROR locator.waitFor: Timeout 30000ms exceeded. (33.1 s, 662 frames)
+--- controls now:
+button "Commands (Ctrl K)"
+button "Start again"
+a "North Yorkshire Council’s care advert, captured 3 Nov 2026"
+h2 "Say what you did, in your own language."
+button "Try it with Ana’s written note"
+button "Start at Ana’s key moment"
+button "Start at the key moment"
+button "Try it with Ellie’s notes"
+button "Try it with Marcus’s notes"
+a "ONS, Census 2021"
+summary "Try your own fictional example"
+textarea "TEXTAREA"
+button(disabled) "BUTTON"
+button "WHAT META DID Meta open weight No model calls yet"
+done 2026-11-04T00:08:45Z: main exit 1, open exit 1; footage in ~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-1

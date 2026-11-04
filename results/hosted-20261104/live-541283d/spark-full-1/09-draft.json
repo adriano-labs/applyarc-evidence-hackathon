@@ -1,0 +1,5003 @@
+{
+ "events": [
+  {
+   "type": "stage",
+   "label": "Drafting the supporting evidence",
+   "ms": 1
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 1,
+   "ms": 60
+  },
+  {
+   "type": "stage",
+   "label": "Drafting the cover letter",
+   "ms": 62
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 1,
+   "ms": 133
+  },
+  {
+   "type": "model",
+   "ms": 474,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "ms": 774,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 35926
+  },
+  {
+   "type": "model",
+   "chars": 10,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 35955
+  },
+  {
+   "type": "model",
+   "chars": 12,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36069
+  },
+  {
+   "type": "model",
+   "chars": 20,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36100
+  },
+  {
+   "type": "model",
+   "chars": 29,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36128
+  },
+  {
+   "type": "model",
+   "chars": 54,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36154
+  },
+  {
+   "type": "model",
+   "chars": 88,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36182
+  },
+  {
+   "type": "model",
+   "chars": 100,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36208
+  },
+  {
+   "type": "model",
+   "chars": 131,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36237
+  },
+  {
+   "type": "model",
+   "chars": 140,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36292
+  },
+  {
+   "type": "model",
+   "chars": 144,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36293
+  },
+  {
+   "type": "model",
+   "chars": 166,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36316
+  },
+  {
+   "type": "model",
+   "chars": 185,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36462
+  },
+  {
+   "type": "model",
+   "chars": 217,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36517
+  },
+  {
+   "type": "model",
+   "chars": 240,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36564
+  },
+  {
+   "type": "model",
+   "chars": 278,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36610
+  },
+  {
+   "type": "model",
+   "chars": 321,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36656
+  },
+  {
+   "type": "model",
+   "chars": 367,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36704
+  },
+  {
+   "type": "model",
+   "chars": 386,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36751
+  },
+  {
+   "type": "model",
+   "chars": 401,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36776
+  },
+  {
+   "type": "model",
+   "chars": 435,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36803
+  },
+  {
+   "type": "model",
+   "chars": 456,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36830
+  },
+  {
+   "type": "model",
+   "chars": 465,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36857
+  },
+  {
+   "type": "model",
+   "chars": 477,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36884
+  },
+  {
+   "type": "model",
+   "chars": 520,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36912
+  },
+  {
+   "type": "model",
+   "chars": 550,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36938
+  },
+  {
+   "type": "model",
+   "chars": 592,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36965
+  },
+  {
+   "type": "model",
+   "chars": 622,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 36993
+  },
+  {
+   "type": "model",
+   "chars": 637,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37023
+  },
+  {
+   "type": "model",
+   "chars": 651,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37049
+  },
+  {
+   "type": "model",
+   "chars": 684,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37076
+  },
+  {
+   "type": "model",
+   "chars": 707,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37104
+  },
+  {
+   "type": "model",
+   "chars": 731,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37132
+  },
+  {
+   "type": "model",
+   "chars": 756,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37160
+  },
+  {
+   "type": "model",
+   "chars": 788,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37184
+  },
+  {
+   "type": "model",
+   "chars": 827,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37211
+  },
+  {
+   "type": "model",
+   "chars": 843,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37239
+  },
+  {
+   "type": "model",
+   "chars": 875,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37267
+  },
+  {
+   "type": "model",
+   "chars": 899,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37294
+  },
+  {
+   "type": "model",
+   "chars": 937,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37321
+  },
+  {
+   "type": "model",
+   "chars": 969,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37350
+  },
+  {
+   "type": "model",
+   "chars": 996,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37377
+  },
+  {
+   "type": "model",
+   "chars": 1028,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37401
+  },
+  {
+   "type": "model",
+   "chars": 1058,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37425
+  },
+  {
+   "type": "model",
+   "chars": 1080,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37450
+  },
+  {
+   "type": "model",
+   "chars": 1114,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37476
+  },
+  {
+   "type": "model",
+   "chars": 1148,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37499
+  },
+  {
+   "type": "model",
+   "chars": 1189,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37522
+  },
+  {
+   "type": "model",
+   "chars": 1216,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37547
+  },
+  {
+   "type": "model",
+   "chars": 1241,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37574
+  },
+  {
+   "type": "model",
+   "chars": 1270,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37597
+  },
+  {
+   "type": "model",
+   "chars": 1288,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37622
+  },
+  {
+   "type": "model",
+   "chars": 1334,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37652
+  },
+  {
+   "type": "model",
+   "chars": 1353,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37671
+  },
+  {
+   "type": "model",
+   "chars": 1386,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37695
+  },
+  {
+   "type": "model",
+   "chars": 1409,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37721
+  },
+  {
+   "type": "model",
+   "chars": 1422,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37746
+  },
+  {
+   "type": "model",
+   "chars": 1461,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37770
+  },
+  {
+   "type": "model",
+   "chars": 1468,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37796
+  },
+  {
+   "type": "model",
+   "chars": 1482,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37820
+  },
+  {
+   "type": "model",
+   "chars": 1501,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37845
+  },
+  {
+   "type": "model",
+   "chars": 1534,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37875
+  },
+  {
+   "type": "model",
+   "chars": 1557,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37894
+  },
+  {
+   "type": "model",
+   "chars": 1576,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37918
+  },
+  {
+   "type": "model",
+   "chars": 1596,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37943
+  },
+  {
+   "type": "model",
+   "chars": 1643,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37968
+  },
+  {
+   "type": "model",
+   "chars": 1662,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 37992
+  },
+  {
+   "type": "model",
+   "chars": 1695,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38018
+  },
+  {
+   "type": "model",
+   "chars": 1718,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38042
+  },
+  {
+   "type": "model",
+   "chars": 1754,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38069
+  },
+  {
+   "type": "model",
+   "chars": 1783,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38092
+  },
+  {
+   "type": "model",
+   "chars": 1812,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38116
+  },
+  {
+   "type": "model",
+   "chars": 1834,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38143
+  },
+  {
+   "type": "model",
+   "chars": 1864,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38165
+  },
+  {
+   "type": "model",
+   "chars": 1904,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38190
+  },
+  {
+   "type": "model",
+   "chars": 1933,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38215
+  },
+  {
+   "type": "model",
+   "chars": 1960,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38256
+  },
+  {
+   "type": "model",
+   "chars": 1986,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38264
+  },
+  {
+   "type": "model",
+   "chars": 2003,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38289
+  },
+  {
+   "type": "model",
+   "chars": 2026,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38314
+  },
+  {
+   "type": "model",
+   "chars": 2057,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38340
+  },
+  {
+   "type": "model",
+   "chars": 2069,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38364
+  },
+  {
+   "type": "model",
+   "chars": 2077,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38389
+  },
+  {
+   "type": "model",
+   "chars": 2096,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38417
+  },
+  {
+   "type": "model",
+   "chars": 2127,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38440
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 1,
+   "ms": 38526
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "draft",
+    "docId": "answer",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "c8b08a16e84d481fb4504e1103d6a2b8"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 2915,
+     "cached": 0,
+     "output": 3803,
+     "reasoning": 0
+    },
+    "costUsd": 0.0198065,
+    "firstEventMs": 413,
+    "firstOutputMs": 35865,
+    "totalMs": 38525,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 38541
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 38543
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 38610
+  },
+  {
+   "type": "model",
+   "ms": 39527,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39824
+  },
+  {
+   "type": "model",
+   "chars": 3,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39847
+  },
+  {
+   "type": "model",
+   "chars": 4,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39871
+  },
+  {
+   "type": "model",
+   "chars": 10,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39894
+  },
+  {
+   "type": "model",
+   "chars": 12,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39917
+  },
+  {
+   "type": "model",
+   "chars": 16,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39940
+  },
+  {
+   "type": "model",
+   "chars": 20,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39964
+  },
+  {
+   "type": "model",
+   "chars": 31,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 39987
+  },
+  {
+   "type": "model",
+   "chars": 69,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40010
+  },
+  {
+   "type": "model",
+   "chars": 90,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40034
+  },
+  {
+   "type": "model",
+   "chars": 99,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40057
+  },
+  {
+   "type": "model",
+   "chars": 132,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40080
+  },
+  {
+   "type": "model",
+   "chars": 153,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40103
+  },
+  {
+   "type": "model",
+   "chars": 191,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40127
+  },
+  {
+   "type": "model",
+   "chars": 235,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40150
+  },
+  {
+   "type": "model",
+   "chars": 267,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40174
+  },
+  {
+   "type": "model",
+   "chars": 292,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40197
+  },
+  {
+   "type": "model",
+   "chars": 319,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40221
+  },
+  {
+   "type": "model",
+   "chars": 355,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40244
+  },
+  {
+   "type": "model",
+   "chars": 382,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40267
+  },
+  {
+   "type": "model",
+   "chars": 401,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40290
+  },
+  {
+   "type": "model",
+   "chars": 433,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40314
+  },
+  {
+   "type": "model",
+   "chars": 456,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40337
+  },
+  {
+   "type": "model",
+   "chars": 493,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40361
+  },
+  {
+   "type": "model",
+   "chars": 539,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40385
+  },
+  {
+   "type": "model",
+   "chars": 558,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40408
+  },
+  {
+   "type": "model",
+   "chars": 590,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40431
+  },
+  {
+   "type": "model",
+   "chars": 613,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40454
+  },
+  {
+   "type": "model",
+   "chars": 654,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40478
+  },
+  {
+   "type": "model",
+   "chars": 679,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40502
+  },
+  {
+   "type": "model",
+   "chars": 700,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40525
+  },
+  {
+   "type": "model",
+   "chars": 730,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40549
+  },
+  {
+   "type": "model",
+   "chars": 756,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40572
+  },
+  {
+   "type": "model",
+   "chars": 799,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40595
+  },
+  {
+   "type": "model",
+   "chars": 831,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40618
+  },
+  {
+   "type": "model",
+   "chars": 855,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40641
+  },
+  {
+   "type": "model",
+   "chars": 880,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40664
+  },
+  {
+   "type": "model",
+   "chars": 912,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40687
+  },
+  {
+   "type": "model",
+   "chars": 920,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40710
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 1,
+   "ms": 40801
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "draft",
+    "docId": "letter",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "01e5b4c86a5e4515a7f53f3d53e48066"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 2513,
+     "cached": 0,
+     "output": 4106,
+     "reasoning": 0
+    },
+    "costUsd": 0.02059175,
+    "firstEventMs": 641,
+    "firstOutputMs": 39691,
+    "totalMs": 40739,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 40818
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 40819
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 40882
+  },
+  {
+   "type": "model",
+   "ms": 41195,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 46629
+  },
+  {
+   "type": "model",
+   "chars": 18,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 46654
+  },
+  {
+   "type": "model",
+   "chars": 29,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 46684
+  },
+  {
+   "type": "model",
+   "chars": 62,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 46704
+  },
+  {
+   "type": "model",
+   "chars": 74,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 46728
+  },
+  {
+   "type": "model",
+   "chars": 126,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47242
+  },
+  {
+   "type": "model",
+   "chars": 134,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47281
+  },
+  {
+   "type": "model",
+   "chars": 149,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47306
+  },
+  {
+   "type": "model",
+   "chars": 160,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47330
+  },
+  {
+   "type": "model",
+   "chars": 193,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47353
+  },
+  {
+   "type": "model",
+   "chars": 213,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47378
+  },
+  {
+   "type": "model",
+   "chars": 248,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47402
+  },
+  {
+   "type": "model",
+   "chars": 276,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47427
+  },
+  {
+   "type": "model",
+   "chars": 321,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47451
+  },
+  {
+   "type": "model",
+   "chars": 347,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47475
+  },
+  {
+   "type": "model",
+   "chars": 383,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47500
+  },
+  {
+   "type": "model",
+   "chars": 389,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47524
+  },
+  {
+   "type": "model",
+   "chars": 451,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47549
+  },
+  {
+   "type": "model",
+   "chars": 465,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47573
+  },
+  {
+   "type": "model",
+   "chars": 469,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47597
+  },
+  {
+   "type": "model",
+   "chars": 478,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47622
+  },
+  {
+   "type": "model",
+   "chars": 480,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 47647
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 47713
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "0b66f13d62644e1eadb07bdd90f3ad9c"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 1735,
+     "cached": 0,
+     "output": 640,
+     "reasoning": 0
+    },
+    "costUsd": 0.00488875,
+    "firstEventMs": 313,
+    "firstOutputMs": 5747,
+    "totalMs": 6894,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 47729
+  },
+  {
+   "type": "stage",
+   "decision": true,
+   "label": "Adding your own contribution to the letter",
+   "ms": 47740
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 1,
+   "ms": 47802
+  },
+  {
+   "type": "model",
+   "ms": 48542,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 5,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60315
+  },
+  {
+   "type": "model",
+   "chars": 13,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60339
+  },
+  {
+   "type": "model",
+   "chars": 21,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60364
+  },
+  {
+   "type": "model",
+   "chars": 32,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60389
+  },
+  {
+   "type": "model",
+   "chars": 59,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60414
+  },
+  {
+   "type": "model",
+   "chars": 68,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60439
+  },
+  {
+   "type": "model",
+   "chars": 82,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60464
+  },
+  {
+   "type": "model",
+   "chars": 88,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60489
+  },
+  {
+   "type": "model",
+   "chars": 119,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60535
+  },
+  {
+   "type": "model",
+   "chars": 143,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60564
+  },
+  {
+   "type": "model",
+   "chars": 153,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60589
+  },
+  {
+   "type": "model",
+   "chars": 185,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60614
+  },
+  {
+   "type": "model",
+   "chars": 200,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60639
+  },
+  {
+   "type": "model",
+   "chars": 230,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60663
+  },
+  {
+   "type": "model",
+   "chars": 238,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60686
+  },
+  {
+   "type": "model",
+   "chars": 246,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60709
+  },
+  {
+   "type": "model",
+   "chars": 248,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60732
+  },
+  {
+   "type": "model",
+   "chars": 285,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60755
+  },
+  {
+   "type": "model",
+   "chars": 318,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60826
+  },
+  {
+   "type": "model",
+   "chars": 331,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60831
+  },
+  {
+   "type": "model",
+   "chars": 352,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60854
+  },
+  {
+   "type": "model",
+   "chars": 377,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60877
+  },
+  {
+   "type": "model",
+   "chars": 394,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60900
+  },
+  {
+   "type": "model",
+   "chars": 400,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60924
+  },
+  {
+   "type": "model",
+   "chars": 406,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60946
+  },
+  {
+   "type": "model",
+   "chars": 429,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60969
+  },
+  {
+   "type": "model",
+   "chars": 455,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 60992
+  },
+  {
+   "type": "model",
+   "chars": 471,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61015
+  },
+  {
+   "type": "model",
+   "chars": 475,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61037
+  },
+  {
+   "type": "model",
+   "chars": 492,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61060
+  },
+  {
+   "type": "model",
+   "chars": 516,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61084
+  },
+  {
+   "type": "model",
+   "chars": 531,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61107
+  },
+  {
+   "type": "model",
+   "chars": 555,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61130
+  },
+  {
+   "type": "model",
+   "chars": 575,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61154
+  },
+  {
+   "type": "model",
+   "chars": 587,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61176
+  },
+  {
+   "type": "model",
+   "chars": 620,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61200
+  },
+  {
+   "type": "model",
+   "chars": 623,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61223
+  },
+  {
+   "type": "model",
+   "chars": 629,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61245
+  },
+  {
+   "type": "model",
+   "chars": 630,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61269
+  },
+  {
+   "type": "model",
+   "chars": 637,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61292
+  },
+  {
+   "type": "model",
+   "chars": 671,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61315
+  },
+  {
+   "type": "model",
+   "chars": 686,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61338
+  },
+  {
+   "type": "model",
+   "chars": 712,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61361
+  },
+  {
+   "type": "model",
+   "chars": 737,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61384
+  },
+  {
+   "type": "model",
+   "chars": 759,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61407
+  },
+  {
+   "type": "model",
+   "chars": 785,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61430
+  },
+  {
+   "type": "model",
+   "chars": 791,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61453
+  },
+  {
+   "type": "model",
+   "chars": 817,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61477
+  },
+  {
+   "type": "model",
+   "chars": 832,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61500
+  },
+  {
+   "type": "model",
+   "chars": 858,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61524
+  },
+  {
+   "type": "model",
+   "chars": 884,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61552
+  },
+  {
+   "type": "model",
+   "chars": 891,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61571
+  },
+  {
+   "type": "model",
+   "chars": 923,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61593
+  },
+  {
+   "type": "model",
+   "chars": 935,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61617
+  },
+  {
+   "type": "model",
+   "chars": 950,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61641
+  },
+  {
+   "type": "model",
+   "chars": 976,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61664
+  },
+  {
+   "type": "model",
+   "chars": 1006,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61687
+  },
+  {
+   "type": "model",
+   "chars": 1051,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61710
+  },
+  {
+   "type": "model",
+   "chars": 1075,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61734
+  },
+  {
+   "type": "model",
+   "chars": 1100,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61757
+  },
+  {
+   "type": "model",
+   "chars": 1127,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61780
+  },
+  {
+   "type": "model",
+   "chars": 1147,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61805
+  },
+  {
+   "type": "model",
+   "chars": 1164,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61848
+  },
+  {
+   "type": "model",
+   "chars": 1198,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61875
+  },
+  {
+   "type": "model",
+   "chars": 1213,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61899
+  },
+  {
+   "type": "model",
+   "chars": 1243,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61921
+  },
+  {
+   "type": "model",
+   "chars": 1287,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61944
+  },
+  {
+   "type": "model",
+   "chars": 1330,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61967
+  },
+  {
+   "type": "model",
+   "chars": 1354,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 61991
+  },
+  {
+   "type": "model",
+   "chars": 1372,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62014
+  },
+  {
+   "type": "model",
+   "chars": 1397,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62038
+  },
+  {
+   "type": "model",
+   "chars": 1436,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62061
+  },
+  {
+   "type": "model",
+   "chars": 1467,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62085
+  },
+  {
+   "type": "model",
+   "chars": 1499,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62107
+  },
+  {
+   "type": "model",
+   "chars": 1517,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62131
+  },
+  {
+   "type": "model",
+   "chars": 1544,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62176
+  },
+  {
+   "type": "model",
+   "chars": 1567,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62203
+  },
+  {
+   "type": "model",
+   "chars": 1585,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62227
+  },
+  {
+   "type": "model",
+   "chars": 1595,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62250
+  },
+  {
+   "type": "model",
+   "chars": 1600,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62276
+  },
+  {
+   "type": "model",
+   "chars": 1616,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62299
+  },
+  {
+   "type": "model",
+   "chars": 1621,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62322
+  },
+  {
+   "type": "model",
+   "chars": 1637,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62347
+  },
+  {
+   "type": "model",
+   "chars": 1661,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62371
+  },
+  {
+   "type": "model",
+   "chars": 1696,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62394
+  },
+  {
+   "type": "model",
+   "chars": 1732,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62417
+  },
+  {
+   "type": "model",
+   "chars": 1740,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62441
+  },
+  {
+   "type": "model",
+   "chars": 1743,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62465
+  },
+  {
+   "type": "model",
+   "chars": 1765,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62490
+  },
+  {
+   "type": "model",
+   "chars": 1778,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 62512
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 62615
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "f18eda212be34303914690906db72914"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 4684,
+     "cached": 0,
+     "output": 2257,
+     "reasoning": 0
+    },
+    "costUsd": 0.01544725,
+    "firstEventMs": 917,
+    "firstOutputMs": 21705,
+    "totalMs": 24072,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 62633
+  },
+  {
+   "type": "stage",
+   "decision": true,
+   "label": "Revising 4 unsupported sentences",
+   "ms": 62651
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "revise",
+   "turn": 1,
+   "ms": 62722
+  },
+  {
+   "type": "model",
+   "ms": 63363,
+   "event": "first-event",
+   "step": "revise",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 3,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68176
+  },
+  {
+   "type": "model",
+   "chars": 4,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68196
+  },
+  {
+   "type": "model",
+   "chars": 10,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68215
+  },
+  {
+   "type": "model",
+   "chars": 19,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68237
+  },
+  {
+   "type": "model",
+   "chars": 41,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68256
+  },
+  {
+   "type": "model",
+   "chars": 85,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68275
+  },
+  {
+   "type": "model",
+   "chars": 94,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68294
+  },
+  {
+   "type": "model",
+   "chars": 131,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68315
+  },
+  {
+   "type": "model",
+   "chars": 162,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68344
+  },
+  {
+   "type": "model",
+   "chars": 210,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68353
+  },
+  {
+   "type": "model",
+   "chars": 222,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 68622
+  },
+  {
+   "type": "model",
+   "chars": 10,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71165
+  },
+  {
+   "type": "model",
+   "chars": 38,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71188
+  },
+  {
+   "type": "model",
+   "chars": 72,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71214
+  },
+  {
+   "type": "model",
+   "chars": 105,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71238
+  },
+  {
+   "type": "model",
+   "chars": 133,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71259
+  },
+  {
+   "type": "model",
+   "chars": 141,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71282
+  },
+  {
+   "type": "model",
+   "chars": 167,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71306
+  },
+  {
+   "type": "model",
+   "chars": 193,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71330
+  },
+  {
+   "type": "model",
+   "chars": 227,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71353
+  },
+  {
+   "type": "model",
+   "chars": 270,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71376
+  },
+  {
+   "type": "model",
+   "chars": 290,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71399
+  },
+  {
+   "type": "model",
+   "chars": 296,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71422
+  },
+  {
+   "type": "model",
+   "chars": 321,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71445
+  },
+  {
+   "type": "model",
+   "chars": 357,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71469
+  },
+  {
+   "type": "model",
+   "chars": 382,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71492
+  },
+  {
+   "type": "model",
+   "chars": 416,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71515
+  },
+  {
+   "type": "model",
+   "chars": 450,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71538
+  },
+  {
+   "type": "model",
+   "chars": 457,
+   "event": "delta",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71561
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "revise",
+   "turn": 1,
+   "ms": 71632
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "revise",
+    "docId": "answer",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "bb6f0369e849406496c291c823da8420"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 2116,
+     "cached": 0,
+     "output": 1059,
+     "reasoning": 0
+    },
+    "costUsd": 0.00714575,
+    "firstEventMs": 641,
+    "firstOutputMs": 8443,
+    "totalMs": 8981,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 71652
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 71653
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 71715
+  },
+  {
+   "type": "model",
+   "ms": 74419,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 260,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75741
+  },
+  {
+   "type": "model",
+   "chars": 288,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75764
+  },
+  {
+   "type": "model",
+   "chars": 326,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75787
+  },
+  {
+   "type": "model",
+   "chars": 360,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75811
+  },
+  {
+   "type": "model",
+   "chars": 382,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75834
+  },
+  {
+   "type": "model",
+   "chars": 419,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75858
+  },
+  {
+   "type": "model",
+   "chars": 459,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75881
+  },
+  {
+   "type": "model",
+   "chars": 504,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75905
+  },
+  {
+   "type": "model",
+   "chars": 533,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75929
+  },
+  {
+   "type": "model",
+   "chars": 569,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75951
+  },
+  {
+   "type": "model",
+   "chars": 601,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75975
+  },
+  {
+   "type": "model",
+   "chars": 639,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 75998
+  },
+  {
+   "type": "model",
+   "chars": 666,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76021
+  },
+  {
+   "type": "model",
+   "chars": 701,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76045
+  },
+  {
+   "type": "model",
+   "chars": 735,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76069
+  },
+  {
+   "type": "model",
+   "chars": 769,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76093
+  },
+  {
+   "type": "model",
+   "chars": 806,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76116
+  },
+  {
+   "type": "model",
+   "chars": 846,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76140
+  },
+  {
+   "type": "model",
+   "chars": 893,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76164
+  },
+  {
+   "type": "model",
+   "chars": 922,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76184
+  },
+  {
+   "type": "model",
+   "chars": 948,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76204
+  },
+  {
+   "type": "model",
+   "chars": 985,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76225
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 1,
+   "ms": 76346
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "draft",
+    "docId": "letter",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "5e579799ce594e9098539e261e47baf1"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 2637,
+     "cached": 0,
+     "output": 2704,
+     "reasoning": 0
+    },
+    "costUsd": 0.01478825,
+    "firstEventMs": 740,
+    "firstOutputMs": 20374,
+    "totalMs": 28606,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 76363
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 76363
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 76427
+  },
+  {
+   "type": "model",
+   "ms": 77050,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78156
+  },
+  {
+   "type": "model",
+   "chars": 5,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78174
+  },
+  {
+   "type": "model",
+   "chars": 18,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78192
+  },
+  {
+   "type": "model",
+   "chars": 29,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78210
+  },
+  {
+   "type": "model",
+   "chars": 75,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78228
+  },
+  {
+   "type": "model",
+   "chars": 82,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78245
+  },
+  {
+   "type": "model",
+   "chars": 93,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78263
+  },
+  {
+   "type": "model",
+   "chars": 115,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78280
+  },
+  {
+   "type": "model",
+   "chars": 122,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78299
+  },
+  {
+   "type": "model",
+   "chars": 149,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78317
+  },
+  {
+   "type": "model",
+   "chars": 181,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78335
+  },
+  {
+   "type": "model",
+   "chars": 188,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78353
+  },
+  {
+   "type": "model",
+   "chars": 210,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78370
+  },
+  {
+   "type": "model",
+   "chars": 222,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78388
+  },
+  {
+   "type": "model",
+   "chars": 255,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78406
+  },
+  {
+   "type": "model",
+   "chars": 258,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78424
+  },
+  {
+   "type": "model",
+   "chars": 293,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78441
+  },
+  {
+   "type": "model",
+   "chars": 325,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78460
+  },
+  {
+   "type": "model",
+   "chars": 357,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78478
+  },
+  {
+   "type": "model",
+   "chars": 386,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78496
+  },
+  {
+   "type": "model",
+   "chars": 399,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78514
+  },
+  {
+   "type": "model",
+   "chars": 415,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78532
+  },
+  {
+   "type": "model",
+   "chars": 449,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78550
+  },
+  {
+   "type": "model",
+   "chars": 474,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78567
+  },
+  {
+   "type": "model",
+   "chars": 521,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78586
+  },
+  {
+   "type": "model",
+   "chars": 526,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 78604
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 78698
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "7cc064e64ceb448e843081e8e849a465"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 2234,
+     "cached": 0,
+     "output": 752,
+     "reasoning": 0
+    },
+    "costUsd": 0.0059885,
+    "firstEventMs": 2704,
+    "firstOutputMs": 6441,
+    "totalMs": 7045,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 78714
+  },
+  {
+   "type": "document-ready",
+   "docId": "answer",
+   "title": "Supporting evidence",
+   "segments": [
+    {
+     "id": "answer-1",
+     "kind": "claim",
+     "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+     "factIds": [
+      "f1"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-2",
+     "kind": "claim",
+     "text": "For me dignity means knocking before entering, explaining what I will do before personal care, and always closing curtains.",
+     "factIds": [
+      "f13",
+      "f14",
+      "f15"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-3",
+     "kind": "claim",
+     "text": "I respect each person's culture and religion by asking what they want to eat, how they want to be treated, and whether they prefer being helped by a woman.",
+     "factIds": [
+      "f16",
+      "f17",
+      "f18",
+      "f19"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-4",
+     "kind": "claim",
+     "text": "One night I saw a bruise on a resident's arm, and I recorded it and told the nurse on duty immediately.",
+     "factIds": [
+      "f10",
+      "f11"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-5",
+     "kind": "claim",
+     "text": "In the dementia unit the residents were agitated at the end of the day, so we as a team moved dinner earlier.",
+     "factIds": [
+      "f7"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-6",
+     "kind": "claim",
+     "text": "I have moving and handling training and I use the hoist when supporting residents to move.",
+     "factIds": [
+      "f5"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-7",
+     "kind": "claim",
+     "text": "I have medication training and I do the morning medication round for 18 residents.",
+     "factIds": [
+      "f2"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-8",
+     "kind": "claim",
+     "text": "Before each shift I read each resident's care plan and do what is there.",
+     "factIds": [
+      "f4"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-9",
+     "kind": "claim",
+     "text": "At the end of the shift I write daily notes in English and sign the medication sheet.",
+     "factIds": [
+      "f3"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-10",
+     "kind": "claim",
+     "text": "We always work in pairs.",
+     "factIds": [
+      "f6"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-11",
+     "kind": "claim",
+     "text": "I made cards with food photos so each person can point to what they want to eat.",
+     "factIds": [
+      "f8"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-12",
+     "kind": "claim",
+     "text": "I did three years of nights, and also weekends.",
+     "factIds": [
+      "f9"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    }
+   ],
+   "ms": 78718
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87293
+  },
+  {
+   "type": "model",
+   "chars": 5,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87314
+  },
+  {
+   "type": "model",
+   "chars": 18,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87336
+  },
+  {
+   "type": "model",
+   "chars": 29,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87355
+  },
+  {
+   "type": "model",
+   "chars": 64,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87375
+  },
+  {
+   "type": "model",
+   "chars": 80,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87395
+  },
+  {
+   "type": "model",
+   "chars": 102,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87415
+  },
+  {
+   "type": "model",
+   "chars": 110,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87435
+  },
+  {
+   "type": "model",
+   "chars": 137,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87455
+  },
+  {
+   "type": "model",
+   "chars": 155,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87476
+  },
+  {
+   "type": "model",
+   "chars": 174,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87496
+  },
+  {
+   "type": "model",
+   "chars": 207,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87519
+  },
+  {
+   "type": "model",
+   "chars": 253,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87539
+  },
+  {
+   "type": "model",
+   "chars": 290,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87558
+  },
+  {
+   "type": "model",
+   "chars": 311,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87579
+  },
+  {
+   "type": "model",
+   "chars": 356,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87600
+  },
+  {
+   "type": "model",
+   "chars": 363,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87621
+  },
+  {
+   "type": "model",
+   "chars": 409,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87651
+  },
+  {
+   "type": "model",
+   "chars": 414,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87660
+  },
+  {
+   "type": "model",
+   "chars": 416,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 87925
+  },
+  {
+   "type": "model",
+   "chars": 417,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89835
+  },
+  {
+   "type": "model",
+   "chars": 423,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89859
+  },
+  {
+   "type": "model",
+   "chars": 431,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89883
+  },
+  {
+   "type": "model",
+   "chars": 451,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89907
+  },
+  {
+   "type": "model",
+   "chars": 491,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89930
+  },
+  {
+   "type": "model",
+   "chars": 514,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89964
+  },
+  {
+   "type": "model",
+   "chars": 547,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 89978
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 90082
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "compatible",
+    "isMeta": true,
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "3cc1d49942074a038465d0879567d4f2"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 1855,
+     "cached": 0,
+     "output": 722,
+     "reasoning": 0
+    },
+    "costUsd": 0.00538725,
+    "firstEventMs": 623,
+    "firstOutputMs": 10866,
+    "totalMs": 13719,
+    "rateLimit": {
+     "remainingRequests": null,
+     "remainingTokens": null
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 90098
+  },
+  {
+   "type": "stage",
+   "decision": true,
+   "label": "Keeping the checked draft; the writing suggestion remains",
+   "ms": 90114
+  },
+  {
+   "type": "document-ready",
+   "docId": "letter",
+   "title": "Cover letter",
+   "segments": [
+    {
+     "id": "letter-1",
+     "kind": "frame",
+     "text": "Dear North Yorkshire Council hiring team,",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-2",
+     "kind": "frame",
+     "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-3",
+     "kind": "claim",
+     "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+     "factIds": [
+      "f1"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-4",
+     "kind": "claim",
+     "text": "I have medication training and I do the morning medication round for 18 residents.",
+     "factIds": [
+      "f2"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-5",
+     "kind": "claim",
+     "text": "I have moving and handling training and I use the hoist.",
+     "factIds": [
+      "f5"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-6",
+     "kind": "frame",
+     "text": "Thank you for considering my application.",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-7",
+     "kind": "frame",
+     "text": "Kind regards, Ana",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    }
+   ],
+   "ms": 90114
+  },
+  {
+   "type": "stage",
+   "label": "Checking the word counts",
+   "ms": 90114
+  },
+  {
+   "type": "done",
+   "workspace": {
+    "schema": 1,
+    "revision": 8,
+    "createdAt": "2026-11-04T13:24:51.506Z",
+    "applicant": {
+     "name": "Ana",
+     "sources": [
+      {
+       "id": "s1",
+       "kind": "notes",
+       "text": "Chamo-me Ana. Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+       "at": "2026-11-04T13:24:51.656Z",
+       "language": "pt-PT",
+       "read": true
+      },
+      {
+       "id": "s2",
+       "kind": "answer",
+       "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+       "at": "2026-11-04T13:25:14.135Z",
+       "questionId": "q1",
+       "language": "pt-PT",
+       "read": true
+      }
+     ],
+     "facts": [
+      {
+       "id": "f1",
+       "statement": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+       "quote": "Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f2",
+       "statement": "I have medication training and I do the morning medication round for 18 residents.",
+       "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f3",
+       "statement": "At the end of shift I write daily notes in English and sign the medication sheet.",
+       "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f4",
+       "statement": "Before shift I read each resident's care plan and do what is there.",
+       "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f5",
+       "statement": "I have moving and handling training and I use the hoist.",
+       "quote": "Tenho a formação de moving and handling, uso a grua",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f6",
+       "statement": "We always work in pairs.",
+       "quote": "trabalhamos sempre em dupla.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "team"
+      },
+      {
+       "id": "f7",
+       "statement": "In dementia unit residents were agitated at end of day, so we all moved dinner earlier.",
+       "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "team"
+      },
+      {
+       "id": "f8",
+       "statement": "I made cards with food photos so each person can point to what they want to eat.",
+       "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f9",
+       "statement": "I did three years of nights, and also weekends.",
+       "quote": "Fiz três anos de noites, e também fins de semana.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f10",
+       "statement": "One night I saw a bruise on a resident's arm.",
+       "quote": "Uma noite, vi uma nódoa negra no braço de uma residente.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f11",
+       "statement": "I recorded and told the nurse on duty immediately,",
+       "quote": "Registei e contei logo à enfermeira de serviço,",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f12",
+       "statement": "She made the safeguarding report.",
+       "quote": "ela fez a participação de safeguarding.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "other"
+      },
+      {
+       "id": "f13",
+       "statement": "I believe dignity is knocking before entering",
+       "quote": "Para mim, dignidade é bater à porta antes de entrar,",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f14",
+       "statement": "I explain what I will do before personal care",
+       "quote": "explicar o que vou fazer antes da higiene pessoal",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f15",
+       "statement": "I always close curtains",
+       "quote": "fechar sempre as cortinas.",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f16",
+       "statement": "I respect each person's culture and religion",
+       "quote": "respeito a cultura e a religião de cada pessoa:",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f17",
+       "statement": "I ask what they want to eat",
+       "quote": "pergunto o que quer comer,",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f18",
+       "statement": "I ask how they want to be treated",
+       "quote": "como quer ser tratada",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f19",
+       "statement": "I ask if they prefer being helped by a woman",
+       "quote": "se prefere ser ajudada por uma mulher.",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      }
+     ]
+    },
+    "application": {
+     "form": {
+      "id": "north-yorkshire-council-care-and-support-worker-476577",
+      "company": "North Yorkshire Council",
+      "role": "Care and Support Worker",
+      "location": "Leyburn, North Yorkshire, UK",
+      "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+      "snapshot": {
+       "source": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+       "fetchedAt": "2026-11-03T19:09:48Z",
+       "postingUpdatedAt": "2026-11-03",
+       "note": "Public North Yorkshire Council advert (posted 03/11/2026, closing 16/11/2026), captured once during the event with its attached job description and person specification (fetched 2026-11-03T19:10:04Z). Used without partnership: the council is an example, not a partner or endorser. Points quote the person specification word for word, with whitespace tidied."
+      },
+      "documents": [
+       {
+        "id": "answer",
+        "title": "Supporting evidence",
+        "fieldId": null,
+        "question": "Supporting evidence (application form). The council's advice: \"refer to the job profile in the 'supporting evidence' section so the hiring manager can see relevant examples of the qualities they are looking for\". The job profile adds: \"You should use this information to make the best of your application by identifying some specific pieces of work you may have undertaken in any of these areas.\"",
+        "wordLimit": 500,
+        "requirements": [
+         {
+          "id": "dignity",
+          "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+          "personal": true,
+          "direct": true
+         },
+         {
+          "id": "safe",
+          "text": "Knowledge of keeping people safe from harm or abuse."
+         },
+         {
+          "id": "conditions",
+          "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+         },
+         {
+          "id": "moving",
+          "text": "Experience of moving & handling people."
+         },
+         {
+          "id": "medication",
+          "text": "Experience of Administration of Medication"
+         },
+         {
+          "id": "plans",
+          "text": "Ability to understand health care and social care assessments and support plans."
+         },
+         {
+          "id": "records",
+          "text": "Ability to complete daily and medication record sheets"
+         },
+         {
+          "id": "team",
+          "text": "Ability to work with others in a team."
+         },
+         {
+          "id": "initiative",
+          "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+          "personal": true
+         },
+         {
+          "id": "rota",
+          "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service"
+         }
+        ],
+        "limitSource": "guide",
+        "limitNote": "The advert, job description and council advice state no word limit; 500 words is a working guide for this demo, not the council's limit."
+       },
+       {
+        "id": "letter",
+        "title": "Cover letter",
+        "fieldId": null,
+        "required": false,
+        "question": "Cover letter (not requested by this advert; optional, prepared for the applicant only from her confirmed experience)",
+        "wordLimit": 350,
+        "requirements": [
+         {
+          "id": "evidence",
+          "text": "The experience that shows you can do the job"
+         }
+        ],
+        "limitSource": "guide",
+        "limitNote": "The council asks for supporting evidence, not a letter; 350 words keeps a letter to one page. It asks only for her experience, so it never invents a motive she did not state."
+       }
+      ],
+      "portalTasks": [
+       "Create an account: Title, First name, Last name, Email address, Password",
+       "Enhanced Level DBS Disclosure (required for appointment)",
+       "The rest of the council's application form sits behind the account and was not opened"
+      ]
+     },
+     "coverage": {
+      "safe": [
+       "f10",
+       "f11"
+      ],
+      "conditions": [
+       "f7"
+      ],
+      "moving": [
+       "f5"
+      ],
+      "medication": [
+       "f2"
+      ],
+      "plans": [
+       "f4"
+      ],
+      "records": [
+       "f3"
+      ],
+      "team": [
+       "f6",
+       "f7"
+      ],
+      "initiative": [
+       "f8"
+      ],
+      "rota": [
+       "f9"
+      ],
+      "evidence": [
+       "f1",
+       "f2",
+       "f5"
+      ],
+      "dignity": [
+       "f13",
+       "f14",
+       "f15",
+       "f16",
+       "f17",
+       "f18",
+       "f19"
+      ]
+     },
+     "questions": [
+      {
+       "id": "q1",
+       "requirementId": "dignity",
+       "text": "O formulário pede “Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.”: o que escreveria?",
+       "why": "The app asks this itself: the form wants it in your own words, and none of your confirmed facts says it in the first person.",
+       "status": "answered",
+       "askedBy": "app",
+       "english": "The form asks for \"Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.\": what would you write?",
+       "sourceId": "s2"
+      }
+     ],
+     "documents": {
+      "answer": {
+       "id": "answer",
+       "revision": 1,
+       "segments": [
+        {
+         "id": "answer-1",
+         "kind": "claim",
+         "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+         "factIds": [
+          "f1"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-2",
+         "kind": "claim",
+         "text": "For me dignity means knocking before entering, explaining what I will do before personal care, and always closing curtains.",
+         "factIds": [
+          "f13",
+          "f14",
+          "f15"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-3",
+         "kind": "claim",
+         "text": "I respect each person's culture and religion by asking what they want to eat, how they want to be treated, and whether they prefer being helped by a woman.",
+         "factIds": [
+          "f16",
+          "f17",
+          "f18",
+          "f19"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-4",
+         "kind": "claim",
+         "text": "One night I saw a bruise on a resident's arm, and I recorded it and told the nurse on duty immediately.",
+         "factIds": [
+          "f10",
+          "f11"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-5",
+         "kind": "claim",
+         "text": "In the dementia unit the residents were agitated at the end of the day, so we as a team moved dinner earlier.",
+         "factIds": [
+          "f7"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-6",
+         "kind": "claim",
+         "text": "I have moving and handling training and I use the hoist when supporting residents to move.",
+         "factIds": [
+          "f5"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-7",
+         "kind": "claim",
+         "text": "I have medication training and I do the morning medication round for 18 residents.",
+         "factIds": [
+          "f2"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-8",
+         "kind": "claim",
+         "text": "Before each shift I read each resident's care plan and do what is there.",
+         "factIds": [
+          "f4"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-9",
+         "kind": "claim",
+         "text": "At the end of the shift I write daily notes in English and sign the medication sheet.",
+         "factIds": [
+          "f3"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-10",
+         "kind": "claim",
+         "text": "We always work in pairs.",
+         "factIds": [
+          "f6"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-11",
+         "kind": "claim",
+         "text": "I made cards with food photos so each person can point to what they want to eat.",
+         "factIds": [
+          "f8"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-12",
+         "kind": "claim",
+         "text": "I did three years of nights, and also weekends.",
+         "factIds": [
+          "f9"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        }
+       ]
+      },
+      "letter": {
+       "id": "letter",
+       "revision": 2,
+       "segments": [
+        {
+         "id": "letter-1",
+         "kind": "frame",
+         "text": "Dear North Yorkshire Council hiring team,",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-2",
+         "kind": "frame",
+         "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-3",
+         "kind": "claim",
+         "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+         "factIds": [
+          "f1"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-4",
+         "kind": "claim",
+         "text": "I have medication training and I do the morning medication round for 18 residents.",
+         "factIds": [
+          "f2"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-5",
+         "kind": "claim",
+         "text": "I have moving and handling training and I use the hoist.",
+         "factIds": [
+          "f5"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-6",
+         "kind": "frame",
+         "text": "Thank you for considering my application.",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-7",
+         "kind": "frame",
+         "text": "Kind regards, Ana",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        }
+       ]
+      }
+     },
+     "repair": null,
+     "approvals": {
+      "answer": null,
+      "letter": null
+     },
+     "exports": [],
+     "checked": [
+      "dignity",
+      "safe",
+      "conditions",
+      "moving",
+      "medication",
+      "plans",
+      "records",
+      "team",
+      "initiative",
+      "rota",
+      "evidence"
+     ]
+    },
+    "updatedAt": "2026-11-04T13:26:59.012Z"
+   },
+   "view": {
+    "next": "approve",
+    "coverage": [
+     {
+      "id": "dignity",
+      "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+      "personal": true,
+      "direct": true,
+      "docId": "answer",
+      "factIds": [
+       "f13",
+       "f14",
+       "f15",
+       "f16",
+       "f17",
+       "f18",
+       "f19"
+      ],
+      "covered": true
+     },
+     {
+      "id": "safe",
+      "text": "Knowledge of keeping people safe from harm or abuse.",
+      "docId": "answer",
+      "factIds": [
+       "f10",
+       "f11"
+      ],
+      "covered": true
+     },
+     {
+      "id": "conditions",
+      "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities",
+      "docId": "answer",
+      "factIds": [
+       "f7"
+      ],
+      "covered": true
+     },
+     {
+      "id": "moving",
+      "text": "Experience of moving & handling people.",
+      "docId": "answer",
+      "factIds": [
+       "f5"
+      ],
+      "covered": true
+     },
+     {
+      "id": "medication",
+      "text": "Experience of Administration of Medication",
+      "docId": "answer",
+      "factIds": [
+       "f2"
+      ],
+      "covered": true
+     },
+     {
+      "id": "plans",
+      "text": "Ability to understand health care and social care assessments and support plans.",
+      "docId": "answer",
+      "factIds": [
+       "f4"
+      ],
+      "covered": true
+     },
+     {
+      "id": "records",
+      "text": "Ability to complete daily and medication record sheets",
+      "docId": "answer",
+      "factIds": [
+       "f3"
+      ],
+      "covered": true
+     },
+     {
+      "id": "team",
+      "text": "Ability to work with others in a team.",
+      "docId": "answer",
+      "factIds": [
+       "f6",
+       "f7"
+      ],
+      "covered": true
+     },
+     {
+      "id": "initiative",
+      "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+      "personal": true,
+      "docId": "answer",
+      "factIds": [
+       "f8"
+      ],
+      "covered": true
+     },
+     {
+      "id": "rota",
+      "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service",
+      "docId": "answer",
+      "factIds": [
+       "f9"
+      ],
+      "covered": true
+     },
+     {
+      "id": "evidence",
+      "text": "The experience that shows you can do the job",
+      "docId": "letter",
+      "factIds": [
+       "f1",
+       "f2",
+       "f5"
+      ],
+      "covered": true
+     }
+    ],
+    "draftBlockers": [],
+    "exportBlockers": [
+     "Approve the current supporting evidence.",
+     "Approve the current cover letter."
+    ],
+    "stats": {
+     "answer": {
+      "words": 200,
+      "wordLimit": 500,
+      "overLimit": false,
+      "unanswered": [],
+      "leftOut": [],
+      "ownWords": 0
+     },
+     "letter": {
+      "words": 71,
+      "wordLimit": 350,
+      "overLimit": false,
+      "unanswered": [
+       {
+        "id": "letter-personal-contribution",
+        "text": "ApplyArc quality check: include one confirmed example of your own contribution."
+       }
+      ],
+      "leftOut": [],
+      "ownWords": 0
+     }
+    },
+    "approvals": {
+     "answer": "none",
+     "letter": "none"
+    },
+    "citations": {
+     "f1": 1,
+     "f13": 2,
+     "f14": 3,
+     "f15": 4,
+     "f16": 5,
+     "f17": 6,
+     "f18": 7,
+     "f19": 8,
+     "f10": 9,
+     "f11": 10,
+     "f7": 11,
+     "f5": 12,
+     "f2": 13,
+     "f4": 14,
+     "f3": 15,
+     "f6": 16,
+     "f8": 17,
+     "f9": 18
+    },
+    "conflictDecisions": [],
+    "sourceCorrections": []
+   },
+   "result": {
+    "drafted": [
+     "answer",
+     "letter"
+    ],
+    "dropped": []
+   },
+   "mode": {
+    "id": "compatible",
+    "label": "Meta Muse Spark Open on Modal",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "isMeta": true
+   },
+   "budget": {
+    "capUsd": 80,
+    "spentUsd": 1.643212,
+    "reservedUsd": 0,
+    "remainingUsd": 78.356788
+   },
+   "voice": false,
+   "working": false,
+   "ms": 90203
+  }
+ ],
+ "type": "done",
+ "workspace": {
+  "schema": 1,
+  "revision": 8,
+  "createdAt": "2026-11-04T13:24:51.506Z",
+  "applicant": {
+   "name": "Ana",
+   "sources": [
+    {
+     "id": "s1",
+     "kind": "notes",
+     "text": "Chamo-me Ana. Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+     "at": "2026-11-04T13:24:51.656Z",
+     "language": "pt-PT",
+     "read": true
+    },
+    {
+     "id": "s2",
+     "kind": "answer",
+     "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+     "at": "2026-11-04T13:25:14.135Z",
+     "questionId": "q1",
+     "language": "pt-PT",
+     "read": true
+    }
+   ],
+   "facts": [
+    {
+     "id": "f1",
+     "statement": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+     "quote": "Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f2",
+     "statement": "I have medication training and I do the morning medication round for 18 residents.",
+     "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f3",
+     "statement": "At the end of shift I write daily notes in English and sign the medication sheet.",
+     "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f4",
+     "statement": "Before shift I read each resident's care plan and do what is there.",
+     "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f5",
+     "statement": "I have moving and handling training and I use the hoist.",
+     "quote": "Tenho a formação de moving and handling, uso a grua",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f6",
+     "statement": "We always work in pairs.",
+     "quote": "trabalhamos sempre em dupla.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f7",
+     "statement": "In dementia unit residents were agitated at end of day, so we all moved dinner earlier.",
+     "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f8",
+     "statement": "I made cards with food photos so each person can point to what they want to eat.",
+     "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f9",
+     "statement": "I did three years of nights, and also weekends.",
+     "quote": "Fiz três anos de noites, e também fins de semana.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f10",
+     "statement": "One night I saw a bruise on a resident's arm.",
+     "quote": "Uma noite, vi uma nódoa negra no braço de uma residente.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f11",
+     "statement": "I recorded and told the nurse on duty immediately,",
+     "quote": "Registei e contei logo à enfermeira de serviço,",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f12",
+     "statement": "She made the safeguarding report.",
+     "quote": "ela fez a participação de safeguarding.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "other"
+    },
+    {
+     "id": "f13",
+     "statement": "I believe dignity is knocking before entering",
+     "quote": "Para mim, dignidade é bater à porta antes de entrar,",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f14",
+     "statement": "I explain what I will do before personal care",
+     "quote": "explicar o que vou fazer antes da higiene pessoal",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f15",
+     "statement": "I always close curtains",
+     "quote": "fechar sempre as cortinas.",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f16",
+     "statement": "I respect each person's culture and religion",
+     "quote": "respeito a cultura e a religião de cada pessoa:",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f17",
+     "statement": "I ask what they want to eat",
+     "quote": "pergunto o que quer comer,",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f18",
+     "statement": "I ask how they want to be treated",
+     "quote": "como quer ser tratada",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f19",
+     "statement": "I ask if they prefer being helped by a woman",
+     "quote": "se prefere ser ajudada por uma mulher.",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    }
+   ]
+  },
+  "application": {
+   "form": {
+    "id": "north-yorkshire-council-care-and-support-worker-476577",
+    "company": "North Yorkshire Council",
+    "role": "Care and Support Worker",
+    "location": "Leyburn, North Yorkshire, UK",
+    "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+    "snapshot": {
+     "source": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+     "fetchedAt": "2026-11-03T19:09:48Z",
+     "postingUpdatedAt": "2026-11-03",
+     "note": "Public North Yorkshire Council advert (posted 03/11/2026, closing 16/11/2026), captured once during the event with its attached job description and person specification (fetched 2026-11-03T19:10:04Z). Used without partnership: the council is an example, not a partner or endorser. Points quote the person specification word for word, with whitespace tidied."
+    },
+    "documents": [
+     {
+      "id": "answer",
+      "title": "Supporting evidence",
+      "fieldId": null,
+      "question": "Supporting evidence (application form). The council's advice: \"refer to the job profile in the 'supporting evidence' section so the hiring manager can see relevant examples of the qualities they are looking for\". The job profile adds: \"You should use this information to make the best of your application by identifying some specific pieces of work you may have undertaken in any of these areas.\"",
+      "wordLimit": 500,
+      "requirements": [
+       {
+        "id": "dignity",
+        "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+        "personal": true,
+        "direct": true
+       },
+       {
+        "id": "safe",
+        "text": "Knowledge of keeping people safe from harm or abuse."
+       },
+       {
+        "id": "conditions",
+        "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+       },
+       {
+        "id": "moving",
+        "text": "Experience of moving & handling people."
+       },
+       {
+        "id": "medication",
+        "text": "Experience of Administration of Medication"
+       },
+       {
+        "id": "plans",
+        "text": "Ability to understand health care and social care assessments and support plans."
+       },
+       {
+        "id": "records",
+        "text": "Ability to complete daily and medication record sheets"
+       },
+       {
+        "id": "team",
+        "text": "Ability to work with others in a team."
+       },
+       {
+        "id": "initiative",
+        "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+        "personal": true
+       },
+       {
+        "id": "rota",
+        "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The advert, job description and council advice state no word limit; 500 words is a working guide for this demo, not the council's limit."
+     },
+     {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": null,
+      "required": false,
+      "question": "Cover letter (not requested by this advert; optional, prepared for the applicant only from her confirmed experience)",
+      "wordLimit": 350,
+      "requirements": [
+       {
+        "id": "evidence",
+        "text": "The experience that shows you can do the job"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The council asks for supporting evidence, not a letter; 350 words keeps a letter to one page. It asks only for her experience, so it never invents a motive she did not state."
+     }
+    ],
+    "portalTasks": [
+     "Create an account: Title, First name, Last name, Email address, Password",
+     "Enhanced Level DBS Disclosure (required for appointment)",
+     "The rest of the council's application form sits behind the account and was not opened"
+    ]
+   },
+   "coverage": {
+    "safe": [
+     "f10",
+     "f11"
+    ],
+    "conditions": [
+     "f7"
+    ],
+    "moving": [
+     "f5"
+    ],
+    "medication": [
+     "f2"
+    ],
+    "plans": [
+     "f4"
+    ],
+    "records": [
+     "f3"
+    ],
+    "team": [
+     "f6",
+     "f7"
+    ],
+    "initiative": [
+     "f8"
+    ],
+    "rota": [
+     "f9"
+    ],
+    "evidence": [
+     "f1",
+     "f2",
+     "f5"
+    ],
+    "dignity": [
+     "f13",
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19"
+    ]
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "requirementId": "dignity",
+     "text": "O formulário pede “Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.”: o que escreveria?",
+     "why": "The app asks this itself: the form wants it in your own words, and none of your confirmed facts says it in the first person.",
+     "status": "answered",
+     "askedBy": "app",
+     "english": "The form asks for \"Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.\": what would you write?",
+     "sourceId": "s2"
+    }
+   ],
+   "documents": {
+    "answer": {
+     "id": "answer",
+     "revision": 1,
+     "segments": [
+      {
+       "id": "answer-1",
+       "kind": "claim",
+       "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+       "factIds": [
+        "f1"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-2",
+       "kind": "claim",
+       "text": "For me dignity means knocking before entering, explaining what I will do before personal care, and always closing curtains.",
+       "factIds": [
+        "f13",
+        "f14",
+        "f15"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-3",
+       "kind": "claim",
+       "text": "I respect each person's culture and religion by asking what they want to eat, how they want to be treated, and whether they prefer being helped by a woman.",
+       "factIds": [
+        "f16",
+        "f17",
+        "f18",
+        "f19"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-4",
+       "kind": "claim",
+       "text": "One night I saw a bruise on a resident's arm, and I recorded it and told the nurse on duty immediately.",
+       "factIds": [
+        "f10",
+        "f11"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-5",
+       "kind": "claim",
+       "text": "In the dementia unit the residents were agitated at the end of the day, so we as a team moved dinner earlier.",
+       "factIds": [
+        "f7"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-6",
+       "kind": "claim",
+       "text": "I have moving and handling training and I use the hoist when supporting residents to move.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-7",
+       "kind": "claim",
+       "text": "I have medication training and I do the morning medication round for 18 residents.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-8",
+       "kind": "claim",
+       "text": "Before each shift I read each resident's care plan and do what is there.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-9",
+       "kind": "claim",
+       "text": "At the end of the shift I write daily notes in English and sign the medication sheet.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-10",
+       "kind": "claim",
+       "text": "We always work in pairs.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-11",
+       "kind": "claim",
+       "text": "I made cards with food photos so each person can point to what they want to eat.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-12",
+       "kind": "claim",
+       "text": "I did three years of nights, and also weekends.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      }
+     ]
+    },
+    "letter": {
+     "id": "letter",
+     "revision": 2,
+     "segments": [
+      {
+       "id": "letter-1",
+       "kind": "frame",
+       "text": "Dear North Yorkshire Council hiring team,",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-2",
+       "kind": "frame",
+       "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-3",
+       "kind": "claim",
+       "text": "I have worked for three years in a care home in Leeds; I started in October 2023.",
+       "factIds": [
+        "f1"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-4",
+       "kind": "claim",
+       "text": "I have medication training and I do the morning medication round for 18 residents.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-5",
+       "kind": "claim",
+       "text": "I have moving and handling training and I use the hoist.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-6",
+       "kind": "frame",
+       "text": "Thank you for considering my application.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-7",
+       "kind": "frame",
+       "text": "Kind regards, Ana",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      }
+     ]
+    }
+   },
+   "repair": null,
+   "approvals": {
+    "answer": null,
+    "letter": null
+   },
+   "exports": [],
+   "checked": [
+    "dignity",
+    "safe",
+    "conditions",
+    "moving",
+    "medication",
+    "plans",
+    "records",
+    "team",
+    "initiative",
+    "rota",
+    "evidence"
+   ]
+  },
+  "updatedAt": "2026-11-04T13:26:59.012Z"
+ },
+ "view": {
+  "next": "approve",
+  "coverage": [
+   {
+    "id": "dignity",
+    "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+    "personal": true,
+    "direct": true,
+    "docId": "answer",
+    "factIds": [
+     "f13",
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19"
+    ],
+    "covered": true
+   },
+   {
+    "id": "safe",
+    "text": "Knowledge of keeping people safe from harm or abuse.",
+    "docId": "answer",
+    "factIds": [
+     "f10",
+     "f11"
+    ],
+    "covered": true
+   },
+   {
+    "id": "conditions",
+    "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities",
+    "docId": "answer",
+    "factIds": [
+     "f7"
+    ],
+    "covered": true
+   },
+   {
+    "id": "moving",
+    "text": "Experience of moving & handling people.",
+    "docId": "answer",
+    "factIds": [
+     "f5"
+    ],
+    "covered": true
+   },
+   {
+    "id": "medication",
+    "text": "Experience of Administration of Medication",
+    "docId": "answer",
+    "factIds": [
+     "f2"
+    ],
+    "covered": true
+   },
+   {
+    "id": "plans",
+    "text": "Ability to understand health care and social care assessments and support plans.",
+    "docId": "answer",
+    "factIds": [
+     "f4"
+    ],
+    "covered": true
+   },
+   {
+    "id": "records",
+    "text": "Ability to complete daily and medication record sheets",
+    "docId": "answer",
+    "factIds": [
+     "f3"
+    ],
+    "covered": true
+   },
+   {
+    "id": "team",
+    "text": "Ability to work with others in a team.",
+    "docId": "answer",
+    "factIds": [
+     "f6",
+     "f7"
+    ],
+    "covered": true
+   },
+   {
+    "id": "initiative",
+    "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+    "personal": true,
+    "docId": "answer",
+    "factIds": [
+     "f8"
+    ],
+    "covered": true
+   },
+   {
+    "id": "rota",
+    "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service",
+    "docId": "answer",
+    "factIds": [
+     "f9"
+    ],
+    "covered": true
+   },
+   {
+    "id": "evidence",
+    "text": "The experience that shows you can do the job",
+    "docId": "letter",
+    "factIds": [
+     "f1",
+     "f2",
+     "f5"
+    ],
+    "covered": true
+   }
+  ],
+  "draftBlockers": [],
+  "exportBlockers": [
+   "Approve the current supporting evidence.",
+   "Approve the current cover letter."
+  ],
+  "stats": {
+   "answer": {
+    "words": 200,
+    "wordLimit": 500,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   },
+   "letter": {
+    "words": 71,
+    "wordLimit": 350,
+    "overLimit": false,
+    "unanswered": [
+     {
+      "id": "letter-personal-contribution",
+      "text": "ApplyArc quality check: include one confirmed example of your own contribution."
+     }
+    ],
+    "leftOut": [],
+    "ownWords": 0
+   }
+  },
+  "approvals": {
+   "answer": "none",
+   "letter": "none"
+  },
+  "citations": {
+   "f1": 1,
+   "f13": 2,
+   "f14": 3,
+   "f15": 4,
+   "f16": 5,
+   "f17": 6,
+   "f18": 7,
+   "f19": 8,
+   "f10": 9,
+   "f11": 10,
+   "f7": 11,
+   "f5": 12,
+   "f2": 13,
+   "f4": 14,
+   "f3": 15,
+   "f6": 16,
+   "f8": 17,
+   "f9": 18
+  },
+  "conflictDecisions": [],
+  "sourceCorrections": []
+ },
+ "result": {
+  "drafted": [
+   "answer",
+   "letter"
+  ],
+  "dropped": []
+ },
+ "mode": {
+  "id": "compatible",
+  "label": "Meta Muse Spark Open on Modal",
+  "model": "meta-models/Muse-Spark-Open-816B-A42B",
+  "isMeta": true
+ },
+ "budget": {
+  "capUsd": 80,
+  "spentUsd": 1.643212,
+  "reservedUsd": 0,
+  "remainingUsd": 78.356788
+ },
+ "voice": false,
+ "working": false,
+ "ms": 90203
+}

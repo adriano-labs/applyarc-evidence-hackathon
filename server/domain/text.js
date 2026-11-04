@@ -3,9 +3,10 @@
 const SMART = [[/[‘’′]/g, "'"], [/[“”″]/g, '"'], [/[–—]/g, '-']];
 
 // Typographic quotes and dashes count as their plain forms, runs of
-// whitespace as one space. Case and wording must match exactly.
+// whitespace as one space. Case and wording must match exactly. Unicode is
+// composed (NFC) first, so "ç" typed as "c" plus a combining cedilla matches "ç".
 export function normalise(text) {
-  let out = String(text ?? '');
+  let out = String(text ?? '').normalize('NFC');
   for (const [pattern, plain] of SMART) out = out.replace(pattern, plain);
   return out.replace(/\s+/g, ' ').trim();
 }
@@ -44,9 +45,11 @@ function phraseValue(phrase) {
 
 // Every number a text states, in digits or in words, as plain digits ("2,100" is
 // "2100", "twelve" is "12"); a percentage keeps its "%", however it is written.
-// Digits inside a word ("k3s") are part of a name, not a number.
-export function numbers(text) {
-  const lower = normalise(text).toLowerCase().replace(NUMBER_PHRASE, (phrase) => ` ${phraseValue(phrase)} `);
+// Digits inside a word ("k3s") are part of a name, not a number. Number words are
+// read in English only: in any other language only digits count.
+export function numbers(text, language = 'en') {
+  const plain = normalise(text).toLowerCase();
+  const lower = language === 'en' ? plain.replace(NUMBER_PHRASE, (phrase) => ` ${phraseValue(phrase)} `) : plain;
   const found = lower.replace(/(\d),(?=\d{3}\b)/g, '$1').matchAll(/(?<![a-z0-9.])(\d+(?:\.\d+)?)(\s*(?:%|per\s*cent\b|percent\b))?/g);
   return [...found].map((m) => m[1] + (m[2] ? '%' : ''));
 }

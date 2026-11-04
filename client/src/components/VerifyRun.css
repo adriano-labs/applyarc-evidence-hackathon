@@ -1,0 +1,8 @@
+/* Verify this run: one line per check, its mark in front, its count in the words. */
+.verify { margin-top: var(--s3); }
+.verify-list { margin: var(--s2) 0 0; padding: 0; list-style: none; display: grid; gap: var(--s1); font-size: var(--text-xs); font-variant-numeric: tabular-nums; }
+.verify-list li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: var(--s2); overflow-wrap: anywhere; }
+.verify-list svg { margin-top: 2px; }
+.verify-list .pass svg { color: var(--confirmed); }
+.verify-list .none { color: var(--muted); }
+.verify-list .fail { color: var(--danger); }

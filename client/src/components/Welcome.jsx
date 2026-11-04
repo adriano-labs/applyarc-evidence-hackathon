@@ -3,7 +3,7 @@
 import { NotesView } from './NotesView.jsx';
 import './Welcome.css';
 
-export function Welcome({ form, sample, busy, liveModel, onAddNotes, onStartSample, onStartOwn, voice }) {
+export function Welcome({ form, sample, busy, liveModel, model, onAddNotes, onStartSample, onStartPrepared, onStartOwn, voice }) {
   const docs = form?.documents ?? [];
   const answerDoc = docs.find((d) => d.id === 'answer') ?? docs[0];
   return (
@@ -22,8 +22,11 @@ export function Welcome({ form, sample, busy, liveModel, onAddNotes, onStartSamp
         samples={sample?.samples}
         liveModel={liveModel}
         onStartSample={onStartSample}
+        onStartPrepared={onStartPrepared}
         onStartOwn={onStartOwn}
         voice={voice}
+        languages={sample?.languages}
+        model={model}
       />
     </main>
   );

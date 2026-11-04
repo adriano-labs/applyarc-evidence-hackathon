@@ -206,14 +206,7 @@ export function createTransport({
       ledger.settle(id, costOf(priced, final.usage));
     }
     const ids = { requestId: requestId ?? final.id ?? null };
-    if (read.type === 'response.failed') throw fail('failed', ids);
-    if (read.type === 'response.incomplete') {
-      const reason = final.incomplete_details?.reason ?? 'unknown';
-      throw new ProviderError('incomplete', `The answer was cut short (${reason}). Nothing was changed.`, ids);
-    }
-    if (read.type !== 'response.completed') throw fail(read.type, { ...ids, started: read.firstEventMs !== null });
-    onEvent({ type: 'completed' });
-    return {
+    const result = {
       response: final,
       usage: knownUsage ? final.usage : {},
       costUsd: knownUsage ? costOf(priced, final.usage) : null,
@@ -223,6 +216,15 @@ export function createTransport({
       firstOutputMs: read.firstOutputMs,
       rateLimit: { remainingRequests: numberHeader(response.headers, 'x-ratelimit-remaining-requests'), remainingTokens: numberHeader(response.headers, 'x-ratelimit-remaining-tokens') },
     };
+    // A failed or cut-short answer was still billed: its turn goes with the error to the receipt.
+    if (read.type === 'response.failed') throw Object.assign(fail('failed', ids), { turn: result });
+    if (read.type === 'response.incomplete') {
+      const reason = final.incomplete_details?.reason ?? 'unknown';
+      throw Object.assign(new ProviderError('incomplete', `The answer was cut short (${reason}). Nothing was changed.`, ids), { turn: result });
+    }
+    if (read.type !== 'response.completed') throw fail(read.type, { ...ids, started: read.firstEventMs !== null });
+    onEvent({ type: 'completed' });
+    return result;
   }
 
   async function attempt(id, body, signal, onEvent, markUnknown) {
@@ -257,17 +259,15 @@ export function createTransport({
     let unsettled = 0;
     let injectedFaults = 0;
     const markUnknown = (id) => { ledger.unknown(id); unsettled += 1; };
-    const failWith = (error) => Object.assign(error, { unsettled });
+    const turn = ({ firstEventMs, firstOutputMs, ...result }, attempts) => ({ ...result, attempts, unsettled, injectedFaults, timings: { firstEventMs, firstOutputMs: firstOutputMs ?? null, totalMs: now() - start } });
+    const failWith = (error, n) => Object.assign(error, { unsettled }, error.turn ? { turn: turn(error.turn, n) } : {});
     for (let n = 1; n <= maxAttempts; n += 1) {
       const id = `${callId}-a${n}`;
       ledger.reserve(id, worst);
       onEvent({ type: 'attempt', attempt: n });
       try {
         const outcome = await attempt(id, body, signal, onEvent, markUnknown);
-        if (!outcome.retry) {
-          const { firstEventMs, firstOutputMs, ...result } = outcome;
-          return { ...result, attempts: n, unsettled, injectedFaults, timings: { firstEventMs, firstOutputMs: firstOutputMs ?? null, totalMs: now() - start } };
-        }
+        if (!outcome.retry) return turn(outcome, n);
         status = outcome.status;
         const injected = Boolean(header(outcome.headers, 'x-demo-fault'));
         if (injected) injectedFaults += 1;
@@ -278,7 +278,7 @@ export function createTransport({
       } catch (err) {
         // A stall: the watchdog fired before the first event (a 504 carries its status).
         const stall = err instanceof ProviderError && err.code === 'timeout' && err.status === null && !err.started;
-        if (!stall || n === maxAttempts || now() - start + firstEventTimeoutMs > deadlineMs) throw err instanceof ProviderError ? failWith(err) : err;
+        if (!stall || n === maxAttempts || now() - start + firstEventTimeoutMs > deadlineMs) throw err instanceof ProviderError ? failWith(err, n) : err;
         onEvent({ type: 'retry', attempt: n, status: null, reason: 'stall', waitMs: 0 });
       }
     }

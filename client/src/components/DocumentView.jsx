@@ -22,12 +22,13 @@ function groupParagraphs(segments) {
   return paragraphs;
 }
 
-function Citations({ factIds, citations, activeFactId, onCite, onPin, segmentId }) {
+function Citations({ factIds, citations, activeFactId, onCite, onPin, segmentId, original = false }) {
   const ids = Array.isArray(factIds) ? factIds : [];
   if (ids.length === 0) return null;
+  const Tag = original ? 'span' : 'sup';
 
   return (
-    <sup className="cites">
+    <Tag className="cites">
       {ids.map((factId) => {
         const n = citations[factId];
         const isActive = activeFactId === factId;
@@ -36,7 +37,7 @@ function Citations({ factIds, citations, activeFactId, onCite, onPin, segmentId 
             type="button"
             className="cite"
             key={factId}
-            aria-label={`Evidence ${n}`}
+            aria-label={original ? `Original source ${n}` : `Evidence ${n}`}
             data-active={isActive ? 'true' : 'false'}
             onMouseEnter={() => onCite?.(factId, segmentId)}
             onMouseLeave={() => onCite?.(null, segmentId)}
@@ -48,7 +49,7 @@ function Citations({ factIds, citations, activeFactId, onCite, onPin, segmentId 
           </button>
         );
       })}
-    </sup>
+    </Tag>
   );
 }
 
@@ -114,7 +115,7 @@ function SentenceText({ segment, factIds, citations, activeFactId, onCite, onPin
     if (locked || !editable || event.target.closest('.cite')) return;
     onEditStart?.(segment);
   };
-  const cited = segment.kind === 'claim' && factIds.length > 0;
+  const cited = segment.author !== 'user' && segment.kind === 'claim' && factIds.length > 0;
   const cut = cited ? segment.text.lastIndexOf(' ') + 1 : segment.text.length;
   return (
     <span className="sentence-text" data-editable={editable && !locked ? 'true' : 'false'} title={editable && !locked ? 'Click to edit' : undefined} onClick={edit}>
@@ -134,8 +135,17 @@ function Sentence({ segment, factIds, citations, activeFactId, onCite, onPin, is
     <span className={`sentence ${segment.author}${isPending ? ' pending' : ''}${isFlashing ? ' flash' : ''}`} data-segment={segment.id} data-cites-active={citesActive ? 'true' : undefined}>
       <SentenceText segment={segment} factIds={factIds} citations={citations} activeFactId={activeFactId} onCite={onCite} onPin={onPin} locked={locked} onEditStart={onEditStart} editable={editable} />
       {segment.author === 'user' && (
-        <span className="mark-yours" aria-label="Your words" role="img">
-          <PenLine size={12} aria-hidden="true" />
+        <span className="user-word-context">
+          <span className="mark-yours" aria-label="Your words" role="img">
+            <PenLine size={12} aria-hidden="true" />
+          </span>
+          <span className="mark-yours-label">Your words · not rechecked</span>
+          {Array.isArray(factIds) && factIds.length > 0 && (
+            <span className="original-sources">
+              <span className="original-sources-label">Original sources</span>
+              <Citations factIds={factIds} citations={citations} activeFactId={activeFactId} onCite={onCite} onPin={onPin} segmentId={segment.id} original />
+            </span>
+          )}
         </span>
       )}
       {isChanged && <span className="mark-corrected">corrected</span>}
@@ -174,6 +184,7 @@ export function DocumentView(props) {
     facts = [], suggestion = null, liveModel = false, suggestionBusy = false,
     onStrengthen, onAcceptSuggestion, onDismissSuggestion,
     peek = null,
+    languageLine = null,
   } = props;
 
   // Editing only where the caller can save it (the guided walk-through is read-only).
@@ -278,6 +289,7 @@ export function DocumentView(props) {
         onReceipts={onReceipts}
         hintSeen={hintSeen}
         correctionNotice={correctionNotice}
+        languageLine={languageLine}
       />
       <div className="manuscript-body">
         {paragraphs.map((paragraph, pIdx) => {

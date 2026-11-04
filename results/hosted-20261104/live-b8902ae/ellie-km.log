@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Did you write the Helm patch yourself, or did Sam write it while you reproduced the failure, tested his fix and wrote the incident notes?",
+ "reopened": [
+  "answer/answer-10",
+  "letter/letter-9"
+ ],
+ "costUsd": 0.1226,
+ "wallSeconds": 48.5,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

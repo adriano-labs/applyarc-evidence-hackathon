@@ -50,7 +50,9 @@ function namedDoer(clause) {
     if (lower === 'head' && next === 'office') return 'other';
     if (/^[A-Z][a-z]+$/.test(raw) && !NOT_NAMES.has(lower) && isPast(next)) return 'other';
   }
-  return SELF_LABEL.test(label.trim()) ? 'labelled' : null;
+  if (SELF_LABEL.test(label.trim())) return 'labelled';
+  // Words before a colon that name the applicant are their own clause, not a heading ("I owned the tooling:", "Decision I made:").
+  return label && namedDoer(label) === 'self' ? 'self' : null;
 }
 
 // A clause break: the end of a sentence, a semicolon, "but", or "and" before a new doer,

@@ -1,0 +1,199 @@
+{
+ "clips": 56,
+ "seconds": 165.495,
+ "labels": 32,
+ "titles": 0,
+ "cues": 40,
+ "lowerThirds": 1,
+ "strip": 15,
+ "video": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/ApplyArc-Evidence-ana-v1.mp4",
+ "sha256": "0678d11ccbe100fffcd055c9dd0c416274cf4b4516c14cc1fb90d613e59a3e32",
+ "plan": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/plan-ana-v1.json",
+ "planSha256": "e04623e7132bf24b06cb09637b7556f9d1e26b9a41967acd24ec65f632fbf1f9",
+ "narration": [
+  {
+   "start": 0.0,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-01.wav",
+   "text": "I'm Adrian, founder of ApplyArc, a UK job-search startup that existed before this hackathon. Everything here was built during it, on Meta's models.",
+   "cue": "1",
+   "line": 1,
+   "seconds": 9.693,
+   "note": "founder: narration-20261104-134849Z.wav segment 1, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 10.043,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-02.wav",
+   "text": "A real council job advert says: \"Using AI? Please follow our guidance to ensure your application reflects your own knowledge and experience.\"",
+   "cue": "2",
+   "line": 2,
+   "seconds": 8.941,
+   "note": "founder: narration-20261104-134849Z.wav segment 2, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 19.135,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-03.wav",
+   "text": "Ana is fictional. Her problem is real. Three years in a Leeds care home, working English every day, and a form that wants written English.",
+   "cue": "3",
+   "line": 3,
+   "seconds": 8.907,
+   "note": "founder: narration-20261104-134849Z.wav segment 3, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 28.192,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-04.wav",
+   "text": "She says it in Portuguese.",
+   "cue": "4",
+   "line": 4,
+   "seconds": 2.605,
+   "note": "founder: narration-20261104-134849Z.wav segment 4, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 30.897,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/audio/ana-notes-6.0s-ba636530ebbf.wav",
+   "seconds": 6.0,
+   "cue": "ana-notes",
+   "text": "Ana (synthetic voice, in Portuguese): \u201cChamo-me Ana. Eu trabalho h\u00e1 tr\u00eas anos num lar em Leeds\u2026\u201d",
+   "note": "Ana's notes clip: the first 6.0 s of ana-pt-notes.wav (sha256 ba636530ebbf\u2026), on the player running (notes-play)",
+   "anchor": {
+    "recording": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/02-ana-speaks/recording.json",
+    "ms": 1867
+   }
+  },
+  {
+   "start": 37.547,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-05.wav",
+   "text": "Muse Voice Transcribe writes it down, live, keeping her English care words in English. She checks her words first.",
+   "cue": "5",
+   "line": 5,
+   "seconds": 7.554,
+   "note": "founder: narration-20261104-134849Z.wav segment 5, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 45.252,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-06.wav",
+   "text": "Muse Wonder turns her words into facts. Each one quotes her exact Portuguese. Code checks it, word for word. The English meaning sits underneath. She confirms both.",
+   "cue": "6",
+   "line": 6,
+   "seconds": 10.677,
+   "note": "founder: narration-20261104-134849Z.wav segment 6, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 56.574,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-07.wav",
+   "text": "Wonder checks the council's ten points and finds the one she didn't cover: dignity and respect. It asks in Portuguese.",
+   "cue": "7",
+   "line": 7,
+   "seconds": 7.281,
+   "note": "founder: narration-20261104-134849Z.wav segment 7, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 63.955,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/audio/ana-answer-4.0s-91b684c57fb5.wav",
+   "seconds": 4.0,
+   "cue": "ana-answer",
+   "text": "Ana (synthetic voice, in Portuguese): \u201cPara mim, dignidade \u00e9 bater \u00e0 porta antes de entrar\u2026\u201d",
+   "note": "Ana's answer clip: the first 4.0 s of ana-pt-answer.wav (sha256 91b684c57fb5\u2026), on Hearing her answer\u2026 (answer-clip)",
+   "anchor": {
+    "recording": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/06-question-and-answer/recording.json",
+    "ms": 11568
+   }
+  },
+  {
+   "start": 73.481,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-08.wav",
+   "text": "Wonder drafts her supporting evidence and a short letter, in English. Every factual sentence cites a fact she confirmed, and a second Wonder call checks it against her Portuguese.",
+   "cue": "8",
+   "line": 8,
+   "seconds": 11.729,
+   "note": "founder: narration-20261104-134849Z.wav segment 8, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 85.36,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-09.wav",
+   "text": "Then she remembers: only two of her three years were nights. She says it once.",
+   "cue": "9",
+   "line": 9,
+   "seconds": 7.715,
+   "note": "founder: narration-20261104-134849Z.wav segment 9, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 93.175,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/audio/ana-correction-4.0s-351de469faec.wav",
+   "seconds": 4.0,
+   "cue": "ana-correction",
+   "text": "Ana (synthetic voice, in Portuguese): \u201cCorre\u00e7\u00e3o: os turnos da noite foram dois anos, n\u00e3o tr\u00eas\u2026\u201d",
+   "note": "Ana's correction clip: the first 4.0 s of ana-pt-correction.wav (sha256 351de469faec\u2026), on her correction (correction-play)",
+   "anchor": {
+    "recording": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/10-her-correction/recording.json",
+    "ms": 4109
+   }
+  },
+  {
+   "start": 101.679,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-10.wav",
+   "text": "Wonder spots the contradiction and asks which is right. She picks the correction. Only the sentences that cited the old fact reopen, in both documents.",
+   "cue": "10",
+   "line": 10,
+   "seconds": 9.711,
+   "note": "founder: narration-20261104-134849Z.wav segment 10, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 118.098,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-11.wav",
+   "text": "Nothing gets submitted for her: the pack is stamped NOT SUBMITTED. The employer gets one page where every factual sentence opens her Portuguese words.",
+   "cue": "11",
+   "line": 11,
+   "seconds": 11.417,
+   "note": "founder: narration-20261104-134849Z.wav segment 11, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 129.665,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-12.wav",
+   "text": "What Meta did, step by step: model, host and Meta's request ids. Both models are weeks old. A verifier re-checks the record without calling a model.",
+   "cue": "12",
+   "line": 12,
+   "seconds": 11.389,
+   "note": "founder: narration-20261104-134849Z.wav segment 12, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 141.865,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-13.wav",
+   "text": "The same loop runs on Meta's open weights, Muse Spark Open, on Modal, so a care provider chooses where it runs.",
+   "cue": "13",
+   "line": 13,
+   "seconds": 9.601,
+   "note": "founder: narration-20261104-134849Z.wav segment 13, cleaned by narrate-swap-ana.py"
+  },
+  {
+   "start": 151.617,
+   "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-14.wav",
+   "text": "That's ApplyArc Evidence. Who pays? Councils and care employers who need applications in the applicant's own words. It never screens, ranks or submits anything.",
+   "cue": "14",
+   "line": 14,
+   "seconds": 10.416,
+   "note": "founder: narration-20261104-134849Z.wav segment 14, cleaned by narrate-swap-ana.py"
+  }
+ ],
+ "disclosure": "Real recorded frames at 1x; zooms crop the same frames; splits set two real frames side by side; highlight boxes, titles, lower-thirds, the agent strip and captions are editorial; labelled cuts shorten model waits or navigation; holds and splits are labelled; pointer marks logged inputs.",
+ "sources": [
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/01-welcome/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/02-ana-speaks/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/03-check-her-words/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/04-reading-her-words/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/05-fact-cards/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/06-question-and-answer/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/07-answer-facts/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/08-writing/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/09-cited-sentence/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/10-her-correction/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/11-what-changed/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/12-take-and-approve/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/13-not-submitted/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/14-evidence-pass/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/15-meta-activity/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/main/16-advert/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/open/o1-open-welcome/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/open/o6-open-what-changed/recording.json",
+  "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7/open/o7-open-receipt/recording.json"
+ ]
+}

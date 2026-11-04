@@ -1,6 +1,7 @@
 // Review authority for one exact projected document and its current evidence.
 // This binds a fallible semantic verdict; it does not infer meaning from stems.
 import { reviewKey } from '../agent/evidenceReview.js';
+import { languageName } from './languages.js';
 import { DOC_IDS, findFact } from './workspace.js';
 
 export function retentionChecks(ws, rewrites) {
@@ -14,7 +15,7 @@ export function retentionChecks(ws, rewrites) {
       const value = allowed.has(s.id) && bySegment.has(s.id) ? bySegment.get(s.id) : s;
       return { segmentId: s.id, text: value.text, factIds: [...(value.factIds ?? [])] };
     });
-    const correctedFact = { id: fact.id, quote: fact.quote };
+    const correctedFact = { id: fact.id, quote: fact.quote, ...(fact.language ? { language: languageName(fact.language) } : {}) };
     const changedSegmentIds = [...allowed].filter((id) => bySegment.has(id));
     const factIds = [...new Set([fact.id, ...document.flatMap((s) => s.factIds)])];
     const key = JSON.stringify(['retention', docId, correctedFact, document, changedSegmentIds, reviewKey(ws, { text: '', factIds })]);

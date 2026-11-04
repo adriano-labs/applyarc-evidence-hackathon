@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './CitePeek.css';
+import { HerWords } from './HerWords.jsx';
 
 export function CitePeek({ fact, n, sourceLabel, onCorrect, onClose, inline }) {
   const ref = useRef(null);
@@ -26,10 +27,12 @@ export function CitePeek({ fact, n, sourceLabel, onCorrect, onClose, inline }) {
       onKeyDown={handleKeyDown}
     >
       <span className="peek-n">{n}</span>
-      <p className="peek-statement">{fact.statement}</p>
-      <p className="peek-quote">
-        “<mark>{fact.quote}</mark>”
-      </p>
+      {fact.language ? <HerWords fact={fact} base="peek" /> : <>
+        <p className="peek-statement">{fact.statement}</p>
+        <p className="peek-quote">
+          “<mark>{fact.quote}</mark>”
+        </p>
+      </>}
       {sourceLabel ? <p className="peek-source">{sourceLabel}</p> : null}
       <div className="peek-actions">
         {onCorrect ? (

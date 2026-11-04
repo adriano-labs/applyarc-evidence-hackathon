@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Trabalhou três anos em turnos da noite, ou dois anos à noite e o último ano durante o dia?",
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-11"
+ ],
+ "costUsd": 0.0655,
+ "wallSeconds": 27.7,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

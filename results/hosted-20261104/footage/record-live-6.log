@@ -1,0 +1,48 @@
+recording live-6: main https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/, open https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/ (started 2026-11-04T13:01:21Z)
+01 01-welcome: ok (6.5 s, 125 frames)
+02 02-ana-speaks: ok (13.5 s, 269 frames)
+03 03-check-her-words: ok (10.5 s, 210 frames)
+04 04-reading-her-words: ok (22.4 s, 448 frames)
+05 05-fact-cards: ok (23.1 s, 464 frames)
+06 06-question-and-answer: ok (26.1 s, 523 frames)
+07 07-answer-facts: ok (14.7 s, 297 frames)
+08 08-writing: ok (40.0 s, 811 frames)
+09 09-cited-sentence: ok (14.6 s, 292 frames)
+10 10-her-correction: ok (30.4 s, 612 frames)
+11 11-what-changed: ok (19.6 s, 394 frames)
+12 12-take-and-approve: ok (16.6 s, 334 frames)
+13 13-not-submitted: ok (13.7 s, 275 frames)
+14 14-evidence-pass: ok (14.8 s, 293 frames)
+15 15-meta-activity: ERROR locator.waitFor: Timeout 30000ms exceeded. (50.6 s, 1014 frames)
+--- controls now:
+button "What Meta did: 13 steps, 27 tool calls, 2 min 30 s total model time, $0.462"
+button "Commands (Ctrl K)"
+button "Start again"
+button "Back"
+button "Open the full workspace"
+button "Notes"
+button "Facts"
+button "Question"
+button "Answer"
+button "Correct a fact Key moment"
+h1 "Done: her supporting evidence and letter, in English, from her own words"
+h2 "What just happened"
+button "See the application"
+button "View notes"
+button "View facts"
+button "View question"
+button "View answer"
+button "View change"
+button "Verify this run"
+button "WHAT META DID muse-voice-transcribe-1.0, muse-wonder-1.0 · 9 runs · 13 steps · 27 tool cal"
+summary "Details"
+button "Copy"
+button "Download the trace (JSON) to verify this run"
+01 o1-open-welcome: ok (4.6 s, 91 frames)
+02 o2-open-written-note: ok (6.0 s, 121 frames)
+03 o3-open-facts: ok (10.2 s, 205 frames)
+04 o4-open-question: ok (18.5 s, 370 frames)
+05 o5-open-write: ok (23.9 s, 479 frames)
+06 o6-open-what-changed: ok (21.6 s, 434 frames)
+07 o7-open-receipt: ok (9.6 s, 193 frames)
+done 2026-11-04T13:08:16Z: main exit 1, open exit 0; footage in ~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-6

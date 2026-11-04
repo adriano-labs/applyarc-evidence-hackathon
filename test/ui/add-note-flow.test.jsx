@@ -49,7 +49,10 @@ it('adds a note after drafting, keeps manual writing and retries reading without
   expect(() => actions.export(saved)).toThrow(/Read your new evidence/);
 
   fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
-  await screen.findByText('Which scheduler did you actually use?');
+  await screen.findByText('These details may not agree. What should I use?');
+  expect(screen.queryByText('Which scheduler did you actually use?')).toBeNull();
+  expect(screen.getAllByText('we used Kubernetes Jobs with a scheduler extender instead of Slurm', { exact: true }).length).toBeGreaterThan(0);
+  expect(screen.getAllByText(note, { exact: true }).length).toBeGreaterThan(0);
   const retried = (await (await server.request('/api/state')).json()).workspace;
   expect(retried.applicant.sources).toHaveLength(before.applicant.sources.length + 1);
   expect(retried.application.documents).toEqual(before.application.documents);

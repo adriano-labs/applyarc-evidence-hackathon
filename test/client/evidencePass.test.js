@@ -61,16 +61,33 @@ describe('evidencePassHtml', () => {
   });
 
   it('says what it is, and what it is not', () => {
-    const text = parse(evidencePassHtml(pack)).body.textContent;
-    expect(text).toContain('Every sentence links to Marcus’s own words, which Marcus confirmed before anything was written.');
+    const text = parse(evidencePassHtml(pack, { drafter: 'Meta Muse Wonder 1.0' })).body.textContent;
+    expect(text).toContain('Every cited sentence links to Marcus’s own words, which Marcus confirmed.');
+    expect(text).toContain('These sentences were drafted with AI (Meta Muse Wonder 1.0) from Marcus’s confirmed words, and Marcus approved this exact version.');
     expect(text).toContain('This is Marcus’s own evidence, shared by Marcus. It is not a reference check or an assessment of Marcus.');
   });
 
-  it('escapes everything it prints and loads nothing from outside the page', () => {
+  it('says when the sentences are hand-written demo text, and never that AI drafted them', () => {
     const html = evidencePassHtml(pack);
+    expect(parse(html).querySelector('footer').textContent).toContain('These sentences are hand-written demo text, not AI output, and Marcus approved this exact version.');
+    expect(html).not.toContain('drafted with AI');
+    expect(html).not.toContain('written by');
+  });
+
+  it('tags the applicant’s own sentences, and says the app did not check them', () => {
+    const edited = structuredClone(pack);
+    edited.documents[0].sentences[1].own = true;
+    const doc = parse(evidencePassHtml(edited, { drafter: 'Meta Muse Wonder 1.0' }));
+    expect([...doc.querySelectorAll('.own')].map((tag) => tag.textContent)).toEqual(['written by Marcus']);
+    expect(doc.querySelector('footer').textContent).toContain('Sentences marked “written by Marcus” are Marcus’s own wording; the app did not check them against Marcus’s facts.');
+  });
+
+  it('escapes everything it prints and loads nothing from outside the page', () => {
+    const html = evidencePassHtml(pack, { drafter: '<img src=y onerror=alert(2)>' });
     const doc = parse(html);
     expect(doc.querySelector('img')).toBeNull();
     expect(doc.body.textContent).toContain('<img src=x onerror=alert(1)>');
+    expect(doc.body.textContent).toContain('drafted with AI (<img src=y onerror=alert(2)>)');
     expect(doc.querySelector('link, script[src], iframe')).toBeNull();
     expect(html).not.toMatch(/https?:\/\//);
   });

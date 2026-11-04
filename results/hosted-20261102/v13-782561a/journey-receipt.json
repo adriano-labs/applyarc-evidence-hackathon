@@ -1,0 +1,128 @@
+{
+  "source": "782561aacb0af062ef83bdf8a45bfe30108d1f58",
+  "revision": "applyarc-evidence--notice782561a",
+  "url": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "exportedAt": "2026-11-02T23:41:10.831Z",
+  "stages": 12,
+  "providerAttempts": 21,
+  "toolCalls": 23,
+  "totalModelMs": 139651,
+  "estimatedCostUsd": 0.5190288,
+  "manualOpeningSurvives": true,
+  "repairedDocuments": 2,
+  "unaffectedSentences": 21,
+  "notSubmitted": true,
+  "modelSteps": [
+    {
+      "step": "extract",
+      "effort": "low",
+      "totalMs": 20119,
+      "costUsd": 0.0584392,
+      "attempts": 4
+    },
+    {
+      "step": "clarify",
+      "effort": "low",
+      "totalMs": 4161,
+      "costUsd": 0.017372,
+      "attempts": 1
+    },
+    {
+      "step": "extract",
+      "effort": "low",
+      "totalMs": 5831,
+      "costUsd": 0.0180112,
+      "attempts": 2
+    },
+    {
+      "step": "draft",
+      "effort": "medium",
+      "totalMs": 18797,
+      "costUsd": 0.07254,
+      "attempts": 2
+    },
+    {
+      "step": "review",
+      "effort": "medium",
+      "totalMs": 5088,
+      "costUsd": 0.025896,
+      "attempts": 1
+    },
+    {
+      "step": "draft",
+      "effort": "medium",
+      "totalMs": 37389,
+      "costUsd": 0.1292824,
+      "attempts": 4
+    },
+    {
+      "step": "review",
+      "effort": "medium",
+      "totalMs": 7697,
+      "costUsd": 0.038136,
+      "attempts": 1
+    },
+    {
+      "step": "extract",
+      "effort": "low",
+      "totalMs": 8059,
+      "costUsd": 0.0202624,
+      "attempts": 2
+    },
+    {
+      "step": "repair",
+      "effort": "medium",
+      "totalMs": 7638,
+      "costUsd": 0.034344,
+      "attempts": 1
+    },
+    {
+      "step": "review",
+      "effort": "medium",
+      "totalMs": 11947,
+      "costUsd": 0.0375816,
+      "attempts": 1
+    },
+    {
+      "step": "revise",
+      "effort": "medium",
+      "totalMs": 7053,
+      "costUsd": 0.032484,
+      "attempts": 1
+    },
+    {
+      "step": "review",
+      "effort": "medium",
+      "totalMs": 5872,
+      "costUsd": 0.03468,
+      "attempts": 1
+    }
+  ],
+  "limits": "Known synthetic journey and recording, not a fresh benchmark or human-effort measure. Total model time is summed across parallel steps, not wall wait. A fresh synthetic visitor was used after earlier visitor cap; all existing caps unchanged.",
+  "traceSha256": "2b75fee2c31b55ccae235d8d0b707ec169babd9e0f474033a589c3105d55f9de",
+  "packSha256": "01538d8b67634dcfd75aaa2caf04f4860290f04d7e86b127034b10113788494c",
+  "activitySha256": "6af07f30363553b5fa81784110c528ac9b860a5f0d49a0f2899a56f1f159ca37",
+  "originalReceiptSha256": "b9c54a41d9137e45d72f799b199bd2241dc758c3ea56e8639c477db1f5a8ff82",
+  "originalTraceSha256": "b3cbe8dd841730dc0bc7213240d437445c7fa978dad02b49fa67e9d390975d90",
+  "originalActivitySha256": "9949aa0a5d6a6c045c1e0f8852205118b877693d05cc6c77b88252cb5884dd19",
+  "finalConfirmedFacts": 14,
+  "documentWords": {
+    "answer": 247,
+    "letter": 204
+  },
+  "documentLimits": {
+    "answer": 300,
+    "letter": 400
+  },
+  "sanitization": [
+    "Removed currentGlobalBudget.",
+    "Trace and activity hashes above identify sanitized public files; original hashes are explicitly separate.",
+    "Approved pack is byte-identical to the downloaded export."
+  ]
+}

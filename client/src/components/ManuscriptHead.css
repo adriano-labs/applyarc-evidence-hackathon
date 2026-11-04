@@ -69,3 +69,6 @@
   color: var(--danger);
   margin: 0;
 }
+
+/* Words in another language: what drafted the English and who confirmed its meaning. */
+.manuscript-language { font: 500 var(--text-sm)/1.5 var(--font-ui); color: var(--ink); margin: var(--s1) 0 0; }

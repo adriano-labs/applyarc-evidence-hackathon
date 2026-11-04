@@ -1,0 +1,1661 @@
+{
+ "at": "2026-11-03T21:39:07.463Z",
+ "base": "http://127.0.0.1:3196",
+ "summary": {
+  "notes keywords": {
+   "calls": 5,
+   "meanWer": 0.0525,
+   "wer": [
+    0.0313,
+    0.0437,
+    0.0688,
+    0.0813,
+    0.0375
+   ],
+   "openingExact": 0,
+   "nameInOpening": 4,
+   "leeds": 5,
+   "euTrabalho": 5,
+   "trabalha": 0
+  },
+  "notes no keywords": {
+   "calls": 5,
+   "meanWer": 0.0625,
+   "wer": [
+    0.075,
+    0.0437,
+    0.05,
+    0.1,
+    0.0437
+   ],
+   "openingExact": 0,
+   "nameInOpening": 0,
+   "leeds": 5,
+   "euTrabalho": 5,
+   "trabalha": 0
+  },
+  "answer keywords": {
+   "calls": 5,
+   "meanWer": 0.0353,
+   "wer": [
+    0.0196,
+    0.0196,
+    0.0784,
+    0.0392,
+    0.0196
+   ],
+   "openingExact": 5,
+   "anaInserted": 0
+  },
+  "answer no keywords": {
+   "calls": 5,
+   "meanWer": 0.0392,
+   "wer": [
+    0.0196,
+    0.0588,
+    0.0392,
+    0,
+    0.0784
+   ],
+   "openingExact": 3,
+   "anaInserted": 0
+  },
+  "correction keywords": {
+   "calls": 5,
+   "meanWer": 0.0118,
+   "wer": [
+    0,
+    0,
+    0,
+    0,
+    0.0588
+   ],
+   "openingExact": 5,
+   "anaInserted": 0
+  },
+  "correction no keywords": {
+   "calls": 5,
+   "meanWer": 0.0118,
+   "wer": [
+    0,
+    0,
+    0.0588,
+    0,
+    0
+   ],
+   "openingExact": 5,
+   "anaInserted": 0
+  }
+ },
+ "runs": [
+  {
+   "pair": 1,
+   "clip": "notes",
+   "keywords": true,
+   "status": 200,
+   "ms": 14700,
+   "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela ela fez a participação de safeguarding.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0313,
+   "errors": 5,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "sub",
+     "me",
+     "chamome"
+    ],
+    [
+     "ins",
+     "",
+     "tenho"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "ela"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": true,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 1
+  },
+  {
+   "pair": 1,
+   "clip": "notes",
+   "keywords": false,
+   "status": 200,
+   "ms": 11909,
+   "text": "Szemum jene. Eu Eu trabalho há três anos num lar em Leeds. Comecei em outubro de dois mil e vinte e três. Tenho a Tenho a formação de medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes notes em inglês e assino a folha da medicação. Antes do turno, turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa pessoa poder apontar o que quer comer Fiz três anos de noites e também fins de semana Uma noite vi uma nódoa negra no braço de uma residente Registei e contei logo à enfermeira de serviço e ela fez a participação de safe guarding",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.075,
+   "errors": 12,
+   "words": 160,
+   "ops": [
+    [
+     "sub",
+     "chamo",
+     "szemum"
+    ],
+    [
+     "sub",
+     "me",
+     "jene"
+    ],
+    [
+     "sub",
+     "ana",
+     "eu"
+    ],
+    [
+     "ins",
+     "",
+     "tenho"
+    ],
+    [
+     "ins",
+     "",
+     "a"
+    ],
+    [
+     "sub",
+     "da",
+     "de"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "notes"
+    ],
+    [
+     "ins",
+     "",
+     "turno"
+    ],
+    [
+     "ins",
+     "",
+     "pessoa"
+    ],
+    [
+     "ins",
+     "",
+     "safe"
+    ],
+    [
+     "sub",
+     "safeguarding",
+     "guarding"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "notes",
+   "keywords": false,
+   "status": 200,
+   "ms": 11501,
+   "text": "Szemmjen. Eu trabalho há três anos num lar em Leeds comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling uso a grua e trabalhamos sempre em dupla. Na unidade de demência os residentes ficavam agitados ao fim do dia por isso nós, a equipa toda, passámos o o jantar para mais cedo. Eu Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0437,
+   "errors": 7,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "sub",
+     "ana",
+     "szemmjen"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "o"
+    ],
+    [
+     "ins",
+     "",
+     "eu"
+    ],
+    [
+     "ins",
+     "",
+     "o"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "notes",
+   "keywords": true,
+   "status": 200,
+   "ms": 12197,
+   "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0437,
+   "errors": 7,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "sub",
+     "me",
+     "chamome"
+    ],
+    [
+     "ins",
+     "",
+     "dois"
+    ],
+    [
+     "ins",
+     "",
+     "mil"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "da"
+    ],
+    [
+     "ins",
+     "",
+     "trabalhamos"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": true,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 1
+  },
+  {
+   "pair": 3,
+   "clip": "notes",
+   "keywords": true,
+   "status": 200,
+   "ms": 11621,
+   "text": "Chammiene. Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito dezoito residentes. No No fim do turno, escrevo as daily notes em inglês e assino a folha da da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. cedo. Eu fiz cartões com fotografias da comida, para cada pessoa pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma uma nódoa negra no braço de uma residente registei e contei logo à enfermeira de serviço e ela fez a participação de Safeguarding",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0688,
+   "errors": 11,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "sub",
+     "ana",
+     "chammiene"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "dezoito"
+    ],
+    [
+     "ins",
+     "",
+     "no"
+    ],
+    [
+     "ins",
+     "",
+     "da"
+    ],
+    [
+     "ins",
+     "",
+     "do"
+    ],
+    [
+     "ins",
+     "",
+     "cedo"
+    ],
+    [
+     "ins",
+     "",
+     "pessoa"
+    ],
+    [
+     "ins",
+     "",
+     "uma"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 3,
+   "clip": "notes",
+   "keywords": false,
+   "status": 200,
+   "ms": 11155,
+   "text": "Xem Eu trabalho há três anos num lar em Leeds comecei em outubro de dois mil e vinte e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida comida para cada pessoa poder apontar o que que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.05,
+   "errors": 8,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "sub",
+     "ana",
+     "xem"
+    ],
+    [
+     "ins",
+     "",
+     "e"
+    ],
+    [
+     "ins",
+     "",
+     "vinte"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "comida"
+    ],
+    [
+     "ins",
+     "",
+     "que"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "notes",
+   "keywords": false,
+   "status": 200,
+   "ms": 11455,
+   "text": "Szemmiene. Eu Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a Tenho a formação da medicação e faço medication round da manhã para dezoito dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha folha da medicação. Antes do Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço serviço e ela fez a participação de safeguarding.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.1,
+   "errors": 16,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "sub",
+     "me",
+     "szemmiene"
+    ],
+    [
+     "sub",
+     "ana",
+     "eu"
+    ],
+    [
+     "ins",
+     "",
+     "tenho"
+    ],
+    [
+     "ins",
+     "",
+     "a"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "dezoito"
+    ],
+    [
+     "ins",
+     "",
+     "folha"
+    ],
+    [
+     "ins",
+     "",
+     "antes"
+    ],
+    [
+     "ins",
+     "",
+     "do"
+    ],
+    [
+     "ins",
+     "",
+     "e"
+    ],
+    [
+     "ins",
+     "",
+     "do"
+    ],
+    [
+     "ins",
+     "",
+     "cartões"
+    ],
+    [
+     "ins",
+     "",
+     "com"
+    ],
+    [
+     "ins",
+     "",
+     "de"
+    ],
+    [
+     "ins",
+     "",
+     "serviço"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "notes",
+   "keywords": true,
+   "status": 200,
+   "ms": 12349,
+   "text": "Chamome Ana. Eu Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito dezoito residentes. No fim do turno escrevo as daily daily notes em inglês e assino a folha da folha da medicação. Antes do Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling uso a grua e trabalhamos sempre em dupla. Na unidade de demência os os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço serviço e ela fez a participação de safeguarding.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0813,
+   "errors": 13,
+   "words": 160,
+   "ops": [
+    [
+     "sub",
+     "chamo",
+     "chamome"
+    ],
+    [
+     "sub",
+     "me",
+     "ana"
+    ],
+    [
+     "sub",
+     "ana",
+     "eu"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "dezoito"
+    ],
+    [
+     "ins",
+     "",
+     "daily"
+    ],
+    [
+     "ins",
+     "",
+     "folha"
+    ],
+    [
+     "ins",
+     "",
+     "da"
+    ],
+    [
+     "ins",
+     "",
+     "antes"
+    ],
+    [
+     "ins",
+     "",
+     "do"
+    ],
+    [
+     "ins",
+     "",
+     "os"
+    ],
+    [
+     "ins",
+     "",
+     "toda"
+    ],
+    [
+     "ins",
+     "",
+     "serviço"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": true,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 1
+  },
+  {
+   "pair": 5,
+   "clip": "notes",
+   "keywords": true,
+   "status": 200,
+   "ms": 11963,
+   "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0375,
+   "errors": 6,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "sub",
+     "me",
+     "chamome"
+    ],
+    [
+     "ins",
+     "",
+     "tenho"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "turno"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": true,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 1
+  },
+  {
+   "pair": 5,
+   "clip": "notes",
+   "keywords": false,
+   "status": 200,
+   "ms": 11164,
+   "text": "Eu trabalho há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam estavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0437,
+   "errors": 7,
+   "words": 160,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "del",
+     "ana",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "e"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "estavam"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": false,
+   "leeds": true,
+   "euTrabalho": true,
+   "trabalha": false,
+   "anaHeard": 0
+  },
+  {
+   "pair": 1,
+   "clip": "answer",
+   "keywords": true,
+   "status": 200,
+   "ms": 3598,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere prefere ser ajudada por uma mulher.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0196,
+   "errors": 1,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "prefere"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 1,
+   "clip": "answer",
+   "keywords": false,
+   "status": 200,
+   "ms": 4352,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0196,
+   "errors": 1,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "sempre"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "answer",
+   "keywords": false,
+   "status": 200,
+   "ms": 4406,
+   "text": "ParaPara mim, dignidade é bater à porta antes porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0588,
+   "errors": 3,
+   "words": 51,
+   "ops": [
+    [
+     "sub",
+     "para",
+     "parapara"
+    ],
+    [
+     "ins",
+     "",
+     "porta"
+    ],
+    [
+     "ins",
+     "",
+     "antes"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "answer",
+   "keywords": true,
+   "status": 200,
+   "ms": 3874,
+   "text": "Para mim, dignidade é bater à porta porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0196,
+   "errors": 1,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "porta"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 3,
+   "clip": "answer",
+   "keywords": true,
+   "status": 200,
+   "ms": 4364,
+   "text": "Para mim, dignidade é bater à porta à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeita a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere prefere ser ajudada por uma mulher.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0784,
+   "errors": 4,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "à"
+    ],
+    [
+     "ins",
+     "",
+     "porta"
+    ],
+    [
+     "sub",
+     "respeito",
+     "respeita"
+    ],
+    [
+     "ins",
+     "",
+     "prefere"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 3,
+   "clip": "answer",
+   "keywords": false,
+   "status": 200,
+   "ms": 4340,
+   "text": "ParaPara mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as as cortinas. E respeito a cultura e a religião de cada pessoa. Pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0392,
+   "errors": 2,
+   "words": 51,
+   "ops": [
+    [
+     "sub",
+     "para",
+     "parapara"
+    ],
+    [
+     "ins",
+     "",
+     "as"
+    ]
+   ],
+   "openingExact": false,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "answer",
+   "keywords": false,
+   "status": 200,
+   "ms": 3555,
+   "text": "Para mim, dignidade é bater à porta antes de entrar explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 51,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "answer",
+   "keywords": true,
+   "status": 200,
+   "ms": 4551,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer fazer antes da higiene pessoal e fechar fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa. Pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0392,
+   "errors": 2,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "fazer"
+    ],
+    [
+     "ins",
+     "",
+     "fechar"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 5,
+   "clip": "answer",
+   "keywords": true,
+   "status": 200,
+   "ms": 3976,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa. Pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0196,
+   "errors": 1,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "fechar"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 5,
+   "clip": "answer",
+   "keywords": false,
+   "status": 200,
+   "ms": 4604,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quero comer, como quero ser tratada e se prefere ser ajudada por uma mulher.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0784,
+   "errors": 4,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "fazer"
+    ],
+    [
+     "ins",
+     "",
+     "antes"
+    ],
+    [
+     "sub",
+     "quer",
+     "quero"
+    ],
+    [
+     "sub",
+     "quer",
+     "quero"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 1,
+   "clip": "correction",
+   "keywords": true,
+   "status": 200,
+   "ms": 2049,
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 1,
+   "clip": "correction",
+   "keywords": false,
+   "status": 200,
+   "ms": 2120,
+   "text": "Correção, os turnos da noite foram dois anos, não três. No último ano passei a fazer dias.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "correction",
+   "keywords": false,
+   "status": 200,
+   "ms": 2162,
+   "text": "Correção, os turnos da noite foram dois anos, não três. No último ano passei a fazer dias.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 2,
+   "clip": "correction",
+   "keywords": true,
+   "status": 200,
+   "ms": 2021,
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 3,
+   "clip": "correction",
+   "keywords": true,
+   "status": 200,
+   "ms": 2072,
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 3,
+   "clip": "correction",
+   "keywords": false,
+   "status": 200,
+   "ms": 2063,
+   "text": "Correção: os turnos da noite foram dois anos, não três, no último último ano passei a fazer dias.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0588,
+   "errors": 1,
+   "words": 17,
+   "ops": [
+    [
+     "ins",
+     "",
+     "último"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "correction",
+   "keywords": false,
+   "status": 200,
+   "ms": 2203,
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 4,
+   "clip": "correction",
+   "keywords": true,
+   "status": 200,
+   "ms": 2029,
+   "text": "Correção, os turnos da noite foram dois anos, não três. No último ano passei a fazer dias.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 5,
+   "clip": "correction",
+   "keywords": true,
+   "status": 200,
+   "ms": 2151,
+   "text": "Correção, os turnos da noite foram foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "languageBias": "Portuguese",
+   "werSpoken": 0.0588,
+   "errors": 1,
+   "words": 17,
+   "ops": [
+    [
+     "ins",
+     "",
+     "foram"
+    ]
+   ],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  },
+  {
+   "pair": 5,
+   "clip": "correction",
+   "keywords": false,
+   "status": 200,
+   "ms": 2270,
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "sent": null,
+   "languageBias": "Portuguese",
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": [],
+   "openingExact": true,
+   "nameInOpening": null,
+   "leeds": null,
+   "euTrabalho": null,
+   "trabalha": null,
+   "anaHeard": 0
+  }
+ ],
+ "receipts": [
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 14671
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "totalMs": 11904
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "totalMs": 11493
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 12190
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 11614
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "totalMs": 11148
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "totalMs": 11451
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 12343
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 11952
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58960,
+   "costUsd": 0.002948,
+   "languageBias": "Portuguese",
+   "totalMs": 11157
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 3592
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 4346
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 4400
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 3871
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 4359
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 4334
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 3549
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 4546
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 3972
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 4599
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 2045
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2114
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2156
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 2017
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 2069
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2059
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2199
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 2025
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ],
+   "totalMs": 2146
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2265
+  }
+ ],
+ "budget": {
+  "capUsd": 4,
+  "spentUsd": 0.04116,
+  "reservedUsd": 0,
+  "remainingUsd": 3.95884
+ }
+}

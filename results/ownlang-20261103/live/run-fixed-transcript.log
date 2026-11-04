@@ -1,0 +1,14 @@
+{
+ "out": "../evidence/live/run-fixed-transcript",
+ "failures": [],
+ "costUsd": 0.4658,
+ "wallSeconds": 370.9,
+ "notes": 12,
+ "refused": 0,
+ "werNotes": 0.0688,
+ "reopen": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

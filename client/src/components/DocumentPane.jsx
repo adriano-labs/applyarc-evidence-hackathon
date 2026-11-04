@@ -10,6 +10,8 @@ import { defaultTab, primaryAction, thenLine } from '../flow.js';
 import { StatusLine } from './TopBar.jsx';
 import { tabStates } from '../tabs.js';
 import { CheckedDrafts } from './WorkingState.jsx';
+import { docTitles } from '../lib/trail.js';
+import { draftedFromLine } from '../lib/spokenLines.js';
 
 // Each tab: its name, a short name for phones, and its keyboard shortcut.
 const TABS = [
@@ -17,6 +19,13 @@ const TABS = [
   { id: 'answer', name: 'Project answer', short: 'Answer', key: '2' },
   { id: 'letter', name: 'Cover letter', short: 'Letter', key: '3' },
 ];
+
+// The form's own titles; a council's "Supporting evidence" is "Evidence" on a phone.
+function tabsFor(workspace) {
+  const titles = docTitles(workspace);
+  const short = (t) => (t.id === 'answer' && /^supporting/i.test(titles.answer) ? 'Evidence' : t.short);
+  return TABS.map((t) => (t.id === 'notes' ? t : { ...t, name: titles[t.id] ?? t.name, short: short(t) }));
+}
 
 export function DocumentPane({
   tab,
@@ -127,6 +136,7 @@ export function DocumentPane({
             samples={samplesProp ?? sample?.samples}
             liveModel={liveModel}
             onStartSample={onStartSample}
+            languages={sample?.languages}
           />
         </div>
       );
@@ -199,6 +209,7 @@ export function DocumentPane({
             onReceipts={onReceipts}
             onPin={onPin}
             hintSeen={hintSeen}
+            languageLine={draftedFromLine(workspace, doc, receipts)}
           />
         </div>
       );
@@ -212,7 +223,7 @@ export function DocumentPane({
   return (
     <section className="document-pane">
       <nav className="doc-tabs" role="tablist" aria-label="Documents">
-        {TABS.map(({ id, name, short, key }) => {
+        {tabsFor(workspace).map(({ id, name, short, key }) => {
           const state = states[id];
           return (
             <button
@@ -243,7 +254,7 @@ export function DocumentPane({
       </nav>
       <div className="document-body">
         {busy && <StatusLine busy={busy} modeLabel={modeLabel} />}
-        <CheckedDrafts busy={busy} />
+        <CheckedDrafts busy={busy} titles={docTitles(workspace)} />
         {picking ? (
           <NextApplication
             forms={forms || []}

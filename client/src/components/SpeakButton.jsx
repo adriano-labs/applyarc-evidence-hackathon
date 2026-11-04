@@ -11,7 +11,8 @@ const clock = (ms) => `${Math.floor(ms / 60000)}:${String(Math.floor(ms / 1000) 
 export const appendWords = (before, words) => (before.trim() ? `${before.trim()} ${words}` : words);
 
 // Press to record, press again to stop: Meta Voice Transcribe turns it into text.
-export function SpeakButton({ onText, disabled }) {
+// `onText(text, reply)`: the words, and the server's reply (its model and the audio length).
+export function SpeakButton({ onText, disabled, language }) {
   const [state, setState] = useState('idle');
   const [elapsed, setElapsed] = useState(0);
   const [status, setStatus] = useState('');
@@ -30,7 +31,8 @@ export function SpeakButton({ onText, disabled }) {
     if (!current) return;
     setState('working');
     try {
-      onText((await transcribe(await current.stop())).text);
+      const reply = await transcribe(await current.stop(), ...(language ? [language] : []));
+      onText(reply.text, reply);
     } catch (error) {
       setStatus(error?.message || 'Something went wrong. Try again, or type instead.');
     }

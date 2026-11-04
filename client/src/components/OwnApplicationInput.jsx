@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { appendWords, SpeakButton } from './SpeakButton.jsx';
+import { LanguageChoice } from './LanguageChoice.jsx';
 import './OwnApplicationInput.css';
 
-const empty = { applicant: '', company: '', role: '', notes: '', question: '', wordLimit: '', points: '', personal: [], synthetic: false, requirementsConfirmed: false };
+const empty = { applicant: '', company: '', role: '', notes: '', question: '', wordLimit: '', points: '', personal: [], synthetic: false, requirementsConfirmed: false, language: 'en' };
 const pointsFrom = (text) => text.split('\n').map((point) => point.trim()).filter(Boolean);
 
 function TextField({ label, name, value, onChange, maxLength, rows, ...props }) {
@@ -36,11 +37,12 @@ function Requirements({ draft, change, points }) {
   </fieldset>;
 }
 
-function OwnFields({ draft, change, points, voice, busy }) {
+function OwnFields({ draft, change, points, voice, busy, languages }) {
   return <>
     <IdentityFields draft={draft} change={change} />
-    <TextField label="Fictional CV or project notes" name="notes" value={draft.notes} onChange={change} rows={5} maxLength={20000} required />
-    {voice ? <SpeakButton onText={(text) => change('notes', appendWords(draft.notes, text))} disabled={busy} /> : null}
+    <LanguageChoice id="own-language" languages={languages} value={draft.language} onChange={(value) => change('language', value)} disabled={busy} />
+    <TextField label="Fictional CV or project notes" name="notes" value={draft.notes} onChange={change} rows={5} maxLength={20000} required lang={draft.language === 'en' ? undefined : draft.language} />
+    {voice ? <SpeakButton language={draft.language} onText={(text) => change('notes', appendWords(draft.notes, text))} disabled={busy} /> : null}
     <TextField label="Exact application question" name="question" value={draft.question} onChange={change} rows={4} maxLength={8000} required />
     <TextField label="Employer word limit, if stated" name="wordLimit" value={draft.wordLimit} onChange={change} type="number" min={1} max={2000} step={1} />
     <p className="own-hint">Otherwise we use a 300-word guide. We also prepare an optional cover letter with a 400-word guide. The employer’s full form and remaining steps are not checked.</p>
@@ -50,7 +52,7 @@ function OwnFields({ draft, change, points, voice, busy }) {
   </>;
 }
 
-export function OwnApplicationInput({ busy = false, liveModel, onStart, voice }) {
+export function OwnApplicationInput({ busy = false, liveModel, onStart, voice, languages }) {
   const [draft, setDraft] = useState(empty);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
@@ -62,8 +64,8 @@ export function OwnApplicationInput({ busy = false, liveModel, onStart, voice })
     if (!ready) return;
     setSending(true);
     setError('');
-    const { points: _points, personal, ...fields } = draft;
-    const input = { ...fields, wordLimit: fields.wordLimit === '' ? undefined : Number(fields.wordLimit), requirements: points.map((text) => ({ text, personal: personal.includes(text) })) };
+    const { points: _points, personal, language, ...fields } = draft;
+    const input = { ...fields, ...(language !== 'en' ? { language } : {}), wordLimit: fields.wordLimit === '' ? undefined : Number(fields.wordLimit), requirements: points.map((text) => ({ text, personal: personal.includes(text) })) };
     try {
       if (!(await onStart(input))) setError('Could not start this example. Your text is still here; try again when ready.');
     } catch { setError('Could not start this example. Your text is still here; try again when ready.'); }
@@ -74,7 +76,7 @@ export function OwnApplicationInput({ busy = false, liveModel, onStart, voice })
     <form className="own-application" onSubmit={submit} aria-label="Your own application example">
     <p>Use one pasted application question with your own synthetic notes. You confirm every fact before it is used.</p>
     {!liveModel && <p className="own-hint">Your own example needs the live model. The sample above still works without it.</p>}
-    <fieldset className="own-fields" disabled={Boolean(busy || sending)}><OwnFields draft={draft} change={change} points={points} voice={voice} busy={busy || sending} /></fieldset>
+    <fieldset className="own-fields" disabled={Boolean(busy || sending)}><OwnFields draft={draft} change={change} points={points} voice={voice} busy={busy || sending} languages={languages} /></fieldset>
     {error && <p role="alert">{error}</p>}
     <button type="submit" className="btn primary" disabled={!ready}>{sending ? 'Opening your example…' : 'Read my example'}</button>
   </form></details>;

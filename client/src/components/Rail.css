@@ -1,0 +1,4 @@
+/* The trail opens as its own aside, with one link back to the references. */
+.rail-back {
+  justify-self: start;
+}

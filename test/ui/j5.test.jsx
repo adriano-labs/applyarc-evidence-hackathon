@@ -41,7 +41,7 @@ describe('J5', () => {
       return Response.json({ ...body, mode: { id: 'meta', label: 'Meta Muse Spark 1.3', model: 'muse-spark-1.3', isMeta: true } });
     };
     render(<App />);
-    const pill = await screen.findByRole('button', { name: 'What Meta did: 1 step, 2 tool calls, 6.2 s, $0.0040' }, wait);
+    const pill = await screen.findByRole('button', { name: 'What Meta did: 1 step, 2 tool calls, 6.2 s total model time, $0.0040' }, wait);
     const toggle = () => document.querySelector('.receipts-toggle');
     await waitFor(() => expect(toggle()).toBeTruthy(), wait);
     expect(toggle().getAttribute('aria-expanded')).toBe('false');

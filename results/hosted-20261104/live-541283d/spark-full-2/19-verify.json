@@ -1,0 +1,54 @@
+{
+ "revision": 16,
+ "checks": [
+  {
+   "id": "quotes",
+   "pass": true,
+   "count": 17,
+   "failures": [],
+   "text": "17 of 17 confirmed facts quote Ana’s text word for word"
+  },
+  {
+   "id": "citations",
+   "pass": true,
+   "count": 21,
+   "failures": [],
+   "text": "21 of 21 drafted statements cite at least one fact, all confirmed"
+  },
+  {
+   "id": "numbers",
+   "pass": true,
+   "count": 21,
+   "failures": [],
+   "text": "21 of 21 drafted statements state no number their cited facts do not"
+  },
+  {
+   "id": "approvals",
+   "pass": true,
+   "count": 2,
+   "failures": [],
+   "text": "2 of 2 approvals match the current version"
+  },
+  {
+   "id": "own",
+   "pass": true,
+   "count": 0,
+   "failures": [],
+   "text": "No sentences in Ana’s own wording (none to check)"
+  },
+  {
+   "id": "export",
+   "pass": true,
+   "count": 1,
+   "failures": [],
+   "text": "Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions"
+  },
+  {
+   "id": "review",
+   "pass": true,
+   "count": 21,
+   "failures": [],
+   "text": "Model review on record: 21 cited sentences supported, 0 held back"
+  }
+ ]
+}

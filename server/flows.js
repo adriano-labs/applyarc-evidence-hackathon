@@ -16,33 +16,39 @@ import { acceptSuggestion, dismissSuggestion } from './domain/sentenceSuggestion
 import { strengthen } from './agent/strengthen.js';
 import { activeSourceContext, citedInDrafts, conflictedFacts, heldSourceConflict, holdSourceConflict, pendingSourceConflict } from './domain/sourceConflicts.js';
 import { resolveSourceConflict } from './domain/sourceConflictCorrection.js';
+import { applicantLanguage, checkLanguage, factForModel, LANGUAGES } from './domain/languages.js';
 
 const MAX_NOTES = 20000;
-const factView = (f) => ({ id: f.id, statement: f.statement, quote: f.quote });
 
 export const actions = {
   resolveSourceConflict,
   startOwnApplication(ws, input, ctx = {}) {
     if (ws.applicant.sources.length || ws.archive?.length) refuse('invalid', 'Press Start again first.');
     const { applicant, notes, form } = prepareOwnApplication(input, ctx);
+    const language = checkLanguage(input.language);
     ws.applicant.name = applicant;
     ws.application = createApplication(form);
-    const source = addSource(ws, { kind: 'notes', text: notes });
+    const source = addSource(ws, { kind: 'notes', text: notes, language });
     return { id: source.id };
   },
-  notes(ws, { text }) {
+  // A note without a language is in the language of the applicant's latest words.
+  notes(ws, { text, language, spoken }, { samples = [] } = {}) {
     const notes = String(text ?? '').trim();
     if (!notes) refuse('invalid', 'Paste or type your notes first.');
     if (notes.length > MAX_NOTES) refuse('invalid', 'Notes are limited to 20,000 characters.');
-    return addSource(ws, { kind: 'notes', text: notes });
+    // A sample's own notes, added first, start that sample: only then does the letter carry its name.
+    const sample = ws.applicant.sources.length ? null : samples.find((s) => s.notes?.trim() === notes);
+    if (sample) ws.applicant.name = sample.name;
+    return addSource(ws, { kind: 'notes', text: notes, language: checkLanguage(language) ?? applicantLanguage(ws), spoken });
   },
   decideFact: (ws, { factId, decision }) => decideFact(ws, factId, decision),
   confirmFacts: (ws, { factIds }) => confirmFacts(ws, factIds),
-  changeFact(ws, { factId, text }) {
-    const fact = changeFact(ws, factId, text);
+  // meaning and actor: a fact in another language keeps its English meaning and who did it.
+  changeFact(ws, { factId, text, meaning, actor }) {
+    const fact = changeFact(ws, factId, text, undefined, { meaning, actor });
     return { fact, repair: startRepair(ws, factId) };
   },
-  answer: (ws, { questionId, text }) => answerQuestion(ws, questionId, text),
+  answer: (ws, { questionId, text, language }) => answerQuestion(ws, questionId, text, undefined, checkLanguage(language) ?? applicantLanguage(ws)),
   skip: (ws, { questionId }) => skipQuestion(ws, questionId),
   edit: (ws, { docId, segmentId, text }) => editSegment(ws, docId, segmentId, text),
   acceptSuggestion: (ws, { suggestionId }) => acceptSuggestion(ws, suggestionId),
@@ -60,14 +66,19 @@ export const actions = {
     if (!form) refuse('invalid', 'Unknown form.');
     return startNextApplication(ws, form);
   },
-  startSample(ws, { sampleId }, ctx = {}) {
+  // A spoken sample on the live model starts from the words Voice Transcribe heard in its
+  // clip, which the applicant has checked; otherwise from the sample's written notes.
+  startSample(ws, { sampleId, text }, ctx = {}) {
     const samples = ctx.samples ?? [];
     const sample = samples.find((s) => s.id === sampleId);
     if (!sample) refuse('invalid', 'There is no such sample.');
     if (ws.applicant.sources && ws.applicant.sources.length > 0) refuse('invalid', 'Press Start again first.');
-    if (sample.liveOnly && !ctx.liveModel) refuse('invalid', `${sample.name}’s sample needs the live model; this copy runs on hand-written examples for Ellie only.`);
+    if (sample.liveOnly && !ctx.liveModel) refuse('invalid', `${sample.name}’s sample needs the live model; this copy runs on hand-written examples for Ellie and Ana only.`);
+    const heard = sample.clips && ctx.liveModel ? String(text ?? '').trim() : '';
+    if (heard.length > MAX_NOTES) refuse('invalid', 'Notes are limited to 20,000 characters.');
     ws.application.form = structuredClone(sample.form);
-    const source = addSource(ws, { kind: 'notes', text: sample.notes });
+    ws.applicant.name = sample.name;
+    const source = addSource(ws, { kind: 'notes', text: heard || sample.notes, language: sample.language, spoken: Boolean(heard) });
     return { id: source.id };
   },
   // Keep or remove the earlier fact an answered conflict was about; Correct fact is the third way.
@@ -115,21 +126,24 @@ async function check(ws, _input, agent, emit) {
     const left = coverage(ws).filter((r) => !r.covered).length;
     const label = !left ? 'Every requirement is covered: no question needed'
       : `No question needed: ${left} requirement${left === 1 ? '' : 's'} will be left out of the drafts`;
-    emit({ type: 'stage', label });
+    emit({ type: 'stage', decision: true, label });
     return { added: [], refused: [], modelCalled: false };
   }
   emit({ type: 'stage', label: 'Checking what the form still needs' });
   const notes = activeSourceContext(ws, { id: null }).map((s) => s.text);
-  const resultClarify = await agent.clarify({ form: ws.application.form, askable, facts: confirmedFacts(ws).map(factView), notes, emit });
+  const language = applicantLanguage(ws);
+  const resultClarify = await agent.clarify({ form: ws.application.form, askable, facts: confirmedFacts(ws).map(factForModel), notes, language, emit });
   const { linked, refused: _refusedLinks } = linkFacts(ws, resultClarify.coverage ?? []);
   const result = addQuestions(ws, resultClarify.questions);
   // A personal requirement the model left uncovered and unasked: the app asks
   // it itself, marked as the app's, so it can never silently drop out.
   const covered = new Set(coverage(ws).filter((r) => r.covered).map((r) => r.id));
   const asked = new Set(ws.application.questions.map((q) => q.requirementId));
+  const asks = (r) => `The form asks for "${r.text}": what would you write?`;
   const appProposals = askable.filter((r) => r.personal && !covered.has(r.id) && !asked.has(r.id)).map((r) => ({
     requirementId: r.id,
-    question: `The form asks for "${r.text}": what would you write?`,
+    question: LANGUAGES[language]?.asks(r.text) ?? asks(r),
+    ...(LANGUAGES[language] ? { english: asks(r) } : {}),
     why: 'The app asks this itself: the form wants it in your own words, and none of your confirmed facts says it in the first person.',
   }));
   const appResult = addQuestions(ws, appProposals, 'app');

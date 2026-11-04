@@ -1,16 +1,21 @@
 // Guided walk-through frame: one step at a time, headline, one main button, and a step
 // bar that opens any finished step as a read-only look back.
 import { useEffect, useRef } from 'react';
-import { Check, ChevronLeft } from 'lucide-react';
-import { pronouns, sourceKinds, unreadSource } from '../flow.js';
-import { STEP_LABELS, reviewCopy } from './GuidedReview.jsx';
+import { ChevronLeft } from 'lucide-react';
+import { demoLabel, pronouns, sourceKinds, unreadSource } from '../flow.js';
+import { atKeyMoment } from '../lib/prepared.js';
+import { drafter, family } from '../lib/trail.js';
+import { reviewCopy } from './GuidedReview.jsx';
+import { GuidedSteps, STEP_NAMES } from './GuidedSteps.jsx';
+import { stepCopy } from './guidedCopy.js';
 import './GuidedRun.css';
 
-// Which of the five guided steps the workspace is on. `story` is the walk-through's
-// own step once the drafts are written ('change' after "Next: change a fact").
+// Four core stages, the correction as the key moment, and the finish keep their existing IDs.
+// `story` selects the correction after the drafts are written; a prepared workspace starts there.
 export function guidedStep(view, ws, story) {
   if (ws?.application?.repair) return { n: 5, key: 'change' };
   const next = view?.next;
+  if (atKeyMoment(ws, next)) return { n: 5, key: 'change' };
   if (next === 'export') return { n: 5, key: 'finish' };
   if (story === 'change') return { n: 5, key: 'change' };
   if (next === 'approve') return { n: 4, key: 'answer' };
@@ -28,6 +33,7 @@ export function guidedStep(view, ws, story) {
   return { n: 1, key: 'notes' };
 }
 
+const firstNotes = (ws) => (ws?.applicant?.sources ?? []).find((s) => s.kind === 'notes');
 
 // Facts found in the notes, whatever their status (the count the facts step announces).
 function notesFactCount(ws) {
@@ -35,17 +41,43 @@ function notesFactCount(ws) {
   return (ws?.applicant?.facts ?? []).filter((f) => kinds[f.sourceId] === 'notes').length;
 }
 
-// `isMeta`: only a real Meta run may be credited to Meta; the fixture is "the app".
-// `reviewStep`: the finished step being looked back at, or null for the live step.
-export function GuidedRun({ view, workspace, story, sampleName, isMeta = false, possessive = 'her', reviewStep = null, busy = null, onPrimary, onStory, onReview, onExit, children }) {
-  const { n, key } = guidedStep(view, workspace, story);
-  const N = notesFactCount(workspace);
-  const p = pronouns(possessive);
-  const live = key === 'finish' ? 6 : n; // the finish comes after step 5
-  const at = reviewStep ?? live;
-  const forward = Boolean(reviewStep) && reviewStep + 1 < live;
+// Under the live step: write the answer (her application, for a sample in another language, as its
+// headline says), then the key moment first, with review one click away.
+function LiveActions({ stepKey, busy, p, what, onPrimary, onStory, onExit }) {
+  if (stepKey === 'draft' && !busy) {
+    return (
+      <button type="button" className="btn primary big guided-main" onClick={() => onPrimary?.({ id: 'draft', label: 'Write both documents' })}>
+        Write {p.possessive} {what}
+      </button>
+    );
+  }
+  if (stepKey !== 'answer') return null;
+  return (
+    <div className="guided-actions">
+      <button type="button" className="btn primary big" disabled={Boolean(busy)} onClick={() => onStory?.('change')}>
+        Next: correct one fact
+      </button>
+      <button type="button" className="btn big" disabled={Boolean(busy)} onClick={() => onExit?.()}>
+        Review and finish
+      </button>
+    </div>
+  );
+}
 
-  // Moving between steps starts each one at the top of the page, as a new page would; not on first show.
+// Under a look back: on to the next finished step, or back to the live one.
+function ReviewAction({ reviewStep, live, stepKey, n, onReview }) {
+  const forward = reviewStep + 1 < live;
+  const label = forward ? `Next: ${STEP_NAMES[reviewStep]}` : live === 6 ? 'Return to the finish' : stepKey === 'change' ? 'Return to correction' : `Return to step ${n}`;
+  return (
+    <button type="button" className="btn primary big guided-main" onClick={() => onReview?.(forward ? reviewStep + 1 : null)}>
+      {label}
+    </button>
+  );
+}
+
+// Moving between steps starts each one at the top of the page, as a new page would, and puts
+// focus on its heading; not on first show. Returns the ref for the heading.
+function useStepStart(stepId, reviewStep) {
   const shown = useRef(false);
   const headingRef = useRef(null);
   const prevStepRef = useRef(null);
@@ -53,56 +85,27 @@ export function GuidedRun({ view, workspace, story, sampleName, isMeta = false, 
     if (shown.current && document.scrollingElement) document.scrollingElement.scrollTop = 0;
     shown.current = true;
   }, [reviewStep]);
-
   useEffect(() => {
-    const stepId = reviewStep ?? key;
-    if (prevStepRef.current !== null && prevStepRef.current !== stepId) {
-      headingRef.current?.focus?.();
-    }
+    if (prevStepRef.current !== null && prevStepRef.current !== stepId) headingRef.current?.focus?.();
     prevStepRef.current = stepId;
-  }, [reviewStep, key]);
+  }, [stepId]);
+  return headingRef;
+}
 
-  const copy = {
-    notes: {
-      h1: `These are ${sampleName}’s rough notes`,
-      why: `${isMeta ? 'Meta reads' : 'The app reads'} them and keeps every fact tied to ${p.possessive} exact words.`,
-    },
-    facts: {
-      h1: `${isMeta ? 'Meta found' : 'Found'} ${N} facts in ${sampleName}’s own words`,
-      why: `Check each one is right. Only facts you confirm can be used in ${p.possessive} answer.`,
-    },
-    check: {
-      h1: 'Checking what the form still needs',
-      why: `The app compares ${p.possessive} facts with what the form asks for, and asks only if something is missing.`,
-    },
-    question: {
-      h1: `One thing ${p.possessive} notes don’t say`,
-      why: `The form asks what ${p.subject} did ${p.reflexive}, so the app asks ${p.object} once.`,
-    },
-    decide: {
-      h1: 'Is this earlier fact still right?',
-      why: `${p.Possessive} answer was about a fact from ${p.possessive} notes. Keep it, correct it or remove it before the drafts are written.`,
-    },
-    draft: {
-      h1: busy?.name === 'draft' ? `Writing ${p.possessive} application` : `Ready to write ${p.possessive} answer`,
-      why: 'Every sentence will cite the facts it uses.',
-    },
-    answer: {
-      h1: `${p.Possessive} answer, with evidence beside it`,
-      why: 'Tap a number to see the words it came from.',
-    },
-    change: {
-      h1: 'Facts change. Watch what happens.',
-      why: 'Correct one fact and only the sentences that used it are rewritten.',
-    },
-    finish: {
-      h1: 'Done: two documents you can stand behind',
-      why: 'Nothing has been sent. Copy them into the employer’s form yourself.',
-    },
-  };
-
-  const c = reviewStep ? reviewCopy(reviewStep, workspace, sampleName, p) : copy[key] || copy.notes;
-
+// `isMeta`: only a real Meta run may be credited to Meta; the fixture is "the app".
+// `reviewStep`: the finished step being looked back at, or null for the live step.
+// `copy`: a screen's own headline and why line (her spoken start), in place of the step's.
+// `model`: the model this edition runs, for the key moment's words.
+export function GuidedRun({ view, workspace, story, sampleName, isMeta = false, possessive = 'her', reviewStep = null, busy = null, receipts = [], copy = null, sample = null, voice = false, model, onPrimary, onStory, onReview, onExit, children }) {
+  const { n, key } = guidedStep(view, workspace, story);
+  const p = pronouns(possessive);
+  const live = key === 'finish' ? 6 : n; // finish follows the key moment in history
+  const at = reviewStep ?? live;
+  const headingRef = useStepStart(reviewStep ?? key, reviewStep);
+  // What drafted the documents: the receipts, or the prepared state's marker when they were drafted before this visit.
+  const prepared = workspace?.prepared;
+  const who = drafter(receipts) ?? (prepared ? family(prepared.model).tag : isMeta ? 'Meta' : 'The fixture');
+  const c = copy ?? (reviewStep ? reviewCopy(reviewStep, workspace, sampleName, p) : stepCopy(key, { sampleName, possessive, isMeta, factCount: notesFactCount(workspace), busy, who, prepared, sample, voice, spoken: firstNotes(workspace)?.spoken === true, host: model }));
 
   return (
     <section className="guided">
@@ -113,56 +116,19 @@ export function GuidedRun({ view, workspace, story, sampleName, isMeta = false, 
             Back
           </button>
         ) : null}
-        <button type="button" className="btn link small guided-exit" onClick={onExit}>
+        <button type="button" className="btn link small guided-exit" onClick={onExit} disabled={!onExit}>
           Open the full workspace
         </button>
       </div>
-      <ol className="guided-steps" aria-label="Steps">
-        {STEP_LABELS.map((label, i) => {
-          const s = i + 1;
-          const done = s < live;
-          const current = s === live;
-          const cls = `guided-step${done ? ' done' : ''}${s === reviewStep ? ' viewing' : ''}`;
-          const inner = (
-            <>
-              <span className="guided-step-mark" aria-hidden="true">{done ? <Check size={12} /> : s}</span>
-              <span className="guided-step-label">{label}</span>
-            </>
-          );
-          return (
-            <li key={label}>
-              {done || (current && reviewStep) ? (
-                <button type="button" className={cls} aria-current={current ? 'step' : undefined} onClick={() => onReview?.(done ? s : null)}>
-                  {inner}
-                </button>
-              ) : (
-                <span className={cls} aria-current={current ? 'step' : undefined}>
-                  {inner}
-                </span>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-      <p className="guided-step-text">{reviewStep ? `Looking back at step ${reviewStep} of 5` : key === 'finish' ? 'All 5 steps done' : `Step ${n} of 5`}</p>
+      <GuidedSteps live={live} reviewStep={reviewStep} lastRepair={workspace?.application?.lastRepair} stepKey={key} n={n} onReview={onReview} />
+      {sample ? <p className="guided-demo">{demoLabel(sample, workspace)} · nothing is submitted</p> : null}
       <h1 ref={headingRef} tabIndex={-1}>{c.h1}</h1>
       <p className="guided-why">{c.why}</p>
+      {c.expect ? <p className="guided-expect">{c.expect}</p> : null}
       <div className="guided-body">{children}</div>
-      {reviewStep ? (
-        <button type="button" className="btn primary big guided-main" onClick={() => onReview?.(forward ? reviewStep + 1 : null)}>
-          {forward ? `Next: ${STEP_LABELS[reviewStep]}` : live === 6 ? 'Return to the finish' : `Return to step ${n}`}
-        </button>
-      ) : null}
-      {!reviewStep && key === 'draft' ? (
-        <button type="button" className="btn primary big guided-main" disabled={Boolean(busy)} onClick={() => onPrimary && onPrimary({ id: 'draft', label: 'Write both documents' })}>
-          Write {p.possessive} answer
-        </button>
-      ) : null}
-      {!reviewStep && key === 'answer' ? (
-        <button type="button" className="btn primary big guided-main" disabled={Boolean(busy)} onClick={() => onStory && onStory('change')}>
-          Next: change a fact
-        </button>
-      ) : null}
+      {reviewStep
+        ? <ReviewAction reviewStep={reviewStep} live={live} stepKey={key} n={n} onReview={onReview} />
+        : <LiveActions stepKey={key} busy={busy} p={p} what={sample?.language ? 'application' : 'answer'} onPrimary={onPrimary} onStory={onStory} onExit={onExit} />}
     </section>
   );
 }

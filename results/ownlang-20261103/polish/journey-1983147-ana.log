@@ -1,0 +1,24 @@
+ 1 start fresh (16 ms)
+ 2 load the sample notes (1 ms)
+ 3 add notes (1 ms)
+ 4 read the notes (4 ms)
+ 5 confirm the facts (7 ms)
+ 6 check what the form still needs (1 ms)
+ 7 answer the question (1 ms)
+ 8 read the answer (1 ms)
+ 9 confirm the new facts (1 ms)
+10 check again (1 ms)
+11 write both documents (8 ms)
+12 edit a letter sentence by hand (1 ms)
+file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:31
+      if (!response.ok) throw new Error(`${name}: ${data.error.code}: ${data.error.message}`);
+                              ^
+
+Error: changeFact: invalid: Give the English meaning of your correction, under 280 characters.
+    at Object.act (file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:31:31)
+    at async step (file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:59:17)
+    at async runJourney (file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:111:11)
+    at async main (file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:169:58)
+    at async file://~/Developer/claude/evidence/hackathon-29oct/ownlang/app/scripts/journey.mjs:176:68
+
+Node.js v24.22.1

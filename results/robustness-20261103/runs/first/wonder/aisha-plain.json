@@ -1,0 +1,3150 @@
+{
+  "host": "wonder",
+  "persona": "aisha",
+  "style": "notes with numbers that must not be invented",
+  "startedAt": "2026-11-03T14:00:08.037Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "probe": false,
+  "plain": true,
+  "correctionText": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T14:00:08.037Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T14:00:08.039Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T14:00:08.041Z",
+      "ms": 19887,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 4,
+          "attempts": 4,
+          "toolCalls": 20,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 14703,
+            "cached": 10320,
+            "output": 3437,
+            "reasoning": 1269
+          },
+          "costUsd": 0.088336,
+          "firstEventMs": 1562,
+          "totalMs": 19883,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T14:00:27.931Z",
+      "ms": 27,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T14:00:27.960Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T14:00:27.963Z",
+      "ms": 28602,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:217 of 400"
+          ],
+          "usage": {
+            "input": 6573,
+            "cached": 3944,
+            "output": 2477,
+            "reasoning": 1542
+          },
+          "costUsd": 0.060844800000000004,
+          "firstEventMs": 1373,
+          "totalMs": 19090,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4104,
+            "cached": 628,
+            "output": 681,
+            "reasoning": 401
+          },
+          "costUsd": 0.0276496,
+          "firstEventMs": 543,
+          "totalMs": 3903,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:267 of 300"
+          ],
+          "usage": {
+            "input": 8105,
+            "cached": 4200,
+            "output": 3684,
+            "reasoning": 2677
+          },
+          "costUsd": 0.09014,
+          "firstEventMs": 1268,
+          "totalMs": 24862,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4518,
+            "cached": 628,
+            "output": 475,
+            "reasoning": 242
+          },
+          "costUsd": 0.0251856,
+          "firstEventMs": 1161,
+          "totalMs": 3724,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T14:00:56.568Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T14:00:56.575Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T14:00:56.579Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T14:00:56.585Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T14:00:56.588Z",
+      "ms": 5613,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 2,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 4418,
+            "cached": 3432,
+            "output": 619,
+            "reasoning": 407
+          },
+          "costUsd": 0.017010400000000002,
+          "firstEventMs": 996,
+          "totalMs": 5607,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "correct the fact directly",
+      "startedAt": "2026-11-03T14:01:02.209Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/changeFact",
+          "status": 200,
+          "ms": 5
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T14:01:02.215Z",
+      "ms": 9119,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3263,
+            "cached": 884,
+            "output": 751,
+            "reasoning": 656
+          },
+          "costUsd": 0.0247128,
+          "firstEventMs": 1042,
+          "totalMs": 4813,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1800,
+            "cached": 628,
+            "output": 551,
+            "reasoning": 442
+          },
+          "costUsd": 0.0158336,
+          "firstEventMs": 687,
+          "totalMs": 4295,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T14:01:11.337Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T14:01:11.339Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 5
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T14:01:11.345Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T14:01:11.351Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T14:01:11.356Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 5
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "kind": "no-question",
+      "note": "the model asked nothing"
+    },
+    {
+      "kind": "conflict-missed",
+      "note": "the correcting note raised no conflict; 1 fact(s) were proposed from it instead",
+      "proposed": [
+        "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms."
+      ]
+    }
+  ],
+  "route": "missed-then-correct-fact",
+  "correctedFactId": "f11",
+  "intendedTargetId": "f11",
+  "questions": [],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "Applicant did a placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026, one of six in platform team.",
+        "quote": "Placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026. Platform team, I was one of six.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "Project moved about a dozen services from a single VM-based deployment to Kubernetes to make deploys safe enough during the day.",
+        "quote": "The project I want to describe is the move of about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "I owned rollout tooling: Helm charts and a small Python CLI wrapping helm and kubectl for other developers.",
+        "quote": "I owned the rollout tooling: Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "Argo CD did the syncing; Prometheus and Grafana were already there.",
+        "quote": "Argo CD did the syncing. Prometheus and Grafana were already there.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+        "quote": "Decision I made: canary releases with automatic rollback on error rate, instead of blue/green.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "Blue/green would have doubled database connections when the database was near its limit; canary moved only a slice of traffic.",
+        "quote": "Blue/green would have doubled the database connections during a switch and the database was already near its connection limit. Canary meant only a slice of traffic moved at a time.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "First canary rollouts rolled back a lot even when nothing was wrong.",
+        "quote": "Problem: the first canary rollouts rolled back a lot even when nothing was wrong.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "I lined up rollback times with the error rate graph and found the query counted load balancer health check 404s as errors.",
+        "quote": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "I changed the query to count only requests with a real route, and false rollbacks stopped.",
+        "quote": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "I learned to check what a metric is actually counting before building automation on top of it.",
+        "quote": "I learned to check what a metric is actually counting before building automation on top of it.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "Order service p95 latency went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "quote": "Results: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "Deploys went from after-hours only to several a day; exact numbers unavailable because the team dashboard was reset in June.",
+        "quote": "Deploys went from after-hours only to several a day. I don't have the exact deploy numbers, the team dashboard was reset in June.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "I liked release engineering most and want to work on a platform where the hardware is the point, regarding Graphcore.",
+        "quote": "Why Graphcore: I liked the release engineering most and I want to work on a platform where the hardware is the point.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "Placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026. Platform team, I was one of six. The project I want to describe is the move of about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.\n\nI owned the rollout tooling: Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them. Argo CD did the syncing. Prometheus and Grafana were already there.\n\nDecision I made: canary releases with automatic rollback on error rate, instead of blue/green. Blue/green would have doubled the database connections during a switch and the database was already near its connection limit. Canary meant only a slice of traffic moved at a time.\n\nProblem: the first canary rollouts rolled back a lot even when nothing was wrong. I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors. I changed the query to count only requests with a real route, and the false rollbacks stopped. I learned to check what a metric is actually counting before building automation on top of it.\n\nResults: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved. Deploys went from after-hours only to several a day. I don't have the exact deploy numbers, the team dashboard was reset in June.\n\nWhy Graphcore: I liked the release engineering most and I want to work on a platform where the hardware is the point.",
+        "at": "2026-11-03T14:00:08.040Z",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "During my placement year at a logistics software company in Leicester from September 2025 to August 2026, I was one of six in the platform team, and the project was the move of about a dozen services from a single VM-based deployment to Kubernetes to make deploys safe enough to do during the day.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day, although I do not have the exact deploy numbers because the team dashboard was reset in June.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, which consisted of Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Argo CD did the syncing, and Prometheus and Grafana were already there.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Blue/green would have doubled the database connections during a switch when the database was already near its connection limit, whereas canary meant only a slice of traffic moved at a time.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "The first canary rollouts rolled back a lot even when nothing was wrong.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I learned to check what a metric is actually counting before building automation on top of it.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked release engineering most and I want to work on a platform where the hardware is the point.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I did a placement year at a logistics software company in Leicester from Sept 2025 to Aug 2026, where I was one of six in the platform team.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The project moved about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, including Helm charts and a small Python CLI that wrapped helm and kubectl for other developers.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I lined up the rollback times with the error rate graph and found that the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Yours sincerely, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 267,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 213,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day, although I do not have the exact deploy numbers because the team dashboard was reset in June.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, which consisted of Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Argo CD did the syncing, and Prometheus and Grafana were already there.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Blue/green would have doubled the database connections during a switch when the database was already near its connection limit, whereas canary meant only a slice of traffic moved at a time.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "The first canary rollouts rolled back a lot even when nothing was wrong.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I learned to check what a metric is actually counting before building automation on top of it.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked release engineering most and I want to work on a platform where the hardware is the point.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I did a placement year at a logistics software company in Leicester from Sept 2025 to Aug 2026, where I was one of six in the platform team.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The project moved about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, including Helm charts and a small Python CLI that wrapped helm and kubectl for other developers.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I lined up the rollback times with the error rate graph and found that the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Yours sincerely, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day, although I do not have the exact deploy numbers because the team dashboard was reset in June.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The p95 on the order service went from 1.8 s to 400 ms.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, which consisted of Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Argo CD did the syncing, and Prometheus and Grafana were already there.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Blue/green would have doubled the database connections during a switch when the database was already near its connection limit, whereas canary meant only a slice of traffic moved at a time.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "The first canary rollouts rolled back a lot even when nothing was wrong.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I learned to check what a metric is actually counting before building automation on top of it.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked release engineering most and I want to work on a platform where the hardware is the point.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I did a placement year at a logistics software company in Leicester from Sept 2025 to Aug 2026, where I was one of six in the platform team.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The project moved about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I owned the rollout tooling, including Helm charts and a small Python CLI that wrapped helm and kubectl for other developers.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I lined up the rollback times with the error rate graph and found that the error rate query counted health check 404s from the load balancer as errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The p95 on the order service went from 1.8 s to 400 ms.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "Deploys went from after-hours only to several a day.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Yours sincerely, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 231,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 202,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 29,
+      "createdAt": "2026-11-03T14:00:08.037Z",
+      "applicant": {
+        "name": "Ellie",
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "Placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026. Platform team, I was one of six. The project I want to describe is the move of about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.\n\nI owned the rollout tooling: Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them. Argo CD did the syncing. Prometheus and Grafana were already there.\n\nDecision I made: canary releases with automatic rollback on error rate, instead of blue/green. Blue/green would have doubled the database connections during a switch and the database was already near its connection limit. Canary meant only a slice of traffic moved at a time.\n\nProblem: the first canary rollouts rolled back a lot even when nothing was wrong. I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors. I changed the query to count only requests with a real route, and the false rollbacks stopped. I learned to check what a metric is actually counting before building automation on top of it.\n\nResults: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved. Deploys went from after-hours only to several a day. I don't have the exact deploy numbers, the team dashboard was reset in June.\n\nWhy Graphcore: I liked the release engineering most and I want to work on a platform where the hardware is the point.",
+            "at": "2026-11-03T14:00:08.040Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "notes",
+            "text": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+            "at": "2026-11-03T14:00:56.585Z",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "correction",
+            "text": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+            "at": "2026-11-03T14:01:02.210Z"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "Applicant did a placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026, one of six in platform team.",
+            "quote": "Placement year at a logistics software company in Leicester, Sept 2025 to Aug 2026. Platform team, I was one of six.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "Project moved about a dozen services from a single VM-based deployment to Kubernetes to make deploys safe enough during the day.",
+            "quote": "The project I want to describe is the move of about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "I owned rollout tooling: Helm charts and a small Python CLI wrapping helm and kubectl for other developers.",
+            "quote": "I owned the rollout tooling: Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "Argo CD did the syncing; Prometheus and Grafana were already there.",
+            "quote": "Argo CD did the syncing. Prometheus and Grafana were already there.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+            "quote": "Decision I made: canary releases with automatic rollback on error rate, instead of blue/green.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "Blue/green would have doubled database connections when the database was near its limit; canary moved only a slice of traffic.",
+            "quote": "Blue/green would have doubled the database connections during a switch and the database was already near its connection limit. Canary meant only a slice of traffic moved at a time.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "First canary rollouts rolled back a lot even when nothing was wrong.",
+            "quote": "Problem: the first canary rollouts rolled back a lot even when nothing was wrong.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "I lined up rollback times with the error rate graph and found the query counted load balancer health check 404s as errors.",
+            "quote": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "I changed the query to count only requests with a real route, and false rollbacks stopped.",
+            "quote": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "I learned to check what a metric is actually counting before building automation on top of it.",
+            "quote": "I learned to check what a metric is actually counting before building automation on top of it.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+            "quote": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+            "sourceId": "s3",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "Order service p95 latency went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+                "quote": "Results: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+                "sourceId": "s1",
+                "at": "2026-11-03T14:01:02.210Z"
+              }
+            ]
+          },
+          {
+            "id": "f12",
+            "statement": "Deploys went from after-hours only to several a day; exact numbers unavailable because the team dashboard was reset in June.",
+            "quote": "Deploys went from after-hours only to several a day. I don't have the exact deploy numbers, the team dashboard was reset in June.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "I liked release engineering most and want to work on a platform where the hardware is the point, regarding Graphcore.",
+            "quote": "Why Graphcore: I liked the release engineering most and I want to work on a platform where the hardware is the point.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f14",
+            "statement": "The p95 on the order service went from 1.8 s to 400 ms.",
+            "quote": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+            "sourceId": "s2",
+            "status": "rejected",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "contribution": [
+            "f1",
+            "f3",
+            "f5",
+            "f9"
+          ],
+          "evidence": [
+            "f1",
+            "f2",
+            "f3",
+            "f5",
+            "f8",
+            "f9",
+            "f11",
+            "f12",
+            "f14"
+          ],
+          "goal": [
+            "f2",
+            "f11",
+            "f12"
+          ],
+          "tech": [
+            "f2",
+            "f3",
+            "f4"
+          ],
+          "decision": [
+            "f5",
+            "f6"
+          ],
+          "problem": [
+            "f7",
+            "f8",
+            "f9",
+            "f10"
+          ],
+          "motivation": [
+            "f13"
+          ]
+        },
+        "questions": [],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes.",
+                "factIds": [
+                  "f1",
+                  "f2"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "Deploys went from after-hours only to several a day, although I do not have the exact deploy numbers because the team dashboard was reset in June.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "The p95 on the order service went from 1.8 s to 400 ms.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "I owned the rollout tooling, which consisted of Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "Argo CD did the syncing, and Prometheus and Grafana were already there.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "Blue/green would have doubled the database connections during a switch when the database was already near its connection limit, whereas canary meant only a slice of traffic moved at a time.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "The first canary rollouts rolled back a lot even when nothing was wrong.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "I learned to check what a metric is actually counting before building automation on top of it.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 2,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "I liked release engineering most and I want to work on a platform where the hardware is the point.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "I did a placement year at a logistics software company in Leicester from Sept 2025 to Aug 2026, where I was one of six in the platform team.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "The project moved about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "I owned the rollout tooling, including Helm charts and a small Python CLI that wrapped helm and kubectl for other developers.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "I decided on canary releases with automatic rollback on error rate instead of blue/green.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "I lined up the rollback times with the error rate graph and found that the error rate query counted health check 404s from the load balancer as errors.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "I changed the query to count only requests with a real route, and the false rollbacks stopped.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "The p95 on the order service went from 1.8 s to 400 ms.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "Deploys went from after-hours only to several a day.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "frame",
+                "text": "Yours sincerely, Ellie",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T14:01:11.346Z"
+          },
+          "letter": {
+            "revision": 2,
+            "at": "2026-11-03T14:01:11.351Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T14:01:11.357Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 2
+            }
+          }
+        ],
+        "lastRepair": {
+          "factId": "f11",
+          "at": "2026-11-03T14:01:11.340Z",
+          "changed": 2,
+          "kept": 0,
+          "docs": [
+            "answer",
+            "letter"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-3"
+            },
+            {
+              "docId": "letter",
+              "segmentId": "letter-10"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T14:01:11.358Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/changeFact",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 10,
+    "spentUsd": 5.625233,
+    "reservedUsd": 0.573696,
+    "remainingUsd": 3.801071
+  },
+  "extraction": {
+    "accepted": 13,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": null,
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f2",
+        "f11",
+        "f12"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f2",
+        "f3",
+        "f4"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f5",
+        "f6"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f7",
+        "f8",
+        "f9",
+        "f10"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f3",
+        "f5",
+        "f9"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f13"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f5",
+        "f8",
+        "f9",
+        "f11",
+        "f12"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f11",
+    "quote": "Results: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "During my placement year at a logistics software company in Leicester from September 2025 to August 2026, I was one of six in the platform team, and the project was the move of about a dozen services from a single VM-based deployment to Kubernetes to make deploys safe enough to do during the day.",
+    "factIds": [
+      "f1",
+      "f2"
+    ],
+    "text": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes."
+  },
+  "correctionExtraction": {
+    "accepted": 1,
+    "refused": [],
+    "conflict": false
+  },
+  "correctedFact": {
+    "id": "f11",
+    "statement": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+    "quote": "The p95 on the order service went from 1.8 s to 400 ms, not 300 ms.",
+    "sourceId": "s3",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "Order service p95 latency went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "quote": "Results: the p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "sourceId": "s1",
+        "at": "2026-11-03T14:01:02.210Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-3",
+      "before": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-10",
+      "before": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-3",
+        "before": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "after": "The p95 on the order service went from 1.8 s to 400 ms.",
+        "afterFactIds": [
+          "f11"
+        ],
+        "status": "proposed",
+        "decision": null
+      },
+      {
+        "id": "c2",
+        "docId": "letter",
+        "segmentId": "letter-10",
+        "before": "The p95 latency on the order service went from 1.8 s to 300 ms after the move, mostly because the old VM was starved.",
+        "after": "The p95 on the order service went from 1.8 s to 400 ms.",
+        "afterFactIds": [
+          "f11"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f11",
+    "at": "2026-11-03T14:01:11.340Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-3"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-10"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 231,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes. Deploys went from after-hours only to several a day, although I do not have the exact deploy numbers because the team dashboard was reset in June. The p95 on the order service went from 1.8 s to 400 ms.\n\nI owned the rollout tooling, which consisted of Helm charts and a small Python CLI that wrapped helm and kubectl so the other developers did not need to learn them. Argo CD did the syncing, and Prometheus and Grafana were already there.\n\nI decided on canary releases with automatic rollback on error rate instead of blue/green. Blue/green would have doubled the database connections during a switch when the database was already near its connection limit, whereas canary meant only a slice of traffic moved at a time.\n\nThe first canary rollouts rolled back a lot even when nothing was wrong. I investigated by lining up the rollback times with the error rate graph and found the error rate query counted health check 404s from the load balancer as errors. I changed the query to count only requests with a real route, and the false rollbacks stopped. I learned to check what a metric is actually counting before building automation on top of it."
+      },
+      {
+        "id": "letter",
+        "words": 202,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nI liked release engineering most and I want to work on a platform where the hardware is the point.\n\nI did a placement year at a logistics software company in Leicester from Sept 2025 to Aug 2026, where I was one of six in the platform team. The project moved about a dozen services from a single VM-based deployment to Kubernetes, with the aim of making deploys safe enough to do during the day. I owned the rollout tooling, including Helm charts and a small Python CLI that wrapped helm and kubectl for other developers. I decided on canary releases with automatic rollback on error rate instead of blue/green.\n\nI lined up the rollback times with the error rate graph and found that the error rate query counted health check 404s from the load balancer as errors. I changed the query to count only requests with a real route, and the false rollbacks stopped. The p95 on the order service went from 1.8 s to 400 ms. Deploys went from after-hours only to several a day.\n\nThank you for considering my application.\n\nYours sincerely, Ellie"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 10,
+    "spentUsd": 6.275578,
+    "reservedUsd": 0.507108,
+    "remainingUsd": 3.217314
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 4,
+      "attempts": 4,
+      "requestIds": [
+        "370bc238-ff10-467d-ad47-04645b2bd4b3",
+        "cf3e1488-ee5e-4a43-8fb1-d9c243e1746e",
+        "16f25a9e-dccb-4a5c-ba12-ed77665d89b8",
+        "906ea1ad-d388-4985-8bd7-f9f00810820c"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 14703,
+        "cached": 10320,
+        "output": 3437,
+        "reasoning": 1269
+      },
+      "costUsd": 0.088336,
+      "firstEventMs": 1562,
+      "firstOutputMs": 2204,
+      "totalMs": 19883,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3945393
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:00:27.925Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "4e8a484a-4695-44b9-b45d-460f4f0e37d8",
+        "b40c54e6-7607-4992-a32f-618e8cd83c04"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "217 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6573,
+        "cached": 3944,
+        "output": 2477,
+        "reasoning": 1542
+      },
+      "costUsd": 0.060844800000000004,
+      "firstEventMs": 1373,
+      "firstOutputMs": 11302,
+      "totalMs": 19090,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3944353
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:00:47.055Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "6c8eaf23-e7ae-425f-b3b4-f2bcae985f91"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4104,
+        "cached": 628,
+        "output": 681,
+        "reasoning": 401
+      },
+      "costUsd": 0.0276496,
+      "firstEventMs": 543,
+      "firstOutputMs": 2845,
+      "totalMs": 3903,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3940074
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:00:50.959Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "448115e6-fa88-4ba4-80b0-4a15e5f30b9c",
+        "a0bf52d8-3216-442d-b7e9-c9144b388d16"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "267 of 300"
+        }
+      ],
+      "usage": {
+        "input": 8105,
+        "cached": 4200,
+        "output": 3684,
+        "reasoning": 2677
+      },
+      "costUsd": 0.09014,
+      "firstEventMs": 1268,
+      "firstOutputMs": 18020,
+      "totalMs": 24862,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3940074
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:00:52.826Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "c356a9d6-ed6f-4205-9afc-fe075bccdbc8"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4518,
+        "cached": 628,
+        "output": 475,
+        "reasoning": 242
+      },
+      "costUsd": 0.0251856,
+      "firstEventMs": 1161,
+      "firstOutputMs": 2736,
+      "totalMs": 3724,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3935487
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:00:56.552Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "43cd82ab-c857-4afb-87b0-b7f7daed635d",
+        "4ef677e6-e6f5-4dac-9abc-ef1c66e2f26f"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4418,
+        "cached": 3432,
+        "output": 619,
+        "reasoning": 407
+      },
+      "costUsd": 0.017010400000000002,
+      "firstEventMs": 996,
+      "firstOutputMs": 2324,
+      "totalMs": 5607,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3929312
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:01:02.196Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "b911b213-6a6e-4380-9ea7-2bde46d28543"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3263,
+        "cached": 884,
+        "output": 751,
+        "reasoning": 656
+      },
+      "costUsd": 0.0247128,
+      "firstEventMs": 1042,
+      "firstOutputMs": 4605,
+      "totalMs": 4813,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3928800
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:01:07.029Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "c9ca82bf-227d-4d53-b8bc-2e3312fea84f"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1800,
+        "cached": 628,
+        "output": 551,
+        "reasoning": 442
+      },
+      "costUsd": 0.0158336,
+      "firstEventMs": 687,
+      "firstOutputMs": 3652,
+      "totalMs": 4295,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3932513
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:01:11.326Z"
+    }
+  ],
+  "endedAt": "2026-11-03T14:01:11.363Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 13,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "231/300",
+          "letter": "202/400"
+        },
+        "afterDraft": {
+          "answer": "267/300",
+          "letter": "213/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 24,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-3",
+          "letter/letter-10"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes.",
+        "afterCorrection": "During my placement year on the platform team of a logistics software company in Leicester, I helped move about a dozen services from a single virtual machine onto Kubernetes.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 19,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 18,
+    "stepRetries": 0,
+    "providerAttempts": 14,
+    "providerTurns": 14,
+    "toolCalls": 24,
+    "receipts": 8,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 47484,
+      "cached": 24664,
+      "output": 12675,
+      "reasoning": 7636
+    },
+    "costReceiptsUsd": 0.34971279999999993,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.650345,
+    "wallMs": 63326,
+    "modelStepMs": {
+      "read the notes": 19887,
+      "write both documents": 28602,
+      "read the correcting note": 5613,
+      "propose the changes": 9119
+    },
+    "medianModelStepMs": 14503,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 28602
+  }
+}

@@ -1,9 +1,17 @@
 import { QuestionCard } from './QuestionCard.jsx';
 import { SourceCorrectionCard } from './SourceCorrectionCard.jsx';
 import { FactsReview } from './FactsReview.jsx';
-import { factRequirements } from '../flow.js';
+import { factRequirements, pronouns, sourceKinds } from '../flow.js';
+import { spokenIds, workspaceLanguage } from '../lib/language.js';
+import { clipHint } from './useClip.js';
 
-export function FactsPanel({ workspace, view, busy, onDecideFact, onHoverFact, onConfirmFacts }) {
+// One button to run a saved step again after an interruption (reading saved words, checking the form).
+export function ResumeButton({ id, label, onPrimary }) {
+  return <div className="guided-actions"><button type="button" className="btn primary" onClick={() => onPrimary?.({ id })}>{label}</button></div>;
+}
+
+// sample: in the walk-through, so a fact in her language speaks of her as the headline does.
+export function FactsPanel({ workspace, view, busy, sample, onDecideFact, onHoverFact, onConfirmFacts }) {
   const facts = workspace?.applicant?.facts || [];
   const proposedFacts = facts.filter((f) => f.status === 'proposed');
   if (proposedFacts.length === 0) {
@@ -20,25 +28,20 @@ export function FactsPanel({ workspace, view, busy, onDecideFact, onHoverFact, o
   for (let c = 0; c < coverage.length; c++) {
     requirementNames[coverage[c].id] = coverage[c].text;
   }
-  const sources = workspace?.applicant?.sources || [];
-  const sourceKinds = {};
-  for (let i = 0; i < sources.length; i++) {
-    if (sources[i] && sources[i].id) {
-      sourceKinds[sources[i].id] = sources[i].kind;
-    }
-  }
   return (
     <FactsReview
       key="facts"
       facts={factsWithReqs}
       total={total}
-      sources={sourceKinds}
+      sources={sourceKinds(workspace)}
+      spoken={spokenIds(workspace)}
       requirementNames={requirementNames}
       busy={busy}
       onDecide={onDecideFact}
       onHover={onHoverFact}
       onConfirmRest={onConfirmFacts}
       company={workspace?.application?.form?.company}
+      who={sample?.name ? { name: sample.name, possessive: pronouns(sample.possessive).possessive } : undefined}
     />
   );
 }
@@ -53,7 +56,8 @@ export function QuestionPanel({ workspace, view, sample, busy, onAnswer, onSkip,
       if (offer && onResolveSourceConflict) return <SourceCorrectionCard
         key={`${q.id}:${offer.sourceId}:${offer.factId}`} offer={offer} question={q} busy={busy}
         onResolve={onResolveSourceConflict} onAnswer={(text) => onAnswer?.(q.id, text)}
-        onSkip={() => onSkip?.(q.id)} voice={voice} />;
+        onSkip={() => onSkip?.(q.id)} voice={voice}
+        spoken={Boolean((workspace?.applicant?.sources ?? []).find((src) => src.id === offer.sourceId)?.spoken)} />;
       let requirementText = '';
       for (let c = 0; c < coverage.length; c++) {
         if (coverage[c].id === q.requirementId) {
@@ -72,6 +76,10 @@ export function QuestionPanel({ workspace, view, sample, busy, onAnswer, onSkip,
           onAnswer={(text) => onAnswer && onAnswer(q.id, text)}
           onSkip={() => onSkip && onSkip(q.id)}
           voice={voice}
+          language={workspaceLanguage(workspace)}
+          hint={sample?.clips ? clipHint(sample) : workspaceLanguage(workspace)}
+          clip={sample?.clips?.answer}
+          clipFrom={sample?.id}
         />
       );
     }

@@ -1,0 +1,117 @@
+{
+ "base": "http://127.0.0.1:3196",
+ "check": "stale",
+ "viewport": [
+  1440,
+  900
+ ],
+ "checks": [
+  {
+   "name": "her voice note was sent once",
+   "pass": true,
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  },
+  {
+   "name": "Ellie’s key moment opens without Ana’s voice note",
+   "pass": true,
+   "detail": "1 voice calls"
+  },
+  {
+   "name": "Ellie’s trail has no Voice row",
+   "pass": true,
+   "detail": "10 rows: Wonder / Checked by code / Checked by code / Wonder / Wonder / The app / Wonder / Wonder / You / You"
+  },
+  {
+   "name": "one voice call in the whole visit",
+   "pass": true,
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  }
+ ],
+ "requests": [
+  "POST /api/voice?language=pt-PT&sample=ana",
+  "POST /api/actions/startPrepared"
+ ],
+ "errors": [],
+ "log": [
+  {
+   "s": 1,
+   "what": "clicked Try it with Ana’s voice note",
+   "detail": ""
+  },
+  {
+   "s": 14,
+   "what": "PASS her voice note was sent once",
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  },
+  {
+   "s": 14,
+   "what": "screenshot 01-ana-voice-note",
+   "detail": ""
+  },
+  {
+   "s": 14,
+   "what": "clicked Start again",
+   "detail": ""
+  },
+  {
+   "s": 14,
+   "what": "clicked Start again",
+   "detail": ""
+  },
+  {
+   "s": 14,
+   "what": "clicked Start at the key moment",
+   "detail": ""
+  },
+  {
+   "s": 17,
+   "what": "PASS Ellie’s key moment opens without Ana’s voice note",
+   "detail": "1 voice calls"
+  },
+  {
+   "s": 17,
+   "what": "clicked Add Ellie’s note",
+   "detail": ""
+  },
+  {
+   "s": 27,
+   "what": "clicked Use this correction",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "applied",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "approved project answer",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "approved cover letter",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "screenshot 02-ellie-finish",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "screenshot 03-ellie-trail",
+   "detail": ""
+  },
+  {
+   "s": 59,
+   "what": "PASS Ellie’s trail has no Voice row",
+   "detail": "10 rows: Wonder / Checked by code / Checked by code / Wonder / Wonder / The app / Wonder / Wonder / You / You"
+  },
+  {
+   "s": 59,
+   "what": "PASS one voice call in the whole visit",
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  }
+ ]
+}

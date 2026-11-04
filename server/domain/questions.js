@@ -40,6 +40,9 @@ export function addQuestions(ws, proposals, askedBy = 'model') {
       status: 'open',
       askedBy,
     };
+    // Asked in the applicant's language: the same question in English goes beneath it.
+    const english = String(p.english ?? '').trim().slice(0, MAX_QUESTION);
+    if (english) question.english = english;
     ws.application.questions.push(question);
     askable.delete(p.requirementId);
     added.push(question.id);
@@ -55,11 +58,11 @@ function openQuestion(ws, questionId) {
 }
 
 // The answer becomes a source the applicant wrote, so facts can quote it.
-export function answerQuestion(ws, questionId, text, now = new Date().toISOString()) {
+export function answerQuestion(ws, questionId, text, now = new Date().toISOString(), language = undefined) {
   const question = openQuestion(ws, questionId);
   const answer = String(text ?? '').trim();
   if (!answer) refuse('invalid', 'Write an answer, or skip the question.');
-  const source = addSource(ws, { kind: 'answer', text: answer, questionId, now });
+  const source = addSource(ws, { kind: 'answer', text: answer, questionId, language, now });
   Object.assign(question, { status: 'answered', sourceId: source.id });
   return { question, source };
 }

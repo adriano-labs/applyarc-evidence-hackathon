@@ -6,7 +6,7 @@ export const form = JSON.parse(readFileSync(fromRoot('fixtures', 'graphcore-form
 export const notes = readFileSync(fromRoot('fixtures', 'ellie-notes.md'), 'utf8');
 
 export function workspaceWithNotes(text = notes) {
-  const ws = createWorkspace({ form: structuredClone(form), now: '2026-10-27T09:00:00.000Z' });
+  const ws = createWorkspace({ form: structuredClone(form), applicant: 'Ellie', now: '2026-10-27T09:00:00.000Z' });
   const source = addSource(ws, { kind: 'notes', text, now: '2026-10-27T09:00:00.000Z' });
   return { ws, source };
 }

@@ -2,8 +2,10 @@
 // dev.meta.ai/docs/speech-to-text). The recording is a mono 16-bit WAV at 16 or
 // 24 kHz, and the call is reserved in the spend ledger at its exact length.
 import { VOICE_USD_PER_HOUR } from './pricing.js';
+import { LANGUAGES } from '../domain/languages.js';
 
 const MODEL = 'muse-voice-transcribe-1.0';
+const HOST = 'api.meta.ai';
 const MAX_MS = 3 * 60 * 1000;
 const costOf = (ms) => (ms / 3_600_000) * VOICE_USD_PER_HOUR;
 const fail = (code, message) => Object.assign(new Error(message), { code });
@@ -26,7 +28,10 @@ const tooLong = () => fail('timeout', 'Meta Voice Transcribe took too long. Try 
 
 export function createVoice({ key, ledger, fetch = globalThis.fetch, timeoutMs = 60000 }) {
   return {
-    async transcribe(bytes, { callId }) {
+    // language: the applicant's chosen language, sent as Meta's languageBias hint (a nudge, not a constraint).
+    // keywords: a bundled sample's own names and places, sent as Meta's `keywords` (a bias toward
+    // those words; Meta's docs say it does not guarantee their spelling). An own recording has none.
+    async transcribe(bytes, { callId, language, keywords = [] }) {
       const info = wavInfo(bytes);
       if (!info || info.channels !== 1 || info.bitsPerSample !== 16 || ![16000, 24000].includes(info.sampleRate)) {
         throw fail('invalid', 'Send the recording as a mono 16-bit WAV at 16 or 24 kHz.');
@@ -35,12 +40,14 @@ export function createVoice({ key, ledger, fetch = globalThis.fetch, timeoutMs =
       const id = `voice-${callId}`;
       ledger.reserve(id, costOf(info.durationMs));
       const body = new FormData();
-      body.append('request', new Blob([JSON.stringify({ mode: 'PUSH_TO_TALK', model: MODEL, audioEncoding: 'WAV' })], { type: 'application/json' }));
+      const hint = LANGUAGES[language]?.name;
+      const settings = { mode: 'PUSH_TO_TALK', model: MODEL, audioEncoding: 'WAV', ...(hint ? { languageBias: [hint] } : {}), ...(keywords.length ? { keywords } : {}) };
+      body.append('request', new Blob([JSON.stringify(settings)], { type: 'application/json' }));
       body.append('audio', new Blob([bytes], { type: 'audio/wav' }), 'note.wav');
       let res;
       const signal = AbortSignal.timeout(timeoutMs); // also bounds reading the reply
       try {
-        res = await fetch('https://api.meta.ai/v1/asr/transcribe', { method: 'POST', headers: { authorization: `Bearer ${key}`, accept: 'application/json' }, body, signal });
+        res = await fetch(`https://${HOST}/v1/asr/transcribe`, { method: 'POST', headers: { authorization: `Bearer ${key}`, accept: 'application/json' }, body, signal });
       } catch {
         ledger.unknown(id); // it may have run
         throw signal.aborted ? tooLong() : fail('network', 'Could not reach Meta Voice Transcribe. Try again, or type your notes.');
@@ -60,9 +67,10 @@ export function createVoice({ key, ledger, fetch = globalThis.fetch, timeoutMs =
       const durationMs = Number.isFinite(reply.audioDurationMs) ? reply.audioDurationMs : info.durationMs;
       const costUsd = costOf(durationMs);
       ledger.settle(id, costUsd);
-      const text = String(reply.transcript ?? '').trim();
-      if (!text) throw fail('invalid', 'No words were heard. Try again closer to the microphone, or type your notes.');
-      return { text, durationMs, costUsd, model: MODEL };
+      const heard = { text: String(reply.transcript ?? '').trim(), durationMs, costUsd, model: MODEL, host: HOST, ...(hint ? { hint } : {}), ...(keywords.length ? { keywords } : {}) };
+      // Charged even with no words: the refusal carries what was heard, so the visitor's receipt still counts it.
+      if (!heard.text) throw Object.assign(fail('invalid', 'No words were heard. Try again closer to the microphone, or type your notes.'), { heard });
+      return heard;
     },
   };
 }

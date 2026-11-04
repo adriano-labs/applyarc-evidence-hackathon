@@ -1,0 +1,6 @@
+1-typed-on-every-edition | broken: Tests  3 failed | 24 skipped (27) | restored: Tests  3 passed | 24 skipped (27) | files identical
+2-repeats-offered | broken: Tests  1 failed | 2 passed | 24 skipped (27) | restored: Tests  3 passed | 24 skipped (27) | files identical
+3-pass-stamped | broken: Tests  1 failed | 2 passed | 24 skipped (27) | restored: Tests  3 passed | 24 skipped (27) | files identical
+5-her-fact-card | broken: Tests  1 failed | 1 passed | 25 skipped (27) | restored: Tests  2 passed | 25 skipped (27) | files identical
+7-plain-meaning | broken: Tests  1 failed | 1 passed | 25 skipped (27) | restored: Tests  2 passed | 25 skipped (27) | files identical
+9-open-edition-words | broken: Tests  2 failed | 1 passed | 24 skipped (27) | restored: Tests  3 passed | 24 skipped (27) | files identical

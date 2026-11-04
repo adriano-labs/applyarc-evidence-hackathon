@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Fez turnos da noite durante dois anos ou três anos, e passou a fazer dias no último ano?",
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "costUsd": 0.0701,
+ "wallSeconds": 23.1,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

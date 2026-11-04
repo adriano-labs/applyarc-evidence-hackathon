@@ -93,5 +93,19 @@
   .suggestion-actions .btn { flex: 1; }
 }
 
+/* The question's actions wrap as whole buttons; the correction card's may break, at a thumb's height. */
+.question-card .question-actions .btn { white-space: nowrap; }
 .source-correction .question-actions .btn { min-height: 44px; white-space: normal; }
 .source-explanation > .btn { margin-top: var(--s3); }
+
+/* Phones (560 px and under): a sample's or her voice note's main button spans the column; a fact
+   card's choices are thumb-sized; the question's actions stack, the main one first. */
+@media (max-width: 560px) {
+  .sample-card .btn.primary,
+  .spoken-start .btn.primary { width: 100%; min-height: 44px; }
+  .facts-review .fact-actions .btn { min-height: 40px; }
+  .question-card .question-actions .btn { width: 100%; }
+  .question-card .question-actions .btn.primary { order: -1; }
+}
+
+.sample-card.spoken .btn.primary { align-self: flex-start; }

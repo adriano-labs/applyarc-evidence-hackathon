@@ -37,7 +37,7 @@ it.each(['guided', 'workspace'])('App passes a live pending save into the %s rep
   let resolveSave;
   api.act.mockImplementation(() => new Promise(resolve => { resolveSave = resolve; }));
   render(<App />);
-  if (surface === 'guided') await screen.findByText('Step 5 of 5');
+  if (surface === 'guided') await screen.findByText('Key moment: correct a fact');
   const panel = await screen.findByRole('region', { name: 'What changed' });
   fireEvent.click(screen.getByRole('radio', { name: 'Keep as is' }));
   await waitFor(() => expect(api.act).toHaveBeenCalledWith('decideChange', { revision: 1, itemId: 'c1', decision: 'keep' }));

@@ -135,7 +135,7 @@ describe('review repaired documents before approval', () => {
     expect(screen.getByRole('article', { name: 'Cover letter' }).querySelector('[data-segment="letter-1"] .sentence-text').textContent).toContain('My contribution was testing the deployment.');
     expect(onApprove).not.toHaveBeenCalled();
     expect(JSON.stringify(workspace)).toBe(original);
-    fireEvent.click(screen.getByRole('button', { name: 'Return to step 5' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Return to correction' }));
     fireEvent.click(screen.getByRole('button', { name: 'Approve the project answer, version 2' }));
     fireEvent.click(screen.getByRole('button', { name: 'Approve the cover letter, version 3' }));
     expect(onApprove.mock.calls).toEqual([['answer', 2], ['letter', 3]]);

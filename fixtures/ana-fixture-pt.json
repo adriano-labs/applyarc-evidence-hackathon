@@ -1,0 +1,292 @@
+{
+  "note": "Hand-written outputs for Ana's sample (North Yorkshire Council, Care and Support Worker), used in fixture mode and labelled as such on screen. Never presented as model output. Her words are fictional and in European Portuguese (ana/notes-pt.txt, answer-pt.txt, correction-pt.txt); the English meanings follow ana/meaning-en.md, a working translation, not a certified one.",
+  "formId": "north-yorkshire-council-care-and-support-worker-476577",
+  "notes": "Chamo-me Ana. Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+  "facts": [
+    {
+      "key": "home",
+      "statement": "I have worked in a care home in Leeds for three years; I started in October 2023.",
+      "quote": "Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+      "actor": "self",
+      "requirementIds": [
+        "evidence"
+      ]
+    },
+    {
+      "key": "medication",
+      "statement": "I have the medication training, and I do the morning medication round for 18 residents.",
+      "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+      "actor": "self",
+      "requirementIds": [
+        "medication",
+        "evidence"
+      ]
+    },
+    {
+      "key": "records",
+      "statement": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+      "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+      "actor": "self",
+      "requirementIds": [
+        "records"
+      ]
+    },
+    {
+      "key": "plans",
+      "statement": "Before the shift I read each resident's care plan and do what it says.",
+      "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+      "actor": "self",
+      "requirementIds": [
+        "plans"
+      ]
+    },
+    {
+      "key": "moving",
+      "statement": "I have the moving and handling training and I use the hoist.",
+      "quote": "Tenho a formação de moving and handling, uso a grua",
+      "actor": "self",
+      "requirementIds": [
+        "moving"
+      ]
+    },
+    {
+      "key": "pairs",
+      "statement": "We always work in pairs.",
+      "quote": "trabalhamos sempre em dupla",
+      "actor": "team",
+      "requirementIds": [
+        "team",
+        "moving"
+      ]
+    },
+    {
+      "key": "dinner",
+      "statement": "On the dementia unit the residents got agitated at the end of the day, so we, the whole team, moved dinner earlier.",
+      "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo.",
+      "actor": "team",
+      "requirementIds": [
+        "conditions",
+        "team"
+      ]
+    },
+    {
+      "key": "cards",
+      "statement": "I made cards with photos of the food, so each person can point to what they want to eat.",
+      "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+      "actor": "self",
+      "requirementIds": [
+        "initiative",
+        "conditions"
+      ]
+    },
+    {
+      "key": "nights",
+      "statement": "I did three years of nights, and weekends too.",
+      "quote": "Fiz três anos de noites, e também fins de semana.",
+      "actor": "self",
+      "requirementIds": [
+        "rota"
+      ]
+    },
+    {
+      "key": "bruise",
+      "statement": "One night I saw a bruise on a resident's arm; I recorded it and told the nurse on duty straight away.",
+      "quote": "Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço",
+      "actor": "self",
+      "requirementIds": [
+        "safe"
+      ]
+    },
+    {
+      "key": "report",
+      "statement": "The nurse made the safeguarding report.",
+      "quote": "ela fez a participação de safeguarding",
+      "actor": "other",
+      "requirementIds": [
+        "safe"
+      ]
+    }
+  ],
+  "questions": {
+    "dignity": {
+      "question": "O formulário pede que mostre como respeita a igualdade, a diversidade, a dignidade e os direitos de cada pessoa. Como é que faz isso no seu trabalho?",
+      "english": "The form asks how you respect equality, diversity, dignity and each person's rights. How do you do that in your work?",
+      "why": "The form asks what you understand and do yourself about dignity and respect, and none of your confirmed facts says it."
+    }
+  },
+  "answer": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+  "answerFacts": [
+    {
+      "key": "dignity",
+      "statement": "For me, dignity is knocking on the door before going in, explaining what I am going to do before personal care, and always closing the curtains.",
+      "quote": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas.",
+      "actor": "self",
+      "requirementIds": [
+        "dignity"
+      ]
+    },
+    {
+      "key": "respect",
+      "statement": "I respect each person's culture and religion: I ask what they want to eat, how they want to be addressed, and whether they would rather be helped by a woman.",
+      "quote": "E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+      "actor": "self",
+      "requirementIds": [
+        "dignity"
+      ]
+    }
+  ],
+  "correction": {
+    "quote": "Fiz três anos de noites, e também fins de semana.",
+    "text": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+    "meaning": "Correction: the night shifts were two years, not three; in the last year I moved to days.",
+    "actor": "self"
+  },
+  "drafts": {
+    "answer": [
+      {
+        "kind": "claim",
+        "cite": [
+          "home"
+        ],
+        "text": "I have worked in a care home in Leeds for three years, since October 2023."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "dignity"
+        ],
+        "text": "For me, dignity is knocking on the door before going in, explaining what I am going to do before personal care, and always closing the curtains."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "respect"
+        ],
+        "text": "I respect each person's culture and religion: I ask what they want to eat, how they want to be addressed, and whether they would rather be helped by a woman."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "bruise",
+          "report"
+        ],
+        "text": "One night I saw a bruise on a resident's arm; I recorded it and told the nurse on duty straight away, and she made the safeguarding report.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "dinner"
+        ],
+        "text": "On the dementia unit the residents got agitated at the end of the day, so we, the whole team, moved dinner earlier.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "cards"
+        ],
+        "text": "I made cards with photos of the food, so each person can point to what they want to eat."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "moving",
+          "pairs"
+        ],
+        "text": "I have the moving and handling training and I use the hoist, and we always work in pairs.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "medication"
+        ],
+        "text": "I have the medication training, and I do the morning medication round for 18 residents."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "plans"
+        ],
+        "text": "Before the shift I read each resident's care plan and do what it says."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "records"
+        ],
+        "text": "At the end of the shift I write the daily notes in English and sign the medication sheet."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "nights"
+        ],
+        "text": "I did three years of nights, and weekends too.",
+        "startsParagraph": true
+      }
+    ],
+    "letter": [
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Dear North Yorkshire Council hiring team,"
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "home",
+          "medication"
+        ],
+        "text": "I have worked in a care home in Leeds for three years, since October 2023, and I do the morning medication round for 18 residents.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "records"
+        ],
+        "text": "At the end of the shift I write the daily notes in English."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "dinner",
+          "cards"
+        ],
+        "text": "On the dementia unit, we, the whole team, moved dinner earlier, and I made cards with photos of the food so each person can point to what they want to eat."
+      },
+      {
+        "kind": "claim",
+        "cite": [
+          "nights"
+        ],
+        "text": "I did three years of nights, and weekends too."
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Thank you for considering my application.",
+        "startsParagraph": true
+      },
+      {
+        "kind": "frame",
+        "cite": [],
+        "text": "Yours sincerely, Ana"
+      }
+    ]
+  },
+  "repairs": {
+    "nights": {
+      "answer": "I worked night shifts for two years, and in the last year I moved to days.",
+      "letter": "I worked night shifts for two years, and in the last year I moved to days."
+    }
+  }
+}

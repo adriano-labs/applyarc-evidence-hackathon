@@ -1,0 +1,21 @@
+   2s clicked Start at Ana’s key moment
+   2s key moment · Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite.
+   2s screenshot key-moment
+   2s clicked Add Ana’s note
+   6s conflict · Pode confirmar quantos anos fez noites e quando passou a fazer dias?
+   6s screenshot conflict-raised
+   6s clicked Keep the earlier account
+   6s conflict · Pode confirmar quantos anos fez noites e quando passou a fazer dias?
+   6s screenshot conflict-raised
+   6s clicked Keep the earlier account
+   6s conflict · Pode confirmar quantos anos fez noites e quando passou a fazer dias?
+   6s screenshot conflict-raised
+  36s FAILED · TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Keep the earlier account', exact: true }).first()
+    - locator resolved to <button class="btn" type="button">Keep the earlier account</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  - retrying click action
+    

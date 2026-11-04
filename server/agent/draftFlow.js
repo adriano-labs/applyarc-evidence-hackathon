@@ -3,14 +3,16 @@
 import { draftBlockers, draftProblems, saidBefore, setDraft } from '../domain/documents.js';
 import { coverage } from '../domain/facts.js';
 import { refuse } from '../domain/errors.js';
-import { confirmedFacts, DOC_IDS } from '../domain/workspace.js';
+import { confirmedFacts, DOC_IDS, formDocument } from '../domain/workspace.js';
 import { reviewClaims } from './evidenceReview.js';
+import { reviseOrSkip } from './revise.js';
 import { normalise, wordCount } from '../domain/text.js';
 import { unansweredRequirements } from '../domain/completeness.js';
 import { frameOptions } from '../domain/frames.js';
+import { factForModel } from '../domain/languages.js';
 
 const isReal = (agent) => Boolean(agent.provider && agent.provider.id !== 'fixture');
-const factsFor = (ws) => confirmedFacts(ws).map(({ id, statement, quote }) => ({ id, statement, quote }));
+const factsFor = (ws) => confirmedFacts(ws).map(factForModel);
 const GREETING_OR_SIGNOFF = /^(dear\b|to whom it may concern\b|yours (sincerely|faithfully)\b|kind regards\b|best regards\b)/i;
 
 function commitDraft(ws, docId, segments, review) {
@@ -82,7 +84,7 @@ async function retryWholeDraft(ws, docId, args, agent, emit, segments, review) {
   } catch (error) {
     if (error?.code !== 'invalid-draft') throw error;
     const problems = (error.details?.problems ?? []).map(([index, reason]) => `Sentence ${index + 1}: ${reason}`);
-    emit({ type: 'stage', label: problems.length === 1 ? 'The evidence check refused 1 sentence; asking for a fix' : `The evidence check refused ${problems.length} sentences; asking for a fix` });
+    emit({ type: 'stage', decision: true, label: problems.length === 1 ? 'The evidence check refused 1 sentence; asking for a fix' : `The evidence check refused ${problems.length} sentences; asking for a fix` });
     const result = await agent.draft({ ...args, problems });
     const revised = result.segments ?? [];
     return keepWhatPasses(ws, docId, revised, await reviewClaims(ws, revised, agent, emit));
@@ -105,13 +107,13 @@ async function improveLetterOnce(ws, docId, args, agent, emit, gap, first, revie
     if (error?.code === 'cancelled' || error?.code === 'ABORT_ERR' || error?.name === 'AbortError') throw error;
   }
   commitDraft(ws, docId, first.kept, review);
-  emit({ type: 'stage', label: 'Keeping the checked draft; the writing suggestion remains' });
+  emit({ type: 'stage', decision: true, label: 'Keeping the checked draft; the writing suggestion remains' });
   return first.dropped;
 }
 
 // One more draft when nothing passed or the text ran over its limit; after that it fails closed.
 async function redraftOnce(ws, docId, args, agent, emit, problems, label) {
-  emit({ type: 'stage', label });
+  emit({ type: 'stage', decision: true, label });
   const result = await agent.draft({ ...args, problems });
   const segments = result.segments ?? [];
   const review = await reviewClaims(ws, segments, agent, emit);
@@ -143,19 +145,13 @@ async function reviseFailedClaims(ws, segments, problems, args, agent, emit, rev
     segmentId: String(index), text: segments[index].text, reason, factIds: segments[index].factIds ?? [],
   }));
   if (!items.length) return { segments, review };
-  emit({ type: 'stage', label: `Revising ${items.length} unsupported sentence${items.length === 1 ? '' : 's'}` });
-  let rewrites;
-  try {
-    const result = await agent.revise({ items, facts: args.facts, emit });
-    rewrites = result?.rewrites;
-  } catch (error) {
-    if (error?.code === 'invalid-output') {
-      emit({ type: 'stage', label: 'The rewording step sent an answer that could not be read; going on without it' });
-      return { segments, review };
-    }
-    throw error;
-  }
-  const replacements = replacementsFor(items, segments, rewrites);
+  emit({ type: 'stage', decision: true, label: `Revising ${items.length} unsupported sentence${items.length === 1 ? '' : 's'}` });
+  const documents = [{
+    docId: args.docId,
+    sentences: segments.map((segment, index) => ({ segmentId: String(index), text: segment.text })),
+  }];
+  const result = await reviseOrSkip(agent, { items, facts: args.facts, documents }, emit);
+  const replacements = replacementsFor(items, segments, result?.rewrites);
   if (!replacements.size) return { segments, review };
   const newReview = await reviewClaims(ws, [...replacements.values()], agent, emit);
   return {
@@ -168,7 +164,8 @@ export async function draftOne(ws, docId, args, agent, emit = () => {}) {
   if (ws.application.documents[docId]?.segments.some((segment) => segment.author === 'user')) {
     refuse('would-overwrite', 'This document has your edits; a new draft would replace them.');
   }
-  emit({ type: 'stage', label: docId === 'answer' ? 'Drafting the project answer' : 'Drafting the cover letter' });
+  // The form's own title ("Drafting the supporting evidence"); Graphcore's reads as before.
+  emit({ type: 'stage', label: `Drafting the ${(formDocument(ws, docId)?.title ?? (docId === 'answer' ? 'Project answer' : 'Cover letter')).toLowerCase()}` });
   const { segments } = await agent.draft(args);
   const review = await reviewClaims(ws, segments, agent, emit);
   if (!isReal(agent) || typeof agent.revise !== 'function') return retryWholeDraft(ws, docId, args, agent, emit, segments, review);

@@ -39,7 +39,8 @@ describe('DocumentView', () => {
     const cites = [...container.querySelectorAll('[data-segment="answer-1"] .cite')].map((b) => b.textContent);
     expect(cites).toEqual(['1', '2']);
     expect(container.querySelectorAll('[data-segment="answer-3"] .cite')).toHaveLength(0);
-    expect(screen.getByRole('button', { name: 'Evidence 3' })).toBeTruthy();
+    expect(screen.queryByRole('button', { name: 'Evidence 3' })).toBeNull();
+    expect(screen.getByRole('button', { name: 'Original source 3' })).toBeTruthy();
   });
 
   it('starts a paragraph where a segment says so', () => {
@@ -49,7 +50,7 @@ describe('DocumentView', () => {
 
   it('separates sentences in a paragraph with a space', () => {
     const { container } = view({ locked: true });
-    expect(container.querySelector('.para').textContent).toBe('Four of us built a GPU job runner.12 I wrote the Helm change.3');
+    expect(container.querySelector('.para').textContent).toContain('Four of us built a GPU job runner.12 I wrote the Helm change.');
   });
 
   it('keeps valid markup while editing: nothing block-level inside a paragraph', () => {
@@ -64,6 +65,12 @@ describe('DocumentView', () => {
     expect(container.querySelector('[data-segment="answer-2"]').className).toContain('user');
     expect(container.querySelector('[data-segment="answer-1"]').className).toContain('draft');
     expect(screen.getAllByLabelText('Your words')).toHaveLength(1);
+    expect(screen.getByText('Your words · not rechecked')).toBeTruthy();
+    expect(container.querySelector('[data-segment="answer-2"] .sentence-text .cites')).toBeNull();
+    const original = screen.getByRole('button', { name: 'Original source 3' });
+    fireEvent.focus(original);
+    expect(base.onCite.mock.lastCall).toEqual(['f3', 'answer-2']);
+    expect(doc.segments[1].factIds).toEqual(['f3']);
   });
 
   it('reports a hovered or focused citation, and clears it on leave', () => {
@@ -79,7 +86,7 @@ describe('DocumentView', () => {
 
   it('marks the citation of the active fact', () => {
     view({ activeFactId: 'f3' });
-    expect(screen.getByRole('button', { name: 'Evidence 3' }).getAttribute('data-active')).toBe('true');
+    expect(screen.getByRole('button', { name: 'Original source 3' }).getAttribute('data-active')).toBe('true');
   });
 
   it('edits a sentence in place and saves it', async () => {

@@ -1,13 +1,23 @@
 // A read-only look back at a finished step of the guided walk-through, and the finish's
 // list of what was done, one row a step. Nothing here changes the workspace.
 import { pronouns } from '../flow.js';
+import { happenedLines } from '../lib/finish.js';
+import { languageName } from '../lib/language.js';
 import { GuidedAnswer } from './GuidedAnswer.jsx';
+import { ConflictQuestion } from './ConflictQuestion.jsx';
 
 export const STEP_LABELS = ['Notes', 'Facts', 'Question', 'Answer', 'Change'];
 
 const notesOf = (ws) => (ws?.applicant?.sources ?? []).find((s) => s?.kind === 'notes')?.text ?? '';
 const confirmedOf = (ws) => (ws?.applicant?.facts ?? []).filter((f) => f?.status === 'confirmed');
 const plural = (count, one, many) => `${count} ${count === 1 ? one : many}`;
+
+// The finish's notes row: words spoken in her language when her notes came from her voice.
+function notesRow(ws) {
+  const notes = (ws?.applicant?.sources ?? []).find((s) => s?.kind === 'notes');
+  const words = plural((notes?.text ?? '').split(/\s+/).filter(Boolean).length, 'word', 'words');
+  return notes?.spoken && notes.language ? `${words} spoken in ${languageName(notes.language)}` : `${words} of rough notes`;
+}
 
 export function NotesText({ workspace }) {
   return (
@@ -55,19 +65,27 @@ export function GuidedReview({ n, workspace: ws, view, possessive = 'her' }) {
   if (n === 2) {
     return (
       <ol className="guided-fact-list" aria-label="Confirmed facts">
-        {confirmedOf(ws).map((f) => (
+        {confirmedOf(ws).map((f) => (f.language ? (
+          <li key={f.id}>
+            <p className="guided-fact-quote" lang={f.language}>“{f.quote}”</p>
+            <p className="guided-fact-statement">In English (working translation): {f.statement}</p>
+          </li>
+        ) : (
           <li key={f.id}>
             <p className="guided-fact-statement">{f.statement}</p>
             <p className="guided-fact-quote">“{f.quote}”</p>
           </li>
-        ))}
+        )))}
       </ol>
     );
   }
   if (n === 3) {
     const sources = ws?.applicant?.sources ?? [];
     return (ws?.application?.questions ?? []).filter((q) => q.status === 'answered').map((q) => (
-      <Compare key={q.id} rows={[['The app asked', q.text], [`${p.Possessive} answer`, sources.find((s) => s.id === q.sourceId)?.text ?? '']]} />
+      <Compare key={q.id} rows={[
+        ['The app asked', q.kind === 'source-conflict' ? <ConflictQuestion question={q} showHelp={false} /> : q.text],
+        [`${p.Possessive} answer`, sources.find((s) => s.id === q.sourceId)?.text ?? ''],
+      ]} />
     ));
   }
   if (n === 4) return <GuidedAnswer workspace={ws} view={view} possessive={possessive} />;
@@ -82,19 +100,38 @@ export function GuidedReview({ n, workspace: ws, view, possessive = 'her' }) {
   );
 }
 
+// What just happened, in a few lines from the saved workspace and the receipts; nothing is inferred.
+export function FinishSummary({ workspace, view, receipts }) {
+  return (
+    <section className="guided-happened" aria-labelledby="guided-happened-title">
+      <h2 id="guided-happened-title">What just happened</h2>
+      <ul>
+        {happenedLines(workspace, view, receipts).map((line) => <li key={line}>{line}</li>)}
+      </ul>
+    </section>
+  );
+}
+
 // The finish, like a "check your answers" page: each step, what it produced, and a way back.
 export function FinishList({ workspace: ws, possessive = 'her', onReview }) {
   const p = pronouns(possessive);
   const docs = ws?.application?.form?.documents ?? [];
-  const claims = docs.flatMap((d) => ws?.application?.documents?.[d.id]?.segments ?? []).filter((s) => s.kind === 'claim' && s.author !== 'user').length;
-  const answered = (ws?.application?.questions ?? []).filter((q) => q.status === 'answered').length;
+  const segments = docs.flatMap((d) => ws?.application?.documents?.[d.id]?.segments ?? []);
+  const claims = segments.filter((s) => s.kind === 'claim' && s.author !== 'user').length;
+  const own = segments.filter((s) => s.author === 'user').length;
+  const documentSummary = [
+    `${plural(claims, 'drafted statement', 'drafted statements')} in ${plural(docs.length, 'document', 'documents')}, each citing ${p.possessive} facts`,
+    own ? `${plural(own, 'sentence', 'sentences')} in ${p.possessive} own words, not rechecked` : null,
+  ].filter(Boolean).join('; ');
+  // A conflict settled by a correction was not answered in her words.
+  const answered = (ws?.application?.questions ?? []).filter((q) => q.status === 'answered' && q.resolution !== 'corrected').length;
   const repair = ws?.application?.lastRepair;
   const changed = repair?.changed ?? 0;
   const values = [
-    `${plural(notesOf(ws).split(/\s+/).filter(Boolean).length, 'word', 'words')} of rough notes`,
+    notesRow(ws),
     `${plural(confirmedOf(ws).length, 'fact', 'facts')} confirmed, each tied to ${p.possessive} own words`,
     answered ? `${plural(answered, 'question', 'questions')} answered in ${p.possessive} own words` : 'No question needed',
-    `${plural(claims, 'statement', 'statements')} in ${plural(docs.length, 'document', 'documents')}, each citing ${p.possessive} facts`,
+    documentSummary,
     repair ? `1 fact corrected; only the ${changed === 1 ? '1 sentence that used it was' : `${changed} sentences that used it were`} rewritten` : 'No fact corrected',
   ];
   return (

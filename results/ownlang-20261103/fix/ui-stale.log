@@ -1,0 +1,16 @@
+   1s clicked Try it with Ana’s voice note
+  14s PASS her voice note was sent once · POST /api/voice?language=pt-PT&sample=ana
+  14s screenshot 01-ana-voice-note
+  14s clicked Start again
+  14s clicked Start again
+  14s clicked Start at the key moment
+  17s PASS Ellie’s key moment opens without Ana’s voice note · 1 voice calls
+  17s clicked Add Ellie’s note
+  27s clicked Use this correction
+  59s applied
+  59s approved project answer
+  59s approved cover letter
+  59s screenshot 02-ellie-finish
+  59s screenshot 03-ellie-trail
+  59s PASS Ellie’s trail has no Voice row · 10 rows: Wonder / Checked by code / Checked by code / Wonder / Wonder / The app / Wonder / Wonder / You / You
+  59s PASS one voice call in the whole visit · POST /api/voice?language=pt-PT&sample=ana

@@ -64,7 +64,7 @@ describe('the Then line and the approve order', () => {
       'Then: the app asks about anything missing.',
       'Then: both documents are written from your facts.',
       'Then: every sentence cites its facts.',
-      'Then: export a pack marked NOT SUBMITTED.',
+      'Then: export both approved documents. NOT SUBMITTED.',
       'Then: approve the new versions.',
     ]);
     expect(thenLine({ next: 'export' }, ws())).toBe('Nothing is submitted: you paste it in yourself.');

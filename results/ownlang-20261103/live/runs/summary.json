@@ -1,0 +1,737 @@
+[
+ {
+  "run": "prelim-oldprompt",
+  "startedAt": "2026-11-03T20:33:43.524Z",
+  "failures": [],
+  "notes": "7.5% (opening lost) · control 5.7% (opening lost)",
+  "answer": "5.9% · control 7.8%",
+  "correction": "11.8% · control 0.0%",
+  "facts": "13 from notes (0 refused) + 5 from the answer",
+  "quotes": "21 of 21 verify_quote calls verbatim; Verify: all quotes match",
+  "question": "dignity (model): Portuguese with English beneath: yes",
+  "questionText": "Com os cartões com fotografias da comida que fez no lar em Leeds, como é que cada pessoa pôde escolher por si própria e ser respeitada nas suas escolhas?",
+  "questionEnglish": "With the food photograph cards you made at the care home in Leeds, how did each person get to choose for themselves and have their choices respected?",
+  "citations": "30 claim sentences, 30 cite facts",
+  "review": "0 draft sentence(s) refused and revised; 0 left out",
+  "dropped": [],
+  "conflict": "yes: Trabalhou dois anos em turnos da noite e passou a fazer dias no último ano, em vez de três anos de noites?",
+  "reopened": "answer/answer-17, letter/letter-12 (only citing: true); untouched changed: 0",
+  "repair": [
+   "answer: proposed “I did two years of night shifts, and in the last year I moved to working days.”",
+   "letter: proposed “I did two years of night shifts, and in the last year I moved to working days.”"
+  ],
+  "export": "NOT SUBMITTED, answer 210/500, letter 186/350",
+  "verify": "7 of 7",
+  "wallSeconds": 122.2,
+  "modelSeconds": 147,
+  "modelSteps": 10,
+  "toolCalls": 27,
+  "costUsd": 0.4066,
+  "controlMs": 20942,
+  "meanings": [
+   [
+    "f1",
+    "self",
+    "Applicant has worked for three years in a care home in Leeds.",
+    "Trabalha há três anos num lar em Leeds."
+   ],
+   [
+    "f2",
+    "self",
+    "Applicant started in October two thousand and twenty-three.",
+    "Comecei em outubro de dois mil e e vinte e três."
+   ],
+   [
+    "f3",
+    "self",
+    "Applicant has medication training and does the morning medication round for eighteen residents.",
+    "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes."
+   ],
+   [
+    "f4",
+    "self",
+    "At the end of the shift, applicant writes the daily notes in English and signs the medication sheet.",
+    "No fim do turno escrevo as daily notes em inglês e assino a folha da medicação."
+   ],
+   [
+    "f5",
+    "self",
+    "Before the shift, applicant reads each resident's care plan and does what is stated there.",
+    "antes do turno leio leio o care plan de cada residente e faço o que lá está"
+   ],
+   [
+    "f6",
+    "self",
+    "Applicant has moving and handling training and uses the hoist.",
+    "tenho a formação de moving and handling handling uso a grua"
+   ],
+   [
+    "f7",
+    "team",
+    "Applicant and colleagues always work in pairs.",
+    "trabalhamos sempre em dupla."
+   ],
+   [
+    "f8",
+    "team",
+    "In the dementia unit, residents became agitated late in the day, so the whole team moved dinner earlier.",
+    "Na unidade unidade de demência os residentes ficavam agitados ao fim do dia por isso nós, a equipa toda, passámos o jantar para mais cedo."
+   ],
+   [
+    "f9",
+    "self",
+    "Applicant made cards with photographs of food so each person could point to what they wanted to eat.",
+    "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer."
+   ],
+   [
+    "f10",
+    "self",
+    "The night shifts were two years, not three, and in the last year the applicant moved to working days.",
+    "Correção, os turnos da noite foram dois foram dois anos, não três, no último ano passei a fazer dias."
+   ],
+   [
+    "f11",
+    "self",
+    "One night, applicant saw a bruise on a resident's arm.",
+    "Uma noite, vi uma nódoa negra no braço de uma residente."
+   ],
+   [
+    "f12",
+    "self",
+    "Applicant recorded it and immediately told the nurse on duty.",
+    "Registei e contei logo à enfermeira de serviço"
+   ],
+   [
+    "f13",
+    "other",
+    "The nurse made the safeguarding report.",
+    "ela fez a a participação de safeguarding."
+   ],
+   [
+    "f14",
+    "self",
+    "Applicant knocks on the door before entering.",
+    "bater à porta antes de porta antes de entrar"
+   ],
+   [
+    "f15",
+    "self",
+    "Applicant explains what they will do before personal care.",
+    "explicar o que vou fazer antes da higiene pessoal"
+   ],
+   [
+    "f16",
+    "self",
+    "Applicant always closes the curtains.",
+    "fechar sempre as cortinas"
+   ],
+   [
+    "f17",
+    "self",
+    "Applicant respects each person's culture and religion.",
+    "respeito a cultura e a religião de cada pessoa"
+   ],
+   [
+    "f18",
+    "self",
+    "Applicant asks what the person wants to eat.",
+    "pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher"
+   ]
+  ]
+ },
+ {
+  "run": "ana-1",
+  "startedAt": "2026-11-03T20:36:24.460Z",
+  "failures": [],
+  "notes": "8.8% (opening lost) · control 10.1% (opening lost)",
+  "answer": "5.9% · control 9.8% (opening lost)",
+  "correction": "0.0% · control 5.9% (opening lost)",
+  "facts": "13 from notes (0 refused) + 6 from the answer",
+  "quotes": "21 of 21 verify_quote calls verbatim; Verify: all quotes match",
+  "question": "dignity (model): Portuguese with English beneath: yes",
+  "questionText": "Com os cartões com fotografias da comida que fez no lar em Leeds, o que é que faz para garantir que cada residente pode escolher e ser tratado com respeito?",
+  "questionEnglish": "With the food photograph cards you made at the care home in Leeds, what do you do to make sure each resident can choose and be treated with respect?",
+  "citations": "30 claim sentences, 30 cite facts",
+  "review": "1 draft sentence(s) refused and revised; 1 left out",
+  "dropped": [
+   {
+    "docId": "answer",
+    "text": "I ask what they want to eat and how they want to be treated.",
+    "reason": "The quote says what I want to eat and how I want to be treated, not what they want."
+   }
+  ],
+  "conflict": "yes: Trabalhou noites durante dois anos e dias no último ano, ou trabalhou noites durante três anos?",
+  "reopened": "answer/answer-18, letter/letter-12 (only citing: true); untouched changed: 0",
+  "repair": [
+   "answer: proposed “I did two years of night shifts, and in the last year I moved to days.”",
+   "letter: proposed “I did two years of night shifts, and in the last year I moved to days.”"
+  ],
+  "export": "NOT SUBMITTED, answer 202/500, letter 184/350",
+  "verify": "7 of 7",
+  "wallSeconds": 144.1,
+  "modelSeconds": 166,
+  "modelSteps": 11,
+  "toolCalls": 26,
+  "costUsd": 0.4434,
+  "controlMs": 19389,
+  "meanings": [
+   [
+    "f1",
+    "self",
+    "I have worked for 3 years in a care home in Leeds, starting in October 2023.",
+    "trabalha há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três."
+   ],
+   [
+    "f2",
+    "self",
+    "I have medication training and do the morning medication round for 18 residents.",
+    "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes."
+   ],
+   [
+    "f3",
+    "self",
+    "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+    "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação."
+   ],
+   [
+    "f4",
+    "self",
+    "Before the shift, I read each resident's care plan and do what is stated there.",
+    "Antes do turno, leio o care plan de cada residente e faço o que lá está."
+   ],
+   [
+    "f5",
+    "self",
+    "I have moving and handling training and use a hoist.",
+    "Tenho a formação de moving and handling, uso grua"
+   ],
+   [
+    "f6",
+    "team",
+    "We always work in pairs.",
+    "trabalhamos sempre em dupla"
+   ],
+   [
+    "f7",
+    "other",
+    "In the dementia unit, residents became agitated at the end of the day.",
+    "Na unidade unidade de demência, os residentes ficavam agitados ao fim do dia"
+   ],
+   [
+    "f8",
+    "team",
+    "We, the whole team, moved dinner to an earlier time.",
+    "nós, a equipa toda, passámos o jantar para mais cedo"
+   ],
+   [
+    "f9",
+    "self",
+    "I made cards with photographs of food so each person could point to what they want to eat.",
+    "Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o apontar o que quer comer."
+   ],
+   [
+    "f10",
+    "self",
+    "Correction: the night shifts were two years, not three; in the last year I moved to days.",
+    "Correção: os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+   ],
+   [
+    "f11",
+    "self",
+    "One night, I saw a bruise on a resident's arm.",
+    "Uma noite, vi uma nódoa negra no braço de uma residente."
+   ],
+   [
+    "f12",
+    "self",
+    "I recorded it and told the nurse on duty straight away.",
+    "Registei e contei logo à logo à enfermeira de serviço"
+   ],
+   [
+    "f13",
+    "other",
+    "She made the safeguarding report.",
+    "ela fez a participação de safe guarding"
+   ],
+   [
+    "f14",
+    "self",
+    "For me, dignity is knocking on the door before entering.",
+    "Para mim, dignidade é bater à porta antes de entrar"
+   ],
+   [
+    "f15",
+    "self",
+    "I explain what I will do before personal hygiene.",
+    "explicar o que vou fazer antes da higiene pessoal"
+   ],
+   [
+    "f16",
+    "self",
+    "I always close the curtains.",
+    "fechar sempre as cortinas"
+   ],
+   [
+    "f17",
+    "self",
+    "I respect each person's culture and religion.",
+    "respeito a cultura e a religião de cada pessoa"
+   ],
+   [
+    "f18",
+    "self",
+    "I ask what they want to eat and how they want to be treated.",
+    "pergunto o que quero comer, como quero ser tratada"
+   ],
+   [
+    "f19",
+    "self",
+    "I ask if she prefers to be helped by a woman.",
+    "se prefere ser ajudada por uma mulher"
+   ]
+  ]
+ },
+ {
+  "run": "ana-2",
+  "startedAt": "2026-11-03T20:38:48.657Z",
+  "failures": [],
+  "notes": "7.5% (opening lost) · control 8.8% (opening lost)",
+  "answer": "5.9% · control 7.8%",
+  "correction": "0.0% · control 5.9% (opening lost)",
+  "facts": "12 from notes (0 refused) + 7 from the answer",
+  "quotes": "23 of 23 verify_quote calls verbatim; Verify: all quotes match",
+  "question": "dignity (model): Portuguese with English beneath: yes",
+  "questionText": "Pensando nos cartões com fotografias da comida que fez, como é que isso ajudou cada residente a fazer a sua própria escolha e a ser tratado com dignidade e respeito?",
+  "questionEnglish": "Thinking about the cards with photographs of the food that you made, how did that help each resident to make their own choice and be treated with dignity and respect?",
+  "citations": "30 claim sentences, 30 cite facts",
+  "review": "0 draft sentence(s) refused and revised; 0 left out",
+  "dropped": [],
+  "conflict": "yes: Fez turnos da noite durante dois anos e dias no último ano, ou durante três anos?",
+  "reopened": "answer/answer-19, letter/letter-11 (only citing: true); untouched changed: 0",
+  "repair": [
+   "answer: proposed “I worked night shifts for two years and moved to day shifts in the last year.”",
+   "letter: proposed “I worked night shifts for two years and moved to day shifts in the last year.”"
+  ],
+  "export": "NOT SUBMITTED, answer 216/500, letter 183/350",
+  "verify": "7 of 7",
+  "wallSeconds": 128.8,
+  "modelSeconds": 151.7,
+  "modelSteps": 10,
+  "toolCalls": 28,
+  "costUsd": 0.4008,
+  "controlMs": 19376,
+  "meanings": [
+   [
+    "f1",
+    "self",
+    "I have worked in a care home in Leeds for 3 years, starting in October 2023.",
+    "Trabalha há três anos num lar em Leeds, comecei em outubro de dois mil e mil e vinte e três."
+   ],
+   [
+    "f2",
+    "self",
+    "I have medication training and do the morning medication round for 18 residents.",
+    "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes."
+   ],
+   [
+    "f3",
+    "self",
+    "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+    "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação."
+   ],
+   [
+    "f4",
+    "self",
+    "Before the shift, I read each resident's care plan and do what is in it.",
+    "Antes do turno, leio o care plan de cada residente e faço o que lá está."
+   ],
+   [
+    "f5",
+    "self",
+    "I have moving and handling training and use the hoist.",
+    "Tenho a formação de moving and handling, uso a grua"
+   ],
+   [
+    "f6",
+    "team",
+    "We always work in pairs.",
+    "trabalhamos sempre em dupla"
+   ],
+   [
+    "f7",
+    "team",
+    "In the dementia unit, we, the whole team, moved dinner earlier because residents became agitated at the end of the day.",
+    "Na unidade de demência, os residentes residentes ficavam agitados ao fim do dia, por por isso nós, a equipa toda, passámos o jantar para mais cedo."
+   ],
+   [
+    "f8",
+    "self",
+    "I made cards with photographs of the food so each person could point to what they want to eat.",
+    "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer."
+   ],
+   [
+    "f9",
+    "self",
+    "I worked night shifts for two years, not three, and moved to day shifts in the last year",
+    "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+   ],
+   [
+    "f10",
+    "self",
+    "One night I saw a bruise on a resident's arm.",
+    "Uma noite vi uma nódoa negra no negra no braço de uma residente."
+   ],
+   [
+    "f11",
+    "self",
+    "I recorded it and told the nurse on duty straight away.",
+    "Registei e contei logo à enfermeira de serviço"
+   ],
+   [
+    "f12",
+    "other",
+    "She made the safeguarding referral.",
+    "ela fez a participação de safeguarding."
+   ],
+   [
+    "f13",
+    "self",
+    "I knock on the door before entering.",
+    "bater à porta antes de entrar"
+   ],
+   [
+    "f14",
+    "self",
+    "I explain what I will do before personal hygiene.",
+    "explicar o que vou fazer antes antes da higiene pessoal"
+   ],
+   [
+    "f15",
+    "self",
+    "I always close the curtains.",
+    "fechar sempre as cortinas"
+   ],
+   [
+    "f16",
+    "self",
+    "I respect each person's culture and religion.",
+    "E respeito a respeito a cultura e a religião de cada pessoa."
+   ],
+   [
+    "f17",
+    "self",
+    "I ask what the person wants to eat.",
+    "Pergunto o que quer comer"
+   ],
+   [
+    "f18",
+    "self",
+    "I ask how the person wants to be treated.",
+    "como quer ser tratada"
+   ],
+   [
+    "f19",
+    "self",
+    "I ask whether the person prefers to be helped by a woman.",
+    "se prefere ser ajudada por uma mulher"
+   ]
+  ]
+ },
+ {
+  "run": "ana-3",
+  "startedAt": "2026-11-03T20:40:57.526Z",
+  "failures": [],
+  "notes": "8.2% (opening lost) · control 10.1% (opening lost)",
+  "answer": "0.0% · control 5.9%",
+  "correction": "0.0% · control 0.0%",
+  "facts": "12 from notes (0 refused) + 7 from the answer",
+  "quotes": "21 of 21 verify_quote calls verbatim; Verify: all quotes match",
+  "question": "dignity (model): Portuguese with English beneath: yes",
+  "questionText": "Quando fez os cartões com fotografias da comida no lar em Lides, o que aprendeu sobre respeitar a escolha e a dignidade de cada residente que possa usar neste trabalho?",
+  "questionEnglish": "When you made the cards with photographs of the food at the care home in Lides, what did you learn about respecting each resident's choice and dignity that you could use in this job?",
+  "citations": "28 claim sentences, 28 cite facts",
+  "review": "0 draft sentence(s) refused and revised; 0 left out",
+  "dropped": [],
+  "conflict": "yes: Fez turnos da noite durante dois anos ou três anos, e no último ano fez dias?",
+  "reopened": "answer/answer-17, letter/letter-11 (only citing: true); untouched changed: 0",
+  "repair": [
+   "answer: proposed “I did night shifts for two years, and in the last year I moved to days.”",
+   "letter: proposed “I did night shifts for two years, and in the last year I moved to days.”"
+  ],
+  "export": "NOT SUBMITTED, answer 213/500, letter 179/350",
+  "verify": "7 of 7",
+  "wallSeconds": 121.9,
+  "modelSeconds": 143,
+  "modelSteps": 10,
+  "toolCalls": 27,
+  "costUsd": 0.3859,
+  "controlMs": 19721,
+  "meanings": [
+   [
+    "f1",
+    "self",
+    "I have worked for 3 years in a care home in Lides, starting in October 2023.",
+    "Trabalha há três anos num lar em Lides, comecei em outubro de dois mil mil e vinte e três."
+   ],
+   [
+    "f2",
+    "self",
+    "I have medication training and do the morning medication round for 18 residents.",
+    "Tenho a formação da medicação e faço medication round da manhã para dezoito dezoito residentes."
+   ],
+   [
+    "f3",
+    "self",
+    "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+    "No fim fim do turno, escrevo as daily notes em inglês e assino a folha da medicação."
+   ],
+   [
+    "f4",
+    "self",
+    "Before the shift, I read each resident's care plan and do what it says.",
+    "Antes do turno, leio o care plan de cada residente e faço o que lá está."
+   ],
+   [
+    "f5",
+    "self",
+    "I have moving and handling training and use a hoist.",
+    "Tenho a formação de moving and handling, uso grua"
+   ],
+   [
+    "f6",
+    "team",
+    "We always work in pairs.",
+    "trabalhamos sempre em dupla"
+   ],
+   [
+    "f7",
+    "team",
+    "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+    "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo."
+   ],
+   [
+    "f8",
+    "self",
+    "I made cards with photographs of food so each person could point to what they wanted to eat.",
+    "Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer."
+   ],
+   [
+    "f9",
+    "self",
+    "Correction: night shifts were two years, not three; in the last year I moved to days.",
+    "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+   ],
+   [
+    "f10",
+    "self",
+    "One night, I saw a bruise on a resident's arm.",
+    "Uma noite, vi uma nódoa negra no braço de uma residente."
+   ],
+   [
+    "f11",
+    "self",
+    "I recorded it and told the nurse on duty straight away.",
+    "Registei e contei logo logo à enfermeira de serviço"
+   ],
+   [
+    "f12",
+    "other",
+    "She made the safeguarding report.",
+    "ela fez a participação de safe guarding"
+   ],
+   [
+    "f13",
+    "self",
+    "For me, dignity is knocking on the door before entering",
+    "Para mim, dignidade é bater à porta antes de entrar"
+   ],
+   [
+    "f14",
+    "self",
+    "I explain what I am going to do before personal hygiene",
+    "explicar o que vou fazer antes da higiene pessoal"
+   ],
+   [
+    "f15",
+    "self",
+    "I always close the curtains",
+    "fechar sempre as cortinas"
+   ],
+   [
+    "f16",
+    "self",
+    "I respect the culture and religion of each person",
+    "E respeito a cultura e a religião de cada pessoa"
+   ],
+   [
+    "f17",
+    "self",
+    "I ask what they want to eat",
+    "pergunto o que quer comer"
+   ],
+   [
+    "f18",
+    "self",
+    "I ask how they want to be treated",
+    "como quer ser tratada"
+   ],
+   [
+    "f19",
+    "self",
+    "I ask if they prefer to be helped by a woman",
+    "se prefere ser ajudada por uma mulher"
+   ]
+  ]
+ },
+ {
+  "run": "ana-spark",
+  "startedAt": "2026-11-03T20:37:22.279Z",
+  "failures": [],
+  "notes": "typed",
+  "answer": "typed",
+  "correction": "typed",
+  "facts": "13 from notes (0 refused) + 7 from the answer",
+  "quotes": "0 of 0 verify_quote calls verbatim; Verify: all quotes match",
+  "question": "conditions (model): Portuguese with English beneath: yes",
+  "questionText": "No seu trabalho no lar em Leeds, que apoio deu a residentes da unidade de demência com demência ou outra condição prolongada?",
+  "questionEnglish": "In your work at the care home in Leeds, what support did you give to residents in the dementia unit with dementia or another long-term condition?",
+  "citations": "19 claim sentences, 19 cite facts",
+  "review": "1 draft sentence(s) refused and revised; 0 left out",
+  "dropped": [],
+  "conflict": "n/a (typed correction)",
+  "reopened": "answer/answer-13 (only citing: true); untouched changed: 0",
+  "repair": [
+   "answer: proposed “I did night shifts for two years, not three, and in the last year I moved to days.”"
+  ],
+  "export": "NOT SUBMITTED, answer 198/500, letter 109/350",
+  "verify": "7 of 7",
+  "wallSeconds": 47.2,
+  "modelSeconds": 74,
+  "modelSteps": 13,
+  "toolCalls": 0,
+  "costUsd": 0.1333,
+  "controlMs": 0,
+  "meanings": [
+   [
+    "f1",
+    "self",
+    "I am Ana.",
+    "Chamo-me Ana."
+   ],
+   [
+    "f2",
+    "self",
+    "I have worked 3 years in a care home in Leeds, starting in October 2023.",
+    "Trabalho há três anos num lar em Leeds; comecei em outubro de 2023."
+   ],
+   [
+    "f3",
+    "self",
+    "I have medication training and do the morning medication round for 18 residents.",
+    "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes."
+   ],
+   [
+    "f4",
+    "self",
+    "I write the daily notes in English and sign the medication sheet at end of shift.",
+    "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação."
+   ],
+   [
+    "f5",
+    "self",
+    "I read each resident's care plan before the shift and follow it.",
+    "Antes do turno, leio o care plan de cada residente e faço o que lá está."
+   ],
+   [
+    "f6",
+    "self",
+    "I have moving and handling training and use the hoist.",
+    "Tenho a formação de moving and handling, uso a grua"
+   ],
+   [
+    "f7",
+    "team",
+    "We always work in pairs.",
+    "trabalhamos sempre em dupla."
+   ],
+   [
+    "f8",
+    "team",
+    "We as the whole team moved dinner earlier.",
+    "nós, a equipa toda, passámos o jantar para mais cedo."
+   ],
+   [
+    "f9",
+    "self",
+    "I made cards with photos of food so each person can point to what they want.",
+    "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer."
+   ],
+   [
+    "f10",
+    "self",
+    "Correction: the night shifts were two years, not three; in the last year I moved to days.",
+    "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias."
+   ],
+   [
+    "f11",
+    "self",
+    "I saw a bruise on a resident's arm one night.",
+    "vi uma nódoa negra no braço de uma residente."
+   ],
+   [
+    "f12",
+    "self",
+    "I recorded it and told the nurse on duty immediately.",
+    "Registei e contei logo à enfermeira de serviço,"
+   ],
+   [
+    "f13",
+    "other",
+    "She made the safeguarding report.",
+    "ela fez a participação de safeguarding."
+   ],
+   [
+    "f14",
+    "self",
+    "I knock on the door before entering as part of dignity",
+    "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas."
+   ],
+   [
+    "f15",
+    "self",
+    "I explain what I will do before personal hygiene",
+    "explicar o que vou fazer antes da higiene pessoal"
+   ],
+   [
+    "f16",
+    "self",
+    "I always close the curtains",
+    "fechar sempre as cortinas"
+   ],
+   [
+    "f17",
+    "self",
+    "I respect each person's culture and religion",
+    "respeito a cultura e a religião de cada pessoa"
+   ],
+   [
+    "f18",
+    "self",
+    "I ask what they want to eat",
+    "pergunto o que quer comer"
+   ],
+   [
+    "f19",
+    "self",
+    "I ask how they want to be addressed and treated",
+    "como quer ser tratada"
+   ],
+   [
+    "f20",
+    "self",
+    "I ask if they prefer to be helped by a woman",
+    "se prefere ser ajudada por uma mulher"
+   ]
+  ]
+ }
+]

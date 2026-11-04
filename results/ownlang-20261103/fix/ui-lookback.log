@@ -1,0 +1,27 @@
+   1s clicked Start at Ana’s key moment
+   3s PASS nothing is sent on opening the key moment
+   3s clicked Use Ana’s spoken correction
+   6s spoken correction · Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.
+   6s screenshot 01-ana-km-heard
+   6s clicked Back
+   6s clicked Return to correction
+   9s screenshot 02-ana-km-returned
+   9s PASS her correction clip was sent once across the look back · POST /api/voice?language=pt-PT&sample=ana
+   9s clicked Type the correction instead
+   9s clicked Correct this fact
+  23s applied
+  23s approved supporting evidence
+  23s approved cover letter
+  23s screenshot 03-ana-km-finish
+  23s clicked See the application
+  53s clicked Verify this run
+  53s screenshot 04-ana-km-verify
+  53s PASS Verify this run passes 7 of 7 after the typed correction · Holds:
+19 of 19 confirmed facts quote Ana’s text word for word / Holds:
+31 of 31 drafted statements cite at least one fact, all confirmed / Holds:
+31 of 31 drafted statements state no number their cited facts do not / Holds:
+2 of 2 approvals match the current version / Nothing to check:
+No sentences marked as Ana’s own yet / Holds:
+Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions / Holds:
+Model review on record: 31 cited sentences supported, 0 held back in this visit
+  53s PASS one voice call in the whole visit · POST /api/voice?language=pt-PT&sample=ana

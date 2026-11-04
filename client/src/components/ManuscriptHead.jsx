@@ -1,5 +1,6 @@
 // A document's head: title and approval, version and who wrote it, and what the evidence check checks.
 import { AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { family } from '../lib/trail.js';
 import './ManuscriptHead.css';
 
 function ApprovalChip({ approval, revision, approvedRevision }) {
@@ -30,16 +31,14 @@ function ApprovalChip({ approval, revision, approvedRevision }) {
 // Who wrote the document, as a link to the receipts. Another firm's model never reads as Meta.
 function stampText(mode, receipts) {
   if (mode.id === 'fixture') return 'Fixture, not a model ›';
-  const model = receipts.findLast((r) => r.flow === 'draft')?.model ?? mode.model;
-  const family = /muse-spark-open/i.test(model) ? 'Muse Spark Open'
-    : /muse-spark-1\.3/i.test(model) ? 'Muse Spark 1.3'
-      : /muse-wonder-1\.0/i.test(model) ? 'Muse Wonder' : model;
-  return mode.isMeta ? `${family} · Activity ›` : `${family} (not Meta) ›`;
+  const model = receipts.findLast((r) => r.flow === 'draft' && r.model)?.model ?? mode.model;
+  const name = family(model, mode.isMeta).name;
+  return mode.isMeta ? `${name} · Activity ›` : `${name} (not Meta) ›`;
 }
 
 function stampAriaLabel(mode, receipts) {
   if (mode.id === 'fixture') return 'Hand-written fixture, not a model · What the model did';
-  const model = receipts.findLast((r) => r.flow === 'draft')?.model ?? mode.model;
+  const model = receipts.findLast((r) => r.flow === 'draft' && r.model)?.model ?? mode.model;
   return mode.isMeta ? `Drafted by ${model} · What Meta did` : `Drafted by ${model} (not Meta) · What the model did`;
 }
 
@@ -57,7 +56,8 @@ function evidenceText(segments) {
   return parts.length ? parts.join(' · ') : null;
 }
 
-export function ManuscriptHead({ docId, title, revision, stats, approval, approvedRevision, segments = [], receipts = [], mode, onReceipts, hintSeen, correctionNotice }) {
+// languageLine: for words in another language, what drafted the English and who confirmed its meaning.
+export function ManuscriptHead({ docId, title, revision, stats, approval, approvedRevision, segments = [], receipts = [], mode, onReceipts, hintSeen, correctionNotice, languageLine }) {
   const evidence = evidenceText(segments);
   return (
     <header className="manuscript-head">
@@ -76,6 +76,7 @@ export function ManuscriptHead({ docId, title, revision, stats, approval, approv
           </>
         ) : null}
       </p>
+      {languageLine ? <p className="manuscript-language">{languageLine}</p> : null}
       {stats.unanswered?.length ? <p className="manuscript-missing">Not answered yet: {stats.unanswered.map((r) => r.text).join('; ')}</p> : null}
       {mode && mode.id !== 'fixture' && <p className="manuscript-hint">AI drafts can contain mistakes. Check the wording before approving.</p>}
       <details className="manuscript-help">

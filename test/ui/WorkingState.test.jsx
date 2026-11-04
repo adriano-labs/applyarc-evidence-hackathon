@@ -42,6 +42,13 @@ describe('WorkingState', () => {
     expect(screen.getByRole('status').textContent).toBe(status);
   });
 
+  it('shows the live tally of the app’s own checks, outside the one status', () => {
+    render(<WorkingState busy={{ ...busy, toolCounts: { verify_quote: 7, verbatim: 7, word_count: 1, words: '198 of 300' } }} modeLabel="Meta" />);
+    expect(screen.getByText('Checked 7 quotes word for word so far · Counted the words: 198 of 300')).toBeTruthy();
+    expect(screen.getAllByRole('status')).toHaveLength(1);
+    expect(screen.getByRole('status').textContent).not.toContain('so far');
+  });
+
   it('labels an injected retry as a test instead of a provider outage', () => {
     render(<WorkingState busy={{ ...busy, retry: { attempt: 2, of: 3, injected: true } }} modeLabel="Meta" />);
     expect(screen.getByRole('status').textContent).toContain('Injected for the demo');

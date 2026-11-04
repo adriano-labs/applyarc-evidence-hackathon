@@ -1,0 +1,402 @@
+{
+ "base": "http://127.0.0.1:3197",
+ "viewport": [
+  390,
+  844
+ ],
+ "checks": [
+  {
+   "name": "transcript: repeated words named",
+   "ok": true,
+   "detail": "Muse Voice Transcribe repeated 3 words: “Eu Eu”, “No No”, “da da”. Remove the repeats · or fix them yourself above."
+  },
+  {
+   "name": "transcript: words unchanged until tapped",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "02-transcript-repeats-REPLAYED: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "transcript: one tap removes each repeat, nothing else",
+   "ok": true,
+   "detail": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de do"
+  },
+  {
+   "name": "transcript: line gone once removed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "03-repeats-removed-REPLAYED: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "question row: every button and the caption on one line",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "06b-question-with-voice-STUB: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "welcome: advert is public, not a partner, at the citation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "welcome: her written note offered with no voice",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "01-welcome: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "written note: tag says fictional, nothing sent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "written note: no repeated-words line",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "04-written-note: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fact card: speaks of her",
+   "ok": true,
+   "detail": "From her notes · Ana did this"
+  },
+  {
+   "name": "05-fact-card: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "06-question: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "07-key-moment: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "08-what-changed: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "08b-apply: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "after apply: review is secondary",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "09-after-apply: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "finish: meanings are working translations she confirmed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "finish: rough notes (her note was written, not spoken)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "10-finish: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pack: NOT SUBMITTED and the demo line",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "11-pack: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pack .md: NOT SUBMITTED first, demo line after the notice",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Evidence Pass: stamped NOT SUBMITTED, with the demo line",
+   "ok": true,
+   "detail": "NOT SUBMITTED / Demo: fictional applicant."
+  },
+  {
+   "name": "12-evidence-pass: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "13-evidence-pass-opened: no sideways scroll",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no console errors",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "errors": [],
+ "log": [
+  {
+   "s": 1,
+   "what": "clicked Try it with Ana’s voice note",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "PASS transcript: repeated words named",
+   "detail": "Muse Voice Transcribe repeated 3 words: “Eu Eu”, “No No”, “da da”. Remove the repeats · or fix them yourself above."
+  },
+  {
+   "s": 1,
+   "what": "PASS transcript: words unchanged until tapped",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "PASS 02-transcript-repeats-REPLAYED: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "clicked Remove the repeats",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "PASS transcript: one tap removes each repeat, nothing else",
+   "detail": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de do"
+  },
+  {
+   "s": 1,
+   "what": "PASS transcript: line gone once removed",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "PASS 03-repeats-removed-REPLAYED: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "clicked Read Ana’s words",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "PASS question row: every button and the caption on one line",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "PASS 06b-question-with-voice-STUB: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS welcome: advert is public, not a partner, at the citation",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS welcome: her written note offered with no voice",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS 01-welcome: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "clicked Try it with Ana’s written note",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS written note: tag says fictional, nothing sent",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS written note: no repeated-words line",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS 04-written-note: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "clicked Read Ana’s words",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS fact card: speaks of her",
+   "detail": "From her notes · Ana did this"
+  },
+  {
+   "s": 3,
+   "what": "PASS 05-fact-card: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 4,
+   "what": "PASS 06-question: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 4,
+   "what": "clicked Use Ana’s sample answer",
+   "detail": ""
+  },
+  {
+   "s": 4,
+   "what": "clicked Answer",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "clicked Write her application",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "clicked Next: correct one fact",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS 07-key-moment: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "clicked Correct this fact",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "apply: first shown",
+   "detail": "bottom edge at 832 px of 844"
+  },
+  {
+   "s": 5,
+   "what": "PASS 08-what-changed: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS 08b-apply: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS after apply: review is secondary",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS 09-after-apply: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "approved supporting evidence",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "approved cover letter",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS finish: meanings are working translations she confirmed",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS finish: rough notes (her note was written, not spoken)",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "PASS 10-finish: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 5,
+   "what": "clicked See the application",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS pack: NOT SUBMITTED and the demo line",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS 11-pack: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS pack .md: NOT SUBMITTED first, demo line after the notice",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS Evidence Pass: stamped NOT SUBMITTED, with the demo line",
+   "detail": "NOT SUBMITTED / Demo: fictional applicant."
+  },
+  {
+   "s": 6,
+   "what": "PASS 12-evidence-pass: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS 13-evidence-pass-opened: no sideways scroll",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "PASS no console errors",
+   "detail": ""
+  }
+ ]
+}

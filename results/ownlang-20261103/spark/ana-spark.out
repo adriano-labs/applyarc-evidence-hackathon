@@ -1,0 +1,12 @@
+{
+ "out": "~/Developer/claude/evidence/hackathon-29oct/ownlang/app/../evidence/spark/ana-spark",
+ "failures": [],
+ "costUsd": 0.1333,
+ "wallSeconds": 47.2,
+ "notes": 13,
+ "refused": 0,
+ "reopen": [
+  "answer/answer-13"
+ ],
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

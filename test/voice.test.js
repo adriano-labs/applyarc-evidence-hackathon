@@ -65,6 +65,17 @@ describe('spoken notes through Meta Voice Transcribe', () => {
     expect(ledger.summary()).toMatchObject({ spentUsd: 0.003, reservedUsd: 0 });
   });
 
+  it('sends a sample’s keywords with its clip as Meta’s keywords, and none unless given', async () => {
+    const fetch = metaReplies({ transcript: 'Chamome Ana.', audioDurationMs: 1000 });
+    const voice = createVoice({ key: 'k', ledger: ledgerIn(tmp()), fetch });
+    const heard = await voice.transcribe(wav(), { callId: 'k1', language: 'pt-PT', keywords: ['Ana', 'Leeds', 'Chamo-me Ana'] });
+    expect(JSON.parse(await fetch.mock.calls[0][1].body.get('request').text())).toEqual({ mode: 'PUSH_TO_TALK', model: 'muse-voice-transcribe-1.0', audioEncoding: 'WAV', languageBias: ['Portuguese'], keywords: ['Ana', 'Leeds', 'Chamo-me Ana'] });
+    expect(heard).toMatchObject({ hint: 'Portuguese', keywords: ['Ana', 'Leeds', 'Chamo-me Ana'] });
+    const plain = await voice.transcribe(wav(), { callId: 'k2', keywords: [] });
+    expect(JSON.parse(await fetch.mock.calls[1][1].body.get('request').text())).not.toHaveProperty('keywords');
+    expect(plain).not.toHaveProperty('keywords');
+  });
+
   it('charges nothing when Meta refuses or is busy, and says so plainly', async () => {
     const ledger = ledgerIn(tmp());
     await expect(createVoice({ key: 'k', ledger, fetch: metaReplies({ error: 'slow down' }, 429) }).transcribe(wav(), { callId: 'b' }))
@@ -98,15 +109,15 @@ describe('the spoken-notes route', () => {
   const post = (app, body) => app.request('/api/voice', { method: 'POST', headers: { 'content-type': 'audio/wav' }, body });
 
   it('takes a recording larger than the 100 KB text limit and returns the words, with a receipt', async () => {
-    const voice = { transcribe: vi.fn(async () => ({ text: 'I rang eight local suppliers.', durationMs: 10000, costUsd: 0.0005, model: 'muse-voice-transcribe-1.0' })) };
+    const voice = { transcribe: vi.fn(async () => ({ text: 'I rang eight local suppliers.', durationMs: 10000, costUsd: 0.0005, model: 'muse-voice-transcribe-1.0', host: 'api.meta.ai' })) };
     const app = await appWith(voice);
     const audio = wav({ seconds: 10 }); // about 320 KB
     const res = await post(app, audio);
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ text: 'I rang eight local suppliers.', durationMs: 10000 });
+    expect(await res.json()).toEqual({ text: 'I rang eight local suppliers.', durationMs: 10000, model: 'muse-voice-transcribe-1.0' });
     expect(new Uint8Array(voice.transcribe.mock.calls[0][0])).toEqual(audio);
     const { receipts } = await (await app.request('/api/receipts')).json();
-    expect(receipts.at(-1)).toMatchObject({ step: 'transcribe', flow: 'voice', provider: 'meta', isMeta: true, model: 'muse-voice-transcribe-1.0', costUsd: 0.0005 });
+    expect(receipts.at(-1)).toMatchObject({ step: 'transcribe', flow: 'voice', provider: 'meta', isMeta: true, model: 'muse-voice-transcribe-1.0', host: 'api.meta.ai', costUsd: 0.0005 });
     expect((await (await app.request('/api/state')).json()).voice).toBe(true);
   });
 
@@ -127,6 +138,38 @@ describe('the spoken-notes route', () => {
     const before = (await (await app.request('/api/state')).json()).workspace;
     await post(app, wav());
     expect((await (await app.request('/api/state')).json()).workspace).toEqual(before);
+  });
+
+  // Meta charges for the audio even when it heard nothing, so the visitor's spend must show it.
+  it('keeps a receipt for a recording with no words in it, and says no words were heard', async () => {
+    const ledger = ledgerIn(tmp());
+    const app = await appWith(createVoice({ key: 'k', ledger, fetch: metaReplies({ transcript: '  ', audioDurationMs: 1000 }) }));
+    const res = await post(app, wav());
+    expect(res.status).toBe(422);
+    expect((await res.json()).error).toMatchObject({ code: 'invalid', message: expect.stringMatching(/no words/i) });
+    const { receipts } = await (await app.request('/api/receipts')).json();
+    expect(receipts.at(-1)).toMatchObject({ step: 'transcribe', flow: 'voice', provider: 'meta', model: 'muse-voice-transcribe-1.0', audioMs: 1000 });
+    expect(receipts.at(-1).costUsd).toBeCloseTo(0.00005, 9);
+    expect(ledger.summary().spentUsd).toBeCloseTo(receipts.at(-1).costUsd, 9);
+  });
+
+  it('adds a bundled sample clip’s keywords and records them; an own recording or an unknown sample gets none', async () => {
+    const fetch = metaReplies({ transcript: 'Chamome Ana. Eu trabalho num lar em Leeds.', audioDurationMs: 1000 });
+    const app = await appWith(createVoice({ key: 'k', ledger: ledgerIn(tmp()), fetch }), { samples: [{ id: 'ana', voiceKeywords: ['Ana', 'Leeds', 'Chamo-me Ana'] }, { id: 'ellie' }] });
+    const res = await app.request('/api/voice?language=pt-PT&sample=ana', { method: 'POST', headers: { 'content-type': 'audio/wav' }, body: wav() });
+    expect(await res.json()).toMatchObject({ languageBias: 'Portuguese', keywords: ['Ana', 'Leeds', 'Chamo-me Ana'] });
+    expect(JSON.parse(await fetch.mock.calls[0][1].body.get('request').text()).keywords).toEqual(['Ana', 'Leeds', 'Chamo-me Ana']);
+    const own = await (await post(app, wav())).json();
+    expect(own).not.toHaveProperty('keywords');
+    expect(JSON.parse(await fetch.mock.calls[1][1].body.get('request').text())).not.toHaveProperty('keywords');
+    const none = await app.request('/api/voice?sample=ellie', { method: 'POST', headers: { 'content-type': 'audio/wav' }, body: wav() });
+    expect(await none.json()).not.toHaveProperty('keywords');
+    const { receipts } = await (await app.request('/api/receipts')).json();
+    expect(receipts.map((r) => r.keywords ?? null)).toEqual([['Ana', 'Leeds', 'Chamo-me Ana'], null, null]);
+    const unknown = await app.request('/api/voice?sample=nobody', { method: 'POST', headers: { 'content-type': 'audio/wav' }, body: wav() });
+    expect(unknown.status).toBe(422);
+    expect((await unknown.json()).error).toEqual({ code: 'invalid', message: 'There is no such sample.' });
+    expect(fetch).toHaveBeenCalledTimes(3);
   });
 
   it('is off for a visitor whose live allowance is used up', async () => {
@@ -150,11 +193,13 @@ describe('the spoken-notes route', () => {
     expect((await (await app.request('/api/state')).json()).voice).toBe(false);
   });
 
-  it('is on when the server has Meta\'s key, and off in fixture mode', async () => {
+  it('is on only through Meta\'s own provider with its key, and off in fixture mode or on an open-weight host', async () => {
     const live = buildApp({ dataDir: tmp(), env: { PROVIDER: 'meta', META_API_KEY: 'test-key', SPEND_CAP_USD: '1' } });
     expect((await (await live.request('/api/state')).json()).voice).toBe(true);
     const fixture = buildApp({ dataDir: tmp(), env: {} });
     expect((await (await fixture.request('/api/state')).json()).voice).toBe(false);
+    const open = buildApp({ dataDir: tmp(), env: { PROVIDER: 'compatible', COMPAT_BASE_URL: 'https://example.test/v1', COMPAT_API_KEY: 'k', COMPAT_MODEL: 'meta-models/Muse-Spark-Open-816B-A42B', COMPAT_PRICE_AS: 'muse-spark-1.3', META_API_KEY: 'test-key', SPEND_CAP_USD: '1' } });
+    expect((await (await open.request('/api/state')).json()).voice).toBe(false);
   });
 });
 

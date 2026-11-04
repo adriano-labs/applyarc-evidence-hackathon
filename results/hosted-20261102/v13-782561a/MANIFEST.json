@@ -1,0 +1,37 @@
+{
+  "source": "782561aacb0af062ef83bdf8a45bfe30108d1f58",
+  "revision": "applyarc-evidence--notice782561a",
+  "dataset": "Known fictional Ellie/Sam sample; public dated Graphcore form. No real applicant/customer material found in inspected artifacts.",
+  "originals": {
+    "JOURNEY-RECEIPT.json": "b9c54a41d9137e45d72f799b199bd2241dc758c3ea56e8639c477db1f5a8ff82",
+    "hosted-trace.json": "b3cbe8dd841730dc0bc7213240d437445c7fa978dad02b49fa67e9d390975d90",
+    "approved-pack.md": "01538d8b67634dcfd75aaa2caf04f4860290f04d7e86b127034b10113788494c",
+    "activity-dom.txt": "9949aa0a5d6a6c045c1e0f8852205118b877693d05cc6c77b88252cb5884dd19"
+  },
+  "publicArtifacts": {
+    "journey-receipt.json": "3a9697c56e5fc85f3e4ace4ccf4d81c404d9a652747b8a76aba578e062b19250",
+    "hosted-trace.json": "2b75fee2c31b55ccae235d8d0b707ec169babd9e0f474033a589c3105d55f9de",
+    "approved-pack.md": "01538d8b67634dcfd75aaa2caf04f4860290f04d7e86b127034b10113788494c",
+    "activity-dom.txt": "6af07f30363553b5fa81784110c528ac9b860a5f0d49a0f2899a56f1f159ca37"
+  },
+  "removedActivityLines": 13,
+  "removedProviderRequestIds": 21,
+  "packByteIdentical": true,
+  "verifiedAggregates": {
+    "stages": 12,
+    "providerAttempts": 21,
+    "toolCalls": 23,
+    "totalModelMs": 139651,
+    "estimatedCostUsd": "0.5190288",
+    "wordCounts": {
+      "answer": 247,
+      "letter": 204
+    },
+    "toolCounts": {
+      "form_requirements": 3,
+      "verify_quote": 16,
+      "word_count": 4
+    }
+  },
+  "limits": "Receipt records 21 unaffected sentences and two repaired documents. Final pack/DOM verify the expected manual opening and approved versions; no before/after state comparison was rerun. Film prepared for publication review, not yet a public replacement; no new runtime/model calls."
+}

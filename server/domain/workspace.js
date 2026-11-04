@@ -15,7 +15,8 @@ export function createApplication(form) {
   };
 }
 
-export function createWorkspace({ form, applicant = 'Ellie', now = new Date().toISOString() }) {
+// The applicant has no name until a sample or their own form gives one.
+export function createWorkspace({ form, applicant = null, now = new Date().toISOString() }) {
   return {
     schema: 1,
     revision: 0,
@@ -43,9 +44,13 @@ export function findSource(ws, sourceId) {
   return ws.applicant.sources.find((s) => s.id === sourceId);
 }
 
-export function addSource(ws, { kind, text, questionId, now = new Date().toISOString() }) {
+// language: what the applicant spoke or wrote; kept only when it is not English.
+// spoken: the words came from a voice clip, as Voice Transcribe heard them and she checked them.
+export function addSource(ws, { kind, text, questionId, language, spoken, now = new Date().toISOString() }) {
   const source = { id: nextId('s', ws.applicant.sources), kind, text, at: now };
   if (questionId) source.questionId = questionId;
+  if (language && language !== 'en') source.language = language;
+  if (spoken === true) source.spoken = true;
   ws.applicant.sources.push(source);
   if (kind !== 'correction') {
     for (const id of DOC_IDS) ws.application.approvals[id] = null;

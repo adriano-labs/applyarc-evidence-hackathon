@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Who wrote the Helm patch that fixed the /dev/shm problem: you, Sam, or did you each write part of it?",
+ "reopened": [
+  "answer/answer-10",
+  "letter/letter-9"
+ ],
+ "costUsd": 0.1178,
+ "wallSeconds": 31.3,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

@@ -21,11 +21,14 @@ describe('the step while the app works', () => {
     render(<GuidedRun view={{ next: 'check' }} workspace={ws([notes])} story={null} sampleName="Marcus" possessive="his" onPrimary={vi.fn()} onStory={vi.fn()} onExit={vi.fn()} onReview={vi.fn()}><p>body</p></GuidedRun>);
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Checking what the form still needs');
     expect(screen.getByText('The app compares his facts with what the form asks for, and asks only if something is missing.')).toBeTruthy();
-    expect(screen.getByText('Step 3 of 5')).toBeTruthy();
+    expect(screen.getByText('Step 3 of 4')).toBeTruthy();
   });
 
-  it('holds its main button while a step runs, so a second click cannot start it again', () => {
-    render(<GuidedRun view={{ next: 'draft' }} workspace={ws([notes])} story={null} sampleName="Ellie" possessive="her" busy={{ name: 'draft' }} onPrimary={vi.fn()} onStory={vi.fn()} onExit={vi.fn()} onReview={vi.fn()}><p>body</p></GuidedRun>);
-    expect(screen.getByRole('button', { name: 'Write her answer' }).disabled).toBe(true);
+  it('puts its main button away while the step runs, so a second click cannot start it again', () => {
+    const { rerender } = render(<GuidedRun view={{ next: 'draft' }} workspace={ws([notes])} story={null} sampleName="Ellie" possessive="her" busy={{ name: 'draft' }} onPrimary={vi.fn()} onStory={vi.fn()} onExit={vi.fn()} onReview={vi.fn()}><p>body</p></GuidedRun>);
+    expect(screen.queryByRole('button', { name: 'Write her answer' })).toBeNull();
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Writing her application');
+    rerender(<GuidedRun view={{ next: 'draft' }} workspace={ws([notes])} story={null} sampleName="Ellie" possessive="her" busy={null} onPrimary={vi.fn()} onStory={vi.fn()} onExit={vi.fn()} onReview={vi.fn()}><p>body</p></GuidedRun>);
+    expect(screen.getByRole('button', { name: 'Write her answer' }).disabled).toBe(false);
   });
 });

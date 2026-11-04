@@ -79,18 +79,7 @@ export function ExportDialog({ pack, onClose, onCopy, onDownload, onDownloadPass
         tabIndex={-1}
         ref={dialogRef}
       >
-        <header>
-          <div className="export-header-top">
-            <h2 id="export-title">Your application pack</h2>
-            <button type="button" className="icon-btn" aria-label="Close" onClick={onClose}>
-              <X size={16} aria-hidden="true" />
-            </button>
-          </div>
-          <span className="stamp">NOT SUBMITTED</span>
-          <p className="export-for">{company} · {role}</p>
-          <p className="export-notice">{pack.notice}</p>
-          <p className="export-contents">{contentsText}</p>
-        </header>
+        <PackHead pack={pack} company={company} role={role} contents={contentsText} onClose={onClose} />
 
         {documents.map((doc) => {
           const paragraphs = splitParagraphs(doc.text || '');
@@ -131,19 +120,39 @@ export function ExportDialog({ pack, onClose, onCopy, onDownload, onDownloadPass
         </ol>
 
         <footer>
-          <button type="button" className="btn primary" onClick={() => onDownload && onDownload()}>
+          <button type="button" className="btn primary" onClick={() => onDownload && onDownload(pack)}>
             Download the pack (.md)
           </button>
-          <button type="button" className="btn" onClick={() => onDownloadPass && onDownloadPass()}>
+          <button type="button" className="btn" onClick={() => onDownloadPass && onDownloadPass(pack)}>
             Download Evidence Pass
           </button>
           <button type="button" className="btn" onClick={onClose} aria-label="Close dialog">
             Close
           </button>
         </footer>
-        <p className="export-hint">One page to attach: every sentence opens your own words behind it.</p>
+        <p className="export-hint">One page to attach: every cited sentence opens your own words behind it.</p>
       </div>
     </div>
+  );
+}
+
+// The pack's head: its title and close button, the NOT SUBMITTED stamp, the employer and role, the
+// notice, a sample run's demo line, and what is in the pack.
+function PackHead({ pack, company, role, contents, onClose }) {
+  return (
+    <header>
+      <div className="export-header-top">
+        <h2 id="export-title">Your application pack</h2>
+        <button type="button" className="icon-btn" aria-label="Close" onClick={onClose}>
+          <X size={16} aria-hidden="true" />
+        </button>
+      </div>
+      <span className="stamp">NOT SUBMITTED</span>
+      <p className="export-for">{company} · {role}</p>
+      <p className="export-notice">{pack.notice}</p>
+      {pack.demo ? <p className="export-demo">{pack.demo}</p> : null}
+      <p className="export-contents">{contents}</p>
+    </header>
   );
 }
 

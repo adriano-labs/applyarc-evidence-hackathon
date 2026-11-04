@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Quantos anos fez turnos da noite: três anos, ou dois anos com o último ano em turnos de dia?",
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "costUsd": 0.0666,
+ "wallSeconds": 33.9,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

@@ -30,6 +30,13 @@ describe('targeted draft repair', () => {
     expect(agent.draft).toHaveBeenCalledTimes(1);
     expect(agent.revise).toHaveBeenCalledTimes(1);
     expect(agent.revise.mock.calls[0][0].items).toEqual([{ segmentId: '1', text: bad.text, factIds: ['f1'], reason: 'The evidence does not say this.' }]);
+    expect(agent.revise.mock.calls[0][0].documents).toEqual([{
+      docId: 'answer',
+      sentences: [
+        { segmentId: '0', text: good.text },
+        { segmentId: '1', text: bad.text },
+      ],
+    }]);
     expect(agent.review).toHaveBeenCalledTimes(2);
     expect(agent.review.mock.calls[1][0].claims.map((c) => c.text)).toEqual([fixed.text]);
     expect(ws.application.documents.answer.segments.map((s) => s.text)).toEqual([good.text, fixed.text]);

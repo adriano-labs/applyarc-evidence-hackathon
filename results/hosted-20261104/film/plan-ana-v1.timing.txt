@@ -1,0 +1,74 @@
+picture 165.495 s
+S0a      0.000   4.500  14- hold@5940            cold open 1.6x: shot 14
+S0b      4.500   9.993  14- hold@5940            cold open 1x
+S1a      9.993  15.139  16- hold@2384            the captured advert page, as saved, opened offline
+S1b     15.139  19.085  01- hold@302             the welcome quotes the advert
+S2a     19.085  23.244  16- hold@8051            the council’s application advice, as captured
+S2b     23.244  25.624  01- 2609-4989            Ana’s card, the pointer moving to it
+S2c     25.624  26.882  01- hold@4989            Ana’s card held
+S2d     26.882  28.142  01- 4989-6249            Try it with Ana’s voice note
+S3h     28.142  30.105  02- hold@1075            Ana says it in Portuguese
+S3a     30.105  30.897  02- 1075-1867            pointer to the player
+S3b     30.897  37.497  02- 1867-8467            the player running (notes-play)
+S4a     37.497  38.697  02- 14695-15895          her words, as Meta heard them
+S4b     38.697  40.497  03- 0-1800               Transcribed by… : her words to check
+S4b+h   40.497  43.717  03- hold@1799            S4b's last frame held for line 5
+S4c     43.717  45.202  03- 6416-7901            Read Ana’s words
+S5a     45.202  46.702  04- 0-1500               Reading your words
+S5b     46.702  48.002  04- 16452-17752          quotes checked; facts found (wait cut)
+S5c     48.002  50.202  05- hold@12074           card-team: Portuguese quote, English meaning, who did it
+S5x     50.202  52.424  05- 14074-16296          Yes, confirm: the next cards
+S5d     52.424  54.624  05- hold@16296           card-photos: Portuguese quote, English meaning, who did it
+S5e     54.624  56.524  05- 19830-21730          Confirm the remaining
+S6h     56.524  63.055  06- hold@6699            One thing her words don’t say: the question in Portuguese, In English, For: …
+S6a     63.055  63.955  06- 10668-11568          pointer to Use Ana’s spoken answer
+S6b     63.955  68.555  06- 11568-16168          Hearing her answer… (answer-clip)
+S6c     68.555  72.431  06- 18556-22432          her answer transcribed; Answer
+S6d     72.431  73.431  07- 0-1000               the facts her answer adds
+S7a     73.431  75.531  08- 1402-3502            Write her answer; Writing her application
+S7b     75.531  78.131  08- 31257-33857          the drafts arrive (wait cut)
+S7c     78.131  79.731  09- 1155-2755            a superscript pressed
+S7d     79.731  85.310  09- hold@2855            CitePeek: her Portuguese, In English (working translation), who did it
+S8h     85.310  92.425  10- hold@3359            Facts change. Watch what happens.
+S8a     92.425  93.175  10- 3359-4109            pointer to her correction
+S8b     93.175  97.475  10- 4109-8409            her correction (correction-play)
+S8c     97.475 101.629  10- 11978-16132          her words transcribed; Add Ana’s note
+S9a    101.629 104.829  10- hold@27306           Choose the right account
+S9b    104.829 106.429  11- 1000-2600            Use this correction; What changed
+S9c    106.429 108.229  11- 12535-14335          the rewrites settle (wait cut)
+S9d    108.229 111.229  11- hold@14335           What changed: 2 documents · N sentences · M untouched
+S9e    111.229 113.429  12- 1061-3261            Take the rewrite (supporting evidence)
+S9f    113.429 116.848  12- 4132-7551            Take the rewrite (cover letter); Apply
+S9h    116.848 118.048  12- 10895-12095          Approve the cover letter, version 2 (the supporting evidence approved just before)
+S10a   118.048 122.943  13- 0-4895               See the application; NOT SUBMITTED
+S10b   122.943 125.343  13- 8838-11238           Still to do on the employer’s site (scroll cut)
+S10b+h 125.343 125.715  13- hold@11237           S10b's last frame held for line 11
+S10c   125.715 129.615  14- 4438-8338            the Evidence Pass, a sentence pressed: her Portuguese lit
+S11a   129.615 132.015  15- 3183-5583            Meta activity opens
+S11b   132.015 134.415  15- 5592-7992            the dated-models line
+S11c   134.415 137.015  15- hold@11072           one step’s Details: model, host, request id, tokens
+S11d   137.015 139.015  15- hold@16452           the voice row’s Details
+S11e   139.015 141.815  15- hold@21905           Verify this run: checked by code, with no model call
+S12a   141.815 144.015  o1- 0-2200               the open-weight link
+S12b   144.015 148.967  o6- hold@36977           What changed on the open-weight edition
+S12c   148.967 151.567  o7- hold@5392            the open-weight row’s Details
+S17a   151.567 158.995  14- hold@5940            closing: the hero, as the cold open
+S17c   158.995 162.495  13- hold@4295            NOT SUBMITTED close-up
+S17b   162.495 165.495  card                     
+cue 1                0.000 ->   9.693  I'm Adrian, founder of ApplyArc, a UK job-search startup that existed 
+cue 2               10.043 ->  18.984  A real council job advert says: "Using AI? Please follow our guidance 
+cue 3               19.135 ->  28.042  Ana is fictional. Her problem is real. Three years in a Leeds care hom
+cue 4               28.192 ->  30.797  She says it in Portuguese.
+cue ana-notes       30.897 ->  36.897  Ana (synthetic voice, in Portuguese): “Chamo-me Ana. Eu trabalho há tr
+cue 5               37.547 ->  45.101  Muse Voice Transcribe writes it down, live, keeping her English care w
+cue 6               45.252 ->  55.929  Muse Wonder turns her words into facts. Each one quotes her exact Port
+cue 7               56.574 ->  63.855  Wonder checks the council's ten points and finds the one she didn't co
+cue ana-answer      63.955 ->  67.955  Ana (synthetic voice, in Portuguese): “Para mim, dignidade é bater à p
+cue 8               73.481 ->  85.210  Wonder drafts her supporting evidence and a short letter, in English. 
+cue 9               85.360 ->  93.075  Then she remembers: only two of her three years were nights. She says 
+cue ana-correction  93.175 ->  97.175  Ana (synthetic voice, in Portuguese): “Correção: os turnos da noite fo
+cue 10             101.679 -> 111.390  Wonder spots the contradiction and asks which is right. She picks the 
+cue 11             118.098 -> 129.515  Nothing gets submitted for her: the pack is stamped NOT SUBMITTED. The
+cue 12             129.665 -> 141.054  What Meta did, step by step: model, host and Meta's request ids. Both 
+cue 13             141.865 -> 151.466  The same loop runs on Meta's open weights, Muse Spark Open, on Modal, 
+cue 14             151.617 -> 162.033  That's ApplyArc Evidence. Who pays? Councils and care employers who ne

@@ -1,0 +1,314 @@
+{
+  "url": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/",
+  "totalMs": 45253,
+  "timings": [
+    {
+      "step": "welcome",
+      "ms": 36,
+      "sinceStartMs": 1179,
+      "shot": "00-welcome.png"
+    },
+    {
+      "step": "start-at-the-key-moment",
+      "ms": 1021,
+      "sinceStartMs": 2303,
+      "shot": "01-start-at-the-key-moment.png"
+    },
+    {
+      "step": "add-ellies-note",
+      "ms": 10231,
+      "sinceStartMs": 12612,
+      "shot": "02-add-ellies-note.png"
+    },
+    {
+      "step": "use-this-correction",
+      "ms": 28143,
+      "sinceStartMs": 40865,
+      "shot": "03-use-this-correction.png"
+    },
+    {
+      "note": "rewrites offered: 2"
+    },
+    {
+      "step": "take-both-rewrites",
+      "ms": 851,
+      "sinceStartMs": 41822,
+      "shot": "04-take-both-rewrites.png"
+    },
+    {
+      "note": "apply label: Apply 2 changes"
+    },
+    {
+      "step": "apply",
+      "ms": 1021,
+      "sinceStartMs": 42934,
+      "shot": "05-apply.png"
+    },
+    {
+      "note": "approve labels: Approve the project answer, version 3, Approve the cover letter, version 2"
+    },
+    {
+      "step": "approve-both",
+      "ms": 1229,
+      "sinceStartMs": 44268,
+      "shot": "06-approve-both.png"
+    },
+    {
+      "note": "finish lines",
+      "lines": [
+        "12 facts confirmed.",
+        "Those facts and both drafts were prepared from a real Muse Wonder run on 3 Nov, before this visit; the correction and the repair ran live now.",
+        "You approved version 3 of “Project answer” and version 2 of “Cover letter”.",
+        "1 fact corrected: it reopened 2 sentences and left 20 untouched.",
+        "Meta: 5 model steps, 3 tool calls, 35.6 s total model time, $0.121 estimated.",
+        "The evidence check refused 1 sentence and Wonder rewrote it.",
+        "Nothing has been sent."
+      ]
+    },
+    {
+      "step": "finish",
+      "ms": 874,
+      "sinceStartMs": 45253,
+      "shot": "07-finish.png"
+    }
+  ],
+  "trailHeader": "WHAT META DID\nmuse-wonder-1.0 · 2 runs · 5 steps · 3 tool calls · 35.6 s total model time · $0.121\nFacts and drafts: prepared from a real Muse Wonder run on 3 Nov, before this visit and not counted here · Correction and repair: live in this visit",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budget": {
+    "capUsd": 80,
+    "spentUsd": 11.091901,
+    "reservedUsd": 0,
+    "remainingUsd": 68.908099
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "fbedfee9-1051-43db-abae-63409769106c",
+        "52a13c0f-1bee-452f-8e2a-84c7a5a7472d"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 4835,
+        "cached": 1780,
+        "output": 814,
+        "reasoning": 532
+      },
+      "costUsd": 0.028856,
+      "firstEventMs": 2780,
+      "firstOutputMs": 5687,
+      "totalMs": 8883,
+      "rateLimit": {
+        "remainingRequests": 2999,
+        "remainingTokens": 3997458
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T16:40:30.703Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "a8b2eca3-6ac8-4c56-b582-01d2fc39e571"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2897,
+        "cached": 2804,
+        "output": 767,
+        "reasoning": 670
+      },
+      "costUsd": 0.0162728,
+      "firstEventMs": 1565,
+      "firstOutputMs": 4934,
+      "totalMs": 5316,
+      "rateLimit": {
+        "remainingRequests": 2998,
+        "remainingTokens": 3996131
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T16:40:37.449Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "6b6be506-7e45-4355-a382-0449265e5e97"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1698,
+        "cached": 0,
+        "output": 729,
+        "reasoning": 600
+      },
+      "costUsd": 0.021372,
+      "firstEventMs": 2267,
+      "firstOutputMs": 5357,
+      "totalMs": 6353,
+      "rateLimit": {
+        "remainingRequests": 2996,
+        "remainingTokens": 3995271
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T16:40:43.827Z"
+    },
+    {
+      "kind": "stage",
+      "flow": "repair",
+      "label": "Revising 1 unsupported repair sentence",
+      "at": "2026-11-03T16:40:43.846Z"
+    },
+    {
+      "step": "revise",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "c89260e0-17ff-4017-890c-a71b5fa07c77"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1954,
+        "cached": 372,
+        "output": 1135,
+        "reasoning": 1036
+      },
+      "costUsd": 0.0291024,
+      "firstEventMs": 1254,
+      "firstOutputMs": 7649,
+      "totalMs": 7983,
+      "rateLimit": {
+        "remainingRequests": 2996,
+        "remainingTokens": 3992844
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T16:40:51.839Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "bcb49eb7-2036-4fc4-9b86-11494f3bbb2f"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2419,
+        "cached": 628,
+        "output": 889,
+        "reasoning": 772
+      },
+      "costUsd": 0.025069599999999997,
+      "firstEventMs": 1673,
+      "firstOutputMs": 5992,
+      "totalMs": 7026,
+      "rateLimit": {
+        "remainingRequests": 2995,
+        "remainingTokens": 3990127
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T16:40:58.885Z"
+    }
+  ],
+  "prepared": {
+    "sample": "ellie",
+    "provider": "meta",
+    "model": "muse-wonder-1.0",
+    "ranAt": "2026-11-03T16:03:18.705Z",
+    "ranUntil": "2026-11-03T16:05:36.316Z",
+    "note": "Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.",
+    "about": "Saved by a real Muse Wonder 1.0 run of Ellie’s sample on this app on 3 Nov 2026 (16:03 to 16:05 UTC): 12 facts confirmed from her notes and her spoken answer, the project answer at version 2 with her own rewritten opening and the cover letter at version 1, both approved, no correction yet. The run’s receipts are not included: a visitor who starts here is never charged for it.",
+    "loadedAt": "2026-11-03T16:40:20.555Z"
+  },
+  "lastRepair": {
+    "factId": "f12",
+    "at": "2026-11-03T16:41:01.193Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-10"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-9"
+      }
+    ],
+    "reopened": 2,
+    "untouched": 20
+  },
+  "revisions": {
+    "answer": 3,
+    "letter": 2
+  },
+  "approvals": {
+    "answer": "approved",
+    "letter": "approved"
+  },
+  "next": "export"
+}

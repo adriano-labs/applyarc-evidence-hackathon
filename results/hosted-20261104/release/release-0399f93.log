@@ -1,0 +1,9 @@
+{"app": "applyarc-evidence", "ready": "applyarc-evidence--final5-0399f93", "image": "applyarcevidence.azurecr.io/applyarc-evidence@sha256:c206f24724cbd1bcff0f2e39425771e52f8f7faf1300d88c3819046d557bd4ce", "resources": {"cpu": 0.5, "ephemeralStorage": "2Gi", "memory": "1Gi"}, "envNames": 19, "settings": {"VISITOR_IDS_PER_IP_PER_DAY": "1000", "SPEND_CAP_USD": "78"}, "minReplicas": 1, "maxReplicas": 1}
+{"app": "applyarc-evidence-open", "ready": "applyarc-evidence-open--openfinal5-0399f93", "image": "applyarcevidence.azurecr.io/applyarc-evidence@sha256:c206f24724cbd1bcff0f2e39425771e52f8f7faf1300d88c3819046d557bd4ce", "resources": {"cpu": 0.5, "ephemeralStorage": "2Gi", "memory": "1Gi"}, "envNames": 18, "settings": {"VISITOR_IDS_PER_IP_PER_DAY": "1000"}, "minReplicas": 1, "maxReplicas": 1}
+applyarc-evidence served: assets/index-BxQybPeM.css assets/index-CTfHWkk0.js 
+applyarc-evidence built:  assets/index-BxQybPeM.css assets/index-CTfHWkk0.js 
+applyarc-evidence ASSETS MATCH
+applyarc-evidence-open served: assets/index-BxQybPeM.css assets/index-CTfHWkk0.js 
+applyarc-evidence-open built:  assets/index-BxQybPeM.css assets/index-CTfHWkk0.js 
+applyarc-evidence-open ASSETS MATCH
+release 0399f93 done: ~/Developer/claude/evidence/hackathon-29oct/film-v15/release-0399f93

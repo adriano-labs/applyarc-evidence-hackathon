@@ -1,0 +1,215 @@
+{
+ "base": "https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io",
+ "result": {
+  "path": "conflict raised",
+  "why": "Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite.",
+  "expect": "Her facts and both drafts were prepared on the Muse Wonder link on 3 Nov, before this visit. The correction and the repair run live now.",
+  "tag": "Synthetic voice, fictional applicant · nothing is submitted",
+  "offer": "Correct the fact yourself: one click, and the repair still runs live.",
+  "queue": "What changed | Undo this correction |  | [19]I did 3 years of nights, and also weekends. The night shifts were two years, not three; in the last year I moved to days. |  | 2 documents | 2 sentences affected | 40 untouched",
+  "apply": "Apply 2 changes",
+  "finish": [
+   "What just happened",
+   "19 facts confirmed.",
+   "Each English meaning is a working translation Ana confirmed.",
+   "Those facts and both drafts were prepared on the Muse Wonder link on 3 Nov, before this visit; the correction and the repair ran live now.",
+   "You approved version 2 of both documents.",
+   "1 fact corrected: it reopened 2 sentences and left 40 untouched.",
+   "Meta: 3 model steps, 0 tool calls, 37.3 s total model time, $0.024 estimated.",
+   "Nothing has been sent."
+  ],
+  "keyMomentSeconds": 40,
+  "packHead": [
+   "Your application pack",
+   "NOT SUBMITTED",
+   "North Yorkshire Council · Care and Support Worker",
+   "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+   "Demo: synthetic voice, fictional applicant.",
+   "In this pack: Supporting evidence, version 2 · Cover letter, version 2 · 3 things to do on the employer’s site"
+  ],
+  "passHead": [
+   "Evidence Pass: Ana, Care and Support Worker at North Yorkshire Council",
+   "NOT SUBMITTED",
+   "Demo: synthetic voice, fictional applicant.",
+   "Every cited sentence links to Ana’s own words, which Ana confirmed. Ana spoke in Portuguese; each English meaning is a working translation Ana confirmed, not a certified one."
+  ],
+  "verify": [
+   "pass: Holds: 19 of 19 confirmed facts quote Ana’s text word for word",
+   "pass: Holds: 38 of 38 drafted statements cite at least one fact, all confirmed",
+   "pass: Holds: 38 of 38 drafted statements state no number their cited facts do not",
+   "pass: Holds: 2 of 2 approvals match the current version",
+   "none: Nothing to check: No sentences in Ana’s own wording (none to check)",
+   "pass: Holds: Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions",
+   "pass: Holds: Model review on record: 38 cited sentences supported, 0 held back in this visit"
+  ],
+  "verifyHolds": "7 of 7",
+  "receipts": [
+   {
+    "step": "extract",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "costUsd": 0.006165,
+    "totalMs": 16236,
+    "toolCalls": 0,
+    "error": null
+   },
+   {
+    "step": "repair",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "costUsd": 0.01032375,
+    "totalMs": 11069,
+    "toolCalls": 0,
+    "error": null
+   },
+   {
+    "step": "review",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "costUsd": 0.00704975,
+    "totalMs": 10041,
+    "toolCalls": 0,
+    "error": null
+   }
+  ],
+  "costUsd": 0.0235
+ },
+ "errors": [],
+ "log": [
+  {
+   "at": "2026-11-04T13:24:37.358Z",
+   "s": 2,
+   "what": "clicked Start at Ana’s key moment",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:37.557Z",
+   "s": 2,
+   "what": "key moment",
+   "detail": "Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite."
+  },
+  {
+   "at": "2026-11-04T13:24:37.593Z",
+   "s": 2,
+   "what": "screenshot key-moment",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:37.622Z",
+   "s": 2,
+   "what": "clicked Add Ana’s note",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:54.759Z",
+   "s": 19,
+   "what": "conflict",
+   "detail": "Os seus turnos da noite foram dois anos ou três anos?"
+  },
+  {
+   "at": "2026-11-04T13:24:54.793Z",
+   "s": 19,
+   "what": "screenshot conflict-raised",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:54.820Z",
+   "s": 19,
+   "what": "clicked Keep the earlier account",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:55.102Z",
+   "s": 19,
+   "what": "nothing corrected",
+   "detail": "Correct the fact yourself: one click, and the repair still runs live."
+  },
+  {
+   "at": "2026-11-04T13:24:55.127Z",
+   "s": 19,
+   "what": "screenshot nothing-corrected-typed-route",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:55.154Z",
+   "s": 19,
+   "what": "clicked Correct this fact",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:55.192Z",
+   "s": 19,
+   "what": "screenshot typed-correction",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:55.221Z",
+   "s": 19,
+   "what": "clicked Correct this fact",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:24:55.413Z",
+   "s": 20,
+   "what": "what changed",
+   "detail": "What changed | Undo this correction |  | [19]I did 3 years of nights, and also weekends. The night shifts were two years, not three; in the last year I moved to days. |  | 2 documents | 2 sentences affected | 40 untouched"
+  },
+  {
+   "at": "2026-11-04T13:24:55.443Z",
+   "s": 20,
+   "what": "screenshot what-changed",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:17.316Z",
+   "s": 41,
+   "what": "approve supporting evidence",
+   "detail": "Approve the supporting evidence, version 2"
+  },
+  {
+   "at": "2026-11-04T13:25:17.355Z",
+   "s": 42,
+   "what": "approve cover letter",
+   "detail": "Approve the cover letter, version 2"
+  },
+  {
+   "at": "2026-11-04T13:25:17.839Z",
+   "s": 42,
+   "what": "screenshot finish",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:17.852Z",
+   "s": 42,
+   "what": "clicked See the application",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:18.579Z",
+   "s": 43,
+   "what": "screenshot pack",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:18.836Z",
+   "s": 43,
+   "what": "clicked Verify this run",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:18.840Z",
+   "s": 43,
+   "what": "verify",
+   "detail": "7 of 7"
+  },
+  {
+   "at": "2026-11-04T13:25:18.929Z",
+   "s": 43,
+   "what": "screenshot verified",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:25:18.963Z",
+   "s": 43,
+   "what": "done",
+   "detail": "3 model steps, $0.0235"
+  }
+ ]
+}

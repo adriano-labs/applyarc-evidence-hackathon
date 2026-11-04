@@ -26,10 +26,22 @@ describe('J5 retry', () => {
   it('offers Try again after a known retryable server failure', async () => {
     const { result } = renderHook(() => useWorkspace());
     await waitFor(() => expect(result.current.data).toBeTruthy());
-    for (const code of ['busy', 'timeout', 'invalid-output', 'invalid-draft', 'failed', 'incomplete', 'internal']) {
+    for (const code of ['busy', 'timeout', 'invalid-output', 'invalid-draft', 'failed', 'incomplete', 'internal', 'provider']) {
       api.run.mockRejectedValueOnce(failWith(code, 'Try again.'));
       await flush(() => result.current.run('draft'));
       expect(typeof result.current.notice.retry, code).toBe('function');
     }
+  });
+
+  it('sends the visitor to Start again when the demo’s budget or their own live allowance runs out', async () => {
+    const { result } = renderHook(() => useWorkspace());
+    await waitFor(() => expect(result.current.data).toBeTruthy());
+    api.run.mockRejectedValueOnce(failWith('cap', 'Spend cap reached ($80.00). Nothing was sent.'));
+    await flush(() => result.current.run('draft'));
+    expect(result.current.notice).toEqual({ kind: 'error', message: 'Spend cap reached ($80.00). Nothing was sent. Press Start again to continue with Ellie’s or Ana’s labelled sample.' });
+    const ceiling = 'This visit has used its live Meta allowance. Press Start again to continue with Ellie’s or Ana’s labelled sample.';
+    api.run.mockRejectedValueOnce(failWith('limit', ceiling));
+    await flush(() => result.current.run('read'));
+    expect(result.current.notice).toEqual({ kind: 'error', message: ceiling });
   });
 });

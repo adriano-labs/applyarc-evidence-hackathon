@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { setDraft } from '../../server/domain/documents.js';
+import { frameOptions } from '../../server/domain/frames.js';
 import { draftedWorkspace } from '../helpers.js';
 
 const problems = (ws, frame) => {
@@ -28,6 +29,24 @@ describe('frame sentences', () => {
     expect(problems(ws, 'Dear Graphcore hiring team,')).toEqual([]);
     ws.application.documents.answer = null;
     expect(problems(ws, 'I am applying for the Graduate Cloud Platform Engineer 2027 role.')).toEqual([]);
+  });
+
+  // Live, 3 Nov: every applicant's letter was signed "Ellie", the sample's name.
+  it('signs a letter off without a name when none is known, never with the sample’s', async () => {
+    const ws = await draftedWorkspace();
+    ws.applicant.name = null;
+    const letter = (signOff) => {
+      ws.application.documents.letter = null;
+      try {
+        setDraft(ws, 'letter', [{ kind: 'claim', text: 'We chose Kubernetes Jobs.', factIds: ['f1'] }, { kind: 'frame', text: signOff, startsParagraph: true }]);
+        return [];
+      } catch (error) {
+        return error.details?.problems ?? [error.message];
+      }
+    };
+    expect(frameOptions({ company: 'Graphcore', applicant: null }).closings.slice(-2)).toEqual(['Yours sincerely,', 'Kind regards,']);
+    expect(letter('Kind regards,')).toEqual([]);
+    expect(letter('Kind regards, Ellie')).not.toEqual([]);
   });
 
   it('refuses a frame that names the role by any other title', async () => {

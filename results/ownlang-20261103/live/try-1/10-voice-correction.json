@@ -1,0 +1,12 @@
+{
+ "clip": "ana-pt-correction.wav",
+ "ms": 2403,
+ "hint": "Portuguese",
+ "text": "Correção, os turnos da noite foram dois anos, não três. No último ano passei a fazer dias.",
+ "durationMs": 6640,
+ "truth": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+ "werRaw": 0,
+ "werSpoken": 0,
+ "errorsSpoken": [],
+ "words": 17
+}

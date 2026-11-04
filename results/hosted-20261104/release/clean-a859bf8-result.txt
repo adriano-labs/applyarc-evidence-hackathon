@@ -1,0 +1,8 @@
+vitest exit 0
+build exit 0
+journey exit 0
+no-key start: HTTP 200
+ Test Files  200 passed (200)
+      Tests  1252 passed (1252)
+index-B3nTXPTT.js
+index-TYu-XHW3.css

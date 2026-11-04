@@ -58,6 +58,10 @@ function usableRewrite(ws, rewrite, confirmedMap, review) {
 // An accepted sentence is not proof that the complete corrected contribution remains.
 export const rewriteProblems = retentionProblems;
 
+// An unchanged rewrite is a sentence the corrected fact still supports: it keeps its citations.
+const STILL_TRUE = 'Still true after the correction: the wording stays and keeps citing the corrected fact.';
+const NO_REWRITE = 'No rewrite came back that the corrected fact supports, so this sentence may now be untrue. Check it against the corrected fact.';
+
 // The model may rewrite only the reopened sentences; anything else is refused.
 export function proposeRewrites(ws, rewrites, review) {
   const repair = openRepair(ws, 'awaiting-proposal');
@@ -72,8 +76,8 @@ export function proposeRewrites(ws, rewrites, review) {
     const usable = problems.has(item.segmentId) ? null : usableRewrite(ws, rewrite, confirmedMap, review);
     if (!usable) Object.assign(item, { after: null, afterFactIds: null, reason: problems.get(item.segmentId) ?? (rewrite && review
       ? review.get(reviewKey(ws, rewrite)) || 'The review could not establish support for this rewrite.'
-      : 'No supported rewrite was returned. Check this sentence against the corrected fact.') });
-    if (usable && usable.text !== item.before) Object.assign(item, { after: usable.text, afterFactIds: usable.factIds });
+      : NO_REWRITE) });
+    else Object.assign(item, { after: usable.text, afterFactIds: usable.factIds, ...(usable.text === item.before ? { reason: STILL_TRUE } : {}) });
     if (item.status === 'pending') item.status = item.after ? 'proposed' : 'needs-review';
   }
   repair.status = 'review';
@@ -107,7 +111,7 @@ function applyItem(ws, item, factId) {
     return false;
   }
   if (decision === 'write') Object.assign(segment, { text: item.written, author: 'user' });
-  else Object.assign(segment, { text: item.after, factIds: item.afterFactIds, author: 'repair' });
+  else Object.assign(segment, { text: item.after, factIds: item.afterFactIds, author: item.after === item.before ? segment.author : 'repair' });
   return true;
 }
 
@@ -121,13 +125,16 @@ export function applyRepair(ws, now = new Date().toISOString()) {
   for (const item of repair.items) {
     if (applyItem(ws, item, repair.factId)) {
       changedDocs.add(item.docId);
-      changedSegments.push({ docId: item.docId, segmentId: item.segmentId });
+      // A still-true sentence gets its citations renewed, not rewritten.
+      if (item.decision === 'write' || item.after !== item.before) changedSegments.push({ docId: item.docId, segmentId: item.segmentId });
     } else {
       kept += 1;
     }
   }
   for (const docId of changedDocs) ws.application.documents[docId].revision += 1;
-  const summary = { factId: repair.factId, at: now, changed: repair.items.length - kept, kept, docs: [...changedDocs], changedSegments };
+  // What the correction reopened and what it left alone, so the finish can say so from saved state.
+  const sentences = Object.values(ws.application.documents).reduce((n, doc) => n + (doc?.segments?.length ?? 0), 0);
+  const summary = { factId: repair.factId, at: now, changed: changedSegments.length, kept, docs: [...changedDocs], changedSegments, reopened: repair.items.length, untouched: sentences - repair.items.length };
   ws.application.repair = null;
   ws.application.lastRepair = summary;
   return summary;
@@ -151,7 +158,7 @@ export function cancelRepair(ws) {
     delete question.resolution;
   }
   ws.applicant.sources = ws.applicant.sources.filter((s) => !(s.id === fact.sourceId && s.kind === 'correction'));
-  Object.assign(fact, { statement: previous.statement, quote: previous.quote, sourceId: previous.sourceId });
+  Object.assign(fact, { statement: previous.statement, quote: previous.quote, sourceId: previous.sourceId, ...(previous.actor ? { actor: previous.actor } : {}) });
   ws.application.repair = null;
   return fact;
 }

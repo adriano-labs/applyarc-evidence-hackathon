@@ -1,0 +1,12 @@
+{
+ "finished": true,
+ "failures": [],
+ "conflict": "Trabalhou noites durante dois anos e dias no último ano, ou fez três anos de noites?",
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-11"
+ ],
+ "costUsd": 0.0703,
+ "wallSeconds": 25.8,
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

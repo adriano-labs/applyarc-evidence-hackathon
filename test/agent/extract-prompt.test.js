@@ -10,11 +10,17 @@ describe('the extraction prompt', () => {
     expect(prompt).toContain('A reason the applicant gives for wanting this role or this employer is a fact too. Keep what they say about the employer in the same quote ("I liked X, and Graphcore builds Y"): that detail is what makes the reason specific.');
   });
 
-  // 29 Oct held-out run: an answer saying "I planned the themes" where the notes said
-  // "our team planned the themes" was confirmed and drafted; the baseline asked first.
-  it('treats "I did it" against notes that give it to the team or a named person as a question to ask', () => {
+  // 2 Nov UI: compatible team detail was wrongly held. The old static assertion
+  // encoded that policy bug; this checks the revised prompt contract, not model behaviour.
+  it('permits compatible personal detail while retaining authorship, denial and uncertainty rails (prompt contract)', () => {
     const prompt = extractPrompt({ source: { text: 'I planned the themes.' }, question: { text: 'What did you do yourself?', requirementId: 'contribution' } });
-    expect(prompt).toContain('If the new words say the applicant did something themselves that active_source_context gives to the team or to a named person ("we planned" or "Sam planned" before, "I planned" now), that is a conflict: ask whether they did it themselves.');
+    expect(prompt).toContain('A team, shared, or unattributed account does not exclude the applicant.');
+    expect(prompt).toContain("A later explicit statement of the applicant's personal contribution can add detail while leaving the earlier account intact; extract only that stated contribution and never infer sole ownership.");
+    expect(prompt).toContain('Naming another contributor does not by itself establish exclusive authorship.');
+    expect(prompt).toContain('Still ask when the accounts contradict exclusive authorship or an explicit denial of involvement, or when new uncertainty undermines a previously asserted personal contribution or scope.');
+    expect(prompt).toContain('Do not invent joint work or an unstated distinction to reconcile incompatible accounts.');
+    expect(prompt).toContain('A practice exercise versus real production, or a design/model versus completed building work, can need clarification; these are examples, not banned words.');
+    expect(prompt).not.toContain('that is a conflict: ask whether they did it themselves.');
   });
 
   it('links only an action, not a lesson, a liking or a wish, to what the applicant did', () => {

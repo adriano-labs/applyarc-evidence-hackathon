@@ -1,0 +1,12 @@
+
+ RUN  v5.0.5 ~/Developer/claude/evidence/hackathon-29oct/ownlang/app
+
+
+ Test Files  191 passed (191)
+      Tests  1205 passed (1205)
+   Start at  21:29:12
+   Duration  36.63s (environment 41%, tests 39%, import 19%, transform 1%, worker 1%)
+
+    Isolate  191 workers spawned · ~195ms startup each (spawn + environment, per file)
+             at least ~18.42s faster with isolate: false — reuses workers across files instead of one per file
+

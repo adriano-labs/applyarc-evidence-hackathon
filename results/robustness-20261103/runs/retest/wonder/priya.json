@@ -1,0 +1,3399 @@
+{
+  "host": "wonder",
+  "persona": "priya",
+  "style": "terse bullet notes",
+  "startedAt": "2026-11-03T14:49:39.221Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "probe": false,
+  "plain": false,
+  "correctionText": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T14:49:39.221Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T14:49:39.224Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T14:49:39.226Z",
+      "ms": 11669,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 12,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 8038,
+            "cached": 5596,
+            "output": 2063,
+            "reasoning": 618
+          },
+          "costUsd": 0.0521472,
+          "firstEventMs": 1227,
+          "totalMs": 11664,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T14:49:50.898Z",
+      "ms": 22,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T14:49:50.920Z",
+      "ms": 4465,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1908,
+            "cached": 884,
+            "output": 519,
+            "reasoning": 423
+          },
+          "costUsd": 0.014652799999999999,
+          "firstEventMs": 830,
+          "totalMs": 4461,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T14:49:55.388Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T14:49:55.392Z",
+      "ms": 11330,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 4,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 6922,
+            "cached": 4828,
+            "output": 710,
+            "reasoning": 285
+          },
+          "costUsd": 0.0235416,
+          "firstEventMs": 1335,
+          "totalMs": 11326,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T14:50:06.724Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T14:50:06.731Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T14:50:06.735Z",
+      "ms": 26757,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:187 of 300"
+          ],
+          "usage": {
+            "input": 6573,
+            "cached": 3944,
+            "output": 2225,
+            "reasoning": 1374
+          },
+          "costUsd": 0.0558048,
+          "firstEventMs": 1223,
+          "totalMs": 13055,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3681,
+            "cached": 628,
+            "output": 965,
+            "reasoning": 672
+          },
+          "costUsd": 0.0316376,
+          "firstEventMs": 596,
+          "totalMs": 6386,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:174 of 400"
+          ],
+          "usage": {
+            "input": 6854,
+            "cached": 3688,
+            "output": 3202,
+            "reasoning": 2341
+          },
+          "costUsd": 0.0774416,
+          "firstEventMs": 971,
+          "totalMs": 22455,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3068,
+            "cached": 628,
+            "output": 553,
+            "reasoning": 348
+          },
+          "costUsd": 0.020945599999999998,
+          "firstEventMs": 955,
+          "totalMs": 4288,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T14:50:33.496Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T14:50:33.501Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T14:50:33.506Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T14:50:33.510Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T14:50:33.513Z",
+      "ms": 6600,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 3,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 4556,
+            "cached": 3432,
+            "output": 759,
+            "reasoning": 437
+          },
+          "costUsd": 0.0203624,
+          "firstEventMs": 714,
+          "totalMs": 6593,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "choose the correction",
+      "startedAt": "2026-11-03T14:50:40.116Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/resolveSourceConflict",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T14:50:40.122Z",
+      "ms": 12772,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3020,
+            "cached": 884,
+            "output": 838,
+            "reasoning": 727
+          },
+          "costUsd": 0.025480799999999998,
+          "firstEventMs": 1267,
+          "totalMs": 6661,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1786,
+            "cached": 628,
+            "output": 753,
+            "reasoning": 639
+          },
+          "costUsd": 0.019817599999999998,
+          "firstEventMs": 1249,
+          "totalMs": 6103,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T14:50:52.898Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T14:50:52.899Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T14:50:52.905Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T14:50:52.910Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T14:50:52.915Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "route": "use-this-correction",
+  "correctedFactId": "f12",
+  "intendedTargetId": "f12",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "contribution",
+      "text": "At Brightwater Analytics, which parts of moving the nightly risk batch jobs onto EKS did you do yourself, rather than Mateo or Jen?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "Applicant had a 10 wk summer placement at Brightwater Analytics in Manchester, Jun-Aug 2026.",
+        "quote": "10 wk summer placement, Brightwater Analytics (small fintech), Manchester, Jun-Aug 2026",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "The team was the applicant plus 2 platform engineers, Mateo and Jen.",
+        "quote": "team: me + 2 platform engineers (Mateo, Jen)",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "The goal was to move nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+        "quote": "move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki.",
+        "quote": "stack: Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "The decision was spot instances for the batch node pool and on-demand for the Argo controller because cheaper and jobs are retryable.",
+        "quote": "decision: spot instances for the batch node pool, on-demand for the Argo controller. cheaper, jobs are retryable anyway",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+        "quote": "problem: jobs randomly lost progress overnight, ~5% of runs. cause: spot interruptions + checkpoints only every 10 min",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "The problem was investigated via node termination events in CloudWatch and job logs; the 2 min warning was not enough.",
+        "quote": "investigated via node termination events in CloudWatch + the job logs. the 2 min warning wasn't enough",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "The fix was checkpoint every 90 s and a drain handler on the termination notice.",
+        "quote": "fix: checkpoint every 90 s + a drain handler on the termination notice",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+        "quote": "result: nightly run 4h10m -> 2h35m, nothing blocked since",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "Applicant learned to read the spot termination docs first, not after.",
+        "quote": "learned: read the spot termination docs first, not after",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "Applicant liked the scheduling side more than the models and wants to work on the platform under the models at Graphcore.",
+        "quote": "why Graphcore: liked the scheduling side more than the models. want to work on the platform under the models",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "I wrote the Terraform modules for the node pools myself",
+        "quote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "Mateo reviewed them",
+        "quote": "Mateo reviewed them",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "10 wk summer placement, Brightwater Analytics (small fintech), Manchester, Jun-Aug 2026\nteam: me + 2 platform engineers (Mateo, Jen)\n- goal: move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other\n- stack: Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki\n- decision: spot instances for the batch node pool, on-demand for the Argo controller. cheaper, jobs are retryable anyway\n- problem: jobs randomly lost progress overnight, ~5% of runs. cause: spot interruptions + checkpoints only every 10 min\n- investigated via node termination events in CloudWatch + the job logs. the 2 min warning wasn't enough\n- fix: checkpoint every 90 s + a drain handler on the termination notice\n- result: nightly run 4h10m -> 2h35m, nothing blocked since\n- learned: read the spot termination docs first, not after\n- why Graphcore: liked the scheduling side more than the models. want to work on the platform under the models",
+        "at": "2026-11-03T14:49:39.224Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them.",
+        "at": "2026-11-03T14:49:55.389Z",
+        "questionId": "q1",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "The project was to move nightly risk batch jobs off one big VM onto EKS so they would stop blocking each other, during a 10-week summer placement at Brightwater Analytics in Manchester from June to August 2026.",
+            "factIds": [
+              "f1",
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand instances for the Argo controller, because spot instances were cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The investigation used node termination events in CloudWatch and the job logs, and showed that the 2 min warning was not enough.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I learned to read the spot termination docs first, not after.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "The team was me plus two platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "Mateo reviewed them.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked the scheduling side more than the models, and I want to work on the platform under the models at Graphcore.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The 10 wk summer placement at Brightwater Analytics in Manchester ran from Jun-Aug 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team was me plus 2 platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was to move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand for the Argo controller, because it was cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "A fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 187,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 176,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS.",
+            "factIds": [
+              "f1",
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand instances for the Argo controller, because spot instances were cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The investigation used node termination events in CloudWatch and the job logs, and showed that the 2 min warning was not enough.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I learned to read the spot termination docs first, not after.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "The team was me plus two platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "Mateo reviewed them.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked the scheduling side more than the models, and I want to work on the platform under the models at Graphcore.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The 10 wk summer placement at Brightwater Analytics in Manchester ran from Jun-Aug 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team was me plus 2 platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was to move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand for the Argo controller, because it was cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "A fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS.",
+            "factIds": [
+              "f1",
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand instances for the Argo controller, because spot instances were cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The investigation used node termination events in CloudWatch and the job logs, and showed that the 2 min warning was not enough.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I learned to read the spot termination docs first, not after.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "The team was me plus two platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "Mateo reviewed them.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I liked the scheduling side more than the models, and I want to work on the platform under the models at Graphcore.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The 10 wk summer placement at Brightwater Analytics in Manchester ran from Jun-Aug 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team was me plus 2 platform engineers, Mateo and Jen.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was to move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, and Loki.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "repair"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The decision was to use spot instances for the batch node pool and on-demand for the Argo controller, because it was cheaper and the jobs are retryable.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "A fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 183,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 182,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 31,
+      "createdAt": "2026-11-03T14:49:39.221Z",
+      "applicant": {
+        "name": null,
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "10 wk summer placement, Brightwater Analytics (small fintech), Manchester, Jun-Aug 2026\nteam: me + 2 platform engineers (Mateo, Jen)\n- goal: move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other\n- stack: Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki\n- decision: spot instances for the batch node pool, on-demand for the Argo controller. cheaper, jobs are retryable anyway\n- problem: jobs randomly lost progress overnight, ~5% of runs. cause: spot interruptions + checkpoints only every 10 min\n- investigated via node termination events in CloudWatch + the job logs. the 2 min warning wasn't enough\n- fix: checkpoint every 90 s + a drain handler on the termination notice\n- result: nightly run 4h10m -> 2h35m, nothing blocked since\n- learned: read the spot termination docs first, not after\n- why Graphcore: liked the scheduling side more than the models. want to work on the platform under the models",
+            "at": "2026-11-03T14:49:39.224Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "answer",
+            "text": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them.",
+            "at": "2026-11-03T14:49:55.389Z",
+            "questionId": "q1",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "notes",
+            "text": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+            "at": "2026-11-03T14:50:33.511Z",
+            "read": true,
+            "withheld": true
+          },
+          {
+            "id": "s4",
+            "kind": "correction",
+            "text": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+            "at": "2026-11-03T14:50:40.118Z",
+            "read": true
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "Applicant had a 10 wk summer placement at Brightwater Analytics in Manchester, Jun-Aug 2026.",
+            "quote": "10 wk summer placement, Brightwater Analytics (small fintech), Manchester, Jun-Aug 2026",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "The team was the applicant plus 2 platform engineers, Mateo and Jen.",
+            "quote": "team: me + 2 platform engineers (Mateo, Jen)",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "The goal was to move nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+            "quote": "move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki.",
+            "quote": "stack: Terraform, EKS, Karpenter, Argo Workflows, Prometheus, Loki",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "The decision was spot instances for the batch node pool and on-demand for the Argo controller because cheaper and jobs are retryable.",
+            "quote": "decision: spot instances for the batch node pool, on-demand for the Argo controller. cheaper, jobs are retryable anyway",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+            "quote": "problem: jobs randomly lost progress overnight, ~5% of runs. cause: spot interruptions + checkpoints only every 10 min",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "The problem was investigated via node termination events in CloudWatch and job logs; the 2 min warning was not enough.",
+            "quote": "investigated via node termination events in CloudWatch + the job logs. the 2 min warning wasn't enough",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "The fix was checkpoint every 90 s and a drain handler on the termination notice.",
+            "quote": "fix: checkpoint every 90 s + a drain handler on the termination notice",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+            "quote": "result: nightly run 4h10m -> 2h35m, nothing blocked since",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "Applicant learned to read the spot termination docs first, not after.",
+            "quote": "learned: read the spot termination docs first, not after",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "Applicant liked the scheduling side more than the models and wants to work on the platform under the models at Graphcore.",
+            "quote": "why Graphcore: liked the scheduling side more than the models. want to work on the platform under the models",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+            "quote": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+            "sourceId": "s4",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "I wrote the Terraform modules for the node pools myself",
+                "quote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+                "sourceId": "s2",
+                "at": "2026-11-03T14:50:40.118Z"
+              }
+            ]
+          },
+          {
+            "id": "f13",
+            "statement": "Mateo reviewed them",
+            "quote": "Mateo reviewed them",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "evidence": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f8",
+            "f9",
+            "f12"
+          ],
+          "contribution": [
+            "f2",
+            "f12",
+            "f13"
+          ],
+          "goal": [
+            "f3",
+            "f9"
+          ],
+          "tech": [
+            "f4",
+            "f12"
+          ],
+          "decision": [
+            "f5"
+          ],
+          "problem": [
+            "f6",
+            "f7",
+            "f8",
+            "f10"
+          ],
+          "motivation": [
+            "f11"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirementId": "contribution",
+            "text": "At Brightwater Analytics, which parts of moving the nightly risk batch jobs onto EKS did you do yourself, rather than Mateo or Jen?",
+            "why": "The form asks what you did yourself; your notes only describe the team and the work as a whole.",
+            "status": "answered",
+            "askedBy": "model",
+            "sourceId": "s2"
+          },
+          {
+            "id": "q2",
+            "kind": "source-conflict",
+            "text": "Who wrote the Karpenter autoscaler config, you or Mateo, and who reviewed whose work on it?",
+            "status": "answered",
+            "conflictSourceId": "s3",
+            "priorSourceId": "s2",
+            "quote": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+            "priorQuote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them.",
+            "why": "Earlier: “I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them.” Added: “Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.” Your saved work is unchanged. These added details are held back. Skip to leave them out, or use Correct fact to change an earlier fact.",
+            "settled": true,
+            "sourceId": "s4",
+            "resolution": "corrected"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS.",
+                "factIds": [
+                  "f1",
+                  "f3"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus and Loki.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "The decision was to use spot instances for the batch node pool and on-demand instances for the Argo controller, because spot instances were cheaper and the jobs are retryable.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "Jobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "The investigation used node termination events in CloudWatch and the job logs, and showed that the 2 min warning was not enough.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "The fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "I learned to read the spot termination docs first, not after.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "The team was me plus two platform engineers, Mateo and Jen.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "Mateo reviewed them.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 2,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "I liked the scheduling side more than the models, and I want to work on the platform under the models at Graphcore.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "The 10 wk summer placement at Brightwater Analytics in Manchester ran from Jun-Aug 2026.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "The team was me plus 2 platform engineers, Mateo and Jen.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "The goal was to move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, and Loki.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": true,
+                "author": "repair"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "The decision was to use spot instances for the batch node pool and on-demand for the Argo controller, because it was cheaper and the jobs are retryable.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "A fix was to checkpoint every 90 s and add a drain handler on the termination notice.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "The nightly run went from 4h10m to 2h35m, with nothing blocked since.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "frame",
+                "text": "Kind regards,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T14:50:52.906Z"
+          },
+          "letter": {
+            "revision": 2,
+            "at": "2026-11-03T14:50:52.911Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T14:50:52.915Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 2
+            }
+          }
+        ],
+        "checked": [
+          "contribution"
+        ],
+        "lastRepair": {
+          "factId": "f12",
+          "at": "2026-11-03T14:50:52.900Z",
+          "changed": 2,
+          "kept": 0,
+          "docs": [
+            "answer",
+            "letter"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-10"
+            },
+            {
+              "docId": "letter",
+              "segmentId": "letter-8"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T14:50:52.916Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/resolveSourceConflict",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 6,
+    "spentUsd": 2.367389,
+    "reservedUsd": 0.129628,
+    "remainingUsd": 3.502983
+  },
+  "extraction": {
+    "accepted": 11,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q1",
+    "requirementId": "contribution",
+    "text": "At Brightwater Analytics, which parts of moving the nightly risk batch jobs onto EKS did you do yourself, rather than Mateo or Jen?",
+    "answer": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them."
+  },
+  "answerExtraction": {
+    "accepted": 2,
+    "refused": [
+      {
+        "quote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+        "reason": "Duplicate of an existing fact."
+      }
+    ],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f3",
+        "f9"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f4",
+        "f12"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f5"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f6",
+        "f7",
+        "f8",
+        "f10"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f2",
+        "f12",
+        "f13"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f11"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f8",
+        "f9",
+        "f12"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f12",
+    "quote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "The project was to move nightly risk batch jobs off one big VM onto EKS so they would stop blocking each other, during a 10-week summer placement at Brightwater Analytics in Manchester from June to August 2026.",
+    "factIds": [
+      "f1",
+      "f3"
+    ],
+    "text": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS."
+  },
+  "correctionExtraction": {
+    "accepted": 0,
+    "refused": [],
+    "conflict": true
+  },
+  "conflictQuestion": {
+    "text": "Who wrote the Karpenter autoscaler config, you or Mateo, and who reviewed whose work on it?",
+    "priorSourceId": "s2",
+    "priorQuote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them.",
+    "quote": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change."
+  },
+  "offer": {
+    "questionId": "q2",
+    "sourceId": "s3",
+    "factId": "f12",
+    "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+    "text": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change."
+  },
+  "correctedFact": {
+    "id": "f12",
+    "statement": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+    "quote": "Correction: Mateo wrote the Karpenter autoscaler config, not me. I wrote the Terraform modules for the node pools and reviewed his autoscaler change.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "I wrote the Terraform modules for the node pools myself",
+        "quote": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself",
+        "sourceId": "s2",
+        "at": "2026-11-03T14:50:40.118Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-10",
+      "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-8",
+      "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-10",
+        "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+        "after": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+        "afterFactIds": [
+          "f12"
+        ],
+        "status": "proposed",
+        "decision": null
+      },
+      {
+        "id": "c2",
+        "docId": "letter",
+        "segmentId": "letter-8",
+        "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself.",
+        "after": "I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change.",
+        "afterFactIds": [
+          "f12"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f12",
+    "at": "2026-11-03T14:50:52.900Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-10"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-8"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 183,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS. The nightly run went from 4h10m to 2h35m, with nothing blocked since.\n\nThe stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus and Loki. The decision was to use spot instances for the batch node pool and on-demand instances for the Argo controller, because spot instances were cheaper and the jobs are retryable.\n\nJobs randomly lost progress overnight in ~5% of runs, caused by spot interruptions and checkpoints only every 10 min. The investigation used node termination events in CloudWatch and the job logs, and showed that the 2 min warning was not enough. The fix was to checkpoint every 90 s and add a drain handler on the termination notice. I learned to read the spot termination docs first, not after.\n\nThe team was me plus two platform engineers, Mateo and Jen. I wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change. Mateo reviewed them."
+      },
+      {
+        "id": "letter",
+        "words": 182,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nI liked the scheduling side more than the models, and I want to work on the platform under the models at Graphcore.\n\nThe 10 wk summer placement at Brightwater Analytics in Manchester ran from Jun-Aug 2026. The team was me plus 2 platform engineers, Mateo and Jen. The goal was to move the nightly risk batch jobs off one big VM onto EKS so they stop blocking each other. The stack was Terraform, EKS, Karpenter, Argo Workflows, Prometheus, and Loki.\n\nI wrote the Terraform modules for the node pools, Mateo wrote the Karpenter autoscaler config, and I reviewed his autoscaler change. The decision was to use spot instances for the batch node pool and on-demand for the Argo controller, because it was cheaper and the jobs are retryable. A fix was to checkpoint every 90 s and add a drain handler on the termination notice. The nightly run went from 4h10m to 2h35m, with nothing blocked since.\n\nThank you for considering my application.\n\nKind regards,"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 6,
+    "spentUsd": 3.111326,
+    "reservedUsd": 0.478492,
+    "remainingUsd": 2.410182
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "3b8f4640-1479-4316-b370-3d31fa0782cc",
+        "e173eee8-740c-4f53-81f0-b04690e27652",
+        "66a69068-59b1-487c-a131-baf18132a084"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8038,
+        "cached": 5596,
+        "output": 2063,
+        "reasoning": 618
+      },
+      "costUsd": 0.0521472,
+      "firstEventMs": 1227,
+      "firstOutputMs": 1718,
+      "totalMs": 11664,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3940400
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:49:50.891Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "ecf43f3b-f78c-455d-b021-94aac7840609"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1908,
+        "cached": 884,
+        "output": 519,
+        "reasoning": 423
+      },
+      "costUsd": 0.014652799999999999,
+      "firstEventMs": 830,
+      "firstOutputMs": 4042,
+      "totalMs": 4461,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3942358
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T14:49:55.382Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "3b34bb7c-d37f-47ae-ba15-ae733361bc7f",
+        "9564108e-c9fa-4065-bc80-d2519232635e",
+        "29f4b9db-9ff7-4a2e-a8fd-01723f045ad4"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 6922,
+        "cached": 4828,
+        "output": 710,
+        "reasoning": 285
+      },
+      "costUsd": 0.0235416,
+      "firstEventMs": 1335,
+      "firstOutputMs": 1831,
+      "totalMs": 11326,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3945200
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:50:06.719Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "2131add4-3397-4457-a2f0-dc1ced9f11f1",
+        "817d84af-6179-4538-b6ce-7a40f7d7274c"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "187 of 300"
+        }
+      ],
+      "usage": {
+        "input": 6573,
+        "cached": 3944,
+        "output": 2225,
+        "reasoning": 1374
+      },
+      "costUsd": 0.0558048,
+      "firstEventMs": 1223,
+      "firstOutputMs": 8470,
+      "totalMs": 13055,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3951774
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:50:19.791Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "0eee9ddf-03d2-4076-a632-f6871771a811"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3681,
+        "cached": 628,
+        "output": 965,
+        "reasoning": 672
+      },
+      "costUsd": 0.0316376,
+      "firstEventMs": 596,
+      "firstOutputMs": 4730,
+      "totalMs": 6386,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3952616
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:50:26.179Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "d49204a6-eec1-4758-a296-fd91e16de95d",
+        "a617ba2d-726f-44aa-bc6f-491d7fce32ca"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "174 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6854,
+        "cached": 3688,
+        "output": 3202,
+        "reasoning": 2341
+      },
+      "costUsd": 0.0774416,
+      "firstEventMs": 971,
+      "firstOutputMs": 14379,
+      "totalMs": 22455,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3951483
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:50:29.193Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "14121684-9a76-4d14-a00f-b5af03c9cbf1"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3068,
+        "cached": 628,
+        "output": 553,
+        "reasoning": 348
+      },
+      "costUsd": 0.020945599999999998,
+      "firstEventMs": 955,
+      "firstOutputMs": 3117,
+      "totalMs": 4288,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3952956
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:50:33.483Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "62a61b85-3e36-4ff3-8bc5-f73fcd8515cc",
+        "9096f527-3a54-4c16-957e-76e188af2ef8"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4556,
+        "cached": 3432,
+        "output": 759,
+        "reasoning": 437
+      },
+      "costUsd": 0.0203624,
+      "firstEventMs": 714,
+      "firstOutputMs": 2755,
+      "totalMs": 6593,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3953645
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:50:40.108Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "6e10b219-e0a9-4d27-9d32-39a6fa210274"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3020,
+        "cached": 884,
+        "output": 838,
+        "reasoning": 727
+      },
+      "costUsd": 0.025480799999999998,
+      "firstEventMs": 1267,
+      "firstOutputMs": 6362,
+      "totalMs": 6661,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3949770
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:50:46.785Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "e8068dc4-19dd-4404-bd74-4742e897d2fe"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1786,
+        "cached": 628,
+        "output": 753,
+        "reasoning": 639
+      },
+      "costUsd": 0.019817599999999998,
+      "firstEventMs": 1249,
+      "firstOutputMs": 5508,
+      "totalMs": 6103,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3947448
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:50:52.889Z"
+    }
+  ],
+  "endedAt": "2026-11-03T14:50:52.921Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 13,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "183/300",
+          "letter": "182/400"
+        },
+        "afterDraft": {
+          "answer": "187/300",
+          "letter": "176/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 24,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-10",
+          "letter/letter-8"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS.",
+        "afterCorrection": "During a ten-week summer placement at Brightwater Analytics in Manchester, our three-person platform team moved the nightly risk batch jobs from a single virtual machine onto EKS.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 19,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 22,
+    "stepRetries": 0,
+    "providerAttempts": 17,
+    "providerTurns": 17,
+    "toolCalls": 21,
+    "receipts": 10,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 46406,
+      "cached": 25140,
+      "output": 12587,
+      "reasoning": 7864
+    },
+    "costReceiptsUsd": 0.341832,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.743937,
+    "wallMs": 73700,
+    "modelStepMs": {
+      "read the notes": 11669,
+      "check what the form still needs": 4465,
+      "read the answer": 11330,
+      "write both documents": 26757,
+      "read the correcting note": 6600,
+      "propose the changes": 12772
+    },
+    "medianModelStepMs": 11499.5,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 26757
+  }
+}

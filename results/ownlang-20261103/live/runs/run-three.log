@@ -1,0 +1,8 @@
+run 1 start 20:36:24
+run 1 end 20:38:48 exit 0
+run 2 start 20:38:48
+run 2 end 20:40:57 exit 0
+run 3 start 20:40:57
+run 3 end 20:42:59 exit 0
+ellie start 20:42:59
+ellie end 20:43:30 exit 0

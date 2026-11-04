@@ -1,0 +1,3962 @@
+{
+ "events": [
+  {
+   "type": "stage",
+   "label": "Drafting the supporting evidence",
+   "ms": 3
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 1,
+   "ms": 60
+  },
+  {
+   "type": "stage",
+   "label": "Drafting the cover letter",
+   "ms": 61
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 1,
+   "ms": 129
+  },
+  {
+   "type": "model",
+   "ms": 1558,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "ms": 1629,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 112,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 7766
+  },
+  {
+   "type": "model",
+   "chars": 112,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 8436
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 1,
+   "ms": 8523
+  },
+  {
+   "type": "tool",
+   "name": "word_count",
+   "note": "171 of 350",
+   "ms": 8523
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 2,
+   "ms": 8595
+  },
+  {
+   "type": "model",
+   "ms": 10447,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 2
+  },
+  {
+   "type": "model",
+   "chars": 143,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 10955
+  },
+  {
+   "type": "model",
+   "chars": 143,
+   "event": "delta",
+   "step": "draft",
+   "turn": 1,
+   "ms": 11727
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 1,
+   "ms": 11847
+  },
+  {
+   "type": "tool",
+   "name": "word_count",
+   "note": "213 of 500",
+   "ms": 11847
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "draft",
+   "turn": 2,
+   "ms": 11915
+  },
+  {
+   "type": "model",
+   "ms": 13139,
+   "event": "first-event",
+   "step": "draft",
+   "turn": 2
+  },
+  {
+   "type": "model",
+   "chars": 10,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 13836
+  },
+  {
+   "type": "model",
+   "chars": 20,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 13876
+  },
+  {
+   "type": "model",
+   "chars": 54,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 13922
+  },
+  {
+   "type": "model",
+   "chars": 125,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 13958
+  },
+  {
+   "type": "model",
+   "chars": 182,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 13998
+  },
+  {
+   "type": "model",
+   "chars": 246,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14039
+  },
+  {
+   "type": "model",
+   "chars": 302,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14078
+  },
+  {
+   "type": "model",
+   "chars": 359,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14117
+  },
+  {
+   "type": "model",
+   "chars": 416,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14157
+  },
+  {
+   "type": "model",
+   "chars": 457,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14196
+  },
+  {
+   "type": "model",
+   "chars": 528,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14238
+  },
+  {
+   "type": "model",
+   "chars": 580,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14278
+  },
+  {
+   "type": "model",
+   "chars": 630,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14318
+  },
+  {
+   "type": "model",
+   "chars": 707,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14359
+  },
+  {
+   "type": "model",
+   "chars": 756,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14400
+  },
+  {
+   "type": "model",
+   "chars": 811,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14441
+  },
+  {
+   "type": "model",
+   "chars": 889,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14482
+  },
+  {
+   "type": "model",
+   "chars": 940,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14523
+  },
+  {
+   "type": "model",
+   "chars": 1004,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14567
+  },
+  {
+   "type": "model",
+   "chars": 1044,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14605
+  },
+  {
+   "type": "model",
+   "chars": 1104,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14648
+  },
+  {
+   "type": "model",
+   "chars": 1150,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14692
+  },
+  {
+   "type": "model",
+   "chars": 1201,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14730
+  },
+  {
+   "type": "model",
+   "chars": 1255,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14770
+  },
+  {
+   "type": "model",
+   "chars": 1307,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14811
+  },
+  {
+   "type": "model",
+   "chars": 1376,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14852
+  },
+  {
+   "type": "model",
+   "chars": 1434,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14893
+  },
+  {
+   "type": "model",
+   "chars": 1488,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14933
+  },
+  {
+   "type": "model",
+   "chars": 1567,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 14974
+  },
+  {
+   "type": "model",
+   "chars": 1612,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15016
+  },
+  {
+   "type": "model",
+   "chars": 1666,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15057
+  },
+  {
+   "type": "model",
+   "chars": 1717,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15099
+  },
+  {
+   "type": "model",
+   "chars": 1769,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15139
+  },
+  {
+   "type": "model",
+   "chars": 1835,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15180
+  },
+  {
+   "type": "model",
+   "chars": 1892,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15221
+  },
+  {
+   "type": "model",
+   "chars": 1957,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15263
+  },
+  {
+   "type": "model",
+   "chars": 2011,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15307
+  },
+  {
+   "type": "model",
+   "chars": 2039,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15352
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 2,
+   "ms": 15473
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "draft",
+    "docId": "letter",
+    "provider": "meta",
+    "isMeta": true,
+    "model": "muse-wonder-1.0",
+    "host": "api.meta.ai",
+    "effort": "medium",
+    "turns": 2,
+    "attempts": 2,
+    "requestIds": [
+     "7dd31ead-aadb-4e07-9f1a-e97b936e58cf",
+     "989ef034-7ecc-4517-b3a3-7aaa15ed492d"
+    ],
+    "toolCalls": [
+     {
+      "name": "word_count",
+      "ok": true,
+      "note": "171 of 350"
+     }
+    ],
+    "usage": {
+     "input": 7007,
+     "cached": 2932,
+     "output": 2014,
+     "reasoning": 1154
+    },
+    "costUsd": 0.057166400000000006,
+    "firstEventMs": 1428,
+    "firstOutputMs": 7636,
+    "totalMs": 15411,
+    "rateLimit": {
+     "remainingRequests": 2992,
+     "remainingTokens": 3980955
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 15490
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 15493
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 15561
+  },
+  {
+   "type": "model",
+   "chars": 20,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16285
+  },
+  {
+   "type": "model",
+   "chars": 45,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16337
+  },
+  {
+   "type": "model",
+   "chars": 95,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16373
+  },
+  {
+   "type": "model",
+   "chars": 154,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16417
+  },
+  {
+   "type": "model",
+   "chars": 200,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16461
+  },
+  {
+   "type": "model",
+   "chars": 254,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16504
+  },
+  {
+   "type": "model",
+   "chars": 322,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16550
+  },
+  {
+   "type": "model",
+   "chars": 374,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16592
+  },
+  {
+   "type": "model",
+   "chars": 441,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16633
+  },
+  {
+   "type": "model",
+   "chars": 483,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16675
+  },
+  {
+   "type": "model",
+   "chars": 548,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16718
+  },
+  {
+   "type": "model",
+   "chars": 594,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16758
+  },
+  {
+   "type": "model",
+   "chars": 668,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16798
+  },
+  {
+   "type": "model",
+   "chars": 710,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16838
+  },
+  {
+   "type": "model",
+   "chars": 774,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16878
+  },
+  {
+   "type": "model",
+   "chars": 818,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16919
+  },
+  {
+   "type": "model",
+   "chars": 876,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 16961
+  },
+  {
+   "type": "model",
+   "chars": 927,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17000
+  },
+  {
+   "type": "model",
+   "chars": 979,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17038
+  },
+  {
+   "type": "model",
+   "ms": 17077,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 1041,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17078
+  },
+  {
+   "type": "model",
+   "chars": 1092,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17119
+  },
+  {
+   "type": "model",
+   "chars": 1143,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17160
+  },
+  {
+   "type": "model",
+   "chars": 1187,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17198
+  },
+  {
+   "type": "model",
+   "chars": 1247,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17236
+  },
+  {
+   "type": "model",
+   "chars": 1304,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17275
+  },
+  {
+   "type": "model",
+   "chars": 1358,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17314
+  },
+  {
+   "type": "model",
+   "chars": 1417,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17353
+  },
+  {
+   "type": "model",
+   "chars": 1470,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17392
+  },
+  {
+   "type": "model",
+   "chars": 1539,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17431
+  },
+  {
+   "type": "model",
+   "chars": 1596,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17471
+  },
+  {
+   "type": "model",
+   "chars": 1648,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17512
+  },
+  {
+   "type": "model",
+   "chars": 1713,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17549
+  },
+  {
+   "type": "model",
+   "chars": 1765,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17587
+  },
+  {
+   "type": "model",
+   "chars": 1815,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17624
+  },
+  {
+   "type": "model",
+   "chars": 1866,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17662
+  },
+  {
+   "type": "model",
+   "chars": 1943,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17700
+  },
+  {
+   "type": "model",
+   "chars": 1989,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17738
+  },
+  {
+   "type": "model",
+   "chars": 2050,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17776
+  },
+  {
+   "type": "model",
+   "chars": 2113,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17815
+  },
+  {
+   "type": "model",
+   "chars": 2162,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17854
+  },
+  {
+   "type": "model",
+   "chars": 2220,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17895
+  },
+  {
+   "type": "model",
+   "chars": 2287,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17934
+  },
+  {
+   "type": "model",
+   "chars": 2339,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 17973
+  },
+  {
+   "type": "model",
+   "chars": 2415,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 18014
+  },
+  {
+   "type": "model",
+   "chars": 2463,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 18050
+  },
+  {
+   "type": "model",
+   "chars": 2515,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 18089
+  },
+  {
+   "type": "model",
+   "chars": 2556,
+   "event": "delta",
+   "step": "draft",
+   "turn": 2,
+   "ms": 18129
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "draft",
+   "turn": 2,
+   "ms": 18236
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "draft",
+    "docId": "answer",
+    "provider": "meta",
+    "isMeta": true,
+    "model": "muse-wonder-1.0",
+    "host": "api.meta.ai",
+    "effort": "medium",
+    "turns": 2,
+    "attempts": 2,
+    "requestIds": [
+     "46e62349-6217-4ce2-9c29-1758743053fa",
+     "97ea4b45-cd7d-410d-b8db-2f9e2717940d"
+    ],
+    "toolCalls": [
+     {
+      "name": "word_count",
+      "ok": true,
+      "note": "213 of 500"
+     }
+    ],
+    "usage": {
+     "input": 8309,
+     "cached": 3316,
+     "output": 2752,
+     "reasoning": 1681
+    },
+    "costUsd": 0.0756752,
+    "firstEventMs": 1568,
+    "firstOutputMs": 10894,
+    "totalMs": 18233,
+    "rateLimit": {
+     "remainingRequests": 2991,
+     "remainingTokens": 3981267
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 18305
+  },
+  {
+   "type": "stage",
+   "label": "Checking each sentence against your Portuguese words",
+   "ms": 18308
+  },
+  {
+   "type": "model",
+   "attempt": 1,
+   "event": "attempt",
+   "step": "review",
+   "turn": 1,
+   "ms": 18376
+  },
+  {
+   "type": "model",
+   "ms": 19233,
+   "event": "first-event",
+   "step": "review",
+   "turn": 1
+  },
+  {
+   "type": "model",
+   "chars": 2,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 19888
+  },
+  {
+   "type": "model",
+   "chars": 5,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 19928
+  },
+  {
+   "type": "model",
+   "chars": 32,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 19967
+  },
+  {
+   "type": "model",
+   "chars": 57,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20008
+  },
+  {
+   "type": "model",
+   "chars": 74,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20049
+  },
+  {
+   "type": "model",
+   "chars": 120,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20088
+  },
+  {
+   "type": "model",
+   "chars": 189,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20127
+  },
+  {
+   "type": "model",
+   "chars": 237,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20167
+  },
+  {
+   "type": "model",
+   "chars": 254,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20208
+  },
+  {
+   "type": "model",
+   "chars": 324,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20246
+  },
+  {
+   "type": "model",
+   "chars": 419,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20284
+  },
+  {
+   "type": "model",
+   "chars": 466,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20322
+  },
+  {
+   "type": "model",
+   "chars": 490,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20374
+  },
+  {
+   "type": "model",
+   "chars": 570,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20401
+  },
+  {
+   "type": "model",
+   "chars": 644,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20440
+  },
+  {
+   "type": "model",
+   "chars": 700,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20478
+  },
+  {
+   "type": "model",
+   "chars": 748,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20516
+  },
+  {
+   "type": "model",
+   "chars": 815,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20555
+  },
+  {
+   "type": "model",
+   "chars": 884,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20593
+  },
+  {
+   "type": "model",
+   "chars": 918,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20630
+  },
+  {
+   "type": "model",
+   "chars": 964,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20669
+  },
+  {
+   "type": "model",
+   "chars": 1000,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20710
+  },
+  {
+   "type": "model",
+   "chars": 1075,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20751
+  },
+  {
+   "type": "model",
+   "chars": 1128,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20791
+  },
+  {
+   "type": "model",
+   "chars": 1186,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20835
+  },
+  {
+   "type": "model",
+   "chars": 1256,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20873
+  },
+  {
+   "type": "model",
+   "chars": 1326,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20914
+  },
+  {
+   "type": "model",
+   "chars": 1391,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 20955
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 21037
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "meta",
+    "isMeta": true,
+    "model": "muse-wonder-1.0",
+    "host": "api.meta.ai",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "55c59289-904b-4982-9c4a-a010e5a0e2ac"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 3799,
+     "cached": 0,
+     "output": 805,
+     "reasoning": 491
+    },
+    "costUsd": 0.031296,
+    "firstEventMs": 1516,
+    "firstOutputMs": 4327,
+    "totalMs": 5544,
+    "rateLimit": {
+     "remainingRequests": 2990,
+     "remainingTokens": 3975095
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 21053
+  },
+  {
+   "type": "document-ready",
+   "docId": "letter",
+   "title": "Cover letter",
+   "segments": [
+    {
+     "id": "letter-1",
+     "kind": "frame",
+     "text": "Dear North Yorkshire Council hiring team,",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-2",
+     "kind": "frame",
+     "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-3",
+     "kind": "claim",
+     "text": "I have worked for 3 years in a care home in Leeds since October 2023.",
+     "factIds": [
+      "f2"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-4",
+     "kind": "claim",
+     "text": "Before the shift I read each resident's care plan and do what is in it.",
+     "factIds": [
+      "f5"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-5",
+     "kind": "claim",
+     "text": "I have medication training and do the morning medication round for 18 residents.",
+     "factIds": [
+      "f3"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-6",
+     "kind": "claim",
+     "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+     "factIds": [
+      "f4"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-7",
+     "kind": "claim",
+     "text": "I have moving and handling training and use a hoist.",
+     "factIds": [
+      "f6"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-8",
+     "kind": "claim",
+     "text": "We always work in pairs.",
+     "factIds": [
+      "f7"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-9",
+     "kind": "claim",
+     "text": "I did 3 years of nights and also weekends.",
+     "factIds": [
+      "f10"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-10",
+     "kind": "claim",
+     "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "factIds": [
+      "f8"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-11",
+     "kind": "claim",
+     "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "factIds": [
+      "f9"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-12",
+     "kind": "claim",
+     "text": "One night, I saw a bruise on a resident's arm.",
+     "factIds": [
+      "f11"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-13",
+     "kind": "claim",
+     "text": "I recorded it and told the nurse on duty immediately.",
+     "factIds": [
+      "f12"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "letter-14",
+     "kind": "frame",
+     "text": "Thank you for considering my application.",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "letter-15",
+     "kind": "frame",
+     "text": "Yours sincerely, Ana",
+     "factIds": [],
+     "startsParagraph": true,
+     "author": "draft"
+    }
+   ],
+   "ms": 21062
+  },
+  {
+   "type": "model",
+   "chars": 13,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22783
+  },
+  {
+   "type": "model",
+   "chars": 35,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22823
+  },
+  {
+   "type": "model",
+   "chars": 44,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22863
+  },
+  {
+   "type": "model",
+   "chars": 55,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22903
+  },
+  {
+   "type": "model",
+   "chars": 64,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22943
+  },
+  {
+   "type": "model",
+   "chars": 88,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 22983
+  },
+  {
+   "type": "model",
+   "chars": 115,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23024
+  },
+  {
+   "type": "model",
+   "chars": 136,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23067
+  },
+  {
+   "type": "model",
+   "chars": 181,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23106
+  },
+  {
+   "type": "model",
+   "chars": 195,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23145
+  },
+  {
+   "type": "model",
+   "chars": 200,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23184
+  },
+  {
+   "type": "model",
+   "chars": 260,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23222
+  },
+  {
+   "type": "model",
+   "chars": 306,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23261
+  },
+  {
+   "type": "model",
+   "chars": 340,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23301
+  },
+  {
+   "type": "model",
+   "chars": 407,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23342
+  },
+  {
+   "type": "model",
+   "chars": 475,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23383
+  },
+  {
+   "type": "model",
+   "chars": 521,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23424
+  },
+  {
+   "type": "model",
+   "chars": 548,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23464
+  },
+  {
+   "type": "model",
+   "chars": 625,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23506
+  },
+  {
+   "type": "model",
+   "chars": 682,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23550
+  },
+  {
+   "type": "model",
+   "chars": 739,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23588
+  },
+  {
+   "type": "model",
+   "chars": 772,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23630
+  },
+  {
+   "type": "model",
+   "chars": 775,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23668
+  },
+  {
+   "type": "model",
+   "chars": 796,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23708
+  },
+  {
+   "type": "model",
+   "chars": 858,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23746
+  },
+  {
+   "type": "model",
+   "chars": 909,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23785
+  },
+  {
+   "type": "model",
+   "chars": 921,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23825
+  },
+  {
+   "type": "model",
+   "chars": 984,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23866
+  },
+  {
+   "type": "model",
+   "chars": 1039,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23904
+  },
+  {
+   "type": "model",
+   "chars": 1097,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23944
+  },
+  {
+   "type": "model",
+   "chars": 1149,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 23983
+  },
+  {
+   "type": "model",
+   "chars": 1177,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24024
+  },
+  {
+   "type": "model",
+   "chars": 1212,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24066
+  },
+  {
+   "type": "model",
+   "chars": 1259,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24104
+  },
+  {
+   "type": "model",
+   "chars": 1269,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24145
+  },
+  {
+   "type": "model",
+   "chars": 1286,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24185
+  },
+  {
+   "type": "model",
+   "chars": 1355,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24224
+  },
+  {
+   "type": "model",
+   "chars": 1396,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24265
+  },
+  {
+   "type": "model",
+   "chars": 1418,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24302
+  },
+  {
+   "type": "model",
+   "chars": 1492,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24341
+  },
+  {
+   "type": "model",
+   "chars": 1549,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24381
+  },
+  {
+   "type": "model",
+   "chars": 1617,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24419
+  },
+  {
+   "type": "model",
+   "chars": 1671,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24457
+  },
+  {
+   "type": "model",
+   "chars": 1735,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24495
+  },
+  {
+   "type": "model",
+   "chars": 1803,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24533
+  },
+  {
+   "type": "model",
+   "chars": 1884,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24571
+  },
+  {
+   "type": "model",
+   "chars": 1935,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24608
+  },
+  {
+   "type": "model",
+   "chars": 1994,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24645
+  },
+  {
+   "type": "model",
+   "chars": 2040,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24683
+  },
+  {
+   "type": "model",
+   "chars": 2080,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24722
+  },
+  {
+   "type": "model",
+   "chars": 2166,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24759
+  },
+  {
+   "type": "model",
+   "chars": 2210,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24799
+  },
+  {
+   "type": "model",
+   "chars": 2297,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24839
+  },
+  {
+   "type": "model",
+   "chars": 2355,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24880
+  },
+  {
+   "type": "model",
+   "chars": 2415,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24922
+  },
+  {
+   "type": "model",
+   "chars": 2472,
+   "event": "delta",
+   "step": "review",
+   "turn": 1,
+   "ms": 24967
+  },
+  {
+   "type": "model",
+   "event": "completed",
+   "step": "review",
+   "turn": 1,
+   "ms": 25061
+  },
+  {
+   "type": "receipt",
+   "receipt": {
+    "step": "review",
+    "provider": "meta",
+    "isMeta": true,
+    "model": "muse-wonder-1.0",
+    "host": "api.meta.ai",
+    "effort": "medium",
+    "turns": 1,
+    "attempts": 1,
+    "requestIds": [
+     "1323d5e7-1d38-4045-9cfc-455a70b008db"
+    ],
+    "toolCalls": [],
+    "usage": {
+     "input": 5118,
+     "cached": 0,
+     "output": 1179,
+     "reasoning": 536
+    },
+    "costUsd": 0.044052,
+    "firstEventMs": 857,
+    "firstOutputMs": 4407,
+    "totalMs": 6753,
+    "rateLimit": {
+     "remainingRequests": 2989,
+     "remainingTokens": 3972995
+    },
+    "unsettled": 0,
+    "injectedFaults": 0
+   },
+   "ms": 25077
+  },
+  {
+   "type": "document-ready",
+   "docId": "answer",
+   "title": "Supporting evidence",
+   "segments": [
+    {
+     "id": "answer-1",
+     "kind": "claim",
+     "text": "I am Ana, and I have worked for 3 years in a care home in Leeds since October 2023.",
+     "factIds": [
+      "f1",
+      "f2"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-2",
+     "kind": "claim",
+     "text": "For me, dignity is knocking on the door before entering.",
+     "factIds": [
+      "f14"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-3",
+     "kind": "claim",
+     "text": "I explain what I am going to do before personal hygiene.",
+     "factIds": [
+      "f15"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-4",
+     "kind": "claim",
+     "text": "I always close the curtains.",
+     "factIds": [
+      "f16"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-5",
+     "kind": "claim",
+     "text": "I respect each person's culture and religion.",
+     "factIds": [
+      "f17"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-6",
+     "kind": "claim",
+     "text": "I ask what the person wants to eat.",
+     "factIds": [
+      "f18"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-7",
+     "kind": "claim",
+     "text": "I ask how the person wants to be treated.",
+     "factIds": [
+      "f19"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-8",
+     "kind": "claim",
+     "text": "I ask if the person prefers to be helped by a woman.",
+     "factIds": [
+      "f20"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-9",
+     "kind": "claim",
+     "text": "One night, I saw a bruise on a resident's arm.",
+     "factIds": [
+      "f11"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-10",
+     "kind": "claim",
+     "text": "I recorded it and told the nurse on duty immediately.",
+     "factIds": [
+      "f12"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-11",
+     "kind": "claim",
+     "text": "She made the safeguarding report.",
+     "factIds": [
+      "f13"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-12",
+     "kind": "claim",
+     "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "factIds": [
+      "f8"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-13",
+     "kind": "claim",
+     "text": "I have moving and handling training and use a hoist.",
+     "factIds": [
+      "f6"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-14",
+     "kind": "claim",
+     "text": "We always work in pairs.",
+     "factIds": [
+      "f7"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-15",
+     "kind": "claim",
+     "text": "I have medication training and do the morning medication round for 18 residents.",
+     "factIds": [
+      "f3"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-16",
+     "kind": "claim",
+     "text": "Before the shift I read each resident's care plan and do what is in it.",
+     "factIds": [
+      "f5"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-17",
+     "kind": "claim",
+     "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+     "factIds": [
+      "f4"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    },
+    {
+     "id": "answer-18",
+     "kind": "claim",
+     "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "factIds": [
+      "f9"
+     ],
+     "startsParagraph": true,
+     "author": "draft"
+    },
+    {
+     "id": "answer-19",
+     "kind": "claim",
+     "text": "I did 3 years of nights and also weekends.",
+     "factIds": [
+      "f10"
+     ],
+     "startsParagraph": false,
+     "author": "draft"
+    }
+   ],
+   "ms": 25084
+  },
+  {
+   "type": "stage",
+   "label": "Checking the word counts",
+   "ms": 25084
+  },
+  {
+   "type": "done",
+   "workspace": {
+    "schema": 1,
+    "revision": 8,
+    "createdAt": "2026-11-03T23:56:20.081Z",
+    "applicant": {
+     "name": "Ana",
+     "sources": [
+      {
+       "id": "s1",
+       "kind": "notes",
+       "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, Leeds como comecei em outubro de dois dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+       "at": "2026-11-03T23:56:47.858Z",
+       "language": "pt-PT",
+       "spoken": true,
+       "read": true
+      },
+      {
+       "id": "s2",
+       "kind": "answer",
+       "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+       "at": "2026-11-03T23:57:31.422Z",
+       "questionId": "q1",
+       "language": "pt-PT",
+       "read": true
+      }
+     ],
+     "facts": [
+      {
+       "id": "f1",
+       "statement": "I am Ana.",
+       "quote": "Chamome Ana.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f2",
+       "statement": "I have worked for 3 years in a care home in Leeds since October 2023.",
+       "quote": "Eu trabalho há três anos num lar em Leeds, Leeds como comecei em outubro de dois dois mil e vinte e três.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f3",
+       "statement": "I have medication training and do the morning medication round for 18 residents.",
+       "quote": "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f4",
+       "statement": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+       "quote": "No fim do turno escrevo as daily notes em inglês e assino a folha da medicação.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f5",
+       "statement": "Before the shift I read each resident's care plan and do what is in it.",
+       "quote": "Antes do turno leio o care plan de cada residente e faço o que lá está.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f6",
+       "statement": "I have moving and handling training and use a hoist.",
+       "quote": "Tenho a formação de moving and handling, uso grua",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f7",
+       "statement": "We always work in pairs.",
+       "quote": "trabalhamos sempre em dupla",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "team"
+      },
+      {
+       "id": "f8",
+       "statement": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+       "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "team"
+      },
+      {
+       "id": "f9",
+       "statement": "I made cards with photographs of food so each person could point to what they want to eat.",
+       "quote": "Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f10",
+       "statement": "I did 3 years of nights and also weekends.",
+       "quote": "Fiz três anos de noites e também fins de semana.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f11",
+       "statement": "One night, I saw a bruise on a resident's arm.",
+       "quote": "Uma noite, vi uma nódoa negra negra no braço de uma residente.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f12",
+       "statement": "I recorded it and told the nurse on duty immediately.",
+       "quote": "Registei e contei logo à enfermeira de serviço",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f13",
+       "statement": "She made the safeguarding report.",
+       "quote": "ela fez a participação de safeguarding.",
+       "sourceId": "s1",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "other"
+      },
+      {
+       "id": "f14",
+       "statement": "For me, dignity is knocking on the door before entering",
+       "quote": "dignidade é bater à porta antes de entrar",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f15",
+       "statement": "I explain what I am going to do before personal hygiene",
+       "quote": "explicar o que vou fazer antes da higiene pessoal",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f16",
+       "statement": "I always close the curtains",
+       "quote": "fechar sempre as cortinas",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f17",
+       "statement": "I respect each person's culture and religion",
+       "quote": "respeito a cultura e a religião de cada pessoa",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f18",
+       "statement": "I ask what the person wants to eat",
+       "quote": "pergunto o que quer comer",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f19",
+       "statement": "I ask how the person wants to be treated",
+       "quote": "como quer ser tratada",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      },
+      {
+       "id": "f20",
+       "statement": "I ask if the person prefers to be helped by a woman",
+       "quote": "se prefere ser ajudada por uma mulher",
+       "sourceId": "s2",
+       "status": "confirmed",
+       "history": [],
+       "language": "pt-PT",
+       "actor": "self"
+      }
+     ]
+    },
+    "application": {
+     "form": {
+      "id": "north-yorkshire-council-care-and-support-worker-476577",
+      "company": "North Yorkshire Council",
+      "role": "Care and Support Worker",
+      "location": "Leyburn, North Yorkshire, UK",
+      "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+      "snapshot": {
+       "source": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+       "fetchedAt": "2026-11-03T19:09:48Z",
+       "postingUpdatedAt": "2026-11-03",
+       "note": "Public North Yorkshire Council advert (posted 03/11/2026, closing 16/11/2026), captured once during the event with its attached job description and person specification (fetched 2026-11-03T19:10:04Z). Used without partnership: the council is an example, not a partner or endorser. Points quote the person specification word for word, with whitespace tidied."
+      },
+      "documents": [
+       {
+        "id": "answer",
+        "title": "Supporting evidence",
+        "fieldId": null,
+        "question": "Supporting evidence (application form). The council's advice: \"refer to the job profile in the 'supporting evidence' section so the hiring manager can see relevant examples of the qualities they are looking for\". The job profile adds: \"You should use this information to make the best of your application by identifying some specific pieces of work you may have undertaken in any of these areas.\"",
+        "wordLimit": 500,
+        "requirements": [
+         {
+          "id": "dignity",
+          "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+          "personal": true,
+          "direct": true
+         },
+         {
+          "id": "safe",
+          "text": "Knowledge of keeping people safe from harm or abuse."
+         },
+         {
+          "id": "conditions",
+          "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+         },
+         {
+          "id": "moving",
+          "text": "Experience of moving & handling people."
+         },
+         {
+          "id": "medication",
+          "text": "Experience of Administration of Medication"
+         },
+         {
+          "id": "plans",
+          "text": "Ability to understand health care and social care assessments and support plans."
+         },
+         {
+          "id": "records",
+          "text": "Ability to complete daily and medication record sheets"
+         },
+         {
+          "id": "team",
+          "text": "Ability to work with others in a team."
+         },
+         {
+          "id": "initiative",
+          "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+          "personal": true
+         },
+         {
+          "id": "rota",
+          "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service"
+         }
+        ],
+        "limitSource": "guide",
+        "limitNote": "The advert, job description and council advice state no word limit; 500 words is a working guide for this demo, not the council's limit."
+       },
+       {
+        "id": "letter",
+        "title": "Cover letter",
+        "fieldId": null,
+        "required": false,
+        "question": "Cover letter (not requested by this advert; optional, prepared for the applicant only from her confirmed experience)",
+        "wordLimit": 350,
+        "requirements": [
+         {
+          "id": "evidence",
+          "text": "The experience that shows you can do the job"
+         }
+        ],
+        "limitSource": "guide",
+        "limitNote": "The council asks for supporting evidence, not a letter; 350 words keeps a letter to one page. It asks only for her experience, so it never invents a motive she did not state."
+       }
+      ],
+      "portalTasks": [
+       "Create an account: Title, First name, Last name, Email address, Password",
+       "Enhanced Level DBS Disclosure (required for appointment)",
+       "The rest of the council's application form sits behind the account and was not opened"
+      ]
+     },
+     "coverage": {
+      "evidence": [
+       "f2",
+       "f3",
+       "f4",
+       "f5",
+       "f6",
+       "f7",
+       "f8",
+       "f9",
+       "f10",
+       "f11",
+       "f12"
+      ],
+      "medication": [
+       "f3"
+      ],
+      "records": [
+       "f4",
+       "f12"
+      ],
+      "plans": [
+       "f5"
+      ],
+      "moving": [
+       "f6",
+       "f7"
+      ],
+      "team": [
+       "f7",
+       "f8"
+      ],
+      "conditions": [
+       "f8",
+       "f9"
+      ],
+      "initiative": [
+       "f9"
+      ],
+      "rota": [
+       "f10"
+      ],
+      "safe": [
+       "f11",
+       "f12",
+       "f13"
+      ],
+      "dignity": [
+       "f14",
+       "f15",
+       "f16",
+       "f17",
+       "f18",
+       "f19",
+       "f20"
+      ]
+     },
+     "questions": [
+      {
+       "id": "q1",
+       "requirementId": "dignity",
+       "text": "Na unidade de demência do lar em Leeds, o que aprendeu com os cartões com fotografias da comida sobre respeitar as escolhas de cada residente e tratar todas as pessoas de forma justa?",
+       "why": "The form asks how equality, dignity, respect and human rights apply to this role; your notes describe making the cards but not what you understand about respecting each resident.",
+       "status": "answered",
+       "askedBy": "model",
+       "english": "In the dementia unit at the care home in Leeds, what did you learn from the food photograph cards about respecting each resident's choices and treating everyone fairly?",
+       "sourceId": "s2"
+      }
+     ],
+     "documents": {
+      "answer": {
+       "id": "answer",
+       "revision": 1,
+       "segments": [
+        {
+         "id": "answer-1",
+         "kind": "claim",
+         "text": "I am Ana, and I have worked for 3 years in a care home in Leeds since October 2023.",
+         "factIds": [
+          "f1",
+          "f2"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-2",
+         "kind": "claim",
+         "text": "For me, dignity is knocking on the door before entering.",
+         "factIds": [
+          "f14"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-3",
+         "kind": "claim",
+         "text": "I explain what I am going to do before personal hygiene.",
+         "factIds": [
+          "f15"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-4",
+         "kind": "claim",
+         "text": "I always close the curtains.",
+         "factIds": [
+          "f16"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-5",
+         "kind": "claim",
+         "text": "I respect each person's culture and religion.",
+         "factIds": [
+          "f17"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-6",
+         "kind": "claim",
+         "text": "I ask what the person wants to eat.",
+         "factIds": [
+          "f18"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-7",
+         "kind": "claim",
+         "text": "I ask how the person wants to be treated.",
+         "factIds": [
+          "f19"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-8",
+         "kind": "claim",
+         "text": "I ask if the person prefers to be helped by a woman.",
+         "factIds": [
+          "f20"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-9",
+         "kind": "claim",
+         "text": "One night, I saw a bruise on a resident's arm.",
+         "factIds": [
+          "f11"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-10",
+         "kind": "claim",
+         "text": "I recorded it and told the nurse on duty immediately.",
+         "factIds": [
+          "f12"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-11",
+         "kind": "claim",
+         "text": "She made the safeguarding report.",
+         "factIds": [
+          "f13"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-12",
+         "kind": "claim",
+         "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+         "factIds": [
+          "f8"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-13",
+         "kind": "claim",
+         "text": "I have moving and handling training and use a hoist.",
+         "factIds": [
+          "f6"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-14",
+         "kind": "claim",
+         "text": "We always work in pairs.",
+         "factIds": [
+          "f7"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-15",
+         "kind": "claim",
+         "text": "I have medication training and do the morning medication round for 18 residents.",
+         "factIds": [
+          "f3"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-16",
+         "kind": "claim",
+         "text": "Before the shift I read each resident's care plan and do what is in it.",
+         "factIds": [
+          "f5"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-17",
+         "kind": "claim",
+         "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+         "factIds": [
+          "f4"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "answer-18",
+         "kind": "claim",
+         "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+         "factIds": [
+          "f9"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "answer-19",
+         "kind": "claim",
+         "text": "I did 3 years of nights and also weekends.",
+         "factIds": [
+          "f10"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        }
+       ]
+      },
+      "letter": {
+       "id": "letter",
+       "revision": 1,
+       "segments": [
+        {
+         "id": "letter-1",
+         "kind": "frame",
+         "text": "Dear North Yorkshire Council hiring team,",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-2",
+         "kind": "frame",
+         "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-3",
+         "kind": "claim",
+         "text": "I have worked for 3 years in a care home in Leeds since October 2023.",
+         "factIds": [
+          "f2"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-4",
+         "kind": "claim",
+         "text": "Before the shift I read each resident's care plan and do what is in it.",
+         "factIds": [
+          "f5"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-5",
+         "kind": "claim",
+         "text": "I have medication training and do the morning medication round for 18 residents.",
+         "factIds": [
+          "f3"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-6",
+         "kind": "claim",
+         "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+         "factIds": [
+          "f4"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-7",
+         "kind": "claim",
+         "text": "I have moving and handling training and use a hoist.",
+         "factIds": [
+          "f6"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-8",
+         "kind": "claim",
+         "text": "We always work in pairs.",
+         "factIds": [
+          "f7"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-9",
+         "kind": "claim",
+         "text": "I did 3 years of nights and also weekends.",
+         "factIds": [
+          "f10"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-10",
+         "kind": "claim",
+         "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+         "factIds": [
+          "f8"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-11",
+         "kind": "claim",
+         "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+         "factIds": [
+          "f9"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-12",
+         "kind": "claim",
+         "text": "One night, I saw a bruise on a resident's arm.",
+         "factIds": [
+          "f11"
+         ],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-13",
+         "kind": "claim",
+         "text": "I recorded it and told the nurse on duty immediately.",
+         "factIds": [
+          "f12"
+         ],
+         "startsParagraph": false,
+         "author": "draft"
+        },
+        {
+         "id": "letter-14",
+         "kind": "frame",
+         "text": "Thank you for considering my application.",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        },
+        {
+         "id": "letter-15",
+         "kind": "frame",
+         "text": "Yours sincerely, Ana",
+         "factIds": [],
+         "startsParagraph": true,
+         "author": "draft"
+        }
+       ]
+      }
+     },
+     "repair": null,
+     "approvals": {
+      "answer": null,
+      "letter": null
+     },
+     "exports": [],
+     "checked": [
+      "dignity"
+     ]
+    },
+    "updatedAt": "2026-11-03T23:58:05.598Z"
+   },
+   "view": {
+    "next": "approve",
+    "coverage": [
+     {
+      "id": "dignity",
+      "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+      "personal": true,
+      "direct": true,
+      "docId": "answer",
+      "factIds": [
+       "f14",
+       "f15",
+       "f16",
+       "f17",
+       "f18",
+       "f19",
+       "f20"
+      ],
+      "covered": true
+     },
+     {
+      "id": "safe",
+      "text": "Knowledge of keeping people safe from harm or abuse.",
+      "docId": "answer",
+      "factIds": [
+       "f11",
+       "f12",
+       "f13"
+      ],
+      "covered": true
+     },
+     {
+      "id": "conditions",
+      "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities",
+      "docId": "answer",
+      "factIds": [
+       "f8",
+       "f9"
+      ],
+      "covered": true
+     },
+     {
+      "id": "moving",
+      "text": "Experience of moving & handling people.",
+      "docId": "answer",
+      "factIds": [
+       "f6",
+       "f7"
+      ],
+      "covered": true
+     },
+     {
+      "id": "medication",
+      "text": "Experience of Administration of Medication",
+      "docId": "answer",
+      "factIds": [
+       "f3"
+      ],
+      "covered": true
+     },
+     {
+      "id": "plans",
+      "text": "Ability to understand health care and social care assessments and support plans.",
+      "docId": "answer",
+      "factIds": [
+       "f5"
+      ],
+      "covered": true
+     },
+     {
+      "id": "records",
+      "text": "Ability to complete daily and medication record sheets",
+      "docId": "answer",
+      "factIds": [
+       "f4",
+       "f12"
+      ],
+      "covered": true
+     },
+     {
+      "id": "team",
+      "text": "Ability to work with others in a team.",
+      "docId": "answer",
+      "factIds": [
+       "f7",
+       "f8"
+      ],
+      "covered": true
+     },
+     {
+      "id": "initiative",
+      "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+      "personal": true,
+      "docId": "answer",
+      "factIds": [
+       "f9"
+      ],
+      "covered": true
+     },
+     {
+      "id": "rota",
+      "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service",
+      "docId": "answer",
+      "factIds": [
+       "f10"
+      ],
+      "covered": true
+     },
+     {
+      "id": "evidence",
+      "text": "The experience that shows you can do the job",
+      "docId": "letter",
+      "factIds": [
+       "f2",
+       "f3",
+       "f4",
+       "f5",
+       "f6",
+       "f7",
+       "f8",
+       "f9",
+       "f10",
+       "f11",
+       "f12"
+      ],
+      "covered": true
+     }
+    ],
+    "draftBlockers": [],
+    "exportBlockers": [
+     "Approve the current supporting evidence.",
+     "Approve the current cover letter."
+    ],
+    "stats": {
+     "answer": {
+      "words": 213,
+      "wordLimit": 500,
+      "overLimit": false,
+      "unanswered": [],
+      "leftOut": [],
+      "ownWords": 0
+     },
+     "letter": {
+      "words": 171,
+      "wordLimit": 350,
+      "overLimit": false,
+      "unanswered": [],
+      "leftOut": [],
+      "ownWords": 0
+     }
+    },
+    "approvals": {
+     "answer": "none",
+     "letter": "none"
+    },
+    "citations": {
+     "f1": 1,
+     "f2": 2,
+     "f14": 3,
+     "f15": 4,
+     "f16": 5,
+     "f17": 6,
+     "f18": 7,
+     "f19": 8,
+     "f20": 9,
+     "f11": 10,
+     "f12": 11,
+     "f13": 12,
+     "f8": 13,
+     "f6": 14,
+     "f7": 15,
+     "f3": 16,
+     "f5": 17,
+     "f4": 18,
+     "f9": 19,
+     "f10": 20
+    },
+    "conflictDecisions": [],
+    "sourceCorrections": []
+   },
+   "result": {
+    "drafted": [
+     "answer",
+     "letter"
+    ],
+    "dropped": []
+   },
+   "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+   },
+   "budget": {
+    "capUsd": 78,
+    "spentUsd": 13.547391,
+    "reservedUsd": 0,
+    "remainingUsd": 64.452609
+   },
+   "voice": true,
+   "working": false,
+   "ms": 25189
+  }
+ ],
+ "type": "done",
+ "workspace": {
+  "schema": 1,
+  "revision": 8,
+  "createdAt": "2026-11-03T23:56:20.081Z",
+  "applicant": {
+   "name": "Ana",
+   "sources": [
+    {
+     "id": "s1",
+     "kind": "notes",
+     "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, Leeds como comecei em outubro de dois dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+     "at": "2026-11-03T23:56:47.858Z",
+     "language": "pt-PT",
+     "spoken": true,
+     "read": true
+    },
+    {
+     "id": "s2",
+     "kind": "answer",
+     "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+     "at": "2026-11-03T23:57:31.422Z",
+     "questionId": "q1",
+     "language": "pt-PT",
+     "read": true
+    }
+   ],
+   "facts": [
+    {
+     "id": "f1",
+     "statement": "I am Ana.",
+     "quote": "Chamome Ana.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f2",
+     "statement": "I have worked for 3 years in a care home in Leeds since October 2023.",
+     "quote": "Eu trabalho há três anos num lar em Leeds, Leeds como comecei em outubro de dois dois mil e vinte e três.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f3",
+     "statement": "I have medication training and do the morning medication round for 18 residents.",
+     "quote": "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f4",
+     "statement": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+     "quote": "No fim do turno escrevo as daily notes em inglês e assino a folha da medicação.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f5",
+     "statement": "Before the shift I read each resident's care plan and do what is in it.",
+     "quote": "Antes do turno leio o care plan de cada residente e faço o que lá está.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f6",
+     "statement": "I have moving and handling training and use a hoist.",
+     "quote": "Tenho a formação de moving and handling, uso grua",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f7",
+     "statement": "We always work in pairs.",
+     "quote": "trabalhamos sempre em dupla",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f8",
+     "statement": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f9",
+     "statement": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "quote": "Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f10",
+     "statement": "I did 3 years of nights and also weekends.",
+     "quote": "Fiz três anos de noites e também fins de semana.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f11",
+     "statement": "One night, I saw a bruise on a resident's arm.",
+     "quote": "Uma noite, vi uma nódoa negra negra no braço de uma residente.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f12",
+     "statement": "I recorded it and told the nurse on duty immediately.",
+     "quote": "Registei e contei logo à enfermeira de serviço",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f13",
+     "statement": "She made the safeguarding report.",
+     "quote": "ela fez a participação de safeguarding.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "other"
+    },
+    {
+     "id": "f14",
+     "statement": "For me, dignity is knocking on the door before entering",
+     "quote": "dignidade é bater à porta antes de entrar",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f15",
+     "statement": "I explain what I am going to do before personal hygiene",
+     "quote": "explicar o que vou fazer antes da higiene pessoal",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f16",
+     "statement": "I always close the curtains",
+     "quote": "fechar sempre as cortinas",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f17",
+     "statement": "I respect each person's culture and religion",
+     "quote": "respeito a cultura e a religião de cada pessoa",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f18",
+     "statement": "I ask what the person wants to eat",
+     "quote": "pergunto o que quer comer",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f19",
+     "statement": "I ask how the person wants to be treated",
+     "quote": "como quer ser tratada",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f20",
+     "statement": "I ask if the person prefers to be helped by a woman",
+     "quote": "se prefere ser ajudada por uma mulher",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    }
+   ]
+  },
+  "application": {
+   "form": {
+    "id": "north-yorkshire-council-care-and-support-worker-476577",
+    "company": "North Yorkshire Council",
+    "role": "Care and Support Worker",
+    "location": "Leyburn, North Yorkshire, UK",
+    "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+    "snapshot": {
+     "source": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+     "fetchedAt": "2026-11-03T19:09:48Z",
+     "postingUpdatedAt": "2026-11-03",
+     "note": "Public North Yorkshire Council advert (posted 03/11/2026, closing 16/11/2026), captured once during the event with its attached job description and person specification (fetched 2026-11-03T19:10:04Z). Used without partnership: the council is an example, not a partner or endorser. Points quote the person specification word for word, with whitespace tidied."
+    },
+    "documents": [
+     {
+      "id": "answer",
+      "title": "Supporting evidence",
+      "fieldId": null,
+      "question": "Supporting evidence (application form). The council's advice: \"refer to the job profile in the 'supporting evidence' section so the hiring manager can see relevant examples of the qualities they are looking for\". The job profile adds: \"You should use this information to make the best of your application by identifying some specific pieces of work you may have undertaken in any of these areas.\"",
+      "wordLimit": 500,
+      "requirements": [
+       {
+        "id": "dignity",
+        "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+        "personal": true,
+        "direct": true
+       },
+       {
+        "id": "safe",
+        "text": "Knowledge of keeping people safe from harm or abuse."
+       },
+       {
+        "id": "conditions",
+        "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+       },
+       {
+        "id": "moving",
+        "text": "Experience of moving & handling people."
+       },
+       {
+        "id": "medication",
+        "text": "Experience of Administration of Medication"
+       },
+       {
+        "id": "plans",
+        "text": "Ability to understand health care and social care assessments and support plans."
+       },
+       {
+        "id": "records",
+        "text": "Ability to complete daily and medication record sheets"
+       },
+       {
+        "id": "team",
+        "text": "Ability to work with others in a team."
+       },
+       {
+        "id": "initiative",
+        "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+        "personal": true
+       },
+       {
+        "id": "rota",
+        "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The advert, job description and council advice state no word limit; 500 words is a working guide for this demo, not the council's limit."
+     },
+     {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": null,
+      "required": false,
+      "question": "Cover letter (not requested by this advert; optional, prepared for the applicant only from her confirmed experience)",
+      "wordLimit": 350,
+      "requirements": [
+       {
+        "id": "evidence",
+        "text": "The experience that shows you can do the job"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The council asks for supporting evidence, not a letter; 350 words keeps a letter to one page. It asks only for her experience, so it never invents a motive she did not state."
+     }
+    ],
+    "portalTasks": [
+     "Create an account: Title, First name, Last name, Email address, Password",
+     "Enhanced Level DBS Disclosure (required for appointment)",
+     "The rest of the council's application form sits behind the account and was not opened"
+    ]
+   },
+   "coverage": {
+    "evidence": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f6",
+     "f7",
+     "f8",
+     "f9",
+     "f10",
+     "f11",
+     "f12"
+    ],
+    "medication": [
+     "f3"
+    ],
+    "records": [
+     "f4",
+     "f12"
+    ],
+    "plans": [
+     "f5"
+    ],
+    "moving": [
+     "f6",
+     "f7"
+    ],
+    "team": [
+     "f7",
+     "f8"
+    ],
+    "conditions": [
+     "f8",
+     "f9"
+    ],
+    "initiative": [
+     "f9"
+    ],
+    "rota": [
+     "f10"
+    ],
+    "safe": [
+     "f11",
+     "f12",
+     "f13"
+    ],
+    "dignity": [
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ]
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "requirementId": "dignity",
+     "text": "Na unidade de demência do lar em Leeds, o que aprendeu com os cartões com fotografias da comida sobre respeitar as escolhas de cada residente e tratar todas as pessoas de forma justa?",
+     "why": "The form asks how equality, dignity, respect and human rights apply to this role; your notes describe making the cards but not what you understand about respecting each resident.",
+     "status": "answered",
+     "askedBy": "model",
+     "english": "In the dementia unit at the care home in Leeds, what did you learn from the food photograph cards about respecting each resident's choices and treating everyone fairly?",
+     "sourceId": "s2"
+    }
+   ],
+   "documents": {
+    "answer": {
+     "id": "answer",
+     "revision": 1,
+     "segments": [
+      {
+       "id": "answer-1",
+       "kind": "claim",
+       "text": "I am Ana, and I have worked for 3 years in a care home in Leeds since October 2023.",
+       "factIds": [
+        "f1",
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-2",
+       "kind": "claim",
+       "text": "For me, dignity is knocking on the door before entering.",
+       "factIds": [
+        "f14"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-3",
+       "kind": "claim",
+       "text": "I explain what I am going to do before personal hygiene.",
+       "factIds": [
+        "f15"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-4",
+       "kind": "claim",
+       "text": "I always close the curtains.",
+       "factIds": [
+        "f16"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-5",
+       "kind": "claim",
+       "text": "I respect each person's culture and religion.",
+       "factIds": [
+        "f17"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-6",
+       "kind": "claim",
+       "text": "I ask what the person wants to eat.",
+       "factIds": [
+        "f18"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-7",
+       "kind": "claim",
+       "text": "I ask how the person wants to be treated.",
+       "factIds": [
+        "f19"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-8",
+       "kind": "claim",
+       "text": "I ask if the person prefers to be helped by a woman.",
+       "factIds": [
+        "f20"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-9",
+       "kind": "claim",
+       "text": "One night, I saw a bruise on a resident's arm.",
+       "factIds": [
+        "f11"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-10",
+       "kind": "claim",
+       "text": "I recorded it and told the nurse on duty immediately.",
+       "factIds": [
+        "f12"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-11",
+       "kind": "claim",
+       "text": "She made the safeguarding report.",
+       "factIds": [
+        "f13"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-12",
+       "kind": "claim",
+       "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-13",
+       "kind": "claim",
+       "text": "I have moving and handling training and use a hoist.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-14",
+       "kind": "claim",
+       "text": "We always work in pairs.",
+       "factIds": [
+        "f7"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-15",
+       "kind": "claim",
+       "text": "I have medication training and do the morning medication round for 18 residents.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-16",
+       "kind": "claim",
+       "text": "Before the shift I read each resident's care plan and do what is in it.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-17",
+       "kind": "claim",
+       "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-18",
+       "kind": "claim",
+       "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-19",
+       "kind": "claim",
+       "text": "I did 3 years of nights and also weekends.",
+       "factIds": [
+        "f10"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      }
+     ]
+    },
+    "letter": {
+     "id": "letter",
+     "revision": 1,
+     "segments": [
+      {
+       "id": "letter-1",
+       "kind": "frame",
+       "text": "Dear North Yorkshire Council hiring team,",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-2",
+       "kind": "frame",
+       "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-3",
+       "kind": "claim",
+       "text": "I have worked for 3 years in a care home in Leeds since October 2023.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-4",
+       "kind": "claim",
+       "text": "Before the shift I read each resident's care plan and do what is in it.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-5",
+       "kind": "claim",
+       "text": "I have medication training and do the morning medication round for 18 residents.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-6",
+       "kind": "claim",
+       "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-7",
+       "kind": "claim",
+       "text": "I have moving and handling training and use a hoist.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-8",
+       "kind": "claim",
+       "text": "We always work in pairs.",
+       "factIds": [
+        "f7"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-9",
+       "kind": "claim",
+       "text": "I did 3 years of nights and also weekends.",
+       "factIds": [
+        "f10"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-10",
+       "kind": "claim",
+       "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-11",
+       "kind": "claim",
+       "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-12",
+       "kind": "claim",
+       "text": "One night, I saw a bruise on a resident's arm.",
+       "factIds": [
+        "f11"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-13",
+       "kind": "claim",
+       "text": "I recorded it and told the nurse on duty immediately.",
+       "factIds": [
+        "f12"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-14",
+       "kind": "frame",
+       "text": "Thank you for considering my application.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-15",
+       "kind": "frame",
+       "text": "Yours sincerely, Ana",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      }
+     ]
+    }
+   },
+   "repair": null,
+   "approvals": {
+    "answer": null,
+    "letter": null
+   },
+   "exports": [],
+   "checked": [
+    "dignity"
+   ]
+  },
+  "updatedAt": "2026-11-03T23:58:05.598Z"
+ },
+ "view": {
+  "next": "approve",
+  "coverage": [
+   {
+    "id": "dignity",
+    "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+    "personal": true,
+    "direct": true,
+    "docId": "answer",
+    "factIds": [
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ],
+    "covered": true
+   },
+   {
+    "id": "safe",
+    "text": "Knowledge of keeping people safe from harm or abuse.",
+    "docId": "answer",
+    "factIds": [
+     "f11",
+     "f12",
+     "f13"
+    ],
+    "covered": true
+   },
+   {
+    "id": "conditions",
+    "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities",
+    "docId": "answer",
+    "factIds": [
+     "f8",
+     "f9"
+    ],
+    "covered": true
+   },
+   {
+    "id": "moving",
+    "text": "Experience of moving & handling people.",
+    "docId": "answer",
+    "factIds": [
+     "f6",
+     "f7"
+    ],
+    "covered": true
+   },
+   {
+    "id": "medication",
+    "text": "Experience of Administration of Medication",
+    "docId": "answer",
+    "factIds": [
+     "f3"
+    ],
+    "covered": true
+   },
+   {
+    "id": "plans",
+    "text": "Ability to understand health care and social care assessments and support plans.",
+    "docId": "answer",
+    "factIds": [
+     "f5"
+    ],
+    "covered": true
+   },
+   {
+    "id": "records",
+    "text": "Ability to complete daily and medication record sheets",
+    "docId": "answer",
+    "factIds": [
+     "f4",
+     "f12"
+    ],
+    "covered": true
+   },
+   {
+    "id": "team",
+    "text": "Ability to work with others in a team.",
+    "docId": "answer",
+    "factIds": [
+     "f7",
+     "f8"
+    ],
+    "covered": true
+   },
+   {
+    "id": "initiative",
+    "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+    "personal": true,
+    "docId": "answer",
+    "factIds": [
+     "f9"
+    ],
+    "covered": true
+   },
+   {
+    "id": "rota",
+    "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service",
+    "docId": "answer",
+    "factIds": [
+     "f10"
+    ],
+    "covered": true
+   },
+   {
+    "id": "evidence",
+    "text": "The experience that shows you can do the job",
+    "docId": "letter",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f6",
+     "f7",
+     "f8",
+     "f9",
+     "f10",
+     "f11",
+     "f12"
+    ],
+    "covered": true
+   }
+  ],
+  "draftBlockers": [],
+  "exportBlockers": [
+   "Approve the current supporting evidence.",
+   "Approve the current cover letter."
+  ],
+  "stats": {
+   "answer": {
+    "words": 213,
+    "wordLimit": 500,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   },
+   "letter": {
+    "words": 171,
+    "wordLimit": 350,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   }
+  },
+  "approvals": {
+   "answer": "none",
+   "letter": "none"
+  },
+  "citations": {
+   "f1": 1,
+   "f2": 2,
+   "f14": 3,
+   "f15": 4,
+   "f16": 5,
+   "f17": 6,
+   "f18": 7,
+   "f19": 8,
+   "f20": 9,
+   "f11": 10,
+   "f12": 11,
+   "f13": 12,
+   "f8": 13,
+   "f6": 14,
+   "f7": 15,
+   "f3": 16,
+   "f5": 17,
+   "f4": 18,
+   "f9": 19,
+   "f10": 20
+  },
+  "conflictDecisions": [],
+  "sourceCorrections": []
+ },
+ "result": {
+  "drafted": [
+   "answer",
+   "letter"
+  ],
+  "dropped": []
+ },
+ "mode": {
+  "id": "meta",
+  "label": "Meta Muse Wonder 1.0",
+  "model": "muse-wonder-1.0",
+  "isMeta": true
+ },
+ "budget": {
+  "capUsd": 78,
+  "spentUsd": 13.547391,
+  "reservedUsd": 0,
+  "remainingUsd": 64.452609
+ },
+ "voice": true,
+ "working": false,
+ "ms": 25189
+}

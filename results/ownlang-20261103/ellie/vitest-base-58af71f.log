@@ -1,0 +1,12 @@
+
+ RUN  v5.0.5 <tmp>/scratchpad/base58
+
+
+ Test Files  183 passed (183)
+      Tests  1134 passed (1134)
+   Start at  20:48:02
+   Duration  35.84s (environment 42%, tests 38%, import 18%, transform 2%, worker 1%)
+
+    Isolate  183 workers spawned · ~200ms startup each (spawn + environment, per file)
+             at least ~18.14s faster with isolate: false — reuses workers across files instead of one per file
+

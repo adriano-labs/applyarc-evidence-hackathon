@@ -43,11 +43,12 @@ export function createStore({ file, seed, now = () => new Date().toISOString() }
     return run;
   }
 
-  function reset() {
+  // A fresh workspace, or one made another way (a prepared state), written as this applicant's.
+  function reset(make = seed) {
     pendingCount += 1;
     const run = queue.then(() => {
       try {
-        const ws = seed();
+        const ws = make();
         writeJsonAtomic(file, ws);
         return ws;
       } finally {
