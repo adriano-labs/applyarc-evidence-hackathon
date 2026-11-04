@@ -54,7 +54,7 @@ describe('the welcome', () => {
     expect(within(cards[0]).getByText(ana.blurb)).toBeTruthy();
     const primary = within(cards[0]).getByRole('button', { name: 'Try it with Ana’s voice note' });
     expect(primary.className).toMatch(/\bprimary\b/);
-    expect(within(cards[0]).getByText('Fictional applicant. Synthetic voice, made before the demo; not a runtime model. Nothing is sent.')).toBeTruthy();
+    expect(within(cards[0]).getByText('Fictional applicant. Synthetic voice, made before the demo; not a runtime model. Nothing is sent to an employer.')).toBeTruthy();
     const ellieButtons = within(cards[1]).getAllByRole('button').map((b) => [b.textContent, b.className]);
     expect(ellieButtons).toEqual([['Start at the key moment', 'btn'], ['Try it with Ellie’s notes', 'btn link small']]);
     fireEvent.click(primary);
@@ -67,7 +67,7 @@ describe('the welcome', () => {
     rerender(<SampleCards samples={[ana]} liveModel={false} onStart={vi.fn()} />);
     expect(screen.getByText(/With no live model, her written note is used \(typed, not spoken\)\./)).toBeTruthy();
     rerender(<SampleCards samples={[{ ...ana, timing: 'About 5 minutes on Muse Wonder: she speaks, you confirm, the correction is the last step.' }]} liveModel voice onStart={vi.fn()} />);
-    expect(screen.getByText(/not a runtime model\. About 5 minutes on Muse Wonder: she speaks, you confirm, the correction is the last step\. Nothing is sent\./)).toBeTruthy();
+    expect(screen.getByText(/not a runtime model\. About 5 minutes on Muse Wonder: she speaks, you confirm, the correction is the last step\. Nothing is sent to an employer\./)).toBeTruthy();
   });
 
   it('leads with the council’s own line on AI when a sample speaks, and names Meta’s two models', () => {

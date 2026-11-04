@@ -48,11 +48,16 @@ describe('keeping your own sentence after a correction', () => {
     const letter = pack.documents.find((d) => d.id === 'letter');
     expect(letter.ownWords).toBe(1);
     expect(letter.sentences.find((s) => s.text === edited).own).toBe(true);
+    // The corrected fact f3 covered "experience": after the correction that link waits
+    // for review, so the requirement is listed as left out (not as covered-but-uncited).
     expect(letter.notAnswered).toEqual([
-      'The experience that shows you can do the job',
-      'ApplyArc quality check: include one confirmed example of your own contribution.',
       'Why this role and this company, in your own words',
+      'The experience that shows you can do the job',
     ]);
-    expect(pack.documents.find((d) => d.id === 'answer').notAnswered).toEqual(['What you were trying to achieve', 'The main components or technologies you used']);
+    expect(pack.documents.find((d) => d.id === 'answer').notAnswered).toEqual([
+      'What you were trying to achieve',
+      'The main components or technologies you used',
+      'Your individual contribution, if you worked as part of a team',
+    ]);
   });
 });

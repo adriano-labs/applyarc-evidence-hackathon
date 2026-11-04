@@ -1,6 +1,6 @@
 # Build log
 
-Commit times (UTC) and subjects from the private development repository, oldest first: 259 commits from `925f815` to `b46a341`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
+Commit times (UTC) and subjects from the private development repository, oldest first: 265 commits from `925f815` to `40bf7b5`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
 
 | Day (UTC) | Commits |
 |---|---:|
@@ -12,7 +12,7 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-10-31 | 1 |
 | 2026-11-02 | 31 |
 | 2026-11-03 | 62 |
-| 2026-11-04 | 19 |
+| 2026-11-04 | 25 |
 
 | Time (UTC) | Commit | Subject |
 |---|---|---|
@@ -275,3 +275,9 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-11-04 14:23 | `116847e` | docs: state one business model: councils and care employers pay, the applicant uses it free |
 | 2026-11-04 14:23 | `c890ad9` | docs: regenerate the build log |
 | 2026-11-04 14:32 | `b46a341` | docs: say what Verify shows on screen, and how a returning visitor starts fresh |
+| 2026-11-04 14:32 | `476c418` | docs: regenerate the build log |
+| 2026-11-04 15:14 | `38d5651` | Coverage: a requirement whose fact was corrected needs review and no longer counts as covered until linked again |
+| 2026-11-04 15:14 | `21d75c1` | Bring in the published docs from 476c418 |
+| 2026-11-04 15:15 | `b73e056` | Docs: quotes checked against the reviewed transcript, proposed buyers, Portuguese only, estimated costs, private-repo commit ids, and the coverage fix the film predates |
+| 2026-11-04 15:17 | `353d729` | Docs: the film shows the earlier build's coverage after a correction; the live links mark it needs review |
+| 2026-11-04 15:22 | `40bf7b5` | Docs: both live links now run 353d729 |

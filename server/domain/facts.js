@@ -119,7 +119,18 @@ export function changeFact(ws, factId, text, now = new Date().toISOString(), glo
   const source = addSource(ws, { kind: 'correction', text: wording, language: fact.language, now });
   fact.history.push({ statement: fact.statement, quote: fact.quote, sourceId: fact.sourceId, at: now, ...(fact.actor ? { actor: fact.actor } : {}) });
   Object.assign(fact, { ...english, quote: normalise(wording), sourceId: source.id });
+  markForReview(ws, fact.id);
   return fact;
+}
+
+// A changed fact may no longer say what its requirements need (a dropped "and
+// weekends"), so each link it had waits for review and stops counting as covered.
+function markForReview(ws, factId) {
+  if (!ws.application?.coverage) return;
+  const review = (ws.application.coverageReview ??= {});
+  for (const [requirementId, ids] of Object.entries(ws.application.coverage)) {
+    if (ids.includes(factId) && !(review[requirementId] ??= []).includes(factId)) review[requirementId].push(factId);
+  }
 }
 
 // The applicant's own work: in English, a quote where they say "I" did it; in another
@@ -135,11 +146,14 @@ export function isOwnWork(ws, fact) {
 // it" counts as "I fixed it".
 export function coverage(ws) {
   return requirements(ws).map((r) => {
-    const facts = (ws.application.coverage[r.id] ?? [])
+    const pending = ws.application.coverageReview?.[r.id] ?? [];
+    const linked = (ws.application.coverage[r.id] ?? [])
       .map((id) => findFact(ws, id))
       .filter((f) => f?.status === 'confirmed');
+    const facts = linked.filter((f) => !pending.includes(f.id));
     const covered = facts.length > 0 && (!r.personal || facts.some((f) => isOwnWork(ws, f)));
-    return { ...r, factIds: facts.map((f) => f.id), covered };
+    const needsReview = !covered && linked.some((f) => pending.includes(f.id));
+    return { ...r, factIds: facts.map((f) => f.id), covered, ...(needsReview ? { needsReview } : {}) };
   });
 }
 
@@ -165,9 +179,12 @@ export function linkFacts(ws, links) {
         continue;
       }
       const list = ws.application.coverage[requirementId] ?? [];
-      if (list.includes(factId)) {
+      const pending = ws.application.coverageReview?.[requirementId] ?? [];
+      if (list.includes(factId) && !pending.includes(factId)) {
         continue;
       }
+      // Linking a changed fact again is the review: it counts as covering once more.
+      if (pending.includes(factId)) pending.splice(pending.indexOf(factId), 1);
       link(ws, factId, [requirementId]);
       linked.push({ requirementId, factId });
     }
