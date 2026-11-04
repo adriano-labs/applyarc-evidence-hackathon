@@ -1,18 +1,129 @@
 # ApplyArc Evidence
 
-**Say what you did, in your own language. Every factual sentence the app writes cites your exact spoken words, checked by code against the transcript you reviewed, so you can defend it at interview.** A real council advert says: "Using AI? Please follow our guidance to ensure your application reflects your own knowledge and experience." Ana, a fictional care worker, answers it in Portuguese, and every factual English sentence opens her own words. Fix one fact once, and only the sentences that cited it reopen, in both documents. Built for applicants, not employers: it never screens, scores or ranks anyone, and it never submits anything.
+**Say what you did, in your own language.**
+
+Every factual sentence the app writes cites your exact spoken words, checked by code against the transcript you reviewed, so you can defend it at interview.
+
+[Watch the demo](https://youtu.be/l3Fjn1Sp0vE) · [Try Wonder](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) · [Try Spark Open](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/). Filmed on 3ee23f2; the live demos now run bf739b2.
+
+**Contents:** [Disclosure](#disclosure) · [Judges, short on time?](#judges-short-on-time) · [Meta models](#meta-models) · [Results](#results) · [Real vs simulated](#real-vs-simulated) · [At a glance](#at-a-glance) · [Judge path](#judge-path) · [How Meta is used](#how-meta-is-used) · [What the tests found](#what-the-tests-found) · [Run from this repository](#run-from-this-repository)
+
+## Disclosure
+
+> ApplyArc, a UK job-search startup, existed before the hackathon. Everything in this repository was built from 26 October 2026.
+>
+> [Provenance](PROVENANCE.md) · [Build log](BUILD-LOG.md)
+
+## Judges, short on time?
+
+Three steps on the [live main demo](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/). This is the [judge path](#judge-path)'s key moment, about a minute.
+
+1. Open the live demo and press **Start at Ana's key moment**.
+   **You should see:** her facts confirmed and both documents approved, prepared from a real Muse Wonder run on 3 November (22:03 to 22:08 UTC) whose transcript was checked first. The screen says so.
+2. Press **Use Ana's spoken correction**. Her clip goes to Muse Voice Transcribe, and her words come back for you to check. Press **Add Ana's note**. Wonder flags the contradiction itself and asks which is right, in Portuguese with the English beneath. Choose **Use this correction**.
+   **You should see:** **What changed**: the old fact struck through and the correction in its place. The app reopens only the two sentences that cite it, one in each document, and clears both approvals. Wonder proposes a rewrite for each.
+3. **Take the rewrite**, **Apply 2 changes**, and approve both documents.
+   **You should see:** the finish screen lists what just happened. **See the application** is stamped NOT SUBMITTED, with the council's own steps still to do. Then **Download Evidence Pass** and **Verify this run**: seven checks by code, with no model call. Following this route, expect six green checks and one grey.
+
+[Open-weight demo](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/): spoken notes are off there. Press **Try it with Ana's written note**, and the screen says so. [Where that edition differs](#open-weight-edition).
+
+No key, from this repository: `pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path).
+
+## Meta models
+
+| Model | Where it runs | Job | Where in code |
+|---|---|---|---|
+| Muse Voice Transcribe 1.0 (`muse-voice-transcribe-1.0`) | Meta Model API (`api.meta.ai/v1/asr/transcribe`) | Hears her: turns her spoken notes, her spoken answer and her spoken correction into text she checks (main link only) | [`server/agent/voice.js`](server/agent/voice.js) |
+| Muse Wonder 1.0 (`muse-wonder-1.0`) | Meta Model API, Responses API (`api.meta.ai`) | Reads, asks, drafts, reviews and repairs on the main link, calling the app's own `verify_quote` as a native tool; a second Wonder call reviews every sentence | [`server/agent/providers.js`](server/agent/providers.js), [`server/agent/model.js`](server/agent/model.js), [`server/agent/loop.js`](server/agent/loop.js), [`server/agent/tools.js`](server/agent/tools.js) |
+| Muse Spark Open (`meta-models/Muse-Spark-Open-816B-A42B`) | Modal, US West, chat completions | Every model step on the open-weight link | [`server/agent/providers.js`](server/agent/providers.js), [`server/agent/chatWire.js`](server/agent/chatWire.js) |
+
+No model outside Meta's runs in the app. [Details](#how-meta-is-used).
+
+## Results
+
+These are historical scripted tests with fictional applicants; voice testing used synthetic speech; costs are estimates, and the Spark Open journeys are estimated using Muse Spark 1.3 prices as a proxy.
+
+| Result | As written | Where that number is written |
+|---|---|---|
+| Scripted Portuguese journeys on Muse Wonder that reached the NOT SUBMITTED export | 6 of 6 | [Measured, in full](#measured-in-full) |
+| Quotes checked word for word | 130 of 130 | [Measured, in full](#measured-in-full) |
+| Estimated model cost a Wonder journey | $0.39 to $0.47 | [Measured, in full](#measured-in-full) |
+| Full journeys on Muse Spark Open through Modal | 3 of 3 | [Measured, in full](#measured-in-full) |
+| Estimated cost of those Spark Open journeys, using Muse Spark 1.3 prices as a proxy | $0.10 to $0.13 | [Measured, in full](#measured-in-full) |
+| Word error on the 59-second notes clip | 3.8% to 8.8% | [Measured, in full](#measured-in-full) |
+| Word error on the two short clips | 0% to 5.9% | [Measured, in full](#measured-in-full) |
+| Word error on the correction in the live-link run, which repeated three words | 17.6% | [Measured, in full](#measured-in-full) |
+
+The runs behind those totals are in [What the tests found](#what-the-tests-found).
+
+## Real vs simulated
+
+| Real | Simulated, or not yet true |
+|---|---|
+| The live main demo calls Muse Voice Transcribe and Muse Wonder. The open demo calls Muse Spark Open through Modal. **Verify this run** is seven checks by code, with no model call. | Ana is fictional. Her three clips were made with a text-to-speech service (Azure AI Speech, voice `pt-PT-RaquelNeural`) and are labelled synthetic on screen. That service is not called by the app. |
+| The North Yorkshire Council advert is a public advert posted 3 November 2026, captured on 3 November 2026 at 19:09 UTC, and quoted beside the welcome screen. | Used without partnership. The welcome screen says "a public advert, not a partner or endorser". No customers, pilots or revenue yet. Willingness to pay is not yet tested. |
+| The Graphcore form is a public snapshot dated 26 October 2026. | Not a partnership. Ellie is a fictional graduate. |
+| | Fixture outputs are hand-written and labelled on screen. They are not Meta output. |
+
+![One correction, typed once: the old fact is struck through and the correction sits in its place; 2 sentences reopened across 2 documents, 21 untouched, both approvals cleared](docs/what-changed.png)
+
+<sub>Real frame from the hosted Muse Wonder run of 3 November 2026. Ellie is a fictional graduate; the Graphcore form is a public snapshot (26 October 2026; not a partnership).</sub>
+
+## At a glance
 
 | | |
 |---|---|
-| **Watch** | [The 2:56 film, with English subtitles](https://youtu.be/l3Fjn1Sp0vE), recorded on the live links at the final build `3ee23f2`. The founder speaks every line. Ana is fictional; her voice is synthetic and labelled on screen. |
-| **Try it live with Ana** | [Open the demo](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) and press **Try it with Ana's voice note**: her Portuguese clip goes to Muse Voice Transcribe live, and Muse Wonder does the rest (about two minutes of model time; 122 to 144 s end to end in five of six scripted runs, 134 s of them on the live link; the sixth took 371 s because its first reading step took 207 s over five attempts). Short on time? **Start at Ana's key moment** shows the correction live in about a minute. No sign-in; synthetic data only; every walk-through step is tagged "Synthetic voice, fictional applicant · nothing is submitted" ("Fictional applicant" when she starts from her written note). [Judge path](#judge-path). |
-| **Try it on open weights** | **Built with Muse Spark Open**, the weights Meta released on 15 October 2026: [the open-weight edition](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/), the same checks served through Modal (US West). Spoken notes are off there: press **Try it with Ana's written note**, and the screen says so. At her key moment Spark Open sometimes reads her correction as new facts; the screen says so, and **Correct this fact** makes the correction in one click ([what the tests found](#open-weight-edition)). |
-| **Who pays** | Proposed buyers are councils and care employers, who would fund free access for applicants; willingness to pay is not yet tested. They need applications in the applicant's own words. The applicant never pays, and the employer never screens, scores or ranks anyone with it. This is the plan: no customers, pilots or revenue yet. [Business case](#business-case-who-pays). |
-| **Prizes entered** | Startup track. Best Build on Meta Open Weight Models: [where Muse Spark Open runs, with Modal's request ids](#open-weight-edition). Best Agentic Use-Case: [one full agent trace](#best-agentic-use-case-one-full-trace). |
-| **No key needed** | `pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path) (hand-written outputs, labelled on screen). 1,270 tests in 204 files. |
-| **How Meta is used** | `muse-voice-transcribe-1.0` (Meta Model API) hears her; `muse-wonder-1.0` (Meta Model API, Responses API) reads, asks, drafts, reviews and repairs, calling the app's own `verify_quote` as a native tool inside its stream and citing fact ids from a per-call enum, and a second Wonder call reviews every sentence; `meta-models/Muse-Spark-Open-816B-A42B` (Modal) runs every model step on the open-weight link. No model outside Meta's runs in the app. [Details](#how-meta-is-used). |
-| **Measured** | 6 of 6 scripted Portuguese journeys on Muse Wonder on 3 November reached the NOT SUBMITTED export, the last on the live link at `a859bf8` (private repo commit): 130 of 130 quotes checked word for word, the one question asked in Portuguese each time, the contradiction caught, 2 sentences reopened, **Verify this run** holding on every check that applies, an estimated model cost of $0.39 to $0.47 a journey. 3 of 3 full journeys on Muse Spark Open through Modal (3 November once, 4 November twice; $0.10 to $0.13, estimated using Muse Spark 1.3 prices as a proxy). Transcription on her synthetic voice: 3.8% to 8.8% word error on the 59-second notes clip; 0% to 5.9% on the two short clips, except 17.6% on the correction in the live-link run, which repeated three words. [Every run and failure](#what-the-tests-found). |
-| **Built during the event** | ApplyArc, a UK job-search startup, existed before the hackathon. Everything in this repository was built from 26 October 2026: [provenance](PROVENANCE.md) and the [build log](BUILD-LOG.md). |
+| **Watch** | [The 2:56 film, with English subtitles](https://youtu.be/l3Fjn1Sp0vE). Filmed on 3ee23f2; the live demos now run bf739b2. [In full](#watch-in-full). |
+| **Try it live with Ana** | [Open the demo](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) and press **Try it with Ana's voice note**, or **Start at Ana's key moment**. [Judge path](#judge-path). |
+| **Try it on open weights** | [The open-weight edition](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/): press **Try it with Ana's written note**. [In full](#try-it-on-open-weights-in-full). |
+| **Who pays** | Proposed buyers are councils and care employers, who would fund free access for applicants. No customers, pilots or revenue yet. [Business case](#business-case-who-pays). |
+| **Prizes entered** | Startup track. Best Build on Meta Open Weight Models. Best Agentic Use-Case. [Open weights](#open-weight-edition). [One full trace](#best-agentic-use-case-one-full-trace). |
+| **No key needed** | `pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path). Latest recorded validation: 1,274 tests in 204 files — see [PR #17](https://github.com/adriano-labs/applyarc-evidence-hackathon/pull/17). |
+| **How Meta is used** | Voice Transcribe hears her; Wonder reads, asks, drafts, reviews and repairs; Spark Open runs the open-weight link. [Meta models](#meta-models). [Details](#how-meta-is-used). |
+| **Measured** | 6 of 6 Wonder journeys; 130 of 130 quotes; $0.39 to $0.47 a journey. 3 of 3 Spark Open journeys; $0.10 to $0.13. [Results](#results). |
+| **Built during the event** | This repository was built from 26 October 2026. [Provenance](PROVENANCE.md). [Build log](BUILD-LOG.md). |
+
+## Wording moved from the top
+
+The sentences below are the opening and the summary cells as they stood before this shorter top. Nothing from them was removed.
+
+**Say what you did, in your own language. Every factual sentence the app writes cites your exact spoken words, checked by code against the transcript you reviewed, so you can defend it at interview.** A real council advert says: "Using AI? Please follow our guidance to ensure your application reflects your own knowledge and experience." Ana, a fictional care worker, answers it in Portuguese, and every factual English sentence opens her own words. Fix one fact once, and only the sentences that cited it reopen, in both documents. Built for applicants, not employers: it never screens, scores or ranks anyone, and it never submits anything.
+
+### Watch, in full
+
+[The 2:56 film, with English subtitles](https://youtu.be/l3Fjn1Sp0vE). Filmed on 3ee23f2; the live demos now run bf739b2. The founder speaks every line. Ana is fictional; her voice is synthetic and labelled on screen.
+
+### Try it live with Ana, in full
+
+[Open the demo](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) and press **Try it with Ana's voice note**: her Portuguese clip goes to Muse Voice Transcribe live, and Muse Wonder does the rest (about two minutes of model time; 122 to 144 s end to end in five of six scripted runs, 134 s of them on the live link; the sixth took 371 s because its first reading step took 207 s over five attempts). Short on time? **Start at Ana's key moment** shows the correction live in about a minute. No sign-in; synthetic data only; every walk-through step is tagged "Synthetic voice, fictional applicant · nothing is submitted" ("Fictional applicant" when she starts from her written note). [Judge path](#judge-path).
+
+### Try it on open weights, in full
+
+**Built with Muse Spark Open**, the weights Meta released on 15 October 2026: [the open-weight edition](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/), the same checks served through Modal (US West). Spoken notes are off there: press **Try it with Ana's written note**, and the screen says so. At her key moment Spark Open sometimes reads her correction as new facts; the screen says so, and **Correct this fact** makes the correction in one click ([what the tests found](#open-weight-edition)).
+
+### Who pays, in full
+
+Proposed buyers are councils and care employers, who would fund free access for applicants; willingness to pay is not yet tested. They need applications in the applicant's own words. The applicant never pays, and the employer never screens, scores or ranks anyone with it. This is the plan: no customers, pilots or revenue yet. [Business case](#business-case-who-pays).
+
+### Prizes entered, in full
+
+Startup track. Best Build on Meta Open Weight Models: [where Muse Spark Open runs, with Modal's request ids](#open-weight-edition). Best Agentic Use-Case: [one full agent trace](#best-agentic-use-case-one-full-trace).
+
+### No key needed, in full
+
+`pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path) (hand-written outputs, labelled on screen). On the filmed build `3ee23f2`, a clean clone passed 1,270 tests in 204 files.
+
+### How Meta is used, in full
+
+`muse-voice-transcribe-1.0` (Meta Model API) hears her; `muse-wonder-1.0` (Meta Model API, Responses API) reads, asks, drafts, reviews and repairs, calling the app's own `verify_quote` as a native tool inside its stream and citing fact ids from a per-call enum, and a second Wonder call reviews every sentence; `meta-models/Muse-Spark-Open-816B-A42B` (Modal) runs every model step on the open-weight link. No model outside Meta's runs in the app. [Details](#how-meta-is-used).
+
+### Measured, in full
+
+6 of 6 scripted Portuguese journeys on Muse Wonder on 3 November reached the NOT SUBMITTED export, the last on the live link at `a859bf8` (private repo commit): 130 of 130 quotes checked word for word, the one question asked in Portuguese each time, the contradiction caught, 2 sentences reopened, **Verify this run** holding on every check that applies, an estimated model cost of $0.39 to $0.47 a journey. 3 of 3 full journeys on Muse Spark Open through Modal (3 November once, 4 November twice; $0.10 to $0.13, estimated using Muse Spark 1.3 prices as a proxy). Transcription on her synthetic voice: 3.8% to 8.8% word error on the 59-second notes clip; 0% to 5.9% on the two short clips, except 17.6% on the correction in the live-link run, which repeated three words. [Every run and failure](#what-the-tests-found).
+
+### Built during the event, in full
+
+ApplyArc, a UK job-search startup, existed before the hackathon. Everything in this repository was built from 26 October 2026: [provenance](PROVENANCE.md) and the [build log](BUILD-LOG.md).
 
 ## The problem, and the council's line
 
@@ -45,7 +156,7 @@ The council asked for her own knowledge and experience. She said it in Portugues
 
 **About "Verify this run".** It runs seven checks by code, with no model call. On Ana's runs the seventh, sentences in her own wording, has nothing to check, so the screen shows it grey: 6 green and 1 grey is the best result there. On the key-moment route the export check turns green once you open the application. Older results below that say "7 of 7" count that grey check as holding. **Visited before?** Each browser keeps its own workspace for 7 days; press **Start again** for a fresh one.
 
-**Coverage after a correction.** The film was recorded on the final build `3ee23f2` and shows the evenings-and-weekends requirement staying **Needs review** after Ana's correction. An earlier build (`541283d`) kept a requirement covered after the fact behind it changed, although the corrected fact no longer mentions weekends; from `6fa948a` such a requirement stops counting as covered, and from `3ee23f2` the model cannot cover it with another fact either: it stays **Needs review** until the applicant answers its question, and the application lists it if she skips it.
+**Coverage after a correction.** Filmed on 3ee23f2; the live demos now run bf739b2. The film shows the evenings-and-weekends requirement staying **Needs review** after Ana's correction. An earlier build (`541283d`) kept a requirement covered after the fact behind it changed, although the corrected fact no longer mentions weekends; from `6fa948a` such a requirement stops counting as covered, and from `3ee23f2` the model cannot cover it with another fact either: it stays **Needs review** until the applicant answers its question, and the application lists it if she skips it.
 
 **Ana's key moment (about a minute).** Open the [live demo](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) and press **Start at Ana's key moment**. Her facts are confirmed and both documents approved, prepared from a real Muse Wonder run on 3 November (22:03 to 22:08 UTC) whose transcript was checked first, with misheard words fixed as the check screen asks; the screen says so, and a visitor is never charged for that run. Press **Use Ana's spoken correction**: her clip ("Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.") goes to Muse Voice Transcribe, and her words come back for you to check. Press **Add Ana's note**. Wonder reads it against her confirmed facts, flags the contradiction itself and asks which is right, in Portuguese with the English beneath. Choose **Use this correction**. **What changed** shows the old fact struck through and the correction in its place: the app reopens only the two sentences that cite it, one in each document, and clears both approvals. Wonder proposes a rewrite for each and its own review checks them. **Take the rewrite** (or **Keep as is**, or **Write my own**), **Apply 2 changes**, approve both documents, and the finish screen lists what just happened. Press **See the application** (stamped NOT SUBMITTED, with the council's own steps still to do), **Download Evidence Pass**, then **Meta activity** and **Verify this run**: seven checks run on your own workspace without calling a model. Measured: 25.8 s and $0.07 through the API when the state was saved (3 November, 22:09 UTC); 23.1 s and $0.07 through the API on the live link at `a859bf8`, the contradiction asked in Portuguese (23:58 UTC); and 47 s to the Evidence Pass in a phone-sized browser on the live link at `d87dd35`, which has the same prepared state. Her three years in the care home (fact 1) stay; the correction changes fact 19, how many of those years were nights: two, not three. The finish screen runs **Verify this run** by itself, so the result is in view at the end of this route too.
 
