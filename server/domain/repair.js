@@ -103,30 +103,21 @@ export function undecided(repair) {
   return repair.items.filter((i) => i.status !== 'proposed' && !i.decision);
 }
 
-function sameIds(a = [], b = []) {
-  return a.length === b.length && a.every((id, i) => id === b[i]);
-}
-
-// Keeping the wording is separate from whether the document changed. A kept sentence
-// stays word for word, but it becomes hers and drops the corrected fact, so the
-// revision still moves. Accepting a rewrite moves it too, even when the proposed
-// words match: the export's references follow the corrected fact.
+// The export's references follow the corrected fact, so every reopened document
+// moves one revision, whatever wording is chosen. A kept sentence drops that fact.
+// A rewrite or her own words may leave the sentence exactly as it was.
 function applyItem(ws, item, factId) {
   const decision = item.decision ?? 'take';
   const segment = ws.application.documents[item.docId].segments.find((s) => s.id === item.segmentId);
-  const before = { text: segment.text, author: segment.author, factIds: segment.factIds };
   if (decision === 'keep') {
     // Her own words stay exactly, but no longer cite the corrected fact, which no longer supports them.
     Object.assign(segment, { author: 'user', factIds: segment.factIds.filter((id) => id !== factId) });
   } else if (decision === 'write') Object.assign(segment, { text: item.written, author: 'user' });
   else Object.assign(segment, { text: item.after, factIds: item.afterFactIds, author: item.after === item.before ? segment.author : 'repair' });
   const kept = decision === 'keep';
-  const changed = segment.text !== before.text || segment.author !== before.author || !sameIds(segment.factIds, before.factIds);
   return {
     kept,
     applied: !kept,
-    changed,
-    bumpsRevision: decision === 'take' || changed,
     wordingChanged: !kept && (decision === 'write' || item.after !== item.before),
   };
 }
@@ -143,8 +134,8 @@ export function applyRepair(ws, now = new Date().toISOString()) {
     const result = applyItem(ws, item, repair.factId);
     if (result.kept) kept += 1;
     if (result.applied) changedDocs.add(item.docId);
-    // One bump per document, whether one sentence or several changed.
-    if (result.bumpsRevision) revisionDocs.add(item.docId);
+    // One bump per affected document, including her own unchanged wording.
+    revisionDocs.add(item.docId);
     // A still-true sentence gets its citations renewed, not rewritten.
     if (result.wordingChanged) changedSegments.push({ docId: item.docId, segmentId: item.segmentId });
   }

@@ -130,6 +130,36 @@ describe('repair', () => {
     expect(verifyRun(ws).find((c) => c.id === 'export').pass).toBe(true);
   });
 
+  it('bumps an affected document once when she writes her own sentence again unchanged, so the old export fails', async () => {
+    const ws = await draftedWorkspace();
+    const answer = ws.application.documents.answer;
+    const edited = 'We chose Kubernetes Jobs over Slurm so every job ran in its own container under a course quota.';
+    const second = 'Every job ran in a container under a course quota on Kubernetes Jobs instead of Slurm.';
+    actions.edit(ws, { docId: 'answer', segmentId: 'answer-1', text: edited });
+    answer.segments.push({ id: 'answer-4', kind: 'claim', author: 'user', startsParagraph: false, text: second, factIds: ['f1'] });
+    answer.revision += 1;
+    const letterBefore = structuredClone(ws.application.documents.letter);
+    const ownBefore = answer.segments.filter((s) => s.factIds.includes('f1')).map((s) => ({ ...s, factIds: [...s.factIds] }));
+    for (const docId of ['answer', 'letter']) actions.approve(ws, { docId, docRevision: ws.application.documents[docId].revision });
+    buildExport(ws, '2026-10-27T10:00:00.000Z');
+    const answerRevision = answer.revision;
+    actions.changeFact(ws, { factId: 'f1', text: 'We used Kubernetes Jobs with a scheduler extender instead of Slurm so every job ran in a container under a course quota.' });
+    proposeRewrites(ws, []);
+    expect(ws.application.repair.items.map((i) => [i.docId, i.status])).toEqual([['answer', 'conflict'], ['answer', 'conflict']]);
+    for (const item of ws.application.repair.items) {
+      const segment = answer.segments.find((s) => s.id === item.segmentId);
+      decideItem(ws, item.id, 'write', segment.text);
+    }
+    applyRepair(ws);
+    expect(answer.revision).toBe(answerRevision + 1);
+    expect(answer.segments.filter((s) => s.factIds.includes('f1')).map((s) => ({ ...s, factIds: [...s.factIds] }))).toEqual(ownBefore);
+    expect(ws.application.documents.letter).toEqual(letterBefore);
+    actions.approve(ws, { docId: 'answer', docRevision: answer.revision });
+    expect(verifyRun(ws).find((c) => c.id === 'export').pass).toBe(false);
+    buildExport(ws, '2026-10-27T11:00:00.000Z');
+    expect(verifyRun(ws).find((c) => c.id === 'export').pass).toBe(true);
+  });
+
   it('blocks edits while changes are under review', async () => {
     const { ws } = await changed();
     expect(() => editSegment(ws, 'answer', 'answer-1', 'x')).toThrow(/reviewing/);
