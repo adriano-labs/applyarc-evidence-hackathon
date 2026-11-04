@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApplyArc Evidence — working demo</title>
+    <title>ApplyArc Evidence — Ana's own words</title>
     <style>
         :root {
             --navy: #0f1f3d;
@@ -126,31 +126,33 @@
 </head>
 <body>
     <main>
-        <h1>One correction. Two documents. Your words kept.</h1>
-        <p class="description">Watch a fictional applicant correct who did the work, review both repaired documents, and approve the final writing.</p>
-        <p class="length">2 min 06 sec</p>
-        
+        <h1>Her own words, in English.</h1>
+        <p class="description">Ana, a fictional care worker, says what she did in Portuguese. Meta's models turn it into an English application where every factual sentence opens her own words. She corrects one fact once, and only the sentences that cited it reopen, in both documents.</p>
+        <p class="length">2 min 45 sec</p>
+
         <div class="video-container">
-            <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="ApplyArc Evidence working demo" aria-describedby="video-note">
+            <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="ApplyArc Evidence: Ana's own words, in English" aria-describedby="video-note">
                 <source src="video.mp4" type="video/mp4">
                 <track src="captions.en.vtt" kind="captions" srclang="en" label="English">
                 Your browser does not support the video tag.
             </video>
         </div>
-        
+
         <section class="facts" aria-label="Quick facts">
             <ul>
-                <li>The real form asks: <a href="https://github.com/adriano-labs/applyarc-evidence-hackathon/blob/main/fixtures/graphcore-form-2026-10-26.json">“Your individual contribution, if you worked as part of a team.”</a> (Graphcore, 26 October snapshot.)</li>
-                <li>Muse Wonder 1.0 uses native tools to check quoted text against the provided notes, read form requirements and count words. This recorded journey cost about $0.395 (token-priced estimate, not an invoice).</li>
-                <li>Application code controls review, fresh approvals and export. The model proposes wording.</li>
+                <li>The real council advert asks: “Using AI? Please follow our guidance to ensure your application reflects your own knowledge and experience.” (<a href="https://github.com/adriano-labs/applyarc-evidence-hackathon/blob/main/fixtures/north-yorkshire-care-form-2026-11-03.json">North Yorkshire Council, captured 3 November 2026</a>; a public advert, not a partner.)</li>
+                <li>Muse Voice Transcribe hears her Portuguese and keeps her English care words in English. Muse Wonder reads, asks, drafts, reviews and repairs, checking every quote word for word with a native tool. The filmed journey: 13 model steps, 24 tool calls, about $0.40 (a token-priced estimate, not an invoice).</li>
+                <li>The same loop runs on Meta's open weights, Muse Spark Open, through Modal.</li>
+                <li>Application code owns the facts, versions, approvals and export. Nothing is ever submitted: the pack is stamped NOT SUBMITTED.</li>
             </ul>
-            <p><a href="https://github.com/adriano-labs/applyarc-evidence-hackathon/blob/main/results/wonder-20261102/comparison.md">Six-case comparison</a>: five ties and one assistant win. Human time savings are not established.</p>
+            <p><a href="https://github.com/adriano-labs/applyarc-evidence-hackathon#what-the-tests-found">Every run and every failure</a>, losses included. No users, testers or pilots are claimed.</p>
         </section>
-        
-        <p class="note" id="video-note">Fictional applicant and synthetic narration. This recording shows the hosted application. Initial preparation, processing waits and navigation were shortened; one recorded result is paused for reading. Nothing is submitted to an employer. Subtitles are built into the video; an optional English caption track is also available.</p>
-        
+
+        <p class="note" id="video-note">Ana is fictional and her voice is synthetic, made before the demo and labelled on screen. The founder narrates in his own voice. Recorded from the live links; waits are shortened where labelled on screen. Nothing is submitted.</p>
+
         <nav class="links" aria-label="Related links">
             <a href="https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/">Try the demo</a>
+            <a href="https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/">Open-weight edition</a>
             <a href="https://github.com/adriano-labs/applyarc-evidence-hackathon">View source code</a>
             <a href="video.mp4" download>Download video</a>
             <a href="transcript.txt">Read transcript</a>
