@@ -1,7 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { editSegment } from '../../server/domain/documents.js';
+import { buildExport } from '../../server/domain/exportPack.js';
 import { changeFact } from '../../server/domain/facts.js';
 import { applyRepair, decideItem, proposeRewrites, startRepair } from '../../server/domain/repair.js';
+import { verifyRun } from '../../server/domain/verifyRun.js';
+import { actions } from '../../server/flows.js';
 import { draftedWorkspace } from '../helpers.js';
 
 const CORRECTION = 'I found the /dev/shm problem by reading dmesg; my teammate Sam wrote the Helm change.';
@@ -89,9 +92,42 @@ describe('repair', () => {
     decideItem(ws, 'c2', 'keep');
     expect(applyRepair(ws)).toMatchObject({ changed: 0, kept: 1, changedSegments: [] });
     expect(ws.application.documents.answer.segments[2]).toEqual(sentence);
-    // The answer was still true, so its version stays. Keeping the letter drops the corrected citation, so that version moves once.
-    expect(ws.application.documents.answer.revision).toBe(1);
+    // Taking the still-true answer renews it against the corrected fact, so its version moves once.
+    // Keeping the letter drops the corrected citation, so that version moves once too.
+    expect(ws.application.documents.answer.revision).toBe(2);
     expect(ws.application.documents.letter.revision).toBe(2);
+  });
+
+  it('bumps an affected document once when every accepted rewrite is unchanged, so the old export fails', async () => {
+    const ws = await draftedWorkspace();
+    const answer = ws.application.documents.answer;
+    const second = 'Every job ran in a container under a course quota on Kubernetes Jobs instead of Slurm.';
+    answer.segments.push({ id: 'answer-4', kind: 'claim', author: 'draft', startsParagraph: false, text: second, factIds: ['f1'] });
+    answer.revision += 1;
+    const letterBefore = structuredClone(ws.application.documents.letter);
+    const sentencesBefore = answer.segments.filter((s) => s.factIds.includes('f1')).map((s) => ({ ...s, factIds: [...s.factIds] }));
+    for (const docId of ['answer', 'letter']) actions.approve(ws, { docId, docRevision: ws.application.documents[docId].revision });
+    buildExport(ws, '2026-10-27T10:00:00.000Z');
+    const answerRevision = answer.revision;
+    actions.changeFact(ws, { factId: 'f1', text: 'We used Kubernetes Jobs with a scheduler extender instead of Slurm so every job ran in a container under a course quota.' });
+    const proposals = ws.application.repair.items.map((item) => {
+      const segment = answer.segments.find((s) => s.id === item.segmentId);
+      return { segmentId: item.segmentId, text: segment.text, factIds: [...segment.factIds] };
+    });
+    proposeRewrites(ws, proposals);
+    expect(ws.application.repair.items.map((i) => i.docId)).toEqual(['answer', 'answer']);
+    for (const item of ws.application.repair.items) {
+      expect(item.after).toBe(item.before);
+      decideItem(ws, item.id, 'take');
+    }
+    expect(applyRepair(ws)).toMatchObject({ changed: 0, kept: 0, docs: ['answer'] });
+    expect(answer.revision).toBe(answerRevision + 1);
+    expect(answer.segments.filter((s) => s.factIds.includes('f1')).map((s) => ({ ...s, factIds: [...s.factIds] }))).toEqual(sentencesBefore);
+    expect(ws.application.documents.letter).toEqual(letterBefore);
+    actions.approve(ws, { docId: 'answer', docRevision: answer.revision });
+    expect(verifyRun(ws).find((c) => c.id === 'export').pass).toBe(false);
+    buildExport(ws, '2026-10-27T11:00:00.000Z');
+    expect(verifyRun(ws).find((c) => c.id === 'export').pass).toBe(true);
   });
 
   it('blocks edits while changes are under review', async () => {
