@@ -126,10 +126,35 @@ export function changeFact(ws, factId, text, now = new Date().toISOString(), glo
   if (normalise(wording) === fact.quote) refuse('invalid', 'That is the same as the current fact.');
   const english = glossOf(fact, wording, gloss);
   const source = addSource(ws, { kind: 'correction', text: wording, language: fact.language, now });
-  fact.history.push({ statement: fact.statement, quote: fact.quote, sourceId: fact.sourceId, at: now, ...(fact.actor ? { actor: fact.actor } : {}) });
+  // Relevant markers already pending for this fact, so undo can remove only the ones this correction adds.
+  const coverageReviewBefore = reviewMarkersBefore(ws, fact.id);
+  fact.history.push({ statement: fact.statement, quote: fact.quote, sourceId: fact.sourceId, at: now, ...(fact.actor ? { actor: fact.actor } : {}), coverageReviewBefore });
   Object.assign(fact, { ...english, quote: normalise(wording), sourceId: source.id });
   markForReview(ws, fact.id);
   return fact;
+}
+
+// Requirements this fact is linked to, and whether each already listed it for review.
+function reviewMarkersBefore(ws, factId) {
+  const review = ws.application?.coverageReview ?? {};
+  return Object.fromEntries(Object.entries(ws.application?.coverage ?? {})
+    .filter(([, ids]) => ids.includes(factId))
+    .map(([id]) => [id, (review[id] ?? []).includes(factId)]));
+}
+
+// Drop review markers this correction introduced. Markers that were already pending,
+// and markers on requirements this correction did not touch, stay.
+export function undoCoverageReview(ws, factId, previous) {
+  const prior = previous?.coverageReviewBefore;
+  const review = ws.application?.coverageReview;
+  if (!prior || !review) return;
+  for (const [requirementId, existed] of Object.entries(prior)) {
+    if (existed) continue;
+    const next = (review[requirementId] ?? []).filter((id) => id !== factId);
+    if (next.length) review[requirementId] = next;
+    else delete review[requirementId];
+  }
+  if (!Object.keys(review).length) delete ws.application.coverageReview;
 }
 
 // A changed fact may no longer say what its requirements need (a dropped "and
