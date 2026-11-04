@@ -1,6 +1,6 @@
 # Build log
 
-Commit times (UTC) and subjects from the private development repository, oldest first: 277 commits from `925f815` to `34c1b5c`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
+Commit times (UTC) and subjects from the private development repository, oldest first: 279 commits from `925f815` to `b367407`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
 
 | Day (UTC) | Commits |
 |---|---:|
@@ -12,7 +12,7 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-10-31 | 1 |
 | 2026-11-02 | 31 |
 | 2026-11-03 | 62 |
-| 2026-11-04 | 37 |
+| 2026-11-04 | 39 |
 
 | Time (UTC) | Commit | Subject |
 |---|---|---|
@@ -293,3 +293,5 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-11-04 16:08 | `6f8c212` | Count the form's requirements apart from the optional cover-letter check |
 | 2026-11-04 16:29 | `3ee23f2` | A corrected point stays Needs review: the model may not cover it with another fact until the applicant answers its question |
 | 2026-11-04 16:38 | `34c1b5c` | Docs: both live links now run 3ee23f2 |
+| 2026-11-04 16:38 | `6199ab6` | docs: regenerate the build log |
+| 2026-11-04 18:28 | `b367407` | Docs: the film recorded on 3ee23f2 (https://youtu.be/K_4oT1R2GTc) |
