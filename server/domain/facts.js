@@ -179,12 +179,16 @@ export function linkFacts(ws, links) {
         continue;
       }
       const list = ws.application.coverage[requirementId] ?? [];
-      const pending = ws.application.coverageReview?.[requirementId] ?? [];
-      if (list.includes(factId) && !pending.includes(factId)) {
+      // A corrected fact no longer counts for the points it covered: a model's check may not
+      // link it back on its own (the likely cause of the open link showing evenings and weekends
+      // green after "two years of nights"). Only another confirmed fact covers the point again.
+      if (ws.application.coverageReview?.[requirementId]?.includes(factId)) {
+        refused.push({ requirementId, factId, reason: 'This fact was corrected; it needs review before it covers this point again.' });
         continue;
       }
-      // Linking a changed fact again is the review: it counts as covering once more.
-      if (pending.includes(factId)) pending.splice(pending.indexOf(factId), 1);
+      if (list.includes(factId)) {
+        continue;
+      }
       link(ws, factId, [requirementId]);
       linked.push({ requirementId, factId });
     }
