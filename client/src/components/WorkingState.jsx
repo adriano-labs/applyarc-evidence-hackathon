@@ -5,7 +5,7 @@ import './WorkingState.css';
 const NEXT = {
   draft: 'Next, review both drafts and their evidence.',
   read: 'Next, check the facts against your notes.',
-  check: 'Next, answer any missing detail before drafting.',
+  check: 'Next, answer or skip any point the form still needs.',
   repair: 'Next, choose which changes to keep.',
   strengthen: 'Next, compare the suggestion with your original.',
   voice: 'Next, check the words before anything else happens.',
@@ -40,6 +40,17 @@ function retryText(retry, modeLabel) {
     : `${name} is busy; trying again, ${retry.attempt} of ${retry.of}`;
 }
 
+// After 8 s of one step: say the wait is normal, so a quiet screen never looks stuck.
+function StillWorking({ started }) {
+  const [long, setLong] = useState(false);
+  useEffect(() => {
+    setLong(false);
+    const timer = setTimeout(() => setLong(true), 8000);
+    return () => clearTimeout(timer);
+  }, [started]);
+  return long ? <p className="working-wait">Still working: a model step can take a while. You don’t need to do anything.</p> : null;
+}
+
 export function WorkingState({ busy, modeLabel }) {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const { elapsed, paused } = useElapsed(busy?.started, detailsOpen);
@@ -56,6 +67,7 @@ export function WorkingState({ busy, modeLabel }) {
         {retry && <span className="working-retry">{retry}</span>}
       </p>
       <p className="working-next">{NEXT[busy.name] || 'You can review the result when this step finishes.'}</p>
+      <StillWorking started={busy.started} />
       {tally && <p className="working-tally">{tally}</p>}
       {history.length > 0 && <ol className="working-history" aria-label="Recent activity">
         {history.map((label, index) => <li key={index}>{label}</li>)}

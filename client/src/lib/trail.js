@@ -170,8 +170,11 @@ export function decisionRows({ flow, source = null, lastDocRun = false, lastRepa
     const questions = (workspace?.application?.questions ?? []).filter((q) => q?.kind !== 'source-conflict');
     const answered = questions.filter((q) => q?.status === 'answered').length;
     const skipped = questions.filter((q) => q?.status === 'skipped').length;
+    const open = questions.filter((q) => q?.status === 'open').length;
     if (answered) rows.push(answered === 1 ? 'You answered the question' : `You answered ${answered} questions`);
     if (skipped) rows.push(skipped === 1 ? 'You skipped the question' : `You skipped ${skipped} questions`);
+    // A question asked later (a point a correction left uncovered) is still waiting: never "answered".
+    if (open) rows.push(open === 1 ? 'A question is waiting for your answer' : `${open} questions are waiting for your answer`);
   }
   // The last apply counts only for the run it followed: an undone or still-open repair applied nothing.
   const last = workspace?.application?.lastRepair;

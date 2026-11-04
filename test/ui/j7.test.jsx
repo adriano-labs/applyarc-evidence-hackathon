@@ -23,13 +23,15 @@ const RESET = 'Press Start again once more to clear this application. Your notes
 const fakeWs = () => ({ data: null, setNotice: vi.fn(), reset: vi.fn(async () => ({})) });
 
 describe('J7: Start again', () => {
-  it('takes its "press once more" notice away when the five seconds run out', async () => {
+  it('takes its "press once more" notice away when the ten seconds run out', async () => {
     vi.useFakeTimers();
     const ws = fakeWs();
     const { result } = renderHook(() => useAppState(ws));
     act(() => result.current.handleReset());
     expect(ws.setNotice).toHaveBeenLastCalledWith({ kind: 'info', message: RESET });
-    act(() => { vi.advanceTimersByTime(5000); });
+    act(() => { vi.advanceTimersByTime(9000); });
+    expect(ws.setNotice).toHaveBeenLastCalledWith({ kind: 'info', message: RESET });
+    act(() => { vi.advanceTimersByTime(1000); });
     const clear = ws.setNotice.mock.calls.at(-1)[0];
     expect(typeof clear).toBe('function');
     expect(clear({ kind: 'info', message: RESET })).toBeNull();

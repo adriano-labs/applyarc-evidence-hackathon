@@ -8,6 +8,7 @@ import { CheckedDrafts } from './WorkingState.jsx';
 import { ConflictDecisions } from './ConflictDecisions.jsx';
 import { docTitles } from '../lib/trail.js';
 import { VerifyRun } from './VerifyRun.jsx';
+import { CoverageLine } from './CoverageLine.jsx';
 
 export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, sample, possessive = 'her', handlers = {}, voice, pending, receipts = [] }) {
   const {
@@ -79,9 +80,16 @@ export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, 
     content = (
       <div className="guided-finish">
         <FinishSummary workspace={workspace} view={view} receipts={receipts} />
+        <CoverageLine view={view} />
         <button type="button" className="btn primary big guided-see" onClick={() => onPrimary?.({ id: 'export', label: 'Preview the export' })}>
           See the application
         </button>
+        {(workspace?.application?.questions ?? []).some((q) => q.status === 'open') ? (
+          <div className="guided-open-point">
+            <p className="guided-expect">One point still needs {possessive === 'her' ? 'her' : 'you'}: answer it or skip it. Either way, the application lists any point that is not answered.</p>
+            <QuestionPanel workspace={workspace} view={view} sample={sample} busy={busy} onAnswer={onAnswer} onSkip={onSkip} onResolveSourceConflict={onResolveSourceConflict} voice={voice} />
+          </div>
+        ) : null}
         <FinishList workspace={workspace} possessive={possessive} onReview={handlers.onReview} />
         <VerifyRun workspace={workspace} fixture={modeLabel === 'Fixture'} auto />
       </div>

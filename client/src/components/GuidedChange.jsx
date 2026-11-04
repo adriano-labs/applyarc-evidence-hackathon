@@ -3,6 +3,7 @@
 // as new facts instead, the sample's remembered correction is one click away. Otherwise that
 // correction is applied to the fact it changes. Then the reviewed rewrites, and the renewed
 // approvals. Nothing here changes a document without the applicant's decision.
+import { CoverageLine } from './CoverageLine.jsx';
 import { useState } from 'react';
 import { ChangeQueue } from './ChangeQueue.jsx';
 import { ConflictDecisions } from './ConflictDecisions.jsx';
@@ -30,6 +31,11 @@ function ApproveButtons({ workspace, view, locked, onApprove, primary = true }) 
     </div>
   );
 }
+
+const approvedAll = (workspace, view) => {
+  const docs = workspace?.application?.form?.documents ?? [];
+  return docs.length > 0 && docs.every((d) => view?.approvals?.[d.id] === 'approved');
+};
 
 // The note that contradicts a confirmed fact, prefilled from the prepared state and added with one click.
 function NoteToAdd({ workspace, name, locked, onAddNotes }) {
@@ -141,10 +147,17 @@ export function GuidedChange({ workspace, view, busy, pending, sample, handlers 
     return (
       <div className="guided-change-done">
         <ChangedLine changed={lastRepair.changed ?? 0} />
+        <CoverageLine view={view} />
         <div className="guided-actions">
           <button type="button" className="btn" onClick={() => handlers.onReview?.(4)}>Review updated documents</button>
         </div>
         <ApproveButtons workspace={workspace} view={view} locked={locked} onApprove={handlers.onApprove} />
+        {busy ? <p className="guided-expect">Approve unlocks when this step finishes.</p> : null}
+        {approvedAll(workspace, view) ? (
+          <div className="guided-actions">
+            <button type="button" className="btn primary big" onClick={() => handlers.onPrimary?.({ id: 'export', label: 'Preview the export' })}>See the application</button>
+          </div>
+        ) : null}
       </div>
     );
   }

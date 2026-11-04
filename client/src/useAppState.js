@@ -111,7 +111,7 @@ export function useAppState(ws) {
       resetTimer.current = setTimeout(() => {
         setResetArmed(false);
         ws.setNotice((n) => (n?.message === RESET_NOTICE ? null : n));
-      }, 5000);
+      }, 10000);
       return;
     }
     ws.reset().then(() => {

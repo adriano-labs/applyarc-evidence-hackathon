@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { changeFact, coverage, decideFact, linkFacts, proposeFacts } from '../../server/domain/facts.js';
 import { unansweredRequirements } from '../../server/domain/completeness.js';
+import { addQuestions, answerQuestion } from '../../server/domain/questions.js';
 import { workspaceWithNotes } from '../helpers.js';
 
 const tech = (ws) => coverage(ws).find((r) => r.id === 'tech');
@@ -18,11 +19,22 @@ describe('a corrected fact and the requirements it covered', () => {
     expect(relink.linked).toEqual([]);
     expect(relink.refused[0]).toMatchObject({ requirementId: 'tech', factId: 'f1' });
     expect(tech(ws)).toMatchObject({ covered: false, needsReview: true });
-    // Another confirmed fact can still cover the point.
+    // Nor can the model cover it with another fact from the notes (4 Nov, approved rule): the point waits for her answer.
     proposeFacts(ws, source.id, [{ statement: 'The runner queued jobs on Kubernetes.', quote: 'the runner queued them on Kubernetes' }]);
     decideFact(ws, 'f2', 'confirm');
-    linkFacts(ws, [{ requirementId: 'tech', factIds: ['f2'] }]);
-    expect(tech(ws)).toMatchObject({ covered: true, factIds: ['f2'] });
+    const other = linkFacts(ws, [{ requirementId: 'tech', factIds: ['f2'] }]);
+    expect(other.linked).toEqual([]);
+    expect(other.refused[0]).toMatchObject({ requirementId: 'tech', factId: 'f2' });
+    expect(tech(ws)).toMatchObject({ covered: false, needsReview: true });
+    // Her answer to the point's own question covers it again.
+    const { added } = addQuestions(ws, [{ requirementId: 'tech', question: 'Which queue did you use?' }]);
+    expect(added).toHaveLength(1);
+    const answer = answerQuestion(ws, added[0], 'I used Postgres as the queue.');
+    const sourceId = answer?.source?.id ?? answer?.id ?? ws.applicant.sources.at(-1).id;
+    proposeFacts(ws, sourceId, [{ statement: 'I used Postgres as the queue.', quote: 'I used Postgres as the queue', requirementIds: ['tech'] }]);
+    const id = ws.applicant.facts.at(-1).id;
+    decideFact(ws, id, 'confirm');
+    expect(tech(ws)).toMatchObject({ covered: true, factIds: [id] });
   });
 
   it('keeps a requirement covered by another unchanged fact', () => {

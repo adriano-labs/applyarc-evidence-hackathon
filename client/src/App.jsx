@@ -77,6 +77,7 @@ export function App() {
     openConflictCorrection,
     refreshReceipts,
     handleReset,
+    resetArmed,
     guided,
     setGuided,
     story,
@@ -205,6 +206,7 @@ export function App() {
       budget={budget}
       onCommands={() => setCommandsOpen((v) => !v)}
       onReset={handleReset}
+      resetArmed={resetArmed}
       onReceipts={openReceipts}
       earlier={workspace.archive?.length ?? 0}
       receipts={receipts}

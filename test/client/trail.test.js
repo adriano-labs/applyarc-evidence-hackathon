@@ -102,7 +102,7 @@ describe('the evidence trail', () => {
     expect(decisionRows({ flow: 'read', source }, workspace, {})).toEqual(['You confirmed 2 facts']);
     expect(decisionRows({ flow: 'read', source: null }, workspace, {})).toEqual([]);
     // Only the check that asked closes with the answers; a settled source conflict is a correction, not an answer.
-    expect(decisionRows({ flow: 'check', askRun: true }, workspace, {})).toEqual(['You answered the question', 'You skipped the question']);
+    expect(decisionRows({ flow: 'check', askRun: true }, workspace, {})).toEqual(['You answered the question', 'You skipped the question', 'A question is waiting for your answer']);
     expect(decisionRows({ flow: 'check' }, workspace, {})).toEqual([]);
     expect(decisionRows({ flow: 'draft', lastDocRun: true }, workspace, { approvals: { answer: 'approved', letter: 'approved' } })).toEqual(['You approved version 3 of “Project answer” and version 2 of “Cover letter”']);
     expect(decisionRows({ flow: 'draft', lastDocRun: true }, workspace, { approvals: { answer: 'approved' } })).toEqual(['You approved version 3 of “Project answer”']);

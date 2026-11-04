@@ -15,6 +15,11 @@ import './GuidedRun.css';
 export function guidedStep(view, ws, story) {
   if (ws?.application?.repair) return { n: 5, key: 'change' };
   const next = view?.next;
+  // Both documents approved again after a correction: the finish, even while a question about a point the
+  // correction left uncovered waits (the application lists that point as not answered).
+  const docs = ws?.application?.form?.documents ?? [];
+  const approved = docs.length > 0 && docs.every((d) => view?.approvals?.[d.id] === 'approved');
+  if (ws?.application?.lastRepair && approved && next === 'question') return { n: 5, key: 'finish' };
   if (atKeyMoment(ws, next)) return { n: 5, key: 'change' };
   if (next === 'export') return { n: 5, key: 'finish' };
   if (story === 'change') return { n: 5, key: 'change' };
