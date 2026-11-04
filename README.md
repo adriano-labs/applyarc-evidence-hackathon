@@ -4,6 +4,8 @@
 
 Every factual sentence the app writes cites your exact spoken words, checked by code against the transcript you reviewed, so you can defend it at interview.
 
+[Watch the demo](https://youtu.be/l3Fjn1Sp0vE) · [Try Wonder](https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/) · [Try Spark Open](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/). Filmed on 3ee23f2; the live demos now run bf739b2.
+
 **Contents:** [Disclosure](#disclosure) · [Judges, short on time?](#judges-short-on-time) · [Meta models](#meta-models) · [Results](#results) · [Real vs simulated](#real-vs-simulated) · [At a glance](#at-a-glance) · [Judge path](#judge-path) · [How Meta is used](#how-meta-is-used) · [What the tests found](#what-the-tests-found) · [Run from this repository](#run-from-this-repository)
 
 ## Disclosure
@@ -20,8 +22,8 @@ Three steps on the [live main demo](https://applyarc-evidence.jollystone-892bee1
    **You should see:** her facts confirmed and both documents approved, prepared from a real Muse Wonder run on 3 November (22:03 to 22:08 UTC) whose transcript was checked first. The screen says so.
 2. Press **Use Ana's spoken correction**. Her clip goes to Muse Voice Transcribe, and her words come back for you to check. Press **Add Ana's note**. Wonder flags the contradiction itself and asks which is right, in Portuguese with the English beneath. Choose **Use this correction**.
    **You should see:** **What changed**: the old fact struck through and the correction in its place. The app reopens only the two sentences that cite it, one in each document, and clears both approvals. Wonder proposes a rewrite for each.
-3. **Take the rewrite** (or **Keep as is**, or **Write my own**), **Apply 2 changes**, and approve both documents.
-   **You should see:** the finish screen lists what just happened. **See the application** is stamped NOT SUBMITTED, with the council's own steps still to do. Then **Download Evidence Pass** and **Verify this run**: seven checks by code, with no model call. On Ana's runs the seventh, sentences in her own wording, has nothing to check, so 6 green and 1 grey is the best result there.
+3. **Take the rewrite**, **Apply 2 changes**, and approve both documents.
+   **You should see:** the finish screen lists what just happened. **See the application** is stamped NOT SUBMITTED, with the council's own steps still to do. Then **Download Evidence Pass** and **Verify this run**: seven checks by code, with no model call. Following this route, expect six green checks and one grey.
 
 [Open-weight demo](https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/): spoken notes are off there. Press **Try it with Ana's written note**, and the screen says so. [Where that edition differs](#open-weight-edition).
 
@@ -38,6 +40,8 @@ No key, from this repository: `pnpm install --frozen-lockfile && pnpm check && p
 No model outside Meta's runs in the app. [Details](#how-meta-is-used).
 
 ## Results
+
+These are historical scripted tests with fictional applicants; voice testing used synthetic speech; costs are estimates, and the Spark Open journeys are estimated using Muse Spark 1.3 prices as a proxy.
 
 | Result | As written | Where that number is written |
 |---|---|---|
@@ -107,7 +111,7 @@ Startup track. Best Build on Meta Open Weight Models: [where Muse Spark Open run
 
 ### No key needed, in full
 
-`pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path) (hand-written outputs, labelled on screen). 1,270 tests in 204 files.
+`pnpm install --frozen-lockfile && pnpm check && pnpm start`, then the [fixture path](#no-key-fixture-path) (hand-written outputs, labelled on screen). On the filmed build `3ee23f2`, a clean clone passed 1,270 tests in 204 files.
 
 ### How Meta is used, in full
 
