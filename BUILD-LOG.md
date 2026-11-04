@@ -1,6 +1,6 @@
 # Build log
 
-Commit times (UTC) and subjects from the private development repository, oldest first: 255 commits from `925f815` to `679daea`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
+Commit times (UTC) and subjects from the private development repository, oldest first: 257 commits from `925f815` to `116847e`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
 
 | Day (UTC) | Commits |
 |---|---:|
@@ -12,7 +12,7 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-10-31 | 1 |
 | 2026-11-02 | 31 |
 | 2026-11-03 | 62 |
-| 2026-11-04 | 15 |
+| 2026-11-04 | 17 |
 
 | Time (UTC) | Commit | Subject |
 |---|---|---|
@@ -271,3 +271,5 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-11-04 12:56 | `541283d` | fix: show Verify on the finish screen, name the rewrite in progress, and drop the spend counter from the bar |
 | 2026-11-04 13:51 | `198a70f` | docs: record 541283d, the Spark Open runs and the final footage; add the business case and the agentic trace |
 | 2026-11-04 14:14 | `679daea` | docs: add the narrated film, its YouTube link, subtitles and checks |
+| 2026-11-04 14:14 | `01dc561` | docs: regenerate the build log up to the film commit |
+| 2026-11-04 14:23 | `116847e` | docs: state one business model: councils and care employers pay, the applicant uses it free |
