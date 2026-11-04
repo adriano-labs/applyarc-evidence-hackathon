@@ -36,7 +36,7 @@ function spokenNote(sample, liveModel, voice) {
   const where = voice ? sample.timing ?? ''
     : liveModel ? `Spoken notes run on Meta’s API only; on this open-weight edition ${p} written note is used instead.`
       : `With no live model, ${p} written note is used (typed, not spoken).`;
-  return `Fictional applicant. Synthetic voice, made before the demo; not a runtime model. ${where}${where ? ' ' : ''}Nothing is sent.`;
+  return `Fictional applicant. Synthetic voice, made before the demo; not a runtime model. ${where}${where ? ' ' : ''}Nothing is sent to an employer.`;
 }
 
 // busy: a start is already on its way, so a second press cannot start another. model: the model

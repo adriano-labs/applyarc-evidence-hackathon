@@ -11,6 +11,9 @@ function getRequirementState(requirement, questions) {
   if (requirement.covered) {
     return { state: 'covered', label: 'Covered' };
   }
+  if (requirement.needsReview) {
+    return { state: 'review', label: 'Needs review: a fact it relied on changed' };
+  }
 
   const question = questions.find((q) => q.requirementId === requirement.id);
   if (question) {
@@ -166,6 +169,9 @@ export function FormPanel({
                 )}
                 {state === 'asked' && (
                   <span className="req-state">Asked you</span>
+                )}
+                {state === 'review' && (
+                  <span className="req-state">Needs review: a fact it relied on changed</span>
                 )}
                 {state === 'skipped' && (
                   <span className="req-state">Left out</span>
