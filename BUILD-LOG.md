@@ -1,6 +1,6 @@
 # Build log
 
-Commit times (UTC) and subjects from the private development repository, oldest first: 270 commits from `925f815` to `4fed839`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
+Commit times (UTC) and subjects from the private development repository, oldest first: 272 commits from `925f815` to `038f56f`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
 
 | Day (UTC) | Commits |
 |---|---:|
@@ -12,7 +12,7 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-10-31 | 1 |
 | 2026-11-02 | 31 |
 | 2026-11-03 | 62 |
-| 2026-11-04 | 30 |
+| 2026-11-04 | 32 |
 
 | Time (UTC) | Commit | Subject |
 |---|---|---|
@@ -286,3 +286,5 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-11-04 15:26 | `dfda929` | docs: regenerate the build log |
 | 2026-11-04 15:32 | `6fa948a` | Coverage: a model's form check cannot link a corrected fact back to the points it covered |
 | 2026-11-04 15:37 | `4fed839` | Docs: both live links now run 6fa948a |
+| 2026-11-04 15:37 | `48ee98c` | docs: regenerate the build log |
+| 2026-11-04 15:43 | `038f56f` | Docs: quotes checked against the transcript you reviewed; current test count |
