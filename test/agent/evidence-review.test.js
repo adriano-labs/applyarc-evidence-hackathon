@@ -19,10 +19,23 @@ describe('server-owned semantic claim review', () => {
     const workspace = ws();
     const result = await reviewClaims(workspace, [claim, claim, { kind: 'frame', text: 'Hello' }], { provider: { id: 'meta' }, review });
     expect(review).toHaveBeenCalledTimes(1);
-    expect(review.mock.calls[0][0].claims).toEqual([{ id: 'c1', text: claim.text, evidence: [{ from: 'the applicant’s own words', quote: 'I resolved the defect.', source: 'I resolved the defect. Sam wrote the tests.' }] }]);
+    expect(review.mock.calls[0][0].claims).toEqual([{ id: 'c1', text: claim.text, evidence: [{ from: 'the applicant’s own words', quote: 'I resolved the defect.', sourcePassages: ['I resolved the defect. Sam wrote the tests.'] }] }]);
     expect(result.get(reviewKey(workspace, claim))).toBeNull();
     workspace.applicant.facts[0].quote = 'Sam resolved the defect.';
     expect(result.has(reviewKey(workspace, claim))).toBe(false);
+  });
+
+  // Live, 3 Nov (Spark Open via Baseten): the model reviewer accepted "a team of three" from "me + 2".
+  it('refuses a number no cited quote states before any model reviews it', async () => {
+    const quote = 'team: me + 2 platform engineers (Mateo, Jen)';
+    const workspace = { applicant: { sources: [{ id: 's1', kind: 'notes', text: quote }], facts: [{ id: 'f1', status: 'confirmed', quote, sourceId: 's1' }] } };
+    const three = { kind: 'claim', text: 'We worked as a team of three comprising me and two platform engineers, Mateo and Jen.', factIds: ['f1'] };
+    const two = { kind: 'claim', text: 'I worked with two platform engineers, Mateo and Jen.', factIds: ['f1'] };
+    const review = vi.fn(async ({ claims }) => ({ decisions: claims.map((c) => ({ id: c.id, verdict: 'supported', reason: 'Supported.' })) }));
+    const result = await reviewClaims(workspace, [three, two], { provider: { id: 'meta' }, review });
+    expect(review.mock.calls[0][0].claims.map((c) => c.text)).toEqual([two.text]);
+    expect(result.get(reviewKey(workspace, three))).toBe('It states a number that none of its cited facts states.');
+    expect(result.get(reviewKey(workspace, two))).toBeNull();
   });
 
   it.each(['contradicted', 'uncertain'])('retains a useful refusal for %s', async (verdict) => {
@@ -60,13 +73,12 @@ describe('server-owned semantic claim review', () => {
     const review = vi.fn(async ({ claims }) => ({ decisions: claims.map((c) => ({ id: c.id, verdict: 'supported', reason: 'Supported by the current quotes.' })) }));
     await reviewClaims(workspace, [currentClaim], { provider: { id: 'meta' }, review });
     const evidence = review.mock.calls[0][0].claims[0].evidence;
-    expect(evidence.find((e) => e.quote === corrected)?.source).toBe(corrected);
-    const originalContext = evidence.find((e) => e.quote === 'The pods had 64 MB of shared memory.').source;
-    expect(originalContext).not.toContain('I wrote the Helm change.');
-    expect(originalContext).toContain('Superseded by the applicant');
-    expect(originalContext).toContain('This was a lab exercise, not a production deployment.');
-    expect(originalContext).toContain('The pods had 64 MB of shared memory.');
-    expect(originalContext).toContain('We did not change production.');
+    expect(evidence.find((e) => e.quote === corrected)?.sourcePassages).toEqual([corrected]);
+    const originalContext = evidence.find((e) => e.quote === 'The pods had 64 MB of shared memory.').sourcePassages;
+    expect(originalContext).toEqual([
+      'This was a lab exercise, not a production deployment. The pods had 64 MB of shared memory.',
+      'We did not change production.',
+    ]);
     expect(workspace.applicant.sources[0].read).toBeUndefined();
     expect(workspace.applicant.sources[0].text).toContain('I wrote the Helm change.');
   });

@@ -1,36 +1,15 @@
 import './GuidedRun.css';
-import { FactsPanel, QuestionPanel } from './StepPanels.jsx';
+import { FactsPanel, QuestionPanel, ResumeButton } from './StepPanels.jsx';
 import { StatusLine } from './TopBar.jsx';
-import { ChangeQueue } from './ChangeQueue.jsx';
-import { untouchedCount, matchesSampleCorrection } from '../flow.js';
-import { ChangedLine, Compare, FinishList, NotesText } from './GuidedReview.jsx';
+import { FinishList, FinishSummary, NotesText } from './GuidedReview.jsx';
 import { GuidedAnswer } from './GuidedAnswer.jsx';
+import { GuidedChange } from './GuidedChange.jsx';
 import { CheckedDrafts } from './WorkingState.jsx';
 import { ConflictDecisions } from './ConflictDecisions.jsx';
+import { docTitles } from '../lib/trail.js';
+import { VerifyRun } from './VerifyRun.jsx';
 
-// One approve button per document not yet approved, at its exact version.
-function ApproveButtons({ workspace, view, onApprove, busy, pending }) {
-  const approvals = view?.approvals ?? {};
-  const isLocked = Boolean(busy) || Boolean(pending);
-  return (
-    <div className="guided-actions">
-      {(workspace?.application?.form?.documents ?? []).filter((d) => approvals[d.id] !== 'approved').map((d) => {
-        const revision = workspace?.application?.documents?.[d.id]?.revision;
-        return (
-          <button key={d.id} type="button" className="btn primary" disabled={isLocked} onClick={() => { if (isLocked) return; onApprove?.(d.id, revision); }}>
-            Approve the {(d.title || '').toLowerCase()}, version {revision}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
-
-function ResumeButton({ id, label, onPrimary }) {
-  return <div className="guided-actions"><button type="button" className="btn primary" onClick={() => onPrimary?.({ id })}>{label}</button></div>;
-}
-
-export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, sample, possessive = 'her', handlers = {}, voice, pending }) {
+export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, sample, possessive = 'her', handlers = {}, voice, pending, receipts = [] }) {
   const {
     onDecideFact,
     onHoverFact,
@@ -38,17 +17,9 @@ export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, 
     onAnswer,
     onResolveSourceConflict,
     onSkip,
-    onCorrectFact,
-    onDecideChange,
-    onApplyChanges,
-    onApprove,
     onPrimary,
     onCite,
-    onCancelRepair,
-    onProposeRepair,
   } = handlers;
-
-  const isLocked = Boolean(busy) || Boolean(pending);
 
   let content = null;
 
@@ -65,6 +36,7 @@ export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, 
         workspace={workspace}
         view={view}
         busy={busy}
+        sample={sample}
         onDecideFact={onDecideFact}
         onHoverFact={onHoverFact}
         onConfirmFacts={onConfirmFacts}
@@ -79,6 +51,7 @@ export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, 
           workspace={workspace}
           view={view}
           busy={busy}
+          sample={sample}
           onDecideFact={onDecideFact}
           onHoverFact={onHoverFact}
           onConfirmFacts={onConfirmFacts}
@@ -99,83 +72,26 @@ export function GuidedBody({ stepKey, workspace, view, busy, notice, modeLabel, 
     const n = facts.filter((f) => f && f.status === 'confirmed').length;
     content = <p className="guided-ready">{n} confirmed facts are ready.</p>;
   } else if (stepKey === 'answer') {
-    content = <GuidedAnswer workspace={workspace} view={view} busy={busy} possessive={possessive} onCite={onCite} onHoverFact={onHoverFact} />;
+    content = <GuidedAnswer workspace={workspace} view={view} busy={busy} possessive={possessive} receipts={receipts} onCite={onCite} onHoverFact={onHoverFact} />;
   } else if (stepKey === 'change') {
-    const repair = workspace?.application?.repair;
-    const lastRepair = workspace?.application?.lastRepair;
-    if (repair) {
-      const facts = workspace?.applicant?.facts || [];
-      const fact = facts.find((f) => f.id === repair.factId);
-      const citations = view?.citations || {};
-      const number = citations[repair.factId];
-      const docTitles = { answer: 'Project answer', letter: 'Cover letter' };
-      const untouched = untouchedCount(workspace);
-      content = (
-        <ChangeQueue
-          repair={repair}
-          fact={fact}
-          number={number}
-          docTitles={docTitles}
-          busy={busy}
-          pending={pending}
-          onDecide={onDecideChange}
-          onApply={onApplyChanges}
-          onPropose={onProposeRepair}
-          onCancel={onCancelRepair}
-          untouchedCount={untouched}
-        />
-      );
-    } else if (lastRepair) {
-      const changed = lastRepair.changed ?? 0;
-      content = (
-        <div className="guided-change-done">
-          <ChangedLine changed={changed} />
-          <div className="guided-actions">
-            <button type="button" className="btn primary" onClick={() => handlers.onReview?.(4)}>
-              Review updated documents
-            </button>
-          </div>
-          <ApproveButtons workspace={workspace} view={view} onApprove={onApprove} busy={busy} pending={pending} />
-        </div>
-      );
-    } else {
-      const fact = (workspace?.applicant?.facts ?? []).find((f) => f.status === 'confirmed' && matchesSampleCorrection(f, sample)) ?? null;
-      const citations = view?.citations || {};
-      const name = sample?.name || 'Ellie';
-      if (fact) {
-        const n = citations[fact.id];
-        content = (
-          <div className="guided-change-start">
-            <Compare rows={[[`${name} remembers`, `“${sample?.correction?.text}”`], [`Fact [${n}] says`, fact.statement]]} />
-            <button type="button" className="btn primary" disabled={isLocked} onClick={() => { if (isLocked) return; onCorrectFact?.(fact.id, sample?.correction?.text); }}>
-              Correct this fact
-            </button>
-          </div>
-        );
-      } else {
-        content = (
-          <div className="guided-change-start">
-            <p>No confirmed fact mentions this, so nothing needs rewriting.</p>
-            <ApproveButtons workspace={workspace} view={view} onApprove={onApprove} busy={busy} pending={pending} />
-          </div>
-        );
-      }
-    }
+    content = <GuidedChange workspace={workspace} view={view} busy={busy} pending={pending} sample={sample} handlers={handlers} voice={voice} receipts={receipts} />;
   } else if (stepKey === 'finish') {
     content = (
       <div className="guided-finish">
-        <FinishList workspace={workspace} possessive={possessive} onReview={handlers.onReview} />
-        <button type="button" className="btn primary big" onClick={() => onPrimary?.({ id: 'export', label: 'Preview the export' })}>
+        <FinishSummary workspace={workspace} view={view} receipts={receipts} />
+        <button type="button" className="btn primary big guided-see" onClick={() => onPrimary?.({ id: 'export', label: 'Preview the export' })}>
           See the application
         </button>
+        <FinishList workspace={workspace} possessive={possessive} onReview={handlers.onReview} />
+        <VerifyRun workspace={workspace} fixture={modeLabel === 'Fixture'} auto />
       </div>
     );
   }
 
   return (
     <div>
-      {busy || notice ? <StatusLine busy={busy} notice={notice} modeLabel={modeLabel} onDismiss={handlers.onDismissNotice} /> : null}
-      <CheckedDrafts busy={busy} />
+      {busy || notice ? <StatusLine busy={busy} notice={notice} modeLabel={modeLabel} onDismiss={handlers.onDismissNotice} titles={docTitles(workspace)} /> : null}
+      <CheckedDrafts busy={busy} titles={docTitles(workspace)} />
       {content}
     </div>
   );

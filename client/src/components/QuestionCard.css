@@ -50,19 +50,29 @@
   box-shadow: 0 0 0 3px var(--paper);
 }
 
-.question-card .question-help {
+.question-card .question-help,
+.question-card .question-transcribed {
   font-size: var(--text-xs);
   color: var(--muted);
   margin-top: var(--s2);
   margin-bottom: 0;
 }
 
+.question-card .question-transcribed {
+  color: var(--ink);
+}
+
 .question-card .question-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--s2);
   margin-top: var(--s4);
 }
+
+/* The row wraps whole (no label breaks inside its button: buttons.css), and a message takes a line of its own. */
+.question-card .question-actions .speak-status { flex-basis: 100%; }
+.question-card .question-actions .speak-status:empty { position: absolute; margin: 0; }
 
 .visually-hidden {
   position: absolute !important;
@@ -74,4 +84,17 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+/* A question in her language: the English beneath, for the reader, second and smaller. */
+.question-card .question-english,
+.conflict-question .question-english {
+  font: 400 13px/1.5 var(--font-ui);
+  color: var(--pencil);
+  margin: 0 0 var(--s2);
+}
+.question-card .clip-note { font-size: var(--text-xs); color: var(--muted); white-space: nowrap; }
+
+@media (max-width: 560px) {
+  .question-card .question-actions { flex-direction: column; align-items: stretch; }
 }

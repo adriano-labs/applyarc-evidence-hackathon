@@ -8,3 +8,7 @@
 .source-correction textarea { margin-top: var(--s2); }
 .source-correction .question-actions { flex-wrap: wrap; }
 .source-correction .correction-error { color: var(--danger); }
+
+@media (max-width: 560px) {
+  .source-correction textarea { max-height: 30dvh; }
+}

@@ -1,0 +1,12 @@
+{
+ "out": "../evidence/hosted-541283d/spark-full-1",
+ "failures": [],
+ "costUsd": 0.1281,
+ "wallSeconds": 150.1,
+ "notes": 12,
+ "refused": 0,
+ "reopen": [
+  "answer/answer-12"
+ ],
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

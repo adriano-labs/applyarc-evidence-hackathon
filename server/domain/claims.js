@@ -53,7 +53,7 @@ export function stems(text, skip = new Set()) {
   return [...new Set(stemWords(text, skip))];
 }
 
-const shared = (claimStems, text) => {
+export const shared = (claimStems, text) => {
   const others = stems(text);
   return claimStems.filter((s) => others.some((o) => same(s, o))).length;
 };
@@ -93,23 +93,42 @@ const NOT_WHO = {
   other: 'a claim says "I" where its facts say someone else did it',
 };
 
-// cited: [{ quote, source }] for each fact the claim cites; source is the text the quote came from.
+// The numbers a cited fact states. An English quote is read for digits and words; a
+// quote in another language for digits only, joined by the numbers of the English
+// meaning the applicant confirmed beside it.
+const factNumbers = (c) => [...numbers(c.quote, c.language ?? 'en'), ...(c.language ? numbers(c.meaning ?? '') : [])];
+
+// A number, in digits or in words, that no cited fact states. Deterministic, so the
+// live review runs it first too: the model reviewer once accepted "a team of three" from "me + 2".
+// cited: [{ quote, language?, meaning? }]
+export function statesNewNumber(text, cited, roleTitle = '') {
+  const claim = normalise(text);
+  const role = normalise(roleTitle);
+  const quoted = new Set(cited.flatMap(factNumbers));
+  return numbers(role ? claim.replace(role, ' ') : claim).some((n) => !quoted.has(n));
+}
+
+// These English word checks read a fact in another language through its confirmed
+// English meaning and its confirmed actor, never its quote.
+const englishOf = (c) => (c.language ? c.meaning ?? '' : c.quote);
+const linesOf = (c) => (c.language ? [{ text: c.meaning ?? '', doer: c.actor, explicit: c.actor === 'self' }] : clausesOf(c.quote, c.source));
+
+// cited: [{ quote, source, language?, meaning?, actor? }] for each fact the claim cites; source is the text the quote came from.
 export function claimProblem(text, cited = [], { roleTitle = '', applicantName = '' } = {}) {
   const claim = normalise(text);
   const role = normalise(roleTitle);
   const firstName = normalise(applicantName).split(' ')[0] ?? '';
-  const quotes = cited.map((c) => normalise(c.quote));
+  const quotes = cited.map((c) => normalise(englishOf(c)));
   const claimStems = stems(role ? claim.replace(role, ' ') : claim, new Set(firstName ? [firstName.toLowerCase()] : []));
   const need = claimStems.length <= 3 ? 1 : 2;
-  const quoted = new Set(quotes.flatMap((q) => numbers(q)));
-  if (numbers(role ? claim.replace(role, ' ') : claim).some((n) => !quoted.has(n))) return 'a claim states a number its facts do not';
+  if (statesNewNumber(claim, cited, roleTitle)) return 'a claim states a number its facts do not';
   if (shared(claimStems, quotes.join(' ')) < Math.min(need, claimStems.length)) return 'a claim says something its facts do not';
   for (const [inClaim, inFacts] of STRONG_WORDS) {
     const word = claim.match(inClaim)?.[1];
     if (word && !quotes.some((q) => inFacts.test(q))) return `a claim says "${word.toLowerCase()}" where its facts do not`;
   }
   // Each part of the sentence about the applicant needs a line where the applicant says they did it.
-  const lines = cited.flatMap((c) => clausesOf(c.quote, c.source));
+  const lines = cited.flatMap(linesOf);
   for (const part of clausesIn(claim).filter((c) => clauseDoer(c.text, firstName) === 'self')) {
     const partStems = stems(part.text, new Set(firstName ? [firstName.toLowerCase()] : []));
     const enough = Math.min(partStems.length <= 3 ? 1 : 2, partStems.length);
@@ -121,10 +140,14 @@ export function claimProblem(text, cited = [], { roleTitle = '', applicantName =
   return null;
 }
 
-// The facts a sentence cites, as quotes with the text each came from.
+// The facts a sentence cites, as quotes with the text each came from; a fact in another
+// language also carries its language, its confirmed English meaning and its actor.
 export function citedFacts(ws, factIds, confirmedMap) {
   const sources = new Map((ws?.applicant?.sources ?? []).map((s) => [s.id, s.text]));
-  return factIds.map((id) => confirmedMap.get(id)).filter(Boolean).map((f) => ({ quote: f.quote, source: sources.get(f.sourceId) ?? f.quote }));
+  return factIds.map((id) => confirmedMap.get(id)).filter(Boolean).map((f) => ({
+    quote: f.quote, source: sources.get(f.sourceId) ?? f.quote,
+    ...(f.language ? { language: f.language, meaning: f.statement, actor: f.actor } : {}),
+  }));
 }
 
 export const checkContext = (ws) => ({ roleTitle: ws?.application?.form?.role ?? '', applicantName: ws?.applicant?.name ?? '' });

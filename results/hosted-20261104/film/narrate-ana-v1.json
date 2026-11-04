@@ -1,0 +1,868 @@
+{
+ "tool": "narrate-swap-ana.py",
+ "made": "2026-11-04T13:52:00+00:00",
+ "tag": "ana-v1",
+ "footage": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-7",
+ "guide": "~/Developer/claude/evidence/hackathon-29oct/film-v15/narration/ADRIAN-RECORDING-GUIDE.md",
+ "guideSha256": "50a8253abf1d8522991e03071615aa3ab099ba5f1e8699ee66852f9d4f8e49d2",
+ "toolSha256": {
+  "narrate-swap-ana.py": "810c1f74fbc2c921ef0cfce923604862fba2c769945f21b2718b02ab96b22a61",
+  "build-plan-ana.py": "ee029f8af76fdb5db9816edebc7989f8e0f8bf0d34bb69497fed10c2fbc4ba4b",
+  "ana_lines.py": "f3a1f36f5ff3bd8c999a0a9f8c2f854debe91de32f55db37a0fa24f4f48a54de",
+  "narrate-takes.py": "20064d28478a972ca0497c22e2721469bb41c7405ac761edcb63a8513b7a9051",
+  "founder-swap.py": "9a21678c4d658ffdb6efb7417b60e1af89d029632da576aa1374f75d127cfe6a",
+  "film16.py": "c095edc4732fe585de1f49bbeb7cba47d6d34be5c9acd4afe92c47f2871d96fb"
+ },
+ "sources": [
+  {
+   "file": "narration-20261104-134849Z.wav",
+   "path": "~/Desktop/applyarc-voice/narration-20261104-134849Z.wav",
+   "sha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+   "seconds": 175.339,
+   "noiseFloorDb": -167.7,
+   "thresholdDb": -55.0,
+   "pausePeakDb": -90.3,
+   "analysisGainDb": 17.4
+  }
+ ],
+ "whisper": {
+  "cli": "/opt/homebrew/Cellar/openai-whisper/20250625_6/libexec/bin/whisper",
+  "model": "small.en",
+  "modelSha256": "f953ad0fd29cacd07d5a9eda5624af0f6bcf2258be67c92b79389873d91e0872",
+  "arguments": [
+   "--model",
+   "small.en",
+   "--language",
+   "en",
+   "--task",
+   "transcribe",
+   "--temperature",
+   "0",
+   "--temperature_increment_on_fallback",
+   "None",
+   "--condition_on_previous_text",
+   "False",
+   "--fp16",
+   "False",
+   "--verbose",
+   "False",
+   "--output_format",
+   "json"
+  ],
+  "ranLocally": true
+ },
+ "segments": [
+  {
+   "segment": 1,
+   "file": 1,
+   "start": 4.415,
+   "end": 13.608,
+   "seconds": 9.193,
+   "text": "I am Adrian, founder of Apply Arc, a UK job search startup that existed before this hackathon. Everything here was built during it on metamodels."
+  },
+  {
+   "segment": 2,
+   "file": 1,
+   "start": 16.633,
+   "end": 25.074,
+   "seconds": 8.441,
+   "text": "A real console job advert says, using AI, please follow our guidance to ensure your application reflects your own knowledge and experience."
+  },
+  {
+   "segment": 3,
+   "file": 1,
+   "start": 28.94,
+   "end": 37.347,
+   "seconds": 8.407,
+   "text": "Anna is fictional. Her problem is real. Three years in a lead's care home, work in English every day, and a form that once written English."
+  },
+  {
+   "segment": 4,
+   "file": 1,
+   "start": 41.276,
+   "end": 43.381,
+   "seconds": 2.104,
+   "text": "She said in Portuguese"
+  },
+  {
+   "segment": 5,
+   "file": 1,
+   "start": 52.1,
+   "end": 59.154,
+   "seconds": 7.054,
+   "text": "News, voice, transcribe. Write it down, life-keeping her English care words in English. She checks her words first."
+  },
+  {
+   "segment": 6,
+   "file": 1,
+   "start": 62.333,
+   "end": 72.51,
+   "seconds": 10.177,
+   "text": "Museu underturns her words into facts. Each one quotes her exact Portuguese, quotes jackets word for word. The English meaning sits underneath. She confirms both."
+  },
+  {
+   "segment": 7,
+   "file": 1,
+   "start": 75.72,
+   "end": 82.501,
+   "seconds": 6.781,
+   "text": "Wunder checks the concert endpoints and find the one she didn't cover. Dictating in respect, it asks in Portuguese."
+  },
+  {
+   "segment": 8,
+   "file": 1,
+   "start": 87.217,
+   "end": 98.446,
+   "seconds": 11.229,
+   "text": "Wonder draft her supporting evidence in a short letter in English. Every factual sentence cites a fact she confirmed. In a second Wonder call, check it again her Portuguese."
+  },
+  {
+   "segment": 9,
+   "file": 1,
+   "start": 101.293,
+   "end": 108.508,
+   "seconds": 7.216,
+   "text": "Then she remembers only two of her three years, three years, one night, she said once."
+  },
+  {
+   "segment": 10,
+   "file": 1,
+   "start": 113.174,
+   "end": 122.385,
+   "seconds": 9.211,
+   "text": "Wanda spots the contradiction and asks which is right. She picks the correction. Only the sentence that cites the old factory will open in more documents."
+  },
+  {
+   "segment": 11,
+   "file": 1,
+   "start": 124.964,
+   "end": 135.881,
+   "seconds": 10.918,
+   "text": "Nothing gets submitted for her. The Pakistan is not submitted. The employer gets one page where every factual sentence opens her Portuguese words."
+  },
+  {
+   "segment": 12,
+   "file": 1,
+   "start": 138.771,
+   "end": 149.66,
+   "seconds": 10.889,
+   "text": "What META did, step by step, model hosted META request IDs, both models are weeks old, a verifier rechecks the record without calling a model."
+  },
+  {
+   "segment": 13,
+   "file": 1,
+   "start": 153.094,
+   "end": 162.195,
+   "seconds": 9.1,
+   "text": "The same loop runs on meta open weights, use spark open on model, so care provider choose weight runs."
+  },
+  {
+   "segment": 14,
+   "file": 1,
+   "start": 165.123,
+   "end": 175.339,
+   "seconds": 10.216,
+   "text": "That's supply arc evidence. Who pays? Council and care employers who need application in the applicant's own words, it never screens, ranks or submit anything."
+  }
+ ],
+ "matching": {
+  "good": "similarity >= 0.7 and one of the line's first two and last two words heard",
+  "takes": [
+   {
+    "line": 1,
+    "segments": [
+     1
+    ],
+    "score": 0.875,
+    "whole": false,
+    "good": false,
+    "text": "I am Adrian, founder of Apply Arc, a UK job search startup that existed before this hackathon. Everything here was built during it on metamodels."
+   },
+   {
+    "line": 2,
+    "segments": [
+     2
+    ],
+    "score": 0.955,
+    "whole": true,
+    "good": true,
+    "text": "A real console job advert says, using AI, please follow our guidance to ensure your application reflects your own knowledge and experience."
+   },
+   {
+    "line": 3,
+    "segments": [
+     3
+    ],
+    "score": 0.824,
+    "whole": true,
+    "good": true,
+    "text": "Anna is fictional. Her problem is real. Three years in a lead's care home, work in English every day, and a form that once written English."
+   },
+   {
+    "line": 4,
+    "segments": [
+     4
+    ],
+    "score": 0.667,
+    "whole": true,
+    "good": false,
+    "text": "She said in Portuguese"
+   },
+   {
+    "line": 5,
+    "segments": [
+     5
+    ],
+    "score": 0.842,
+    "whole": true,
+    "good": true,
+    "text": "News, voice, transcribe. Write it down, life-keeping her English care words in English. She checks her words first."
+   },
+   {
+    "line": 6,
+    "segments": [
+     6
+    ],
+    "score": 0.808,
+    "whole": false,
+    "good": false,
+    "text": "Museu underturns her words into facts. Each one quotes her exact Portuguese, quotes jackets word for word. The English meaning sits underneath. She confirms both."
+   },
+   {
+    "line": 7,
+    "segments": [
+     7
+    ],
+    "score": 0.667,
+    "whole": true,
+    "good": false,
+    "text": "Wunder checks the concert endpoints and find the one she didn't cover. Dictating in respect, it asks in Portuguese."
+   },
+   {
+    "line": 8,
+    "segments": [
+     8
+    ],
+    "score": 0.828,
+    "whole": true,
+    "good": true,
+    "text": "Wonder draft her supporting evidence in a short letter in English. Every factual sentence cites a fact she confirmed. In a second Wonder call, check it again her Portuguese."
+   },
+   {
+    "line": 9,
+    "segments": [
+     9
+    ],
+    "score": 0.71,
+    "whole": true,
+    "good": true,
+    "text": "Then she remembers only two of her three years, three years, one night, she said once."
+   },
+   {
+    "line": 10,
+    "segments": [
+     10
+    ],
+    "score": 0.745,
+    "whole": true,
+    "good": true,
+    "text": "Wanda spots the contradiction and asks which is right. She picks the correction. Only the sentence that cites the old factory will open in more documents."
+   },
+   {
+    "line": 11,
+    "segments": [
+     11
+    ],
+    "score": 0.936,
+    "whole": true,
+    "good": true,
+    "text": "Nothing gets submitted for her. The Pakistan is not submitted. The employer gets one page where every factual sentence opens her Portuguese words."
+   },
+   {
+    "line": 12,
+    "segments": [
+     12
+    ],
+    "score": 0.846,
+    "whole": true,
+    "good": true,
+    "text": "What META did, step by step, model hosted META request IDs, both models are weeks old, a verifier rechecks the record without calling a model."
+   },
+   {
+    "line": 13,
+    "segments": [
+     13
+    ],
+    "score": 0.7,
+    "whole": true,
+    "good": true,
+    "text": "The same loop runs on meta open weights, use spark open on model, so care provider choose weight runs."
+   },
+   {
+    "line": 14,
+    "segments": [
+     14
+    ],
+    "score": 0.816,
+    "whole": true,
+    "good": true,
+    "text": "That's supply arc evidence. Who pays? Council and care employers who need application in the applicant's own words, it never screens, ranks or submit anything."
+   }
+  ]
+ },
+ "lines": {
+  "1": {
+   "segments": [
+    1
+   ],
+   "text": "I am Adrian, founder of Apply Arc, a UK job search startup that existed before this hackathon. Everything here was built during it on metamodels.",
+   "score": 0.875,
+   "how": "--pick",
+   "extraBefore": "i",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-01.wav",
+    "segment": "1",
+    "fromSeconds": 4.215,
+    "toSeconds": 13.908,
+    "seconds": 9.693,
+    "inputLufs": -32.9,
+    "inputTruePeakDb": -13.6,
+    "gainDb": 17.5,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "d2ae2ba54426506a0f8e8e40bfc572af55f201adf1c03206ffa67eff2b812d71",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     4.415,
+     13.608
+    ],
+    "cut": [
+     4.215,
+     13.908
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -150.2
+   }
+  },
+  "2": {
+   "segments": [
+    2
+   ],
+   "text": "A real console job advert says, using AI, please follow our guidance to ensure your application reflects your own knowledge and experience.",
+   "score": 0.955,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-02.wav",
+    "segment": "2",
+    "fromSeconds": 16.433,
+    "toSeconds": 25.374,
+    "seconds": 8.941,
+    "inputLufs": -33.0,
+    "inputTruePeakDb": -14.3,
+    "gainDb": 17.7,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "7950f1d998b0093db38e50c88425b98d7d33ce977f08bc257e9999409c2b5fe5",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     16.633,
+     25.074
+    ],
+    "cut": [
+     16.433,
+     25.374
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -150.0
+   }
+  },
+  "3": {
+   "segments": [
+    3
+   ],
+   "text": "Anna is fictional. Her problem is real. Three years in a lead's care home, work in English every day, and a form that once written English.",
+   "score": 0.824,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-03.wav",
+    "segment": "3",
+    "fromSeconds": 28.74,
+    "toSeconds": 37.647,
+    "seconds": 8.907,
+    "inputLufs": -32.9,
+    "inputTruePeakDb": -14.7,
+    "gainDb": 17.4,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "37af18588079a921b40c0d19b4ad047c6199cf30dec4f744a03459ce9749e5b9",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     28.94,
+     37.347
+    ],
+    "cut": [
+     28.74,
+     37.647
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -150.3
+   }
+  },
+  "4": {
+   "segments": [
+    4
+   ],
+   "text": "She said in Portuguese",
+   "score": 0.667,
+   "how": "--pick",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-04.wav",
+    "segment": "4",
+    "fromSeconds": 41.076,
+    "toSeconds": 43.681,
+    "seconds": 2.605,
+    "inputLufs": -34.7,
+    "inputTruePeakDb": -18.8,
+    "gainDb": 18.9,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "57b8450c5d333785063cc8e092ec44290e33631bbfce139db870967c630c6a82",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     41.276,
+     43.381
+    ],
+    "cut": [
+     41.076,
+     43.681
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -148.8
+   }
+  },
+  "5": {
+   "segments": [
+    5
+   ],
+   "text": "News, voice, transcribe. Write it down, life-keeping her English care words in English. She checks her words first.",
+   "score": 0.842,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-05.wav",
+    "segment": "5",
+    "fromSeconds": 51.9,
+    "toSeconds": 59.454,
+    "seconds": 7.554,
+    "inputLufs": -33.6,
+    "inputTruePeakDb": -13.4,
+    "gainDb": 18.7,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "58ac7c8ee15b26b063127828978fe6162d4791fb73dc95d44a7b5223e2a721c5",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     52.1,
+     59.154
+    ],
+    "cut": [
+     51.9,
+     59.454
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -149.0
+   }
+  },
+  "6": {
+   "segments": [
+    6
+   ],
+   "text": "Museu underturns her words into facts. Each one quotes her exact Portuguese, quotes jackets word for word. The English meaning sits underneath. She confirms both.",
+   "score": 0.808,
+   "how": "--pick",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-06.wav",
+    "segment": "6",
+    "fromSeconds": 62.133,
+    "toSeconds": 72.81,
+    "seconds": 10.677,
+    "inputLufs": -33.7,
+    "inputTruePeakDb": -15.4,
+    "gainDb": 18.6,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "2074cfe7ae6bf2410b78a1d0e064a98212c4398a401a55ec900770a617e64246",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     62.333,
+     72.51
+    ],
+    "cut": [
+     62.133,
+     72.81
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -149.1
+   }
+  },
+  "7": {
+   "segments": [
+    7
+   ],
+   "text": "Wunder checks the concert endpoints and find the one she didn't cover. Dictating in respect, it asks in Portuguese.",
+   "score": 0.667,
+   "how": "--pick",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-07.wav",
+    "segment": "7",
+    "fromSeconds": 75.52,
+    "toSeconds": 82.801,
+    "seconds": 7.281,
+    "inputLufs": -36.5,
+    "inputTruePeakDb": -16.4,
+    "gainDb": 21.1,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "ce569736810afcded7f42fb0aa49682d8e03f001cba4eb46766a730001be3047",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     75.72,
+     82.501
+    ],
+    "cut": [
+     75.52,
+     82.801
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -146.6
+   }
+  },
+  "8": {
+   "segments": [
+    8
+   ],
+   "text": "Wonder draft her supporting evidence in a short letter in English. Every factual sentence cites a fact she confirmed. In a second Wonder call, check it again her Portuguese.",
+   "score": 0.828,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-08.wav",
+    "segment": "8",
+    "fromSeconds": 87.017,
+    "toSeconds": 98.746,
+    "seconds": 11.729,
+    "inputLufs": -34.7,
+    "inputTruePeakDb": -14.3,
+    "gainDb": 19.8,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "e0c4d3540c09f1dae47325a5a7676403be2becba7030af45afe7d7786049b0cf",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     87.217,
+     98.446
+    ],
+    "cut": [
+     87.017,
+     98.746
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -147.9
+   }
+  },
+  "9": {
+   "segments": [
+    9
+   ],
+   "text": "Then she remembers only two of her three years, three years, one night, she said once.",
+   "score": 0.71,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-09.wav",
+    "segment": "9",
+    "fromSeconds": 101.093,
+    "toSeconds": 108.808,
+    "seconds": 7.715,
+    "inputLufs": -34.0,
+    "inputTruePeakDb": -17.0,
+    "gainDb": 18.2,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "627b63c946e1274aadbf8ad5598cc6b1cae203371b17b899bb6e843989b34020",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     101.293,
+     108.508
+    ],
+    "cut": [
+     101.093,
+     108.808
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -149.5
+   }
+  },
+  "10": {
+   "segments": [
+    10
+   ],
+   "text": "Wanda spots the contradiction and asks which is right. She picks the correction. Only the sentence that cites the old factory will open in more documents.",
+   "score": 0.745,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-10.wav",
+    "segment": "10",
+    "fromSeconds": 112.974,
+    "toSeconds": 122.685,
+    "seconds": 9.711,
+    "inputLufs": -35.8,
+    "inputTruePeakDb": -16.0,
+    "gainDb": 20.4,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "0df9079041eb5d6113ccfa8f93fd4dad3807347acdaad819366cb388c5421e7e",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     113.174,
+     122.385
+    ],
+    "cut": [
+     112.974,
+     122.685
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -147.3
+   }
+  },
+  "11": {
+   "segments": [
+    11
+   ],
+   "text": "Nothing gets submitted for her. The Pakistan is not submitted. The employer gets one page where every factual sentence opens her Portuguese words.",
+   "score": 0.936,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-11.wav",
+    "segment": "11",
+    "fromSeconds": 124.764,
+    "toSeconds": 136.181,
+    "seconds": 11.417,
+    "inputLufs": -33.1,
+    "inputTruePeakDb": -13.2,
+    "gainDb": 18.0,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "836956f28f81c98fe7dc9afb90135146f052bb3e440f8155a7aaf549c4ebd6c4",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     124.964,
+     135.881
+    ],
+    "cut": [
+     124.764,
+     136.181
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -149.7
+   }
+  },
+  "12": {
+   "segments": [
+    12
+   ],
+   "text": "What META did, step by step, model hosted META request IDs, both models are weeks old, a verifier rechecks the record without calling a model.",
+   "score": 0.846,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-12.wav",
+    "segment": "12",
+    "fromSeconds": 138.571,
+    "toSeconds": 149.96,
+    "seconds": 11.389,
+    "inputLufs": -34.0,
+    "inputTruePeakDb": -11.4,
+    "gainDb": 19.6,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "f1df601d56734f5e65c70722b81e5d8a527a494b9b2616ab7330baefdbf79348",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     138.771,
+     149.66
+    ],
+    "cut": [
+     138.571,
+     149.96
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -148.1
+   }
+  },
+  "13": {
+   "segments": [
+    13
+   ],
+   "text": "The same loop runs on meta open weights, use spark open on model, so care provider choose weight runs.",
+   "score": 0.7,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-13.wav",
+    "segment": "13",
+    "fromSeconds": 152.894,
+    "toSeconds": 162.495,
+    "seconds": 9.601,
+    "inputLufs": -31.8,
+    "inputTruePeakDb": -14.5,
+    "gainDb": 16.3,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "f35b0f9e0ccdf2b813382c916675905cdfc0bdc94659999577a53b260cc45e87",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     153.094,
+     162.195
+    ],
+    "cut": [
+     152.894,
+     162.495
+    ],
+    "leadIn": 0.2,
+    "tail": 0.3,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -151.4
+   }
+  },
+  "14": {
+   "segments": [
+    14
+   ],
+   "text": "That's supply arc evidence. Who pays? Council and care employers who need application in the applicant's own words, it never screens, ranks or submit anything.",
+   "score": 0.816,
+   "how": "last good take",
+   "extraBefore": "",
+   "extraAfter": "",
+   "clip": {
+    "audio": "~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/films/ana-v1/takes/line-14.wav",
+    "segment": "14",
+    "fromSeconds": 164.923,
+    "toSeconds": 175.339,
+    "seconds": 10.416,
+    "inputLufs": -30.8,
+    "inputTruePeakDb": -10.5,
+    "gainDb": 15.3,
+    "limited": true,
+    "lufs": -16.0,
+    "truePeakDb": -1.7,
+    "sha256": "aca690849c28bbd786529cec5a8a3eb84be60b0276c14063ae0d11f4d5452a1e",
+    "file": "narration-20261104-134849Z.wav",
+    "fileSha256": "250443cca19ce8e20598c036539fab9ff32640e571ce896c5fb667f67c00fb07",
+    "speech": [
+     165.123,
+     175.339
+    ],
+    "cut": [
+     164.923,
+     175.339
+    ],
+    "leadIn": 0.2,
+    "tail": -0.0,
+    "edgeTrims": [],
+    "atempo": 1.0,
+    "noiseInClipDb": -152.4
+   }
+  }
+ },
+ "atempo": 1.0,
+ "cut": {
+  "seconds": 7.378,
+  "how": "word-count estimate (0.71 of the take); the pause found was None",
+  "candidates [length, start, end]": []
+ },
+ "picture": 165.495
+}

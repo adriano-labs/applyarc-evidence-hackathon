@@ -1,0 +1,3628 @@
+{
+  "host": "wonder",
+  "persona": "yusuf",
+  "style": "non-native English",
+  "startedAt": "2026-11-03T13:48:03.144Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T13:48:03.144Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T13:48:03.147Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T13:48:03.149Z",
+      "ms": 11129,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 12,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 8482,
+            "cached": 5852,
+            "output": 2219,
+            "reasoning": 612
+          },
+          "costUsd": 0.0560704,
+          "firstEventMs": 1266,
+          "totalMs": 11124,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T13:48:14.281Z",
+      "ms": 25,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T13:48:14.306Z",
+      "ms": 5393,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2057,
+            "cached": 884,
+            "output": 568,
+            "reasoning": 481
+          },
+          "costUsd": 0.016228799999999998,
+          "firstEventMs": 1240,
+          "totalMs": 5388,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T13:48:19.703Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T13:48:19.707Z",
+      "ms": 7166,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 3,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 7154,
+            "cached": 5084,
+            "output": 685,
+            "reasoning": 408
+          },
+          "costUsd": 0.022996799999999998,
+          "firstEventMs": 1168,
+          "totalMs": 7161,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T13:48:26.876Z",
+      "ms": 7,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 4
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T13:48:26.885Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T13:48:26.890Z",
+      "ms": 45809,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:222 of 400"
+          ],
+          "usage": {
+            "input": 6720,
+            "cached": 3944,
+            "output": 2708,
+            "reasoning": 1728
+          },
+          "costUsd": 0.0660528,
+          "firstEventMs": 1329,
+          "totalMs": 16589,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4283,
+            "cached": 628,
+            "output": 677,
+            "reasoning": 256
+          },
+          "costUsd": 0.028285599999999998,
+          "firstEventMs": 1486,
+          "totalMs": 4566,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 2,
+          "toolNotes": [
+            "word_count:216 of 300",
+            "word_count:240 of 300"
+          ],
+          "usage": {
+            "input": 13504,
+            "cached": 9052,
+            "output": 3932,
+            "reasoning": 2712
+          },
+          "costUsd": 0.0982584,
+          "firstEventMs": 580,
+          "totalMs": 25402,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4639,
+            "cached": 628,
+            "output": 1424,
+            "reasoning": 1101
+          },
+          "costUsd": 0.0446496,
+          "firstEventMs": 1122,
+          "totalMs": 11690,
+          "unsettled": 0
+        },
+        {
+          "step": "revise",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1612,
+            "cached": 0,
+            "output": 943,
+            "reasoning": 847
+          },
+          "costUsd": 0.025308,
+          "firstEventMs": 627,
+          "totalMs": 4576,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1470,
+            "cached": 628,
+            "output": 455,
+            "reasoning": 399
+          },
+          "costUsd": 0.0125936,
+          "firstEventMs": 1461,
+          "totalMs": 4122,
+          "unsettled": 0
+        }
+      ],
+      "stages": [
+        "Revising 1 unsupported sentence"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 5
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T13:49:12.703Z",
+      "ms": 5,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T13:49:12.709Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T13:49:12.714Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T13:49:12.719Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T13:49:12.723Z",
+      "ms": 8105,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 4,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 4657,
+            "cached": 3432,
+            "output": 802,
+            "reasoning": 445
+          },
+          "costUsd": 0.021626399999999997,
+          "firstEventMs": 2063,
+          "totalMs": 8099,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "correct the fact directly",
+      "startedAt": "2026-11-03T13:49:20.845Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/changeFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T13:49:20.850Z",
+      "ms": 12350,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3193,
+            "cached": 884,
+            "output": 1183,
+            "reasoning": 1082
+          },
+          "costUsd": 0.033072800000000006,
+          "firstEventMs": 1045,
+          "totalMs": 8251,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1873,
+            "cached": 628,
+            "output": 628,
+            "reasoning": 502
+          },
+          "costUsd": 0.0176656,
+          "firstEventMs": 1208,
+          "totalMs": 4090,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T13:49:33.202Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T13:49:33.203Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T13:49:33.207Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T13:49:33.213Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T13:49:33.218Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "kind": "conflict-missed",
+      "note": "the correcting note raised no conflict; 3 fact(s) were proposed from it instead",
+      "proposed": [
+        "the certificate problem was found by my friend Emre from the web server logs",
+        "I wrote the Ansible playbooks",
+        "I tested the permission fix"
+      ]
+    }
+  ],
+  "route": "missed-then-correct-fact",
+  "correctedFactId": "f13",
+  "intendedTargetId": "f13",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "contribution",
+      "text": "In your group of four students' Ansible automation project for the computer science department, which part did you personally do?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "Applicant is in last university year in Ankara, graduating June 2026, doing a project for the computer science department.",
+        "quote": "In my last year of university (Ankara, graduation June 2026) we are doing a project for the computer science department.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "Department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+        "quote": "The problem was the department have many old servers and every lecturer is installing the softwares by hand, so every server is different and when one is broken nobody know how to fix.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "We are a group of four students.",
+        "quote": "We are a group of four students.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+        "quote": "We make an automation with Ansible for install all the servers in same way, and we put a Gitea for keeping the playbooks and one Grafana to see the servers.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "We chose Ansible not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+        "quote": "We choose Ansible and not Puppet because Ansible is not needing an agent on the old servers and the department is not allowing to install new agents.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "After we ran the playbooks, department website HTTPS stopped working and we searched for two days.",
+        "quote": "after we run the playbooks the HTTPS of the department website is stop working. Two days we are searching.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "Playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+        "quote": "In the end the problem was the playbook is changing the certificate folder permissions to 600 for the security and the web server user cannot read the files anymore.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "We fixed it by giving group read permission only to the web server group.",
+        "quote": "We fix it with giving the group read permission only for the web server group.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "I learned a security change can break working things and to always test in a copy first.",
+        "quote": "I learn that the security change can break the things which are working, and always you must test in a copy first.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "Now 11 servers are managed by playbooks and new server setup takes 15 minutes, before one day.",
+        "quote": "Now 11 servers are managed by the playbooks and the new server setup is taking 15 minutes, before was one day.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "I want to apply to Graphcore because I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+        "quote": "I want to apply to Graphcore because I like very much the infrastructure part and the operating systems, more than the writing of applications, and Graphcore is making the platform for the running of the models.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "I wrote the Ansible playbooks for the server setup.",
+        "quote": "I wrote the Ansible playbooks for the server setup",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "I found the certificate permission problem by checking the web server logs.",
+        "quote": "I found the certificate permission problem by checking the web server logs",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "In my last year of university (Ankara, graduation June 2026) we are doing a project for the computer science department. The problem was the department have many old servers and every lecturer is installing the softwares by hand, so every server is different and when one is broken nobody know how to fix.\n\nWe are a group of four students. We make an automation with Ansible for install all the servers in same way, and we put a Gitea for keeping the playbooks and one Grafana to see the servers. We choose Ansible and not Puppet because Ansible is not needing an agent on the old servers and the department is not allowing to install new agents. This was important decision.\n\nA big problem: after we run the playbooks the HTTPS of the department website is stop working. Two days we are searching. In the end the problem was the playbook is changing the certificate folder permissions to 600 for the security and the web server user cannot read the files anymore. We fix it with giving the group read permission only for the web server group. I learn that the security change can break the things which are working, and always you must test in a copy first.\n\nNow 11 servers are managed by the playbooks and the new server setup is taking 15 minutes, before was one day.\n\nI want to apply to Graphcore because I like very much the infrastructure part and the operating systems, more than the writing of applications, and Graphcore is making the platform for the running of the models.",
+        "at": "2026-11-03T13:48:03.148Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I wrote the Ansible playbooks for the server setup and I found the certificate permission problem by checking the web server logs.",
+        "at": "2026-11-03T13:48:19.704Z",
+        "questionId": "q1",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "I am in my last year of university in Ankara, graduating in June 2026, and we are doing a project for the computer science department. We made Ansible automation to install all servers in the same way, with Gitea for keeping the playbooks and Grafana to see the servers.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The department had many old servers, and each one had been installed manually and was different from the others, so when one server was broken nobody knew how to fix it.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, whereas before it took one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "We chose Ansible rather than Puppet because Ansible does not need an agent on the old servers, and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "After we ran the playbooks, HTTPS on the department website stopped working, and we spent two days searching for the cause.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I found the certificate permission problem by checking the web server logs.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The playbook had changed the certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I learned that a security change can break things that are already working, and that it is important to always test in a copy first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "We were a group of four students.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I am in my last year of university in Ankara and am graduating in June 2026, and we are doing a project for the computer science department.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "We chose Ansible and not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "After we ran the playbooks, the department website HTTPS stopped working and we searched for two days.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "I found the certificate permission problem by checking the web server logs.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, before one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 238,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 222,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The department had many old servers, and each one had been installed manually and was different from the others, so when one server was broken nobody knew how to fix it.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, whereas before it took one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "We chose Ansible rather than Puppet because Ansible does not need an agent on the old servers, and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "After we ran the playbooks, HTTPS on the department website stopped working, and we spent two days searching for the cause.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I found the certificate permission problem by checking the web server logs.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The playbook had changed the certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I learned that a security change can break things that are already working, and that it is important to always test in a copy first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "We were a group of four students.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I am in my last year of university in Ankara and am graduating in June 2026, and we are doing a project for the computer science department.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "We chose Ansible and not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "After we ran the playbooks, the department website HTTPS stopped working and we searched for two days.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "I found the certificate permission problem by checking the web server logs.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, before one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The department had many old servers, and each one had been installed manually and was different from the others, so when one server was broken nobody knew how to fix it.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, whereas before it took one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "We chose Ansible rather than Puppet because Ansible does not need an agent on the old servers, and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "After we ran the playbooks, HTTPS on the department website stopped working, and we spent two days searching for the cause.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The playbook had changed the certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I learned that a security change can break things that are already working, and that it is important to always test in a copy first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "We were a group of four students.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I am in my last year of university in Ankara and am graduating in June 2026, and we are doing a project for the computer science department.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the Ansible playbooks for the server setup.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "We chose Ansible and not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "After we ran the playbooks, the department website HTTPS stopped working and we searched for two days.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We fixed it by giving group read permission only to the web server group.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, before one day.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 226,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 229,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 34,
+      "createdAt": "2026-11-03T13:48:03.145Z",
+      "applicant": {
+        "name": "Ellie",
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "In my last year of university (Ankara, graduation June 2026) we are doing a project for the computer science department. The problem was the department have many old servers and every lecturer is installing the softwares by hand, so every server is different and when one is broken nobody know how to fix.\n\nWe are a group of four students. We make an automation with Ansible for install all the servers in same way, and we put a Gitea for keeping the playbooks and one Grafana to see the servers. We choose Ansible and not Puppet because Ansible is not needing an agent on the old servers and the department is not allowing to install new agents. This was important decision.\n\nA big problem: after we run the playbooks the HTTPS of the department website is stop working. Two days we are searching. In the end the problem was the playbook is changing the certificate folder permissions to 600 for the security and the web server user cannot read the files anymore. We fix it with giving the group read permission only for the web server group. I learn that the security change can break the things which are working, and always you must test in a copy first.\n\nNow 11 servers are managed by the playbooks and the new server setup is taking 15 minutes, before was one day.\n\nI want to apply to Graphcore because I like very much the infrastructure part and the operating systems, more than the writing of applications, and Graphcore is making the platform for the running of the models.",
+            "at": "2026-11-03T13:48:03.148Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "answer",
+            "text": "I wrote the Ansible playbooks for the server setup and I found the certificate permission problem by checking the web server logs.",
+            "at": "2026-11-03T13:48:19.704Z",
+            "questionId": "q1",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "notes",
+            "text": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+            "at": "2026-11-03T13:49:12.720Z",
+            "read": true
+          },
+          {
+            "id": "s4",
+            "kind": "correction",
+            "text": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+            "at": "2026-11-03T13:49:20.846Z"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "Applicant is in last university year in Ankara, graduating June 2026, doing a project for the computer science department.",
+            "quote": "In my last year of university (Ankara, graduation June 2026) we are doing a project for the computer science department.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "Department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+            "quote": "The problem was the department have many old servers and every lecturer is installing the softwares by hand, so every server is different and when one is broken nobody know how to fix.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "We are a group of four students.",
+            "quote": "We are a group of four students.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+            "quote": "We make an automation with Ansible for install all the servers in same way, and we put a Gitea for keeping the playbooks and one Grafana to see the servers.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "We chose Ansible not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+            "quote": "We choose Ansible and not Puppet because Ansible is not needing an agent on the old servers and the department is not allowing to install new agents.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "After we ran the playbooks, department website HTTPS stopped working and we searched for two days.",
+            "quote": "after we run the playbooks the HTTPS of the department website is stop working. Two days we are searching.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "Playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+            "quote": "In the end the problem was the playbook is changing the certificate folder permissions to 600 for the security and the web server user cannot read the files anymore.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "We fixed it by giving group read permission only to the web server group.",
+            "quote": "We fix it with giving the group read permission only for the web server group.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "I learned a security change can break working things and to always test in a copy first.",
+            "quote": "I learn that the security change can break the things which are working, and always you must test in a copy first.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "Now 11 servers are managed by playbooks and new server setup takes 15 minutes, before one day.",
+            "quote": "Now 11 servers are managed by the playbooks and the new server setup is taking 15 minutes, before was one day.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "I want to apply to Graphcore because I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+            "quote": "I want to apply to Graphcore because I like very much the infrastructure part and the operating systems, more than the writing of applications, and Graphcore is making the platform for the running of the models.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "I wrote the Ansible playbooks for the server setup.",
+            "quote": "I wrote the Ansible playbooks for the server setup",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+            "quote": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+            "sourceId": "s4",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "I found the certificate permission problem by checking the web server logs.",
+                "quote": "I found the certificate permission problem by checking the web server logs",
+                "sourceId": "s2",
+                "at": "2026-11-03T13:49:20.846Z"
+              }
+            ]
+          },
+          {
+            "id": "f14",
+            "statement": "Emre found the certificate problem from the web server logs.",
+            "quote": "the certificate problem was found by my friend Emre from the web server logs",
+            "sourceId": "s3",
+            "status": "rejected",
+            "history": []
+          },
+          {
+            "id": "f15",
+            "statement": "I wrote the Ansible playbooks.",
+            "quote": "I wrote the Ansible playbooks",
+            "sourceId": "s3",
+            "status": "rejected",
+            "history": []
+          },
+          {
+            "id": "f16",
+            "statement": "I tested the permission fix.",
+            "quote": "I tested the permission fix",
+            "sourceId": "s3",
+            "status": "rejected",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "goal": [
+            "f1",
+            "f2",
+            "f4",
+            "f10"
+          ],
+          "evidence": [
+            "f1",
+            "f2",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f10",
+            "f12",
+            "f13",
+            "f15",
+            "f16"
+          ],
+          "contribution": [
+            "f3",
+            "f12",
+            "f13",
+            "f15",
+            "f16"
+          ],
+          "tech": [
+            "f4",
+            "f5",
+            "f10",
+            "f12",
+            "f15"
+          ],
+          "decision": [
+            "f5"
+          ],
+          "problem": [
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f13",
+            "f14",
+            "f16"
+          ],
+          "motivation": [
+            "f11"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirementId": "contribution",
+            "text": "In your group of four students' Ansible automation project for the computer science department, which part did you personally do?",
+            "why": "The form asks what you did yourself; your notes only describe what the group did.",
+            "status": "answered",
+            "askedBy": "model",
+            "sourceId": "s2"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way.",
+                "factIds": [
+                  "f1",
+                  "f4"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "The department had many old servers, and each one had been installed manually and was different from the others, so when one server was broken nobody knew how to fix it.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, whereas before it took one day.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "We chose Ansible rather than Puppet because Ansible does not need an agent on the old servers, and the department would not allow installing new agents.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "After we ran the playbooks, HTTPS on the department website stopped working, and we spent two days searching for the cause.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "The playbook had changed the certificate folder permissions to 600 for security, so the web server user could not read the files.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "We fixed it by giving group read permission only to the web server group.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "I learned that a security change can break things that are already working, and that it is important to always test in a copy first.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "We were a group of four students.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "I wrote the Ansible playbooks for the server setup.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 2,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "I like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "I am in my last year of university in Ankara and am graduating in June 2026, and we are doing a project for the computer science department.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "The department had many old servers, each manually installed and different, and nobody knew how to fix a broken one.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "I wrote the Ansible playbooks for the server setup.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "We chose Ansible and not Puppet because Ansible needs no agent and the department would not allow installing new agents.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "After we ran the playbooks, the department website HTTPS stopped working and we searched for two days.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "The playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "claim",
+                "text": "We fixed it by giving group read permission only to the web server group.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "claim",
+                "text": "Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, before one day.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-14",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-15",
+                "kind": "frame",
+                "text": "Kind regards, Ellie",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T13:49:33.208Z"
+          },
+          "letter": {
+            "revision": 2,
+            "at": "2026-11-03T13:49:33.214Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T13:49:33.219Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 2
+            }
+          }
+        ],
+        "checked": [
+          "contribution"
+        ],
+        "lastRepair": {
+          "factId": "f13",
+          "at": "2026-11-03T13:49:33.203Z",
+          "changed": 2,
+          "kept": 0,
+          "docs": [
+            "answer",
+            "letter"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-6"
+            },
+            {
+              "docId": "letter",
+              "segmentId": "letter-10"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T13:49:33.220Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 0
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/changeFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 10,
+    "spentUsd": 0.713782,
+    "reservedUsd": 0.294,
+    "remainingUsd": 8.992218
+  },
+  "extraction": {
+    "accepted": 11,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q1",
+    "requirementId": "contribution",
+    "text": "In your group of four students' Ansible automation project for the computer science department, which part did you personally do?",
+    "answer": "I wrote the Ansible playbooks for the server setup and I found the certificate permission problem by checking the web server logs."
+  },
+  "answerExtraction": {
+    "accepted": 2,
+    "refused": [],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f4",
+        "f10"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f4",
+        "f5",
+        "f10",
+        "f12"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f5"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f13"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f3",
+        "f12",
+        "f13"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f11"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f10",
+        "f12",
+        "f13"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f13",
+    "quote": "I found the certificate permission problem by checking the web server logs",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "I am in my last year of university in Ankara, graduating in June 2026, and we are doing a project for the computer science department. We made Ansible automation to install all servers in the same way, with Gitea for keeping the playbooks and Grafana to see the servers.",
+    "factIds": [
+      "f1",
+      "f4"
+    ],
+    "text": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way."
+  },
+  "correctionExtraction": {
+    "accepted": 3,
+    "refused": [],
+    "conflict": false
+  },
+  "correctedFact": {
+    "id": "f13",
+    "statement": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+    "quote": "Correction: the certificate problem was found by my friend Emre from the web server logs. I wrote the Ansible playbooks and I tested the permission fix.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "I found the certificate permission problem by checking the web server logs.",
+        "quote": "I found the certificate permission problem by checking the web server logs",
+        "sourceId": "s2",
+        "at": "2026-11-03T13:49:20.846Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-6",
+      "before": "I found the certificate permission problem by checking the web server logs.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-10",
+      "before": "I found the certificate permission problem by checking the web server logs.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-6",
+        "before": "I found the certificate permission problem by checking the web server logs.",
+        "after": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+        "afterFactIds": [
+          "f13"
+        ],
+        "status": "proposed",
+        "decision": null
+      },
+      {
+        "id": "c2",
+        "docId": "letter",
+        "segmentId": "letter-10",
+        "before": "I found the certificate permission problem by checking the web server logs.",
+        "after": "My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix.",
+        "afterFactIds": [
+          "f13"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f13",
+    "at": "2026-11-03T13:49:33.203Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-6"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-10"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 226,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way. The department had many old servers, and each one had been installed manually and was different from the others, so when one server was broken nobody knew how to fix it. Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, whereas before it took one day.\n\nWe chose Ansible rather than Puppet because Ansible does not need an agent on the old servers, and the department would not allow installing new agents.\n\nAfter we ran the playbooks, HTTPS on the department website stopped working, and we spent two days searching for the cause. My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix. The playbook had changed the certificate folder permissions to 600 for security, so the web server user could not read the files. We fixed it by giving group read permission only to the web server group. I learned that a security change can break things that are already working, and that it is important to always test in a copy first.\n\nWe were a group of four students. I wrote the Ansible playbooks for the server setup."
+      },
+      {
+        "id": "letter",
+        "words": 229,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nI like infrastructure and operating systems more than writing applications, and Graphcore makes the platform for running models.\n\nI am in my last year of university in Ankara and am graduating in June 2026, and we are doing a project for the computer science department. The department had many old servers, each manually installed and different, and nobody knew how to fix a broken one. We made Ansible automation to install all servers the same way, with Gitea for playbooks and Grafana to see servers. I wrote the Ansible playbooks for the server setup. We chose Ansible and not Puppet because Ansible needs no agent and the department would not allow installing new agents.\n\nAfter we ran the playbooks, the department website HTTPS stopped working and we searched for two days. My friend Emre found the certificate permission problem from the web server logs, and I tested the permission fix. The playbook changed certificate folder permissions to 600 for security, so the web server user could not read the files. We fixed it by giving group read permission only to the web server group. Now 11 servers are managed by the playbooks, and a new server setup takes 15 minutes, before one day.\n\nThank you for considering my application.\n\nKind regards, Ellie"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 10,
+    "spentUsd": 1.555525,
+    "reservedUsd": 0.25484,
+    "remainingUsd": 8.189635
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "2cf6f6c2-d0b4-4723-a746-5ec0e819adbf",
+        "81d0a155-0e7f-468f-b3ed-71753fc59a36",
+        "f79d2bb7-317e-4aa3-924f-d97ecbb1c5a2"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8482,
+        "cached": 5852,
+        "output": 2219,
+        "reasoning": 612
+      },
+      "costUsd": 0.0560704,
+      "firstEventMs": 1266,
+      "firstOutputMs": 1678,
+      "totalMs": 11124,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3929938
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:48:14.274Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "3438e19e-271c-43af-afd4-7411f23f673d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2057,
+        "cached": 884,
+        "output": 568,
+        "reasoning": 481
+      },
+      "costUsd": 0.016228799999999998,
+      "firstEventMs": 1240,
+      "firstOutputMs": 5106,
+      "totalMs": 5388,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3929872
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T13:48:19.695Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "a12c8643-908c-446f-b2a2-b7fc5d359cde",
+        "89322eef-c87d-4d68-9da0-9cd4292cd1c7",
+        "e280cb78-c62d-4c23-9774-8fae0722588b"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 7154,
+        "cached": 5084,
+        "output": 685,
+        "reasoning": 408
+      },
+      "costUsd": 0.022996799999999998,
+      "firstEventMs": 1168,
+      "firstOutputMs": 3200,
+      "totalMs": 7161,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3932068
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:48:26.869Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "48eb941a-94a5-4179-9c06-f45919ca8418",
+        "0f78d62c-17a2-40de-8f24-80a9f863fea4"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "222 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6720,
+        "cached": 3944,
+        "output": 2708,
+        "reasoning": 1728
+      },
+      "costUsd": 0.0660528,
+      "firstEventMs": 1329,
+      "firstOutputMs": 9892,
+      "totalMs": 16589,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3937240
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:48:43.482Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "5a177b48-8086-45f3-adf9-55361a7c6bee"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4283,
+        "cached": 628,
+        "output": 677,
+        "reasoning": 256
+      },
+      "costUsd": 0.028285599999999998,
+      "firstEventMs": 1486,
+      "firstOutputMs": 3026,
+      "totalMs": 4566,
+      "rateLimit": {
+        "remainingRequests": 2972,
+        "remainingTokens": 3936458
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:48:48.050Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "714a12ff-e0e7-4fc3-a13b-48b286fd4ab0",
+        "a1011745-6dde-4404-9d4b-124f20ba5534",
+        "e0d1f794-cfe1-4698-a160-6527a96970eb"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "216 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "240 of 300"
+        }
+      ],
+      "usage": {
+        "input": 13504,
+        "cached": 9052,
+        "output": 3932,
+        "reasoning": 2712
+      },
+      "costUsd": 0.0982584,
+      "firstEventMs": 580,
+      "firstOutputMs": 15502,
+      "totalMs": 25402,
+      "rateLimit": {
+        "remainingRequests": 2972,
+        "remainingTokens": 3933593
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:48:52.294Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "4695fa67-9c7a-48c6-a816-68acd251caad"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4639,
+        "cached": 628,
+        "output": 1424,
+        "reasoning": 1101
+      },
+      "costUsd": 0.0446496,
+      "firstEventMs": 1122,
+      "firstOutputMs": 10337,
+      "totalMs": 11690,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3929560
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:03.987Z"
+    },
+    {
+      "step": "revise",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "b4e9d8e0-67cd-4d9b-bf3f-30d293bd4263"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1612,
+        "cached": 0,
+        "output": 943,
+        "reasoning": 847
+      },
+      "costUsd": 0.025308,
+      "firstEventMs": 627,
+      "firstOutputMs": 4319,
+      "totalMs": 4576,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3935495
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:08.566Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "90c80868-5efd-4259-b7db-10409516b68c"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1470,
+        "cached": 628,
+        "output": 455,
+        "reasoning": 399
+      },
+      "costUsd": 0.0125936,
+      "firstEventMs": 1461,
+      "firstOutputMs": 3923,
+      "totalMs": 4122,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3938443
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:12.689Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "55033297-1af6-4f8c-9b21-64295770216a",
+        "b3ea7cbf-546e-4466-ac33-1cb943097f1d"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4657,
+        "cached": 3432,
+        "output": 802,
+        "reasoning": 445
+      },
+      "costUsd": 0.021626399999999997,
+      "firstEventMs": 2063,
+      "firstOutputMs": 4237,
+      "totalMs": 8099,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3943679
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:49:20.823Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "6866a854-a8d7-4a98-88c6-26a4cf63f86d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3193,
+        "cached": 884,
+        "output": 1183,
+        "reasoning": 1082
+      },
+      "costUsd": 0.033072800000000006,
+      "firstEventMs": 1045,
+      "firstOutputMs": 8012,
+      "totalMs": 8251,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3945670
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:49:29.102Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "34338a9f-42a8-4c3e-ba6e-87b7a3e590e4"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1873,
+        "cached": 628,
+        "output": 628,
+        "reasoning": 502
+      },
+      "costUsd": 0.0176656,
+      "firstEventMs": 1208,
+      "firstOutputMs": 3583,
+      "totalMs": 4090,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3941023
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:49:33.195Z"
+    }
+  ],
+  "endedAt": "2026-11-03T13:49:33.225Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 13,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "226/300",
+          "letter": "229/400"
+        },
+        "afterDraft": {
+          "answer": "238/300",
+          "letter": "222/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 26,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-6",
+          "letter/letter-10"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way.",
+        "afterCorrection": "For my final-year project in Ankara, four of us automated the setup of the computer science department's old servers with Ansible so that every server was installed the same way.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 21,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 22,
+    "stepRetries": 0,
+    "providerAttempts": 20,
+    "providerTurns": 20,
+    "toolCalls": 22,
+    "receipts": 12,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 59644,
+      "cached": 31644,
+      "output": 16224,
+      "reasoning": 10573
+    },
+    "costReceiptsUsd": 0.44280879999999995,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.841743,
+    "wallMs": 90081,
+    "modelStepMs": {
+      "read the notes": 11129,
+      "check what the form still needs": 5393,
+      "read the answer": 7166,
+      "write both documents": 45809,
+      "read the correcting note": 8105,
+      "propose the changes": 12350
+    },
+    "medianModelStepMs": 9617,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 45809
+  }
+}

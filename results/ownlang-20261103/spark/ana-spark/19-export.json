@@ -1,0 +1,1309 @@
+{
+ "workspace": {
+  "schema": 1,
+  "revision": 17,
+  "createdAt": "2026-11-03T20:37:22.283Z",
+  "applicant": {
+   "name": "Ana",
+   "sources": [
+    {
+     "id": "s1",
+     "kind": "notes",
+     "text": "Chamo-me Ana. Trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+     "at": "2026-11-03T20:37:22.289Z",
+     "language": "pt-PT",
+     "read": true
+    },
+    {
+     "id": "s2",
+     "kind": "answer",
+     "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+     "at": "2026-11-03T20:37:29.559Z",
+     "questionId": "q2",
+     "language": "pt-PT",
+     "read": true
+    },
+    {
+     "id": "s3",
+     "kind": "correction",
+     "text": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+     "at": "2026-11-03T20:38:01.439Z",
+     "language": "pt-PT"
+    }
+   ],
+   "facts": [
+    {
+     "id": "f1",
+     "statement": "I am Ana.",
+     "quote": "Chamo-me Ana.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f2",
+     "statement": "I have worked 3 years in a care home in Leeds, starting in October 2023.",
+     "quote": "Trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f3",
+     "statement": "I have medication training and do the morning medication round for 18 residents.",
+     "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f4",
+     "statement": "I write the daily notes in English and sign the medication sheet at end of shift.",
+     "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f5",
+     "statement": "I read each resident's care plan before the shift and follow it.",
+     "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f6",
+     "statement": "I have moving and handling training and use the hoist.",
+     "quote": "Tenho a formação de moving and handling, uso a grua",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f7",
+     "statement": "We always work in pairs.",
+     "quote": "trabalhamos sempre em dupla.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f8",
+     "statement": "We as the whole team moved dinner earlier.",
+     "quote": "nós, a equipa toda, passámos o jantar para mais cedo.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "team"
+    },
+    {
+     "id": "f9",
+     "statement": "I made cards with photos of food so each person can point to what they want.",
+     "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f10",
+     "statement": "Correction: the night shifts were two years, not three; in the last year I moved to days.",
+     "quote": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+     "sourceId": "s3",
+     "status": "confirmed",
+     "history": [
+      {
+       "statement": "I did 3 years of nights and also weekends.",
+       "quote": "Fiz três anos de noites, e também fins de semana.",
+       "sourceId": "s1",
+       "at": "2026-11-03T20:38:01.439Z",
+       "actor": "self"
+      }
+     ],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f11",
+     "statement": "I saw a bruise on a resident's arm one night.",
+     "quote": "vi uma nódoa negra no braço de uma residente.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f12",
+     "statement": "I recorded it and told the nurse on duty immediately.",
+     "quote": "Registei e contei logo à enfermeira de serviço,",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f13",
+     "statement": "She made the safeguarding report.",
+     "quote": "ela fez a participação de safeguarding.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "other"
+    },
+    {
+     "id": "f14",
+     "statement": "I knock on the door before entering as part of dignity",
+     "quote": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas.",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f15",
+     "statement": "I explain what I will do before personal hygiene",
+     "quote": "explicar o que vou fazer antes da higiene pessoal",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f16",
+     "statement": "I always close the curtains",
+     "quote": "fechar sempre as cortinas",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f17",
+     "statement": "I respect each person's culture and religion",
+     "quote": "respeito a cultura e a religião de cada pessoa",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f18",
+     "statement": "I ask what they want to eat",
+     "quote": "pergunto o que quer comer",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f19",
+     "statement": "I ask how they want to be addressed and treated",
+     "quote": "como quer ser tratada",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    },
+    {
+     "id": "f20",
+     "statement": "I ask if they prefer to be helped by a woman",
+     "quote": "se prefere ser ajudada por uma mulher",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": [],
+     "language": "pt-PT",
+     "actor": "self"
+    }
+   ]
+  },
+  "application": {
+   "form": {
+    "id": "north-yorkshire-council-care-and-support-worker-476577",
+    "company": "North Yorkshire Council",
+    "role": "Care and Support Worker",
+    "location": "Leyburn, North Yorkshire, UK",
+    "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+    "snapshot": {
+     "source": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+     "fetchedAt": "2026-11-03T19:09:48Z",
+     "postingUpdatedAt": "2026-11-03",
+     "note": "Public North Yorkshire Council advert (posted 03/11/2026, closing 16/11/2026), captured once during the event with its attached job description and person specification (fetched 2026-11-03T19:10:04Z). Used without partnership: the council is an example, not a partner or endorser. Points quote the person specification word for word, with whitespace tidied."
+    },
+    "documents": [
+     {
+      "id": "answer",
+      "title": "Supporting evidence",
+      "fieldId": null,
+      "question": "Supporting evidence (application form). The council's advice: \"refer to the job profile in the 'supporting evidence' section so the hiring manager can see relevant examples of the qualities they are looking for\". The job profile adds: \"You should use this information to make the best of your application by identifying some specific pieces of work you may have undertaken in any of these areas.\"",
+      "wordLimit": 500,
+      "requirements": [
+       {
+        "id": "dignity",
+        "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+        "personal": true,
+        "direct": true
+       },
+       {
+        "id": "safe",
+        "text": "Knowledge of keeping people safe from harm or abuse."
+       },
+       {
+        "id": "conditions",
+        "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+       },
+       {
+        "id": "moving",
+        "text": "Experience of moving & handling people."
+       },
+       {
+        "id": "medication",
+        "text": "Experience of Administration of Medication"
+       },
+       {
+        "id": "plans",
+        "text": "Ability to understand health care and social care assessments and support plans."
+       },
+       {
+        "id": "records",
+        "text": "Ability to complete daily and medication record sheets"
+       },
+       {
+        "id": "team",
+        "text": "Ability to work with others in a team."
+       },
+       {
+        "id": "initiative",
+        "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+        "personal": true
+       },
+       {
+        "id": "rota",
+        "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The advert, job description and council advice state no word limit; 500 words is a working guide for this demo, not the council's limit."
+     },
+     {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": null,
+      "required": false,
+      "question": "Cover letter (not requested by this advert; optional, prepared for the applicant only from her confirmed experience)",
+      "wordLimit": 350,
+      "requirements": [
+       {
+        "id": "evidence",
+        "text": "The experience that shows you can do the job"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The council asks for supporting evidence, not a letter; 350 words keeps a letter to one page. It asks only for her experience, so it never invents a motive she did not state."
+     }
+    ],
+    "portalTasks": [
+     "Create an account: Title, First name, Last name, Email address, Password",
+     "Enhanced Level DBS Disclosure (required for appointment)",
+     "The rest of the council's application form sits behind the account and was not opened"
+    ]
+   },
+   "coverage": {
+    "safe": [
+     "f11",
+     "f12"
+    ],
+    "moving": [
+     "f6",
+     "f7"
+    ],
+    "medication": [
+     "f3"
+    ],
+    "plans": [
+     "f5"
+    ],
+    "records": [
+     "f4"
+    ],
+    "team": [
+     "f7",
+     "f8"
+    ],
+    "initiative": [
+     "f9"
+    ],
+    "rota": [
+     "f10"
+    ],
+    "evidence": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f6"
+    ],
+    "dignity": [
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ]
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "requirementId": "conditions",
+     "text": "No seu trabalho no lar em Leeds, que apoio deu a residentes da unidade de demência com demência ou outra condição prolongada?",
+     "why": "The form asks about knowledge of long term health and social care conditions; your confirmed notes mention working in a care home but not what you did with residents who have those conditions.",
+     "status": "skipped",
+     "askedBy": "model",
+     "english": "In your work at the care home in Leeds, what support did you give to residents in the dementia unit with dementia or another long-term condition?"
+    },
+    {
+     "id": "q2",
+     "requirementId": "dignity",
+     "text": "O formulário pede “Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.”: o que escreveria?",
+     "why": "The app asks this itself: the form wants it in your own words, and none of your confirmed facts says it in the first person.",
+     "status": "answered",
+     "askedBy": "app",
+     "english": "The form asks for \"Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.\": what would you write?",
+     "sourceId": "s2"
+    }
+   ],
+   "documents": {
+    "answer": {
+     "id": "answer",
+     "revision": 2,
+     "segments": [
+      {
+       "id": "answer-1",
+       "kind": "claim",
+       "text": "I have worked in a care home in Leeds for three years since October 2023 providing daily care and support to residents.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-2",
+       "kind": "claim",
+       "text": "I knock on the door before entering, explain what I will do before personal hygiene and always close the curtains to protect dignity.",
+       "factIds": [
+        "f14",
+        "f15",
+        "f16"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-3",
+       "kind": "claim",
+       "text": "I respect each person's culture and religion and ask how they want to be addressed and treated, including what they want to eat and whether they prefer to be helped by a woman.",
+       "factIds": [
+        "f17",
+        "f18",
+        "f19",
+        "f20"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-4",
+       "kind": "claim",
+       "text": "One night I saw a bruise on a resident's arm.",
+       "factIds": [
+        "f11"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-5",
+       "kind": "claim",
+       "text": "I recorded it and told the nurse on duty immediately.",
+       "factIds": [
+        "f12"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-6",
+       "kind": "claim",
+       "text": "I have moving and handling training and use the hoist.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-7",
+       "kind": "claim",
+       "text": "We always work in pairs.",
+       "factIds": [
+        "f7"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-8",
+       "kind": "claim",
+       "text": "I have medication training and do the morning medication round for 18 residents.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-9",
+       "kind": "claim",
+       "text": "Before each shift I read each resident's care plan and follow it.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-10",
+       "kind": "claim",
+       "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-11",
+       "kind": "claim",
+       "text": "We as the whole team moved dinner earlier.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-12",
+       "kind": "claim",
+       "text": "I made cards with photos of food so each person can point to what they want.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-13",
+       "kind": "claim",
+       "text": "I did night shifts for two years, not three, and in the last year I moved to days.",
+       "factIds": [
+        "f10"
+       ],
+       "startsParagraph": false,
+       "author": "repair"
+      }
+     ]
+    },
+    "letter": {
+     "id": "letter",
+     "revision": 1,
+     "segments": [
+      {
+       "id": "letter-1",
+       "kind": "frame",
+       "text": "Dear North Yorkshire Council hiring team,",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-2",
+       "kind": "frame",
+       "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-3",
+       "kind": "claim",
+       "text": "I have worked for three years in a care home in Leeds, starting in October 2023.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-4",
+       "kind": "claim",
+       "text": "I read each resident's care plan before the shift and follow it.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-5",
+       "kind": "claim",
+       "text": "I have moving and handling training and use the hoist.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-6",
+       "kind": "claim",
+       "text": "I have medication training and do the morning medication round for 18 residents.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-7",
+       "kind": "claim",
+       "text": "I write the daily notes in English and sign the medication sheet at the end of the shift.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-8",
+       "kind": "claim",
+       "text": "I knock on the door before entering as part of dignity.",
+       "factIds": [
+        "f14"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-9",
+       "kind": "frame",
+       "text": "Thank you for considering my application.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-10",
+       "kind": "frame",
+       "text": "Yours sincerely, Ana",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      }
+     ]
+    }
+   },
+   "repair": null,
+   "approvals": {
+    "answer": {
+     "revision": 2,
+     "at": "2026-11-03T20:38:09.424Z"
+    },
+    "letter": {
+     "revision": 1,
+     "at": "2026-11-03T20:38:09.426Z"
+    }
+   },
+   "exports": [
+    {
+     "id": "e1",
+     "at": "2026-11-03T20:38:09.429Z",
+     "revisions": {
+      "answer": 2,
+      "letter": 1
+     }
+    }
+   ],
+   "checked": [
+    "dignity",
+    "safe",
+    "conditions",
+    "moving",
+    "medication",
+    "plans",
+    "records",
+    "team",
+    "initiative",
+    "rota",
+    "evidence"
+   ],
+   "lastRepair": {
+    "factId": "f10",
+    "at": "2026-11-03T20:38:09.421Z",
+    "changed": 1,
+    "kept": 0,
+    "docs": [
+     "answer"
+    ],
+    "changedSegments": [
+     {
+      "docId": "answer",
+      "segmentId": "answer-13"
+     }
+    ],
+    "reopened": 1,
+    "untouched": 22
+   }
+  },
+  "updatedAt": "2026-11-03T20:38:09.429Z"
+ },
+ "view": {
+  "next": "export",
+  "coverage": [
+   {
+    "id": "dignity",
+    "text": "Awareness and understanding of how Equality, Diversity and Inclusion, Dignity & Respect, and Human Rights will apply to this role.",
+    "personal": true,
+    "direct": true,
+    "docId": "answer",
+    "factIds": [
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ],
+    "covered": true
+   },
+   {
+    "id": "safe",
+    "text": "Knowledge of keeping people safe from harm or abuse.",
+    "docId": "answer",
+    "factIds": [
+     "f11",
+     "f12"
+    ],
+    "covered": true
+   },
+   {
+    "id": "conditions",
+    "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities",
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "moving",
+    "text": "Experience of moving & handling people.",
+    "docId": "answer",
+    "factIds": [
+     "f6",
+     "f7"
+    ],
+    "covered": true
+   },
+   {
+    "id": "medication",
+    "text": "Experience of Administration of Medication",
+    "docId": "answer",
+    "factIds": [
+     "f3"
+    ],
+    "covered": true
+   },
+   {
+    "id": "plans",
+    "text": "Ability to understand health care and social care assessments and support plans.",
+    "docId": "answer",
+    "factIds": [
+     "f5"
+    ],
+    "covered": true
+   },
+   {
+    "id": "records",
+    "text": "Ability to complete daily and medication record sheets",
+    "docId": "answer",
+    "factIds": [
+     "f4"
+    ],
+    "covered": true
+   },
+   {
+    "id": "team",
+    "text": "Ability to work with others in a team.",
+    "docId": "answer",
+    "factIds": [
+     "f7",
+     "f8"
+    ],
+    "covered": true
+   },
+   {
+    "id": "initiative",
+    "text": "Ability to use own initiative to find solutions for routine day to day service delivery problems",
+    "personal": true,
+    "docId": "answer",
+    "factIds": [
+     "f9"
+    ],
+    "covered": true
+   },
+   {
+    "id": "rota",
+    "text": "Requirement to work evenings and weekends on a rota basis as part of 24 hour/ 7 day service",
+    "docId": "answer",
+    "factIds": [
+     "f10"
+    ],
+    "covered": true
+   },
+   {
+    "id": "evidence",
+    "text": "The experience that shows you can do the job",
+    "docId": "letter",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f6"
+    ],
+    "covered": true
+   }
+  ],
+  "draftBlockers": [],
+  "exportBlockers": [],
+  "stats": {
+   "answer": {
+    "words": 198,
+    "wordLimit": 500,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [
+     {
+      "id": "conditions",
+      "text": "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+     }
+    ],
+    "ownWords": 0
+   },
+   "letter": {
+    "words": 109,
+    "wordLimit": 350,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   }
+  },
+  "approvals": {
+   "answer": "approved",
+   "letter": "approved"
+  },
+  "citations": {
+   "f2": 1,
+   "f14": 2,
+   "f15": 3,
+   "f16": 4,
+   "f17": 5,
+   "f18": 6,
+   "f19": 7,
+   "f20": 8,
+   "f11": 9,
+   "f12": 10,
+   "f6": 11,
+   "f7": 12,
+   "f3": 13,
+   "f5": 14,
+   "f4": 15,
+   "f8": 16,
+   "f9": 17,
+   "f10": 18
+  },
+  "conflictDecisions": [],
+  "sourceCorrections": []
+ },
+ "result": {
+  "status": "NOT SUBMITTED",
+  "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+  "exportId": "e1",
+  "createdAt": "2026-11-03T20:38:09.429Z",
+  "application": {
+   "company": "North Yorkshire Council",
+   "role": "Care and Support Worker",
+   "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+   "snapshotFetchedAt": "2026-11-03T19:09:48Z"
+  },
+  "documents": [
+   {
+    "id": "answer",
+    "title": "Supporting evidence",
+    "fieldId": null,
+    "revision": 2,
+    "approvedAt": "2026-11-03T20:38:09.424Z",
+    "words": 198,
+    "wordLimit": 500,
+    "text": "I have worked in a care home in Leeds for three years since October 2023 providing daily care and support to residents. I knock on the door before entering, explain what I will do before personal hygiene and always close the curtains to protect dignity. I respect each person's culture and religion and ask how they want to be addressed and treated, including what they want to eat and whether they prefer to be helped by a woman.\n\nOne night I saw a bruise on a resident's arm. I recorded it and told the nurse on duty immediately. I have moving and handling training and use the hoist. We always work in pairs. I have medication training and do the morning medication round for 18 residents.\n\nBefore each shift I read each resident's care plan and follow it. At the end of the shift I write the daily notes in English and sign the medication sheet. We as the whole team moved dinner earlier. I made cards with photos of food so each person can point to what they want. I did night shifts for two years, not three, and in the last year I moved to days.",
+    "references": [
+     {
+      "n": 1,
+      "factId": "f2",
+      "statement": "I have worked 3 years in a care home in Leeds, starting in October 2023.",
+      "quote": "Trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 2,
+      "factId": "f14",
+      "statement": "I knock on the door before entering as part of dignity",
+      "quote": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas.",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 3,
+      "factId": "f15",
+      "statement": "I explain what I will do before personal hygiene",
+      "quote": "explicar o que vou fazer antes da higiene pessoal",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 4,
+      "factId": "f16",
+      "statement": "I always close the curtains",
+      "quote": "fechar sempre as cortinas",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 5,
+      "factId": "f17",
+      "statement": "I respect each person's culture and religion",
+      "quote": "respeito a cultura e a religião de cada pessoa",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 6,
+      "factId": "f18",
+      "statement": "I ask what they want to eat",
+      "quote": "pergunto o que quer comer",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 7,
+      "factId": "f19",
+      "statement": "I ask how they want to be addressed and treated",
+      "quote": "como quer ser tratada",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 8,
+      "factId": "f20",
+      "statement": "I ask if they prefer to be helped by a woman",
+      "quote": "se prefere ser ajudada por uma mulher",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 9,
+      "factId": "f11",
+      "statement": "I saw a bruise on a resident's arm one night.",
+      "quote": "vi uma nódoa negra no braço de uma residente.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 10,
+      "factId": "f12",
+      "statement": "I recorded it and told the nurse on duty immediately.",
+      "quote": "Registei e contei logo à enfermeira de serviço,",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 11,
+      "factId": "f6",
+      "statement": "I have moving and handling training and use the hoist.",
+      "quote": "Tenho a formação de moving and handling, uso a grua",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 12,
+      "factId": "f7",
+      "statement": "We always work in pairs.",
+      "quote": "trabalhamos sempre em dupla.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "team"
+     },
+     {
+      "n": 13,
+      "factId": "f3",
+      "statement": "I have medication training and do the morning medication round for 18 residents.",
+      "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 14,
+      "factId": "f5",
+      "statement": "I read each resident's care plan before the shift and follow it.",
+      "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 15,
+      "factId": "f4",
+      "statement": "I write the daily notes in English and sign the medication sheet at end of shift.",
+      "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 16,
+      "factId": "f8",
+      "statement": "We as the whole team moved dinner earlier.",
+      "quote": "nós, a equipa toda, passámos o jantar para mais cedo.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "team"
+     },
+     {
+      "n": 17,
+      "factId": "f9",
+      "statement": "I made cards with photos of food so each person can point to what they want.",
+      "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 18,
+      "factId": "f10",
+      "statement": "Correction: the night shifts were two years, not three; in the last year I moved to days.",
+      "quote": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+      "from": "correction",
+      "language": "pt-PT",
+      "actor": "self"
+     }
+    ],
+    "sentences": [
+     {
+      "text": "I have worked in a care home in Leeds for three years since October 2023 providing daily care and support to residents.",
+      "refs": [
+       1
+      ],
+      "startsParagraph": true
+     },
+     {
+      "text": "I knock on the door before entering, explain what I will do before personal hygiene and always close the curtains to protect dignity.",
+      "refs": [
+       2,
+       3,
+       4
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I respect each person's culture and religion and ask how they want to be addressed and treated, including what they want to eat and whether they prefer to be helped by a woman.",
+      "refs": [
+       5,
+       6,
+       7,
+       8
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "One night I saw a bruise on a resident's arm.",
+      "refs": [
+       9
+      ],
+      "startsParagraph": true
+     },
+     {
+      "text": "I recorded it and told the nurse on duty immediately.",
+      "refs": [
+       10
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I have moving and handling training and use the hoist.",
+      "refs": [
+       11
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "We always work in pairs.",
+      "refs": [
+       12
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I have medication training and do the morning medication round for 18 residents.",
+      "refs": [
+       13
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "Before each shift I read each resident's care plan and follow it.",
+      "refs": [
+       14
+      ],
+      "startsParagraph": true
+     },
+     {
+      "text": "At the end of the shift I write the daily notes in English and sign the medication sheet.",
+      "refs": [
+       15
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "We as the whole team moved dinner earlier.",
+      "refs": [
+       16
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I made cards with photos of food so each person can point to what they want.",
+      "refs": [
+       17
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I did night shifts for two years, not three, and in the last year I moved to days.",
+      "refs": [
+       18
+      ],
+      "startsParagraph": false
+     }
+    ],
+    "ownWords": 0,
+    "notAnswered": [
+     "Knowledge of long term health & social care conditions e.g. cognitive impairment, Dementia, physical, learning and sensory disabilities"
+    ]
+   },
+   {
+    "id": "letter",
+    "title": "Cover letter",
+    "fieldId": null,
+    "required": false,
+    "revision": 1,
+    "approvedAt": "2026-11-03T20:38:09.426Z",
+    "words": 109,
+    "wordLimit": 350,
+    "text": "Dear North Yorkshire Council hiring team,\n\nI am applying for the Care and Support Worker role at North Yorkshire Council.\n\nI have worked for three years in a care home in Leeds, starting in October 2023. I read each resident's care plan before the shift and follow it. I have moving and handling training and use the hoist.\n\nI have medication training and do the morning medication round for 18 residents. I write the daily notes in English and sign the medication sheet at the end of the shift. I knock on the door before entering as part of dignity.\n\nThank you for considering my application.\n\nYours sincerely, Ana",
+    "references": [
+     {
+      "n": 1,
+      "factId": "f2",
+      "statement": "I have worked 3 years in a care home in Leeds, starting in October 2023.",
+      "quote": "Trabalho há três anos num lar em Leeds; comecei em outubro de 2023.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 2,
+      "factId": "f14",
+      "statement": "I knock on the door before entering as part of dignity",
+      "quote": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas.",
+      "from": "answer",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 11,
+      "factId": "f6",
+      "statement": "I have moving and handling training and use the hoist.",
+      "quote": "Tenho a formação de moving and handling, uso a grua",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 13,
+      "factId": "f3",
+      "statement": "I have medication training and do the morning medication round for 18 residents.",
+      "quote": "Tenho a formação da medicação e faço a medication round da manhã para 18 residentes.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 14,
+      "factId": "f5",
+      "statement": "I read each resident's care plan before the shift and follow it.",
+      "quote": "Antes do turno, leio o care plan de cada residente e faço o que lá está.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     },
+     {
+      "n": 15,
+      "factId": "f4",
+      "statement": "I write the daily notes in English and sign the medication sheet at end of shift.",
+      "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+      "from": "notes",
+      "language": "pt-PT",
+      "actor": "self"
+     }
+    ],
+    "sentences": [
+     {
+      "text": "Dear North Yorkshire Council hiring team,",
+      "refs": [],
+      "startsParagraph": true
+     },
+     {
+      "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+      "refs": [],
+      "startsParagraph": true
+     },
+     {
+      "text": "I have worked for three years in a care home in Leeds, starting in October 2023.",
+      "refs": [
+       1
+      ],
+      "startsParagraph": true
+     },
+     {
+      "text": "I read each resident's care plan before the shift and follow it.",
+      "refs": [
+       14
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I have moving and handling training and use the hoist.",
+      "refs": [
+       11
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I have medication training and do the morning medication round for 18 residents.",
+      "refs": [
+       13
+      ],
+      "startsParagraph": true
+     },
+     {
+      "text": "I write the daily notes in English and sign the medication sheet at the end of the shift.",
+      "refs": [
+       15
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "I knock on the door before entering as part of dignity.",
+      "refs": [
+       2
+      ],
+      "startsParagraph": false
+     },
+     {
+      "text": "Thank you for considering my application.",
+      "refs": [],
+      "startsParagraph": true
+     },
+     {
+      "text": "Yours sincerely, Ana",
+      "refs": [],
+      "startsParagraph": true
+     }
+    ],
+    "ownWords": 0,
+    "notAnswered": []
+   }
+  ],
+  "portalTasks": [
+   "Create an account: Title, First name, Last name, Email address, Password",
+   "Enhanced Level DBS Disclosure (required for appointment)",
+   "The rest of the council's application form sits behind the account and was not opened"
+  ],
+  "applicant": "Ana"
+ },
+ "mode": {
+  "id": "compatible",
+  "label": "Meta Muse Spark Open on Modal",
+  "model": "meta-models/Muse-Spark-Open-816B-A42B",
+  "isMeta": true
+ },
+ "budget": {
+  "capUsd": 8,
+  "spentUsd": 0.133325,
+  "reservedUsd": 0,
+  "remainingUsd": 7.866675
+ },
+ "voice": false,
+ "working": false
+}

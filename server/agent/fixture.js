@@ -3,7 +3,9 @@
 // presented as model output.
 import { normalise } from '../domain/text.js';
 
-const pick = ({ statement, quote, requirementIds }) => ({ statement, quote, requirementIds });
+// A fact in another language also carries who did it.
+const pick = ({ statement, quote, requirementIds, actor }) => ({ statement, quote, requirementIds, ...(actor ? { actor } : {}) });
+const asked = (q) => (q?.english ? { english: q.english } : {});
 
 // Fixture keys to workspace fact ids, matching current or earlier wording.
 function idsByKey(allFacts, facts, includeHistory = false) {
@@ -31,9 +33,11 @@ export function createFixtureAgent({ data, sampleNotes, forms } = {}) {
     async extract({ form, source, emit = () => {} }) {
       const text = normalise(source.text);
       const extra = form?.id ? extraForms[form.id] : null;
-      if (extra && text === normalise(extra.answer)) {
+      // A sample with its own form and notes (Ana's) has its own hand-written facts.
+      const own = extra?.notes && text === normalise(extra.notes) ? extra.facts : extra && text === normalise(extra.answer) ? extra.answerFacts : null;
+      if (own) {
         receipt('extract', emit);
-        return { facts: (extra.answerFacts ?? []).map(pick) };
+        return { facts: own.map(pick) };
       }
       let facts;
       if (text === sample) facts = (data.facts ?? []).map(pick);
@@ -58,6 +62,7 @@ export function createFixtureAgent({ data, sampleNotes, forms } = {}) {
         const questions = askable.map((r) => ({
           requirementId: r.id,
           question: extra.questions?.[r.id]?.question ?? data.questions?.[r.id]?.question ?? `The form asks: “${r.text}”. What would you say?`,
+          ...asked(extra.questions?.[r.id]),
           why: extra.questions?.[r.id]?.why ?? data.questions?.[r.id]?.why ?? 'None of your confirmed facts covers this yet.',
         }));
         receipt('clarify', emit);
@@ -97,13 +102,17 @@ export function createFixtureAgent({ data, sampleNotes, forms } = {}) {
       return { segments };
     },
 
-    async repair({ fact, items, emit = () => {} }) {
-      if (!data.correction || normalise(fact?.statement) !== normalise(data.correction.text)) {
+    // The corrected fact's quote is the correction's own words (in English its statement too).
+    async repair({ form, fact, items, emit = () => {} }) {
+      const extra = form?.id ? extraForms[form.id] : null;
+      const story = extra?.correction ? extra : data;
+      if (!story.correction || normalise(fact?.quote) !== normalise(story.correction.text)) {
         receipt('repair', emit);
         return { rewrites: [] };
       }
-      const key = [...idsByKey(allFacts, [fact], true)].find(([, id]) => id === fact.id)?.[0];
-      const written = (data.repairs ?? {})[key] ?? {};
+      const known = story === data ? allFacts : [...(extra.facts ?? []), ...(extra.answerFacts ?? [])];
+      const key = [...idsByKey(known, [fact], true)].find(([, id]) => id === fact.id)?.[0];
+      const written = (story.repairs ?? {})[key] ?? {};
       const rewrites = items
         .filter((i) => written[i.docId])
         .map((i) => ({ segmentId: i.segmentId, text: written[i.docId], factIds: i.factIds }));

@@ -1,9 +1,16 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { actions, agentActions } from '../server/flows.js';
+import { fromRoot } from '../server/paths.js';
 import { viewOf } from '../server/view.js';
+import { setDraft } from '../server/domain/documents.js';
+import { decideFact, proposeFacts } from '../server/domain/facts.js';
+import { preparedWorkspace } from '../server/domain/prepared.js';
 import { approve } from '../server/domain/review.js';
+import { sourceCorrections } from '../server/domain/sourceConflictCorrection.js';
 import { heldSourceConflict } from '../server/domain/sourceConflicts.js';
-import { draftedWorkspace } from './helpers.js';
+import { addSource } from '../server/domain/workspace.js';
+import { draftedWorkspace, workspaceWithNotes } from './helpers.js';
 
 const words = 'Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.';
 
@@ -63,13 +70,30 @@ describe('one explicit correction from an already-read conflicting note', () => 
     expect(ws).toEqual(before);
   });
 
-  it('keeps the existing clarification route when more than one earlier fact matches', async () => {
-    const { ws, source } = await conflictingWorkspace();
+  // Live, 3 Nov: the model's earlier quote was a whole answer that extraction had split into two facts.
+  const spanning = (ws, from, to) => {
     const original = ws.applicant.sources[0].text;
-    ws.application.questions[0].priorQuote = original.slice(original.indexOf(ws.applicant.facts[1].quote), original.indexOf(ws.applicant.facts[2].quote) + ws.applicant.facts[2].quote.length);
+    ws.application.questions[0].priorQuote = original.slice(original.indexOf(from.quote), original.indexOf(to.quote) + to.quote.length);
+  };
+
+  it('offers the cited fact sharing the most words with the note when the earlier quote spans several facts', async () => {
+    const { ws, source } = await conflictingWorkspace();
+    spanning(ws, ws.applicant.facts[1], ws.applicant.facts[2]);
+    const other = structuredClone(ws.applicant.facts[1]);
+    expect(viewOf(ws).sourceCorrections).toEqual([{
+      questionId: 'q1', sourceId: source.id, factId: 'f3', before: ws.applicant.facts[2].quote, text: words,
+    }]);
+    expect(resolve(ws, source).fact.quote).toBe(words);
+    expect(ws.applicant.facts[1]).toEqual(other);
+    expect(ws.application.repair.factId).toBe('f3');
+  });
+
+  it('keeps the clarification route when the spanned facts match the note equally', async () => {
+    const { ws, source } = await conflictingWorkspace();
+    spanning(ws, ws.applicant.facts[0], ws.applicant.facts[1]);
     const before = structuredClone(ws);
     expect(viewOf(ws).sourceCorrections).toEqual([]);
-    expect(() => resolve(ws, source)).toThrow();
+    expect(() => actions.resolveSourceConflict(ws, { questionId: 'q1', sourceId: source.id, factId: 'f1', text: words })).toThrow();
     expect(ws).toEqual(before);
   });
 
@@ -108,5 +132,70 @@ describe('one explicit correction from an already-read conflicting note', () => 
     actions.skip(ws, { questionId: 'q1' });
     expect(heldSourceConflict(ws)).toBeNull();
     expect(() => actions.approve(ws, { docId: 'answer', docRevision: ws.application.documents.answer.revision })).not.toThrow();
+  });
+});
+
+// Live, 3 Nov (Leo): extraction cut his answer into three cited facts. His note overturns the first
+// and repeats the second word for word, and the second was the one offered.
+describe('a note that repeats part of the earlier quote', () => {
+  const ANSWER = 'I set up the cluster and wrote the containerd proxy fix; the other members ran their jobs on it.';
+  const NOTE = 'Correction: Mira set up the cluster. I wrote the containerd proxy fix.';
+
+  async function leoWorkspace(note = NOTE, priorQuote = ANSWER) {
+    const { ws, source: notes } = workspaceWithNotes('Set up a three-node k3s cluster on old office desktops for our robotics society.');
+    const answer = addSource(ws, { kind: 'answer', text: ANSWER });
+    notes.read = answer.read = true;
+    proposeFacts(ws, answer.id, ['I set up the cluster', 'wrote the containerd proxy fix', 'the other members ran their jobs on it']
+      .map((quote) => ({ statement: quote, quote, requirementIds: [] })));
+    for (const f of ws.applicant.facts) decideFact(ws, f.id, 'confirm');
+    setDraft(ws, 'answer', ['I set up the cluster.', 'I wrote the containerd proxy fix.', 'The other members ran their jobs on it.']
+      .map((text, i) => ({ kind: 'claim', text, factIds: [`f${i + 1}`] })));
+    const source = actions.notes(ws, { text: note });
+    await agentActions.read(ws, { sourceId: source.id }, { extract: async () => ({ facts: [], conflicts: [{
+      quote: note, priorSourceId: answer.id, priorQuote, question: 'Who set up the cluster, you or Mira?',
+    }] }) }, () => {});
+    return { ws, source };
+  }
+
+  it('offers the fact the note overturns, never the fragment it repeats', async () => {
+    const { ws, source } = await leoWorkspace();
+    const kept = structuredClone(ws.applicant.facts.slice(1));
+    expect(viewOf(ws).sourceCorrections).toEqual([{ questionId: 'q1', sourceId: source.id, factId: 'f1', before: 'I set up the cluster', text: NOTE }]);
+    expect(() => actions.resolveSourceConflict(ws, { questionId: 'q1', sourceId: source.id, factId: 'f2', text: NOTE })).toThrow();
+    expect(actions.resolveSourceConflict(ws, viewOf(ws).sourceCorrections[0]).fact.quote).toBe(NOTE);
+    expect(ws.applicant.facts.slice(1)).toEqual(kept);
+    expect(ws.application.repair.items.map((i) => i.segmentId)).toEqual(['answer-1']);
+  });
+
+  it('scores a note that repeats none of the facts as before', async () => {
+    const { ws, source } = await leoWorkspace('Correction: Mira set up the cluster; my part was the proxy settings.');
+    expect(viewOf(ws).sourceCorrections).toMatchObject([{ sourceId: source.id, factId: 'f1' }]);
+  });
+
+  it.each([
+    ['two facts', 'I set up the cluster and wrote the containerd proxy fix', 'I said I set up the cluster and wrote the containerd proxy fix, but Mira set up the cluster.'],
+    ['one fact', 'wrote the containerd proxy fix', NOTE],
+  ])('keeps the clarification route when the note repeats every fact the earlier quote spans (%s)', async (_, priorQuote, note) => {
+    const { ws, source } = await leoWorkspace(note, priorQuote);
+    const before = structuredClone(ws);
+    expect(viewOf(ws).sourceCorrections).toEqual([]);
+    expect(() => actions.resolveSourceConflict(ws, { questionId: 'q1', sourceId: source.id, factId: 'f2', text: note })).toThrow();
+    expect(ws).toEqual(before);
+    expect(heldSourceConflict(ws)).not.toBeNull();
+  });
+
+  // Ellie: neither her key-moment note nor her sample correction repeats one of her facts, so
+  // whichever fact the live model quotes as the earlier account is still the one offered.
+  it('still offers the quoted fact on Ellie’s prepared key moment, for either of her notes', () => {
+    const saved = JSON.parse(readFileSync(fromRoot('fixtures', 'ellie-prepared-wonder-20261103.json'), 'utf8'));
+    const { correction } = JSON.parse(readFileSync(fromRoot('fixtures', 'ellie-fixture.json'), 'utf8'));
+    for (const note of [saved.prepared.note, correction.text]) {
+      for (const fact of saved.applicant.facts) {
+        const ws = preparedWorkspace(saved);
+        ws.applicant.sources.push({ id: 's3', kind: 'notes', text: note, read: true, withheld: true });
+        ws.application.questions.push({ id: 'q2', kind: 'source-conflict', status: 'open', conflictSourceId: 's3', priorSourceId: fact.sourceId, quote: note, priorQuote: fact.quote, text: 'Who wrote the Helm patch?' });
+        expect(sourceCorrections(ws)).toEqual([{ questionId: 'q2', sourceId: 's3', factId: fact.id, before: fact.quote, text: note }]);
+      }
+    }
   });
 });

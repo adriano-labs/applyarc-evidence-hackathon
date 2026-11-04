@@ -11,11 +11,12 @@ export function unreadSource(ws) {
 
 // The confirmed fact the sample correction changes, while no correction has been tried yet.
 // Is this the fact the sample correction changes? A live model's quote can differ from the
-// notes' wording, so a sample names a key phrase (`anchor`); without one, the whole quote must match.
+// notes' wording, so a sample names key phrases (`anchor`, one or several, any case); without one, the whole quote must match.
 export function matchesSampleCorrection(fact, sample) {
   const correction = sample?.correction;
   if (!correction || !fact?.quote) return false;
-  return correction.anchor ? fact.quote.includes(correction.anchor) : fact.quote.trim() === correction.quote?.trim();
+  const anchors = [].concat(correction.anchor ?? []).map((a) => a.toLowerCase());
+  return anchors.length ? anchors.some((a) => fact.quote.toLowerCase().includes(a)) : fact.quote.trim() === correction.quote?.trim();
 }
 
 function sampleCorrectionFact(ws, sample) {
@@ -75,9 +76,10 @@ export function primaryAction(view, ws, currentTab, sample) {
   }
   if (v === 'approve') {
     const approve = approveAction(view, ws, currentTab);
+    if (!approve) return null;
     const fact = sampleCorrectionFact(ws, sample);
     if (!fact) return approve;
-    return { id: 'try-correction', label: `Try ${sample.name}’s correction`, hint: `Now: correct one of ${sample.name}’s facts, or approve.`, factId: fact.id, ...(approve?.id ? { secondary: approve } : {}), ...(approve?.warning ? { warning: approve.warning } : {}) };
+    return { ...approve, secondary: { id: 'try-correction', label: `Try ${sample.name}’s correction`, factId: fact.id } };
   }
   if (v === 'facts') {
     return { id: null, hint: 'Now: confirm or reject each fact.', show: 'facts' };
@@ -114,7 +116,7 @@ export function thenLine(view, ws, sample) {
     return 'Then: every sentence cites its facts.';
   }
   if (v === 'approve') {
-    return sampleCorrectionFact(ws, sample) ? 'Then: only the sentences citing that fact are rewritten.' : 'Then: export a pack marked NOT SUBMITTED.';
+    return 'Then: export both approved documents. NOT SUBMITTED.';
   }
   if (v === 'repair') {
     return 'Then: approve the new versions.';
@@ -214,6 +216,10 @@ export function packMarkdown(pack) {
     lines.push(pack.notice);
     lines.push('');
   }
+  if (pack.demo) {
+    lines.push(pack.demo);
+    lines.push('');
+  }
   const formUrl = app.url || '';
   const snapshot = app.snapshotFetchedAt ? formatDateEnGB(new Date(app.snapshotFetchedAt)) : '';
   lines.push(app.source === 'applicant-pasted'
@@ -292,4 +298,24 @@ export function leftOutNotice(dropped = []) {
   return n === 1
     ? 'The review could not establish support for 1 sentence, so it was left out. Check the evidence before adding your own wording.'
     : `The review could not establish support for ${n} sentences, so they were left out. Check the evidence before adding your own wording.`;
+}
+
+// A workspace started from a sample: from its written notes, or for a sample who speaks, from the
+// words Voice Transcribe heard in her clip (the server puts her name on the workspace).
+export function isSampleRun(ws, sample) {
+  const notes = (ws?.applicant?.sources ?? []).filter((s) => s.kind === 'notes');
+  if (!sample?.notes || !notes.length) return false;
+  return notes.some((s) => s.text === sample.notes) || Boolean(sample.clips && ws.applicant.name === sample.name);
+}
+
+// A sample run is a demo: its applicant is fictional, and words spoken in it came from the sample's
+// synthetic voice. The walk-through's tag, and the line the pack and the Evidence Pass carry.
+export const demoLabel = (sample, ws) => (sample?.voice && (ws?.applicant?.sources ?? []).some((s) => s.spoken) ? sample.voice : 'Fictional applicant');
+export const demoLine = (sample, ws) => `Demo: ${demoLabel(sample, ws).toLowerCase()}.`;
+
+// The sentences the last repair changed in the document shown.
+export function changedSegmentIds(ws, tab) {
+  const changed = ws?.application?.lastRepair?.changedSegments;
+  if (!Array.isArray(changed) || !['answer', 'letter'].includes(tab)) return [];
+  return changed.filter((c) => c?.docId === tab && c.segmentId).map((c) => c.segmentId);
 }

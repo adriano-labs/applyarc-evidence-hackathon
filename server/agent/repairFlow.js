@@ -5,9 +5,11 @@ import { refuse } from '../domain/errors.js';
 import { proposeRewrites, rewriteProblems } from '../domain/repair.js';
 import { confirmedFacts, DOC_IDS, findFact } from '../domain/workspace.js';
 import { reviewClaims, reviewKey } from './evidenceReview.js';
+import { reviseOrSkip } from './revise.js';
 import { retentionChecks } from '../domain/retention.js';
+import { factForModel } from '../domain/languages.js';
 
-const factView = ({ id, statement, quote }) => ({ id, statement, quote });
+const factView = factForModel;
 
 function candidatesFor(rewrites, items) {
   const allowed = new Set(items.map((item) => item.segmentId));
@@ -54,7 +56,8 @@ function quoteFallback(ws, candidates, docIds) {
   const fact = findFact(ws, ws.application.repair.factId);
   for (const docId of docIds) {
     const item = ws.application.repair.items.find((i) => i.docId === docId && candidates.has(i.segmentId));
-    if (item) fallback.set(item.segmentId, { segmentId: item.segmentId, text: fact.quote, factIds: [fact.id] });
+    // The applicant's own words, or for another language the English meaning they confirmed.
+    if (item) fallback.set(item.segmentId, { segmentId: item.segmentId, text: fact.language ? fact.statement : fact.quote, factIds: [fact.id] });
   }
   return fallback;
 }
@@ -71,15 +74,8 @@ async function reviseRejected(ws, candidates, facts, agent, emit, review) {
   const checks = retentionChecks(ws, [...candidates.values()]);
   const fallbackDocs = checks.filter((c) => ['uncertain', 'contradicted'].includes(review.get(c.key)?.verdict)).map((c) => c.docId);
   const documents = checks.map((c) => ({ docId: c.docId, sentences: c.document }));
-  emit({ type: 'stage', label: `Revising ${items.length} unsupported repair sentence${items.length === 1 ? '' : 's'}` });
-  let response;
-  try {
-    response = await agent.revise({ items, facts, documents, emit });
-  } catch (error) {
-    if (error?.code !== 'invalid-output') throw error;
-    emit({ type: 'stage', label: 'The rewording step sent an answer that could not be read; going on without it' });
-    response = { rewrites: [] };
-  }
+  emit({ type: 'stage', decision: true, label: `Revising ${items.length} unsupported repair sentence${items.length === 1 ? '' : 's'}` });
+  const response = await reviseOrSkip(agent, { items, facts, documents }, emit);
   const replacements = candidatesFor(response?.rewrites, items);
   const next = new Map(candidates);
   for (const p of replacements.candidates.values()) next.set(p.segmentId, p);

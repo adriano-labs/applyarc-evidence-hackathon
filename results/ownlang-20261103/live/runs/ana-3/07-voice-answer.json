@@ -1,0 +1,42 @@
+{
+ "clip": "ana-pt-answer.wav",
+ "truth": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa: pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+ "hint": "Portuguese",
+ "ms": 4974,
+ "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+ "durationMs": 16160,
+ "languageBias": "Portuguese",
+ "opening": true,
+ "werRaw": 0,
+ "werSpoken": 0,
+ "errorsSpoken": [],
+ "words": 51,
+ "control": {
+  "hint": null,
+  "ms": 4152,
+  "text": "Para mim, dignidade é bater à porta antes de de entrar, explicar o que vou fazer antes fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+  "durationMs": 16160,
+  "languageBias": null,
+  "opening": true,
+  "werRaw": 0.0588,
+  "werSpoken": 0.0588,
+  "errorsSpoken": [
+   [
+    "ins",
+    "",
+    "de"
+   ],
+   [
+    "ins",
+    "",
+    "fazer"
+   ],
+   [
+    "ins",
+    "",
+    "antes"
+   ]
+  ],
+  "words": 51
+ }
+}

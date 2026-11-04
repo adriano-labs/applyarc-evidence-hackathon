@@ -1,0 +1,430 @@
+{
+  "exportedAt": "2026-11-02T23:41:10.831Z",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 4,
+      "attempts": 4,
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 12249,
+        "cached": 9936,
+        "output": 2360,
+        "reasoning": 674
+      },
+      "costUsd": 0.0584392,
+      "firstEventMs": 3002,
+      "firstOutputMs": 3513,
+      "totalMs": 20119,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T23:30:12.217Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2068,
+        "cached": 0,
+        "output": 455,
+        "reasoning": 373
+      },
+      "costUsd": 0.017372,
+      "firstEventMs": 1237,
+      "firstOutputMs": 3782,
+      "totalMs": 4161,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-02T23:30:58.894Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4317,
+        "cached": 2536,
+        "output": 519,
+        "reasoning": 310
+      },
+      "costUsd": 0.0180112,
+      "firstEventMs": 1011,
+      "firstOutputMs": 2579,
+      "totalMs": 5831,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T23:31:27.915Z"
+    },
+    {
+      "step": "draft",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "161 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6814,
+        "cached": 2420,
+        "output": 2724,
+        "reasoning": 1930
+      },
+      "costUsd": 0.07254,
+      "firstEventMs": 1538,
+      "firstOutputMs": 12952,
+      "totalMs": 18797,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T23:32:14.185Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 3309,
+        "cached": 0,
+        "output": 633,
+        "reasoning": 434
+      },
+      "costUsd": 0.025896,
+      "firstEventMs": 1614,
+      "firstOutputMs": 4240,
+      "totalMs": 5088,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T23:32:19.291Z"
+    },
+    {
+      "step": "draft",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 4,
+      "attempts": 4,
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "206 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "262 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "253 of 300"
+        }
+      ],
+      "usage": {
+        "input": 19668,
+        "cached": 12892,
+        "output": 4980,
+        "reasoning": 3318
+      },
+      "costUsd": 0.1292824,
+      "firstEventMs": 1400,
+      "firstOutputMs": 16275,
+      "totalMs": 37389,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T23:32:32.698Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 5104,
+        "cached": 0,
+        "output": 886,
+        "reasoning": 535
+      },
+      "costUsd": 0.038136,
+      "firstEventMs": 2890,
+      "firstOutputMs": 6085,
+      "totalMs": 7697,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-02T23:32:40.419Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 4621,
+        "cached": 3432,
+        "output": 741,
+        "reasoning": 445
+      },
+      "costUsd": 0.0202624,
+      "firstEventMs": 2429,
+      "firstOutputMs": 5006,
+      "totalMs": 8059,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-02T23:36:51.843Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 3096,
+        "cached": 0,
+        "output": 1098,
+        "reasoning": 957
+      },
+      "costUsd": 0.034344,
+      "firstEventMs": 1662,
+      "firstOutputMs": 7270,
+      "totalMs": 7638,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T23:37:57.154Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2552,
+        "cached": 628,
+        "output": 1488,
+        "reasoning": 1378
+      },
+      "costUsd": 0.0375816,
+      "firstEventMs": 749,
+      "firstOutputMs": 11391,
+      "totalMs": 11947,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T23:38:09.120Z"
+    },
+    {
+      "step": "revise",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 2161,
+        "cached": 0,
+        "output": 1192,
+        "reasoning": 1017
+      },
+      "costUsd": 0.032484,
+      "firstEventMs": 1974,
+      "firstOutputMs": 6576,
+      "totalMs": 7053,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T23:38:16.191Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "toolCalls": [],
+      "usage": {
+        "input": 3730,
+        "cached": 0,
+        "output": 988,
+        "reasoning": 780
+      },
+      "costUsd": 0.03468,
+      "firstEventMs": 1197,
+      "firstOutputMs": 4799,
+      "totalMs": 5872,
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-02T23:38:22.083Z"
+    }
+  ],
+  "source": "782561aacb0af062ef83bdf8a45bfe30108d1f58",
+  "revision": "applyarc-evidence--notice782561a",
+  "sanitization": {
+    "originalSha256": "b3cbe8dd841730dc0bc7213240d437445c7fa978dad02b49fa67e9d390975d90",
+    "removed": [
+      "global account budget",
+      "provider request IDs",
+      "rate-limit balances"
+    ],
+    "retained": "Model/effort, visible tool receipts, usage counters, time, cost and stage outcomes. Numeric reasoning-token counts only; no reasoning content."
+  }
+}

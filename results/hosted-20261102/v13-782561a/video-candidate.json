@@ -1,0 +1,25 @@
+{
+  "status": "Prepared for publication review; not yet publicly replaced",
+  "file": "ApplyArc-Evidence-v12-r3-final.mp4",
+  "sha256": "14730d9a48416c92f829c27ef7ca850ebb1d3bb59625b3ccd3047c87b05453a1",
+  "durationSeconds": 159.633333,
+  "width": 1920,
+  "height": 1080,
+  "frames": 4789,
+  "sourceCommit": "782561aacb0af062ef83bdf8a45bfe30108d1f58",
+  "hostedRevision": "applyarc-evidence--notice782561a",
+  "sourceJourney": "v13 recorded 2 November 2026",
+  "narration": "Disclosed synthetic English narration, Azure Ollie HD; natural pace",
+  "editing": "Actual full-viewport frames and real inputs; disclosed processing and navigation cuts; captions outside the product image",
+  "validation": [
+    "Full video/audio decode passed",
+    "Actual encoded frames inspected, including both repairs, approvals, export and remaining portal fields",
+    "Audio packets and spoken captions unchanged from reviewed r2"
+  ],
+  "limitations": [
+    "Known synthetic journey, not a fresh evaluation",
+    "Summed model time is not wall-clock waiting time",
+    "Native full playback and subjective audio listening not verified; local video URLs were blocked by browser policy",
+    "Fresh writing losses remain disclosed"
+  ]
+}

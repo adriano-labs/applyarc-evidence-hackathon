@@ -28,11 +28,6 @@ describe('TopBar', () => {
     expect(screen.getByText('Meta Muse Spark 1.3')).toBeTruthy();
   });
 
-  it('shows the spend against the cap when a model is used', () => {
-    render(<TopBar {...base} budget={{ spentUsd: 0.0421, reservedUsd: 0, capUsd: 3, remainingUsd: 2.9579 }} />);
-    expect(screen.getByText('$0.042 of $3.00')).toBeTruthy();
-  });
-
   it('opens the command menu and starts again', () => {
     const onCommands = vi.fn();
     const onReset = vi.fn();
@@ -84,9 +79,53 @@ describe('StatusLine', () => {
   });
 });
 
+describe('TopBar allowance fallback', () => {
+  const fallbackReason = 'live-allowance-unavailable';
+  it('visibly explains the server allowance fallback and that reset does not renew it', () => {
+    render(<TopBar {...base} mode={{ ...base.mode, fallbackReason }} />);
+    const notice = screen.getByRole('status');
+    expect(notice.textContent).toContain('Live Meta allowance is unavailable for another journey in this visit.');
+    expect(notice.textContent).toContain('hand-written outputs, without Meta calls');
+    expect(notice.textContent).toContain('Starting again clears the application; it does not renew the allowance.');
+    expect(notice.closest('[hidden], [aria-hidden="true"]')).toBeNull();
+  });
+
+  it('leaves ordinary fixture mode unchanged, without claiming the allowance was used', () => {
+    render(<TopBar {...base} />);
+    expect(screen.queryByRole('status')).toBeNull();
+    expect(screen.getByText('Fixture: hand-written outputs, not a model')).toBeTruthy();
+  });
+
+  it('only explains the recognised fixture fallback, not arbitrary server metadata or live mode', () => {
+    const { rerender } = render(<TopBar {...base} mode={{ ...base.mode, fallbackReason: 'unrecognised-detail' }} />);
+    expect(screen.queryByRole('status')).toBeNull();
+    expect(screen.queryByText('unrecognised-detail')).toBeNull();
+    rerender(<TopBar {...base} mode={{ id: 'meta', isMeta: true, label: 'Meta Muse Wonder 1.0', fallbackReason }} />);
+    expect(screen.queryByRole('status')).toBeNull();
+  });
+});
+
 describe('TopBar open-weight mode', () => {
   it('labels a Meta open-weight model as Meta, not as a stand-in', () => {
     render(<TopBar {...base} mode={{ id: 'compatible', label: 'Meta Muse Spark Open via Baseten', model: 'meta-models/muse-spark-open-1026', isMeta: true }} />);
     expect(screen.getByText('Meta Muse Spark Open via Baseten')).toBeTruthy();
+    expect(screen.getByText(/Meta open weight/).className).toBe('mode meta');
+  });
+
+  it('shows the licence notice for Muse Spark Open only', () => {
+    const notice = 'Built with Muse Spark Open';
+    const { rerender } = render(<TopBar {...base} mode={{ id: 'compatible', label: 'Meta Muse Spark Open on Modal', model: 'meta-models/Muse-Spark-Open-816B-A42B', isMeta: true }} />);
+    expect(screen.getByText(notice)).toBeTruthy();
+    rerender(<TopBar {...base} mode={{ id: 'compatible', label: 'Meta Muse Glimmer', model: 'meta-models/Muse-Glimmer-30B', isMeta: true }} />);
+    expect(screen.queryByText(notice)).toBeNull();
+    rerender(<TopBar {...base} mode={{ id: 'meta', label: 'Meta Muse Wonder 1.0', model: 'muse-wonder-1.0', isMeta: true }} />);
+    expect(screen.queryByText(notice)).toBeNull();
+  });
+
+  it('counts the steps on the activity pill, keeping the full summary as its name', () => {
+    const receipts = [{ step: 'extract', model: 'muse-wonder-1.0', costUsd: 0.004, totalMs: 6200, toolCalls: [{}, {}] }, { step: 'draft', model: 'muse-wonder-1.0', costUsd: 0.004, totalMs: 6200, toolCalls: [] }];
+    render(<TopBar {...base} mode={{ id: 'meta', label: 'Meta Muse Wonder 1.0', model: 'muse-wonder-1.0', isMeta: true }} receipts={receipts} />);
+    const pill = screen.getByRole('button', { name: 'What Meta did: 2 steps, 2 tool calls, 12.4 s total model time, $0.0080' });
+    expect(pill.querySelector('.receipt-short').textContent).toBe('Meta activity · 2 steps');
   });
 });

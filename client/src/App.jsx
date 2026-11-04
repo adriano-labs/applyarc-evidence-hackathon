@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { useWorkspace } from './useWorkspace.js';
 import { getForms } from './api.js';
-import { defaultTab, pendingSegmentIds, sourceKinds } from './flow.js';
+import { changedSegmentIds, defaultTab, demoLine, isSampleRun, pendingSegmentIds, sourceKinds } from './flow.js';
 import { TopBar, StatusLine } from './components/TopBar.jsx';
 import { FormPanel } from './components/FormPanel.jsx';
 import { DocumentPane } from './components/DocumentPane.jsx';
@@ -16,12 +16,18 @@ import { GuidedBody } from './components/GuidedBody.jsx';
 import { GuidedRun, guidedStep } from './components/GuidedRun.jsx';
 import { GuidedReview } from './components/GuidedReview.jsx';
 import { Welcome } from './components/Welcome.jsx';
+import { SpokenStart } from './components/SpokenStart.jsx';
 import { ReceiptsDrawer } from './components/ReceiptsDrawer.jsx';
 import { sourceLabel } from './components/References.jsx';
 import { useActions } from './useActions.js';
 import { useAppState } from './useAppState.js';
+import { startHandlers } from './starts.js';
 import { useKeyboard } from './useKeyboard.js';
 import { buildCommands } from './commands.js';
+import { docTitles } from './lib/trail.js';
+import { revealSegment, revealStep } from './lib/reveal.js';
+import { withActor } from './lib/actor.js';
+import { spokenIds } from './lib/language.js';
 
 export function App() {
   const ws = useWorkspace();
@@ -32,11 +38,12 @@ export function App() {
   const [flashSegmentId, setFlashSegmentId] = useState(null);
   const [receiptsOpen, setReceiptsOpen] = useState(false);
 
-  // Open "What the model did" and bring it into view (on a phone, in the side pane).
+  // Open "What the model did" and bring it into view (on a phone, in the side pane): the trail from
+  // its "Back" link in the rail, or the drawer's title under the walk-through, never the body alone.
   const openReceipts = () => {
     setReceiptsOpen(true);
     setPane('rail');
-    setTimeout(() => document.getElementById('receipts-body')?.scrollIntoView?.({ block: 'nearest' }), 0);
+    setTimeout(() => (document.querySelector('.rail-back') ?? document.getElementById('receipts-body')?.closest('.receipts'))?.scrollIntoView?.({ block: 'nearest' }), 0);
   };
 
   const appState = useAppState(ws);
@@ -76,6 +83,8 @@ export function App() {
     setStory,
     reviewStep,
     setReviewStep,
+    starting,
+    setStarting,
   } = appState;
 
   useKeyboard({ setCommandsOpen, setTab, setPinnedFactId, setPeekFactId });
@@ -117,8 +126,8 @@ export function App() {
 
   const form = workspace?.application?.form || {};
   const activeSample = { ...sample, ...((sample?.samples ?? []).find((s) => s.formId === form.id) ?? {}) };
-  // A workspace started from a sample's notes; only such a workspace can show the walk-through.
-  const sampleRun = Boolean(activeSample?.notes) && (workspace?.applicant?.sources ?? []).some((s) => s.kind === 'notes' && s.text === activeSample.notes);
+  // A workspace started from a sample; only such a workspace can show the walk-through.
+  const sampleRun = isSampleRun(workspace, activeSample);
   const documents = workspace?.application?.documents || {};
   const portalTasks = form.portalTasks || [];
   const snapshot = { ...form.snapshot, url: form.url };
@@ -139,21 +148,6 @@ export function App() {
     ? repair.items.filter((item) => item && item.status !== 'proposed' && item.decision == null).length
     : 0;
   const needsYou = proposedFactsCount + openQuestionsCount + repairNeedsDecisionCount + (view?.conflictDecisions?.length ?? 0);
-
-  const changedSegmentIds = (() => {
-    const lastRepair = workspace?.application?.lastRepair;
-    const changed = lastRepair?.changedSegments;
-    if (!Array.isArray(changed)) return [];
-    const docId = currentTabResolved === 'answer' ? 'answer' : currentTabResolved === 'letter' ? 'letter' : null;
-    if (!docId) return [];
-    const ids = [];
-    for (let i = 0; i < changed.length; i++) {
-      if (changed[i] && changed[i].docId === docId && changed[i].segmentId) {
-        ids.push(changed[i].segmentId);
-      }
-    }
-    return ids;
-  })();
 
   const shownFactId = activeFactId ?? pinnedFactId;
 
@@ -193,37 +187,20 @@ export function App() {
     if (!docId) return;
     setTab(docId);
     setPane('doc');
-    // After it renders, scroll and flash
-    setTimeout(() => {
-      const el = document.querySelector(`[data-segment="${segmentId}"]`);
-      if (el && typeof el.scrollIntoView === 'function') {
-        try {
-          el.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        } catch (e) {
-          el.scrollIntoView();
-        }
-      }
-      setFlashSegmentId(segmentId);
-      setTimeout(() => {
-        setFlashSegmentId((current) => (current === segmentId ? null : current));
-      }, 1200);
-    }, 50);
+    revealSegment(segmentId, setFlashSegmentId);
   };
 
   // "Show me": bring the step's control into view and focus it (on a phone, open the side pane first).
   const onShowStep = (show) => {
     if (window.matchMedia?.('(max-width: 767px)').matches) setPane('rail');
-    setTimeout(() => {
-      const target = document.querySelector({ facts: '.facts-review', question: '.question-card textarea', decide: '.conflict-card button', repair: '.queue' }[show]);
-      target?.focus?.();
-      target?.scrollIntoView?.({ block: 'nearest' });
-    }, 0);
+    revealStep(show);
   };
 
+  const fresh = !(workspace?.applicant?.sources ?? []).length;
   const topBar = (
     <TopBar
-      company={form.company}
-      role={form.role}
+      company={fresh ? null : form.company}
+      role={fresh ? null : form.role}
       mode={mode}
       budget={budget}
       onCommands={() => setCommandsOpen((v) => !v)}
@@ -251,7 +228,7 @@ export function App() {
     onAnswer: (questionId, text) => actions.answer(questionId, text),
     onResolveSourceConflict: actions.resolveSourceConflict,
     onSkip: (questionId) => actions.skip(questionId),
-    onCorrectFact: (factId, text) => actions.correct(factId, text),
+    onCorrectFact: (factId, text, ...gloss) => actions.correct(factId, text, ...gloss),
     onDecideChange: actions.decideChange,
     onApplyChanges: actions.applyChanges,
     onApprove: actions.approve,
@@ -264,35 +241,28 @@ export function App() {
     onReview: setReviewStep,
     onSettleConflict: (questionId, factId, decision) => ws.act('settleConflict', { questionId, factId, decision }),
     onCorrectConflict: openConflictCorrection,
+    onAddNotes: (text, extra) => actions.addNotes(text, extra),
   };
-  // A sample's notes open the walk-through at once; a refused start goes back to the welcome.
-  const addNotes = (text) => {
-    if (text === activeSample?.notes) setGuided(true);
-    return actions.addNotes(text);
-  };
-  const startSample = async (id) => {
-    setGuided(true);
-    if (!(await actions.startSample(id))) setGuided(false);
-  };
+  const { addNotes, startSample, chooseSample, startPrepared } = startHandlers({ actions, samples: sample?.samples, sampleNotes: activeSample?.notes, setGuided, setStarting });
   // The welcome and the walk-through have no rail, so they carry What Meta did and the command menu themselves.
   const receiptsDrawer = (
     <aside className="guided-receipts">
-      <ReceiptsDrawer receipts={receipts} modeLabel={mode?.label} onDownload={() => actions.downloadTrace(receipts, mode, budget)} open={receiptsOpen} onToggle={setReceiptsOpen} />
+      <ReceiptsDrawer receipts={receipts} modeLabel={mode?.label} mode={mode} busy={busy} workspace={workspace} view={view} onDownload={() => actions.downloadTrace(receipts, mode, budget)} open={receiptsOpen} onToggle={setReceiptsOpen} />
     </aside>
   );
   const commandMenu = commandsOpen ? <CommandMenu commands={commands} onClose={() => setCommandsOpen(false)} /> : null;
-  const exportDialog = pack ? <ExportDialog pack={pack} onClose={() => setPack(null)} onCopy={(text) => actions.copyText(text)} onDownload={() => actions.downloadPackMarkdown(pack)} onDownloadPass={() => actions.downloadEvidencePass(pack)} /> : null;
+  const exportDialog = pack ? <ExportDialog pack={sampleRun ? { ...pack, demo: demoLine(activeSample, workspace) } : pack} onClose={() => setPack(null)} onCopy={(text) => actions.copyText(text)} onDownload={(shown) => actions.downloadPackMarkdown(shown)} onDownloadPass={(shown) => actions.downloadEvidencePass(shown, mode, workspace?.prepared)} /> : null;
 
   // Ellie's sample runs as a guided walk-through: one step at a time, the full workspace one click away.
   if (guided && sampleRun) {
     return (
       <div className="app">
         {topBar}
-        <GuidedRun view={view} workspace={workspace} story={story} sampleName={activeSample?.name} possessive={activeSample?.possessive} isMeta={Boolean(mode?.isMeta)} onPrimary={onPrimary} onStory={setStory} onExit={() => { setReviewStep(null); setGuided(false); }} reviewStep={reviewStep} onReview={setReviewStep} busy={busy}>
+        <GuidedRun view={view} workspace={workspace} story={story} sampleName={activeSample?.name} possessive={activeSample?.possessive} isMeta={Boolean(mode?.isMeta)} model={mode?.model} sample={activeSample} voice={voice} receipts={receipts} onPrimary={onPrimary} onStory={setStory} onExit={() => { setReviewStep(null); setGuided(false); }} reviewStep={reviewStep} onReview={setReviewStep} busy={busy}>
           {reviewStep ? (
             <GuidedReview n={reviewStep} workspace={workspace} view={view} possessive={activeSample?.possessive} />
           ) : (
-            <GuidedBody stepKey={guidedStep(view, workspace, story).key} workspace={workspace} view={view} busy={busy} pending={ws.pending} notice={notice} modeLabel={modeLabel} sample={activeSample} possessive={activeSample?.possessive} handlers={stepHandlers} voice={voice} />
+            <GuidedBody stepKey={guidedStep(view, workspace, story).key} workspace={workspace} view={view} busy={busy} pending={ws.pending} notice={notice} modeLabel={modeLabel} sample={activeSample} possessive={activeSample?.possessive} handlers={stepHandlers} voice={voice} receipts={receipts} />
           )}
         </GuidedRun>
         {receiptsDrawer}
@@ -302,8 +272,19 @@ export function App() {
     );
   }
 
+  if (guided && starting && fresh) {
+    return (
+      <div className="app">
+        {topBar}
+        <SpokenStart sample={starting} view={view} workspace={workspace} isMeta={Boolean(mode?.isMeta)} live={mode?.id !== 'fixture' && voice} openWeight={mode?.id === 'compatible'} busy={busy || ws.pending} onRead={(text) => startSample(starting.id, text)} />
+        {receiptsDrawer}
+        {commandMenu}
+      </div>
+    );
+  }
+
   // A fresh workspace opens on the welcome alone; the workspace appears with the first notes.
-  if (!(workspace?.applicant?.sources ?? []).length) {
+  if (fresh) {
     return (
       <div className="app">
         {topBar}
@@ -312,7 +293,7 @@ export function App() {
             <StatusLine busy={busy} notice={notice} modeLabel={modeLabel} onDismiss={() => ws.setNotice(null)} />
           </div>
         ) : null}
-        <Welcome form={form} sample={activeSample} busy={busy} liveModel={mode?.id !== 'fixture'} onAddNotes={addNotes} onStartSample={startSample} onStartOwn={actions.startOwnApplication} voice={voice} />
+        <Welcome form={form} sample={activeSample} busy={busy || ws.pending} liveModel={mode?.id !== 'fixture'} model={mode?.model} onAddNotes={addNotes} onStartSample={chooseSample} onStartPrepared={startPrepared} onStartOwn={actions.startOwnApplication} voice={voice} />
         {receiptsDrawer}
         {commandMenu}
       </div>
@@ -332,7 +313,7 @@ export function App() {
       ) : null}
       {notice ? (
         <div className="status-wrap">
-          <StatusLine busy={busy} notice={notice} modeLabel={modeLabel} onDismiss={() => ws.setNotice(null)} />
+          <StatusLine busy={busy} notice={notice} modeLabel={modeLabel} onDismiss={() => ws.setNotice(null)} titles={docTitles(workspace)} />
         </div>
       ) : null}
       <main className="workspace" data-pane={pane} data-repair={repair ? '' : undefined}>
@@ -372,7 +353,7 @@ export function App() {
           sample={activeSample}
           activeFactId={shownFactId}
           revealFactId={pinnedFactId}
-          changedSegmentIds={changedSegmentIds}
+          changedSegmentIds={changedSegmentIds(workspace, currentTabResolved)}
           pendingSegmentIds={pendingSegmentIds(workspace, currentTabResolved)}
           onAddNotes={addNotes}
           onHoverFact={setActiveFactId}
@@ -427,7 +408,7 @@ export function App() {
           onResolveSourceConflict={stepHandlers.onResolveSourceConflict}
           onSkip={stepHandlers.onSkip}
           onDecideFact={stepHandlers.onDecideFact}
-          onCorrectFact={(factId, text) => actions.correct(factId, text)}
+          onCorrectFact={(factId, text, ...gloss) => actions.correct(factId, text, ...gloss)}
           onOpenCorrection={openConflictCorrection}
           onSettleConflict={stepHandlers.onSettleConflict}
           onHoverFact={setActiveFactId}
@@ -448,7 +429,7 @@ export function App() {
         <CitePeek
           fact={peekFact}
           n={view?.citations?.[peekFact.id]}
-          sourceLabel={sourceLabel(sourceKinds(workspace)[peekFact.sourceId])}
+          sourceLabel={withActor(sourceLabel(sourceKinds(workspace)[peekFact.sourceId], 'your', spokenIds(workspace).has(peekFact.sourceId)), peekFact)}
           onClose={() => setPeekFactId(null)}
           onCorrect={(id) => {
             setPeekFactId(null);

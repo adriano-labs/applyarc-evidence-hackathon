@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { matchesSampleCorrection } from '../flow.js';
+import { HerWords } from './HerWords.jsx';
+import { GlossFields, glossFor, plainMeaning } from './GlossFields.jsx';
+import { withActor } from '../lib/actor.js';
 import './References.css';
 
-// Where a fact came from, in the applicant's terms (by the kind of its source).
-export function sourceLabel(kind, owner = 'your') {
+// Where a fact came from, in the applicant's terms (by the kind of its source); notes from a
+// voice clip are her voice note.
+export function sourceLabel(kind, owner = 'your', spoken = false) {
   if (kind === 'answer') return `From ${owner} answer`;
   if (kind === 'correction') return `From ${owner} correction`;
-  return `From ${owner} notes`;
+  return spoken ? `From ${owner} voice note` : `From ${owner} notes`;
 }
 
 // `prefilled`: opened by a correction step; only the matching sample supplies replacement wording.
@@ -18,13 +22,16 @@ function CorrectionForm({ fact, onCorrect, onCancel, sample, prefilled, n, confl
     return { conflict, sample: prefilled && isSampleFact && !conflict, answer: conflict ? conflictContext.answerText : null };
   });
   const useSamplePrefill = origin.sample;
-  const [text, setText] = useState(origin.conflict ? origin.answer ?? fact.statement : useSamplePrefill ? sample.correction.text : fact.statement);
+  // A fact in another language is corrected in her words, with its English meaning beside them.
+  const words = fact.language ? fact.quote : fact.statement;
+  const [text, setText] = useState(origin.conflict ? origin.answer ?? words : useSamplePrefill ? sample.correction.text : words);
+  const [gloss, setGloss] = useState(() => (useSamplePrefill && sample.correction.meaning ? { meaning: plainMeaning(sample.correction.meaning), actor: sample.correction.actor } : { meaning: fact.statement, actor: fact.actor }));
   const [pending, setPending] = useState(false);
   const [unconfirmed, setUnconfirmed] = useState(false);
   const trimmed = text.trim();
-  const unchanged = trimmed === fact.statement.trim();
+  const unchanged = trimmed === words.trim();
   const tooLong = trimmed.length > 280;
-  const disabled = pending || locked || trimmed === '' || unchanged || tooLong;
+  const disabled = pending || locked || trimmed === '' || unchanged || tooLong || (fact.language && !gloss.meaning?.trim());
   const showSample = isSampleFact && !origin.conflict && text !== sample.correction.text;
   const saveRef = useRef(null);
   const textareaRef = useRef(null);
@@ -41,7 +48,8 @@ function CorrectionForm({ fact, onCorrect, onCancel, sample, prefilled, n, confl
     setPending(true);
     setUnconfirmed(false);
     try {
-      setUnconfirmed(!(await onCorrect(fact.id, trimmed)));
+      const english = glossFor(fact, gloss);
+      setUnconfirmed(!(await (english ? onCorrect(fact.id, trimmed, english) : onCorrect(fact.id, trimmed))));
     } catch {
       setUnconfirmed(true);
     } finally {
@@ -51,7 +59,7 @@ function CorrectionForm({ fact, onCorrect, onCancel, sample, prefilled, n, confl
 
   return (
     <>
-      {origin.conflict ? <p className="ref-statement">Earlier fact: {fact.statement}</p> : null}
+      {origin.conflict ? <p className="ref-statement">Earlier fact: {words}</p> : null}
       {typeof origin.answer === 'string' ? <p className="ref-help">From your answer — review before saving.</p> : null}
       <label htmlFor={`ref-correct-${fact.id}`}>The fact, in your words</label>
       <textarea
@@ -62,11 +70,12 @@ function CorrectionForm({ fact, onCorrect, onCancel, sample, prefilled, n, confl
         disabled={pending || locked}
         onChange={(e) => setText(e.target.value)}
       />
+      {fact.language ? <GlossFields id={`ref-gloss-${fact.id}`} gloss={gloss} onChange={setGloss} disabled={pending || locked} /> : null}
       {showSample ? (
         <button
           type="button"
           className="btn small"
-          onClick={() => setText(sample.correction.text)}
+          onClick={() => { setText(sample.correction.text); if (sample.correction.meaning) setGloss({ meaning: plainMeaning(sample.correction.meaning), actor: sample.correction.actor }); }}
           disabled={pending || locked}
         >
           Use {sample.name}’s sample correction
@@ -98,7 +107,7 @@ function CorrectionForm({ fact, onCorrect, onCancel, sample, prefilled, n, confl
   );
 }
 
-function RefItem({ fact, n, sources, activeFactId, revealFactId, locked, onCorrect, onHover, uncited, sample, openCorrectionFactId, onCloseCorrection, conflictCorrectionContext }) {
+function RefItem({ fact, n, sources, spoken, activeFactId, revealFactId, locked, onCorrect, onHover, uncited, sample, openCorrectionFactId, onCloseCorrection, conflictCorrectionContext }) {
   const refEl = useRef(null);
   const [editing, setEditing] = useState(false);
 
@@ -116,7 +125,7 @@ function RefItem({ fact, n, sources, activeFactId, revealFactId, locked, onCorre
 
   const isActive = activeFactId === fact.id ? 'true' : 'false';
   const className = uncited ? 'ref uncited' : 'ref';
-  const from = sourceLabel(sources[fact.sourceId]);
+  const from = withActor(sourceLabel(sources[fact.sourceId], 'your', spoken?.has(fact.sourceId)), fact);
 
   return (
     <li
@@ -137,8 +146,8 @@ function RefItem({ fact, n, sources, activeFactId, revealFactId, locked, onCorre
             n={n}
             conflictContext={conflictCorrectionContext}
             locked={locked}
-            onCorrect={async (id, text) => {
-              const result = await onCorrect(id, text);
+            onCorrect={async (id, text, ...gloss) => {
+              const result = await onCorrect(id, text, ...gloss);
               if (result) {
                 setEditing(false);
                 onCloseCorrection?.();
@@ -152,8 +161,10 @@ function RefItem({ fact, n, sources, activeFactId, revealFactId, locked, onCorre
           />
         ) : (
           <>
-            <p className="ref-statement">{fact.statement}</p>
-            <p className="ref-quote">“<mark>{fact.quote}</mark>”</p>
+            {fact.language ? <HerWords fact={fact} base="ref" /> : <>
+              <p className="ref-statement">{fact.statement}</p>
+              <p className="ref-quote">“<mark>{fact.quote}</mark>”</p>
+            </>}
             <p className="ref-source">{from}</p>
             {!locked && fact.status === 'confirmed' ? (
               <button
@@ -171,8 +182,8 @@ function RefItem({ fact, n, sources, activeFactId, revealFactId, locked, onCorre
   );
 }
 
-export function References({ facts, citations, sources, activeFactId, revealFactId, locked, onCorrect, onHover, sample, openCorrectionFactId, onCloseCorrection, conflictCorrectionContext }) {
-  const handleCorrect = (id, text) => onCorrect?.(id, text);
+export function References({ facts, citations, sources, spoken, activeFactId, revealFactId, locked, onCorrect, onHover, sample, openCorrectionFactId, onCloseCorrection, conflictCorrectionContext }) {
+  const handleCorrect = (id, text, ...gloss) => onCorrect?.(id, text, ...gloss);
 
   const citedEntries = [];
   for (const fact of facts) {
@@ -203,6 +214,7 @@ export function References({ facts, citations, sources, activeFactId, revealFact
               fact={fact}
               n={n}
               sources={sources}
+              spoken={spoken}
               activeFactId={activeFactId}
               revealFactId={revealFactId}
               locked={locked}
@@ -226,6 +238,7 @@ export function References({ facts, citations, sources, activeFactId, revealFact
                 key={fact.id}
                 fact={fact}
                 sources={sources}
+                spoken={spoken}
                 activeFactId={activeFactId}
                 revealFactId={revealFactId}
                 locked={locked}

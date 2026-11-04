@@ -1,0 +1,463 @@
+{
+ "status": "NOT SUBMITTED",
+ "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+ "exportId": "e1",
+ "createdAt": "2026-11-03T19:43:00.670Z",
+ "application": {
+  "company": "North Yorkshire Council",
+  "role": "Care and Support Worker",
+  "url": "https://nycjobs.engageats.co.uk/Vacancies/W/8542/0/476577/21214/care-and-support-worker",
+  "snapshotFetchedAt": "2026-11-03T19:09:48Z"
+ },
+ "documents": [
+  {
+   "id": "answer",
+   "title": "Supporting evidence",
+   "fieldId": null,
+   "revision": 2,
+   "approvedAt": "2026-11-03T19:43:00.663Z",
+   "words": 208,
+   "wordLimit": 500,
+   "text": "I have worked for three years in a care home in Leeds, starting in October 2023. I explain what I am going to do before personal hygiene. I always close the curtains. I respect each person's culture and religion. I ask what the person wants to eat. I ask how the person wants to be treated. I ask whether the person prefers to be helped by a woman.\n\nOne night, I saw a bruise on a resident's arm. I recorded it and immediately told the nurse on duty. She made the safeguarding report. In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.\n\nI have moving and handling training and use a hoist. I have medication training and do the morning medication round for eighteen residents. Before the shift, I read each resident's care plan and do what is stated there. At the end of the shift, I write the daily notes in English and sign the medication sheet.\n\nWe always work in pairs. I made cards with photographs of food so each person could point to what they want to eat. I did two years of night shifts, and in the last year I moved to day shifts.",
+   "references": [
+    {
+     "n": 1,
+     "factId": "f1",
+     "statement": "I have worked for three years in a care home in Leeds, starting in October two thousand and twenty-three.",
+     "quote": "Trabalha há três anos num lar em Leeds, comecei comecei em outubro de dois mil e vinte e três.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 2,
+     "factId": "f14",
+     "statement": "I explain what I am going to do before personal hygiene.",
+     "quote": "explicar o que vou fazer antes da da higiene pessoal",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 3,
+     "factId": "f15",
+     "statement": "I always close the curtains.",
+     "quote": "fechar sempre as cortinas",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 4,
+     "factId": "f16",
+     "statement": "I respect each person's culture and religion.",
+     "quote": "E respeita a cultura e a religião de cada pessoa.",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 5,
+     "factId": "f17",
+     "statement": "I ask what the person wants to eat.",
+     "quote": "Pergunto o que quer comer",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 6,
+     "factId": "f18",
+     "statement": "I ask how the person wants to be treated.",
+     "quote": "como quer ser tratada",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 7,
+     "factId": "f19",
+     "statement": "I ask whether the person prefers to be helped by a woman.",
+     "quote": "se prefere ser ajudada por uma mulher",
+     "from": "answer",
+     "language": "pt-PT"
+    },
+    {
+     "n": 8,
+     "factId": "f10",
+     "statement": "One night, I saw a bruise on a resident's arm.",
+     "quote": "Uma noite, vi uma nódoa negra no braço de uma residente.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 9,
+     "factId": "f11",
+     "statement": "I recorded it and immediately told the nurse on duty.",
+     "quote": "Registei e contei logo à enfermeira de serviço",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 10,
+     "factId": "f12",
+     "statement": "She made the safeguarding report.",
+     "quote": "ela fez a participação de safeguarding",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 11,
+     "factId": "f7",
+     "statement": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, nós, a equipa toda, passámos o jantar para mais cedo.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 12,
+     "factId": "f5",
+     "statement": "I have moving and handling training and use a hoist.",
+     "quote": "Tenho tenho a formação de moving and handling, uso grua",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 13,
+     "factId": "f2",
+     "statement": "I have medication training and do the morning medication round for eighteen residents.",
+     "quote": "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 14,
+     "factId": "f4",
+     "statement": "Before the shift, I read each resident's care plan and do what is stated there.",
+     "quote": "antes do turno, leio o care plan de cada residente e faço o que lá está.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 15,
+     "factId": "f3",
+     "statement": "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+     "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 16,
+     "factId": "f6",
+     "statement": "We always work in pairs.",
+     "quote": "trabalhamos sempre em dupla",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 17,
+     "factId": "f8",
+     "statement": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 18,
+     "factId": "f9",
+     "statement": "Correction, the night shifts were two years, not three. In the last year I moved to day shifts.",
+     "quote": "Correção, os turnos da noite foram dois anos, anos, não três. No último ano passei a fazer dias.",
+     "from": "correction",
+     "language": "pt-PT"
+    }
+   ],
+   "sentences": [
+    {
+     "text": "I have worked for three years in a care home in Leeds, starting in October 2023.",
+     "refs": [
+      1
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I explain what I am going to do before personal hygiene.",
+     "refs": [
+      2
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I always close the curtains.",
+     "refs": [
+      3
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I respect each person's culture and religion.",
+     "refs": [
+      4
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I ask what the person wants to eat.",
+     "refs": [
+      5
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I ask how the person wants to be treated.",
+     "refs": [
+      6
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I ask whether the person prefers to be helped by a woman.",
+     "refs": [
+      7
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "One night, I saw a bruise on a resident's arm.",
+     "refs": [
+      8
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I recorded it and immediately told the nurse on duty.",
+     "refs": [
+      9
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "She made the safeguarding report.",
+     "refs": [
+      10
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "refs": [
+      11
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I have moving and handling training and use a hoist.",
+     "refs": [
+      12
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I have medication training and do the morning medication round for eighteen residents.",
+     "refs": [
+      13
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "Before the shift, I read each resident's care plan and do what is stated there.",
+     "refs": [
+      14
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+     "refs": [
+      15
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "We always work in pairs.",
+     "refs": [
+      16
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "refs": [
+      17
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I did two years of night shifts, and in the last year I moved to day shifts.",
+     "refs": [
+      18
+     ],
+     "startsParagraph": false
+    }
+   ],
+   "ownWords": 0,
+   "notAnswered": []
+  },
+  {
+   "id": "letter",
+   "title": "Cover letter",
+   "fieldId": null,
+   "required": false,
+   "revision": 2,
+   "approvedAt": "2026-11-03T19:43:00.667Z",
+   "words": 155,
+   "wordLimit": 350,
+   "text": "Dear North Yorkshire Council hiring team,\n\nI am applying for the Care and Support Worker role at North Yorkshire Council.\n\nI have worked for three years in a care home in Leeds, starting in October 2023. I have medication training and do the morning medication round for eighteen residents. At the end of the shift, I write the daily notes in English and sign the medication sheet. Before the shift, I read each resident's care plan and do what is stated there. I have moving and handling training and use a hoist.\n\nIn the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier. I made cards with photographs of food so each person could point to what they want to eat. I did two years of night shifts, and in the last year I moved to day shifts.\n\nThank you for considering my application.\n\nYours sincerely, Ana",
+   "references": [
+    {
+     "n": 1,
+     "factId": "f1",
+     "statement": "I have worked for three years in a care home in Leeds, starting in October two thousand and twenty-three.",
+     "quote": "Trabalha há três anos num lar em Leeds, comecei comecei em outubro de dois mil e vinte e três.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 11,
+     "factId": "f7",
+     "statement": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "quote": "Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, nós, a equipa toda, passámos o jantar para mais cedo.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 12,
+     "factId": "f5",
+     "statement": "I have moving and handling training and use a hoist.",
+     "quote": "Tenho tenho a formação de moving and handling, uso grua",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 13,
+     "factId": "f2",
+     "statement": "I have medication training and do the morning medication round for eighteen residents.",
+     "quote": "Tenho a formação da medicação e faço medication round da manhã para dezoito residentes.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 14,
+     "factId": "f4",
+     "statement": "Before the shift, I read each resident's care plan and do what is stated there.",
+     "quote": "antes do turno, leio o care plan de cada residente e faço o que lá está.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 15,
+     "factId": "f3",
+     "statement": "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+     "quote": "No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 17,
+     "factId": "f8",
+     "statement": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "quote": "Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer.",
+     "from": "notes",
+     "language": "pt-PT"
+    },
+    {
+     "n": 18,
+     "factId": "f9",
+     "statement": "Correction, the night shifts were two years, not three. In the last year I moved to day shifts.",
+     "quote": "Correção, os turnos da noite foram dois anos, anos, não três. No último ano passei a fazer dias.",
+     "from": "correction",
+     "language": "pt-PT"
+    }
+   ],
+   "sentences": [
+    {
+     "text": "Dear North Yorkshire Council hiring team,",
+     "refs": [],
+     "startsParagraph": true
+    },
+    {
+     "text": "I am applying for the Care and Support Worker role at North Yorkshire Council.",
+     "refs": [],
+     "startsParagraph": true
+    },
+    {
+     "text": "I have worked for three years in a care home in Leeds, starting in October 2023.",
+     "refs": [
+      1
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I have medication training and do the morning medication round for eighteen residents.",
+     "refs": [
+      13
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "At the end of the shift, I write the daily notes in English and sign the medication sheet.",
+     "refs": [
+      15
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "Before the shift, I read each resident's care plan and do what is stated there.",
+     "refs": [
+      14
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I have moving and handling training and use a hoist.",
+     "refs": [
+      12
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "In the dementia unit, residents became agitated late in the day, so we, the whole team, moved dinner earlier.",
+     "refs": [
+      11
+     ],
+     "startsParagraph": true
+    },
+    {
+     "text": "I made cards with photographs of food so each person could point to what they want to eat.",
+     "refs": [
+      17
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "I did two years of night shifts, and in the last year I moved to day shifts.",
+     "refs": [
+      18
+     ],
+     "startsParagraph": false
+    },
+    {
+     "text": "Thank you for considering my application.",
+     "refs": [],
+     "startsParagraph": true
+    },
+    {
+     "text": "Yours sincerely, Ana",
+     "refs": [],
+     "startsParagraph": true
+    }
+   ],
+   "ownWords": 0,
+   "notAnswered": []
+  }
+ ],
+ "portalTasks": [
+  "Create an account: Title, First name, Last name, Email address, Password",
+  "Enhanced Level DBS Disclosure (required for appointment)",
+  "The rest of the council's application form sits behind the account and was not opened"
+ ],
+ "applicant": "Ana"
+}

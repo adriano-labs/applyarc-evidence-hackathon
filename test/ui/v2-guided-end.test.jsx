@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 // V2-4: the end of the guided walk-through. Her cited answer, a fact that
 // changes, only the sentences that used it rewritten, and a finish line.
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { GuidedBody } from '../../client/src/components/GuidedBody.jsx';
 
@@ -83,6 +83,24 @@ describe('the finish', () => {
     expect(screen.getAllByRole('term').map((t) => t.textContent)).toEqual(['Notes', 'Facts', 'Question', 'Answer', 'Change']);
     fireEvent.click(screen.getByRole('button', { name: 'See the application' }));
     expect(h.onPrimary).toHaveBeenCalledWith({ id: 'export', label: 'Preview the export' });
+  });
+
+  it('says what just happened from saved state and the receipts, naming the fixture as the fixture', () => {
+    const done = workspace({ lastRepair: { factId: 'f2', changed: 2, kept: 0, docs: ['answer', 'letter'], reopened: 2, untouched: 2 } });
+    done.application.documents.answer.revision = 2;
+    done.application.documents.letter.revision = 2;
+    const receipt = (step, at) => ({ step, flow: 'draft', provider: 'fixture', model: 'fixture', costUsd: 0, toolCalls: [], at });
+    const receipts = [receipt('extract', '2026-10-27T10:00:00.000Z'), receipt('draft-answer', '2026-10-27T10:01:00.000Z')];
+    body({ stepKey: 'finish', workspace: done, view: view('export', { approvals: { answer: 'approved', letter: 'approved' } }), handlers: handlers(), receipts });
+    const lines = within(screen.getByRole('region', { name: 'What just happened' })).getAllByRole('listitem').map((li) => li.textContent);
+    expect(lines).toEqual([
+      '2 facts confirmed.',
+      'You approved version 2 of both documents.',
+      '1 fact corrected: it reopened 2 sentences and left 2 untouched.',
+      'The fixture (hand-written, not a model): 2 steps, 0 tool calls, $0.00.',
+      'Nothing has been sent.',
+    ]);
+    expect(screen.queryByText(/model time/)).toBeNull();
   });
 });
 

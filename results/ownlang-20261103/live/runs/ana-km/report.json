@@ -1,0 +1,292 @@
+{
+ "base": "http://127.0.0.1:3196",
+ "startedAt": "2026-11-03T20:44:39.627Z",
+ "steps": [
+  {
+   "name": "reset",
+   "ms": 6
+  },
+  {
+   "name": "startPrepared",
+   "ms": 5
+  },
+  {
+   "name": "voice-correction",
+   "ms": 4844
+  },
+  {
+   "name": "add-note",
+   "ms": 6
+  },
+  {
+   "name": "read-note",
+   "ms": 7857
+  },
+  {
+   "name": "resolveSourceConflict",
+   "ms": 8
+  },
+  {
+   "name": "repair",
+   "ms": 11567
+  },
+  {
+   "name": "applyChanges",
+   "ms": 7
+  },
+  {
+   "name": "approve-answer",
+   "ms": 5
+  },
+  {
+   "name": "approve-letter",
+   "ms": 4
+  },
+  {
+   "name": "export",
+   "ms": 4
+  },
+  {
+   "name": "verify",
+   "ms": 3
+  }
+ ],
+ "failures": [],
+ "heard": {
+  "text": "Correção: os turnos da noite foram foram dois anos, não três, no último ano passei a fazer dias.",
+  "durationMs": 7200,
+  "model": "muse-voice-transcribe-1.0",
+  "languageBias": "Portuguese"
+ },
+ "conflict": {
+  "detected": true,
+  "question": "Fez turnos da noite durante dois anos ou três anos, e no último ano passou a fazer dias?",
+  "offer": {
+   "questionId": "q2",
+   "sourceId": "s3",
+   "factId": "f10",
+   "before": "Fiz três anos de noites e também fins de semana.",
+   "text": "Correção: os turnos da noite foram foram dois anos, não três, no último ano passei a fazer dias.",
+   "meaning": "The night shifts were 2 years, not 3, and in the last year I moved to days.",
+   "actor": "self"
+  }
+ },
+ "reopened": [
+  "answer/answer-18",
+  "letter/letter-12"
+ ],
+ "repair": [
+  {
+   "docId": "answer",
+   "segmentId": "answer-18",
+   "status": "proposed",
+   "after": "I did night shifts for 2 years, and in the last year I moved to days."
+  },
+  {
+   "docId": "letter",
+   "segmentId": "letter-12",
+   "status": "proposed",
+   "after": "I did night shifts for 2 years, and in the last year I moved to days."
+  }
+ ],
+ "export": {
+  "status": "NOT SUBMITTED",
+  "words": [
+   [
+    "answer",
+    202,
+    500
+   ],
+   [
+    "letter",
+    184,
+    350
+   ]
+  ]
+ },
+ "verify": [
+  {
+   "id": "quotes",
+   "pass": true,
+   "text": "19 of 19 confirmed facts quote Ana’s text word for word"
+  },
+  {
+   "id": "citations",
+   "pass": true,
+   "text": "30 of 30 drafted statements cite at least one fact, all confirmed"
+  },
+  {
+   "id": "numbers",
+   "pass": true,
+   "text": "30 of 30 drafted statements state no number their cited facts do not"
+  },
+  {
+   "id": "approvals",
+   "pass": true,
+   "text": "2 of 2 approvals match the current version"
+  },
+  {
+   "id": "own",
+   "pass": true,
+   "text": "No sentences marked as Ana’s own yet"
+  },
+  {
+   "id": "export",
+   "pass": true,
+   "text": "Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions"
+  },
+  {
+   "id": "review",
+   "pass": true,
+   "text": "Model review on record: 30 cited sentences supported, 0 held back in this visit"
+  }
+ ],
+ "finished": true,
+ "costUsd": 0.0635,
+ "modelSteps": 4,
+ "wallSeconds": 24.3,
+ "budget": {
+  "capUsd": 8,
+  "spentUsd": 2.640005,
+  "reservedUsd": 0,
+  "remainingUsd": 5.359995
+ },
+ "receipts": [
+  {
+   "step": "transcribe",
+   "flow": "voice",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-voice-transcribe-1.0",
+   "host": "api.meta.ai",
+   "turns": 0,
+   "attempts": 1,
+   "requestIds": [],
+   "toolCalls": [],
+   "usage": {
+    "input": 0,
+    "cached": 0,
+    "output": 0,
+    "reasoning": 0
+   },
+   "costUsd": 0.00035999999999999997,
+   "audioMs": 7200,
+   "totalMs": 4841,
+   "at": "2026-11-03T20:44:44.505Z",
+   "languageBias": "Portuguese"
+  },
+  {
+   "step": "extract",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "low",
+   "turns": 2,
+   "attempts": 2,
+   "requestIds": [
+    "376c2c26-57ec-413d-adf9-980c00bcb0a6",
+    "6470447d-ac46-4900-8c1b-89d6ced1c8d9"
+   ],
+   "toolCalls": [
+    {
+     "name": "form_requirements",
+     "ok": true,
+     "note": "read"
+    },
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    }
+   ],
+   "usage": {
+    "input": 5100,
+    "cached": 3688,
+    "output": 827,
+    "reasoning": 473
+   },
+   "costUsd": 0.022925599999999997,
+   "firstEventMs": 2435,
+   "firstOutputMs": 4172,
+   "totalMs": 7847,
+   "rateLimit": {
+    "remainingRequests": 2999,
+    "remainingTokens": 4000000
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "read",
+   "at": "2026-11-03T20:44:52.365Z"
+  },
+  {
+   "step": "repair",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "69e32293-39b5-43cc-89db-28f75675d719"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 3716,
+    "cached": 1012,
+    "output": 627,
+    "reasoning": 532
+   },
+   "costUsd": 0.0235584,
+   "firstEventMs": 3045,
+   "firstOutputMs": 6148,
+   "totalMs": 6377,
+   "rateLimit": {
+    "remainingRequests": 2998,
+    "remainingTokens": 3997761
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-03T20:44:58.760Z"
+  },
+  {
+   "step": "review",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "64d0d525-57cd-4770-89c3-e754dfe562cf"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 1969,
+    "cached": 756,
+    "output": 582,
+    "reasoning": 442
+   },
+   "costUsd": 0.0166432,
+   "firstEventMs": 1984,
+   "firstOutputMs": 4469,
+   "totalMs": 5172,
+   "rateLimit": {
+    "remainingRequests": 2997,
+    "remainingTokens": 3994430
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-03T20:45:03.937Z"
+  }
+ ]
+}

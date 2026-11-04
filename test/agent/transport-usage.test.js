@@ -70,6 +70,18 @@ describe('Responses usage accounting fails closed', () => {
     unknown(ledger);
   });
 
+  // Live, 3 Nov: a cut-short revise was settled by the ledger but its receipt said 0 attempts and $0.
+  it.each(['failed', 'incomplete'])('puts the settled usage and cost of a billed %s answer on the app receipt', async (status) => {
+    const { transport, ledger } = setup(valid, status);
+    const events = [];
+    const agent = createModelAgent({ provider, transport });
+    const error = await agent.revise({ items: [], facts: [], emit: (event) => events.push(event) }).catch((e) => e);
+    expect(error).toMatchObject({ code: status, unsettled: 0 });
+    const receipt = events.find((event) => event.type === 'receipt').receipt;
+    expect(receipt).toMatchObject({ error: status, attempts: 1, turns: 1, usage: { input: 1000, cached: 400, output: 500, reasoning: 450 }, costUsd: 0.01248, unsettled: 0 });
+    expect(ledger.summary().entries[0]).toMatchObject({ status: 'settled', chargedUsd: 0.01248 });
+  });
+
   it.each([
     ['ordinary', { input_tokens: 1000, output_tokens: 500 }, 0.014],
     ['cached and reasoning', valid, 0.01248],

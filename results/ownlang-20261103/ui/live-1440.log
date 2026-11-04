@@ -1,0 +1,33 @@
+   1s welcome · primary bottom at 652 px, no sideways scroll: true
+   1s screenshot 01-welcome
+   1s clicked Try it with Ana’s voice note
+  21s spoken start · Xemuiene. Trabalha há três anos num lar em Leeds, comecei em Outubro de dois mil e e vinte
+  21s screenshot 02-spoken-start
+  21s clicked Read Ana’s words
+  37s screenshot 03-fact-card
+  38s facts · Confirm the remaining 11
+  49s question · Com os cartões com fotografias da comida que fez na unidade de demência, como é que isso respeitou as escolhas e as nece
+  49s screenshot 04-question
+  53s spoken answer · ParaPara mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da
+  53s clicked Answer
+  60s facts · Confirm the remaining 6
+  61s clicked Write her answer
+  87s answer · Drafted with Muse Wonder from words spoken in Portuguese; Ana confirmed each English meaning.
+  87s screenshot 05-answer-peek
+  87s clicked Next: correct one fact
+  91s spoken correction · correction, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.
+  91s clicked Add Ana’s note
+  98s conflict · Fez turnos da noite durante dois anos, passando a dias no último ano, ou fez três anos de noites?
+  98s screenshot 06a-conflict
+  98s clicked Use this correction
+  98s key moment · What changed | Undo this correction |  | [19]Applicant worked nights for three years and also worked weekends. The night shifts were two years, not three; in the last year I moved to days. |  | 2 documents
+  98s screenshot 06-key-moment
+ 108s applied
+ 108s approved supporting evidence
+ 108s approved cover letter
+ 109s screenshot 07-finish
+ 109s clicked See the application
+ 109s screenshot 08-pack
+ 109s evidence pass saved · ~/Developer/claude/evidence/hackathon-29oct/ownlang/evidence/ui/live-1440/evidence-pass.html
+ 109s screenshot 09-evidence-pass
+ 139s done · sideways scroll free: true

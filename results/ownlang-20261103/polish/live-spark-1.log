@@ -1,0 +1,23 @@
+   1s clicked Start at Ana’s key moment
+   1s key moment · Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite.
+   1s screenshot key-moment
+   1s clicked Add Ana’s note
+   4s screenshot read-as-new-facts
+   5s fact · “os turnos da noite foram dois anos, não três”
+   5s fact · “no último ano passei a fazer dias.”
+   5s nothing corrected · The model read her note as new facts, not as a correction. Correct the fact yourself: one click, and the repair still runs live. Correct this fact
+   5s screenshot nothing-corrected-typed-route
+   5s clicked Correct this fact
+   6s screenshot typed-correction
+   6s clicked Correct this fact
+   6s what changed · What changed | Undo this correction |  | [19]I did 3 years of nights, and also weekends. The night shifts were two years, not three; in the last year I moved to days. |  | 2 documents | 2 sentences affected | 40 untouched
+   6s screenshot what-changed
+  12s approve supporting evidence · Approve the supporting evidence, version 2
+  12s approve cover letter · Approve the cover letter, version 2
+  12s screenshot finish
+  12s clicked See the application
+  13s screenshot pack
+  13s clicked Verify this run
+  13s verify · 7 of 7
+  13s screenshot verified
+  13s done · 3 model steps, $0.0204

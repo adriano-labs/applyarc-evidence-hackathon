@@ -1,0 +1,11 @@
+/* Her words lead, in the print voice; the English meaning sits beneath in the interface voice. */
+.her-words,
+.facts-review .fact-quote.her-words,
+.cite-peek .peek-quote.her-words,
+.ref .ref-quote.her-words { font: 400 var(--text-md)/1.5 var(--font-doc); color: var(--ink); }
+.facts-review .fact-quote.her-words { margin-top: var(--s3); }
+.her-meaning {
+  font: 500 var(--text-sm)/1.5 var(--font-ui);
+  color: var(--ink);
+  margin: var(--s1) 0 0;
+}

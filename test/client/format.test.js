@@ -30,5 +30,9 @@ describe('format helpers', () => {
     ];
     expect(summariseReceipts(receipts)).toEqual({ steps: 3, toolCalls: 3, failed: 1, totalMs: 7200, costUsd: 0.0042, costComplete: false, models: ['muse-spark-open'] });
     expect(summariseReceipts([])).toEqual({ steps: 0, toolCalls: 0, failed: 0, totalMs: 0, costUsd: 0, costComplete: true, models: [] });
+    // The loop's recorded decisions sit beside the receipts but are not model steps.
+    const stage = { kind: 'stage', flow: 'draft', label: 'The evidence check refused 1 sentence; asking for a fix', at: '2026-11-03T10:00:00.000Z' };
+    expect(summariseReceipts([receipts[0], stage, receipts[1]])).toEqual({ steps: 2, toolCalls: 3, failed: 0, totalMs: 6200, costUsd: 0.0042, costComplete: true, models: ['muse-spark-open'] });
+    expect(summariseReceipts([stage])).toEqual({ steps: 0, toolCalls: 0, failed: 0, totalMs: 0, costUsd: 0, costComplete: true, models: [] });
   });
 });

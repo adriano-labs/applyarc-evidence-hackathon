@@ -1,0 +1,97 @@
+{
+  "host": "baseten",
+  "attempted": 2,
+  "completed": 2,
+  "notStarted": [],
+  "stoppedBecause": null,
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "withinLimits": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "citationsConfirmed": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "manualSentenceIntact": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "exportNotSubmitted": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "noServerErrors": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "noUncitedNumbers": {
+      "pass": 1,
+      "evaluable": 2
+    }
+  },
+  "medianModelStepMs": 4244,
+  "worstModelStep": {
+    "persona": "ellie",
+    "name": "write both documents",
+    "ms": 49047
+  },
+  "costPerJourneyUsd": {
+    "median": 0.164151,
+    "min": 0.140107,
+    "max": 0.188195,
+    "total": 0.328302
+  },
+  "routes": {
+    "ellie": "use-this-correction",
+    "priya": "missed-then-correct-fact"
+  },
+  "aborted": [],
+  "findings": [
+    {
+      "persona": "priya",
+      "kind": "conflict-missed",
+      "note": "the correcting note raised no conflict; 2 fact(s) were proposed from it instead",
+      "proposed": [
+        "Mateo wrote the Karpenter autoscaler config, not me.",
+        "I wrote the Terraform modules for the node pools and reviewed his autoscaler change."
+      ]
+    }
+  ],
+  "table": [
+    {
+      "persona": "ellie",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 16,
+      "tools": 0,
+      "costUsd": 0.188195,
+      "wallMs": 90655
+    },
+    {
+      "persona": "priya",
+      "completed": true,
+      "route": "missed-then-correct-fact",
+      "invariantsPassed": 8,
+      "retries": 0,
+      "attempts": 16,
+      "tools": 0,
+      "costUsd": 0.140107,
+      "wallMs": 69192
+    }
+  ]
+}

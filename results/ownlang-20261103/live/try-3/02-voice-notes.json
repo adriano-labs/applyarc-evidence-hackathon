@@ -1,0 +1,58 @@
+{
+ "clip": "ana-pt-notes.wav",
+ "ms": 16603,
+ "hint": "Portuguese",
+ "text": "Szemjen. Trabalha há três anos num lar em Leeds, comecei comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+ "durationMs": 58240,
+ "truth": "Chamo-me Ana. Trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+ "werRaw": 0.1039,
+ "werSpoken": 0.0566,
+ "errorsSpoken": [
+  [
+   "del",
+   "chamo",
+   ""
+  ],
+  [
+   "del",
+   "me",
+   ""
+  ],
+  [
+   "sub",
+   "ana",
+   "szemjen"
+  ],
+  [
+   "sub",
+   "trabalho",
+   "trabalha"
+  ],
+  [
+   "ins",
+   "",
+   "comecei"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "tenho"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "nós"
+  ]
+ ],
+ "words": 159
+}

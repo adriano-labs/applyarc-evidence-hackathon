@@ -1,0 +1,326 @@
+[
+ {
+  "src": "clip check 20:20",
+  "clip": "notes",
+  "padded": false,
+  "hint": false,
+  "errors": 11,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "notes",
+  "padded": false,
+  "hint": true,
+  "errors": 13,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "notes",
+  "padded": true,
+  "hint": false,
+  "errors": 12,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "notes",
+  "padded": true,
+  "hint": true,
+  "errors": 7,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "answer",
+  "padded": false,
+  "hint": false,
+  "errors": 7,
+  "words": 51,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "answer",
+  "padded": false,
+  "hint": true,
+  "errors": 2,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "answer",
+  "padded": true,
+  "hint": false,
+  "errors": 0,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "answer",
+  "padded": true,
+  "hint": true,
+  "errors": 0,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "correction",
+  "padded": false,
+  "hint": false,
+  "errors": 2,
+  "words": 17,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "correction",
+  "padded": false,
+  "hint": true,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "correction",
+  "padded": true,
+  "hint": false,
+  "errors": 1,
+  "words": 17,
+  "opening": false
+ },
+ {
+  "src": "clip check 20:20",
+  "clip": "correction",
+  "padded": true,
+  "hint": true,
+  "errors": 1,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "notes",
+  "padded": true,
+  "hint": true,
+  "errors": 12,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "notes",
+  "padded": true,
+  "hint": false,
+  "errors": 9,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "answer",
+  "padded": true,
+  "hint": true,
+  "errors": 3,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "answer",
+  "padded": true,
+  "hint": false,
+  "errors": 4,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "correction",
+  "padded": true,
+  "hint": true,
+  "errors": 2,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "prelim-oldprompt",
+  "clip": "correction",
+  "padded": true,
+  "hint": false,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "ana-1",
+  "clip": "notes",
+  "padded": true,
+  "hint": true,
+  "errors": 14,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-1",
+  "clip": "notes",
+  "padded": true,
+  "hint": false,
+  "errors": 16,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-1",
+  "clip": "answer",
+  "padded": true,
+  "hint": true,
+  "errors": 3,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "ana-1",
+  "clip": "answer",
+  "padded": true,
+  "hint": false,
+  "errors": 5,
+  "words": 51,
+  "opening": false
+ },
+ {
+  "src": "ana-1",
+  "clip": "correction",
+  "padded": true,
+  "hint": true,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "ana-1",
+  "clip": "correction",
+  "padded": true,
+  "hint": false,
+  "errors": 1,
+  "words": 17,
+  "opening": false
+ },
+ {
+  "src": "ana-2",
+  "clip": "notes",
+  "padded": true,
+  "hint": true,
+  "errors": 12,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-2",
+  "clip": "notes",
+  "padded": true,
+  "hint": false,
+  "errors": 14,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-2",
+  "clip": "answer",
+  "padded": true,
+  "hint": true,
+  "errors": 3,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "ana-2",
+  "clip": "answer",
+  "padded": true,
+  "hint": false,
+  "errors": 4,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "ana-2",
+  "clip": "correction",
+  "padded": true,
+  "hint": true,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "ana-2",
+  "clip": "correction",
+  "padded": true,
+  "hint": false,
+  "errors": 1,
+  "words": 17,
+  "opening": false
+ },
+ {
+  "src": "ana-3",
+  "clip": "notes",
+  "padded": true,
+  "hint": true,
+  "errors": 13,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-3",
+  "clip": "notes",
+  "padded": true,
+  "hint": false,
+  "errors": 16,
+  "words": 159,
+  "opening": false
+ },
+ {
+  "src": "ana-3",
+  "clip": "answer",
+  "padded": true,
+  "hint": true,
+  "errors": 0,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "ana-3",
+  "clip": "answer",
+  "padded": true,
+  "hint": false,
+  "errors": 3,
+  "words": 51,
+  "opening": true
+ },
+ {
+  "src": "ana-3",
+  "clip": "correction",
+  "padded": true,
+  "hint": true,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ },
+ {
+  "src": "ana-3",
+  "clip": "correction",
+  "padded": true,
+  "hint": false,
+  "errors": 0,
+  "words": 17,
+  "opening": true
+ }
+]

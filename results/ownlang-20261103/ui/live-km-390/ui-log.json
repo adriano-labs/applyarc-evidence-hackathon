@@ -1,0 +1,118 @@
+{
+ "base": "http://127.0.0.1:3196",
+ "live": true,
+ "viewport": [
+  390,
+  844
+ ],
+ "errors": [],
+ "log": [
+  {
+   "at": "2026-11-03T20:46:07.115Z",
+   "s": 1,
+   "what": "welcome",
+   "detail": "primary bottom at 634 px, no sideways scroll: true"
+  },
+  {
+   "at": "2026-11-03T20:46:07.148Z",
+   "s": 1,
+   "what": "screenshot 01-welcome"
+  },
+  {
+   "at": "2026-11-03T20:46:07.186Z",
+   "s": 1,
+   "what": "clicked Start at Ana’s key moment"
+  },
+  {
+   "at": "2026-11-03T20:46:10.319Z",
+   "s": 4,
+   "what": "spoken correction",
+   "detail": "correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+  },
+  {
+   "at": "2026-11-03T20:46:10.350Z",
+   "s": 4,
+   "what": "clicked Add Ana’s note"
+  },
+  {
+   "at": "2026-11-03T20:46:18.251Z",
+   "s": 12,
+   "what": "conflict",
+   "detail": "Fez turnos da noite durante dois anos e dias no último ano, ou fez três anos de noites?"
+  },
+  {
+   "at": "2026-11-03T20:46:18.282Z",
+   "s": 12,
+   "what": "screenshot 06a-conflict"
+  },
+  {
+   "at": "2026-11-03T20:46:18.316Z",
+   "s": 12,
+   "what": "clicked Use this correction"
+  },
+  {
+   "at": "2026-11-03T20:46:18.343Z",
+   "s": 12,
+   "what": "key moment",
+   "detail": "What changed | Undo this correction |  | [18]I did 3 years of nights and also weekends. Correction, the night shifts were two years, not three, in the last year I moved to doing days. |  | 2 documents"
+  },
+  {
+   "at": "2026-11-03T20:46:18.345Z",
+   "s": 12,
+   "what": "apply visible without scrolling",
+   "detail": "true"
+  },
+  {
+   "at": "2026-11-03T20:46:18.391Z",
+   "s": 12,
+   "what": "screenshot 06-key-moment"
+  },
+  {
+   "at": "2026-11-03T20:46:27.306Z",
+   "s": 21,
+   "what": "applied"
+  },
+  {
+   "at": "2026-11-03T20:46:27.366Z",
+   "s": 21,
+   "what": "approved supporting evidence"
+  },
+  {
+   "at": "2026-11-03T20:46:27.432Z",
+   "s": 22,
+   "what": "approved cover letter"
+  },
+  {
+   "at": "2026-11-03T20:46:27.512Z",
+   "s": 22,
+   "what": "screenshot 07-finish"
+  },
+  {
+   "at": "2026-11-03T20:46:27.548Z",
+   "s": 22,
+   "what": "clicked See the application"
+  },
+  {
+   "at": "2026-11-03T20:46:27.604Z",
+   "s": 22,
+   "what": "screenshot 08-pack"
+  },
+  {
+   "at": "2026-11-03T20:46:27.869Z",
+   "s": 22,
+   "what": "evidence pass saved",
+   "detail": "~/Developer/claude/evidence/hackathon-29oct/ownlang/evidence/ui/live-km-390/evidence-pass.html"
+  },
+  {
+   "at": "2026-11-03T20:46:28.008Z",
+   "s": 22,
+   "what": "screenshot 09-evidence-pass"
+  },
+  {
+   "at": "2026-11-03T20:46:58.029Z",
+   "s": 52,
+   "what": "done",
+   "detail": "sideways scroll free: true"
+  }
+ ]
+}

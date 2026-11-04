@@ -35,10 +35,13 @@ describe('spoken answers and notes', () => {
 
   it('adds the spoken words to the answer box for the applicant to check, without sending them', async () => {
     const onAnswer = vi.fn();
+    transcribe.mockResolvedValue({ text: 'I rang eight local suppliers.', durationMs: 4000, model: 'muse-voice-transcribe-1.0' });
     card({ voice: true, onAnswer });
+    expect(screen.queryByText(/Transcribed by/)).toBeNull();
     fireEvent.change(screen.getByLabelText('Your answer'), { target: { value: 'I organised the day.' } });
     await speak();
     expect(screen.getByLabelText('Your answer').value).toBe('I organised the day. I rang eight local suppliers.');
+    expect(screen.getByText('Transcribed by Muse Voice Transcribe · 4 s of speech · check the words before you answer')).toBeTruthy();
     expect(onAnswer).not.toHaveBeenCalled();
   });
 
@@ -53,6 +56,11 @@ describe('spoken answers and notes', () => {
     const receipts = [{ step: 'transcribe', flow: 'voice', provider: 'meta', isMeta: true, model: 'muse-voice-transcribe-1.0', turns: 0, attempts: 1, requestIds: [], toolCalls: [], usage: { input: 0, cached: 0, output: 0, reasoning: 0 }, costUsd: 0.0002, audioMs: 4000, totalMs: 1800, at: '2026-10-29T18:00:00Z' }];
     const { container } = render(<ReceiptsDrawer receipts={receipts} modeLabel="Meta Muse Spark 1.3" onDownload={vi.fn()} />);
     fireEvent.click(screen.getByRole('button', { name: /What Meta did/ }));
-    expect(container.querySelector('.receipt').textContent).toContain('Turned your spoken words into text');
+    const row = container.querySelector('.receipt');
+    expect(row.querySelector('.trail-tag').textContent).toBe('Voice');
+    expect(row.textContent).toContain('Turned 4 s of speech into text');
+    expect(row.textContent).toContain('muse-voice-transcribe-1.0');
+    expect(row.textContent).not.toContain('retry'); // one call, no turns: not a retry
+    expect(screen.getByText('Heard your words')).toBeTruthy();
   });
 });

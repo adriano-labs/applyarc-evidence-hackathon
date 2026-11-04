@@ -1,0 +1,30 @@
+notes keywords=true 200 14700ms WER 0.0313 opening=false leeds=true eu=true | Chamome Ana. Eu trabalho há três anos num lar em Leeds, come
+notes keywords=false 200 11909ms WER 0.075 opening=false leeds=true eu=true | Szemum jene. Eu Eu trabalho há três anos num lar em Leeds. C
+notes keywords=false 200 11501ms WER 0.0437 opening=false leeds=true eu=true | Szemmjen. Eu trabalho há três anos num lar em Leeds comecei 
+notes keywords=true 200 12197ms WER 0.0437 opening=false leeds=true eu=true | Chamome Ana. Eu trabalho há três anos num lar em Leeds, come
+notes keywords=true 200 11621ms WER 0.0688 opening=false leeds=true eu=true | Chammiene. Eu trabalho há três anos num lar em Leeds, comece
+notes keywords=false 200 11155ms WER 0.05 opening=false leeds=true eu=true | Xem Eu trabalho há três anos num lar em Leeds comecei em out
+notes keywords=false 200 11455ms WER 0.1 opening=false leeds=true eu=true | Szemmiene. Eu Eu trabalho há três anos num lar em Leeds, com
+notes keywords=true 200 12349ms WER 0.0813 opening=false leeds=true eu=true | Chamome Ana. Eu Eu trabalho há três anos num lar em Leeds, c
+notes keywords=true 200 11963ms WER 0.0375 opening=false leeds=true eu=true | Chamome Ana. Eu trabalho há três anos num lar em Leeds, come
+notes keywords=false 200 11164ms WER 0.0437 opening=false leeds=true eu=true | Eu trabalho há três anos num lar em Leeds, comecei em outubr
+answer keywords=true 200 3598ms WER 0.0196 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar, explica
+answer keywords=false 200 4352ms WER 0.0196 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar, explica
+answer keywords=false 200 4406ms WER 0.0588 opening=false leeds=null eu=null | ParaPara mim, dignidade é bater à porta antes porta antes de
+answer keywords=true 200 3874ms WER 0.0196 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta porta antes de entrar, e
+answer keywords=true 200 4364ms WER 0.0784 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta à porta antes de entrar,
+answer keywords=false 200 4340ms WER 0.0392 opening=false leeds=null eu=null | ParaPara mim, dignidade é bater à porta antes de entrar, exp
+answer keywords=false 200 3555ms WER 0 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar explicar
+answer keywords=true 200 4551ms WER 0.0392 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar, explica
+answer keywords=true 200 3976ms WER 0.0196 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar, explica
+answer keywords=false 200 4604ms WER 0.0784 opening=true leeds=null eu=null | Para mim, dignidade é bater à porta antes de entrar, explica
+correction keywords=true 200 2049ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três, no ú
+correction keywords=false 200 2120ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três. No ú
+correction keywords=false 200 2162ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três. No ú
+correction keywords=true 200 2021ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três, no ú
+correction keywords=true 200 2072ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três, no ú
+correction keywords=false 200 2063ms WER 0.0588 opening=true leeds=null eu=null | Correção: os turnos da noite foram dois anos, não três, no ú
+correction keywords=false 200 2203ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três, no ú
+correction keywords=true 200 2029ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três. No ú
+correction keywords=true 200 2151ms WER 0.0588 opening=true leeds=null eu=null | Correção, os turnos da noite foram foram dois anos, não três
+correction keywords=false 200 2270ms WER 0 opening=true leeds=null eu=null | Correção, os turnos da noite foram dois anos, não três, no ú

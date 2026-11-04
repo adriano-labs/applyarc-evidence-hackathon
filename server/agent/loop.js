@@ -42,9 +42,11 @@ function finalAnswer(output) {
   }
 }
 
-function newReceipt(provider, step, effort) {
+// `docId` names the document a draft or revise step wrote; `host` is where the call went.
+function newReceipt(provider, step, effort, docId) {
   return {
-    step, provider: provider.id, isMeta: Boolean(provider.isMeta), model: provider.model, effort, turns: 0, attempts: 0,
+    step, ...(docId ? { docId } : {}), provider: provider.id, isMeta: Boolean(provider.isMeta), model: provider.model,
+    ...(provider.host ? { host: provider.host } : {}), effort, turns: 0, attempts: 0,
     requestIds: [], toolCalls: [], usage: { input: 0, cached: 0, output: 0, reasoning: 0 }, costUsd: 0,
     firstEventMs: null, firstOutputMs: null, totalMs: 0, rateLimit: null, unsettled: 0, injectedFaults: 0,
   };
@@ -74,7 +76,7 @@ function runCalls(calls, toolContext, receipt, emit) {
     let args = {};
     try { args = JSON.parse(call.arguments || '{}'); } catch { /* the tool reports the bad call */ }
     const result = runTool(call.name, args, toolContext);
-    const note = call.name === 'verify_quote' ? (result.verbatim ? 'verbatim' : 'not verbatim') : call.name === 'word_count' ? `${result.words} of ${result.limit}` : 'read';
+    const note = call.name === 'verify_quote' ? (result.verbatim ? 'verbatim' : 'not verbatim') : call.name === 'word_count' ? (result.limit == null ? `${result.words} words` : `${result.words} of ${result.limit}`) : 'read';
     receipt.toolCalls.push({ name: call.name, ok: !result.error, note });
     emit({ type: 'tool', name: call.name, note });
     return { type: 'function_call_output', call_id: call.call_id, output: JSON.stringify(result) };
@@ -82,9 +84,9 @@ function runCalls(calls, toolContext, receipt, emit) {
 }
 
 export function createLoop({ provider, transport, safetyIdentifier, now = () => Date.now() }) {
-  return async function runStep({ step, prompt, schema, toolContext, effort, maxOutputTokens, emit = () => {}, tools }) {
+  return async function runStep({ step, prompt, schema, toolContext, effort, maxOutputTokens, emit = () => {}, tools, docId }) {
     const callId = `${step}-${randomUUID().slice(0, 8)}`;
-    const receipt = newReceipt(provider, step, effort);
+    const receipt = newReceipt(provider, step, effort, docId);
     const started = now();
     let input = [{ role: 'user', content: prompt }];
     try {
@@ -105,8 +107,10 @@ export function createLoop({ provider, transport, safetyIdentifier, now = () => 
       throw new ProviderError('failed', 'The model kept calling tools without finishing. Nothing was changed. Try again.');
     } catch (error) {
       receipt.error = error.code ?? 'internal';
-      // A failed step that left an attempt that may have run has no known cost.
-      receipt.unsettled += error.unsettled ?? 0;
+      // A billed answer that failed or was cut short keeps its tokens and cost here;
+      // a failed step that left an attempt that may have run has no known cost.
+      if (error.turn) addTurn(receipt, error.turn);
+      else receipt.unsettled += error.unsettled ?? 0;
       if (receipt.unsettled > 0) receipt.costUsd = null;
       throw error;
     } finally {

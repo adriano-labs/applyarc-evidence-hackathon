@@ -1,0 +1,302 @@
+{
+ "base": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io",
+ "startedAt": "2026-11-04T08:19:42.013Z",
+ "steps": [
+  {
+   "name": "reset",
+   "ms": 360
+  },
+  {
+   "name": "startPrepared",
+   "ms": 142
+  },
+  {
+   "name": "voice-correction",
+   "ms": 3846
+  },
+  {
+   "name": "add-note",
+   "ms": 206
+  },
+  {
+   "name": "read-note",
+   "ms": 10123
+  },
+  {
+   "name": "resolveSourceConflict",
+   "ms": 317
+  },
+  {
+   "name": "repair",
+   "ms": 17971
+  },
+  {
+   "name": "applyChanges",
+   "ms": 250
+  },
+  {
+   "name": "approve-answer",
+   "ms": 143
+  },
+  {
+   "name": "approve-letter",
+   "ms": 190
+  },
+  {
+   "name": "export",
+   "ms": 346
+  },
+  {
+   "name": "verify",
+   "ms": 43
+  }
+ ],
+ "failures": [],
+ "heard": {
+  "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+  "durationMs": 7200,
+  "model": "muse-voice-transcribe-1.0",
+  "languageBias": "Portuguese",
+  "keywords": [
+   "Ana",
+   "Leeds",
+   "Chamo-me Ana"
+  ]
+ },
+ "conflict": {
+  "detected": true,
+  "question": "Quantos anos fez turnos da noite: três anos, ou dois anos de noites e o último ano de dias?",
+  "offer": {
+   "questionId": "q2",
+   "sourceId": "s3",
+   "factId": "f9",
+   "before": "Fiz três anos de noites, e também fins de semana.",
+   "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "meaning": "The night shifts were two years, not three; in the last year I moved to working days.",
+   "actor": "self"
+  }
+ },
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "repair": [
+  {
+   "docId": "answer",
+   "segmentId": "answer-19",
+   "status": "proposed",
+   "after": "I did two years of night shifts, and in the last year I moved to working days."
+  },
+  {
+   "docId": "letter",
+   "segmentId": "letter-9",
+   "status": "proposed",
+   "after": "I did two years of night shifts, and in the last year I moved to working days."
+  }
+ ],
+ "export": {
+  "status": "NOT SUBMITTED",
+  "words": [
+   [
+    "answer",
+    217,
+    500
+   ],
+   [
+    "letter",
+    248,
+    350
+   ]
+  ]
+ },
+ "verify": [
+  {
+   "id": "quotes",
+   "pass": true,
+   "text": "19 of 19 confirmed facts quote Ana’s text word for word"
+  },
+  {
+   "id": "citations",
+   "pass": true,
+   "text": "38 of 38 drafted statements cite at least one fact, all confirmed"
+  },
+  {
+   "id": "numbers",
+   "pass": true,
+   "text": "38 of 38 drafted statements state no number their cited facts do not"
+  },
+  {
+   "id": "approvals",
+   "pass": true,
+   "text": "2 of 2 approvals match the current version"
+  },
+  {
+   "id": "own",
+   "pass": true,
+   "text": "No sentences in Ana’s own wording (none to check)"
+  },
+  {
+   "id": "export",
+   "pass": true,
+   "text": "Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions"
+  },
+  {
+   "id": "review",
+   "pass": true,
+   "text": "Model review on record: 38 cited sentences supported, 0 held back in this visit"
+  }
+ ],
+ "finished": true,
+ "costUsd": 0.0773,
+ "modelSteps": 4,
+ "wallSeconds": 34.2,
+ "budget": {
+  "capUsd": 78,
+  "spentUsd": 15.994945,
+  "reservedUsd": 0,
+  "remainingUsd": 62.005055
+ },
+ "receipts": [
+  {
+   "step": "transcribe",
+   "flow": "voice",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-voice-transcribe-1.0",
+   "host": "api.meta.ai",
+   "turns": 0,
+   "attempts": 1,
+   "requestIds": [],
+   "toolCalls": [],
+   "usage": {
+    "input": 0,
+    "cached": 0,
+    "output": 0,
+    "reasoning": 0
+   },
+   "costUsd": 0.00035999999999999997,
+   "audioMs": 7200,
+   "totalMs": 3720,
+   "at": "2026-11-04T08:19:46.468Z",
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ]
+  },
+  {
+   "step": "extract",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "low",
+   "turns": 2,
+   "attempts": 2,
+   "requestIds": [
+    "88130884-c3d6-4a5b-a6c0-b4532b503179",
+    "e9c21078-d203-4d1c-bd27-dee6c937d141"
+   ],
+   "toolCalls": [
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "form_requirements",
+     "ok": true,
+     "note": "read"
+    }
+   ],
+   "usage": {
+    "input": 5333,
+    "cached": 3944,
+    "output": 925,
+    "reasoning": 580
+   },
+   "costUsd": 0.0248448,
+   "firstEventMs": 1970,
+   "firstOutputMs": 6219,
+   "totalMs": 9800,
+   "rateLimit": {
+    "remainingRequests": 2999,
+    "remainingTokens": 3999168
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "read",
+   "at": "2026-11-04T08:19:56.574Z"
+  },
+  {
+   "step": "repair",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "af6c600e-fb28-404c-b41f-6014587d0cf0"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 3944,
+    "cached": 0,
+    "output": 758,
+    "reasoning": 663
+   },
+   "costUsd": 0.030936,
+   "firstEventMs": 3802,
+   "firstOutputMs": 9188,
+   "totalMs": 12610,
+   "rateLimit": {
+    "remainingRequests": 2998,
+    "remainingTokens": 3997686
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:20:09.824Z"
+  },
+  {
+   "step": "review",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "22080832-2723-473c-a37d-72d9ffad9fbe"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 2173,
+    "cached": 0,
+    "output": 622,
+    "reasoning": 461
+   },
+   "costUsd": 0.021132,
+   "firstEventMs": 1035,
+   "firstOutputMs": 4165,
+   "totalMs": 5143,
+   "rateLimit": {
+    "remainingRequests": 2997,
+    "remainingTokens": 3992984
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:20:14.997Z"
+  }
+ ]
+}

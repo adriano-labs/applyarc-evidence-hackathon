@@ -1,15 +1,22 @@
 import './FactsReview.css';
 import { useEffect, useRef } from 'react';
+import { HerWords } from './HerWords.jsx';
+import { withActor } from '../lib/actor.js';
 
-function getSourceLabel(sourceId, sources) {
+// spoken: the ids of the sources that came from a voice clip. whose: "your", or in the walk-through
+// the sample's own ("her") for a fact in her language.
+function getSourceLabel(sourceId, sources, spoken, whose = 'your') {
   const source = sources?.[sourceId];
-  if (source === 'answer') return 'From your answer';
-  if (source === 'correction') return 'From your correction';
-  return 'From your notes';
+  if (source === 'answer') return `From ${whose} answer`;
+  if (source === 'correction') return `From ${whose} correction`;
+  return spoken?.has(sourceId) ? `From ${whose} voice note` : `From ${whose} notes`;
 }
 
-function FactCard({ fact, sources, requirementNames, onDecide, busy, onHover }) {
-  const sourceLabel = getSourceLabel(fact.sourceId, sources);
+// who: the sample in the walk-through, whose headline names her, so a fact in her language says
+// "From her voice note · Ana did this". English facts keep "your": their wording says who did it.
+function FactCard({ fact, sources, spoken, requirementNames, onDecide, busy, onHover, who }) {
+  const her = fact.language && who ? who : null;
+  const sourceLabel = withActor(getSourceLabel(fact.sourceId, sources, spoken, her?.possessive), fact, her?.name);
   const tags = (fact.requirementIds || []).filter((id) => requirementNames && requirementNames[id]);
   const hover = () => onHover?.(fact.id);
   return (
@@ -18,18 +25,20 @@ function FactCard({ fact, sources, requirementNames, onDecide, busy, onHover }) 
         <button type="button" className="btn small primary" onClick={() => onDecide(fact.id, 'confirm')} disabled={busy}>Yes, confirm</button>
         <button type="button" className="btn small" onClick={() => onDecide(fact.id, 'reject')} disabled={busy}>Not right</button>
       </div>
-      <p className="fact-statement">{fact.statement}</p>
-      <p className="fact-quote">“<mark>{fact.quote}</mark>”</p>
+      {fact.language ? <HerWords fact={fact} base="fact" /> : <>
+        <p className="fact-statement">{fact.statement}</p>
+        <p className="fact-quote">“<mark>{fact.quote}</mark>”</p>
+      </>}
       <p className="fact-meta">
         <span className="fact-source">{sourceLabel}</span>
         {tags.map((id) => <span key={id} className="fact-tag">{requirementNames[id]}</span>)}
       </p>
-      <p className="fact-hint">Enter: yes · Backspace: not right</p>
+      <p className="fact-hint">{fact.language ? 'Yes confirms the words and their English meaning together. ' : ''}Enter: yes · Backspace: not right</p>
     </li>
   );
 }
 
-export function FactsReview({ facts = [], total = 0, sources = {}, requirementNames = {}, onDecide, busy = false, onHover, onConfirmRest, company }) {
+export function FactsReview({ facts = [], total = 0, sources = {}, spoken, requirementNames = {}, onDecide, busy = false, onHover, onConfirmRest, company, who }) {
   const sectionRef = useRef(null);
   const lastKeyDecisionRef = useRef(false);
   const currentFact = facts?.[0] || null;
@@ -66,7 +75,7 @@ export function FactsReview({ facts = [], total = 0, sources = {}, requirementNa
       </header>
       {currentFact ? (
         <ul className="fact-cards">
-          <FactCard fact={currentFact} sources={sources} requirementNames={requirementNames} onDecide={decideAndRefocus} busy={busy} onHover={onHover} />
+          <FactCard fact={currentFact} sources={sources} spoken={spoken} requirementNames={requirementNames} onDecide={decideAndRefocus} busy={busy} onHover={onHover} who={who} />
         </ul>
       ) : null}
       {showConfirmRest ? (

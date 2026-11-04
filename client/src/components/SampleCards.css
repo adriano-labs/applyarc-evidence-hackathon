@@ -40,3 +40,8 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* A sample who speaks leads, across both columns; the other samples sit side by side beneath. */
+@media (min-width: 768px) {
+  .sample-card.spoken { grid-column: 1 / -1; }
+}

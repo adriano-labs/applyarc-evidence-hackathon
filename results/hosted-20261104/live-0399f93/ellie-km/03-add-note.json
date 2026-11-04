@@ -1,0 +1,650 @@
+{
+ "workspace": {
+  "schema": 1,
+  "revision": 13,
+  "createdAt": "2026-11-04T08:37:02.518Z",
+  "applicant": {
+   "name": "Ellie",
+   "sources": [
+    {
+     "id": "s1",
+     "kind": "notes",
+     "text": "Final-year group project, four of us, Sept 2025 to March 2026. We built a self-service GPU job runner for the department's machine learning teaching cluster. Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).\n\nStack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.\n\nBig decision: we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.\n\nProblem: in week 9 jobs started dying at random, pods OOMKilled even with tiny models. Took us three days. Turned out the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed. Fixed it by mounting a memory-backed emptyDir with a size limit per job.\n\nResult: 140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.\n\nLearned: check the node's kernel log first. dmesg showed the OOM kills straight away and we wasted two days before looking.\n\nWhy Graphcore: I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.\n",
+     "at": "2026-11-03T16:03:18.705Z",
+     "read": true
+    },
+    {
+     "id": "s2",
+     "kind": "answer",
+     "text": "I wrote the helm patch that fixed it.",
+     "at": "2026-11-03T16:04:02.286Z",
+     "questionId": "q1",
+     "read": true
+    },
+    {
+     "id": "s3",
+     "kind": "notes",
+     "text": "Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.",
+     "at": "2026-11-04T08:37:02.668Z"
+    }
+   ],
+   "facts": [
+    {
+     "id": "f1",
+     "statement": "It was a final-year group project of four, from Sept 2025 to March 2026.",
+     "quote": "Final-year group project, four of us, Sept 2025 to March 2026.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f2",
+     "statement": "We built a self-service GPU job runner for the department's machine learning teaching cluster.",
+     "quote": "We built a self-service GPU job runner for the department's machine learning teaching cluster.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f3",
+     "statement": "Students submitted jobs through a web form, queued on Kubernetes using k3s on six lab workstations.",
+     "quote": "Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f4",
+     "statement": "Stack included Python, FastAPI, Redis, Helm charts, Prometheus and Grafana.",
+     "quote": "Stack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f5",
+     "statement": "We used Kubernetes Jobs with a scheduler extender instead of Slurm for containers and per-course GPU quotas.",
+     "quote": "we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f6",
+     "statement": "In week 9, jobs died at random and pods were OOMKilled even with tiny models.",
+     "quote": "in week 9 jobs started dying at random, pods OOMKilled even with tiny models",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f7",
+     "statement": "The default /dev/shm was 64 MB, causing PyTorch data loaders to crash.",
+     "quote": "Turned out the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f8",
+     "statement": "It was fixed by mounting a memory-backed emptyDir with a size limit per job.",
+     "quote": "Fixed it by mounting a memory-backed emptyDir with a size limit per job.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f9",
+     "statement": "140 students used it; average GPU wait fell from about two days to under 20 minutes.",
+     "quote": "140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f10",
+     "statement": "We learned dmesg showed the OOM kills, but we wasted two days before looking.",
+     "quote": "dmesg showed the OOM kills straight away and we wasted two days before looking",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f11",
+     "statement": "I liked infrastructure more than machine learning, and Graphcore builds the hardware and cloud platform models run on.",
+     "quote": "I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.",
+     "sourceId": "s1",
+     "status": "confirmed",
+     "history": []
+    },
+    {
+     "id": "f12",
+     "statement": "I wrote the helm patch that fixed it.",
+     "quote": "I wrote the helm patch that fixed it.",
+     "sourceId": "s2",
+     "status": "confirmed",
+     "history": []
+    }
+   ]
+  },
+  "application": {
+   "form": {
+    "id": "graphcore-graduate-cloud-platform-engineer-2027",
+    "company": "Graphcore",
+    "role": "Graduate Cloud Platform Engineer 2027",
+    "location": "Bristol, UK",
+    "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+    "snapshot": {
+     "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+     "fetchedAt": "2026-10-26T22:41:53Z",
+     "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+     "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+    },
+    "documents": [
+     {
+      "id": "answer",
+      "title": "Project answer",
+      "fieldId": "question_38884073002",
+      "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+      "wordLimit": 300,
+      "requirements": [
+       {
+        "id": "goal",
+        "text": "What you were trying to achieve"
+       },
+       {
+        "id": "tech",
+        "text": "The main components or technologies you used"
+       },
+       {
+        "id": "decision",
+        "text": "One technical decision you made and why"
+       },
+       {
+        "id": "problem",
+        "text": "One problem you encountered, how you investigated it and what you learned"
+       },
+       {
+        "id": "contribution",
+        "text": "Your individual contribution, if you worked as part of a team",
+        "personal": true
+       }
+      ],
+      "limitSource": "form"
+     },
+     {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": "cover_letter_text",
+      "question": "Cover Letter (required)",
+      "wordLimit": 400,
+      "requirements": [
+       {
+        "id": "motivation",
+        "text": "Why this role and this company, in your own words"
+       },
+       {
+        "id": "evidence",
+        "text": "The experience that shows you can do the job"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+     }
+    ],
+    "portalTasks": [
+     "First Name",
+     "Last Name",
+     "Email",
+     "Phone",
+     "Resume/CV",
+     "Do you have the legal right to work in the UK without sponsorship?",
+     "Have you added your full legal name and surname (including any middle names)?",
+     "What is your predicted/final degree classification?",
+     "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+     "Would you need to relocate to work regularly from this office?",
+     "How did you first hear about Graphcore?",
+     "Please select your right to work status"
+    ]
+   },
+   "coverage": {
+    "contribution": [
+     "f1",
+     "f12"
+    ],
+    "goal": [
+     "f2",
+     "f3",
+     "f9"
+    ],
+    "evidence": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f8",
+     "f9"
+    ],
+    "tech": [
+     "f3",
+     "f4"
+    ],
+    "decision": [
+     "f5"
+    ],
+    "problem": [
+     "f6",
+     "f7",
+     "f8",
+     "f10",
+     "f12"
+    ],
+    "motivation": [
+     "f11"
+    ]
+   },
+   "questions": [
+    {
+     "id": "q1",
+     "requirementId": "contribution",
+     "text": "In your four-person final-year GPU job runner project, which parts did you personally build or fix, for example the API, the Redis queue, the Helm charts or the /dev/shm fix?",
+     "why": "The form asks what you did yourself; your notes only describe the team.",
+     "status": "answered",
+     "askedBy": "model",
+     "sourceId": "s2"
+    }
+   ],
+   "documents": {
+    "answer": {
+     "id": "answer",
+     "revision": 2,
+     "segments": [
+      {
+       "id": "answer-1",
+       "kind": "claim",
+       "text": "Our four-person final-year team built a GPU job runner for the department's machine learning teaching cluster, from September 2025 to March 2026.",
+       "factIds": [
+        "f1",
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "user"
+      },
+      {
+       "id": "answer-2",
+       "kind": "claim",
+       "text": "Students submitted training jobs through a small web form, and the runner queued them on Kubernetes, using k3s on six old lab workstations with GPUs.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-3",
+       "kind": "claim",
+       "text": "In the spring term, 140 students used it, and the average wait for a GPU fell from about two days with the old sign-up sheet to under 20 minutes.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-4",
+       "kind": "claim",
+       "text": "The stack included Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, and Prometheus and Grafana for monitoring.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-5",
+       "kind": "claim",
+       "text": "We used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-6",
+       "kind": "claim",
+       "text": "In week 9, jobs started dying at random, with pods OOMKilled even with tiny models.",
+       "factIds": [
+        "f6"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "answer-7",
+       "kind": "claim",
+       "text": "The default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.",
+       "factIds": [
+        "f7"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-8",
+       "kind": "claim",
+       "text": "We fixed it by mounting a memory-backed emptyDir with a size limit per job.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-9",
+       "kind": "claim",
+       "text": "dmesg showed the OOM kills straight away, and we wasted two days before looking.",
+       "factIds": [
+        "f10"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "answer-10",
+       "kind": "claim",
+       "text": "I wrote the Helm patch that fixed it.",
+       "factIds": [
+        "f12"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      }
+     ]
+    },
+    "letter": {
+     "id": "letter",
+     "revision": 1,
+     "segments": [
+      {
+       "id": "letter-1",
+       "kind": "frame",
+       "text": "Dear Graphcore hiring team,",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-2",
+       "kind": "frame",
+       "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-3",
+       "kind": "claim",
+       "text": "I liked infrastructure more than machine learning, and Graphcore builds both the hardware and the cloud platform that models run on.",
+       "factIds": [
+        "f11"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-4",
+       "kind": "claim",
+       "text": "We built a self-service GPU job runner for the department's machine learning teaching cluster.",
+       "factIds": [
+        "f2"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-5",
+       "kind": "claim",
+       "text": "Students submitted jobs through a web form, queued on Kubernetes using k3s on six lab workstations.",
+       "factIds": [
+        "f3"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-6",
+       "kind": "claim",
+       "text": "The stack included Python, FastAPI, Redis, Helm charts, Prometheus and Grafana.",
+       "factIds": [
+        "f4"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-7",
+       "kind": "claim",
+       "text": "We used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.",
+       "factIds": [
+        "f5"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-8",
+       "kind": "claim",
+       "text": "A memory-backed emptyDir with a size limit per job was mounted to fix the issue.",
+       "factIds": [
+        "f8"
+       ],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-9",
+       "kind": "claim",
+       "text": "I wrote the helm patch that fixed it.",
+       "factIds": [
+        "f12"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-10",
+       "kind": "claim",
+       "text": "140 students used it, and the average wait for a GPU fell from about two days to under 20 minutes.",
+       "factIds": [
+        "f9"
+       ],
+       "startsParagraph": false,
+       "author": "draft"
+      },
+      {
+       "id": "letter-11",
+       "kind": "frame",
+       "text": "Thank you for considering my application.",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      },
+      {
+       "id": "letter-12",
+       "kind": "frame",
+       "text": "Yours sincerely, Ellie",
+       "factIds": [],
+       "startsParagraph": true,
+       "author": "draft"
+      }
+     ]
+    }
+   },
+   "repair": null,
+   "approvals": {
+    "answer": null,
+    "letter": null
+   },
+   "exports": [],
+   "checked": [
+    "contribution"
+   ]
+  },
+  "updatedAt": "2026-11-04T08:37:02.668Z",
+  "prepared": {
+   "sample": "ellie",
+   "provider": "meta",
+   "model": "muse-wonder-1.0",
+   "ranAt": "2026-11-03T16:03:18.705Z",
+   "ranUntil": "2026-11-03T16:05:36.316Z",
+   "note": "Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.",
+   "about": "Saved by a real Muse Wonder 1.0 run of Ellie’s sample on this app on 3 Nov 2026 (16:03 to 16:05 UTC): 12 facts confirmed from her notes and her spoken answer, the project answer at version 2 with her own rewritten opening and the cover letter at version 1, both approved, no correction yet. The run’s receipts are not included: a visitor who starts here is never charged for it.",
+   "loadedAt": "2026-11-04T08:37:02.518Z"
+  }
+ },
+ "view": {
+  "next": "read",
+  "coverage": [
+   {
+    "id": "goal",
+    "text": "What you were trying to achieve",
+    "docId": "answer",
+    "factIds": [
+     "f2",
+     "f3",
+     "f9"
+    ],
+    "covered": true
+   },
+   {
+    "id": "tech",
+    "text": "The main components or technologies you used",
+    "docId": "answer",
+    "factIds": [
+     "f3",
+     "f4"
+    ],
+    "covered": true
+   },
+   {
+    "id": "decision",
+    "text": "One technical decision you made and why",
+    "docId": "answer",
+    "factIds": [
+     "f5"
+    ],
+    "covered": true
+   },
+   {
+    "id": "problem",
+    "text": "One problem you encountered, how you investigated it and what you learned",
+    "docId": "answer",
+    "factIds": [
+     "f6",
+     "f7",
+     "f8",
+     "f10",
+     "f12"
+    ],
+    "covered": true
+   },
+   {
+    "id": "contribution",
+    "text": "Your individual contribution, if you worked as part of a team",
+    "personal": true,
+    "docId": "answer",
+    "factIds": [
+     "f1",
+     "f12"
+    ],
+    "covered": true
+   },
+   {
+    "id": "motivation",
+    "text": "Why this role and this company, in your own words",
+    "docId": "letter",
+    "factIds": [
+     "f11"
+    ],
+    "covered": true
+   },
+   {
+    "id": "evidence",
+    "text": "The experience that shows you can do the job",
+    "docId": "letter",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4",
+     "f5",
+     "f8",
+     "f9"
+    ],
+    "covered": true
+   }
+  ],
+  "draftBlockers": [],
+  "exportBlockers": [
+   "Read your new evidence first."
+  ],
+  "stats": {
+   "answer": {
+    "words": 189,
+    "wordLimit": 300,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 1
+   },
+   "letter": {
+    "words": 155,
+    "wordLimit": 400,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   }
+  },
+  "approvals": {
+   "answer": "none",
+   "letter": "none"
+  },
+  "citations": {
+   "f1": 1,
+   "f2": 2,
+   "f3": 3,
+   "f9": 4,
+   "f4": 5,
+   "f5": 6,
+   "f6": 7,
+   "f7": 8,
+   "f8": 9,
+   "f10": 10,
+   "f12": 11,
+   "f11": 12
+  },
+  "conflictDecisions": [],
+  "sourceCorrections": []
+ },
+ "result": {
+  "id": "s3",
+  "kind": "notes",
+  "text": "Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.",
+  "at": "2026-11-04T08:37:02.668Z"
+ },
+ "mode": {
+  "id": "meta",
+  "label": "Meta Muse Wonder 1.0",
+  "model": "muse-wonder-1.0",
+  "isMeta": true
+ },
+ "budget": {
+  "capUsd": 78,
+  "spentUsd": 16.578775,
+  "reservedUsd": 0,
+  "remainingUsd": 61.421225
+ },
+ "voice": true,
+ "working": false
+}

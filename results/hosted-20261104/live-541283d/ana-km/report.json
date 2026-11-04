@@ -1,0 +1,297 @@
+{
+ "base": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io",
+ "startedAt": "2026-11-04T12:59:20.103Z",
+ "steps": [
+  {
+   "name": "reset",
+   "ms": 258
+  },
+  {
+   "name": "startPrepared",
+   "ms": 141
+  },
+  {
+   "name": "voice-correction",
+   "ms": 5716
+  },
+  {
+   "name": "add-note",
+   "ms": 258
+  },
+  {
+   "name": "read-note",
+   "ms": 10012
+  },
+  {
+   "name": "resolveSourceConflict",
+   "ms": 295
+  },
+  {
+   "name": "repair",
+   "ms": 12953
+  },
+  {
+   "name": "applyChanges",
+   "ms": 226
+  },
+  {
+   "name": "approve-answer",
+   "ms": 154
+  },
+  {
+   "name": "approve-letter",
+   "ms": 150
+  },
+  {
+   "name": "export",
+   "ms": 147
+  },
+  {
+   "name": "verify",
+   "ms": 43
+  }
+ ],
+ "failures": [],
+ "heard": {
+  "text": "Curressão, os turnos da noite noite foram dois anos, não três, no último ano passei a fazer dias.",
+  "durationMs": 7200,
+  "model": "muse-voice-transcribe-1.0",
+  "languageBias": "Portuguese",
+  "keywords": [
+   "Ana",
+   "Leeds",
+   "Chamo-me Ana"
+  ]
+ },
+ "conflict": {
+  "detected": true,
+  "question": "Trabalhou três anos em turnos da noite, ou foram dois anos de noites e dias no último ano?",
+  "offer": {
+   "questionId": "q2",
+   "sourceId": "s3",
+   "factId": "f9",
+   "before": "Fiz três anos de noites, e também fins de semana.",
+   "text": "Curressão, os turnos da noite noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "meaning": "Correction, the night shifts were two years, not three; in the last year I moved to working days.",
+   "actor": "self"
+  }
+ },
+ "reopened": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "repair": [
+  {
+   "docId": "answer",
+   "segmentId": "answer-19",
+   "status": "proposed",
+   "after": "I did two years of nights, and in the last year I moved to working days."
+  },
+  {
+   "docId": "letter",
+   "segmentId": "letter-9",
+   "status": "proposed",
+   "after": "I did two years of nights, and in the last year I moved to working days."
+  }
+ ],
+ "export": {
+  "status": "NOT SUBMITTED",
+  "words": [
+   [
+    "answer",
+    216,
+    500
+   ],
+   [
+    "letter",
+    247,
+    350
+   ]
+  ]
+ },
+ "verify": [
+  {
+   "id": "quotes",
+   "pass": true,
+   "text": "19 of 19 confirmed facts quote Ana’s text word for word"
+  },
+  {
+   "id": "citations",
+   "pass": true,
+   "text": "38 of 38 drafted statements cite at least one fact, all confirmed"
+  },
+  {
+   "id": "numbers",
+   "pass": true,
+   "text": "38 of 38 drafted statements state no number their cited facts do not"
+  },
+  {
+   "id": "approvals",
+   "pass": true,
+   "text": "2 of 2 approvals match the current version"
+  },
+  {
+   "id": "own",
+   "pass": true,
+   "text": "No sentences in Ana’s own wording (none to check)"
+  },
+  {
+   "id": "export",
+   "pass": true,
+   "text": "Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions"
+  },
+  {
+   "id": "review",
+   "pass": true,
+   "text": "Model review on record: 38 cited sentences supported, 0 held back in this visit"
+  }
+ ],
+ "finished": true,
+ "costUsd": 0.0809,
+ "modelSteps": 4,
+ "wallSeconds": 30.5,
+ "budget": {
+  "capUsd": 78,
+  "spentUsd": 17.251182,
+  "reservedUsd": 0,
+  "remainingUsd": 60.748818
+ },
+ "receipts": [
+  {
+   "step": "transcribe",
+   "flow": "voice",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-voice-transcribe-1.0",
+   "host": "api.meta.ai",
+   "turns": 0,
+   "attempts": 1,
+   "requestIds": [],
+   "toolCalls": [],
+   "usage": {
+    "input": 0,
+    "cached": 0,
+    "output": 0,
+    "reasoning": 0
+   },
+   "costUsd": 0.00035999999999999997,
+   "audioMs": 7200,
+   "totalMs": 5626,
+   "at": "2026-11-04T12:59:26.327Z",
+   "languageBias": "Portuguese",
+   "keywords": [
+    "Ana",
+    "Leeds",
+    "Chamo-me Ana"
+   ]
+  },
+  {
+   "step": "extract",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "low",
+   "turns": 2,
+   "attempts": 2,
+   "requestIds": [
+    "70ab5899-7f6a-4ae9-9e36-f4845aec117b",
+    "c10b66ec-f842-4e9f-a1d9-8a1b9d0e67d6"
+   ],
+   "toolCalls": [
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    }
+   ],
+   "usage": {
+    "input": 4639,
+    "cached": 2036,
+    "output": 865,
+    "reasoning": 539
+   },
+   "costUsd": 0.0281192,
+   "firstEventMs": 3445,
+   "firstOutputMs": 5251,
+   "totalMs": 9814,
+   "rateLimit": {
+    "remainingRequests": 2999,
+    "remainingTokens": 4000000
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "read",
+   "at": "2026-11-04T12:59:36.462Z"
+  },
+  {
+   "step": "repair",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "d20eb9a0-3386-40d6-b271-2091f74823d8"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 3952,
+    "cached": 0,
+    "output": 697,
+    "reasoning": 604
+   },
+   "costUsd": 0.029748,
+   "firstEventMs": 1771,
+   "firstOutputMs": 5911,
+   "totalMs": 6260,
+   "rateLimit": {
+    "remainingRequests": 2998,
+    "remainingTokens": 3996532
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T12:59:43.213Z"
+  },
+  {
+   "step": "review",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "617ecda5-262e-4746-93be-364ccc10d02e"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 2178,
+    "cached": 0,
+    "output": 698,
+    "reasoning": 558
+   },
+   "costUsd": 0.022672,
+   "firstEventMs": 2417,
+   "firstOutputMs": 5628,
+   "totalMs": 6407,
+   "rateLimit": {
+    "remainingRequests": 2997,
+    "remainingTokens": 3991883
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T12:59:49.644Z"
+  }
+ ]
+}

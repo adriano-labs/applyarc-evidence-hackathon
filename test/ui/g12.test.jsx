@@ -19,6 +19,6 @@ describe('G2', () => {
   it('shows what the model did in the top bar when the model is Meta', () => {
     const receipts = [{ step: 'draft', model: 'muse-spark-1.3', costUsd: 0.004, totalMs: 6200, toolCalls: [{}, {}] }];
     render(<TopBar company="C" role="R" mode={{ id: 'meta', label: 'Meta Muse Spark 1.3', model: 'muse-spark-1.3', isMeta: true }} budget={null} receipts={receipts} onCommands={vi.fn()} onReset={vi.fn()} onReceipts={vi.fn()} />);
-    expect(screen.getByRole('button', { name: 'What Meta did: 1 step, 2 tool calls, 6.2 s, $0.0040' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'What Meta did: 1 step, 2 tool calls, 6.2 s total model time, $0.0040' })).toBeTruthy();
   });
 });

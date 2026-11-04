@@ -1,0 +1,24 @@
+70b7075b02d2: Pushed
+44a87794b739: Pushed
+b8902ae: digest: sha256:66b83a9a0a7aa69e8fcca557975ec7f8f941d5dd4898980bbb169489a95a7110 size: 3041
+2026/11/04 08:17:33 Successfully pushed image: applyarcevidence.azurecr.io/applyarc-evidence:b8902ae
+2026/11/04 08:17:33 Step ID: build marked as successful (elapsed time in seconds: 32.613310)
+2026/11/04 08:17:33 Populating digests for step ID: build...
+2026/11/04 08:17:34 Successfully populated digests for step ID: build
+2026/11/04 08:17:34 Step ID: push marked as successful (elapsed time in seconds: 10.914338)
+2026/11/04 08:17:34 The following dependencies were found:
+2026/11/04 08:17:34 
+- image:
+    registry: applyarcevidence.azurecr.io
+    repository: applyarc-evidence
+    tag: b8902ae
+    digest: sha256:66b83a9a0a7aa69e8fcca557975ec7f8f941d5dd4898980bbb169489a95a7110
+  runtime-dependency:
+    registry: registry.hub.docker.com
+    repository: library/node
+    tag: 24-slim
+    digest: sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+  git: {}
+
+
+Run ID: cg1a was successful after 47s

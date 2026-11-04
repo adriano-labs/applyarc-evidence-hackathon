@@ -1,0 +1,9 @@
+   1s clicked Try it with Ana’s voice note
+   1s double-clicked Read Ana’s words
+   1s screenshot 01-ana-after-double
+   1s PASS Ana’s start ran once and stayed in the walk-through · POST /api/actions/startSample
+   1s clicked Start again
+   1s clicked Start again
+   2s double-clicked Try it with Ellie’s notes
+   2s screenshot 02-ellie-after-double
+   2s PASS Ellie’s start ran once and stayed in the walk-through · POST /api/actions/startSample | POST /api/actions/startSample

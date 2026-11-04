@@ -1,0 +1,223 @@
+1
+00:00:00,000 --> 00:00:02,139
+I'm Adrian, founder of ApplyArc,
+
+2
+00:00:02,139 --> 00:00:06,083
+a UK job-search startup that
+existed before this hackathon.
+
+3
+00:00:06,083 --> 00:00:09,693
+Everything here was built
+during it, on Meta's models.
+
+4
+00:00:10,043 --> 00:00:12,745
+A real council job advert says: "Using AI?
+
+5
+00:00:12,745 --> 00:00:16,154
+Please follow our guidance
+to ensure your application
+
+6
+00:00:16,154 --> 00:00:18,984
+reflects your own
+knowledge and experience."
+
+7
+00:00:19,135 --> 00:00:20,257
+Ana is fictional.
+
+8
+00:00:20,257 --> 00:00:21,576
+Her problem is real.
+
+9
+00:00:21,576 --> 00:00:25,535
+Three years in a Leeds care
+home, working English every day,
+
+10
+00:00:25,535 --> 00:00:28,042
+and a form that wants written English.
+
+11
+00:00:28,192 --> 00:00:30,797
+She says it in Portuguese.
+
+12
+00:00:30,897 --> 00:00:34,181
+Ana (synthetic voice, in
+Portuguese): “Chamo-me Ana.
+
+13
+00:00:34,181 --> 00:00:36,897
+Eu trabalho há três
+anos num lar em Leeds…”
+
+14
+00:00:37,547 --> 00:00:40,447
+Muse Voice Transcribe
+writes it down, live,
+
+15
+00:00:40,447 --> 00:00:43,280
+keeping her English care words in English.
+
+16
+00:00:43,280 --> 00:00:45,101
+She checks her words first.
+
+17
+00:00:45,252 --> 00:00:47,855
+Muse Wonder turns her words into facts.
+
+18
+00:00:47,855 --> 00:00:50,324
+Each one quotes her exact Portuguese.
+
+19
+00:00:50,324 --> 00:00:52,326
+Code checks it, word for word.
+
+20
+00:00:52,326 --> 00:00:54,728
+The English meaning sits underneath.
+
+21
+00:00:54,728 --> 00:00:55,929
+She confirms both.
+
+22
+00:00:56,574 --> 00:01:01,219
+Wonder checks the council's ten points
+and finds the one she didn't cover:
+
+23
+00:01:01,219 --> 00:01:02,474
+dignity and respect.
+
+24
+00:01:02,474 --> 00:01:03,855
+It asks in Portuguese.
+
+25
+00:01:03,955 --> 00:01:06,065
+Ana (synthetic voice, in
+Portuguese): “Para mim,
+
+26
+00:01:06,065 --> 00:01:07,955
+dignidade é bater à
+porta antes de entrar…”
+
+27
+00:01:13,481 --> 00:01:18,053
+Wonder drafts her supporting evidence
+and a short letter, in English.
+
+28
+00:01:18,053 --> 00:01:21,367
+Every factual sentence
+cites a fact she confirmed,
+
+29
+00:01:21,367 --> 00:01:25,210
+and a second Wonder call checks
+it against her Portuguese.
+
+30
+00:01:25,360 --> 00:01:31,372
+Then she remembers: only two of
+her three years were nights.
+
+31
+00:01:31,372 --> 00:01:33,075
+She says it once.
+
+32
+00:01:33,175 --> 00:01:34,766
+Ana (synthetic voice,
+in Portuguese):
+
+33
+00:01:34,766 --> 00:01:36,745
+“Correção: os turnos da
+noite foram dois anos,
+
+34
+00:01:36,745 --> 00:01:37,175
+não três…”
+
+35
+00:01:41,679 --> 00:01:45,264
+Wonder spots the contradiction
+and asks which is right.
+
+36
+00:01:45,264 --> 00:01:46,893
+She picks the correction.
+
+37
+00:01:46,893 --> 00:01:51,390
+Only the sentences that cited the
+old fact reopen, in both documents.
+
+38
+00:01:58,098 --> 00:02:03,189
+Nothing gets submitted for her:
+the pack is stamped NOT SUBMITTED.
+
+39
+00:02:03,189 --> 00:02:06,121
+The employer gets one
+page where every
+
+40
+00:02:06,121 --> 00:02:09,515
+factual sentence opens
+her Portuguese words.
+
+41
+00:02:09,665 --> 00:02:14,657
+What Meta did, step by step: model,
+host and Meta's request ids.
+
+42
+00:02:14,657 --> 00:02:16,686
+Both models are weeks old.
+
+43
+00:02:16,686 --> 00:02:21,054
+A verifier re-checks the record
+without calling a model.
+
+44
+00:02:21,865 --> 00:02:27,887
+The same loop runs on Meta's open
+weights, Muse Spark Open, on Modal,
+
+45
+00:02:27,887 --> 00:02:31,466
+so a care provider chooses where it runs.
+
+46
+00:02:31,617 --> 00:02:33,276
+That's ApplyArc Evidence.
+
+47
+00:02:33,276 --> 00:02:33,873
+Who pays?
+
+48
+00:02:33,873 --> 00:02:39,114
+Councils and care employers who need
+applications in the applicant's own words.
+
+49
+00:02:39,114 --> 00:02:42,033
+It never screens, ranks
+or submits anything.
+

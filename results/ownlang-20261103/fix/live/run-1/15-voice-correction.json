@@ -1,0 +1,38 @@
+{
+ "clip": "ana-pt-correction.wav",
+ "truth": "Correção: os turnos da noite foram dois anos, não três; no último ano passei a fazer dias.",
+ "hint": "Portuguese",
+ "keywords": [
+  "Ana",
+  "Leeds",
+  "Chamo-me Ana"
+ ],
+ "ms": 2804,
+ "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias. dias.",
+ "durationMs": 7200,
+ "languageBias": "Portuguese",
+ "opening": true,
+ "werRaw": 0.0588,
+ "werSpoken": 0.0588,
+ "errorsSpoken": [
+  [
+   "ins",
+   "",
+   "dias"
+  ]
+ ],
+ "words": 17,
+ "control": {
+  "hint": "Portuguese",
+  "keywords": null,
+  "ms": 2327,
+  "text": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+  "durationMs": 7200,
+  "languageBias": "Portuguese",
+  "opening": true,
+  "werRaw": 0,
+  "werSpoken": 0,
+  "errorsSpoken": [],
+  "words": 17
+ }
+}

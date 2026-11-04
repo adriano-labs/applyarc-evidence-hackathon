@@ -1,0 +1,159 @@
+{
+ "base": "http://127.0.0.1:3197",
+ "live": false,
+ "viewport": [
+  1440,
+  900
+ ],
+ "errors": [],
+ "log": [
+  {
+   "at": "2026-11-03T20:48:29.923Z",
+   "s": 1,
+   "what": "welcome",
+   "detail": "primary bottom at 629 px, no sideways scroll: true"
+  },
+  {
+   "at": "2026-11-03T20:48:29.971Z",
+   "s": 1,
+   "what": "screenshot 01-welcome"
+  },
+  {
+   "at": "2026-11-03T20:48:30.021Z",
+   "s": 1,
+   "what": "clicked Try it with Ana’s voice note"
+  },
+  {
+   "at": "2026-11-03T20:48:30.064Z",
+   "s": 1,
+   "what": "spoken start",
+   "detail": "Chamo-me Ana. Trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a "
+  },
+  {
+   "at": "2026-11-03T20:48:30.133Z",
+   "s": 1,
+   "what": "screenshot 02-spoken-start"
+  },
+  {
+   "at": "2026-11-03T20:48:30.164Z",
+   "s": 1,
+   "what": "clicked Read Ana’s words"
+  },
+  {
+   "at": "2026-11-03T20:48:30.246Z",
+   "s": 2,
+   "what": "screenshot 03-fact-card"
+  },
+  {
+   "at": "2026-11-03T20:48:30.782Z",
+   "s": 2,
+   "what": "facts",
+   "detail": "Confirm the remaining 10"
+  },
+  {
+   "at": "2026-11-03T20:48:31.052Z",
+   "s": 2,
+   "what": "question",
+   "detail": "O formulário pede que mostre como respeita a igualdade, a diversidade, a dignidade e os direitos de cada pessoa. Como é "
+  },
+  {
+   "at": "2026-11-03T20:48:31.079Z",
+   "s": 2,
+   "what": "screenshot 04-question"
+  },
+  {
+   "at": "2026-11-03T20:48:31.109Z",
+   "s": 2,
+   "what": "clicked Use Ana’s sample answer"
+  },
+  {
+   "at": "2026-11-03T20:48:31.143Z",
+   "s": 2,
+   "what": "clicked Answer"
+  },
+  {
+   "at": "2026-11-03T20:48:31.977Z",
+   "s": 3,
+   "what": "clicked Write her answer"
+  },
+  {
+   "at": "2026-11-03T20:48:32.344Z",
+   "s": 4,
+   "what": "answer",
+   "detail": "Written by the hand-written fixture from words written in Portuguese; Ana confirmed each English meaning."
+  },
+  {
+   "at": "2026-11-03T20:48:32.382Z",
+   "s": 4,
+   "what": "screenshot 05-answer-peek"
+  },
+  {
+   "at": "2026-11-03T20:48:32.412Z",
+   "s": 4,
+   "what": "clicked Next: correct one fact"
+  },
+  {
+   "at": "2026-11-03T20:48:32.444Z",
+   "s": 4,
+   "what": "clicked Correct this fact"
+  },
+  {
+   "at": "2026-11-03T20:48:32.470Z",
+   "s": 4,
+   "what": "key moment",
+   "detail": "What changed | Undo this correction |  | [13]I did three years of nights, and weekends too. Correction: the night shifts were two years, not three; in the last year I moved to days. |  | 2 documents"
+  },
+  {
+   "at": "2026-11-03T20:48:32.513Z",
+   "s": 4,
+   "what": "screenshot 06-key-moment"
+  },
+  {
+   "at": "2026-11-03T20:48:32.545Z",
+   "s": 4,
+   "what": "applied"
+  },
+  {
+   "at": "2026-11-03T20:48:32.595Z",
+   "s": 4,
+   "what": "approved supporting evidence"
+  },
+  {
+   "at": "2026-11-03T20:48:32.661Z",
+   "s": 4,
+   "what": "approved cover letter"
+  },
+  {
+   "at": "2026-11-03T20:48:32.728Z",
+   "s": 4,
+   "what": "screenshot 07-finish"
+  },
+  {
+   "at": "2026-11-03T20:48:32.760Z",
+   "s": 4,
+   "what": "clicked See the application"
+  },
+  {
+   "at": "2026-11-03T20:48:32.822Z",
+   "s": 4,
+   "what": "screenshot 08-pack"
+  },
+  {
+   "at": "2026-11-03T20:48:33.089Z",
+   "s": 4,
+   "what": "evidence pass saved",
+   "detail": "~/Developer/claude/evidence/hackathon-29oct/ownlang/evidence/ui/fixture-1440/evidence-pass.html"
+  },
+  {
+   "at": "2026-11-03T20:48:33.230Z",
+   "s": 5,
+   "what": "screenshot 09-evidence-pass"
+  },
+  {
+   "at": "2026-11-03T20:49:03.251Z",
+   "s": 35,
+   "what": "done",
+   "detail": "sideways scroll free: true"
+  }
+ ]
+}

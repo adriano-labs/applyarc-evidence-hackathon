@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-// V2-4b: go back to any finished step. The step bar names the five steps, a finished
+// V2-4b: go back to any finished step. The step bar names four stages and optional correction, a finished
 // one opens a read-only look back, and the finish lists what was done, one row a step.
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { mkdtempSync } from 'node:fs';
@@ -59,14 +59,14 @@ function frame(next, props = {}) {
 }
 
 describe('the step bar', () => {
-  it('names the five steps: finished ones open, the current one is marked, later ones are plain text', () => {
+  it('keeps five history destinations: completed stages open, the current one is marked and later ones are plain text', () => {
     const { onReview, steps } = frame('question');
     expect(within(steps).getAllByRole('listitem')).toHaveLength(5);
     expect(within(steps).getAllByRole('button').map((b) => b.textContent)).toEqual(['Notes', 'Facts']);
     expect(within(steps).getByText('Question').closest('[aria-current="step"]')).toBeTruthy();
     expect(within(steps).getByText('Answer').closest('button')).toBeNull();
-    expect(within(steps).getByText('Change').closest('button')).toBeNull();
-    expect(screen.getByText('Step 3 of 5')).toBeTruthy();
+    expect(within(steps).getByText('Correct a fact').closest('button')).toBeNull();
+    expect(screen.getByText('Step 3 of 4')).toBeTruthy();
     fireEvent.click(within(steps).getByRole('button', { name: 'Facts' }));
     expect(onReview).toHaveBeenCalledWith(2);
   });
@@ -95,7 +95,7 @@ describe('looking back', () => {
   it('shows a finished step under its own headline, and returns to the live step', () => {
     const { onReview, steps } = frame('question', { reviewStep: 2 });
     expect(h1()).toBe('The 3 facts Ellie confirmed');
-    expect(screen.getByText('Looking back at step 2 of 5')).toBeTruthy();
+    expect(screen.getByText('Looking back at step 2 of 4')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: 'Back' }));
     expect(onReview).toHaveBeenLastCalledWith(1);
     fireEvent.click(screen.getByRole('button', { name: 'Return to step 3' }));
@@ -181,7 +181,7 @@ describe('the finish', () => {
     expect(screen.getByText('9 words of rough notes')).toBeTruthy();
     expect(screen.getByText('3 facts confirmed, each tied to her own words')).toBeTruthy();
     expect(screen.getByText('1 question answered in her own words')).toBeTruthy();
-    expect(screen.getByText('3 statements in 2 documents, each citing her facts')).toBeTruthy();
+    expect(screen.getByText('3 drafted statements in 2 documents, each citing her facts')).toBeTruthy();
     expect(screen.getByText('1 fact corrected; only the 2 sentences that used it were rewritten')).toBeTruthy();
     expect(screen.queryByText(/ · /)).toBeNull();
     fireEvent.click(screen.getByRole('button', { name: 'View facts' }));
@@ -212,7 +212,7 @@ describe('looking back in the app', () => {
     render(<App />);
     expect(await screen.findByText('Built for applicants, not employers: it never screens, scores or ranks anyone, and never submits anything.', {}, wait)).toBeTruthy();
     fireEvent.click(await screen.findByRole('button', { name: 'Try it with Ellie’s notes' }, wait));
-    await screen.findByText('Step 2 of 5', {}, wait);
+    await screen.findByText('Step 2 of 4', {}, wait);
     fireEvent.click(within(screen.getByRole('list', { name: 'Steps' })).getByRole('button', { name: 'Notes' }));
     expect(h1()).toBe('Ellie’s notes, as she wrote them');
     fireEvent.click(screen.getByRole('button', { name: 'Return to step 2' }));

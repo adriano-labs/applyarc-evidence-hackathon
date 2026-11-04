@@ -1,0 +1,35 @@
+recording live-4: main https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/, open https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io/ (started 2026-11-04T08:19:51Z)
+01 01-welcome: ok (6.5 s, 126 frames)
+02 02-ana-speaks: ok (11.0 s, 219 frames)
+03 03-check-her-words: ok (10.5 s, 211 frames)
+04 04-reading-her-words: ok (19.4 s, 387 frames)
+05 05-fact-cards: ok (23.2 s, 464 frames)
+06 06-question-and-answer: ok (25.6 s, 512 frames)
+07 07-answer-facts: ok (12.8 s, 255 frames)
+08 08-writing: ok (32.0 s, 641 frames)
+09 09-cited-sentence: ok (14.6 s, 291 frames)
+10 10-her-correction: ok (32.5 s, 650 frames)
+11 11-what-changed: ok (17.8 s, 356 frames)
+12 12-take-and-approve: ok (16.8 s, 336 frames)
+13 13-not-submitted: ok (14.1 s, 282 frames)
+14 14-evidence-pass: ok (14.9 s, 293 frames)
+15 15-meta-activity: ok (28.4 s, 568 frames)
+16 16-advert: ok (12.0 s, 235 frames)
+01 o1-open-welcome: ok (4.6 s, 91 frames)
+02 o2-open-written-note: ok (6.0 s, 121 frames)
+03 o3-open-facts: ok (9.7 s, 195 frames)
+04 o4-open-question: ERROR locator.waitFor: Timeout 300000ms exceeded. (300.1 s, 5996 frames)
+--- controls now:
+button "What Meta did: 2 steps, 0 tool calls, 10.6 s total model time, $0.026"
+button "Commands (Ctrl K)"
+button "Start again"
+button "Back"
+button "Open the full workspace"
+button "Notes"
+button "Facts"
+h1 "Checking what the form still needs"
+button "Try again"
+button "Dismiss"
+button "Check the saved facts"
+button "WHAT META DID Meta open weight meta-models/Muse-Spark-Open-816B-A42B · 2 runs · 2 steps · "
+done 2026-11-04T08:30:08Z: main exit 0, open exit 1; footage in ~/Developer/claude/evidence/hackathon-29oct/film-v15/ana/runs/live-4

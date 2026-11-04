@@ -1,0 +1,12 @@
+
+ RUN  v5.0.5 <tmp>/scratchpad/check-bfc813a
+
+
+ Test Files  191 passed (191)
+      Tests  1207 passed (1207)
+   Start at  21:58:26
+   Duration  37.78s (environment 41%, tests 38%, import 18%, transform 3%, worker 1%)
+
+    Isolate  191 workers spawned · ~200ms startup each (spawn + environment, per file)
+             at least ~18.89s faster with isolate: false — reuses workers across files instead of one per file
+

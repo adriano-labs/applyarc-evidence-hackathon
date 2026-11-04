@@ -1,0 +1,22 @@
+   1s welcome · primary bottom at 652 px, no sideways scroll: true
+   1s screenshot 01-welcome
+   1s clicked Try it with Ana’s voice note
+  17s spoken start · Szemum jene. Trabalha há três anos num lar em Leeds. Lides, comecei em outubro de dois doi
+  17s screenshot 02-spoken-start
+  17s clicked Read Ana’s words
+  42s screenshot 03-fact-card
+  43s facts · Confirm the remaining 12
+  56s question · Quando fez os cartões com fotografias da comida na unidade de demência, como é que isso ajudou cada residente a fazer a 
+  56s screenshot 04-question
+  60s spoken answer · Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes antes 
+  60s clicked Answer
+  70s facts · Confirm the remaining 5
+  70s clicked Write her answer
+ 137s FAILED · TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('.manuscript-body .cite').nth(6)
+    - locator resolved to <button class="cite" type="button" data-active="false" aria-label="Evidence 7">7</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into vi

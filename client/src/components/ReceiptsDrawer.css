@@ -20,6 +20,20 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--oxford-3);
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+/* The open-weight edition, from configuration: the same yellow as the Meta mode badge. */
+.trail-badge {
+  font: 500 var(--text-xs) var(--font-ui);
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--oxford);
 }
 
 .receipts-line {
@@ -28,63 +42,210 @@
   font-variant-numeric: tabular-nums;
 }
 
-.receipt-list {
+.receipts-note {
+  margin: 0 0 var(--s2);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.trail {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--s3);
+}
+
+.trail-run-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: var(--s2);
+  padding: var(--s1) 0;
+}
+
+/* A run number points at evidence, so it speaks in the reference numbers' voice. */
+.trail-run-n {
+  font: 600 var(--text-md) var(--font-doc);
+  color: var(--oxford-3);
+  min-width: 14px;
+}
+
+.trail-run-title {
+  font: 600 var(--text-xs) var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.trail-run-host {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--muted);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.trail-run-done {
+  color: var(--confirmed);
+  flex: none;
+}
+
+.trail-run-meta {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.trail-run.running .working-stroke {
+  margin: 0 0 var(--s2);
+}
+
+.trail-rows {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.receipt {
-  padding: var(--s2) 0 var(--s2) var(--s3);
+.trail-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--s2);
+  align-items: start;
+  padding: var(--s1) 0 var(--s1) var(--s3);
   border-left: 1px solid var(--rule-strong);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--ink);
 }
 
-.receipt.failed {
+.trail-row.failed {
   border-left-color: var(--danger);
 }
 
-.receipt-step {
-  font: 500 var(--text-sm) var(--font-ui);
-  margin: 0 0 var(--s1) 0;
-}
-
-.receipt-step span {
-  color: var(--muted);
-  font-weight: 400;
-  margin-left: 6px;
-}
-
-.receipt-tokens,
-.receipt-time {
-  font-size: var(--text-xs);
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  margin: var(--s1) 0;
-}
-
-.receipt-tools {
-  font: 400 var(--text-xs) var(--font-data);
+.trail-row.code,
+.trail-row.stage,
+.trail-row.note {
   color: var(--pencil);
-  margin: var(--s1) 0;
-  padding-left: var(--s4);
 }
 
-.receipt-error {
+.trail-row.note {
+  grid-template-columns: 1fr;
+  color: var(--muted);
+}
+
+.trail-tag {
+  font: 500 11px/1.4 var(--font-ui);
+  padding: 1px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+/* A hairline too, so the tag reads as a tag on the paper ground as well as the white rail. */
+.trail-tag.model {
+  color: var(--oxford-3);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+
+.trail-tag.code,
+.trail-tag.stage {
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+
+.trail-tag.you {
+  color: var(--ink);
+  padding-left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trail-row-body {
+  min-width: 0;
+}
+
+.trail-sentence {
+  margin: 0;
+}
+
+.trail-error {
+  margin: var(--s1) 0 0;
   font-size: var(--text-xs);
   color: var(--danger);
-  margin: var(--s1) 0;
 }
 
-.receipt-ids {
-  font: 400 11px var(--font-data);
+.trail-details {
+  margin-top: 2px;
+  font-size: var(--text-xs);
   color: var(--muted);
-  word-break: break-all;
-  margin: var(--s1) 0;
 }
 
-.receipts-note,
-.receipt-injected {
-  margin: 0 0 var(--s2);
+.trail-details summary {
+  cursor: pointer;
+  width: fit-content;
+  color: var(--oxford-3);
+}
+
+.trail-details summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.trail-details p {
+  margin: 2px 0;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.trail-ids code {
+  font: 400 11px var(--font-data);
+  word-break: break-all;
+}
+
+.trail-foot,
+.trail-footnote {
+  margin: var(--s3) 0 0;
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.trail-footnote {
+  font-style: italic;
+}
+
+.trail-download {
+  margin-top: var(--s3);
+}
+
+@media (max-width: 767px) {
+  .trail-details summary {
+    min-height: 44px;
+    align-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .trail-run-head {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .trail-run-meta {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
+/* A prepared workspace: what came from the saved run (not counted) and what ran in this visit. */
+.receipts-prepared {
   font-size: var(--text-xs);
   color: var(--muted);
 }

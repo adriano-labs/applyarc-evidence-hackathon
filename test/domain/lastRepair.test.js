@@ -12,5 +12,7 @@ describe('the last repair is remembered', () => {
     decideItem(ws, 'c2', 'keep');
     applyRepair(ws);
     expect(ws.application.lastRepair.changedSegments).toEqual([{ docId: 'answer', segmentId: 'answer-3' }]);
+    // Both sentences citing f3 reopened; the other four of the six stayed untouched.
+    expect(ws.application.lastRepair).toMatchObject({ changed: 1, kept: 1, reopened: 2, untouched: 4 });
   });
 });

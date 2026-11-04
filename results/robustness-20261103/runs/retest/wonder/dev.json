@@ -1,0 +1,3550 @@
+{
+  "host": "wonder",
+  "persona": "dev",
+  "style": "notes missing the individual contribution (third person, passive)",
+  "startedAt": "2026-11-03T14:47:07.538Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "probe": false,
+  "plain": false,
+  "correctionText": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T14:47:07.538Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T14:47:07.542Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T14:47:07.544Z",
+      "ms": 15954,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 13,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 8582,
+            "cached": 5980,
+            "output": 2205,
+            "reasoning": 507
+          },
+          "costUsd": 0.055704,
+          "firstEventMs": 985,
+          "totalMs": 15951,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T14:47:23.501Z",
+      "ms": 22,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T14:47:23.524Z",
+      "ms": 2973,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2135,
+            "cached": 884,
+            "output": 393,
+            "reasoning": 294
+          },
+          "costUsd": 0.0130408,
+          "firstEventMs": 703,
+          "totalMs": 2970,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T14:47:26.500Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T14:47:26.504Z",
+      "ms": 14007,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 4,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 7485,
+            "cached": 5212,
+            "output": 911,
+            "reasoning": 456
+          },
+          "costUsd": 0.028354400000000002,
+          "firstEventMs": 6799,
+          "totalMs": 14003,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T14:47:40.514Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T14:47:40.522Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T14:47:40.525Z",
+      "ms": 23618,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:251 of 300"
+          ],
+          "usage": {
+            "input": 7044,
+            "cached": 4200,
+            "output": 2732,
+            "reasoning": 1690
+          },
+          "costUsd": 0.066856,
+          "firstEventMs": 922,
+          "totalMs": 14133,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4307,
+            "cached": 628,
+            "output": 512,
+            "reasoning": 208
+          },
+          "costUsd": 0.0250816,
+          "firstEventMs": 1223,
+          "totalMs": 3116,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:230 of 400"
+          ],
+          "usage": {
+            "input": 7036,
+            "cached": 3816,
+            "output": 3253,
+            "reasoning": 2250
+          },
+          "costUsd": 0.0787032,
+          "firstEventMs": 1307,
+          "totalMs": 19779,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3597,
+            "cached": 628,
+            "output": 505,
+            "reasoning": 272
+          },
+          "costUsd": 0.0221016,
+          "firstEventMs": 909,
+          "totalMs": 3825,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T14:48:04.147Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T14:48:04.151Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T14:48:04.155Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T14:48:04.158Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T14:48:04.161Z",
+      "ms": 5849,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 2,
+          "toolNotes": [
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 4492,
+            "cached": 3688,
+            "output": 812,
+            "reasoning": 508
+          },
+          "costUsd": 0.0201936,
+          "firstEventMs": 613,
+          "totalMs": 5843,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "choose the correction",
+      "startedAt": "2026-11-03T14:48:10.013Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/resolveSourceConflict",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T14:48:10.018Z",
+      "ms": 11004,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3355,
+            "cached": 884,
+            "output": 629,
+            "reasoning": 544
+          },
+          "costUsd": 0.0226408,
+          "firstEventMs": 913,
+          "totalMs": 4531,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1947,
+            "cached": 628,
+            "output": 820,
+            "reasoning": 697
+          },
+          "costUsd": 0.021801599999999997,
+          "firstEventMs": 1477,
+          "totalMs": 6463,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T14:48:21.026Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T14:48:21.028Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T14:48:21.033Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T14:48:21.038Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T14:48:21.043Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "route": "use-this-correction",
+  "correctedFactId": "f13",
+  "intendedTargetId": "f13",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "contribution",
+      "text": "In the CI pipeline and preview environments project for the student startup's web app, which parts did you build or fix yourself rather than the other four developers?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "Project was CI pipeline and preview environments for a student startup's web app in Bristol, part-time, Jan to Jun 2026.",
+        "quote": "Project: CI pipeline and preview environments for a student startup's web app (Bristol, part-time, Jan to Jun 2026).",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "Team had five developers, no automated builds, and every deploy was done from one laptop.",
+        "quote": "The team had five developers and no automated builds; every deploy was done from one laptop.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "Goal was every pull request gets a preview environment with its own URL, and merges to main deploy automatically.",
+        "quote": "every pull request gets a preview environment with its own URL, and merges to main deploy automatically",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "Technologies included GitHub Actions, Docker, Hetzner server running k3s, Traefik, cert-manager, and Postgres database per preview from nightly snapshot.",
+        "quote": "Technologies: GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "Decision was one shared k3s server rather than managed cluster because startup had almost no money and workloads were small.",
+        "quote": "one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "Accepted trade-off was a single point of failure.",
+        "quote": "The trade-off accepted was a single point of failure.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "Preview environments would sometimes come up with a broken database, with tables missing.",
+        "quote": "preview environments would sometimes come up with a broken database, with tables missing",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "Investigation showed nightly snapshot job was killed by out-of-memory killer part way through, leaving partial dump that restored without errors.",
+        "quote": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "Fix was to stream dump to disk instead of building it in memory, and check dump's footer before marking good.",
+        "quote": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "Lesson was a job that exits is not a job that finished; check the output, not the exit code.",
+        "quote": "Lesson: a job that exits is not a job that finished; check the output, not the exit code.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "212 pull requests got preview environments over six months, and deploy-from-a-laptop practice ended.",
+        "quote": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "Platform side, especially scheduling and resource problems, was most engaging; Graphcore's cloud platform is that problem at much larger scale.",
+        "quote": "the platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "I wrote the GitHub Actions workflow that builds the images",
+        "quote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f14",
+        "statement": "I set up the k3s server",
+        "quote": "I set up the k3s server",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "Project: CI pipeline and preview environments for a student startup's web app (Bristol, part-time, Jan to Jun 2026). The team had five developers and no automated builds; every deploy was done from one laptop.\n\nGoal: every pull request gets a preview environment with its own URL, and merges to main deploy automatically.\n\nTechnologies: GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.\n\nDecision: one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small. The trade-off accepted was a single point of failure.\n\nProblem: preview environments would sometimes come up with a broken database, with tables missing. Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors. The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good. Lesson: a job that exits is not a job that finished; check the output, not the exit code.\n\nOutcome: 212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.\n\nInterest in Graphcore: the platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+        "at": "2026-11-03T14:47:07.542Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server.",
+        "at": "2026-11-03T14:47:26.501Z",
+        "questionId": "q1",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "The project, from January to June 2026, was a part-time project in Bristol to build a CI pipeline and preview environments for a student startup's web app.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and that merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Over six months, 212 pull requests got preview environments, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "The system used GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The accepted trade-off was a single point of failure.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Preview environments would sometimes come up with a broken database, with tables missing.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The lesson was that a job that exits is not a job that finished, and that the output, not the exit code, should be checked.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the GitHub Actions workflow that builds the images.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The project was a CI pipeline and preview environments for a student startup's web app in Bristol, undertaken part-time from January to June 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the GitHub Actions workflow that builds the images.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The technologies included GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 251,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 230,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and that merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Over six months, 212 pull requests got preview environments, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "The system used GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The accepted trade-off was a single point of failure.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Preview environments would sometimes come up with a broken database, with tables missing.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The lesson was that a job that exits is not a job that finished, and that the output, not the exit code, should be checked.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the GitHub Actions workflow that builds the images.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The project was a CI pipeline and preview environments for a student startup's web app in Bristol, undertaken part-time from January to June 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the GitHub Actions workflow that builds the images.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The technologies included GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and that merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Over six months, 212 pull requests got preview environments, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "The system used GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The accepted trade-off was a single point of failure.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Preview environments would sometimes come up with a broken database, with tables missing.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The lesson was that a job that exits is not a job that finished, and that the output, not the exit code, should be checked.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the build and push jobs in the GitHub Actions workflow.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "repair"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The project was a CI pipeline and preview environments for a student startup's web app in Bristol, undertaken part-time from January to June 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "The goal was that every pull request would get a preview environment with its own URL, and merges to main would deploy automatically.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote the build and push jobs in the GitHub Actions workflow.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "I set up the k3s server.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "The technologies included GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "The decision was to use one shared k3s server rather than a managed cluster because the startup had almost no money and the workloads were small.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Kind regards,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 254,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 232,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 32,
+      "createdAt": "2026-11-03T14:47:07.539Z",
+      "applicant": {
+        "name": null,
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "Project: CI pipeline and preview environments for a student startup's web app (Bristol, part-time, Jan to Jun 2026). The team had five developers and no automated builds; every deploy was done from one laptop.\n\nGoal: every pull request gets a preview environment with its own URL, and merges to main deploy automatically.\n\nTechnologies: GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.\n\nDecision: one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small. The trade-off accepted was a single point of failure.\n\nProblem: preview environments would sometimes come up with a broken database, with tables missing. Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors. The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good. Lesson: a job that exits is not a job that finished; check the output, not the exit code.\n\nOutcome: 212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.\n\nInterest in Graphcore: the platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+            "at": "2026-11-03T14:47:07.542Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "answer",
+            "text": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server.",
+            "at": "2026-11-03T14:47:26.501Z",
+            "questionId": "q1",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "notes",
+            "text": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+            "at": "2026-11-03T14:48:04.159Z",
+            "read": true,
+            "withheld": true
+          },
+          {
+            "id": "s4",
+            "kind": "correction",
+            "text": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+            "at": "2026-11-03T14:48:10.015Z",
+            "read": true
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "Project was CI pipeline and preview environments for a student startup's web app in Bristol, part-time, Jan to Jun 2026.",
+            "quote": "Project: CI pipeline and preview environments for a student startup's web app (Bristol, part-time, Jan to Jun 2026).",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "Team had five developers, no automated builds, and every deploy was done from one laptop.",
+            "quote": "The team had five developers and no automated builds; every deploy was done from one laptop.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "Goal was every pull request gets a preview environment with its own URL, and merges to main deploy automatically.",
+            "quote": "every pull request gets a preview environment with its own URL, and merges to main deploy automatically",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "Technologies included GitHub Actions, Docker, Hetzner server running k3s, Traefik, cert-manager, and Postgres database per preview from nightly snapshot.",
+            "quote": "Technologies: GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "Decision was one shared k3s server rather than managed cluster because startup had almost no money and workloads were small.",
+            "quote": "one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "Accepted trade-off was a single point of failure.",
+            "quote": "The trade-off accepted was a single point of failure.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "Preview environments would sometimes come up with a broken database, with tables missing.",
+            "quote": "preview environments would sometimes come up with a broken database, with tables missing",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "Investigation showed nightly snapshot job was killed by out-of-memory killer part way through, leaving partial dump that restored without errors.",
+            "quote": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "Fix was to stream dump to disk instead of building it in memory, and check dump's footer before marking good.",
+            "quote": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "Lesson was a job that exits is not a job that finished; check the output, not the exit code.",
+            "quote": "Lesson: a job that exits is not a job that finished; check the output, not the exit code.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "212 pull requests got preview environments over six months, and deploy-from-a-laptop practice ended.",
+            "quote": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "Platform side, especially scheduling and resource problems, was most engaging; Graphcore's cloud platform is that problem at much larger scale.",
+            "quote": "the platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+            "quote": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+            "sourceId": "s4",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "I wrote the GitHub Actions workflow that builds the images",
+                "quote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+                "sourceId": "s2",
+                "at": "2026-11-03T14:48:10.015Z"
+              }
+            ]
+          },
+          {
+            "id": "f14",
+            "statement": "I set up the k3s server",
+            "quote": "I set up the k3s server",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "goal": [
+            "f1",
+            "f2",
+            "f3",
+            "f11"
+          ],
+          "evidence": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f9",
+            "f11",
+            "f13",
+            "f14"
+          ],
+          "tech": [
+            "f4",
+            "f13",
+            "f14"
+          ],
+          "decision": [
+            "f5",
+            "f6"
+          ],
+          "problem": [
+            "f7",
+            "f8",
+            "f9",
+            "f10"
+          ],
+          "motivation": [
+            "f12"
+          ],
+          "contribution": [
+            "f13",
+            "f14"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirementId": "contribution",
+            "text": "In the CI pipeline and preview environments project for the student startup's web app, which parts did you build or fix yourself rather than the other four developers?",
+            "why": "The form asks what you did yourself; your notes only describe the team and the project as a whole.",
+            "status": "answered",
+            "askedBy": "model",
+            "sourceId": "s2"
+          },
+          {
+            "id": "q2",
+            "kind": "source-conflict",
+            "text": "Did Lena write the integration-test job while you wrote only the build and push jobs, or did you also write the integration-test job?",
+            "status": "answered",
+            "conflictSourceId": "s3",
+            "priorSourceId": "s2",
+            "quote": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+            "priorQuote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server.",
+            "why": "Earlier: “I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server.” Added: “Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.” Your saved work is unchanged. These added details are held back. Skip to leave them out, or use Correct fact to change an earlier fact.",
+            "settled": true,
+            "sourceId": "s4",
+            "resolution": "corrected"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "The goal was that every pull request would get a preview environment with its own URL, and that merges to main would deploy automatically.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "Over six months, 212 pull requests got preview environments, and the deploy-from-a-laptop practice ended.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "The system used GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "The decision was to use one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "The accepted trade-off was a single point of failure.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "Preview environments would sometimes come up with a broken database, with tables missing.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "The lesson was that a job that exits is not a job that finished, and that the output, not the exit code, should be checked.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-12",
+                "kind": "claim",
+                "text": "I wrote the build and push jobs in the GitHub Actions workflow.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": true,
+                "author": "repair"
+              },
+              {
+                "id": "answer-13",
+                "kind": "claim",
+                "text": "I set up the k3s server.",
+                "factIds": [
+                  "f14"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 2,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "The platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "The project was a CI pipeline and preview environments for a student startup's web app in Bristol, undertaken part-time from January to June 2026.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "The team had five developers and no automated builds, and every deploy was done from one laptop.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "The goal was that every pull request would get a preview environment with its own URL, and merges to main would deploy automatically.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "I wrote the build and push jobs in the GitHub Actions workflow.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "I set up the k3s server.",
+                "factIds": [
+                  "f14"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "The technologies included GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "The decision was to use one shared k3s server rather than a managed cluster because the startup had almost no money and the workloads were small.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "claim",
+                "text": "212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-14",
+                "kind": "frame",
+                "text": "Kind regards,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T14:48:21.034Z"
+          },
+          "letter": {
+            "revision": 2,
+            "at": "2026-11-03T14:48:21.039Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T14:48:21.043Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 2
+            }
+          }
+        ],
+        "checked": [
+          "contribution"
+        ],
+        "lastRepair": {
+          "factId": "f13",
+          "at": "2026-11-03T14:48:21.029Z",
+          "changed": 2,
+          "kept": 0,
+          "docs": [
+            "answer",
+            "letter"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-12"
+            },
+            {
+              "docId": "letter",
+              "segmentId": "letter-7"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T14:48:21.044Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/resolveSourceConflict",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 6,
+    "spentUsd": 0.935468,
+    "reservedUsd": 0.181972,
+    "remainingUsd": 4.88256
+  },
+  "extraction": {
+    "accepted": 12,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q1",
+    "requirementId": "contribution",
+    "text": "In the CI pipeline and preview environments project for the student startup's web app, which parts did you build or fix yourself rather than the other four developers?",
+    "answer": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server."
+  },
+  "answerExtraction": {
+    "accepted": 2,
+    "refused": [
+      {
+        "quote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+        "reason": "Duplicate of an existing fact."
+      }
+    ],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f11"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f4",
+        "f13",
+        "f14"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f5",
+        "f6"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f7",
+        "f8",
+        "f9",
+        "f10"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f13",
+        "f14"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f12"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f9",
+        "f11",
+        "f13",
+        "f14"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f13",
+    "quote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "The project, from January to June 2026, was a part-time project in Bristol to build a CI pipeline and preview environments for a student startup's web app.",
+    "factIds": [
+      "f1"
+    ],
+    "text": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys."
+  },
+  "correctionExtraction": {
+    "accepted": 0,
+    "refused": [],
+    "conflict": true
+  },
+  "conflictQuestion": {
+    "text": "Did Lena write the integration-test job while you wrote only the build and push jobs, or did you also write the integration-test job?",
+    "priorSourceId": "s2",
+    "priorQuote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests, and I set up the k3s server.",
+    "quote": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server."
+  },
+  "offer": {
+    "questionId": "q2",
+    "sourceId": "s3",
+    "factId": "f13",
+    "before": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+    "text": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server."
+  },
+  "correctedFact": {
+    "id": "f13",
+    "statement": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+    "quote": "Correction to my answer: Lena wrote the integration-test job in the workflow. I wrote the build and push jobs and set up the k3s server.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "I wrote the GitHub Actions workflow that builds the images",
+        "quote": "I wrote the GitHub Actions workflow that builds the images and runs the integration tests",
+        "sourceId": "s2",
+        "at": "2026-11-03T14:48:10.015Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-12",
+      "before": "I wrote the GitHub Actions workflow that builds the images.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-7",
+      "before": "I wrote the GitHub Actions workflow that builds the images.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-12",
+        "before": "I wrote the GitHub Actions workflow that builds the images.",
+        "after": "I wrote the build and push jobs in the GitHub Actions workflow.",
+        "afterFactIds": [
+          "f13"
+        ],
+        "status": "proposed",
+        "decision": null
+      },
+      {
+        "id": "c2",
+        "docId": "letter",
+        "segmentId": "letter-7",
+        "before": "I wrote the GitHub Actions workflow that builds the images.",
+        "after": "I wrote the build and push jobs in the GitHub Actions workflow.",
+        "afterFactIds": [
+          "f13"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f13",
+    "at": "2026-11-03T14:48:21.029Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-12"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-7"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 254,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys. The team had five developers and no automated builds, and every deploy was done from one laptop. The goal was that every pull request would get a preview environment with its own URL, and that merges to main would deploy automatically. Over six months, 212 pull requests got preview environments, and the deploy-from-a-laptop practice ended.\n\nThe system used GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot.\n\nThe decision was to use one shared k3s server rather than a managed cluster, because the startup had almost no money and the workloads were small. The accepted trade-off was a single point of failure.\n\nPreview environments would sometimes come up with a broken database, with tables missing. Investigation showed the nightly snapshot job was being killed by the server's out-of-memory killer part way through, leaving a partial dump that restored without errors. The fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good. The lesson was that a job that exits is not a job that finished, and that the output, not the exit code, should be checked.\n\nI wrote the build and push jobs in the GitHub Actions workflow. I set up the k3s server."
+      },
+      {
+        "id": "letter",
+        "words": 232,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nThe platform side of the work, especially the scheduling and resource problems, was the most engaging part, and Graphcore's cloud platform is that problem at a much larger scale.\n\nThe project was a CI pipeline and preview environments for a student startup's web app in Bristol, undertaken part-time from January to June 2026. The team had five developers and no automated builds, and every deploy was done from one laptop. The goal was that every pull request would get a preview environment with its own URL, and merges to main would deploy automatically. I wrote the build and push jobs in the GitHub Actions workflow. I set up the k3s server. The technologies included GitHub Actions, Docker, a small Hetzner server running k3s, Traefik for routing, cert-manager for TLS, and a Postgres database per preview created from a nightly snapshot. The decision was to use one shared k3s server rather than a managed cluster because the startup had almost no money and the workloads were small.\n\nThe fix was to stream the dump to disk instead of building it in memory, and to check the dump's footer before it was marked good. 212 pull requests got preview environments over the six months, and the deploy-from-a-laptop practice ended.\n\nThank you for considering my application.\n\nKind regards,"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 6,
+    "spentUsd": 1.624673,
+    "reservedUsd": 0.135168,
+    "remainingUsd": 4.240159
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "03009020-7c92-4ae4-bda1-c904d1f4c4d5",
+        "fb114348-581b-4eea-a2ce-e3a52f98bc1a",
+        "83dda811-d5ab-4b71-bd1e-984ad617359d"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8582,
+        "cached": 5980,
+        "output": 2205,
+        "reasoning": 507
+      },
+      "costUsd": 0.055704,
+      "firstEventMs": 985,
+      "firstOutputMs": 1467,
+      "totalMs": 15951,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3948216
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:47:23.496Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "1bc677cf-13d3-47cc-a2f4-79edd2e4a8c5"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2135,
+        "cached": 884,
+        "output": 393,
+        "reasoning": 294
+      },
+      "costUsd": 0.0130408,
+      "firstEventMs": 703,
+      "firstOutputMs": 2708,
+      "totalMs": 2970,
+      "rateLimit": {
+        "remainingRequests": 2982,
+        "remainingTokens": 3960317
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T14:47:26.495Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "d3c69a39-bed4-4f19-bea2-7ae8627e5bd6",
+        "f1cbda00-7513-4d48-b54a-97b6a7b9322a",
+        "870caa7a-1908-43dc-902b-778a1eeb0bac"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 7485,
+        "cached": 5212,
+        "output": 911,
+        "reasoning": 456
+      },
+      "costUsd": 0.028354400000000002,
+      "firstEventMs": 6799,
+      "firstOutputMs": 7961,
+      "totalMs": 14003,
+      "rateLimit": {
+        "remainingRequests": 2979,
+        "remainingTokens": 3951234
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:47:40.508Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "12cbd42d-7b2a-46b9-a9e6-764621948f6e",
+        "f0561750-a69f-4d4c-86a4-04cc070baca1"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "251 of 300"
+        }
+      ],
+      "usage": {
+        "input": 7044,
+        "cached": 4200,
+        "output": 2732,
+        "reasoning": 1690
+      },
+      "costUsd": 0.066856,
+      "firstEventMs": 922,
+      "firstOutputMs": 8698,
+      "totalMs": 14133,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3945416
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:54.660Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "5dd747f8-abc2-4724-8c64-dc44a2c1e083"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4307,
+        "cached": 628,
+        "output": 512,
+        "reasoning": 208
+      },
+      "costUsd": 0.0250816,
+      "firstEventMs": 1223,
+      "firstOutputMs": 2232,
+      "totalMs": 3116,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3940082
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:57.777Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "b4afd2f4-3449-4390-8a4c-4793006cc0c1",
+        "d70325bd-39fe-42e5-a495-538d0756f3d4"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "230 of 400"
+        }
+      ],
+      "usage": {
+        "input": 7036,
+        "cached": 3816,
+        "output": 3253,
+        "reasoning": 2250
+      },
+      "costUsd": 0.0787032,
+      "firstEventMs": 1307,
+      "firstOutputMs": 10955,
+      "totalMs": 19779,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3943937
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:48:00.307Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "a34675b1-ff4c-47c5-b71e-8ca1b1a90fc3"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3597,
+        "cached": 628,
+        "output": 505,
+        "reasoning": 272
+      },
+      "costUsd": 0.0221016,
+      "firstEventMs": 909,
+      "firstOutputMs": 2877,
+      "totalMs": 3825,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3938960
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:48:04.133Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "c81798d7-821d-4a1c-a26c-91655c5f6c3e",
+        "47c75fee-8f0d-4622-bca5-020bf473f5e1"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 4492,
+        "cached": 3688,
+        "output": 812,
+        "reasoning": 508
+      },
+      "costUsd": 0.0201936,
+      "firstEventMs": 613,
+      "firstOutputMs": 2840,
+      "totalMs": 5843,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3936724
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:48:10.005Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "7931b816-00b4-4503-becf-15866150a195"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3355,
+        "cached": 884,
+        "output": 629,
+        "reasoning": 544
+      },
+      "costUsd": 0.0226408,
+      "firstEventMs": 913,
+      "firstOutputMs": 4273,
+      "totalMs": 4531,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3933877
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:48:14.551Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "a6930b45-2242-4694-ae9f-1c64b2cc8958"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1947,
+        "cached": 628,
+        "output": 820,
+        "reasoning": 697
+      },
+      "costUsd": 0.021801599999999997,
+      "firstEventMs": 1477,
+      "firstOutputMs": 5991,
+      "totalMs": 6463,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3934999
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:48:21.017Z"
+    }
+  ],
+  "endedAt": "2026-11-03T14:48:21.049Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 14,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "254/300",
+          "letter": "232/400"
+        },
+        "afterDraft": {
+          "answer": "251/300",
+          "letter": "230/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 27,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-12",
+          "letter/letter-7"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys.",
+        "afterCorrection": "From January to June 2026 I worked part-time with a five-developer student startup in Bristol to give every pull request its own preview environment and to automate deploys.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 22,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 22,
+    "stepRetries": 0,
+    "providerAttempts": 17,
+    "providerTurns": 17,
+    "toolCalls": 21,
+    "receipts": 10,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 49980,
+      "cached": 26548,
+      "output": 12772,
+      "reasoning": 7426
+    },
+    "costReceiptsUsd": 0.35447759999999995,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.689205,
+    "wallMs": 73511,
+    "modelStepMs": {
+      "read the notes": 15954,
+      "check what the form still needs": 2973,
+      "read the answer": 14007,
+      "write both documents": 23618,
+      "read the correcting note": 5849,
+      "propose the changes": 11004
+    },
+    "medianModelStepMs": 12505.5,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 23618
+  }
+}

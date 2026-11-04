@@ -1,0 +1,194 @@
+{
+  "host": "wonder",
+  "attempted": 9,
+  "completed": 9,
+  "notStarted": [],
+  "stoppedBecause": null,
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "withinLimits": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "citationsConfirmed": {
+      "pass": 8,
+      "evaluable": 9
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "manualSentenceIntact": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "exportNotSubmitted": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "noServerErrors": {
+      "pass": 9,
+      "evaluable": 9
+    },
+    "noUncitedNumbers": {
+      "pass": 9,
+      "evaluable": 9
+    }
+  },
+  "medianModelStepMs": 12487.5,
+  "worstModelStep": {
+    "persona": "tom",
+    "name": "write both documents",
+    "ms": 43806
+  },
+  "costPerJourneyUsd": {
+    "median": 0.743937,
+    "min": 0.605899,
+    "max": 0.975532,
+    "total": 7.08606
+  },
+  "routes": {
+    "aisha": "use-this-correction",
+    "ellie": "use-this-correction",
+    "dev": "use-this-correction",
+    "ben": "use-this-correction",
+    "hannah": "use-this-correction",
+    "leo": "use-this-correction",
+    "priya": "use-this-correction",
+    "tom": "use-this-correction",
+    "yusuf": "use-this-correction"
+  },
+  "aborted": [],
+  "findings": [
+    {
+      "persona": "aisha",
+      "kind": "no-question",
+      "note": "the model asked nothing"
+    },
+    {
+      "persona": "leo",
+      "kind": "needs-review",
+      "note": "no usable rewrite for answer/answer-6: The document says I set up the cluster, but the correction says Mira set it up.",
+      "before": "I wrote the containerd proxy fix."
+    },
+    {
+      "persona": "leo",
+      "kind": "needs-review",
+      "note": "no usable rewrite for letter/letter-8: The document says I set up the cluster, but the correction says Mira set it up.",
+      "before": "I wrote the containerd proxy fix."
+    },
+    {
+      "persona": "tom",
+      "kind": "no-question",
+      "note": "the model asked nothing"
+    }
+  ],
+  "table": [
+    {
+      "persona": "aisha",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 14,
+      "tools": 20,
+      "costUsd": 0.684559,
+      "wallMs": 64082
+    },
+    {
+      "persona": "ellie",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 18,
+      "tools": 20,
+      "costUsd": 0.935468,
+      "wallMs": 95212
+    },
+    {
+      "persona": "dev",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 17,
+      "tools": 21,
+      "costUsd": 0.689205,
+      "wallMs": 73511
+    },
+    {
+      "persona": "ben",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 18,
+      "tools": 26,
+      "costUsd": 0.975532,
+      "wallMs": 104701
+    },
+    {
+      "persona": "hannah",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 18,
+      "tools": 26,
+      "costUsd": 0.742716,
+      "wallMs": 78169
+    },
+    {
+      "persona": "leo",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 8,
+      "retries": 0,
+      "attempts": 20,
+      "tools": 16,
+      "costUsd": 0.906375,
+      "wallMs": 108005
+    },
+    {
+      "persona": "priya",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 17,
+      "tools": 21,
+      "costUsd": 0.743937,
+      "wallMs": 73700
+    },
+    {
+      "persona": "tom",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 19,
+      "tools": 25,
+      "costUsd": 0.802369,
+      "wallMs": 73669
+    },
+    {
+      "persona": "yusuf",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 20,
+      "tools": 23,
+      "costUsd": 0.605899,
+      "wallMs": 97325
+    }
+  ]
+}

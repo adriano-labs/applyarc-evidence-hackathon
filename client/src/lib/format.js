@@ -14,6 +14,7 @@ export function formatUsd(usd) {
   return '$' + usd.toFixed(2);
 }
 
+
 export function formatMs(ms) {
   if (ms === null || ms === undefined) {
     return '—';
@@ -35,8 +36,12 @@ export function formatTokens(n) {
   return n.toLocaleString('en-GB');
 }
 
-export function summariseReceipts(receipts) {
-  if (!Array.isArray(receipts) || receipts.length === 0) {
+// Only model steps count: the loop's recorded decisions (`kind: 'stage'`) have no cost or model.
+export const modelSteps = (receipts) => (Array.isArray(receipts) ? receipts.filter((r) => r && r.kind !== 'stage') : []);
+
+export function summariseReceipts(rows) {
+  const receipts = modelSteps(rows);
+  if (receipts.length === 0) {
     return { steps: 0, toolCalls: 0, failed: 0, totalMs: 0, costUsd: 0, costComplete: true, models: [] };
   }
   const steps = receipts.length;

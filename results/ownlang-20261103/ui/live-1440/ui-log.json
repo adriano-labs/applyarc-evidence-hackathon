@@ -1,0 +1,188 @@
+{
+ "base": "http://127.0.0.1:3196",
+ "live": true,
+ "viewport": [
+  1440,
+  900
+ ],
+ "errors": [],
+ "log": [
+  {
+   "at": "2026-11-03T20:30:58.806Z",
+   "s": 1,
+   "what": "welcome",
+   "detail": "primary bottom at 652 px, no sideways scroll: true"
+  },
+  {
+   "at": "2026-11-03T20:30:58.852Z",
+   "s": 1,
+   "what": "screenshot 01-welcome"
+  },
+  {
+   "at": "2026-11-03T20:30:58.899Z",
+   "s": 1,
+   "what": "clicked Try it with Ana’s voice note"
+  },
+  {
+   "at": "2026-11-03T20:31:18.489Z",
+   "s": 21,
+   "what": "spoken start",
+   "detail": "Xemuiene. Trabalha há três anos num lar em Leeds, comecei em Outubro de dois mil e e vinte"
+  },
+  {
+   "at": "2026-11-03T20:31:18.534Z",
+   "s": 21,
+   "what": "screenshot 02-spoken-start"
+  },
+  {
+   "at": "2026-11-03T20:31:18.572Z",
+   "s": 21,
+   "what": "clicked Read Ana’s words"
+  },
+  {
+   "at": "2026-11-03T20:31:34.613Z",
+   "s": 37,
+   "what": "screenshot 03-fact-card"
+  },
+  {
+   "at": "2026-11-03T20:31:35.148Z",
+   "s": 38,
+   "what": "facts",
+   "detail": "Confirm the remaining 11"
+  },
+  {
+   "at": "2026-11-03T20:31:46.364Z",
+   "s": 49,
+   "what": "question",
+   "detail": "Com os cartões com fotografias da comida que fez na unidade de demência, como é que isso respeitou as escolhas e as nece"
+  },
+  {
+   "at": "2026-11-03T20:31:46.417Z",
+   "s": 49,
+   "what": "screenshot 04-question"
+  },
+  {
+   "at": "2026-11-03T20:31:50.918Z",
+   "s": 53,
+   "what": "spoken answer",
+   "detail": "ParaPara mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da"
+  },
+  {
+   "at": "2026-11-03T20:31:50.954Z",
+   "s": 53,
+   "what": "clicked Answer"
+  },
+  {
+   "at": "2026-11-03T20:31:57.845Z",
+   "s": 60,
+   "what": "facts",
+   "detail": "Confirm the remaining 6"
+  },
+  {
+   "at": "2026-11-03T20:31:58.160Z",
+   "s": 61,
+   "what": "clicked Write her answer"
+  },
+  {
+   "at": "2026-11-03T20:32:25.069Z",
+   "s": 87,
+   "what": "answer",
+   "detail": "Drafted with Muse Wonder from words spoken in Portuguese; Ana confirmed each English meaning."
+  },
+  {
+   "at": "2026-11-03T20:32:25.105Z",
+   "s": 87,
+   "what": "screenshot 05-answer-peek"
+  },
+  {
+   "at": "2026-11-03T20:32:25.137Z",
+   "s": 87,
+   "what": "clicked Next: correct one fact"
+  },
+  {
+   "at": "2026-11-03T20:32:28.501Z",
+   "s": 91,
+   "what": "spoken correction",
+   "detail": "correction, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+  },
+  {
+   "at": "2026-11-03T20:32:28.539Z",
+   "s": 91,
+   "what": "clicked Add Ana’s note"
+  },
+  {
+   "at": "2026-11-03T20:32:35.906Z",
+   "s": 98,
+   "what": "conflict",
+   "detail": "Fez turnos da noite durante dois anos, passando a dias no último ano, ou fez três anos de noites?"
+  },
+  {
+   "at": "2026-11-03T20:32:35.949Z",
+   "s": 98,
+   "what": "screenshot 06a-conflict"
+  },
+  {
+   "at": "2026-11-03T20:32:35.985Z",
+   "s": 98,
+   "what": "clicked Use this correction"
+  },
+  {
+   "at": "2026-11-03T20:32:36.011Z",
+   "s": 98,
+   "what": "key moment",
+   "detail": "What changed | Undo this correction |  | [19]Applicant worked nights for three years and also worked weekends. The night shifts were two years, not three; in the last year I moved to days. |  | 2 documents"
+  },
+  {
+   "at": "2026-11-03T20:32:36.049Z",
+   "s": 98,
+   "what": "screenshot 06-key-moment"
+  },
+  {
+   "at": "2026-11-03T20:32:46.003Z",
+   "s": 108,
+   "what": "applied"
+  },
+  {
+   "at": "2026-11-03T20:32:46.051Z",
+   "s": 108,
+   "what": "approved supporting evidence"
+  },
+  {
+   "at": "2026-11-03T20:32:46.118Z",
+   "s": 108,
+   "what": "approved cover letter"
+  },
+  {
+   "at": "2026-11-03T20:32:46.187Z",
+   "s": 109,
+   "what": "screenshot 07-finish"
+  },
+  {
+   "at": "2026-11-03T20:32:46.218Z",
+   "s": 109,
+   "what": "clicked See the application"
+  },
+  {
+   "at": "2026-11-03T20:32:46.281Z",
+   "s": 109,
+   "what": "screenshot 08-pack"
+  },
+  {
+   "at": "2026-11-03T20:32:46.543Z",
+   "s": 109,
+   "what": "evidence pass saved",
+   "detail": "~/Developer/claude/evidence/hackathon-29oct/ownlang/evidence/ui/live-1440/evidence-pass.html"
+  },
+  {
+   "at": "2026-11-03T20:32:46.682Z",
+   "s": 109,
+   "what": "screenshot 09-evidence-pass"
+  },
+  {
+   "at": "2026-11-03T20:33:16.695Z",
+   "s": 139,
+   "what": "done",
+   "detail": "sideways scroll free: true"
+  }
+ ]
+}

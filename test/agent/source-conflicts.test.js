@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createModelAgent } from '../../server/agent/model.js';
-import { extractPrompt } from '../../server/agent/prompts.js';
+import { clarifyPrompt, extractPrompt } from '../../server/agent/prompts.js';
 import { extractSchema } from '../../server/agent/schemas.js';
 import { form } from '../helpers.js';
 
@@ -50,5 +50,17 @@ describe('source-conflict extraction contract', () => {
     expect(prompt).toContain('Do not smooth over a material conflict by omitting the disputed scope');
     expect(prompt).toContain('do not resurrect the removed claim');
     expect(prompt).toContain('Ordinary added notes or an answer do not silently replace an earlier fact');
+  });
+
+  // Live, 3 Nov: every note that began "Correction:" was read as new facts, a number-only
+  // correction raised nothing, and one question told the applicant to use "Correct fact".
+  it('treats only a correction source as a correction, compares numbers and keeps app controls out of questions (prompt contract)', () => {
+    const prompt = extractPrompt({ source, evidence });
+    expect(prompt).toContain('Only a source whose kind in active_source_context is "correction" is an explicit correction');
+    expect(prompt).toContain('Notes or an answer stay ordinary even when they call themselves a correction ("Correction:", "One correction"): when they contradict an earlier source, return the conflict so the applicant decides.');
+    expect(prompt).toContain('a different number, date or measurement for the same thing');
+    expect(prompt).toContain('never naming the app\'s buttons or steps');
+    expect(prompt).not.toContain('Correct fact');
+    expect(clarifyPrompt({ askable: [], facts: [], notes: [] })).toContain('never naming the app\'s buttons or steps');
   });
 });

@@ -20,6 +20,9 @@ export function referencesFor(ws, doc, numbers) {
     .sort((a, b) => a.n - b.n)
     .map(({ n, fact }) => {
       const source = findSource(ws, fact.sourceId);
-      return { n, factId: fact.id, statement: fact.statement, quote: fact.quote, from: source?.kind };
+      // A fact in another language names it and who did it: its statement is then the English
+      // meaning. Words from a voice clip say so.
+      return { n, factId: fact.id, statement: fact.statement, quote: fact.quote, from: source?.kind,
+        ...(fact.language ? { language: fact.language, actor: fact.actor } : {}), ...(source?.spoken ? { spoken: true } : {}) };
     });
 }

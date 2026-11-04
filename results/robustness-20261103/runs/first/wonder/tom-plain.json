@@ -1,0 +1,3078 @@
+{
+  "host": "wonder",
+  "persona": "tom",
+  "style": "long rambling notes",
+  "startedAt": "2026-11-03T13:56:54.618Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "probe": false,
+  "plain": true,
+  "correctionText": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T13:56:54.618Z",
+      "ms": 10,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 10
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T13:56:54.631Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T13:56:54.634Z",
+      "ms": 13565,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 14,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 11140,
+            "cached": 7260,
+            "output": 2926,
+            "reasoning": 931
+          },
+          "costUsd": 0.075492,
+          "firstEventMs": 1180,
+          "totalMs": 13561,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T13:57:08.201Z",
+      "ms": 19,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T13:57:08.221Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T13:57:08.225Z",
+      "ms": 48443,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:119 of 400"
+          ],
+          "usage": {
+            "input": 6557,
+            "cached": 3816,
+            "output": 2070,
+            "reasoning": 1481
+          },
+          "costUsd": 0.0531272,
+          "firstEventMs": 1396,
+          "totalMs": 15029,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4283,
+            "cached": 628,
+            "output": 409,
+            "reasoning": 213
+          },
+          "costUsd": 0.022925599999999997,
+          "firstEventMs": 1433,
+          "totalMs": 4162,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 2,
+          "toolNotes": [
+            "word_count:221 of 300",
+            "word_count:251 of 300"
+          ],
+          "usage": {
+            "input": 13468,
+            "cached": 7400,
+            "output": 3982,
+            "reasoning": 2694
+          },
+          "costUsd": 0.10539199999999999,
+          "firstEventMs": 619,
+          "totalMs": 33757,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 7188,
+            "cached": 628,
+            "output": 829,
+            "reasoning": 578
+          },
+          "costUsd": 0.0429456,
+          "firstEventMs": 1020,
+          "totalMs": 6540,
+          "unsettled": 0
+        },
+        {
+          "step": "revise",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1709,
+            "cached": 0,
+            "output": 673,
+            "reasoning": 612
+          },
+          "costUsd": 0.020296,
+          "firstEventMs": 1061,
+          "totalMs": 3723,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1432,
+            "cached": 628,
+            "output": 572,
+            "reasoning": 525
+          },
+          "costUsd": 0.0147816,
+          "firstEventMs": 732,
+          "totalMs": 4399,
+          "unsettled": 0
+        }
+      ],
+      "stages": [
+        "Revising 1 unsupported sentence"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T13:57:56.672Z",
+      "ms": 7,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T13:57:56.680Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T13:57:56.687Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T13:57:56.694Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T13:57:56.699Z",
+      "ms": 6041,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 3,
+          "toolNotes": [
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "form_requirements:read"
+          ],
+          "usage": {
+            "input": 5220,
+            "cached": 4072,
+            "output": 822,
+            "reasoning": 487
+          },
+          "costUsd": 0.021846400000000002,
+          "firstEventMs": 920,
+          "totalMs": 6030,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "choose the correction",
+      "startedAt": "2026-11-03T13:58:02.744Z",
+      "ms": 7,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/resolveSourceConflict",
+          "status": 200,
+          "ms": 7
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T13:58:02.753Z",
+      "ms": 13200,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2690,
+            "cached": 884,
+            "output": 1216,
+            "reasoning": 1159
+          },
+          "costUsd": 0.0317208,
+          "firstEventMs": 615,
+          "totalMs": 9256,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1334,
+            "cached": 628,
+            "output": 505,
+            "reasoning": 433
+          },
+          "costUsd": 0.0130496,
+          "firstEventMs": 1247,
+          "totalMs": 3930,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T13:58:15.955Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T13:58:15.957Z",
+      "ms": 7,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T13:58:15.965Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T13:58:15.973Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T13:58:15.980Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 6
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "kind": "no-question",
+      "note": "the model asked nothing"
+    }
+  ],
+  "route": "use-this-correction",
+  "correctedFactId": "f6",
+  "intendedTargetId": "f6",
+  "questions": [],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+        "quote": "so I decided to turn the three boxes into a little cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups and a Minecraft server that honestly got more use than either.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "I used Proxmox on all three nodes and k3s inside VMs for the containers.",
+        "quote": "I went with Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and then k3s inside VMs for the containers, which in hindsight was probably one layer too many but I learned a lot from it.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+        "quote": "Everything is built with Ansible playbooks from a git repo so I can rebuild a node from nothing in about twenty minutes, I timed it.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "Storage is a ZFS mirror on the two nodes that had two disks.",
+        "quote": "Storage is a ZFS mirror on the two nodes that had two disks.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook.",
+        "quote": "Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook, which is a bit silly but it works.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+        "quote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "I wanted snapshots to try an upgrade and roll back when it went wrong, which happened twice.",
+        "quote": "The reason was that I wanted snapshots: I could snapshot a VM, try an upgrade, and roll back when it went wrong, which it did, twice.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+        "quote": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "I spent two evenings reading Grafana graphs and noticed the freezes lined up with ZFS scrub windows and ARC growth.",
+        "quote": "I spent, I think, two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+        "quote": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "What I learned is to look at the host before the guest, and memory accounting across three layers is hard.",
+        "quote": "What I learned is to look at the host before the guest, and that memory accounting across three layers is genuinely hard to reason about.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "I wrote a small page that shows the cluster status.",
+        "quote": "I also wrote a small page that shows the cluster status so people stop asking me in the group chat.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "I like the layer under the application, and Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+        "quote": "Why Graphcore, I like the layer under the application more than the application itself, and I like that the platform work is about getting the most out of specific hardware rather than generic boxes, which is basically what I was doing with three cast-off PCs except at a slightly different scale.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "OK so the thing I want to write about is the home lab, which started as a joke really. Over the summer of 2025 I was living in a flat in Sheffield with Josh, who does electronics, and we had a pile of three old mini PCs that his uncle's office was throwing out. I'd been doing a cloud module at uni and wanted somewhere to actually run things instead of just reading about them, so I decided to turn the three boxes into a little cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups and a Minecraft server that honestly got more use than either.\n\nI went with Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and then k3s inside VMs for the containers, which in hindsight was probably one layer too many but I learned a lot from it. Everything is built with Ansible playbooks from a git repo so I can rebuild a node from nothing in about twenty minutes, I timed it. Storage is a ZFS mirror on the two nodes that had two disks. Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook, which is a bit silly but it works. Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.\n\nThe decision I keep coming back to is k3s inside Proxmox VMs rather than bare metal. The reason was that I wanted snapshots: I could snapshot a VM, try an upgrade, and roll back when it went wrong, which it did, twice. The cost was performance and a lot of confusion about which layer was eating the memory.\n\nThe big problem was in October 2025. The Minecraft server kept freezing for ten or twenty seconds every few minutes. Everyone blamed the game. I spent, I think, two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping. I had given the VM too much memory relative to the host, so the host was squeezing it. I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays. The freezes stopped. What I learned is to look at the host before the guest, and that memory accounting across three layers is genuinely hard to reason about.\n\nAnyway, it has been running since then, about 14 months now, with one outage when the flat lost power. The society uses the website and the bot every week. I also wrote a small page that shows the cluster status so people stop asking me in the group chat.\n\nWhy Graphcore, I like the layer under the application more than the application itself, and I like that the platform work is about getting the most out of specific hardware rather than generic boxes, which is basically what I was doing with three cast-off PCs except at a slightly different scale.\n\nAlso my cat sat on the keyboard during the Ansible rebuild once and it still worked, which I count as a test.",
+        "at": "2026-11-03T13:56:54.632Z",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "I decided to turn the three boxes into a small cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups, and a Minecraft server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, so I can rebuild a node from nothing in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Storage is a ZFS mirror on the two nodes that had two disks.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Monitoring is Prometheus and Grafana, with Alertmanager sending to a Discord webhook.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "I used Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and I used k3s inside VMs for the containers.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I also wanted snapshots, so I could snapshot a VM, try an upgrade, and roll back when it went wrong, which happened twice.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I think I spent two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "What I learned is to look at the host before the guest, and that memory accounting across three layers is hard to reason about.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I also wrote a small page that shows the cluster status, so people stop asking me in the group chat.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like the layer under the application more than the application itself, and I like that Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I capped the ARC to 4 GB and moved the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote a small page that shows the cluster status.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 253,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 119,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, so I can rebuild a node from nothing in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Storage is a ZFS mirror on the two nodes that had two disks.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Monitoring is Prometheus and Grafana, with Alertmanager sending to a Discord webhook.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "I used Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and I used k3s inside VMs for the containers.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I also wanted snapshots, so I could snapshot a VM, try an upgrade, and roll back when it went wrong, which happened twice.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I think I spent two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "What I learned is to look at the host before the guest, and that memory accounting across three layers is hard to reason about.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I also wrote a small page that shows the cluster status, so people stop asking me in the group chat.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like the layer under the application more than the application itself, and I like that Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I capped the ARC to 4 GB and moved the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote a small page that shows the cluster status.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, so I can rebuild a node from nothing in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "Storage is a ZFS mirror on the two nodes that had two disks.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Monitoring is Prometheus and Grafana, with Alertmanager sending to a Discord webhook.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "I used Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and I used k3s inside VMs for the containers.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "I also wanted snapshots, so I could snapshot a VM, try an upgrade, and roll back when it went wrong, which happened twice.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "I think I spent two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "What I learned is to look at the host before the guest, and that memory accounting across three layers is hard to reason about.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "I set up the Tailscale mesh myself, and Josh only lent me the second mini PC's RAM.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": true,
+            "author": "repair"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I also wrote a small page that shows the cluster status, so people stop asking me in the group chat.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "I like the layer under the application more than the application itself, and I like that Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "I capped the ARC to 4 GB and moved the scrub to 4am on Sundays.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "I wrote a small page that shows the cluster status.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 252,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 119,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 28,
+      "createdAt": "2026-11-03T13:56:54.624Z",
+      "applicant": {
+        "name": "Ellie",
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "OK so the thing I want to write about is the home lab, which started as a joke really. Over the summer of 2025 I was living in a flat in Sheffield with Josh, who does electronics, and we had a pile of three old mini PCs that his uncle's office was throwing out. I'd been doing a cloud module at uni and wanted somewhere to actually run things instead of just reading about them, so I decided to turn the three boxes into a little cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups and a Minecraft server that honestly got more use than either.\n\nI went with Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and then k3s inside VMs for the containers, which in hindsight was probably one layer too many but I learned a lot from it. Everything is built with Ansible playbooks from a git repo so I can rebuild a node from nothing in about twenty minutes, I timed it. Storage is a ZFS mirror on the two nodes that had two disks. Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook, which is a bit silly but it works. Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.\n\nThe decision I keep coming back to is k3s inside Proxmox VMs rather than bare metal. The reason was that I wanted snapshots: I could snapshot a VM, try an upgrade, and roll back when it went wrong, which it did, twice. The cost was performance and a lot of confusion about which layer was eating the memory.\n\nThe big problem was in October 2025. The Minecraft server kept freezing for ten or twenty seconds every few minutes. Everyone blamed the game. I spent, I think, two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping. I had given the VM too much memory relative to the host, so the host was squeezing it. I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays. The freezes stopped. What I learned is to look at the host before the guest, and that memory accounting across three layers is genuinely hard to reason about.\n\nAnyway, it has been running since then, about 14 months now, with one outage when the flat lost power. The society uses the website and the bot every week. I also wrote a small page that shows the cluster status so people stop asking me in the group chat.\n\nWhy Graphcore, I like the layer under the application more than the application itself, and I like that the platform work is about getting the most out of specific hardware rather than generic boxes, which is basically what I was doing with three cast-off PCs except at a slightly different scale.\n\nAlso my cat sat on the keyboard during the Ansible rebuild once and it still worked, which I count as a test.",
+            "at": "2026-11-03T13:56:54.632Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "notes",
+            "text": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+            "at": "2026-11-03T13:57:56.695Z",
+            "read": true,
+            "withheld": true
+          },
+          {
+            "id": "s3",
+            "kind": "correction",
+            "text": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+            "at": "2026-11-03T13:58:02.745Z",
+            "read": true
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+            "quote": "so I decided to turn the three boxes into a little cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups and a Minecraft server that honestly got more use than either.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "I used Proxmox on all three nodes and k3s inside VMs for the containers.",
+            "quote": "I went with Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and then k3s inside VMs for the containers, which in hindsight was probably one layer too many but I learned a lot from it.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+            "quote": "Everything is built with Ansible playbooks from a git repo so I can rebuild a node from nothing in about twenty minutes, I timed it.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "Storage is a ZFS mirror on the two nodes that had two disks.",
+            "quote": "Storage is a ZFS mirror on the two nodes that had two disks.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook.",
+            "quote": "Monitoring is Prometheus and Grafana with Alertmanager sending to a Discord webhook, which is a bit silly but it works.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+            "quote": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+            "sourceId": "s3",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+                "quote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+                "sourceId": "s1",
+                "at": "2026-11-03T13:58:02.745Z"
+              }
+            ]
+          },
+          {
+            "id": "f7",
+            "statement": "I wanted snapshots to try an upgrade and roll back when it went wrong, which happened twice.",
+            "quote": "The reason was that I wanted snapshots: I could snapshot a VM, try an upgrade, and roll back when it went wrong, which it did, twice.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+            "quote": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "I spent two evenings reading Grafana graphs and noticed the freezes lined up with ZFS scrub windows and ARC growth.",
+            "quote": "I spent, I think, two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+            "quote": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "What I learned is to look at the host before the guest, and memory accounting across three layers is hard.",
+            "quote": "What I learned is to look at the host before the guest, and that memory accounting across three layers is genuinely hard to reason about.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "I wrote a small page that shows the cluster status.",
+            "quote": "I also wrote a small page that shows the cluster status so people stop asking me in the group chat.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "I like the layer under the application, and Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+            "quote": "Why Graphcore, I like the layer under the application more than the application itself, and I like that the platform work is about getting the most out of specific hardware rather than generic boxes, which is basically what I was doing with three cast-off PCs except at a slightly different scale.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "goal": [
+            "f1"
+          ],
+          "contribution": [
+            "f1",
+            "f2",
+            "f3",
+            "f6",
+            "f10",
+            "f12"
+          ],
+          "evidence": [
+            "f1",
+            "f3",
+            "f10",
+            "f12"
+          ],
+          "tech": [
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6"
+          ],
+          "decision": [
+            "f2",
+            "f7"
+          ],
+          "problem": [
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ],
+          "motivation": [
+            "f13"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "kind": "source-conflict",
+            "text": "Did you set up the Tailscale mesh yourself, or did Josh set it up?",
+            "status": "answered",
+            "conflictSourceId": "s2",
+            "priorSourceId": "s1",
+            "quote": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+            "priorQuote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+            "why": "Earlier: “Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.” Added: “I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.” Your saved work is unchanged. These added details are held back. Skip to leave them out, or use Correct fact to change an earlier fact.",
+            "settled": true,
+            "sourceId": "s3",
+            "resolution": "corrected"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "Everything is built with Ansible playbooks from a git repo, so I can rebuild a node from nothing in about twenty minutes.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "Storage is a ZFS mirror on the two nodes that had two disks.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "Monitoring is Prometheus and Grafana, with Alertmanager sending to a Discord webhook.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "I used Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and I used k3s inside VMs for the containers.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "I also wanted snapshots, so I could snapshot a VM, try an upgrade, and roll back when it went wrong, which happened twice.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "The Minecraft server kept freezing for ten or twenty seconds every few minutes.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "I think I spent two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "What I learned is to look at the host before the guest, and that memory accounting across three layers is hard to reason about.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "I set up the Tailscale mesh myself, and Josh only lent me the second mini PC's RAM.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": true,
+                "author": "repair"
+              },
+              {
+                "id": "answer-12",
+                "kind": "claim",
+                "text": "I also wrote a small page that shows the cluster status, so people stop asking me in the group chat.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 1,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "I like the layer under the application more than the application itself, and I like that Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "I decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "I capped the ARC to 4 GB and moved the scrub to 4am on Sundays.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "I wrote a small page that shows the cluster status.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "frame",
+                "text": "Kind regards, Ellie",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T13:58:15.966Z"
+          },
+          "letter": {
+            "revision": 1,
+            "at": "2026-11-03T13:58:15.973Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T13:58:15.981Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 1
+            }
+          }
+        ],
+        "lastRepair": {
+          "factId": "f6",
+          "at": "2026-11-03T13:58:15.958Z",
+          "changed": 1,
+          "kept": 0,
+          "docs": [
+            "answer"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-11"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T13:58:15.983Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 10
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/resolveSourceConflict",
+      "status": 200,
+      "ms": 7
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 10,
+    "spentUsd": 3.784904,
+    "reservedUsd": 0,
+    "remainingUsd": 6.215096
+  },
+  "extraction": {
+    "accepted": 13,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": null,
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f1"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f2",
+        "f7"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f6",
+        "f10",
+        "f12"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f13"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f3",
+        "f10",
+        "f12"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f6",
+    "quote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "I decided to turn the three boxes into a small cluster that could host the things our course society kept losing: the Discord bot, the website for the weekly meetups, and a Minecraft server.",
+    "factIds": [
+      "f1"
+    ],
+    "text": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server."
+  },
+  "correctionExtraction": {
+    "accepted": 0,
+    "refused": [],
+    "conflict": true
+  },
+  "conflictQuestion": {
+    "text": "Did you set up the Tailscale mesh yourself, or did Josh set it up?",
+    "priorSourceId": "s1",
+    "priorQuote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+    "quote": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM."
+  },
+  "offer": {
+    "questionId": "q1",
+    "sourceId": "s2",
+    "factId": "f6",
+    "before": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+    "text": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM."
+  },
+  "correctedFact": {
+    "id": "f6",
+    "statement": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+    "quote": "I set up the Tailscale mesh myself. Josh only lent me the second mini PC's RAM.",
+    "sourceId": "s3",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+        "quote": "Josh set up the Tailscale mesh so we could reach the cluster from uni, and he also lent me the second mini PC's RAM, which I still have not returned.",
+        "sourceId": "s1",
+        "at": "2026-11-03T13:58:02.745Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-11",
+      "before": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-11",
+        "before": "Josh set up the Tailscale mesh so we could reach the cluster from uni.",
+        "after": "I set up the Tailscale mesh myself, and Josh only lent me the second mini PC's RAM.",
+        "afterFactIds": [
+          "f6"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f6",
+    "at": "2026-11-03T13:58:15.958Z",
+    "changed": 1,
+    "kept": 0,
+    "docs": [
+      "answer"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-11"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 252,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.\n\nEverything is built with Ansible playbooks from a git repo, so I can rebuild a node from nothing in about twenty minutes. Storage is a ZFS mirror on the two nodes that had two disks. Monitoring is Prometheus and Grafana, with Alertmanager sending to a Discord webhook.\n\nI used Proxmox on all three nodes because I wanted to be able to break VMs without breaking the box, and I used k3s inside VMs for the containers. I also wanted snapshots, so I could snapshot a VM, try an upgrade, and roll back when it went wrong, which happened twice.\n\nThe Minecraft server kept freezing for ten or twenty seconds every few minutes. I think I spent two evenings reading Grafana graphs and eventually noticed the freezes lined up with ZFS scrub windows and with the ARC cache growing until the VM started swapping. I fixed it by capping the ARC to 4 GB and moving the scrub to 4am on Sundays. What I learned is to look at the host before the guest, and that memory accounting across three layers is hard to reason about.\n\nI set up the Tailscale mesh myself, and Josh only lent me the second mini PC's RAM. I also wrote a small page that shows the cluster status, so people stop asking me in the group chat."
+      },
+      {
+        "id": "letter",
+        "words": 119,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nI like the layer under the application more than the application itself, and I like that Graphcore platform work is about getting the most out of specific hardware rather than generic boxes.\n\nI decided to turn the three boxes into a cluster to host the Discord bot, website and Minecraft server. Everything is built with Ansible playbooks from a git repo, rebuilding a node in about twenty minutes. I capped the ARC to 4 GB and moved the scrub to 4am on Sundays. I wrote a small page that shows the cluster status.\n\nThank you for considering my application.\n\nKind regards, Ellie"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 10,
+    "spentUsd": 4.59236,
+    "reservedUsd": 0.177352,
+    "remainingUsd": 5.230288
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "ef9b1456-7c9c-408b-a7b3-15617d2f7027",
+        "5c571cb7-892e-410c-9e6c-2172772afbc0",
+        "ea0d9a4e-1af1-4edc-8a45-197aa09c4b41"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 11140,
+        "cached": 7260,
+        "output": 2926,
+        "reasoning": 931
+      },
+      "costUsd": 0.075492,
+      "firstEventMs": 1180,
+      "firstOutputMs": 1746,
+      "totalMs": 13561,
+      "rateLimit": {
+        "remainingRequests": 2988,
+        "remainingTokens": 3966752
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:57:08.197Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "dfbc2a07-8090-4372-8f56-e18bef760305",
+        "ad5b703a-c313-4e43-8389-1ace10b9f0e4"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "119 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6557,
+        "cached": 3816,
+        "output": 2070,
+        "reasoning": 1481
+      },
+      "costUsd": 0.0531272,
+      "firstEventMs": 1396,
+      "firstOutputMs": 10602,
+      "totalMs": 15029,
+      "rateLimit": {
+        "remainingRequests": 2982,
+        "remainingTokens": 3964129
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:23.255Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "8ede5b60-3dc0-466e-86dc-d0cf8f55399e"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4283,
+        "cached": 628,
+        "output": 409,
+        "reasoning": 213
+      },
+      "costUsd": 0.022925599999999997,
+      "firstEventMs": 1433,
+      "firstOutputMs": 3201,
+      "totalMs": 4162,
+      "rateLimit": {
+        "remainingRequests": 2980,
+        "remainingTokens": 3961912
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:27.418Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "701dcf18-934a-413a-b23d-621a56f41006",
+        "9755730b-984d-4d5b-b1ae-875b819ac530",
+        "bca9ee25-e11b-43d6-ad52-ee04df29707c"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "221 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "251 of 300"
+        }
+      ],
+      "usage": {
+        "input": 13468,
+        "cached": 7400,
+        "output": 3982,
+        "reasoning": 2694
+      },
+      "costUsd": 0.10539199999999999,
+      "firstEventMs": 619,
+      "firstOutputMs": 16394,
+      "totalMs": 33757,
+      "rateLimit": {
+        "remainingRequests": 2979,
+        "remainingTokens": 3953762
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:41.982Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "5de35271-55d0-4b64-91fa-f97562696362"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 7188,
+        "cached": 628,
+        "output": 829,
+        "reasoning": 578
+      },
+      "costUsd": 0.0429456,
+      "firstEventMs": 1020,
+      "firstOutputMs": 5338,
+      "totalMs": 6540,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3947078
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:48.526Z"
+    },
+    {
+      "step": "revise",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "319b6f18-18d8-40cf-9e20-20ccf26a94c2"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1709,
+        "cached": 0,
+        "output": 673,
+        "reasoning": 612
+      },
+      "costUsd": 0.020296,
+      "firstEventMs": 1061,
+      "firstOutputMs": 3591,
+      "totalMs": 3723,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3936136
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:52.253Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "9984bc5f-891e-46fe-8eba-f99115aee6b2"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1432,
+        "cached": 628,
+        "output": 572,
+        "reasoning": 525
+      },
+      "costUsd": 0.0147816,
+      "firstEventMs": 732,
+      "firstOutputMs": 4056,
+      "totalMs": 4399,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3934300
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:57:56.653Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "b9ed0278-1be5-40c1-871b-5cdce9c7a9f4",
+        "b8bbd53f-fb50-4a05-a5ac-072e423042ca"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 5220,
+        "cached": 4072,
+        "output": 822,
+        "reasoning": 487
+      },
+      "costUsd": 0.021846400000000002,
+      "firstEventMs": 920,
+      "firstOutputMs": 3216,
+      "totalMs": 6030,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3931111
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:58:02.730Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "dd5c8dfc-27de-4c99-9fd4-8887d741cc4d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2690,
+        "cached": 884,
+        "output": 1216,
+        "reasoning": 1159
+      },
+      "costUsd": 0.0317208,
+      "firstEventMs": 615,
+      "firstOutputMs": 9133,
+      "totalMs": 9256,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3932918
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:58:12.010Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "dd27230c-9f8b-4f4b-9a14-42abfd63bb5f"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1334,
+        "cached": 628,
+        "output": 505,
+        "reasoning": 433
+      },
+      "costUsd": 0.0130496,
+      "firstEventMs": 1247,
+      "firstOutputMs": 3636,
+      "totalMs": 3930,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3932860
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:58:15.942Z"
+    }
+  ],
+  "endedAt": "2026-11-03T13:58:15.988Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 13,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "252/300",
+          "letter": "119/400"
+        },
+        "afterDraft": {
+          "answer": "253/300",
+          "letter": "119/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 21,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-11"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.",
+        "afterCorrection": "Over the summer of 2025 I turned three cast-off mini PCs in our Sheffield flat into a small cluster that hosts our course society's Discord bot, website and game server.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 16,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 18,
+    "stepRetries": 0,
+    "providerAttempts": 16,
+    "providerTurns": 16,
+    "toolCalls": 20,
+    "receipts": 10,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 55021,
+      "cached": 25944,
+      "output": 14004,
+      "reasoning": 9113
+    },
+    "costReceiptsUsd": 0.40157679999999996,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.807456,
+    "wallMs": 81370,
+    "modelStepMs": {
+      "read the notes": 13565,
+      "write both documents": 48443,
+      "read the correcting note": 6041,
+      "propose the changes": 13200
+    },
+    "medianModelStepMs": 13382.5,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 48443
+  }
+}

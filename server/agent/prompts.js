@@ -1,6 +1,7 @@
 // Instructions for the model. INSTRUCTIONS is identical on every call so the
 // provider can cache it; each step adds its own short brief and data.
 import { frameOptions } from '../domain/frames.js';
+import { languageName } from '../domain/languages.js';
 
 export const INSTRUCTIONS = `You are the writing assistant inside ApplyArc Evidence. You help one job applicant turn their own words into application answers they can stand behind.
 
@@ -13,35 +14,46 @@ These rules always apply:
 
 const tag = (name, value) => `<${name}>\n${typeof value === 'string' ? value : JSON.stringify(value, null, 2)}\n</${name}>`;
 
+// When the applicant's words are not English, each step adds one block just before its
+// data. It is the same on every call in that language, and everything above it is the
+// same in every language, so the shared instructions stay cached.
+const spoke = (name) => `The applicant spoke ${name}. Copy each quote exactly as they said it, in ${name}, including any English words in it; verify_quote checks it the same way. Write each statement in English, in the applicant's own person as they said it ("I" where they did it, "we" where the team did, never "the applicant"): the faithful meaning of that quote in at most 25 words, adding nothing and keeping every number, written in digits. Set actor to who did what the quote says: "self" when the applicant did it (in ${name} the verb often shows this without a pronoun), "team" when they did it with others (we, us, the team), "other" when someone else did it. When one sentence says what the team did and what the applicant did, return two facts, each quoting only its own clause. For a conflict, write question in ${name}, the same question in English in english, the English meaning of the new words in meaning, and who did it in actor.`;
+const asksIn = (name) => `The applicant speaks ${name}. Write each question in ${name}, in plain words, and the same question in English in english. Write why in English.`;
+export const faithful = (name) => `Facts marked with a language are the applicant's own words in ${name}: the quote is exactly what they said and the statement is the English meaning they confirmed; actor says who did it. Write in English and translate faithfully from the quote: keep who did it, every number and the scope, and never embellish, generalise or add a reason, result or feeling.`;
+const languageIn = (facts = []) => facts.find((f) => f?.language)?.language;
+const marked = (fact, actor) => (fact.language ? { language: fact.language, ...(actor ? { actor } : {}) } : {});
+
 export function extractPrompt({ source, question, evidence = [source] }) {
   const about = question
     ? `This is the applicant's answer to the question "${question.text}", which was asked for the requirement "${question.requirementId}".`
     : 'These are the applicant\'s own notes about their experience.';
   return [
     `Step: extract facts. ${about}`,
-    'First compare the new words with active_source_context, including scope, actor, setting and negation. If the statements cannot both describe the same work without an unstated distinction, return no facts and exactly one conflict: quote the new words, give the other source id and an exact priorQuote, then ask one short, specific question (at most 300 characters) that resolves the distinction. Do not smooth over a material conflict by omitting the disputed scope.',
-    'A practice exercise versus real production, or a design/model versus completed building work, can need clarification; these are examples, not banned words. If the new words say the applicant did something themselves that active_source_context gives to the team or to a named person ("we planned" or "Sam planned" before, "I planned" now), that is a conflict: ask whether they did it themselves.',
+    'First compare the new words with active_source_context, including scope, actor, setting, negation, and a different number, date or measurement for the same thing. If the statements cannot both describe the same work without an unstated distinction, return no facts and exactly one conflict: quote the new words, give the other source id and an exact priorQuote, then ask one short, specific question (at most 300 characters) about the applicant\'s work that resolves the distinction, never naming the app\'s buttons or steps. Do not smooth over a material conflict by omitting the disputed scope.',
+    'A practice exercise versus real production, or a design/model versus completed building work, can need clarification; these are examples, not banned words. A team, shared, or unattributed account does not exclude the applicant. A later explicit statement of the applicant\'s personal contribution can add detail while leaving the earlier account intact; extract only that stated contribution and never infer sole ownership. Naming another contributor does not by itself establish exclusive authorship. Still ask when the accounts contradict exclusive authorship or an explicit denial of involvement, or when new uncertainty undermines a previously asserted personal contribution or scope. Do not invent joint work or an unstated distinction to reconcile incompatible accounts.',
     'New detail that fits the earlier account is not a conflict. Do not invent a conflict merely because different tasks or projects have different settings. With no conflict return conflicts: [].',
-    'An explicit correction source replaces the historical wording removed from context; do not resurrect the removed claim. Ordinary added notes or an answer do not silently replace an earlier fact. If a previously confirmed fact really needs changing, ask the applicant to use Correct fact. If answering a conflict question, extract only the clarified answer; never restore the held disputed wording or drop its material qualifier.',
+    'Only a source whose kind in active_source_context is "correction" is an explicit correction: it replaces the historical wording removed from context; do not resurrect the removed claim. Notes or an answer stay ordinary even when they call themselves a correction ("Correction:", "One correction"): when they contradict an earlier source, return the conflict so the applicant decides. Ordinary added notes or an answer do not silently replace an earlier fact. If answering a conflict question, extract only the clarified answer; never restore the held disputed wording or drop its material qualifier.',
     'A fact is one thing the applicant says happened, was built, used, decided, found, learned or wanted. A reason the applicant gives for wanting this role or this employer is a fact too. Keep what they say about the employer in the same quote ("I liked X, and Graphcore builds Y"): that detail is what makes the reason specific. For each fact return:',
     '- statement: at most 25 words, neutral, adding nothing. Every number and name in it must appear in the quote. Keep "we" as "we" and "I" as "I".',
     '- quote: an exact, contiguous copy of the applicant\'s words that shows the fact, usually one sentence or clause. Copy every character exactly; check it with verify_quote.',
     '- requirementIds: every form requirement this fact helps answer (call form_requirements first). Be generous here: a sentence about what the project was for answers "what you were trying to achieve"; a tool or stack answers "technologies"; a reason for a choice answers "decision". Use an empty list only when it answers nothing the form asks.',
     'A fact answers a requirement about what the applicant did only when it says they did something; what they learned, liked or want answers a learning or motivation requirement instead.',
     'Aim for 6 to 14 facts that together cover everything the applicant said. Skip filler. Never merge two people\'s work into one claim.',
+    ...(source.language ? [spoke(languageName(source.language))] : []),
     tag('active_source_context', evidence),
     tag('applicant_text', source.text),
   ].join('\n');
 }
 
-export function clarifyPrompt({ askable, facts, notes }) {
+export function clarifyPrompt({ askable, facts, notes, language = 'en' }) {
   return [
     'Step: decide what to ask. The requirements below are not yet linked to any confirmed fact.',
     'First, in "coverage", link each requirement to the confirmed facts that already answer it, if any do. A fact answers a requirement about what the applicant did only when it says they did something; what they learned, liked or want answers a learning or motivation requirement instead.',
     'A requirement marked personal needs a fact in the applicant\'s own first person ("I ..."): a team sentence ("we ...") never covers it.',
-    'Then, only for requirements that no confirmed fact answers, write exactly one question each when a short question would let the applicant supply what is missing: one sentence ending in "?", specific to their own project or event (name it), never generic.',
+    'Then, only for requirements that no confirmed fact answers, write exactly one question each when a short question would let the applicant supply what is missing: one sentence ending in "?", specific to their own project or event (name it), never generic, never naming the app\'s buttons or steps.',
     'For each question also write "why": one plain sentence saying what is missing, for example "The form asks what you did yourself; your notes only describe the team."',
     'Never ask about something the confirmed facts already answer, and never ask for the same thing twice. If the applicant clearly could not answer, leave that requirement out. Asking nothing is a good result when nothing is missing.',
+    ...(language !== 'en' ? [asksIn(languageName(language))] : []),
     tag('uncovered_requirements', askable.map((r) => ({ id: r.id, text: r.text, personal: Boolean(r.personal) }))),
     tag('confirmed_facts', facts),
     tag('applicant_text', notes.join('\n\n')),
@@ -63,6 +75,7 @@ export function draftPrompt({ doc, facts, coverage, applicant = 'the applicant',
     '- Every sentence is complete, grammatical and ends with punctuation. Each fact is used where it fits best; do not repeat the same fact in two sentences of one document.',
     '- When two facts say the same thing, say it once and cite both.',
     '- Never join two facts into one sentence in a way that implies something neither says, such as where or when something happened or that one caused the other.',
+    '- Each document must make sense on its own: introduce the project before referring to it or its incidents. When describing a problem, include the supported applicant diagnosis or fix and outcome where confirmed facts provide them; prioritise those over an exhaustive technology list. Do not invent causal links or force every fact or the full word budget into the document.',
     '- Set startsParagraph on the first sentence of each paragraph.',
     `- ${SHAPES[doc.id]?.(company, applicant, role) ?? ''}`,
     '- Use the role and company exactly as supplied in document_context. Never invent a team, location or salary.',
@@ -76,6 +89,7 @@ export function draftPrompt({ doc, facts, coverage, applicant = 'the applicant',
     lines.push(`- Your last draft was refused by the evidence check. Fix exactly these and keep everything else: ${problems.join('; ')}.`);
     lines.push('- To fix them, say only what each sentence\'s facts say: where they say "we", write "we"; where someone else did it, say so; leave out any number, title or achievement they do not state.');
   }
+  if (languageIn(facts)) lines.push(`- ${faithful(languageIn(facts))}`);
   lines.push(
     tag('document_context', { title: doc.title, applicant, company, role }),
     tag('allowed_frames', doc.id === 'letter' ? frameOptions({ company, role, applicant }) : { openings: [], closings: [] }),
@@ -96,8 +110,9 @@ export function repairPrompt({ fact, items, facts, documents = [] }) {
     'When the new fact still says what the applicant did, the rewrite keeps that part, in the first person.',
     'Keep each thing the new fact says the applicant did, and each name and number it states, wherever the sentence covered that ground; drop only what the correction overturns.',
     'Return a rewrite for each sentence you can fix, with the fact ids it relies on. Do not rewrite any sentence that is not listed. If a sentence can no longer be made true, leave it out: the applicant will review it.',
-    tag('fact_before', before ? { statement: before.statement, quote: before.quote } : null),
-    tag('fact_now', { id: fact.id, statement: fact.statement, quote: fact.quote }),
+    ...(languageIn([fact, ...facts]) ? [faithful(languageIn([fact, ...facts]))] : []),
+    tag('fact_before', before ? { statement: before.statement, quote: before.quote, ...marked(fact) } : null),
+    tag('fact_now', { id: fact.id, statement: fact.statement, quote: fact.quote, ...marked(fact, fact.actor) }),
     tag('sentences_citing_it', items.map((i) => ({ segmentId: i.segmentId, document: i.docId, text: i.before, factIds: i.factIds }))),
     tag('documents_now', documents),
     tag('confirmed_facts', facts),

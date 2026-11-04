@@ -1,0 +1,554 @@
+{
+ "at": "2026-11-03T20:21:00.318Z",
+ "runs": [
+  {
+   "clip": "notes",
+   "padded": false,
+   "hint": false,
+   "status": 200,
+   "ms": 15885,
+   "text": "Trabalha há três anos três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "languageBias": null,
+   "opening": false,
+   "werSpoken": 0.0692,
+   "errors": 11,
+   "words": 159,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "sub",
+     "me",
+     "trabalha"
+    ],
+    [
+     "sub",
+     "ana",
+     "há"
+    ],
+    [
+     "sub",
+     "trabalho",
+     "três"
+    ],
+    [
+     "sub",
+     "há",
+     "anos"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "residentes"
+    ],
+    [
+     "ins",
+     "",
+     "o"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "que"
+    ],
+    [
+     "ins",
+     "",
+     "de"
+    ]
+   ]
+  },
+  {
+   "clip": "notes",
+   "padded": false,
+   "hint": true,
+   "status": 200,
+   "ms": 11956,
+   "text": "Trabalha há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação formação de moving and handling, uso grua e trabalhamos sempre em dupla. dupla. Na unidade de demência, demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "languageBias": "Portuguese",
+   "opening": false,
+   "werSpoken": 0.0818,
+   "errors": 13,
+   "words": 159,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "del",
+     "ana",
+     ""
+    ],
+    [
+     "sub",
+     "trabalho",
+     "trabalha"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "assino"
+    ],
+    [
+     "ins",
+     "",
+     "formação"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "dupla"
+    ],
+    [
+     "ins",
+     "",
+     "demência"
+    ],
+    [
+     "ins",
+     "",
+     "comida"
+    ],
+    [
+     "ins",
+     "",
+     "braço"
+    ],
+    [
+     "ins",
+     "",
+     "de"
+    ]
+   ]
+  },
+  {
+   "clip": "notes",
+   "padded": true,
+   "hint": false,
+   "status": 200,
+   "ms": 11970,
+   "text": "Szemjen. Trabalha três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o o jantar para mais cedo. Eu fiz cartões com fotografias da da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a a participação de Safeguarding.",
+   "languageBias": null,
+   "opening": false,
+   "werSpoken": 0.0755,
+   "errors": 12,
+   "words": 159,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "del",
+     "ana",
+     ""
+    ],
+    [
+     "sub",
+     "trabalho",
+     "szemjen"
+    ],
+    [
+     "sub",
+     "há",
+     "trabalha"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ],
+    [
+     "ins",
+     "",
+     "e"
+    ],
+    [
+     "ins",
+     "",
+     "unidade"
+    ],
+    [
+     "ins",
+     "",
+     "o"
+    ],
+    [
+     "ins",
+     "",
+     "da"
+    ],
+    [
+     "ins",
+     "",
+     "no"
+    ],
+    [
+     "ins",
+     "",
+     "a"
+    ]
+   ]
+  },
+  {
+   "clip": "notes",
+   "padded": true,
+   "hint": true,
+   "status": 200,
+   "ms": 13601,
+   "text": "Szemmien. Trabalha há três anos num lar em Leeds, comecei em outubro de dois mil mil e vinte e três. Tenho a a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+   "languageBias": "Portuguese",
+   "opening": false,
+   "werSpoken": 0.044,
+   "errors": 7,
+   "words": 159,
+   "ops": [
+    [
+     "del",
+     "chamo",
+     ""
+    ],
+    [
+     "del",
+     "me",
+     ""
+    ],
+    [
+     "sub",
+     "ana",
+     "szemmien"
+    ],
+    [
+     "sub",
+     "trabalho",
+     "trabalha"
+    ],
+    [
+     "ins",
+     "",
+     "mil"
+    ],
+    [
+     "ins",
+     "",
+     "a"
+    ],
+    [
+     "del",
+     "a",
+     ""
+    ]
+   ]
+  },
+  {
+   "clip": "answer",
+   "padded": false,
+   "hint": false,
+   "status": 200,
+   "ms": 3826,
+   "text": "Permim, dignidade a bater à porta antes de entrar, explicar o que vou fazer antes de a higiene pessoal e fechar sempre as cortinas. E respeita a cultura e a religião de cada pessoa. Pergunta o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "languageBias": null,
+   "opening": false,
+   "werSpoken": 0.1373,
+   "errors": 7,
+   "words": 51,
+   "ops": [
+    [
+     "del",
+     "para",
+     ""
+    ],
+    [
+     "sub",
+     "mim",
+     "permim"
+    ],
+    [
+     "sub",
+     "é",
+     "a"
+    ],
+    [
+     "ins",
+     "",
+     "de"
+    ],
+    [
+     "sub",
+     "da",
+     "a"
+    ],
+    [
+     "sub",
+     "respeito",
+     "respeita"
+    ],
+    [
+     "sub",
+     "pergunto",
+     "pergunta"
+    ]
+   ]
+  },
+  {
+   "clip": "answer",
+   "padded": false,
+   "hint": true,
+   "status": 200,
+   "ms": 4433,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "languageBias": "Portuguese",
+   "opening": true,
+   "werSpoken": 0.0392,
+   "errors": 2,
+   "words": 51,
+   "ops": [
+    [
+     "ins",
+     "",
+     "entrar"
+    ],
+    [
+     "ins",
+     "",
+     "cultura"
+    ]
+   ]
+  },
+  {
+   "clip": "answer",
+   "padded": true,
+   "hint": false,
+   "status": 200,
+   "ms": 4375,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "languageBias": null,
+   "opening": true,
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 51,
+   "ops": []
+  },
+  {
+   "clip": "answer",
+   "padded": true,
+   "hint": true,
+   "status": 200,
+   "ms": 4593,
+   "text": "Para mim, dignidade é bater à porta antes de entrar, explicar o que vou fazer antes da higiene pessoal e fechar sempre as cortinas. E respeito a cultura e a religião de cada pessoa, pergunto o que quer comer, como quer ser tratada e se prefere ser ajudada por uma mulher.",
+   "languageBias": "Portuguese",
+   "opening": true,
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 51,
+   "ops": []
+  },
+  {
+   "clip": "correction",
+   "padded": false,
+   "hint": false,
+   "status": 200,
+   "ms": 2139,
+   "text": "Coração, coração, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias",
+   "languageBias": null,
+   "opening": false,
+   "werSpoken": 0.1176,
+   "errors": 2,
+   "words": 17,
+   "ops": [
+    [
+     "ins",
+     "",
+     "coração"
+    ],
+    [
+     "sub",
+     "correção",
+     "coração"
+    ]
+   ]
+  },
+  {
+   "clip": "correction",
+   "padded": false,
+   "hint": true,
+   "status": 200,
+   "ms": 2426,
+   "text": "Correção. Os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "languageBias": "Portuguese",
+   "opening": true,
+   "werSpoken": 0,
+   "errors": 0,
+   "words": 17,
+   "ops": []
+  },
+  {
+   "clip": "correction",
+   "padded": true,
+   "hint": false,
+   "status": 200,
+   "ms": 2186,
+   "text": "Coração, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias.",
+   "languageBias": null,
+   "opening": false,
+   "werSpoken": 0.0588,
+   "errors": 1,
+   "words": 17,
+   "ops": [
+    [
+     "sub",
+     "correção",
+     "coração"
+    ]
+   ]
+  },
+  {
+   "clip": "correction",
+   "padded": true,
+   "hint": true,
+   "status": 200,
+   "ms": 2162,
+   "text": "Correção, os turnos da noite foram dois anos não três, no último ano ano passei a fazer dias.",
+   "languageBias": "Portuguese",
+   "opening": true,
+   "werSpoken": 0.0588,
+   "errors": 1,
+   "words": 17,
+   "ops": [
+    [
+     "ins",
+     "",
+     "ano"
+    ]
+   ]
+  }
+ ],
+ "receipts": [
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58240,
+   "costUsd": 0.0029119999999999997,
+   "totalMs": 15853
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58240,
+   "costUsd": 0.0029119999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 11950
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58880,
+   "costUsd": 0.002944,
+   "totalMs": 11964
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 58880,
+   "costUsd": 0.002944,
+   "languageBias": "Portuguese",
+   "totalMs": 13595
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 15520,
+   "costUsd": 0.000776,
+   "totalMs": 3819
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 15520,
+   "costUsd": 0.000776,
+   "languageBias": "Portuguese",
+   "totalMs": 4427
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "totalMs": 4369
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 16160,
+   "costUsd": 0.0008079999999999999,
+   "languageBias": "Portuguese",
+   "totalMs": 4588
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 6640,
+   "costUsd": 0.000332,
+   "totalMs": 2133
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 6640,
+   "costUsd": 0.000332,
+   "languageBias": "Portuguese",
+   "totalMs": 2421
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "totalMs": 2182
+  },
+  {
+   "step": "transcribe",
+   "model": "muse-voice-transcribe-1.0",
+   "audioMs": 7200,
+   "costUsd": 0.00035999999999999997,
+   "languageBias": "Portuguese",
+   "totalMs": 2157
+  }
+ ]
+}

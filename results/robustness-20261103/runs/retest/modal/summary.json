@@ -1,0 +1,94 @@
+{
+  "host": "modal",
+  "attempted": 2,
+  "completed": 2,
+  "notStarted": [],
+  "stoppedBecause": null,
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "withinLimits": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "citationsConfirmed": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "manualSentenceIntact": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "exportNotSubmitted": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "noServerErrors": {
+      "pass": 2,
+      "evaluable": 2
+    },
+    "noUncitedNumbers": {
+      "pass": 2,
+      "evaluable": 2
+    }
+  },
+  "medianModelStepMs": 2880.5,
+  "worstModelStep": {
+    "persona": "ellie",
+    "name": "write both documents",
+    "ms": 33658
+  },
+  "costPerJourneyUsd": {
+    "median": 0.1467,
+    "min": 0.142493,
+    "max": 0.150907,
+    "total": 0.2934
+  },
+  "routes": {
+    "ellie": "use-this-correction",
+    "priya": "use-this-correction"
+  },
+  "aborted": [],
+  "findings": [
+    {
+      "persona": "priya",
+      "kind": "needs-review",
+      "note": "no usable rewrite for letter/letter-10: The document retention review was missing or malformed.",
+      "before": "I wrote the Terraform modules for the node pools and the Karpenter autoscaler config myself, and Mateo reviewed them."
+    }
+  ],
+  "table": [
+    {
+      "persona": "ellie",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 12,
+      "tools": 0,
+      "costUsd": 0.142493,
+      "wallMs": 54577
+    },
+    {
+      "persona": "priya",
+      "completed": true,
+      "route": "use-this-correction",
+      "invariantsPassed": 9,
+      "retries": 0,
+      "attempts": 13,
+      "tools": 0,
+      "costUsd": 0.150907,
+      "wallMs": 54058
+    }
+  ]
+}

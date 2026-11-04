@@ -33,7 +33,7 @@ describe('the welcome', () => {
   it('keeps What Meta did one click away, on the welcome and in the walk-through', async () => {
     render(<App />);
     fireEvent.click(await screen.findByRole('button', { name: 'Try it with Ellie’s notes' }, wait));
-    await screen.findByText('Step 2 of 5', {}, wait);
+    await screen.findByText('Step 2 of 4', {}, wait);
     expect(document.querySelector('.guided-receipts .receipts-toggle')).toBeTruthy();
   });
 

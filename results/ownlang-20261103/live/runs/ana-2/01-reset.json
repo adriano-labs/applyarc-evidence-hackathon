@@ -1,0 +1,207 @@
+{
+ "workspace": {
+  "schema": 1,
+  "revision": 0,
+  "createdAt": "2026-11-03T20:38:48.660Z",
+  "applicant": {
+   "name": null,
+   "sources": [],
+   "facts": []
+  },
+  "application": {
+   "form": {
+    "id": "graphcore-graduate-cloud-platform-engineer-2027",
+    "company": "Graphcore",
+    "role": "Graduate Cloud Platform Engineer 2027",
+    "location": "Bristol, UK",
+    "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+    "snapshot": {
+     "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+     "fetchedAt": "2026-10-26T22:41:53Z",
+     "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+     "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+    },
+    "documents": [
+     {
+      "id": "answer",
+      "title": "Project answer",
+      "fieldId": "question_38884073002",
+      "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+      "wordLimit": 300,
+      "requirements": [
+       {
+        "id": "goal",
+        "text": "What you were trying to achieve"
+       },
+       {
+        "id": "tech",
+        "text": "The main components or technologies you used"
+       },
+       {
+        "id": "decision",
+        "text": "One technical decision you made and why"
+       },
+       {
+        "id": "problem",
+        "text": "One problem you encountered, how you investigated it and what you learned"
+       },
+       {
+        "id": "contribution",
+        "text": "Your individual contribution, if you worked as part of a team",
+        "personal": true
+       }
+      ],
+      "limitSource": "form"
+     },
+     {
+      "id": "letter",
+      "title": "Cover letter",
+      "fieldId": "cover_letter_text",
+      "question": "Cover Letter (required)",
+      "wordLimit": 400,
+      "requirements": [
+       {
+        "id": "motivation",
+        "text": "Why this role and this company, in your own words"
+       },
+       {
+        "id": "evidence",
+        "text": "The experience that shows you can do the job"
+       }
+      ],
+      "limitSource": "guide",
+      "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+     }
+    ],
+    "portalTasks": [
+     "First Name",
+     "Last Name",
+     "Email",
+     "Phone",
+     "Resume/CV",
+     "Do you have the legal right to work in the UK without sponsorship?",
+     "Have you added your full legal name and surname (including any middle names)?",
+     "What is your predicted/final degree classification?",
+     "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+     "Would you need to relocate to work regularly from this office?",
+     "How did you first hear about Graphcore?",
+     "Please select your right to work status"
+    ]
+   },
+   "coverage": {},
+   "questions": [],
+   "documents": {
+    "answer": null,
+    "letter": null
+   },
+   "repair": null,
+   "approvals": {
+    "answer": null,
+    "letter": null
+   },
+   "exports": []
+  }
+ },
+ "view": {
+  "next": "notes",
+  "coverage": [
+   {
+    "id": "goal",
+    "text": "What you were trying to achieve",
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "tech",
+    "text": "The main components or technologies you used",
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "decision",
+    "text": "One technical decision you made and why",
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "problem",
+    "text": "One problem you encountered, how you investigated it and what you learned",
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "contribution",
+    "text": "Your individual contribution, if you worked as part of a team",
+    "personal": true,
+    "docId": "answer",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "motivation",
+    "text": "Why this role and this company, in your own words",
+    "docId": "letter",
+    "factIds": [],
+    "covered": false
+   },
+   {
+    "id": "evidence",
+    "text": "The experience that shows you can do the job",
+    "docId": "letter",
+    "factIds": [],
+    "covered": false
+   }
+  ],
+  "draftBlockers": [
+   "Add your notes first.",
+   "Confirm at least one fact."
+  ],
+  "exportBlockers": [
+   "Approve the current project answer.",
+   "Approve the current cover letter."
+  ],
+  "stats": {
+   "answer": {
+    "words": 0,
+    "wordLimit": 300,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   },
+   "letter": {
+    "words": 0,
+    "wordLimit": 400,
+    "overLimit": false,
+    "unanswered": [],
+    "leftOut": [],
+    "ownWords": 0
+   }
+  },
+  "approvals": {
+   "answer": "none",
+   "letter": "none"
+  },
+  "citations": {},
+  "conflictDecisions": [],
+  "sourceCorrections": []
+ },
+ "mode": {
+  "id": "meta",
+  "label": "Meta Muse Wonder 1.0",
+  "model": "muse-wonder-1.0",
+  "isMeta": true
+ },
+ "budget": {
+  "capUsd": 8,
+  "spentUsd": 1.671979,
+  "reservedUsd": 0,
+  "remainingUsd": 6.328021
+ },
+ "voice": true,
+ "working": false
+}

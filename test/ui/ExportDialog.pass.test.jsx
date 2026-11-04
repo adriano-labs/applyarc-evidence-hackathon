@@ -19,7 +19,7 @@ describe('ExportDialog: Evidence Pass', () => {
     render(<ExportDialog pack={pack} onClose={vi.fn()} onCopy={vi.fn()} onDownload={vi.fn()} onDownloadPass={onDownloadPass} />);
     fireEvent.click(screen.getByRole('button', { name: 'Download Evidence Pass' }));
     expect(onDownloadPass).toHaveBeenCalledTimes(1);
-    expect(screen.getByText('One page to attach: every sentence opens your own words behind it.')).toBeTruthy();
+    expect(screen.getByText('One page to attach: every cited sentence opens your own words behind it.')).toBeTruthy();
   });
 });
 

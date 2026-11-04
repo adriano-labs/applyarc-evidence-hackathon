@@ -1,0 +1,592 @@
+{
+  "exportedAt": "2026-11-03T15:00:41.428Z",
+  "mode": {
+    "id": "compatible",
+    "label": "Meta Muse Spark Open on Modal",
+    "model": "meta-models/Muse-Spark-Open-816B-A42B",
+    "isMeta": true
+  },
+  "budget": {
+    "capUsd": 80,
+    "spentUsd": 0.463192,
+    "reservedUsd": 0,
+    "remainingUsd": 79.536808
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "219f577882fa4756956cfeedc779463f"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1692,
+        "cached": 0,
+        "output": 935,
+        "reasoning": 0
+      },
+      "costUsd": 0.00608875,
+      "firstEventMs": 815,
+      "firstOutputMs": 1622,
+      "totalMs": 2554,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:57:07.500Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "f819e9147c3e4f848f1611fc0dc00d69"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1864,
+        "cached": 0,
+        "output": 956,
+        "reasoning": 0
+      },
+      "costUsd": 0.006393,
+      "firstEventMs": 690,
+      "firstOutputMs": 2504,
+      "totalMs": 2957,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T14:57:15.381Z"
+    },
+    {
+      "step": "extract",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "1160614de6aa48ada2b153862446fd41"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1492,
+        "cached": 0,
+        "output": 479,
+        "reasoning": 0
+      },
+      "costUsd": 0.00390075,
+      "firstEventMs": 626,
+      "firstOutputMs": 1620,
+      "totalMs": 1836,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:57:25.210Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "dcd686949d7144259c7db6203fade5ac"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2038,
+        "cached": 0,
+        "output": 4019,
+        "reasoning": 0
+      },
+      "costUsd": 0.01962825,
+      "firstEventMs": 595,
+      "firstOutputMs": 10235,
+      "totalMs": 10945,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:57:41.821Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "b28d4debf063432999d1b3a19b28ead7"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2340,
+        "cached": 0,
+        "output": 434,
+        "reasoning": 0
+      },
+      "costUsd": 0.0047695,
+      "firstEventMs": 711,
+      "firstOutputMs": 1257,
+      "totalMs": 1654,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:57:43.494Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "11d33e9a5140489e9f644d7adf7d35a2"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2175,
+        "cached": 0,
+        "output": 6187,
+        "reasoning": 0
+      },
+      "costUsd": 0.0290135,
+      "firstEventMs": 792,
+      "firstOutputMs": 15060,
+      "totalMs": 15757,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:57:46.573Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "fe2e2b12561846a3b6b72b49d7dc0a99"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4558,
+        "cached": 0,
+        "output": 3187,
+        "reasoning": 0
+      },
+      "costUsd": 0.01924225,
+      "firstEventMs": 552,
+      "firstOutputMs": 7639,
+      "totalMs": 8767,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:57:55.359Z"
+    },
+    {
+      "step": "revise",
+      "docId": "answer",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "2b642a2151774d7c99c1376f6787a8c9"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1638,
+        "cached": 0,
+        "output": 1074,
+        "reasoning": 0
+      },
+      "costUsd": 0.006612,
+      "firstEventMs": 1019,
+      "firstOutputMs": 3260,
+      "totalMs": 3441,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:57:58.830Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "779463a2147c4138bd90a2dcde961a1d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2141,
+        "cached": 0,
+        "output": 8152,
+        "reasoning": 0
+      },
+      "costUsd": 0.03732225,
+      "firstEventMs": 309,
+      "firstOutputMs": 21401,
+      "totalMs": 22454,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:58:05.979Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "d7244d2279f74098a526d156c310130a"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3889,
+        "cached": 0,
+        "output": 3514,
+        "reasoning": 0
+      },
+      "costUsd": 0.01979575,
+      "firstEventMs": 820,
+      "firstOutputMs": 9425,
+      "totalMs": 10467,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:58:16.464Z"
+    },
+    {
+      "step": "revise",
+      "docId": "letter",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "e692babd2f3b4ba88aae306ffc3d24d8"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1816,
+        "cached": 0,
+        "output": 1567,
+        "reasoning": 0
+      },
+      "costUsd": 0.00892975,
+      "firstEventMs": 615,
+      "firstOutputMs": 3752,
+      "totalMs": 4027,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:58:20.520Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "109a3fa70b8f492bb5f08bb991f46dea"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1204,
+        "cached": 0,
+        "output": 1074,
+        "reasoning": 0
+      },
+      "costUsd": 0.0060695,
+      "firstEventMs": 302,
+      "firstOutputMs": 2904,
+      "totalMs": 3175,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:58:23.711Z"
+    },
+    {
+      "step": "extract",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "ab3554365377436dab5f8260b9599567"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1506,
+        "cached": 0,
+        "output": 698,
+        "reasoning": 0
+      },
+      "costUsd": 0.004849,
+      "firstEventMs": 612,
+      "firstOutputMs": 2029,
+      "totalMs": 2340,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:59:14.682Z"
+    },
+    {
+      "step": "repair",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "867adc223dca4d6e8d1695043928d348"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2749,
+        "cached": 0,
+        "output": 2754,
+        "reasoning": 0
+      },
+      "costUsd": 0.01514075,
+      "firstEventMs": 671,
+      "firstOutputMs": 7469,
+      "totalMs": 7805,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:59:28.441Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "7c6bcb87360e44b1a33fb12daa55aecf"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2764,
+        "cached": 0,
+        "output": 3427,
+        "reasoning": 0
+      },
+      "costUsd": 0.01801975,
+      "firstEventMs": 757,
+      "firstOutputMs": 10137,
+      "totalMs": 10962,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:59:39.423Z"
+    },
+    {
+      "step": "revise",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "db836b9823c442a4bf387aa7dd1d7596"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2381,
+        "cached": 0,
+        "output": 1101,
+        "reasoning": 0
+      },
+      "costUsd": 0.0076555,
+      "firstEventMs": 803,
+      "firstOutputMs": 3147,
+      "totalMs": 3470,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:59:42.959Z"
+    },
+    {
+      "step": "review",
+      "provider": "compatible",
+      "isMeta": true,
+      "model": "meta-models/Muse-Spark-Open-816B-A42B",
+      "host": "adriangeorgem--ep-applyarc-evidence-dev-server.us-west.modal.direct",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "7cd32960617b46beb0e0bcc629c79d38"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2340,
+        "cached": 0,
+        "output": 2584,
+        "reasoning": 0
+      },
+      "costUsd": 0.013907,
+      "firstEventMs": 337,
+      "firstOutputMs": 8003,
+      "totalMs": 8522,
+      "rateLimit": {
+        "remainingRequests": null,
+        "remainingTokens": null
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:59:51.500Z"
+    }
+  ],
+  "stages": [
+    {
+      "kind": "stage",
+      "flow": "draft",
+      "label": "Adding your own contribution to the letter",
+      "at": "2026-11-03T14:57:43.515Z"
+    },
+    {
+      "kind": "stage",
+      "flow": "draft",
+      "label": "Revising 1 unsupported sentence",
+      "at": "2026-11-03T14:57:55.377Z"
+    },
+    {
+      "kind": "stage",
+      "flow": "draft",
+      "label": "Revising 2 unsupported sentences",
+      "at": "2026-11-03T14:58:16.482Z"
+    },
+    {
+      "kind": "stage",
+      "flow": "repair",
+      "label": "Revising 2 unsupported repair sentences",
+      "at": "2026-11-03T14:59:39.477Z"
+    }
+  ]
+}

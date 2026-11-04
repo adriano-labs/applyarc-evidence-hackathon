@@ -1,0 +1,14 @@
+{
+ "out": "~/Developer/claude/evidence/hackathon-29oct/ownlang/evidence/live/runs/ana-2",
+ "failures": [],
+ "costUsd": 0.4008,
+ "wallSeconds": 128.8,
+ "notes": 12,
+ "refused": 0,
+ "werNotes": 0.0755,
+ "reopen": [
+  "answer/answer-19",
+  "letter/letter-11"
+ ],
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

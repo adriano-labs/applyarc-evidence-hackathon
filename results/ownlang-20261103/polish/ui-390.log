@@ -1,0 +1,47 @@
+   1s clicked Try it with Ana’s voice note
+   1s PASS transcript: repeated words named · Muse Voice Transcribe repeated 3 words: “Eu Eu”, “No No”, “da da”. Remove the repeats · or fix them yourself above.
+   1s PASS transcript: words unchanged until tapped
+   1s PASS 02-transcript-repeats-REPLAYED: no sideways scroll
+   1s clicked Remove the repeats
+   1s PASS transcript: one tap removes each repeat, nothing else · Chamome Ana. Eu trabalho há três anos num lar em Leeds, comecei em outubro de do
+   1s PASS transcript: line gone once removed
+   1s PASS 03-repeats-removed-REPLAYED: no sideways scroll
+   2s clicked Read Ana’s words
+   2s PASS question row: every button and the caption on one line
+   2s PASS 06b-question-with-voice-STUB: no sideways scroll
+   3s PASS welcome: advert is public, not a partner, at the citation
+   3s PASS welcome: her written note offered with no voice
+   3s PASS 01-welcome: no sideways scroll
+   3s clicked Try it with Ana’s written note
+   3s PASS written note: tag says fictional, nothing sent
+   3s PASS written note: no repeated-words line
+   3s PASS 04-written-note: no sideways scroll
+   3s clicked Read Ana’s words
+   3s PASS fact card: speaks of her · From her notes · Ana did this
+   3s PASS 05-fact-card: no sideways scroll
+   4s PASS 06-question: no sideways scroll
+   4s clicked Use Ana’s sample answer
+   4s clicked Answer
+   5s clicked Write her application
+   5s clicked Next: correct one fact
+   5s PASS 07-key-moment: no sideways scroll
+   5s clicked Correct this fact
+   5s apply: first shown · bottom edge at 832 px of 844
+   5s PASS 08-what-changed: no sideways scroll
+   5s PASS 08b-apply: no sideways scroll
+   5s PASS after apply: review is secondary
+   5s PASS 09-after-apply: no sideways scroll
+   5s approved supporting evidence
+   5s approved cover letter
+   5s PASS finish: meanings are working translations she confirmed
+   5s PASS finish: rough notes (her note was written, not spoken)
+   5s PASS 10-finish: no sideways scroll
+   5s clicked See the application
+   6s PASS pack: NOT SUBMITTED and the demo line
+   6s PASS 11-pack: no sideways scroll
+   6s PASS pack .md: NOT SUBMITTED first, demo line after the notice
+   6s PASS Evidence Pass: stamped NOT SUBMITTED, with the demo line · NOT SUBMITTED / Demo: fictional applicant.
+   6s PASS 12-evidence-pass: no sideways scroll
+   6s PASS 13-evidence-pass-opened: no sideways scroll
+   6s PASS no console errors
+32 of 32 checks passed at 390x844

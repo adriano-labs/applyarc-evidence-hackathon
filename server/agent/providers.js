@@ -23,9 +23,10 @@ function meta(env) {
     effort = value;
   }
   const label = model === 'muse-wonder-1.0' ? 'Meta Muse Wonder 1.0' : 'Meta Muse Spark 1.3';
+  const baseUrl = env.META_BASE_URL ?? 'https://api.meta.ai/v1';
   return {
     id: 'meta', label, isMeta: true, wire: 'responses',
-    baseUrl: env.META_BASE_URL ?? 'https://api.meta.ai/v1', model,
+    baseUrl, host: new URL(baseUrl).hostname, model,
     promptCacheKey: true, safetyIdentifier: true,
     effort: effort ?? null,
     headers: () => ({ authorization: `Bearer ${key}` }),
@@ -45,7 +46,7 @@ function compatible(env) {
   const firstEventTimeoutMs = Number(env.COMPAT_FIRST_EVENT_TIMEOUT_MS ?? 45000);
   return {
     id: 'compatible', label, isMeta: true, wire,
-    baseUrl, model, priceModel,
+    baseUrl, host: env.COMPAT_HOST ?? new URL(baseUrl).hostname, model, priceModel,
     structured, reasoning,
     promptCacheKey: false, safetyIdentifier: false,
     effort: null,

@@ -14,18 +14,21 @@ async function blank() {
 const argsFor = (ws) => ({ form: ws.application.form, doc: ws.application.form.documents[0], docId: 'answer', facts: ws.applicant.facts, coverage: [], applicant: ws.applicant.name });
 const noEvents = () => {};
 
-describe('rewording invalid output in draft', () => {
-  it('skips rewording on invalid-output and continues without it', async () => {
+describe('rewording that is unreadable or cut short in draft', () => {
+  it.each([
+    ['invalid-output', 'The rewording step sent an answer that could not be read; going on without it'],
+    ['incomplete', 'The rewording step was cut short; going on without it'],
+  ])('skips rewording on %s and continues without it', async (code, label) => {
     const ws = await blank();
     const emit = vi.fn();
     const agent = {
       provider: { id: 'meta-test-double' },
       draft: vi.fn().mockResolvedValue({ segments: [good, bad] }),
-      revise: vi.fn().mockRejectedValue(Object.assign(new Error('bad'), { code: 'invalid-output' })),
+      revise: vi.fn().mockRejectedValue(Object.assign(new Error('bad'), { code })),
       review: vi.fn(async ({ claims }) => ({ decisions: claims.map((claim) => ({ id: claim.id, verdict: claim.text.includes('production') ? 'contradicted' : 'supported', reason: 'The evidence does not say this.' })) })),
     };
     const dropped = await draftOne(ws, 'answer', argsFor(ws), agent, emit);
-    expect(emit).toHaveBeenCalledWith({ type: 'stage', label: 'The rewording step sent an answer that could not be read; going on without it' });
+    expect(emit).toHaveBeenCalledWith({ type: 'stage', decision: true, label });
     expect(ws.application.documents.answer.segments.map((s) => s.text)).toEqual([good.text]);
     expect(dropped.some((d) => d.text === bad.text)).toBe(true);
   });

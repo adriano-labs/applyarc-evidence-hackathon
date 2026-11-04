@@ -1,0 +1,12 @@
+
+ RUN  v5.0.5 ~/Developer/claude/evidence/hackathon-29oct/clean-a859bf8
+
+
+ Test Files  200 passed (200)
+      Tests  1252 passed (1252)
+   Start at  23:52:41
+   Duration  38.47s (environment 40%, tests 38%, import 19%, transform 2%, worker 1%)
+
+    Isolate  200 workers spawned · ~193ms startup each (spawn + environment, per file)
+             at least ~19.09s faster with isolate: false — reuses workers across files instead of one per file
+

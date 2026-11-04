@@ -7,7 +7,9 @@ import { toolLine } from './flow.js';
 
 const STALE = 'This was already changed, in another tab or by a second click. Showing the latest.';
 // Failures where trying the same thing again can help; a refusal would only repeat.
-const RETRYABLE = new Set(['busy', 'cut', 'timeout', 'network', 'invalid-output', 'invalid-draft', 'failed', 'incomplete', 'internal']);
+const RETRYABLE = new Set(['busy', 'cut', 'timeout', 'network', 'invalid-output', 'invalid-draft', 'failed', 'incomplete', 'internal', 'provider']);
+// The demo's shared budget ran out mid-journey; a fresh start runs on the labelled fixture.
+const CAP_HINT = 'Press Start again to continue with Ellie’s or Ana’s labelled sample.';
 const disconnected = (error) => error?.code === 'cut' || error?.code === 'network' || error instanceof TypeError;
 
 export function useWorkspace() {
@@ -91,8 +93,9 @@ export function useWorkspace() {
       return null;
     }
     const canRetry = RETRYABLE.has(error?.code);
-    setNotice({ kind: 'error', message: canRetry ? `${error.message ?? ''} Nothing you saved was lost.`.trim() : error.message,
-      ...(canRetry ? { retry } : {}) });
+    const message = canRetry ? `${error.message ?? ''} Nothing you saved was lost.`.trim()
+      : error?.code === 'cap' ? `${error.message ?? ''} ${CAP_HINT}`.trim() : error.message;
+    setNotice({ kind: 'error', message, ...(canRetry ? { retry } : {}) });
     return null;
   }, [startRecovery]);
 
@@ -206,13 +209,21 @@ export function progress(busy, event) {
   }
   if (event.type === 'tool') {
     const label = toolLine(event.name, event.note).slice(0, 500);
-    return { ...busy, tools: [...(busy.tools ?? []), label].slice(-8), history: recent(busy.history, 'tool', label) };
+    return { ...busy, toolCounts: tallied(busy.toolCounts, event), tools: [...(busy.tools ?? []), label].slice(-8), history: recent(busy.history, 'tool', label) };
   }
   if (event.type === 'document-ready') return preview(busy, event);
   if (event.type !== 'model') return busy;
   if (event.event === 'delta') return { ...busy, chars: event.chars, retry: null };
   if (event.event === 'retry') return { ...busy, retry: { attempt: event.attempt + 1, of: 3, waitMs: event.waitMs, injected: Boolean(event.injected) } };
   return busy;
+}
+
+// Calls per tool so far, plus how many quotes matched and the latest word count.
+function tallied(counts = {}, { name, note }) {
+  const next = { ...counts, [name]: (counts[name] ?? 0) + 1 };
+  if (name === 'verify_quote' && note === 'verbatim') next.verbatim = (counts.verbatim ?? 0) + 1;
+  if (name === 'word_count' && typeof note === 'string') next.words = note.slice(0, 40);
+  return next;
 }
 
 function recent(history = [], kind, label) {

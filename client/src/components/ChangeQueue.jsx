@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
-import { diffLines } from '../lib/diff.js';
+import { repairProvenance } from '../lib/trail.js';
 import './ChangeQueue.css';
 
+// `receipts`: who proposed the wording and whether it was re-checked, from the receipts.
+// `statusShown`: the page already shows the running stage above, so the queue does not repeat it.
 export function ChangeQueue({
   repair,
   fact,
@@ -16,6 +18,8 @@ export function ChangeQueue({
   onPropose,
   onCancel,
   untouchedCount,
+  receipts = [],
+  statusShown = false,
 }) {
   const items = repair?.items ?? [];
   const needs = items.filter((item) => item.status !== 'proposed' && item.decision == null).length;
@@ -93,7 +97,7 @@ export function ChangeQueue({
     if (item.status === 'proposed') return { cls: 'proposed', text: 'Proposed' };
     if (item.status === 'conflict') return { cls: 'needs', text: 'Needs you' };
     if (item.status === 'needs-review') return { cls: 'needs', text: 'Needs review' };
-    if (item.status === 'pending') return { cls: 'waiting', text: 'Waiting' };
+    if (item.status === 'pending') return { cls: 'waiting', text: 'Reviewing…' };
     return { cls: item.status, text: item.status };
   };
 
@@ -107,29 +111,30 @@ export function ChangeQueue({
 
   const applyDisabled = isBusy || needs > 0 || repair?.status !== 'review';
 
-  // A sentence as one line, its changed runs marked with `Mark` (del or ins).
-  const line = (kind, label, runs, Mark) => (
+  const passageLine = (kind, label, text) => (
     <p className={`queue-line queue-${kind}`}>
       <span className="queue-line-label">{label}</span>
-      <span className="queue-line-text">{runs.map((r, k) => (r.changed ? <Mark key={k}>{r.text}</Mark> : <span key={k}>{r.text}</span>))}</span>
+      <span className="queue-line-text">{text}</span>
     </p>
   );
 
   const renderItemDiff = (item) => {
-    const selected = item.decision === 'write' ? item.written : item.decision === 'keep' ? item.before : item.after;
+    const selected = item.decision === 'write' ? item.written :
+      item.decision === 'keep' ? item.before : item.after;
     if (waiting || !selected) {
       return (
         <>
-          {line('was', 'Was', [{ text: item.before, changed: false }], 'del')}
+          {passageLine('was', 'Current wording', item.before)}
           {waiting ? null : <span className="queue-none">{item.reason || 'No rewrite proposed.'} Keep it only if you can stand behind it, or write your own.</span>}
         </>
       );
     }
-    const { was, now } = diffLines(item.before, selected);
+    const label = item.decision === 'write' ? 'Your wording' :
+      item.decision === 'keep' ? 'Keeping unchanged' : 'Proposed wording';
     return (
       <div className="queue-diff-pair">
-        {line('was', 'Was', was, 'del')}
-        {line('now', item.decision === 'write' ? 'Your wording' : 'Now', now, 'ins')}
+        {passageLine('was', 'Current wording', item.before)}
+        {passageLine('now', label, selected)}
       </div>
     );
   };
@@ -148,6 +153,7 @@ export function ChangeQueue({
   };
 
   const showNeedsChip = !waiting && needs > 0;
+  const provenance = waiting ? null : repairProvenance(receipts);
 
   return (
     <section className="queue" aria-labelledby="queue-title" tabIndex={-1} onKeyDown={waiting ? undefined : handleKeyDown} ref={sectionRef}>
@@ -176,6 +182,7 @@ export function ChangeQueue({
           ) : null}
         </div>
         <p className="queue-summary visually-hidden" role="status">{buildSummary()}</p>
+        {provenance ? <p className="queue-provenance">{provenance}</p> : null}
         {showNeedsChip ? (
           <span className="chip needs chip-needs">{needs === 1 ? '1 needs you' : `${needs} need you`}</span>
         ) : null}
@@ -183,7 +190,7 @@ export function ChangeQueue({
 
       {isRecovering ? <p className="queue-busy" aria-live="polite">Checking saved changes…</p> : null}
       {!isRecovering && pending ? <p className="queue-busy" aria-live="polite">Saving your changes…</p> : null}
-      {!isRecovering && !pending && isRepairBusy ? <p className="queue-busy" aria-live="polite">Rewriting the sentences that cite this fact…</p> : null}
+      {!isRecovering && !pending && isRepairBusy && !statusShown ? <p className="queue-busy" aria-live="polite">Rewriting the sentences that cite this fact…</p> : null}
 
       {waiting && !isBusy ? (
         <div className="queue-waiting">
@@ -196,7 +203,7 @@ export function ChangeQueue({
 
       <ol className="queue-items">
         {items.map((item, i) => {
-          const chip = waiting ? { cls: 'waiting', text: 'Waiting' } : getChip(item);
+          const chip = waiting ? { cls: 'waiting', text: 'Rewriting…' } : getChip(item);
           const takeChecked = isTakeChecked(item);
           const keepChecked = isKeepChecked(item);
           const writeChecked = isWriteChecked(item);
@@ -246,7 +253,7 @@ export function ChangeQueue({
 
               {onShow ? (
                 <button type="button" className="btn link small queue-show" onClick={() => onShow(item.docId, item.segmentId)}>
-                  {item.docId === 'letter' ? 'Show in the cover letter' : 'Show in the project answer'}
+                  Show in the {(docTitles?.[item.docId] ?? (item.docId === 'letter' ? 'Cover letter' : 'Project answer')).toLowerCase()}
                   <ArrowRight size={12} aria-hidden="true" />
                 </button>
               ) : null}

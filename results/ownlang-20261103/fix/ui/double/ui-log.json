@@ -1,0 +1,72 @@
+{
+ "base": "http://127.0.0.1:3197",
+ "check": "double",
+ "viewport": [
+  1440,
+  900
+ ],
+ "checks": [
+  {
+   "name": "Ana’s start ran once and stayed in the walk-through",
+   "pass": true,
+   "detail": "POST /api/actions/startSample"
+  },
+  {
+   "name": "Ellie’s start ran once and stayed in the walk-through",
+   "pass": true,
+   "detail": "POST /api/actions/startSample | POST /api/actions/startSample"
+  }
+ ],
+ "requests": [
+  "POST /api/actions/startSample",
+  "POST /api/actions/startSample"
+ ],
+ "errors": [],
+ "log": [
+  {
+   "s": 1,
+   "what": "clicked Try it with Ana’s voice note",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "double-clicked Read Ana’s words",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "screenshot 01-ana-after-double",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "PASS Ana’s start ran once and stayed in the walk-through",
+   "detail": "POST /api/actions/startSample"
+  },
+  {
+   "s": 1,
+   "what": "clicked Start again",
+   "detail": ""
+  },
+  {
+   "s": 1,
+   "what": "clicked Start again",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "double-clicked Try it with Ellie’s notes",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "screenshot 02-ellie-after-double",
+   "detail": ""
+  },
+  {
+   "s": 2,
+   "what": "PASS Ellie’s start ran once and stayed in the walk-through",
+   "detail": "POST /api/actions/startSample | POST /api/actions/startSample"
+  }
+ ]
+}

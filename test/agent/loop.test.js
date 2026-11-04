@@ -64,6 +64,17 @@ describe('the tool loop, as Meta’s Responses API expects it', () => {
     expect(receipts[0].costUsd).toBeCloseTo(0.002, 9);
   });
 
+  it('notes a word count against the form’s limit, or as a plain count when the step has none', async () => {
+    const count = { type: 'function_call', id: 'fc_2', call_id: 'call_2', name: 'word_count', arguments: JSON.stringify({ text: 'one two three' }) };
+    const note = async (toolContext) => {
+      const { result, receipts } = run([turn([count]), turn([message('{"ok":true}')])], { toolContext });
+      await result;
+      return receipts[0].toolCalls[0].note;
+    };
+    expect(await note({ sources: [], form: { documents: [] }, wordLimit: 300 })).toBe('3 of 300');
+    expect(await note({ sources: [], form: { documents: [] } })).toBe('3 words');
+  });
+
   it('replays a commentary message between the reasoning and the call unchanged', async () => {
     const commentary = { type: 'message', role: 'assistant', phase: 'commentary', content: [{ type: 'output_text', text: 'Checking the quote.' }] };
     const { transport, result } = run([turn([reasoning, commentary, call]), turn([message('{"ok":true}')])]);
@@ -78,6 +89,17 @@ describe('the tool loop, as Meta’s Responses API expects it', () => {
     const { transport, result } = run([turn([summarised, call]), turn([message('{"ok":true}')])]);
     await result;
     expect(transport.bodies[1].input[1]).toEqual(summarised);
+  });
+
+  it('names the document and the host on the receipt', async () => {
+    const receipts = [];
+    const runStep = createLoop({ provider: { ...provider, host: 'api.meta.ai' }, transport: fakeTransport([turn([message('{"ok":true}')])]), safetyIdentifier: null });
+    await runStep({ step: 'draft', docId: 'answer', prompt: 'x', schema: {}, toolContext: { sources: [] }, effort: 'medium', maxOutputTokens: 10, emit: (e) => { if (e.type === 'receipt') receipts.push(e.receipt); } });
+    expect(receipts[0]).toMatchObject({ step: 'draft', docId: 'answer', host: 'api.meta.ai' });
+    const { receipts: plain } = run([turn([message('{"ok":true}')])]);
+    await new Promise((r) => setTimeout(r, 0));
+    expect(plain[0]).not.toHaveProperty('docId');
+    expect(plain[0]).not.toHaveProperty('host');
   });
 
   it('keeps the first output time, unsettled attempts and injected faults on the receipt', async () => {

@@ -1,0 +1,173 @@
+{
+ "clip": "ana-pt-notes.wav",
+ "truth": "Chamo-me Ana. Trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+ "hint": "Portuguese",
+ "ms": 14401,
+ "text": "Chammemiene. Trabalha há três anos num lar em Lides, comecei em outubro de dois mil mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito dezoito residentes. No fim fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo logo à enfermeira de serviço e ela fez a participação de safe guarding.",
+ "durationMs": 58880,
+ "languageBias": "Portuguese",
+ "opening": false,
+ "werRaw": 0.1299,
+ "werSpoken": 0.0818,
+ "errorsSpoken": [
+  [
+   "del",
+   "chamo",
+   ""
+  ],
+  [
+   "del",
+   "me",
+   ""
+  ],
+  [
+   "sub",
+   "ana",
+   "chammemiene"
+  ],
+  [
+   "sub",
+   "trabalho",
+   "trabalha"
+  ],
+  [
+   "sub",
+   "leeds",
+   "lides"
+  ],
+  [
+   "ins",
+   "",
+   "mil"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "dezoito"
+  ],
+  [
+   "ins",
+   "",
+   "fim"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "logo"
+  ],
+  [
+   "ins",
+   "",
+   "safe"
+  ],
+  [
+   "sub",
+   "safeguarding",
+   "guarding"
+  ]
+ ],
+ "words": 159,
+ "control": {
+  "hint": null,
+  "ms": 12720,
+  "text": "Szem trabalha três anos num lar em Leeds, comecei em outubro de 2023. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. residentes. No fim do turno, turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de Safeguarding.",
+  "durationMs": 58880,
+  "languageBias": null,
+  "opening": false,
+  "werRaw": 0.0714,
+  "werSpoken": 0.1006,
+  "errorsSpoken": [
+   [
+    "del",
+    "chamo",
+    ""
+   ],
+   [
+    "del",
+    "me",
+    ""
+   ],
+   [
+    "del",
+    "ana",
+    ""
+   ],
+   [
+    "sub",
+    "trabalho",
+    "szem"
+   ],
+   [
+    "sub",
+    "há",
+    "trabalha"
+   ],
+   [
+    "del",
+    "dois",
+    ""
+   ],
+   [
+    "del",
+    "mil",
+    ""
+   ],
+   [
+    "del",
+    "e",
+    ""
+   ],
+   [
+    "del",
+    "vinte",
+    ""
+   ],
+   [
+    "del",
+    "e",
+    ""
+   ],
+   [
+    "sub",
+    "três",
+    "2023"
+   ],
+   [
+    "del",
+    "a",
+    ""
+   ],
+   [
+    "ins",
+    "",
+    "residentes"
+   ],
+   [
+    "ins",
+    "",
+    "turno"
+   ],
+   [
+    "ins",
+    "",
+    "de"
+   ],
+   [
+    "ins",
+    "",
+    "de"
+   ]
+  ],
+  "words": 159
+ }
+}

@@ -1,0 +1,567 @@
+{
+  "status": "NOT SUBMITTED",
+  "exportedAt": "2026-11-04T08:43:09.467Z",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budget": {
+    "capUsd": 78,
+    "spentUsd": 17.119927,
+    "reservedUsd": 0,
+    "remainingUsd": 60.880073
+  },
+  "receipts": [
+    {
+      "step": "transcribe",
+      "flow": "voice",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-voice-transcribe-1.0",
+      "host": "api.meta.ai",
+      "turns": 0,
+      "attempts": 1,
+      "requestIds": [],
+      "toolCalls": [],
+      "usage": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "reasoning": 0
+      },
+      "costUsd": 0.002948,
+      "audioMs": 58960,
+      "totalMs": 15535,
+      "at": "2026-11-04T08:38:33.888Z",
+      "languageBias": "Portuguese",
+      "keywords": [
+        "Ana",
+        "Leeds",
+        "Chamo-me Ana"
+      ]
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "a6fb8130-b0af-474f-868e-dff6359c0fe6",
+        "93f24a8d-35e3-499f-a9bf-9eb44773229b",
+        "caab734e-8b15-4deb-a617-dd8028aa3091"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8851,
+        "cached": 4712,
+        "output": 2559,
+        "reasoning": 1137
+      },
+      "costUsd": 0.0686784,
+      "firstEventMs": 2558,
+      "firstOutputMs": 2927,
+      "totalMs": 20858,
+      "rateLimit": {
+        "remainingRequests": 2998,
+        "remainingTokens": 3996063
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-04T08:39:05.449Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "767a5b28-a8ca-4c68-b52c-34c03d5159e1"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2086,
+        "cached": 0,
+        "output": 1130,
+        "reasoning": 967
+      },
+      "costUsd": 0.030944,
+      "firstEventMs": 2105,
+      "firstOutputMs": 12316,
+      "totalMs": 13550,
+      "rateLimit": {
+        "remainingRequests": 2997,
+        "remainingTokens": 3993302
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-04T08:39:43.214Z"
+    },
+    {
+      "step": "transcribe",
+      "flow": "voice",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-voice-transcribe-1.0",
+      "host": "api.meta.ai",
+      "turns": 0,
+      "attempts": 1,
+      "requestIds": [],
+      "toolCalls": [],
+      "usage": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "reasoning": 0
+      },
+      "costUsd": 0.0008079999999999999,
+      "audioMs": 16160,
+      "totalMs": 4283,
+      "at": "2026-11-04T08:39:53.219Z",
+      "languageBias": "Portuguese",
+      "keywords": [
+        "Ana",
+        "Leeds",
+        "Chamo-me Ana"
+      ]
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "84b52860-73c1-4eec-a45c-155213b8ab60",
+        "0afb0c4c-f255-4baf-a07d-3d6012f9915e",
+        "704cbb04-e7ee-4405-8e60-9e84c5ece957"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8255,
+        "cached": 4712,
+        "output": 1055,
+        "reasoning": 282
+      },
+      "costUsd": 0.0362144,
+      "firstEventMs": 1487,
+      "firstOutputMs": 2252,
+      "totalMs": 12802,
+      "rateLimit": {
+        "remainingRequests": 2997,
+        "remainingTokens": 3991594
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-04T08:40:11.718Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "3ff7676f-6d2c-47bd-a4d4-991f5cbed447",
+        "810073d8-d4a6-4d90-976e-50ac91f444d5"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "176 of 350"
+        }
+      ],
+      "usage": {
+        "input": 6931,
+        "cached": 2804,
+        "output": 1813,
+        "reasoning": 944
+      },
+      "costUsd": 0.053328799999999996,
+      "firstEventMs": 1746,
+      "firstOutputMs": 8394,
+      "totalMs": 13811,
+      "rateLimit": {
+        "remainingRequests": 2994,
+        "remainingTokens": 3988097
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-04T08:40:32.271Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "1dd4518b-8ca3-411a-8599-08933d826f62"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3790,
+        "cached": 0,
+        "output": 746,
+        "reasoning": 428
+      },
+      "costUsd": 0.03008,
+      "firstEventMs": 1438,
+      "firstOutputMs": 4356,
+      "totalMs": 5933,
+      "rateLimit": {
+        "remainingRequests": 2994,
+        "remainingTokens": 3988987
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-04T08:40:38.242Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "62dcfa46-844c-4eaa-83a5-d4de2206422e",
+        "e196c878-afea-4c35-9972-db95e933908d"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "209 of 500"
+        }
+      ],
+      "usage": {
+        "input": 8442,
+        "cached": 3188,
+        "output": 2768,
+        "reasoning": 1705
+      },
+      "costUsd": 0.07701359999999999,
+      "firstEventMs": 1929,
+      "firstOutputMs": 16129,
+      "totalMs": 21553,
+      "rateLimit": {
+        "remainingRequests": 2993,
+        "remainingTokens": 3986950
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-04T08:40:39.940Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "593442e5-a58d-40c8-8e91-76dee13b99de"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4868,
+        "cached": 0,
+        "output": 1410,
+        "reasoning": 787
+      },
+      "costUsd": 0.047672,
+      "firstEventMs": 1723,
+      "firstOutputMs": 6345,
+      "totalMs": 8868,
+      "rateLimit": {
+        "remainingRequests": 2992,
+        "remainingTokens": 3974894
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-04T08:40:48.829Z"
+    },
+    {
+      "step": "transcribe",
+      "flow": "voice",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-voice-transcribe-1.0",
+      "host": "api.meta.ai",
+      "turns": 0,
+      "attempts": 1,
+      "requestIds": [],
+      "toolCalls": [],
+      "usage": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "reasoning": 0
+      },
+      "costUsd": 0.00035999999999999997,
+      "audioMs": 7200,
+      "totalMs": 2845,
+      "at": "2026-11-04T08:41:16.846Z",
+      "languageBias": "Portuguese",
+      "keywords": [
+        "Ana",
+        "Leeds",
+        "Chamo-me Ana"
+      ]
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "b60ac0bc-3b37-4a84-b832-1848d1fe7884",
+        "d2bc5a74-47dc-4211-899e-08d9c5f4f748"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 5213,
+        "cached": 2036,
+        "output": 918,
+        "reasoning": 574
+      },
+      "costUsd": 0.0314752,
+      "firstEventMs": 3775,
+      "firstOutputMs": 6593,
+      "totalMs": 11838,
+      "rateLimit": {
+        "remainingRequests": 2996,
+        "remainingTokens": 3978227
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-04T08:41:33.115Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "2b7a5962-0962-41a0-aa89-ab6feca4ec0d"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3716,
+        "cached": 0,
+        "output": 653,
+        "reasoning": 558
+      },
+      "costUsd": 0.027924,
+      "firstEventMs": 1250,
+      "firstOutputMs": 5490,
+      "totalMs": 5941,
+      "rateLimit": {
+        "remainingRequests": 2997,
+        "remainingTokens": 3981474
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-04T08:41:46.333Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "5f5bd726-518e-4876-a0b8-202a7b2913d7"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1976,
+        "cached": 0,
+        "output": 630,
+        "reasoning": 481
+      },
+      "costUsd": 0.020504,
+      "firstEventMs": 1931,
+      "firstOutputMs": 4781,
+      "totalMs": 5701,
+      "rateLimit": {
+        "remainingRequests": 2996,
+        "remainingTokens": 3980501
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-04T08:41:52.056Z"
+    }
+  ],
+  "stages": []
+}

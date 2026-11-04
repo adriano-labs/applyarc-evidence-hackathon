@@ -11,7 +11,7 @@ export function createReceiptLog(file) {
     },
     list() {
       if (!existsSync(file)) return [];
-      return readFileSync(file, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
+      return readFileSync(file, 'utf8').split('\n').flatMap((l) => { try { return l ? [JSON.parse(l)] : []; } catch { return []; } });
     },
   };
 }

@@ -1,0 +1,10 @@
+f1-stale-start | broken: Tests  2 failed | 6 skipped (8) | restored: Tests  2 passed | 6 skipped (8) | files identical
+f1-gone-screen | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+f2-one-press | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+f3-read-twice | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+f3-card-twice | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+f4-one-full-stop | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+f5-typed-fallback | broken: Tests  1 failed | 18 skipped (19) | restored: Tests  1 passed | 18 skipped (19) | files identical
+f6-written-while-loading | broken: Tests  1 failed | 7 skipped (8) | restored: Tests  1 passed | 7 skipped (8) | files identical
+keywords-sent | broken: Tests  2 failed | 16 skipped (18) | restored: Tests  2 passed | 16 skipped (18) | files identical
+voice-call-in-trail | broken: Tests  1 failed | 8 skipped (9) | restored: Tests  1 passed | 8 skipped (9) | files identical

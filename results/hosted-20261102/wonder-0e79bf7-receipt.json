@@ -1,0 +1,27 @@
+{
+  "source": "0e79bf7324350e0f93efae544f7e0db53b865e0e",
+  "url": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io/",
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "exportedAt": "2026-11-02T23:16:57.560Z",
+  "stages": 12,
+  "providerAttempts": 19,
+  "toolCalls": 19,
+  "totalModelMs": 150460,
+  "estimatedCostUsd": 0.4955752,
+  "manualOpeningSurvives": true,
+  "samOwnershipOccurrences": 6,
+  "applicantActionsOccurrences": 6,
+  "notSubmitted": true,
+  "unaffectedSentences": 19,
+  "changedSentences": 2,
+  "renewedApprovals": true,
+  "comparison": "Known synthetic journey, not a fresh comparative evaluation.",
+  "capture": "Rejected cropped01\u201329; no published replacement film",
+  "traceSha256": "00039e47143a871cbcdecfa775b796562776c069a886d8f9316cccab28801cf4",
+  "packSha256": "1bdd74e78ea7e426eeb2c3b24f2867013076b7c430eeb9002c06d307f144a1e3"
+}

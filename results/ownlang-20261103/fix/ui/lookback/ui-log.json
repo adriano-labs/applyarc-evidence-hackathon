@@ -1,0 +1,137 @@
+{
+ "base": "http://127.0.0.1:3196",
+ "check": "lookback",
+ "viewport": [
+  1440,
+  900
+ ],
+ "checks": [
+  {
+   "name": "nothing is sent on opening the key moment",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "her correction clip was sent once across the look back",
+   "pass": true,
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  },
+  {
+   "name": "Verify this run passes 7 of 7 after the typed correction",
+   "pass": true,
+   "detail": "Holds:\n19 of 19 confirmed facts quote Ana’s text word for word / Holds:\n31 of 31 drafted statements cite at least one fact, all confirmed / Holds:\n31 of 31 drafted statements state no number their cited facts do not / Holds:\n2 of 2 approvals match the current version / Nothing to check:\nNo sentences marked as Ana’s own yet / Holds:\nExport e1 is stamped NOT SUBMITTED and holds exactly the approved versions / Holds:\nModel review on record: 31 cited sentences supported, 0 held back in this visit"
+  },
+  {
+   "name": "one voice call in the whole visit",
+   "pass": true,
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  }
+ ],
+ "requests": [
+  "POST /api/actions/startPrepared",
+  "POST /api/voice?language=pt-PT&sample=ana"
+ ],
+ "errors": [],
+ "log": [
+  {
+   "s": 1,
+   "what": "clicked Start at Ana’s key moment",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "PASS nothing is sent on opening the key moment",
+   "detail": ""
+  },
+  {
+   "s": 3,
+   "what": "clicked Use Ana’s spoken correction",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "spoken correction",
+   "detail": "Correção, os turnos da noite foram dois anos, não três, no último ano passei a fazer dias."
+  },
+  {
+   "s": 6,
+   "what": "screenshot 01-ana-km-heard",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "clicked Back",
+   "detail": ""
+  },
+  {
+   "s": 6,
+   "what": "clicked Return to correction",
+   "detail": ""
+  },
+  {
+   "s": 9,
+   "what": "screenshot 02-ana-km-returned",
+   "detail": ""
+  },
+  {
+   "s": 9,
+   "what": "PASS her correction clip was sent once across the look back",
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  },
+  {
+   "s": 9,
+   "what": "clicked Type the correction instead",
+   "detail": ""
+  },
+  {
+   "s": 9,
+   "what": "clicked Correct this fact",
+   "detail": ""
+  },
+  {
+   "s": 23,
+   "what": "applied",
+   "detail": ""
+  },
+  {
+   "s": 23,
+   "what": "approved supporting evidence",
+   "detail": ""
+  },
+  {
+   "s": 23,
+   "what": "approved cover letter",
+   "detail": ""
+  },
+  {
+   "s": 23,
+   "what": "screenshot 03-ana-km-finish",
+   "detail": ""
+  },
+  {
+   "s": 23,
+   "what": "clicked See the application",
+   "detail": ""
+  },
+  {
+   "s": 53,
+   "what": "clicked Verify this run",
+   "detail": ""
+  },
+  {
+   "s": 53,
+   "what": "screenshot 04-ana-km-verify",
+   "detail": ""
+  },
+  {
+   "s": 53,
+   "what": "PASS Verify this run passes 7 of 7 after the typed correction",
+   "detail": "Holds:\n19 of 19 confirmed facts quote Ana’s text word for word / Holds:\n31 of 31 drafted statements cite at least one fact, all confirmed / Holds:\n31 of 31 drafted statements state no number their cited facts do not / Holds:\n2 of 2 approvals match the current version / Nothing to check:\nNo sentences marked as Ana’s own yet / Holds:\nExport e1 is stamped NOT SUBMITTED and holds exactly the approved versions / Holds:\nModel review on record: 31 cited sentences supported, 0 held back in this visit"
+  },
+  {
+   "s": 53,
+   "what": "PASS one voice call in the whole visit",
+   "detail": "POST /api/voice?language=pt-PT&sample=ana"
+  }
+ ]
+}

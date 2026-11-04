@@ -18,6 +18,15 @@ describe('streamed work progress', () => {
     expect(busy.history).toHaveLength(8);
   });
 
+  it('tallies the tool calls so far: quotes checked, quotes matched and the latest word count', () => {
+    let busy = initial();
+    expect(busy.toolCounts).toBeUndefined();
+    for (const note of ['verbatim', 'verbatim', 'not verbatim']) busy = progress(busy, { type: 'tool', name: 'verify_quote', note });
+    busy = progress(busy, { type: 'tool', name: 'word_count', note: '198 of 300' });
+    busy = progress(busy, { type: 'tool', name: 'word_count', note: '207 of 300' });
+    expect(busy.toolCounts).toEqual({ verify_quote: 3, verbatim: 2, word_count: 2, words: '207 of 300' });
+  });
+
   it('keeps checked drafts in transient progress without changing saved data', () => {
     const busy = initial();
     const segments = [{ text: 'I tested the deployment.', kind: 'claim', factIds: ['f1'] }];

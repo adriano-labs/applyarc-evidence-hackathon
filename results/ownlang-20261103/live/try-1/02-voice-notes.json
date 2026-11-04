@@ -1,0 +1,88 @@
+{
+ "clip": "ana-pt-notes.wav",
+ "ms": 13604,
+ "hint": "Portuguese",
+ "text": "szemjene. Trabalha há três anos num lar em Leeds, comecei em outubro de dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a tenho a formação de moving and handling, handling, uso grua e trabalhamos sempre em em dupla. Na unidade de demência, os residentes ficavam ficavam agitados ao fim do dia por isso isso nós a equipa toda passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira enfermeira de serviço e ela fez a fez a participação de Safeguarding.",
+ "durationMs": 58240,
+ "truth": "Chamo-me Ana. Trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+ "werRaw": 0.1429,
+ "werSpoken": 0.0943,
+ "errorsSpoken": [
+  [
+   "del",
+   "chamo",
+   ""
+  ],
+  [
+   "del",
+   "me",
+   ""
+  ],
+  [
+   "sub",
+   "ana",
+   "szemjene"
+  ],
+  [
+   "sub",
+   "trabalho",
+   "trabalha"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "tenho"
+  ],
+  [
+   "ins",
+   "",
+   "a"
+  ],
+  [
+   "sub",
+   "uso",
+   "handling"
+  ],
+  [
+   "sub",
+   "a",
+   "uso"
+  ],
+  [
+   "ins",
+   "",
+   "em"
+  ],
+  [
+   "ins",
+   "",
+   "ficavam"
+  ],
+  [
+   "ins",
+   "",
+   "isso"
+  ],
+  [
+   "ins",
+   "",
+   "enfermeira"
+  ],
+  [
+   "ins",
+   "",
+   "fez"
+  ],
+  [
+   "ins",
+   "",
+   "a"
+  ]
+ ],
+ "words": 159
+}

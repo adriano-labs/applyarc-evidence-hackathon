@@ -1,0 +1,3939 @@
+{
+  "host": "wonder",
+  "persona": "ben",
+  "style": "notes with an internal contradiction",
+  "startedAt": "2026-11-03T14:46:36.426Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "probe": false,
+  "plain": false,
+  "correctionText": "Correction: the migration took six weeks, not four.",
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T14:46:36.426Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T14:46:36.429Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T14:46:36.431Z",
+      "ms": 14565,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 16,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 8907,
+            "cached": 5852,
+            "output": 2810,
+            "reasoning": 1004
+          },
+          "costUsd": 0.0695904,
+          "firstEventMs": 843,
+          "totalMs": 14563,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T14:46:50.997Z",
+      "ms": 18,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T14:46:51.015Z",
+      "ms": 6328,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2117,
+            "cached": 0,
+            "output": 793,
+            "reasoning": 626
+          },
+          "costUsd": 0.024328,
+          "firstEventMs": 675,
+          "totalMs": 6325,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T14:46:57.349Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T14:46:57.352Z",
+      "ms": 11310,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 4,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 7321,
+            "cached": 5084,
+            "output": 967,
+            "reasoning": 552
+          },
+          "costUsd": 0.029304800000000002,
+          "firstEventMs": 1695,
+          "totalMs": 11307,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T14:47:08.664Z",
+      "ms": 6,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T14:47:08.671Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "No question needed: 1 requirement will be left out of the drafts"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T14:47:08.674Z",
+      "ms": 38425,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:221 of 400"
+          ],
+          "usage": {
+            "input": 7643,
+            "cached": 3688,
+            "output": 3600,
+            "reasoning": 2492
+          },
+          "costUsd": 0.08855759999999999,
+          "firstEventMs": 1035,
+          "totalMs": 23918,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 2,
+          "toolNotes": [
+            "word_count:216 of 300",
+            "word_count:234 of 300"
+          ],
+          "usage": {
+            "input": 14008,
+            "cached": 9308,
+            "output": 4216,
+            "reasoning": 2941
+          },
+          "costUsd": 0.1049816,
+          "firstEventMs": 1037,
+          "totalMs": 29200,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4935,
+            "cached": 628,
+            "output": 1022,
+            "reasoning": 645
+          },
+          "costUsd": 0.0377936,
+          "firstEventMs": 1237,
+          "totalMs": 8367,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 5266,
+            "cached": 628,
+            "output": 866,
+            "reasoning": 479
+          },
+          "costUsd": 0.0359976,
+          "firstEventMs": 4521,
+          "totalMs": 9210,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T14:47:47.102Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T14:47:47.107Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T14:47:47.111Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T14:47:47.115Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T14:47:47.118Z",
+      "ms": 12964,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 3,
+          "toolNotes": [
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "form_requirements:read"
+          ],
+          "usage": {
+            "input": 4775,
+            "cached": 3432,
+            "output": 853,
+            "reasoning": 599
+          },
+          "costUsd": 0.0231184,
+          "firstEventMs": 7743,
+          "totalMs": 12959,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "choose the correction",
+      "startedAt": "2026-11-03T14:48:00.083Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/resolveSourceConflict",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T14:48:00.087Z",
+      "ms": 21024,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3339,
+            "cached": 884,
+            "output": 1187,
+            "reasoning": 1090
+          },
+          "costUsd": 0.033736800000000004,
+          "firstEventMs": 852,
+          "totalMs": 9086,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2251,
+            "cached": 628,
+            "output": 1440,
+            "reasoning": 1306
+          },
+          "costUsd": 0.0354176,
+          "firstEventMs": 1042,
+          "totalMs": 11931,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T14:48:21.113Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T14:48:21.114Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T14:48:21.117Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T14:48:21.120Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T14:48:21.123Z",
+      "ms": 2,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "route": "use-this-correction",
+  "correctedFactId": "f7",
+  "intendedTargetId": "f7",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "contribution",
+      "text": "In the shared GPU box project you built with Sara and Kofi for the game dev society, what did you do yourself?",
+      "status": "open",
+      "askedBy": "model"
+    },
+    {
+      "id": "q2",
+      "requirementId": "motivation",
+      "text": "Why do you want this role and this company, in your own words, following your shared GPU box project for the game dev society?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "q2",
+      "requirementId": "motivation",
+      "text": "Why do you want this role and this company, in your own words, following your shared GPU box project for the game dev society?"
+    }
+  ],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+        "quote": "Hackathon-turned-project: a shared GPU box for our university's game dev society, Newcastle, spring 2026.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "The team was three people: me, Sara and Kofi.",
+        "quote": "Team of three: me, Sara and Kofi.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+        "quote": "The society had one donated workstation with two GPUs and people were SSHing in and killing each other's training runs.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "We wanted a fair queue.",
+        "quote": "We wanted a fair queue.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+        "quote": "What we built: a job queue on top of Slurm, with a tiny web front end so people could submit a script and see where they were in the queue, and per-member GPU-hour quotas.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "Docker was used for the environments.",
+        "quote": "Docker for the environments.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "The migration from everyone SSHing in to the queue took four weeks.",
+        "quote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+        "quote": "The decision: Slurm instead of Kubernetes, because it was one machine and Kubernetes would have been a lot of moving parts for two GPUs.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "Kofi disagreed at first.",
+        "quote": "Kofi disagreed at first.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+        "quote": "Problem: jobs were being killed at exactly 60 minutes. We thought it was a Slurm time limit, but the limit was set to 8 hours.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "We found the web front end was submitting a default time limit from an old config file.",
+        "quote": "We eventually found that the web front end was submitting with a default time limit from an old config file that nobody remembered.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "The lesson was to look first at the layer you wrote yourself, not last.",
+        "quote": "The lesson was that the layer you wrote yourself is the first place to look, not the last.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "By the end, all five of us and around 30 society members were using it daily.",
+        "quote": "By the end all five of us were using it daily, along with around 30 society members.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f14",
+        "statement": "Demo night was in May, and the four weeks of migration were the hardest part.",
+        "quote": "Demo night was in May and the four weeks of migration were the hardest part.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f15",
+        "statement": "I wrote the quota accounting and the web front end",
+        "quote": "I wrote the quota accounting and the web front end",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f16",
+        "statement": "Sara did the Slurm config",
+        "quote": "Sara did the Slurm config",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f17",
+        "statement": "Kofi wrote the Docker images",
+        "quote": "Kofi wrote the Docker images",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "Hackathon-turned-project: a shared GPU box for our university's game dev society, Newcastle, spring 2026. Team of three: me, Sara and Kofi.\n\nThe society had one donated workstation with two GPUs and people were SSHing in and killing each other's training runs. We wanted a fair queue.\n\nWhat we built: a job queue on top of Slurm, with a tiny web front end so people could submit a script and see where they were in the queue, and per-member GPU-hour quotas. Docker for the environments. The migration from \"everyone SSHes in\" to the queue took four weeks.\n\nThe decision: Slurm instead of Kubernetes, because it was one machine and Kubernetes would have been a lot of moving parts for two GPUs. Kofi disagreed at first.\n\nProblem: jobs were being killed at exactly 60 minutes. We thought it was a Slurm time limit, but the limit was set to 8 hours. We eventually found that the web front end was submitting with a default time limit from an old config file that nobody remembered. The lesson was that the layer you wrote yourself is the first place to look, not the last.\n\nBy the end all five of us were using it daily, along with around 30 society members. Demo night was in May and the four weeks of migration were the hardest part.",
+        "at": "2026-11-03T14:46:36.429Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I wrote the quota accounting and the web front end; Sara did the Slurm config and Kofi wrote the Docker images.",
+        "at": "2026-11-03T14:46:57.350Z",
+        "questionId": "q1",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "In spring 2026, the project was a shared GPU box for a university game dev society in Newcastle, and we wanted a fair queue for its use.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and people were using SSH to access it in a way that was killing each other's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end so people could submit a script and see where they were in the queue, and we added per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to using the queue took four weeks in total.",
+            "factIds": [
+              "f7",
+              "f14"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Docker was used for the environments in the system.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because it was one machine with two GPUs, and Kubernetes would have been a lot of moving parts for that setup.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Kofi disagreed with that choice at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Jobs were being killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We eventually found that the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The lesson from that problem was that the layer you wrote yourself is the first place to look, not the last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The team was made up of three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The team was three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We wanted a fair queue.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Docker was used for the environments.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "Kofi disagreed at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to the queue took four weeks and was the hardest part.",
+            "factIds": [
+              "f7",
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "claim",
+            "text": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "claim",
+            "text": "We found the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-16",
+            "kind": "claim",
+            "text": "The lesson was to look first at the layer you wrote yourself, not last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-17",
+            "kind": "claim",
+            "text": "By the end, around 30 society members were using it daily.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-18",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-19",
+            "kind": "frame",
+            "text": "Yours sincerely,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 234,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 221,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [
+          {
+            "id": "motivation",
+            "text": "Why this role and this company, in your own words"
+          }
+        ],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and people were using SSH to access it in a way that was killing each other's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end so people could submit a script and see where they were in the queue, and we added per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to using the queue took four weeks in total.",
+            "factIds": [
+              "f7",
+              "f14"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Docker was used for the environments in the system.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because it was one machine with two GPUs, and Kubernetes would have been a lot of moving parts for that setup.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Kofi disagreed with that choice at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Jobs were being killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We eventually found that the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The lesson from that problem was that the layer you wrote yourself is the first place to look, not the last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The team was made up of three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The team was three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We wanted a fair queue.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Docker was used for the environments.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "Kofi disagreed at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to the queue took four weeks and was the hardest part.",
+            "factIds": [
+              "f7",
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "claim",
+            "text": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "claim",
+            "text": "We found the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-16",
+            "kind": "claim",
+            "text": "The lesson was to look first at the layer you wrote yourself, not last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-17",
+            "kind": "claim",
+            "text": "By the end, around 30 society members were using it daily.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-18",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-19",
+            "kind": "frame",
+            "text": "Yours sincerely,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle.",
+            "factIds": [
+              "f1",
+              "f4"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and people were using SSH to access it in a way that was killing each other's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end so people could submit a script and see where they were in the queue, and we added per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to using the queue took six weeks in total.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "repair"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "Docker was used for the environments in the system.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because it was one machine with two GPUs, and Kubernetes would have been a lot of moving parts for that setup.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "Kofi disagreed with that choice at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "Jobs were being killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We eventually found that the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "The lesson from that problem was that the layer you wrote yourself is the first place to look, not the last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "The team was made up of three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "The team was three people: me, Sara and Kofi.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We wanted a fair queue.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Docker was used for the environments.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I wrote the quota accounting and the web front end.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+            "factIds": [
+              "f16",
+              "f17"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "Kofi disagreed at first.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "The migration from everyone SSHing in to the queue took six weeks and was the hardest part.",
+            "factIds": [
+              "f7",
+              "f14"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "letter-14",
+            "kind": "claim",
+            "text": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "claim",
+            "text": "We found the web front end was submitting a default time limit from an old config file.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-16",
+            "kind": "claim",
+            "text": "The lesson was to look first at the layer you wrote yourself, not last.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-17",
+            "kind": "claim",
+            "text": "By the end, around 30 society members were using it daily.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-18",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-19",
+            "kind": "frame",
+            "text": "Yours sincerely,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 229,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 221,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [
+          {
+            "id": "motivation",
+            "text": "Why this role and this company, in your own words"
+          }
+        ],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 36,
+      "createdAt": "2026-11-03T14:46:36.427Z",
+      "applicant": {
+        "name": null,
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "Hackathon-turned-project: a shared GPU box for our university's game dev society, Newcastle, spring 2026. Team of three: me, Sara and Kofi.\n\nThe society had one donated workstation with two GPUs and people were SSHing in and killing each other's training runs. We wanted a fair queue.\n\nWhat we built: a job queue on top of Slurm, with a tiny web front end so people could submit a script and see where they were in the queue, and per-member GPU-hour quotas. Docker for the environments. The migration from \"everyone SSHes in\" to the queue took four weeks.\n\nThe decision: Slurm instead of Kubernetes, because it was one machine and Kubernetes would have been a lot of moving parts for two GPUs. Kofi disagreed at first.\n\nProblem: jobs were being killed at exactly 60 minutes. We thought it was a Slurm time limit, but the limit was set to 8 hours. We eventually found that the web front end was submitting with a default time limit from an old config file that nobody remembered. The lesson was that the layer you wrote yourself is the first place to look, not the last.\n\nBy the end all five of us were using it daily, along with around 30 society members. Demo night was in May and the four weeks of migration were the hardest part.",
+            "at": "2026-11-03T14:46:36.429Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "answer",
+            "text": "I wrote the quota accounting and the web front end; Sara did the Slurm config and Kofi wrote the Docker images.",
+            "at": "2026-11-03T14:46:57.350Z",
+            "questionId": "q1",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "notes",
+            "text": "Correction: the migration took six weeks, not four.",
+            "at": "2026-11-03T14:47:47.116Z",
+            "read": true,
+            "withheld": true
+          },
+          {
+            "id": "s4",
+            "kind": "correction",
+            "text": "Correction: the migration took six weeks, not four.",
+            "at": "2026-11-03T14:48:00.084Z",
+            "read": true
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+            "quote": "Hackathon-turned-project: a shared GPU box for our university's game dev society, Newcastle, spring 2026.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "The team was three people: me, Sara and Kofi.",
+            "quote": "Team of three: me, Sara and Kofi.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+            "quote": "The society had one donated workstation with two GPUs and people were SSHing in and killing each other's training runs.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "We wanted a fair queue.",
+            "quote": "We wanted a fair queue.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+            "quote": "What we built: a job queue on top of Slurm, with a tiny web front end so people could submit a script and see where they were in the queue, and per-member GPU-hour quotas.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "Docker was used for the environments.",
+            "quote": "Docker for the environments.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "Correction: the migration took six weeks, not four.",
+            "quote": "Correction: the migration took six weeks, not four.",
+            "sourceId": "s4",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "The migration from everyone SSHing in to the queue took four weeks.",
+                "quote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+                "sourceId": "s1",
+                "at": "2026-11-03T14:48:00.084Z"
+              }
+            ]
+          },
+          {
+            "id": "f8",
+            "statement": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+            "quote": "The decision: Slurm instead of Kubernetes, because it was one machine and Kubernetes would have been a lot of moving parts for two GPUs.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "Kofi disagreed at first.",
+            "quote": "Kofi disagreed at first.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+            "quote": "Problem: jobs were being killed at exactly 60 minutes. We thought it was a Slurm time limit, but the limit was set to 8 hours.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "We found the web front end was submitting a default time limit from an old config file.",
+            "quote": "We eventually found that the web front end was submitting with a default time limit from an old config file that nobody remembered.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "The lesson was to look first at the layer you wrote yourself, not last.",
+            "quote": "The lesson was that the layer you wrote yourself is the first place to look, not the last.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "By the end, all five of us and around 30 society members were using it daily.",
+            "quote": "By the end all five of us were using it daily, along with around 30 society members.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f14",
+            "statement": "Demo night was in May, and the four weeks of migration were the hardest part.",
+            "quote": "Demo night was in May and the four weeks of migration were the hardest part.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f15",
+            "statement": "I wrote the quota accounting and the web front end",
+            "quote": "I wrote the quota accounting and the web front end",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f16",
+            "statement": "Sara did the Slurm config",
+            "quote": "Sara did the Slurm config",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f17",
+            "statement": "Kofi wrote the Docker images",
+            "quote": "Kofi wrote the Docker images",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "goal": [
+            "f1",
+            "f3",
+            "f4",
+            "f5",
+            "f13"
+          ],
+          "evidence": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11",
+            "f12",
+            "f13",
+            "f14"
+          ],
+          "tech": [
+            "f3",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f11",
+            "f15",
+            "f16",
+            "f17"
+          ],
+          "decision": [
+            "f8",
+            "f9"
+          ],
+          "problem": [
+            "f10",
+            "f11",
+            "f12"
+          ],
+          "contribution": [
+            "f15",
+            "f16",
+            "f17"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirementId": "contribution",
+            "text": "In the shared GPU box project you built with Sara and Kofi for the game dev society, what did you do yourself?",
+            "why": "The form asks what you did yourself; your notes only describe what the team did.",
+            "status": "answered",
+            "askedBy": "model",
+            "sourceId": "s2"
+          },
+          {
+            "id": "q2",
+            "requirementId": "motivation",
+            "text": "Why do you want this role and this company, in your own words, following your shared GPU box project for the game dev society?",
+            "why": "The form asks why this role and company; your notes do not say why you want either.",
+            "status": "skipped",
+            "askedBy": "model"
+          },
+          {
+            "id": "q3",
+            "kind": "source-conflict",
+            "text": "Did the migration to the queue take four weeks or six weeks?",
+            "status": "answered",
+            "conflictSourceId": "s3",
+            "priorSourceId": "s1",
+            "quote": "Correction: the migration took six weeks, not four.",
+            "priorQuote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+            "why": "Earlier: “The migration from \"everyone SSHes in\" to the queue took four weeks.” Added: “Correction: the migration took six weeks, not four.” Your saved work is unchanged. These added details are held back. Skip to leave them out, or use Correct fact to change an earlier fact.",
+            "settled": true,
+            "sourceId": "s4",
+            "resolution": "corrected"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle.",
+                "factIds": [
+                  "f1",
+                  "f4"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "The society had one donated workstation with two GPUs, and people were using SSH to access it in a way that was killing each other's training runs.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "We built a Slurm job queue with a web front end so people could submit a script and see where they were in the queue, and we added per-member GPU-hour quotas.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "The migration from everyone SSHing in to using the queue took six weeks in total.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": true,
+                "author": "repair"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "Docker was used for the environments in the system.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "We chose Slurm instead of Kubernetes because it was one machine with two GPUs, and Kubernetes would have been a lot of moving parts for that setup.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "Kofi disagreed with that choice at first.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "Jobs were being killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "We eventually found that the web front end was submitting a default time limit from an old config file.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "The lesson from that problem was that the layer you wrote yourself is the first place to look, not the last.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "The team was made up of three people: me, Sara and Kofi.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-12",
+                "kind": "claim",
+                "text": "I wrote the quota accounting and the web front end.",
+                "factIds": [
+                  "f15"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-13",
+                "kind": "claim",
+                "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+                "factIds": [
+                  "f16",
+                  "f17"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 2,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "The project was a shared GPU box for a university game dev society in Newcastle in spring 2026.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "The team was three people: me, Sara and Kofi.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "We wanted a fair queue.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "Docker was used for the environments.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "I wrote the quota accounting and the web front end.",
+                "factIds": [
+                  "f15"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "Sara did the Slurm config, and Kofi wrote the Docker images.",
+                "factIds": [
+                  "f16",
+                  "f17"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "claim",
+                "text": "Kofi disagreed at first.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "claim",
+                "text": "The migration from everyone SSHing in to the queue took six weeks and was the hardest part.",
+                "factIds": [
+                  "f7",
+                  "f14"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "letter-14",
+                "kind": "claim",
+                "text": "Jobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-15",
+                "kind": "claim",
+                "text": "We found the web front end was submitting a default time limit from an old config file.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-16",
+                "kind": "claim",
+                "text": "The lesson was to look first at the layer you wrote yourself, not last.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-17",
+                "kind": "claim",
+                "text": "By the end, around 30 society members were using it daily.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-18",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-19",
+                "kind": "frame",
+                "text": "Yours sincerely,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T14:48:21.117Z"
+          },
+          "letter": {
+            "revision": 2,
+            "at": "2026-11-03T14:48:21.121Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T14:48:21.124Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 2
+            }
+          }
+        ],
+        "checked": [
+          "contribution",
+          "motivation"
+        ],
+        "lastRepair": {
+          "factId": "f7",
+          "at": "2026-11-03T14:48:21.114Z",
+          "changed": 2,
+          "kept": 0,
+          "docs": [
+            "answer",
+            "letter"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-4"
+            },
+            {
+              "docId": "letter",
+              "segmentId": "letter-13"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T14:48:21.124Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/skip",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/resolveSourceConflict",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 6,
+    "spentUsd": 0.684559,
+    "reservedUsd": 0.176496,
+    "remainingUsd": 5.138945
+  },
+  "extraction": {
+    "accepted": 14,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q1",
+    "requirementId": "contribution",
+    "text": "In the shared GPU box project you built with Sara and Kofi for the game dev society, what did you do yourself?",
+    "answer": "I wrote the quota accounting and the web front end; Sara did the Slurm config and Kofi wrote the Docker images."
+  },
+  "answerExtraction": {
+    "accepted": 3,
+    "refused": [],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f3",
+        "f4",
+        "f5",
+        "f13"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f3",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f11",
+        "f15",
+        "f16",
+        "f17"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f8",
+        "f9"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f10",
+        "f11",
+        "f12"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f15",
+        "f16",
+        "f17"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": false,
+      "factIds": []
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11",
+        "f12",
+        "f13",
+        "f14"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f7",
+    "quote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "In spring 2026, the project was a shared GPU box for a university game dev society in Newcastle, and we wanted a fair queue for its use.",
+    "factIds": [
+      "f1",
+      "f4"
+    ],
+    "text": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle."
+  },
+  "correctionExtraction": {
+    "accepted": 0,
+    "refused": [],
+    "conflict": true
+  },
+  "conflictQuestion": {
+    "text": "Did the migration to the queue take four weeks or six weeks?",
+    "priorSourceId": "s1",
+    "priorQuote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+    "quote": "Correction: the migration took six weeks, not four."
+  },
+  "offer": {
+    "questionId": "q3",
+    "sourceId": "s3",
+    "factId": "f7",
+    "before": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+    "text": "Correction: the migration took six weeks, not four."
+  },
+  "correctedFact": {
+    "id": "f7",
+    "statement": "Correction: the migration took six weeks, not four.",
+    "quote": "Correction: the migration took six weeks, not four.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "The migration from everyone SSHing in to the queue took four weeks.",
+        "quote": "The migration from \"everyone SSHes in\" to the queue took four weeks.",
+        "sourceId": "s1",
+        "at": "2026-11-03T14:48:00.084Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-4",
+      "before": "The migration from everyone SSHing in to using the queue took four weeks in total.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    },
+    {
+      "id": "c2",
+      "docId": "letter",
+      "segmentId": "letter-13",
+      "before": "The migration from everyone SSHing in to the queue took four weeks and was the hardest part.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-4",
+        "before": "The migration from everyone SSHing in to using the queue took four weeks in total.",
+        "after": "The migration from everyone SSHing in to using the queue took six weeks in total.",
+        "afterFactIds": [
+          "f7"
+        ],
+        "status": "proposed",
+        "decision": null
+      },
+      {
+        "id": "c2",
+        "docId": "letter",
+        "segmentId": "letter-13",
+        "before": "The migration from everyone SSHing in to the queue took four weeks and was the hardest part.",
+        "after": "The migration from everyone SSHing in to the queue took six weeks and was the hardest part.",
+        "afterFactIds": [
+          "f7",
+          "f14"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f7",
+    "at": "2026-11-03T14:48:21.114Z",
+    "changed": 2,
+    "kept": 0,
+    "docs": [
+      "answer",
+      "letter"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-4"
+      },
+      {
+        "docId": "letter",
+        "segmentId": "letter-13"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 229,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle. The society had one donated workstation with two GPUs, and people were using SSH to access it in a way that was killing each other's training runs. We built a Slurm job queue with a web front end so people could submit a script and see where they were in the queue, and we added per-member GPU-hour quotas.\n\nThe migration from everyone SSHing in to using the queue took six weeks in total. Docker was used for the environments in the system. We chose Slurm instead of Kubernetes because it was one machine with two GPUs, and Kubernetes would have been a lot of moving parts for that setup. Kofi disagreed with that choice at first.\n\nJobs were being killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours. We eventually found that the web front end was submitting a default time limit from an old config file. The lesson from that problem was that the layer you wrote yourself is the first place to look, not the last.\n\nThe team was made up of three people: me, Sara and Kofi. I wrote the quota accounting and the web front end. Sara did the Slurm config, and Kofi wrote the Docker images."
+      },
+      {
+        "id": "letter",
+        "words": 221,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [
+          "Why this role and this company, in your own words"
+        ],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nThe project was a shared GPU box for a university game dev society in Newcastle in spring 2026. The team was three people: me, Sara and Kofi. The society had one donated workstation with two GPUs, and SSH use was killing other people's training runs. We wanted a fair queue. We built a Slurm job queue with a web front end for submissions and queue position, plus per-member GPU-hour quotas. Docker was used for the environments.\n\nI wrote the quota accounting and the web front end. Sara did the Slurm config, and Kofi wrote the Docker images. We chose Slurm instead of Kubernetes because one machine with two GPUs made Kubernetes a lot of moving parts. Kofi disagreed at first. The migration from everyone SSHing in to the queue took six weeks and was the hardest part.\n\nJobs were killed at exactly 60 minutes, although the Slurm time limit was set to 8 hours. We found the web front end was submitting a default time limit from an old config file. The lesson was to look first at the layer you wrote yourself, not last. By the end, around 30 society members were using it daily.\n\nThank you for considering my application.\n\nYours sincerely,"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 6,
+    "spentUsd": 1.660091,
+    "reservedUsd": 0.173168,
+    "remainingUsd": 4.166741
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "9abee07e-cd0e-4b45-90d4-c5dd166711f5",
+        "c2981b1c-cdcf-451e-9d68-3ea5371fb03a",
+        "5e0a673f-b2ce-4cb4-9e4e-87d7e50a0e8d"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 8907,
+        "cached": 5852,
+        "output": 2810,
+        "reasoning": 1004
+      },
+      "costUsd": 0.0695904,
+      "firstEventMs": 843,
+      "firstOutputMs": 1520,
+      "totalMs": 14563,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3929635
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:46:50.994Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "d13a9364-5a22-4162-b821-aa99f3bc6d9b"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2117,
+        "cached": 0,
+        "output": 793,
+        "reasoning": 626
+      },
+      "costUsd": 0.024328,
+      "firstEventMs": 675,
+      "firstOutputMs": 5611,
+      "totalMs": 6325,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3928251
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T14:46:57.341Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "245d0b1e-8989-470f-935d-fe321b99eef8",
+        "c508edbe-507b-4f7a-bf6d-8685b130ce99",
+        "45f39e95-b3b3-4e11-b42c-8309f6f18424"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 7321,
+        "cached": 5084,
+        "output": 967,
+        "reasoning": 552
+      },
+      "costUsd": 0.029304800000000002,
+      "firstEventMs": 1695,
+      "firstOutputMs": 3859,
+      "totalMs": 11307,
+      "rateLimit": {
+        "remainingRequests": 2979,
+        "remainingTokens": 3939408
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:47:08.661Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "137dc403-dff5-4ea4-a8ce-270c2dcb228f",
+        "7615975c-d292-42eb-a044-f766d266ce14"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "221 of 400"
+        }
+      ],
+      "usage": {
+        "input": 7643,
+        "cached": 3688,
+        "output": 3600,
+        "reasoning": 2492
+      },
+      "costUsd": 0.08855759999999999,
+      "firstEventMs": 1035,
+      "firstOutputMs": 17582,
+      "totalMs": 23918,
+      "rateLimit": {
+        "remainingRequests": 2982,
+        "remainingTokens": 3960957
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:32.593Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "7e0c4218-af59-4deb-89a8-1c0182f84b95",
+        "44781122-e590-4883-b90a-7a5ae8e5b67e",
+        "410b15fd-ff6b-4a0d-a1c4-871d2107726c"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "216 of 300"
+        },
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "234 of 300"
+        }
+      ],
+      "usage": {
+        "input": 14008,
+        "cached": 9308,
+        "output": 4216,
+        "reasoning": 2941
+      },
+      "costUsd": 0.1049816,
+      "firstEventMs": 1037,
+      "firstOutputMs": 17835,
+      "totalMs": 29200,
+      "rateLimit": {
+        "remainingRequests": 2979,
+        "remainingTokens": 3950697
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:37.875Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "8da5920f-b0b5-4895-8aa5-1a923eb17df4"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4935,
+        "cached": 628,
+        "output": 1022,
+        "reasoning": 645
+      },
+      "costUsd": 0.0377936,
+      "firstEventMs": 1237,
+      "firstOutputMs": 6799,
+      "totalMs": 8367,
+      "rateLimit": {
+        "remainingRequests": 2981,
+        "remainingTokens": 3953392
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:40.963Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "e54b47fc-b8a3-40a2-a51a-7d9f2934ce9e"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 5266,
+        "cached": 628,
+        "output": 866,
+        "reasoning": 479
+      },
+      "costUsd": 0.0359976,
+      "firstEventMs": 4521,
+      "firstOutputMs": 7515,
+      "totalMs": 9210,
+      "rateLimit": {
+        "remainingRequests": 2978,
+        "remainingTokens": 3949663
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T14:47:47.089Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "9ac898e1-a716-4fdf-9abf-a9127b6be5c4",
+        "77e30eae-4fc5-4ed1-a82c-c0c316553d51"
+      ],
+      "toolCalls": [
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        }
+      ],
+      "usage": {
+        "input": 4775,
+        "cached": 3432,
+        "output": 853,
+        "reasoning": 599
+      },
+      "costUsd": 0.0231184,
+      "firstEventMs": 7743,
+      "firstOutputMs": 10821,
+      "totalMs": 12959,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3938083
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T14:48:00.078Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "c5eac700-9326-4011-9e11-fae11bd32f7e"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3339,
+        "cached": 884,
+        "output": 1187,
+        "reasoning": 1090
+      },
+      "costUsd": 0.033736800000000004,
+      "firstEventMs": 852,
+      "firstOutputMs": 8861,
+      "totalMs": 9086,
+      "rateLimit": {
+        "remainingRequests": 2977,
+        "remainingTokens": 3938960
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:48:09.175Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "38771efa-a46b-409e-88d2-1faa58d1c055"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2251,
+        "cached": 628,
+        "output": 1440,
+        "reasoning": 1306
+      },
+      "costUsd": 0.0354176,
+      "firstEventMs": 1042,
+      "firstOutputMs": 11545,
+      "totalMs": 11931,
+      "rateLimit": {
+        "remainingRequests": 2976,
+        "remainingTokens": 3937568
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T14:48:21.109Z"
+    }
+  ],
+  "endedAt": "2026-11-03T14:48:21.127Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 17,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "229/300",
+          "letter": "221/400"
+        },
+        "afterDraft": {
+          "answer": "234/300",
+          "letter": "221/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 32,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-4",
+          "letter/letter-13"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle.",
+        "afterCorrection": "In spring 2026 three of us built a fair GPU job queue for our university game development society's donated workstation in Newcastle.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 27,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 22,
+    "stepRetries": 0,
+    "providerAttempts": 18,
+    "providerTurns": 18,
+    "toolCalls": 26,
+    "receipts": 10,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 60562,
+      "cached": 30132,
+      "output": 17754,
+      "reasoning": 11734
+    },
+    "costReceiptsUsd": 0.4828264,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.975532,
+    "wallMs": 104701,
+    "modelStepMs": {
+      "read the notes": 14565,
+      "check what the form still needs": 6328,
+      "read the answer": 11310,
+      "write both documents": 38425,
+      "read the correcting note": 12964,
+      "propose the changes": 21024
+    },
+    "medianModelStepMs": 13764.5,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 38425
+  }
+}

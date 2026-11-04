@@ -1,0 +1,105 @@
+{
+ "clip": "ana-pt-notes.wav",
+ "truth": "Chamo-me Ana. Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding.",
+ "hint": "Portuguese",
+ "keywords": [
+  "Ana",
+  "Leeds",
+  "Chamo-me Ana"
+ ],
+ "ms": 14716,
+ "text": "Chamome Ana. Eu trabalho há três anos num lar em Leeds, Leeds como comecei em outubro de dois dois mil e vinte e três. Tenho a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+ "durationMs": 58960,
+ "languageBias": "Portuguese",
+ "opening": false,
+ "werRaw": 0.1032,
+ "werSpoken": 0.0563,
+ "errorsSpoken": [
+  [
+   "del",
+   "chamo",
+   ""
+  ],
+  [
+   "sub",
+   "me",
+   "chamome"
+  ],
+  [
+   "ins",
+   "",
+   "leeds"
+  ],
+  [
+   "ins",
+   "",
+   "como"
+  ],
+  [
+   "ins",
+   "",
+   "dois"
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "del",
+   "a",
+   ""
+  ],
+  [
+   "ins",
+   "",
+   "toda"
+  ],
+  [
+   "ins",
+   "",
+   "negra"
+  ]
+ ],
+ "words": 160,
+ "control": {
+  "hint": "Portuguese",
+  "keywords": null,
+  "ms": 12790,
+  "text": "szemumiene. Eu trabalho há três anos num lar em Leeds. Comecei em outubro de dois mil e vinte e três. Tenho a a formação da medicação e faço medication round da manhã para dezoito residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço e ela fez a participação de safeguarding.",
+  "durationMs": 58960,
+  "languageBias": "Portuguese",
+  "opening": false,
+  "werRaw": 0.0774,
+  "werSpoken": 0.0313,
+  "errorsSpoken": [
+   [
+    "del",
+    "chamo",
+    ""
+   ],
+   [
+    "del",
+    "me",
+    ""
+   ],
+   [
+    "sub",
+    "ana",
+    "szemumiene"
+   ],
+   [
+    "ins",
+    "",
+    "a"
+   ],
+   [
+    "del",
+    "a",
+    ""
+   ]
+  ],
+  "words": 160,
+  "truth": "Chamo-me Ana. Eu trabalho há três anos num lar em Leeds; comecei em outubro de 2023. Tenho a formação da medicação e faço a medication round da manhã para 18 residentes. No fim do turno, escrevo as daily notes em inglês e assino a folha da medicação. Antes do turno, leio o care plan de cada residente e faço o que lá está. Tenho a formação de moving and handling, uso a grua e trabalhamos sempre em dupla. Na unidade de demência, os residentes ficavam agitados ao fim do dia, por isso nós, a equipa toda, passámos o jantar para mais cedo. Eu fiz cartões com fotografias da comida, para cada pessoa poder apontar o que quer comer. Fiz três anos de noites, e também fins de semana. Uma noite, vi uma nódoa negra no braço de uma residente. Registei e contei logo à enfermeira de serviço, e ela fez a participação de safeguarding."
+ }
+}

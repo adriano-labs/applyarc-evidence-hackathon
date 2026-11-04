@@ -40,7 +40,7 @@ describe('the walk-through speaks about each applicant', () => {
   it('uses his for Marcus', () => {
     render(<GuidedRun view={{ next: 'question' }} workspace={{ applicant: { sources: [], facts: [] }, application: {} }} story={null} sampleName="Marcus" possessive="his" isMeta onPrimary={vi.fn()} onStory={vi.fn()} onExit={vi.fn()}>body</GuidedRun>);
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('One thing his notes don’t say');
-    expect(screen.getByText('The form asks what he did himself, so the app asks him once.')).toBeTruthy();
+    expect(screen.getByText('The form asks what he did himself, so the app asks for the missing detail.')).toBeTruthy();
   });
 });
 
@@ -49,6 +49,6 @@ describe('the sample correction', () => {
     const ws = { applicant: { sources: [], facts: [{ id: 'f7', status: 'confirmed', quote: 'I wrote the Helm change that mounts a memory-backed emptyDir' }] }, application: { form: { documents: [{ id: 'answer', title: 'Project answer' }] }, documents: { answer: { revision: 1 } }, repair: null, lastRepair: null } };
     const sample = { name: 'Ellie', correction: { anchor: 'Helm change', text: 'Sam wrote it.' } };
     const view = { next: 'approve', approvals: { answer: 'none' }, stats: { answer: { overLimit: false } } };
-    expect(primaryAction(view, ws, 'answer', sample)).toMatchObject({ id: 'try-correction', factId: 'f7' });
+    expect(primaryAction(view, ws, 'answer', sample)).toMatchObject({ id: 'approve:answer', docRevision: 1, secondary: { id: 'try-correction', factId: 'f7' } });
   });
 });

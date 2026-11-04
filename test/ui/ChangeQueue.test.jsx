@@ -35,12 +35,12 @@ describe('ChangeQueue', () => {
     expect(container.querySelector('.queue-summary').textContent).toBe('Correcting [3] reopened the 1 sentence that cites it: 1 in the cover letter.');
   });
 
-  it('shows each change as struck and added words, with its document', () => {
+  it('shows each change as complete current and proposed wording, with its document', () => {
     const { container } = view();
     const first = container.querySelectorAll('.queue-item')[0];
     expect(first.querySelector('.queue-item-head .doc-name').textContent).toBe('Project answer · cites [3]');
-    expect(first.querySelector('.queue-was del').textContent).toBe('I');
-    expect(first.querySelector('.queue-now ins').textContent).toBe('Sam');
+    expect(first.querySelector('.queue-was .queue-line-text').textContent).toBe('I wrote the Helm change.');
+    expect(first.querySelector('.queue-now .queue-line-text').textContent).toBe('Sam wrote the Helm change.');
     expect([...first.querySelectorAll('[role="radio"]')].every((b) => b.classList.contains('btn'))).toBe(true);
   });
 
@@ -141,10 +141,26 @@ describe('ChangeQueue', () => {
     expect(onDecide).toHaveBeenLastCalledWith('c1', 'keep');
   });
 
-  it('shows progress while the rewrites are being proposed', () => {
+  it('shows progress while the rewrites are being proposed, unless the page already shows the stage', () => {
     view({ busy: { name: 'repair' }, repair: { ...repair, status: 'awaiting-proposal' } });
     expect(screen.getByText('Rewriting the sentences that cite this fact…')).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Apply 2 changes' }).disabled).toBe(true);
+    cleanup();
+    view({ busy: { name: 'repair' }, repair: { ...repair, status: 'awaiting-proposal' }, statusShown: true });
+    expect(screen.queryByText('Rewriting the sentences that cite this fact…')).toBeNull();
+    expect(screen.getByRole('button', { name: 'Apply 2 changes' }).disabled).toBe(true);
+  });
+
+  it('says who proposed the wording and that the same model reviewed it, from the receipts alone', () => {
+    const meta = (step) => ({ step, flow: 'repair', provider: 'meta', isMeta: true, model: 'muse-wonder-1.0', costUsd: 0.01, toolCalls: [] });
+    const { rerender } = view({ receipts: [meta('repair'), meta('review')] });
+    expect(screen.getByText('Proposed by Muse Wonder, then reviewed by the same model against the facts each sentence cites')).toBeTruthy();
+    rerender(<ChangeQueue {...base} receipts={[meta('repair')]} />);
+    expect(screen.getByText('Proposed by Muse Wonder')).toBeTruthy();
+    rerender(<ChangeQueue {...base} receipts={[{ step: 'repair', flow: 'repair', provider: 'fixture', model: 'fixture', costUsd: 0, toolCalls: [] }]} />);
+    expect(screen.queryByText(/Proposed by/)).toBeNull();
+    rerender(<ChangeQueue {...base} receipts={[meta('repair'), meta('review')]} repair={{ ...repair, status: 'awaiting-proposal' }} />);
+    expect(screen.queryByText(/Proposed by/)).toBeNull();
   });
 });
 

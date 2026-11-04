@@ -31,7 +31,7 @@ describe('SpeakButton', () => {
     expect(stopButton.getAttribute('aria-pressed')).toBe('true');
     await act(async () => { fireEvent.click(stopButton); });
     expect(transcribe).toHaveBeenCalledWith(wav);
-    expect(onText).toHaveBeenCalledWith('I rang eight local suppliers.');
+    expect(onText).toHaveBeenCalledWith('I rang eight local suppliers.', { text: 'I rang eight local suppliers.', durationMs: 4000 });
     expect(screen.getByRole('button', { name: 'Speak instead' })).toBeTruthy();
   });
 

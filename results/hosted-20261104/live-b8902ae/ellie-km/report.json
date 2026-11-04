@@ -1,0 +1,328 @@
+{
+ "base": "https://applyarc-evidence.jollystone-892bee18.northeurope.azurecontainerapps.io",
+ "startedAt": "2026-11-04T08:20:16.220Z",
+ "steps": [
+  {
+   "name": "reset",
+   "ms": 231
+  },
+  {
+   "name": "startPrepared",
+   "ms": 193
+  },
+  {
+   "name": "add-note",
+   "ms": 143
+  },
+  {
+   "name": "read-note",
+   "ms": 7292
+  },
+  {
+   "name": "resolveSourceConflict",
+   "ms": 231
+  },
+  {
+   "name": "repair",
+   "ms": 39122
+  },
+  {
+   "name": "applyChanges",
+   "ms": 221
+  },
+  {
+   "name": "approve-answer",
+   "ms": 270
+  },
+  {
+   "name": "approve-letter",
+   "ms": 145
+  },
+  {
+   "name": "export",
+   "ms": 207
+  },
+  {
+   "name": "verify",
+   "ms": 169
+  }
+ ],
+ "failures": [],
+ "heard": null,
+ "conflict": {
+  "detected": true,
+  "question": "Did you write the Helm patch yourself, or did Sam write it while you reproduced the failure, tested his fix and wrote the incident notes?",
+  "offer": {
+   "questionId": "q2",
+   "sourceId": "s3",
+   "factId": "f12",
+   "before": "I wrote the helm patch that fixed it.",
+   "text": "Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes."
+  }
+ },
+ "reopened": [
+  "answer/answer-10",
+  "letter/letter-9"
+ ],
+ "repair": [
+  {
+   "docId": "answer",
+   "segmentId": "answer-10",
+   "status": "proposed",
+   "after": "Sam wrote the Helm patch that fixed it; I reproduced the failure, tested his fix and wrote the incident notes."
+  },
+  {
+   "docId": "letter",
+   "segmentId": "letter-9",
+   "status": "proposed",
+   "after": "In week 9, jobs started dying at random, with pods OOMKilled even with tiny models. The default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed. Sam wrote the Helm patch; I reproduced the failure, tested his fix and wrote the incident notes."
+  }
+ ],
+ "export": {
+  "status": "NOT SUBMITTED",
+  "words": [
+   [
+    "answer",
+    201,
+    300
+   ],
+   [
+    "letter",
+    194,
+    400
+   ]
+  ]
+ },
+ "verify": [
+  {
+   "id": "quotes",
+   "pass": true,
+   "text": "12 of 12 confirmed facts quote Ellie’s text word for word"
+  },
+  {
+   "id": "citations",
+   "pass": true,
+   "text": "17 of 17 drafted statements cite at least one fact, all confirmed"
+  },
+  {
+   "id": "numbers",
+   "pass": true,
+   "text": "17 of 17 drafted statements state no number their cited facts do not"
+  },
+  {
+   "id": "approvals",
+   "pass": true,
+   "text": "2 of 2 approvals match the current version"
+  },
+  {
+   "id": "own",
+   "pass": true,
+   "text": "1 of 1 sentences marked as Ellie’s own are untouched by the model"
+  },
+  {
+   "id": "export",
+   "pass": true,
+   "text": "Export e1 is stamped NOT SUBMITTED and holds exactly the approved versions"
+  },
+  {
+   "id": "review",
+   "pass": true,
+   "text": "Model review on record: 17 cited sentences supported, 1 held back in this visit"
+  }
+ ],
+ "finished": true,
+ "costUsd": 0.1226,
+ "modelSteps": 5,
+ "wallSeconds": 48.5,
+ "budget": {
+  "capUsd": 78,
+  "spentUsd": 16.174975,
+  "reservedUsd": 0.090996,
+  "remainingUsd": 61.734029
+ },
+ "receipts": [
+  {
+   "step": "extract",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "low",
+   "turns": 2,
+   "attempts": 2,
+   "requestIds": [
+    "ce770291-f415-416f-a638-287348241023",
+    "9a03eae8-b577-487a-990d-fc117c195ef4"
+   ],
+   "toolCalls": [
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "verify_quote",
+     "ok": true,
+     "note": "verbatim"
+    },
+    {
+     "name": "form_requirements",
+     "ok": true,
+     "note": "read"
+    }
+   ],
+   "usage": {
+    "input": 4571,
+    "cached": 3176,
+    "output": 626,
+    "reasoning": 354
+   },
+   "costUsd": 0.0187352,
+   "firstEventMs": 1726,
+   "firstOutputMs": 3412,
+   "totalMs": 6890,
+   "rateLimit": {
+    "remainingRequests": 2995,
+    "remainingTokens": 3990189
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "read",
+   "at": "2026-11-04T08:20:23.903Z"
+  },
+  {
+   "step": "repair",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "7d81f5cc-01c9-4384-b0bb-9d84667f3e45"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 2897,
+    "cached": 2804,
+    "output": 726,
+    "reasoning": 623
+   },
+   "costUsd": 0.0154528,
+   "firstEventMs": 1073,
+   "firstOutputMs": 5982,
+   "totalMs": 6486,
+   "rateLimit": {
+    "remainingRequests": 2993,
+    "remainingTokens": 3987593
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:20:31.017Z"
+  },
+  {
+   "step": "review",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "3e7e650d-e4c3-487a-93d6-ce3bdfe61351"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 1801,
+    "cached": 0,
+    "output": 918,
+    "reasoning": 731
+   },
+   "costUsd": 0.025564,
+   "firstEventMs": 5324,
+   "firstOutputMs": 10925,
+   "totalMs": 12326,
+   "rateLimit": {
+    "remainingRequests": 2990,
+    "remainingTokens": 3985043
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:20:43.364Z"
+  },
+  {
+   "kind": "stage",
+   "flow": "repair",
+   "label": "Revising 1 unsupported repair sentence",
+   "at": "2026-11-04T08:20:43.549Z"
+  },
+  {
+   "step": "revise",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "bd5d9228-bd5a-43f5-86bd-865c8b179ffa"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 1965,
+    "cached": 0,
+    "output": 1606,
+    "reasoning": 1507
+   },
+   "costUsd": 0.03998,
+   "firstEventMs": 878,
+   "firstOutputMs": 11899,
+   "totalMs": 12464,
+   "rateLimit": {
+    "remainingRequests": 2989,
+    "remainingTokens": 3982537
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:20:56.023Z"
+  },
+  {
+   "step": "review",
+   "provider": "meta",
+   "isMeta": true,
+   "model": "muse-wonder-1.0",
+   "host": "api.meta.ai",
+   "effort": "medium",
+   "turns": 1,
+   "attempts": 1,
+   "requestIds": [
+    "707e3742-21cf-47db-bd0b-5918098c97a9"
+   ],
+   "toolCalls": [],
+   "usage": {
+    "input": 2419,
+    "cached": 628,
+    "output": 778,
+    "reasoning": 650
+   },
+   "costUsd": 0.022849599999999998,
+   "firstEventMs": 1193,
+   "firstOutputMs": 6432,
+   "totalMs": 7315,
+   "rateLimit": {
+    "remainingRequests": 2990,
+    "remainingTokens": 3977527
+   },
+   "unsettled": 0,
+   "injectedFaults": 0,
+   "flow": "repair",
+   "at": "2026-11-04T08:21:03.424Z"
+  }
+ ]
+}

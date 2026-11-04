@@ -23,7 +23,8 @@ describe('Ellie’s journey on fixture mode', () => {
     expect(pack.documents.map((d) => d.revision)).toEqual([2, 3]);
     expect(pack.documents[1].text).toMatch(/tested the fix my teammate Sam wrote/);
     expect(workspace.application.exports).toHaveLength(1);
-    // The trace a live run commits carries what the model did, not just the steps.
-    expect(receipts.map((r) => r.step)).toEqual(['extract', 'clarify', 'extract', 'draft-answer', 'draft-letter', 'repair']);
+    // The trace a live run commits carries what the model did, not just the steps,
+    // and the loop's own decisions sit between the receipts in time order.
+    expect(receipts.map((r) => (r.kind === 'stage' ? `stage: ${r.label}` : r.step))).toEqual(['extract', 'clarify', 'extract', 'stage: Every requirement is covered: no question needed', 'draft-answer', 'draft-letter', 'repair']);
   });
 });

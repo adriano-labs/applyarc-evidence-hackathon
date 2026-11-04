@@ -2,6 +2,7 @@ import './TopBar.css';
 import { Command } from 'lucide-react';
 import { formatMs, formatUsd, summariseReceipts } from '../lib/format.js';
 import { WorkingState } from './WorkingState.jsx';
+import { DroppedWordingNotice } from './DroppedWordingNotice.jsx';
 
 function getModeBadgeText(mode) {
   if (mode.id === 'fixture') {
@@ -10,7 +11,10 @@ function getModeBadgeText(mode) {
   return mode.isMeta ? mode.label : `${mode.label || mode.model}, not Meta`;
 }
 
-export function TopBar({ company, role, mode, budget, onCommands, onReset, onReceipts, earlier, receipts = [] }) {
+// Muse Spark Open's licence requires this notice to be shown prominently.
+const builtWithSparkOpen = (mode) => mode?.id === 'compatible' && /muse-spark-open/i.test(mode?.model ?? '');
+
+export function TopBar({ company, role, mode, onCommands, onReset, onReceipts, earlier, receipts = [] }) {
   const modeText = getModeBadgeText(mode);
   const modeClass = mode.id === 'fixture' ? 'mode fixture' : mode.isMeta ? 'mode meta' : 'mode ' + mode.id;
   const earlierCount = typeof earlier === 'number' ? earlier : 0;
@@ -22,22 +26,22 @@ export function TopBar({ company, role, mode, budget, onCommands, onReset, onRec
     const t = summary.toolCalls;
     const stepsLabel = n === 1 ? 'step' : 'steps';
     const toolCallsLabel = t === 1 ? 'tool call' : 'tool calls';
-    const name = `What Meta did: ${n} ${stepsLabel}, ${t} ${toolCallsLabel}, ${formatMs(summary.totalMs)}, ${formatUsd(summary.costUsd)}`;
+    const name = `What Meta did: ${n} ${stepsLabel}, ${t} ${toolCallsLabel}, ${formatMs(summary.totalMs)} total model time, ${formatUsd(summary.costUsd)}`;
     receiptsButton = (
       <button type="button" className="receipts-pill" onClick={onReceipts} aria-label={name}>
         <span className="receipt-summary">{name}</span>
-        <span className="receipt-short" aria-hidden="true">Meta activity</span>
+        <span className="receipt-short" aria-hidden="true">Meta activity · {n} {stepsLabel}</span>
       </button>
     );
   }
 
-  return (
+  const header = (
     <header className="topbar">
       <div className="brand">
         <span className="brand-mark" aria-hidden="true">[1]</span>
         ApplyArc Evidence
       </div>
-      <p className="crumb">
+      {company || earlierCount > 0 ? <p className="crumb">
         <strong>{company}</strong>
         <span className="crumb-sep" aria-hidden="true">·</span>
         <span>{role}</span>
@@ -46,7 +50,7 @@ export function TopBar({ company, role, mode, budget, onCommands, onReset, onRec
             {earlierCount} earlier application{earlierCount > 1 ? 's' : ''}
           </span>
         ) : null}
-      </p>
+      </p> : null}
       <div className="topbar-end">
         <span className={modeClass} aria-label={modeText} title={modeText}>
           <span style={{ display: 'none' }}>{modeText}</span>
@@ -56,7 +60,7 @@ export function TopBar({ company, role, mode, budget, onCommands, onReset, onRec
             </>
           ) : mode && mode.isMeta ? (
             <>
-              Meta<span className="mode-long">{mode.label && mode.label.startsWith('Meta') ? mode.label.slice(4) : mode.label ? (mode.label.replace(/^Meta\s*/i, '').startsWith(':') ? mode.label.replace(/^Meta\s*/i, '') : ' ' + mode.label.replace(/^Meta\s*/i, '')) : ''}</span>
+              {mode.id === 'compatible' ? 'Meta open weight' : 'Meta'}<span className="mode-long">{mode.label && mode.label.startsWith('Meta') ? mode.label.slice(4) : mode.label ? (mode.label.replace(/^Meta\s*/i, '').startsWith(':') ? mode.label.replace(/^Meta\s*/i, '') : ' ' + mode.label.replace(/^Meta\s*/i, '')) : ''}</span>
             </>
           ) : (
             <>
@@ -64,12 +68,8 @@ export function TopBar({ company, role, mode, budget, onCommands, onReset, onRec
             </>
           )}
         </span>
+        {builtWithSparkOpen(mode) ? <span className="built-with">Built with Muse Spark Open</span> : null}
         {receiptsButton}
-        {budget ? (
-          <span className="spend" title="Spent so far against the spend cap">
-            {formatUsd(budget.spentUsd + budget.reservedUsd)} of {formatUsd(budget.capUsd)}
-          </span>
-        ) : null}
         <button type="button" className="topbar-btn" aria-label="Commands (Ctrl K)" onClick={onCommands}>
           <Command size={14} aria-hidden="true" />
           <kbd>K</kbd>
@@ -80,9 +80,24 @@ export function TopBar({ company, role, mode, budget, onCommands, onReset, onRec
       </div>
     </header>
   );
+
+  if (mode && mode.id === 'fixture' && mode.fallbackReason === 'live-allowance-unavailable') {
+    return (
+      <div>
+        {header}
+        <div className="status-wrap">
+          <div className="notice info" role="status">
+            <p>Live Meta allowance is unavailable for another journey in this visit. Ellie’s sample and Ana’s written note still work with hand-written outputs, without Meta calls. Starting again clears the application; it does not renew the allowance.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return header;
 }
 
-export function StatusLine({ busy, notice, modeLabel, onDismiss }) {
+export function StatusLine({ busy, notice, modeLabel, onDismiss, titles }) {
   if (notice) {
     const isError = notice.kind === 'error';
     return (
@@ -96,6 +111,7 @@ export function StatusLine({ busy, notice, modeLabel, onDismiss }) {
         {!notice.persistent && <button type="button" className="btn small link" onClick={onDismiss}>
           Dismiss
         </button>}
+        <DroppedWordingNotice details={notice.details} titles={titles} />
       </div>
     );
   }

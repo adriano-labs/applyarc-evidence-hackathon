@@ -55,6 +55,9 @@ export function useAppState(ws) {
   const [guided, setGuided] = useState(rememberedGuided);
   const [story, setStory] = useState(null);
   const [reviewStep, setReviewStep] = useState(null);
+  // A sample who speaks, chosen on the welcome: her voice note opens before any workspace exists.
+  // Set only by choosing her; every other start and Start again clears it.
+  const [starting, setStarting] = useState(null);
   useEffect(() => rememberGuided(guided), [guided]);
 
   const refreshReceipts = async () => {
@@ -75,6 +78,9 @@ export function useAppState(ws) {
   useEffect(() => {
     getSample().then((s) => setSample(s)).catch(() => {});
     refreshReceipts();
+    // What Meta did shows a voice call as soon as it ends, not at the next step (sent by api.js).
+    window.addEventListener('ae-voice-call', refreshReceipts);
+    return () => window.removeEventListener('ae-voice-call', refreshReceipts);
   }, []);
 
   useEffect(() => {
@@ -115,6 +121,7 @@ export function useAppState(ws) {
       setPicking(false);
       setForms([]);
       setGuided(false);
+      setStarting(null);
       setStory(null);
       setReviewStep(null);
       setOpenCorrectionFactId(null);
@@ -169,5 +176,7 @@ export function useAppState(ws) {
     setStory,
     reviewStep,
     setReviewStep,
+    starting,
+    setStarting,
   };
 }

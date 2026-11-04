@@ -1,0 +1,14 @@
+{
+ "out": "../evidence/hosted-a859bf8/ana-full",
+ "failures": [],
+ "costUsd": 0.4158,
+ "wallSeconds": 133.7,
+ "notes": 13,
+ "refused": 0,
+ "werNotes": 0.0563,
+ "reopen": [
+  "answer/answer-19",
+  "letter/letter-9"
+ ],
+ "verify": "quotes:true citations:true numbers:true approvals:true own:true export:true review:true"
+}

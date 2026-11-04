@@ -69,6 +69,25 @@
   font-size: var(--text-sm);
   color: var(--muted);
   white-space: nowrap;
+  min-width: 0;
+}
+
+.guided-step-key .guided-step-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  white-space: normal;
+}
+
+/* The key-moment tag: the mode badge's pill, a 1px Reference Blue border, no fill. */
+.guided-step-tag {
+  font: 500 var(--text-xs) var(--font-ui);
+  color: var(--oxford-3);
+  border: 1px solid var(--oxford-3);
+  border-radius: 999px;
+  padding: 0 7px;
+  white-space: nowrap;
 }
 
 button.guided-step {
@@ -113,7 +132,7 @@ button.guided-step:focus-visible {
 }
 
 @media (max-width: 560px) {
-  .guided-step:not([aria-current='step']) .guided-step-label {
+  .guided-step:not([aria-current='step']):not(.guided-step-key) .guided-step-label {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -129,6 +148,9 @@ button.guided-step:focus-visible {
   color: var(--muted);
 }
 
+/* Who this is: a fictional applicant (and her synthetic voice), on every step. */
+.guided-demo { margin: 0; font-size: var(--text-xs); color: var(--muted); }
+
 .guided h1 {
   font-family: var(--font-doc);
   font-size: var(--text-xl);
@@ -139,16 +161,46 @@ button.guided-step:focus-visible {
   max-width: 34ch;
 }
 
-.guided-why {
+.guided-why,
+.guided-expect {
   font-size: 15px;
   color: var(--muted);
-  margin-bottom: var(--s5);
+  margin: 0 0 var(--s2);
   max-width: 60ch;
   text-wrap: pretty;
   line-height: 1.5;
 }
 
+.guided-expect {
+  font-size: var(--text-sm);
+}
+
 .guided-body {
+  margin: var(--s5) 0;
+}
+
+.guided-happened {
+  margin: 0 0 var(--s5);
+  padding: var(--s4) var(--s5);
+  background: var(--sheet);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+}
+
+.guided-happened h2 {
+  margin: 0 0 var(--s2);
+  font: 600 var(--text-lg)/1.5 var(--font-doc);
+}
+
+.guided-happened ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s1);
+  font-size: var(--text-md);
+}
+
+.guided-see {
   margin-bottom: var(--s5);
 }
 
@@ -163,6 +215,9 @@ button.guided-step:focus-visible {
   gap: var(--s3);
   margin-top: var(--s4);
 }
+
+/* The typed correction offered above her note's facts keeps clear of the fact card below it. */
+.guided-typed-offer { margin-bottom: var(--s5); }
 
 .guided-notes {
   font-family: var(--font-doc);
@@ -291,4 +346,35 @@ button.guided-step:focus-visible {
   .guided-step {
     padding: 4px 4px;
   }
+}
+
+/* The key moment on a prepared workspace: the applicant's note, in their own voice, ready to add. */
+.guided-note label {
+  display: block;
+  font: 500 var(--text-sm) var(--font-ui);
+  color: var(--ink);
+  margin-bottom: var(--s2);
+}
+
+.guided-note textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: 400 var(--text-doc)/1.6 var(--font-doc);
+  color: var(--ink);
+  background: var(--sheet);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: var(--s3);
+}
+
+.guided-note textarea:focus {
+  border-color: var(--focus);
+  outline: none;
+}
+
+/* Losses kept: the sentences the evidence check refused before she saw the draft. */
+.guided-refused { font-size: var(--text-sm); color: var(--ink); margin: var(--s3) 0; }
+
+@media (max-width: 560px) {
+  .guided-main { width: 100%; min-height: 44px; }
 }

@@ -24,20 +24,20 @@ describe('the walk-through is never lost', () => {
   it('comes back after a reload of the tab', async () => {
     render(<App />);
     fireEvent.click(await button('Try it with Ellie’s notes'));
-    await screen.findByText('Step 2 of 5', {}, wait);
+    await screen.findByText('Step 2 of 4', {}, wait);
     cleanup();
     render(<App />);
-    expect(await screen.findByText('Step 2 of 5', {}, wait)).toBeTruthy();
+    expect(await screen.findByText('Step 2 of 4', {}, wait)).toBeTruthy();
   });
 
   it('can be reopened from the full workspace', async () => {
     render(<App />);
     fireEvent.click(await button('Try it with Ellie’s notes'));
-    await screen.findByText('Step 2 of 5', {}, wait);
+    await screen.findByText('Step 2 of 4', {}, wait);
     fireEvent.click(await button('Open the full workspace'));
     await waitFor(() => expect(screen.getByRole('tablist')).toBeTruthy(), wait);
     fireEvent.click(await button('Back to the guided walk-through'));
-    expect(await screen.findByText('Step 2 of 5', {}, wait)).toBeTruthy();
+    expect(await screen.findByText('Step 2 of 4', {}, wait)).toBeTruthy();
   });
 
   it('never shows over a workspace without the sample’s notes', async () => {

@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { highlightParts } from '../lib/highlight.js';
-import { SampleCards } from './SampleCards.jsx';
-import { OwnApplicationInput } from './OwnApplicationInput.jsx';
+import { NotesWelcome } from './NotesWelcome.jsx';
+import { LanguageChoice } from './LanguageChoice.jsx';
 import './NotesView.css';
 
-const formatSnapshotDate = (iso) => (iso ? new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : '');
-
-export function NotesView({ sources, facts, questions, activeFactId, revealFactId, busy, sampleNotes, onAddNotes, onHover, company, wordLimit, snapshotDate, samples, liveModel, onStartSample, onStartOwn, voice }) {
+export function NotesView({ sources, facts, questions, activeFactId, revealFactId, busy, sampleNotes, onAddNotes, onHover, company, wordLimit, snapshotDate, samples, liveModel, onStartSample, onStartPrepared, onStartOwn, voice, languages, model }) {
   const sectionRef = useRef(null);
   const [noteText, setNoteText] = useState('');
+  const [noteLanguage, setNoteLanguage] = useState(() => (sources ?? []).filter((s) => s.kind !== 'correction').at(-1)?.language ?? 'en');
   const [sending, setSending] = useState(false);
   const [noteStatus, setNoteStatus] = useState(null);
 
@@ -21,32 +20,7 @@ export function NotesView({ sources, facts, questions, activeFactId, revealFactI
   const hasNotesSource = sources && sources.some((s) => s.kind === 'notes');
 
   if (!hasNotesSource) {
-    const formattedDate = formatSnapshotDate(snapshotDate);
-
-    return (
-      <section className="notes notes-compose">
-        <h2 className="notes-headline">Application answers you can stand behind.</h2>
-        <ol className="notes-how" aria-label="How it works">
-          <li>Paste your rough notes. Confirm the facts the app finds in them.</li>
-          <li>Get the employer’s answer and a cover letter, with every claim citing your own words.</li>
-          <li>Change a fact, and only the sentences that used it are rewritten for you to review.</li>
-        </ol>
-        <p className="notes-promise">Built for applicants, not employers: it never screens, scores or ranks anyone, and never submits anything.</p>
-        {Array.isArray(samples) && samples.length > 0 ? (
-          <SampleCards samples={samples} liveModel={liveModel} onStart={onStartSample} />
-        ) : sampleNotes ? (
-          <button type="button" className="btn primary big" onClick={() => onAddNotes && onAddNotes(sampleNotes)}>
-            Try it with Ellie’s notes
-          </button>
-        ) : null}
-        {sampleNotes ? (
-          <p className="notes-sample">
-            Ellie is a sample graduate; her notes are made up. The {company} form is real: a snapshot taken on {formattedDate}.
-          </p>
-        ) : null}
-        {onStartOwn && <OwnApplicationInput busy={busy} liveModel={liveModel} onStart={onStartOwn} voice={voice} />}
-      </section>
-    );
+    return <NotesWelcome {...{ busy, sampleNotes, onAddNotes, company, snapshotDate, samples, liveModel, onStartSample, onStartPrepared, onStartOwn, voice, languages, model }} />;
   }
 
   const getQuestionText = (questionId) => {
@@ -63,7 +37,7 @@ export function NotesView({ sources, facts, questions, activeFactId, revealFactI
     setSending(true);
     setNoteStatus(null);
     try {
-      const res = await onAddNotes(trimmed);
+      const res = await (noteLanguage === 'en' ? onAddNotes(trimmed) : onAddNotes(trimmed, { language: noteLanguage }));
       if (!res) {
         setNoteStatus({ type: 'error', message: 'Could not add your note. Your text is still here; try again.' });
         return;
@@ -82,6 +56,7 @@ export function NotesView({ sources, facts, questions, activeFactId, revealFactI
       <details className="notes-add">
         <summary>Add a note</summary>
         <div className="notes-compose">
+          <LanguageChoice id="notes-add-language" languages={languages} value={noteLanguage} onChange={setNoteLanguage} disabled={sending || busy} />
           <label htmlFor="notes-add-textarea">New note</label>
           <textarea
             id="notes-add-textarea"

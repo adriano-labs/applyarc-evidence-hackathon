@@ -1,0 +1,108 @@
+{
+ "base": "https://applyarc-evidence-open.jollystone-892bee18.northeurope.azurecontainerapps.io",
+ "result": {
+  "path": "conflict raised",
+  "why": "Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite.",
+  "expect": "Her facts and both drafts were prepared on the Muse Wonder link on 3 Nov, before this visit. The correction and the repair run live now.",
+  "tag": "Synthetic voice, fictional applicant · nothing is submitted"
+ },
+ "errors": [],
+ "log": [
+  {
+   "at": "2026-11-04T13:00:45.522Z",
+   "s": 2,
+   "what": "clicked Start at Ana’s key moment",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:45.721Z",
+   "s": 2,
+   "what": "key moment",
+   "detail": "Add Ana’s note. Muse Spark Open reads it against her confirmed facts: it may flag the contradiction itself, or read the note as new facts, and then you correct the fact yourself. Only the sentences that cite that fact reopen, and you decide each rewrite."
+  },
+  {
+   "at": "2026-11-04T13:00:45.755Z",
+   "s": 2,
+   "what": "screenshot key-moment",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:45.783Z",
+   "s": 2,
+   "what": "clicked Add Ana’s note",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:49.847Z",
+   "s": 6,
+   "what": "conflict",
+   "detail": "Fez dois anos seguidos de noites e depois passou a fazer dias no último ano, ou alternou noites e dias ao longo dos três anos?"
+  },
+  {
+   "at": "2026-11-04T13:00:49.897Z",
+   "s": 6,
+   "what": "screenshot conflict-raised",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:49.933Z",
+   "s": 6,
+   "what": "clicked Keep the earlier account",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:49.937Z",
+   "s": 6,
+   "what": "conflict",
+   "detail": "Fez dois anos seguidos de noites e depois passou a fazer dias no último ano, ou alternou noites e dias ao longo dos três anos?"
+  },
+  {
+   "at": "2026-11-04T13:00:49.975Z",
+   "s": 6,
+   "what": "screenshot conflict-raised",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:49.998Z",
+   "s": 6,
+   "what": "clicked Keep the earlier account",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:50.001Z",
+   "s": 6,
+   "what": "conflict",
+   "detail": "Fez dois anos seguidos de noites e depois passou a fazer dias no último ano, ou alternou noites e dias ao longo dos três anos?"
+  },
+  {
+   "at": "2026-11-04T13:00:50.054Z",
+   "s": 6,
+   "what": "screenshot conflict-raised",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:50.080Z",
+   "s": 6,
+   "what": "clicked Keep the earlier account",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:00:50.083Z",
+   "s": 6,
+   "what": "conflict",
+   "detail": "Fez dois anos seguidos de noites e depois passou a fazer dias no último ano, ou alternou noites e dias ao longo dos três anos?"
+  },
+  {
+   "at": "2026-11-04T13:00:50.138Z",
+   "s": 6,
+   "what": "screenshot conflict-raised",
+   "detail": ""
+  },
+  {
+   "at": "2026-11-04T13:01:20.145Z",
+   "s": 36,
+   "what": "FAILED",
+   "detail": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Keep the earlier account', exact: true }).first()\n    - locator resolved to <button class=\"btn\" type=\"button\">Keep the earlier account</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n  - element was detached from the DOM, retrying\n"
+  }
+ ]
+}

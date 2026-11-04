@@ -75,6 +75,21 @@ describe('repair', () => {
     expect(ws.application.documents.answer.segments[2]).toMatchObject({ text: 'I diagnosed it with dmesg; Sam fixed it.', author: 'user' });
   });
 
+  // Live, 3 Nov: a still-true sentence came back unchanged, showed no reason and lost its only
+  // citation when kept; a sentence with no rewrite gave no hint that it might now be untrue.
+  it('proposes an unchanged rewrite of a still-true sentence, keeping its words, author and citations', async () => {
+    const ws = await draftedWorkspace();
+    const sentence = structuredClone(ws.application.documents.answer.segments[2]);
+    changeFact(ws, 'f3', 'I found the /dev/shm problem by reading dmesg, and I wrote the Helm change that fixed it, with Sam reviewing it.');
+    startRepair(ws, 'f3');
+    const { repair } = proposeRewrites(ws, [{ segmentId: 'answer-3', text: sentence.text, factIds: ['f3'] }]);
+    expect(repair.items[0]).toMatchObject({ status: 'proposed', after: sentence.text, afterFactIds: ['f3'], reason: expect.stringMatching(/^Still true after the correction/) });
+    expect(repair.items[1]).toMatchObject({ status: 'needs-review', after: null, reason: expect.stringMatching(/^No rewrite came back that the corrected fact supports, so this sentence may now be untrue/) });
+    decideItem(ws, 'c2', 'keep');
+    expect(applyRepair(ws)).toMatchObject({ changed: 0, kept: 1, changedSegments: [] });
+    expect(ws.application.documents.answer.segments[2]).toEqual(sentence);
+  });
+
   it('blocks edits while changes are under review', async () => {
     const { ws } = await changed();
     expect(() => editSegment(ws, 'answer', 'answer-1', 'x')).toThrow(/reviewing/);

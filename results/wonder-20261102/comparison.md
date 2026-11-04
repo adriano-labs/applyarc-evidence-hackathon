@@ -76,15 +76,3 @@ Six synthetic cases are too small for broad superiority or reliability claims. T
 ## Evidence record
 
 [Machine-readable results](comparison.json) retain exact outcomes, usage, timing and source hashes. Local paths were removed. The underlying input documents are synthetic. The scope, failed case, excluded attempts and later-fix boundary above remain unchanged.
-
----
-
-Retrospective supplement, 2 November 2026; no reruns or score changes.
-
-## Recorded application actions
-
-The six-case comparison also retained the scripted application route count. Each of the four completed corrections used eight requests: change fact, run repair, take each of two proposals, apply, approve each document, export. The two ambiguity cases used four and three requests, including one deliberate export-safety probe each. Total: **39 requests**, or **37 excluding those two probes**. The missed ambiguity remains a failed case despite its HTTP requests succeeding.
-
-Each arm received the same update text once. The assistant received one automatically assembled context packet per case; no browser copying, user review, saving or export was measured for it. **Its user-action count is unobserved, not zero.** These API counts are not human clicks, typing or cognitive effort, and provider/tool calls are counted separately.
-
-This fills the protocol's action-count record but establishes **no operator-effort or human-time advantage**. The verdict remains five ties and one assistant win: app 5/6, same-Wonder assistant 6/6; the app was slower on median repair time. The experiment began with prepared facts/documents and did not measure full application preparation.

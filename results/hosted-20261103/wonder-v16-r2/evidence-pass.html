@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence Pass: Ellie, Graduate Cloud Platform Engineer 2027 at Graphcore</title>
+<style>
+:root { color-scheme: light; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #121a26; line-height: 1.55; }
+main { max-width: 760px; margin: 0 auto; padding: 32px 24px; background: #ffffff; }
+h1 { font-size: 1.6rem; margin: 0 0 8px; color: #0e2a47; }
+h2 { font-size: 1.2rem; margin: 32px 0 12px; color: #0e2a47; border-bottom: 1px solid #dde2ea; padding-bottom: 4px; }
+p { margin: 12px 0; }
+.intro, .from, footer { color: #5a6474; }
+.sentence { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-align: left; cursor: pointer; text-decoration: underline dotted #0e2a47; text-underline-offset: 3px; }
+.sentence.on, .ref.on { background: #ffe36e; }
+.refs { margin: 16px 0 0; padding-left: 24px; }
+.ref { margin: 6px 0; padding: 2px 4px; }
+.from { font-size: 0.9em; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #dde2ea; }
+@media print { body { background: #ffffff; } .sentence { text-decoration: none; } }</style>
+</head>
+<body>
+<main>
+<header><h1>Evidence Pass: Ellie, Graduate Cloud Platform Engineer 2027 at Graphcore</h1>
+<p class="intro">Every cited sentence links to Ellie’s own words, which Ellie confirmed.</p></header>
+<section class="doc"><h2>Project answer</h2>
+<p><button type="button" class="sentence" data-refs="1 2">Our four-person final-year team built a GPU job runner for the department&#39;s machine learning teaching cluster, from September 2025 to March 2026.</button> <button type="button" class="sentence" data-refs="3">Students submitted training jobs through a small web form and the runner queued them on Kubernetes, using k3s on six lab workstations with GPUs.</button> <button type="button" class="sentence" data-refs="4">In the spring term, 140 students used it and the average wait for a GPU fell from about two days to under 20 minutes.</button></p>
+<p><button type="button" class="sentence" data-refs="5">The stack was Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, and Prometheus and Grafana for monitoring.</button> <button type="button" class="sentence" data-refs="6">We used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.</button></p>
+<p><button type="button" class="sentence" data-refs="7">In week 9, jobs started dying at random, with pods OOMKilled even with tiny models.</button> <button type="button" class="sentence" data-refs="8">We wasted two days before looking, although dmesg showed the OOM kills straight away.</button> <button type="button" class="sentence" data-refs="9">The default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.</button> <button type="button" class="sentence" data-refs="10">It was fixed by mounting a memory-backed emptyDir with a size limit per job.</button> <button type="button" class="sentence" data-refs="11">Sam wrote the Helm patch; I reproduced the failure, tested his fix and wrote the incident notes.</button> <button type="button" class="sentence" data-refs="12">The lesson was to check the node&#39;s kernel log first.</button></p>
+<ol class="refs"><li id="answer-ref-1" class="ref"><q>Final-year group project, four of us, Sept 2025 to March 2026.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-2" class="ref"><q>We built a self-service GPU job runner for the department&#39;s machine learning teaching cluster.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-3" class="ref"><q>Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-4" class="ref"><q>Result: 140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-5" class="ref"><q>Stack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-6" class="ref"><q>we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-7" class="ref"><q>Problem: in week 9 jobs started dying at random, pods OOMKilled even with tiny models.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-8" class="ref"><q>dmesg showed the OOM kills straight away and we wasted two days before looking.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-9" class="ref"><q>Turned out the default /dev/shm in the pods was 64 MB, so the PyTorch data loaders crashed.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-10" class="ref"><q>Fixed it by mounting a memory-backed emptyDir with a size limit per job.</q> <span class="from">From Ellie’s notes</span></li><li id="answer-ref-11" class="ref"><q>Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.</q> <span class="from">From Ellie’s correction</span></li><li id="answer-ref-12" class="ref"><q>Learned: check the node&#39;s kernel log first.</q> <span class="from">From Ellie’s notes</span></li></ol></section>
+<section class="doc"><h2>Cover letter</h2>
+<p>Dear Graphcore hiring team,</p>
+<p>I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.</p>
+<p><button type="button" class="sentence" data-refs="13">I liked infrastructure more than machine learning, and Graphcore builds both the hardware and the cloud platform that models run on.</button></p>
+<p><button type="button" class="sentence" data-refs="2">We built a self-service GPU job runner for the department&#39;s machine learning teaching cluster.</button> <button type="button" class="sentence" data-refs="3">Students submitted jobs through a web form, and the runner queued them on Kubernetes, using k3s on six lab workstations with GPUs.</button> <button type="button" class="sentence" data-refs="5">The stack was Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, and Prometheus and Grafana for monitoring.</button> <button type="button" class="sentence" data-refs="6">We used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.</button></p>
+<p><button type="button" class="sentence" data-refs="7">In week 9, jobs started dying at random, with pods OOMKilled even with tiny models.</button> <button type="button" class="sentence" data-refs="11">Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.</button> <button type="button" class="sentence" data-refs="4">140 students used it in the spring term, and the average wait for a GPU fell from about two days to under 20 minutes.</button></p>
+<p>Thank you for considering my application.</p>
+<p>Kind regards, Ellie</p>
+<ol class="refs"><li id="letter-ref-2" class="ref"><q>We built a self-service GPU job runner for the department&#39;s machine learning teaching cluster.</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-3" class="ref"><q>Students submitted training jobs through a small web form and the runner queued them on Kubernetes (k3s on six old lab workstations with GPUs).</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-4" class="ref"><q>Result: 140 students used it in the spring term and the average wait for a GPU went from about two days (the old sign-up sheet) to under 20 minutes.</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-5" class="ref"><q>Stack: Python and FastAPI for the API, Redis for the queue, Helm charts for deploys, Prometheus and Grafana for monitoring.</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-6" class="ref"><q>we used Kubernetes Jobs with a scheduler extender instead of Slurm, because the department wanted everything in containers and we needed per-course GPU quotas.</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-7" class="ref"><q>Problem: in week 9 jobs started dying at random, pods OOMKilled even with tiny models.</q> <span class="from">From Ellie’s notes</span></li><li id="letter-ref-11" class="ref"><q>Sam wrote the Helm patch. I reproduced the failure, tested his fix and wrote the incident notes.</q> <span class="from">From Ellie’s correction</span></li><li id="letter-ref-13" class="ref"><q>Why Graphcore: I liked the infrastructure side of the project more than the machine learning side, and Graphcore builds both the hardware and the cloud platform that models run on.</q> <span class="from">From Ellie’s notes</span></li></ol></section>
+<footer><p>This is Ellie’s own evidence, shared by Ellie. It is not a reference check or an assessment of Ellie.</p></footer>
+</main>
+<script>
+document.querySelectorAll('button.sentence').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.on').forEach(function (e) { e.classList.remove('on'); });
+    b.classList.add('on');
+    var refs = b.getAttribute('data-refs').split(' ');
+    var first = null;
+    refs.forEach(function (n) {
+      document.querySelectorAll('.ref[id$="-ref-' + n + '"]').forEach(function (e) { e.classList.add('on'); first = first || e; });
+    });
+    if (first && first.scrollIntoView) first.scrollIntoView({ block: 'nearest' });
+  });
+});</script>
+</body>
+</html>

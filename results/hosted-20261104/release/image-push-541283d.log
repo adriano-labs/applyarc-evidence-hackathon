@@ -1,0 +1,24 @@
+0c8e8a9c4903: Layer already exists
+a4b95b0b931f: Pushed
+44a87794b739: Pushed
+541283d: digest: sha256:07ce307a645b31a2781ec7e2e9aa7846df75046290112ff7dd655501230585b2 size: 3041
+2026/11/04 12:58:04 Successfully pushed image: applyarcevidence.azurecr.io/applyarc-evidence:541283d
+2026/11/04 12:58:04 Step ID: build marked as successful (elapsed time in seconds: 34.409799)
+2026/11/04 12:58:04 Populating digests for step ID: build...
+2026/11/04 12:58:05 Successfully populated digests for step ID: build
+2026/11/04 12:58:05 Step ID: push marked as successful (elapsed time in seconds: 11.017627)
+2026/11/04 12:58:05 The following dependencies were found:
+2026/11/04 12:58:05 
+- image:
+    registry: applyarcevidence.azurecr.io
+    repository: applyarc-evidence
+    tag: 541283d
+    digest: sha256:07ce307a645b31a2781ec7e2e9aa7846df75046290112ff7dd655501230585b2
+  runtime-dependency:
+    registry: registry.hub.docker.com
+    repository: library/node
+    tag: 24-slim
+    digest: sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+  git: {}
+
+Run ID: cg1c was successful after 49s

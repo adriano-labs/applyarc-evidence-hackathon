@@ -1,0 +1,26 @@
+ 1 start fresh (N ms)
+ 2 load the sample notes (N ms)
+ 3 add notes (N ms)
+ 4 read the notes (N ms)
+ 5 confirm the facts (N ms)
+ 6 check what the form still needs (N ms)
+ 7 answer the question (N ms)
+ 8 read the answer (N ms)
+ 9 confirm the new facts (N ms)
+10 check again (N ms)
+11 write both documents (N ms)
+12 edit a letter sentence by hand (N ms)
+13 correct a fact (N ms)
+14 propose the changes (N ms)
+15 decide what needs you (N ms)
+16 apply the changes (N ms)
+17 approve the project answer (N ms)
+18 approve the cover letter (N ms)
+19 export the pack (N ms)
+   notes: 11 facts admitted, 0 refused (none)
+   questions: contribution: Your notes say what the team did. What did you do yourself, especially when the jobs started failing in week 9?
+   answer: 206 of 300 words
+   letter: 153 of 400 words
+   repair: 2 reliant sentences (answer-8, letter-4)
+   proposals: answer-8=proposed, letter-4=conflict
+Journey passed: 19 steps in N ms (in-process, fixture)

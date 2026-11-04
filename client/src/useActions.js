@@ -1,5 +1,8 @@
 import { autoStep, leftOutNotice, packMarkdown, unreadSource } from './flow.js';
 import { evidencePassHtml } from './lib/evidencePass.js';
+import { drafterOf } from './lib/prepared.js';
+import { modelSteps } from './lib/format.js';
+import { isStage } from './lib/trail.js';
 
 function downloadBlob(filename, content, type) {
   const blob = new Blob([content], { type: type || 'text/plain' });
@@ -46,8 +49,10 @@ export function useActions(ws, ui) {
     return result;
   }
 
-  async function addNotes(text) {
-    const res = await act('notes', { text });
+  // extra: { language } she chose for this note (with none, the server keeps her latest), and
+  // { spoken: true } for words from a voice clip.
+  async function addNotes(text, extra) {
+    const res = await act('notes', { text, ...(extra ?? {}) });
     if (res) {
       await followUp(res);
     }
@@ -55,11 +60,20 @@ export function useActions(ws, ui) {
     return res;
   }
 
-  async function startSample(sampleId) {
-    const res = await act('startSample', { sampleId });
+  // text: for a sample who speaks, the words Voice Transcribe heard, as the applicant checked them.
+  async function startSample(sampleId, text) {
+    const res = await act('startSample', { sampleId, ...(text ? { text } : {}) });
     if (res) {
       await followUp(res);
     }
+    if (res && refreshReceipts) refreshReceipts();
+    return res;
+  }
+
+  // The prepared state is the walk-through's key moment: nothing to follow up until the note is added.
+  // sampleId: a sample other than Ellie with its own saved state.
+  async function startPrepared(sampleId) {
+    const res = await act('startPrepared', sampleId && sampleId !== 'ellie' ? { sampleId } : undefined);
     if (res && refreshReceipts) refreshReceipts();
     return res;
   }
@@ -121,8 +135,9 @@ export function useActions(ws, ui) {
   const acceptSuggestion = (suggestionId) => act('acceptSuggestion', { suggestionId });
   const dismissSuggestion = (suggestionId) => act('dismissSuggestion', { suggestionId });
 
-  async function correct(factId, text) {
-    const res = await act('changeFact', { factId, text });
+  // gloss: a fact in another language also sends its English meaning and who did it.
+  async function correct(factId, text, gloss) {
+    const res = await act('changeFact', { factId, text, ...(gloss ?? {}) });
     if (res) {
       await followUp(res);
     }
@@ -186,8 +201,9 @@ export function useActions(ws, ui) {
     if (action.id === 'draft') {
       const res = await run('draft', {}, action.label || 'Writing both documents');
       if (res && refreshReceipts) refreshReceipts();
-      const leftOut = leftOutNotice(res?.result?.dropped);
-      if (leftOut && ws.setNotice) ws.setNotice({ kind: 'info', message: leftOut });
+      const dropped = res?.result?.dropped;
+      const leftOut = leftOutNotice(dropped);
+      if (leftOut && ws.setNotice) ws.setNotice({ kind: 'info', message: leftOut, details: dropped });
       return res;
     }
     if (action.id === 'export') {
@@ -219,7 +235,7 @@ export function useActions(ws, ui) {
 
   function downloadTrace(receipts, mode, budget) {
     const exportedAt = new Date().toISOString();
-    const trace = { exportedAt, mode, budget, receipts };
+    const trace = { status: 'NOT SUBMITTED', exportedAt, mode, budget, receipts: modelSteps(receipts), stages: receipts.filter(isStage) };
     downloadBlob('applyarc-evidence-trace.json', JSON.stringify(trace, null, 2), 'application/json');
   }
 
@@ -229,9 +245,9 @@ export function useActions(ws, ui) {
     downloadBlob('applyarc-pack.md', content, 'text/markdown');
   }
 
-  function downloadEvidencePass(pack) {
+  function downloadEvidencePass(pack, mode, prepared) {
     if (!pack) return;
-    downloadBlob('evidence-pass.html', evidencePassHtml(pack), 'text/html');
+    downloadBlob('evidence-pass.html', evidencePassHtml(pack, { drafter: drafterOf(mode, prepared) }), 'text/html');
   }
 
   async function copyText(text) {
@@ -251,6 +267,7 @@ export function useActions(ws, ui) {
   return {
     addNotes,
     startSample,
+    startPrepared,
     startOwnApplication,
     decideFact,
     confirmFacts,

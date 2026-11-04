@@ -41,7 +41,7 @@ describe('R6 the manuscript head', () => {
   it('names the model that drafted the document, and never says Meta for another firm’s model', () => {
     const meta = { id: 'meta', label: 'Meta Muse Spark 1.3', model: 'muse-spark-1.3', isMeta: true };
     view({ mode: meta, receipts: [{ flow: 'read', model: 'other' }, { flow: 'draft', model: 'muse-spark-1.3' }] });
-    expect(stamp().textContent).toBe('Muse Spark 1.3 · Activity ›');
+    expect(stamp().textContent).toBe('Muse Spark · Activity ›');
     expect(stamp().getAttribute('aria-label')).toBe('Drafted by muse-spark-1.3 · What Meta did');
     cleanup();
     view({ mode: meta, receipts: [{ flow: 'draft', model: 'meta-models/muse-spark-open-1026' }] });

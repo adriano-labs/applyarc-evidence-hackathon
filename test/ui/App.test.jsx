@@ -75,6 +75,7 @@ describe('App', () => {
     const dialog = await screen.findByRole('dialog', { name: 'Your application pack' }, wait);
     expect(within(dialog).getByText('NOT SUBMITTED')).toBeTruthy();
     expect(within(dialog).getByText(/tested the fix my teammate Sam wrote/)).toBeTruthy();
+    expect(within(dialog).getByText('Demo: fictional applicant.')).toBeTruthy();
   }, 20000);
 
   it('opens the command menu with Ctrl K', async () => {

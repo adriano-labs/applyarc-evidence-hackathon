@@ -1,0 +1,3819 @@
+{
+  "host": "wonder",
+  "persona": "hannah",
+  "style": "notes that say only \"we\"",
+  "startedAt": "2026-11-03T13:48:33.012Z",
+  "completed": true,
+  "abortedAt": null,
+  "abortReason": null,
+  "steps": [
+    {
+      "name": "start fresh",
+      "startedAt": "2026-11-03T13:48:33.012Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/reset",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "add notes",
+      "startedAt": "2026-11-03T13:48:33.015Z",
+      "ms": 1,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "read the notes",
+      "startedAt": "2026-11-03T13:48:33.017Z",
+      "ms": 14187,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 4,
+          "attempts": 4,
+          "toolCalls": 16,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 13650,
+            "cached": 10192,
+            "output": 2907,
+            "reasoning": 933
+          },
+          "costUsd": 0.0740104,
+          "firstEventMs": 922,
+          "totalMs": 14183,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "confirm the facts",
+      "startedAt": "2026-11-03T13:48:47.208Z",
+      "ms": 28,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 2
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 1
+        }
+      ]
+    },
+    {
+      "name": "check what the form still needs",
+      "startedAt": "2026-11-03T13:48:47.236Z",
+      "ms": 2923,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "clarify",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2255,
+            "cached": 884,
+            "output": 433,
+            "reasoning": 346
+          },
+          "costUsd": 0.0143208,
+          "firstEventMs": 795,
+          "totalMs": 2917,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "answer the question",
+      "startedAt": "2026-11-03T13:48:50.161Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/answer",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the answer",
+      "startedAt": "2026-11-03T13:48:50.166Z",
+      "ms": 6818,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 4,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 7260,
+            "cached": 4956,
+            "output": 697,
+            "reasoning": 301
+          },
+          "costUsd": 0.0241472,
+          "firstEventMs": 950,
+          "totalMs": 6810,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "confirm the new facts",
+      "startedAt": "2026-11-03T13:48:56.988Z",
+      "ms": 7,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 4
+        },
+        {
+          "method": "POST",
+          "path": "/api/actions/decideFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "check again",
+      "startedAt": "2026-11-03T13:48:56.997Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [
+        "Every requirement is covered: no question needed"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/check",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "write both documents",
+      "startedAt": "2026-11-03T13:48:57.003Z",
+      "ms": 51297,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "draft",
+          "docId": "answer",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:272 of 300"
+          ],
+          "usage": {
+            "input": 7220,
+            "cached": 4200,
+            "output": 2418,
+            "reasoning": 1329
+          },
+          "costUsd": 0.06128,
+          "firstEventMs": 1337,
+          "totalMs": 23377,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:184 of 400"
+          ],
+          "usage": {
+            "input": 6562,
+            "cached": 4072,
+            "output": 2080,
+            "reasoning": 1201
+          },
+          "costUsd": 0.0523744,
+          "firstEventMs": 1334,
+          "totalMs": 28605,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3347,
+            "cached": 628,
+            "output": 580,
+            "reasoning": 363
+          },
+          "costUsd": 0.0226016,
+          "firstEventMs": 2076,
+          "totalMs": 5308,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 4064,
+            "cached": 628,
+            "output": 455,
+            "reasoning": 226
+          },
+          "costUsd": 0.0229696,
+          "firstEventMs": 913,
+          "totalMs": 3381,
+          "unsettled": 0
+        },
+        {
+          "step": "draft",
+          "docId": "letter",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 2,
+          "attempts": 2,
+          "toolCalls": 1,
+          "toolNotes": [
+            "word_count:196 of 400"
+          ],
+          "usage": {
+            "input": 6600,
+            "cached": 3944,
+            "output": 2243,
+            "reasoning": 1314
+          },
+          "costUsd": 0.0562728,
+          "firstEventMs": 1031,
+          "totalMs": 13238,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 3709,
+            "cached": 628,
+            "output": 590,
+            "reasoning": 380
+          },
+          "costUsd": 0.0242496,
+          "firstEventMs": 2988,
+          "totalMs": 6045,
+          "unsettled": 0
+        }
+      ],
+      "stages": [
+        "Adding your own contribution to the letter"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/draft",
+          "status": 200,
+          "ms": 5
+        }
+      ]
+    },
+    {
+      "name": "edit a sentence by hand",
+      "startedAt": "2026-11-03T13:49:48.303Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/edit",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer",
+      "startedAt": "2026-11-03T13:49:48.308Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter",
+      "startedAt": "2026-11-03T13:49:48.314Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "add the correcting note",
+      "startedAt": "2026-11-03T13:49:48.319Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/notes",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "read the correcting note",
+      "startedAt": "2026-11-03T13:49:48.323Z",
+      "ms": 9846,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "extract",
+          "model": "muse-wonder-1.0",
+          "effort": "low",
+          "turns": 3,
+          "attempts": 3,
+          "toolCalls": 3,
+          "toolNotes": [
+            "form_requirements:read",
+            "verify_quote:verbatim",
+            "verify_quote:verbatim"
+          ],
+          "usage": {
+            "input": 7375,
+            "cached": 5980,
+            "output": 960,
+            "reasoning": 636
+          },
+          "costUsd": 0.025976,
+          "firstEventMs": 1055,
+          "totalMs": 9840,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/read",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "correct the fact directly",
+      "startedAt": "2026-11-03T13:49:58.181Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/changeFact",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "propose the changes",
+      "startedAt": "2026-11-03T13:49:58.186Z",
+      "ms": 12945,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [
+        {
+          "step": "repair",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 2816,
+            "cached": 884,
+            "output": 920,
+            "reasoning": 870
+          },
+          "costUsd": 0.0263048,
+          "firstEventMs": 950,
+          "totalMs": 6322,
+          "unsettled": 0
+        },
+        {
+          "step": "review",
+          "model": "muse-wonder-1.0",
+          "effort": "medium",
+          "turns": 1,
+          "attempts": 1,
+          "toolCalls": 0,
+          "toolNotes": [],
+          "usage": {
+            "input": 1399,
+            "cached": 628,
+            "output": 849,
+            "reasoning": 763
+          },
+          "costUsd": 0.0201896,
+          "firstEventMs": 1407,
+          "totalMs": 6616,
+          "unsettled": 0
+        }
+      ],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/run/repair",
+          "status": 200,
+          "ms": 2
+        }
+      ]
+    },
+    {
+      "name": "decide what needs you",
+      "startedAt": "2026-11-03T13:50:11.134Z",
+      "ms": 0,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": []
+    },
+    {
+      "name": "apply the changes",
+      "startedAt": "2026-11-03T13:50:11.135Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/applyChanges",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the project answer again",
+      "startedAt": "2026-11-03T13:50:11.141Z",
+      "ms": 4,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "name": "approve the cover letter again",
+      "startedAt": "2026-11-03T13:50:11.146Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/approve",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "name": "export the pack",
+      "startedAt": "2026-11-03T13:50:11.150Z",
+      "ms": 3,
+      "ok": true,
+      "retries": 0,
+      "firstError": null,
+      "error": null,
+      "receipts": [],
+      "stages": [],
+      "http": [
+        {
+          "method": "POST",
+          "path": "/api/actions/export",
+          "status": 200,
+          "ms": 3
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "kind": "conflict-missed",
+      "note": "the correcting note raised no conflict; 2 fact(s) were proposed from it instead",
+      "proposed": [
+        "Aoife wrote the alert rules, not me.",
+        "I built the Grafana dashboards and ran the load tests."
+      ]
+    }
+  ],
+  "route": "missed-then-correct-fact",
+  "correctedFactId": "f15",
+  "intendedTargetId": "f15",
+  "questions": [
+    {
+      "id": "q1",
+      "requirementId": "contribution",
+      "text": "In your feature flag service project with Aoife, Dan and Priti, which parts did you personally build or work on?",
+      "status": "open",
+      "askedBy": "model"
+    }
+  ],
+  "skipped": [],
+  "snapshots": {
+    "facts": [
+      {
+        "id": "f1",
+        "statement": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+        "quote": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f2",
+        "statement": "They wanted to switch features on and off per customer group without redeploying.",
+        "quote": "They wanted to switch features on and off per customer group without redeploying.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f3",
+        "statement": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+        "quote": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and we deployed it to their existing Kubernetes cluster with Helm.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f4",
+        "statement": "We wrote SDKs for TypeScript and Python.",
+        "quote": "We wrote SDKs for their two languages, TypeScript and Python.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f5",
+        "statement": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+        "quote": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f6",
+        "statement": "We chose this because polling from a few hundred pods would have hammered the service, and changes were wanted within a second.",
+        "quote": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f7",
+        "statement": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+        "quote": "The problem we hit was that under load testing the service fell over at around 300 concurrent SSE connections.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f8",
+        "statement": "The cause was the ingress controller's default connection limits plus a per-pod file descriptor limit, not Go.",
+        "quote": "We assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f9",
+        "statement": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+        "quote": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f10",
+        "statement": "We raised the limits and added a connection count to our Grafana dashboards.",
+        "quote": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f11",
+        "statement": "We learned that \"the service fell over\" is rarely the service's fault alone and every hop must be checked.",
+        "quote": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f12",
+        "statement": "By the end we had it handling 2,000 connections in the load test, and the company put it into staging.",
+        "quote": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f13",
+        "statement": "We were four people: Aoife, Dan, Priti and me.",
+        "quote": "We were four people: Aoife, Dan, Priti and me.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f14",
+        "statement": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+        "quote": "Why Graphcore: we visited the Bristol office on a course trip, and the platform work was the part of our project we liked best.",
+        "sourceId": "s1",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f15",
+        "statement": "I built the Grafana dashboards.",
+        "quote": "I built the Grafana dashboards and the alert rules",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      },
+      {
+        "id": "f16",
+        "statement": "I ran the load tests that found the connection limit.",
+        "quote": "I ran the load tests that found the connection limit",
+        "sourceId": "s2",
+        "status": "confirmed",
+        "history": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "notes",
+        "text": "Final year group project, Edinburgh, October 2025 to April 2026. We built an internal feature flag service for a local travel booking company that sponsored the project. They wanted to switch features on and off per customer group without redeploying.\n\nWe used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and we deployed it to their existing Kubernetes cluster with Helm. We wrote SDKs for their two languages, TypeScript and Python.\n\nOur main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll. We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.\n\nThe problem we hit was that under load testing the service fell over at around 300 concurrent SSE connections. We assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit. We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections. We raised the limits and added a connection count to our Grafana dashboards so we would see it next time. We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.\n\nBy the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment. We were four people: Aoife, Dan, Priti and me.\n\nWhy Graphcore: we visited the Bristol office on a course trip, and the platform work was the part of our project we liked best.",
+        "at": "2026-11-03T13:48:33.016Z",
+        "read": true
+      },
+      {
+        "id": "s2",
+        "kind": "answer",
+        "text": "I built the Grafana dashboards and the alert rules, and I ran the load tests that found the connection limit.",
+        "at": "2026-11-03T13:48:50.162Z",
+        "questionId": "q1",
+        "read": true
+      }
+    ],
+    "drafted": {
+      "answer": {
+        "id": "answer",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "We built an internal feature flag service for a local travel booking company that sponsored the project, so they could switch features on and off per customer group without redeploying.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and deployed it to their existing Kubernetes cluster with Helm.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We also wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "Under load testing, the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We had assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "We were four people: Aoife, Dan, Priti and me.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I built the Grafana dashboards and the alert rules.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-14",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "They wanted to switch features on and off per customer group without redeploying.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "draftStats": {
+      "answer": {
+        "words": 272,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      },
+      "letter": {
+        "words": 196,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterFirstApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "beforeCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 2,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and deployed it to their existing Kubernetes cluster with Helm.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We also wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "Under load testing, the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We had assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "We were four people: Aoife, Dan, Priti and me.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I built the Grafana dashboards and the alert rules.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-14",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "They wanted to switch features on and off per customer group without redeploying.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "approvalsAfterNote": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "approvalsAfterCorrection": {
+      "answer": "none",
+      "letter": "none"
+    },
+    "afterCorrection": {
+      "answer": {
+        "id": "answer",
+        "revision": 3,
+        "segments": [
+          {
+            "id": "answer-1",
+            "kind": "claim",
+            "text": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project.",
+            "factIds": [
+              "f1",
+              "f2"
+            ],
+            "startsParagraph": true,
+            "author": "user"
+          },
+          {
+            "id": "answer-2",
+            "kind": "claim",
+            "text": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and deployed it to their existing Kubernetes cluster with Helm.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-3",
+            "kind": "claim",
+            "text": "We also wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-4",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-5",
+            "kind": "claim",
+            "text": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+            "factIds": [
+              "f6"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-6",
+            "kind": "claim",
+            "text": "Under load testing, the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-7",
+            "kind": "claim",
+            "text": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-8",
+            "kind": "claim",
+            "text": "We had assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+            "factIds": [
+              "f8"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-9",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-10",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-11",
+            "kind": "claim",
+            "text": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+            "factIds": [
+              "f11"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "answer-12",
+            "kind": "claim",
+            "text": "We were four people: Aoife, Dan, Priti and me.",
+            "factIds": [
+              "f13"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "answer-13",
+            "kind": "claim",
+            "text": "I built the Grafana dashboards, and Aoife wrote the alert rules.",
+            "factIds": [
+              "f15"
+            ],
+            "startsParagraph": false,
+            "author": "repair"
+          },
+          {
+            "id": "answer-14",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          }
+        ]
+      },
+      "letter": {
+        "id": "letter",
+        "revision": 1,
+        "segments": [
+          {
+            "id": "letter-1",
+            "kind": "frame",
+            "text": "Dear Graphcore hiring team,",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-2",
+            "kind": "frame",
+            "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-3",
+            "kind": "claim",
+            "text": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+            "factIds": [
+              "f14"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-4",
+            "kind": "claim",
+            "text": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+            "factIds": [
+              "f1"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-5",
+            "kind": "claim",
+            "text": "They wanted to switch features on and off per customer group without redeploying.",
+            "factIds": [
+              "f2"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-6",
+            "kind": "claim",
+            "text": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+            "factIds": [
+              "f3"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-7",
+            "kind": "claim",
+            "text": "We wrote SDKs for TypeScript and Python.",
+            "factIds": [
+              "f4"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-8",
+            "kind": "claim",
+            "text": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+            "factIds": [
+              "f5"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-9",
+            "kind": "claim",
+            "text": "I ran the load tests that found the connection limit.",
+            "factIds": [
+              "f16"
+            ],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-10",
+            "kind": "claim",
+            "text": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+            "factIds": [
+              "f7"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-11",
+            "kind": "claim",
+            "text": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+            "factIds": [
+              "f9"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-12",
+            "kind": "claim",
+            "text": "We raised the limits and added a connection count to our Grafana dashboards.",
+            "factIds": [
+              "f10"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-13",
+            "kind": "claim",
+            "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "factIds": [
+              "f12"
+            ],
+            "startsParagraph": false,
+            "author": "draft"
+          },
+          {
+            "id": "letter-14",
+            "kind": "frame",
+            "text": "Thank you for considering my application.",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          },
+          {
+            "id": "letter-15",
+            "kind": "frame",
+            "text": "Kind regards, Ellie",
+            "factIds": [],
+            "startsParagraph": true,
+            "author": "draft"
+          }
+        ]
+      }
+    },
+    "afterStats": {
+      "answer": {
+        "words": 271,
+        "wordLimit": 300,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 1
+      },
+      "letter": {
+        "words": 196,
+        "wordLimit": 400,
+        "overLimit": false,
+        "unanswered": [],
+        "leftOut": [],
+        "ownWords": 0
+      }
+    },
+    "approvalsAfterSecondApproval": {
+      "answer": "approved",
+      "letter": "approved"
+    },
+    "final": {
+      "schema": 1,
+      "revision": 36,
+      "createdAt": "2026-11-03T13:48:33.013Z",
+      "applicant": {
+        "name": "Ellie",
+        "sources": [
+          {
+            "id": "s1",
+            "kind": "notes",
+            "text": "Final year group project, Edinburgh, October 2025 to April 2026. We built an internal feature flag service for a local travel booking company that sponsored the project. They wanted to switch features on and off per customer group without redeploying.\n\nWe used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and we deployed it to their existing Kubernetes cluster with Helm. We wrote SDKs for their two languages, TypeScript and Python.\n\nOur main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll. We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.\n\nThe problem we hit was that under load testing the service fell over at around 300 concurrent SSE connections. We assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit. We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections. We raised the limits and added a connection count to our Grafana dashboards so we would see it next time. We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.\n\nBy the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment. We were four people: Aoife, Dan, Priti and me.\n\nWhy Graphcore: we visited the Bristol office on a course trip, and the platform work was the part of our project we liked best.",
+            "at": "2026-11-03T13:48:33.016Z",
+            "read": true
+          },
+          {
+            "id": "s2",
+            "kind": "answer",
+            "text": "I built the Grafana dashboards and the alert rules, and I ran the load tests that found the connection limit.",
+            "at": "2026-11-03T13:48:50.162Z",
+            "questionId": "q1",
+            "read": true
+          },
+          {
+            "id": "s3",
+            "kind": "notes",
+            "text": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+            "at": "2026-11-03T13:49:48.319Z",
+            "read": true
+          },
+          {
+            "id": "s4",
+            "kind": "correction",
+            "text": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+            "at": "2026-11-03T13:49:58.182Z"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f1",
+            "statement": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+            "quote": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f2",
+            "statement": "They wanted to switch features on and off per customer group without redeploying.",
+            "quote": "They wanted to switch features on and off per customer group without redeploying.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f3",
+            "statement": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+            "quote": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and we deployed it to their existing Kubernetes cluster with Helm.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f4",
+            "statement": "We wrote SDKs for TypeScript and Python.",
+            "quote": "We wrote SDKs for their two languages, TypeScript and Python.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f5",
+            "statement": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+            "quote": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f6",
+            "statement": "We chose this because polling from a few hundred pods would have hammered the service, and changes were wanted within a second.",
+            "quote": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f7",
+            "statement": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+            "quote": "The problem we hit was that under load testing the service fell over at around 300 concurrent SSE connections.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f8",
+            "statement": "The cause was the ingress controller's default connection limits plus a per-pod file descriptor limit, not Go.",
+            "quote": "We assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f9",
+            "statement": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+            "quote": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f10",
+            "statement": "We raised the limits and added a connection count to our Grafana dashboards.",
+            "quote": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f11",
+            "statement": "We learned that \"the service fell over\" is rarely the service's fault alone and every hop must be checked.",
+            "quote": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f12",
+            "statement": "By the end we had it handling 2,000 connections in the load test, and the company put it into staging.",
+            "quote": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f13",
+            "statement": "We were four people: Aoife, Dan, Priti and me.",
+            "quote": "We were four people: Aoife, Dan, Priti and me.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f14",
+            "statement": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+            "quote": "Why Graphcore: we visited the Bristol office on a course trip, and the platform work was the part of our project we liked best.",
+            "sourceId": "s1",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f15",
+            "statement": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+            "quote": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+            "sourceId": "s4",
+            "status": "confirmed",
+            "history": [
+              {
+                "statement": "I built the Grafana dashboards.",
+                "quote": "I built the Grafana dashboards and the alert rules",
+                "sourceId": "s2",
+                "at": "2026-11-03T13:49:58.182Z"
+              }
+            ]
+          },
+          {
+            "id": "f16",
+            "statement": "I ran the load tests that found the connection limit.",
+            "quote": "I ran the load tests that found the connection limit",
+            "sourceId": "s2",
+            "status": "confirmed",
+            "history": []
+          },
+          {
+            "id": "f17",
+            "statement": "Aoife wrote the alert rules, not the applicant.",
+            "quote": "Aoife wrote the alert rules, not me.",
+            "sourceId": "s3",
+            "status": "rejected",
+            "history": []
+          },
+          {
+            "id": "f18",
+            "statement": "I built the Grafana dashboards.",
+            "quote": "I built the Grafana dashboards and ran the load tests.",
+            "sourceId": "s3",
+            "status": "rejected",
+            "history": []
+          }
+        ]
+      },
+      "application": {
+        "form": {
+          "id": "graphcore-graduate-cloud-platform-engineer-2027",
+          "company": "Graphcore",
+          "role": "Graduate Cloud Platform Engineer 2027",
+          "location": "Bristol, UK",
+          "url": "https://job-boards.greenhouse.io/graphcore/jobs/8894977002",
+          "snapshot": {
+            "source": "https://boards-api.greenhouse.io/v1/boards/graphcore/jobs/8894977002?questions=true",
+            "fetchedAt": "2026-10-26T22:41:53Z",
+            "postingUpdatedAt": "2026-10-26T05:23:18-04:00",
+            "note": "Public Greenhouse form, fetched during the event. The employer is an example, not a partner or endorser."
+          },
+          "documents": [
+            {
+              "id": "answer",
+              "title": "Project answer",
+              "fieldId": "question_38884073002",
+              "question": "Tell us about a technical system or project you built, configured, automated or troubleshot. This could be a personal project, home lab, university assignment, hackathon or team project, involving hardware, software, networks or cloud services.\n\nIn your response, briefly explain:\n- What you were trying to achieve.\n- The main components or technologies you used.\n- One technical decision you made and why.\n- One problem you encountered, how you investigated it and what you learned.\n- Your individual contribution, if you worked as part of a team.\n\n(Max 300 words)",
+              "wordLimit": 300,
+              "requirements": [
+                {
+                  "id": "goal",
+                  "text": "What you were trying to achieve"
+                },
+                {
+                  "id": "tech",
+                  "text": "The main components or technologies you used"
+                },
+                {
+                  "id": "decision",
+                  "text": "One technical decision you made and why"
+                },
+                {
+                  "id": "problem",
+                  "text": "One problem you encountered, how you investigated it and what you learned"
+                },
+                {
+                  "id": "contribution",
+                  "text": "Your individual contribution, if you worked as part of a team",
+                  "personal": true
+                }
+              ],
+              "limitSource": "form"
+            },
+            {
+              "id": "letter",
+              "title": "Cover letter",
+              "fieldId": "cover_letter_text",
+              "question": "Cover Letter (required)",
+              "wordLimit": 400,
+              "requirements": [
+                {
+                  "id": "motivation",
+                  "text": "Why this role and this company, in your own words"
+                },
+                {
+                  "id": "evidence",
+                  "text": "The experience that shows you can do the job"
+                }
+              ],
+              "limitSource": "guide",
+              "limitNote": "The form sets no limit; 400 words is ApplyArc's guideline for a one-page letter."
+            }
+          ],
+          "portalTasks": [
+            "First Name",
+            "Last Name",
+            "Email",
+            "Phone",
+            "Resume/CV",
+            "Do you have the legal right to work in the UK without sponsorship?",
+            "Have you added your full legal name and surname (including any middle names)?",
+            "What is your predicted/final degree classification?",
+            "Please note this opportunity is based in our Bristol, UK office. Please confirm you are happy to proceed on this basis.",
+            "Would you need to relocate to work regularly from this office?",
+            "How did you first hear about Graphcore?",
+            "Please select your right to work status"
+          ]
+        },
+        "coverage": {
+          "goal": [
+            "f1",
+            "f2",
+            "f12"
+          ],
+          "evidence": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f18"
+          ],
+          "tech": [
+            "f3",
+            "f4",
+            "f15",
+            "f18"
+          ],
+          "decision": [
+            "f5",
+            "f6"
+          ],
+          "problem": [
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11",
+            "f12",
+            "f16"
+          ],
+          "contribution": [
+            "f13",
+            "f15",
+            "f16",
+            "f17",
+            "f18"
+          ],
+          "motivation": [
+            "f14"
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirementId": "contribution",
+            "text": "In your feature flag service project with Aoife, Dan and Priti, which parts did you personally build or work on?",
+            "why": "The form asks what you did yourself; your notes only describe the team.",
+            "status": "answered",
+            "askedBy": "model",
+            "sourceId": "s2"
+          }
+        ],
+        "documents": {
+          "answer": {
+            "id": "answer",
+            "revision": 3,
+            "segments": [
+              {
+                "id": "answer-1",
+                "kind": "claim",
+                "text": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project.",
+                "factIds": [
+                  "f1",
+                  "f2"
+                ],
+                "startsParagraph": true,
+                "author": "user"
+              },
+              {
+                "id": "answer-2",
+                "kind": "claim",
+                "text": "We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and deployed it to their existing Kubernetes cluster with Helm.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-3",
+                "kind": "claim",
+                "text": "We also wrote SDKs for TypeScript and Python.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-4",
+                "kind": "claim",
+                "text": "Our main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-5",
+                "kind": "claim",
+                "text": "We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.",
+                "factIds": [
+                  "f6"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-6",
+                "kind": "claim",
+                "text": "Under load testing, the service fell over at around 300 concurrent SSE connections.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-7",
+                "kind": "claim",
+                "text": "We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-8",
+                "kind": "claim",
+                "text": "We had assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit.",
+                "factIds": [
+                  "f8"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-9",
+                "kind": "claim",
+                "text": "We raised the limits and added a connection count to our Grafana dashboards so we would see it next time.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-10",
+                "kind": "claim",
+                "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-11",
+                "kind": "claim",
+                "text": "We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.",
+                "factIds": [
+                  "f11"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "answer-12",
+                "kind": "claim",
+                "text": "We were four people: Aoife, Dan, Priti and me.",
+                "factIds": [
+                  "f13"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "answer-13",
+                "kind": "claim",
+                "text": "I built the Grafana dashboards, and Aoife wrote the alert rules.",
+                "factIds": [
+                  "f15"
+                ],
+                "startsParagraph": false,
+                "author": "repair"
+              },
+              {
+                "id": "answer-14",
+                "kind": "claim",
+                "text": "I ran the load tests that found the connection limit.",
+                "factIds": [
+                  "f16"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              }
+            ]
+          },
+          "letter": {
+            "id": "letter",
+            "revision": 1,
+            "segments": [
+              {
+                "id": "letter-1",
+                "kind": "frame",
+                "text": "Dear Graphcore hiring team,",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-2",
+                "kind": "frame",
+                "text": "I am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-3",
+                "kind": "claim",
+                "text": "We visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best.",
+                "factIds": [
+                  "f14"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-4",
+                "kind": "claim",
+                "text": "We built an internal feature flag service for a local travel booking company that sponsored the project.",
+                "factIds": [
+                  "f1"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-5",
+                "kind": "claim",
+                "text": "They wanted to switch features on and off per customer group without redeploying.",
+                "factIds": [
+                  "f2"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-6",
+                "kind": "claim",
+                "text": "We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment.",
+                "factIds": [
+                  "f3"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-7",
+                "kind": "claim",
+                "text": "We wrote SDKs for TypeScript and Python.",
+                "factIds": [
+                  "f4"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-8",
+                "kind": "claim",
+                "text": "Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.",
+                "factIds": [
+                  "f5"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-9",
+                "kind": "claim",
+                "text": "I ran the load tests that found the connection limit.",
+                "factIds": [
+                  "f16"
+                ],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-10",
+                "kind": "claim",
+                "text": "Under load testing the service fell over at around 300 concurrent SSE connections.",
+                "factIds": [
+                  "f7"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-11",
+                "kind": "claim",
+                "text": "We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections.",
+                "factIds": [
+                  "f9"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-12",
+                "kind": "claim",
+                "text": "We raised the limits and added a connection count to our Grafana dashboards.",
+                "factIds": [
+                  "f10"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-13",
+                "kind": "claim",
+                "text": "By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.",
+                "factIds": [
+                  "f12"
+                ],
+                "startsParagraph": false,
+                "author": "draft"
+              },
+              {
+                "id": "letter-14",
+                "kind": "frame",
+                "text": "Thank you for considering my application.",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              },
+              {
+                "id": "letter-15",
+                "kind": "frame",
+                "text": "Kind regards, Ellie",
+                "factIds": [],
+                "startsParagraph": true,
+                "author": "draft"
+              }
+            ]
+          }
+        },
+        "repair": null,
+        "approvals": {
+          "answer": {
+            "revision": 3,
+            "at": "2026-11-03T13:50:11.141Z"
+          },
+          "letter": {
+            "revision": 1,
+            "at": "2026-11-03T13:50:11.146Z"
+          }
+        },
+        "exports": [
+          {
+            "id": "e1",
+            "at": "2026-11-03T13:50:11.150Z",
+            "revisions": {
+              "answer": 3,
+              "letter": 1
+            }
+          }
+        ],
+        "checked": [
+          "contribution"
+        ],
+        "lastRepair": {
+          "factId": "f15",
+          "at": "2026-11-03T13:50:11.136Z",
+          "changed": 1,
+          "kept": 0,
+          "docs": [
+            "answer"
+          ],
+          "changedSegments": [
+            {
+              "docId": "answer",
+              "segmentId": "answer-13"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-03T13:50:11.151Z"
+    }
+  },
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/reset",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/answer",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/check",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/draft",
+      "status": 200,
+      "ms": 5
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/edit",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/notes",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/read",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/decideFact",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/changeFact",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/run/repair",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/applyChanges",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/approve",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/actions/export",
+      "status": 200,
+      "ms": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/receipts",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "mode": {
+    "id": "meta",
+    "label": "Meta Muse Wonder 1.0",
+    "model": "muse-wonder-1.0",
+    "isMeta": true
+  },
+  "budgetStart": {
+    "capUsd": 10,
+    "spentUsd": 0.936305,
+    "reservedUsd": 0.507816,
+    "remainingUsd": 8.555879
+  },
+  "extraction": {
+    "accepted": 14,
+    "refused": [],
+    "conflict": false
+  },
+  "answered": {
+    "id": "q1",
+    "requirementId": "contribution",
+    "text": "In your feature flag service project with Aoife, Dan and Priti, which parts did you personally build or work on?",
+    "answer": "I built the Grafana dashboards and the alert rules, and I ran the load tests that found the connection limit."
+  },
+  "answerExtraction": {
+    "accepted": 2,
+    "refused": [
+      {
+        "quote": "I built the Grafana dashboards and the alert rules",
+        "reason": "Duplicate of an existing fact."
+      }
+    ],
+    "conflict": false
+  },
+  "coverage": [
+    {
+      "id": "goal",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f12"
+      ]
+    },
+    {
+      "id": "tech",
+      "covered": true,
+      "factIds": [
+        "f3",
+        "f4",
+        "f15"
+      ]
+    },
+    {
+      "id": "decision",
+      "covered": true,
+      "factIds": [
+        "f5",
+        "f6"
+      ]
+    },
+    {
+      "id": "problem",
+      "covered": true,
+      "factIds": [
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11",
+        "f12",
+        "f16"
+      ]
+    },
+    {
+      "id": "contribution",
+      "covered": true,
+      "factIds": [
+        "f13",
+        "f15",
+        "f16"
+      ]
+    },
+    {
+      "id": "motivation",
+      "covered": true,
+      "factIds": [
+        "f14"
+      ]
+    },
+    {
+      "id": "evidence",
+      "covered": true,
+      "factIds": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f7",
+        "f9",
+        "f10",
+        "f12"
+      ]
+    }
+  ],
+  "dropped": [],
+  "intendedTarget": {
+    "id": "f15",
+    "quote": "I built the Grafana dashboards and the alert rules",
+    "cited": true
+  },
+  "manual": {
+    "docId": "answer",
+    "segmentId": "answer-1",
+    "before": "We built an internal feature flag service for a local travel booking company that sponsored the project, so they could switch features on and off per customer group without redeploying.",
+    "factIds": [
+      "f1",
+      "f2"
+    ],
+    "text": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project."
+  },
+  "correctionExtraction": {
+    "accepted": 2,
+    "refused": [
+      {
+        "quote": "I built the Grafana dashboards and ran the load tests.",
+        "reason": "Duplicate of an existing fact."
+      }
+    ],
+    "conflict": false
+  },
+  "correctedFact": {
+    "id": "f15",
+    "statement": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+    "quote": "One correction: Aoife wrote the alert rules, not me. I built the Grafana dashboards and ran the load tests.",
+    "sourceId": "s4",
+    "status": "confirmed",
+    "history": [
+      {
+        "statement": "I built the Grafana dashboards.",
+        "quote": "I built the Grafana dashboards and the alert rules",
+        "sourceId": "s2",
+        "at": "2026-11-03T13:49:58.182Z"
+      }
+    ]
+  },
+  "repairItemsBefore": [
+    {
+      "id": "c1",
+      "docId": "answer",
+      "segmentId": "answer-13",
+      "before": "I built the Grafana dashboards and the alert rules.",
+      "after": null,
+      "afterFactIds": null,
+      "status": "pending",
+      "decision": null
+    }
+  ],
+  "repair": {
+    "items": [
+      {
+        "id": "c1",
+        "docId": "answer",
+        "segmentId": "answer-13",
+        "before": "I built the Grafana dashboards and the alert rules.",
+        "after": "I built the Grafana dashboards, and Aoife wrote the alert rules.",
+        "afterFactIds": [
+          "f15"
+        ],
+        "status": "proposed",
+        "decision": null
+      }
+    ],
+    "refused": []
+  },
+  "decisions": [],
+  "applied": {
+    "factId": "f15",
+    "at": "2026-11-03T13:50:11.136Z",
+    "changed": 1,
+    "kept": 0,
+    "docs": [
+      "answer"
+    ],
+    "changedSegments": [
+      {
+        "docId": "answer",
+        "segmentId": "answer-13"
+      }
+    ]
+  },
+  "export": {
+    "status": "NOT SUBMITTED",
+    "notice": "Prepared with ApplyArc Evidence. Nothing has been submitted. Paste each document into the employer’s form yourself and finish the steps below on the employer’s site.",
+    "documents": [
+      {
+        "id": "answer",
+        "words": 271,
+        "wordLimit": 300,
+        "ownWords": 1,
+        "notAnswered": [],
+        "text": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project. We used Go for the API, Postgres for the flag definitions, Redis for the cache the SDKs read from, and deployed it to their existing Kubernetes cluster with Helm. We also wrote SDKs for TypeScript and Python.\n\nOur main decision was to push flag changes to the SDKs over server-sent events rather than have the SDKs poll. We chose this because polling every few seconds from a few hundred pods would have hammered the service, and the company wanted changes to show up within a second.\n\nUnder load testing, the service fell over at around 300 concurrent SSE connections. We investigated by comparing the numbers in the ingress logs with what the service itself reported, and we found the service was never even seeing the extra connections. We had assumed it was Go, but it turned out to be the ingress controller's default connection limits plus a per-pod file descriptor limit. We raised the limits and added a connection count to our Grafana dashboards so we would see it next time. By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment. We learned that \"the service fell over\" is rarely the service's fault alone and you have to look at every hop.\n\nWe were four people: Aoife, Dan, Priti and me. I built the Grafana dashboards, and Aoife wrote the alert rules. I ran the load tests that found the connection limit."
+      },
+      {
+        "id": "letter",
+        "words": 196,
+        "wordLimit": 400,
+        "ownWords": 0,
+        "notAnswered": [],
+        "text": "Dear Graphcore hiring team,\n\nI am applying for the Graduate Cloud Platform Engineer 2027 role at Graphcore.\n\nWe visited the Graphcore Bristol office on a course trip, and platform work was the part of our project we liked best. We built an internal feature flag service for a local travel booking company that sponsored the project. They wanted to switch features on and off per customer group without redeploying. We used Go, Postgres, Redis, Kubernetes and Helm for the API, flag definitions, cache and deployment. We wrote SDKs for TypeScript and Python. Our main decision was to push flag changes over server-sent events rather than have the SDKs poll.\n\nI ran the load tests that found the connection limit. Under load testing the service fell over at around 300 concurrent SSE connections. We investigated by comparing ingress log numbers with service reports and found the service was not seeing the extra connections. We raised the limits and added a connection count to our Grafana dashboards. By the end we had it handling 2,000 connections in the load test, and the company put it into a staging environment.\n\nThank you for considering my application.\n\nKind regards, Ellie"
+      }
+    ]
+  },
+  "budgetEnd": {
+    "capUsd": 10,
+    "spentUsd": 1.911725,
+    "reservedUsd": 0.579468,
+    "remainingUsd": 7.508807
+  },
+  "receipts": [
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 4,
+      "attempts": 4,
+      "requestIds": [
+        "98d57bcc-99df-4762-aa1e-ad3b892fb8ec",
+        "629f29ad-f61b-458c-994c-0dbe89682ab5",
+        "d76f9ea0-4d65-43e1-9da9-08d00a06946b",
+        "f752988f-55b0-4218-8883-75e5951df2f3"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 13650,
+        "cached": 10192,
+        "output": 2907,
+        "reasoning": 933
+      },
+      "costUsd": 0.0740104,
+      "firstEventMs": 922,
+      "firstOutputMs": 1512,
+      "totalMs": 14183,
+      "rateLimit": {
+        "remainingRequests": 2972,
+        "remainingTokens": 3936516
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:48:47.201Z"
+    },
+    {
+      "step": "clarify",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "b8f8efbf-d14f-42ac-87a1-ee1ac7c6adce"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2255,
+        "cached": 884,
+        "output": 433,
+        "reasoning": 346
+      },
+      "costUsd": 0.0143208,
+      "firstEventMs": 795,
+      "firstOutputMs": 2668,
+      "totalMs": 2917,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3934421
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "check",
+      "at": "2026-11-03T13:48:50.154Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "7d8a09c7-5158-4f81-bc78-b309fee13efa",
+        "d6cfdc8e-0ec7-497a-91fd-8fc4f8d94491",
+        "fc6d0ce6-8a0e-41e5-b66d-b16822e28202"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 7260,
+        "cached": 4956,
+        "output": 697,
+        "reasoning": 301
+      },
+      "costUsd": 0.0241472,
+      "firstEventMs": 950,
+      "firstOutputMs": 1726,
+      "totalMs": 6810,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3931905
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:48:56.977Z"
+    },
+    {
+      "step": "draft",
+      "docId": "answer",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "b7781565-72e3-474d-9f38-4b875b16f3a4",
+        "a7cd459d-6c5a-4b3c-b680-fad37f58eaab"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "272 of 300"
+        }
+      ],
+      "usage": {
+        "input": 7220,
+        "cached": 4200,
+        "output": 2418,
+        "reasoning": 1329
+      },
+      "costUsd": 0.06128,
+      "firstEventMs": 1337,
+      "firstOutputMs": 10508,
+      "totalMs": 23377,
+      "rateLimit": {
+        "remainingRequests": 2970,
+        "remainingTokens": 3934337
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:20.381Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "97270efa-08fa-4931-b1b0-7c81c8225582",
+        "661baa0e-34cf-4b9b-856c-890a89799bc7"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "184 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6562,
+        "cached": 4072,
+        "output": 2080,
+        "reasoning": 1201
+      },
+      "costUsd": 0.0523744,
+      "firstEventMs": 1334,
+      "firstOutputMs": 8705,
+      "totalMs": 28605,
+      "rateLimit": {
+        "remainingRequests": 2971,
+        "remainingTokens": 3938164
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:25.611Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "afd12820-301f-46fd-94a6-08f448d37a40"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3347,
+        "cached": 628,
+        "output": 580,
+        "reasoning": 363
+      },
+      "costUsd": 0.0226016,
+      "firstEventMs": 2076,
+      "firstOutputMs": 4546,
+      "totalMs": 5308,
+      "rateLimit": {
+        "remainingRequests": 2973,
+        "remainingTokens": 3945006
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:25.692Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "61c571f5-bce8-47f8-abab-b45caad1871e"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 4064,
+        "cached": 628,
+        "output": 455,
+        "reasoning": 226
+      },
+      "costUsd": 0.0229696,
+      "firstEventMs": 913,
+      "firstOutputMs": 2467,
+      "totalMs": 3381,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3946930
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:28.995Z"
+    },
+    {
+      "step": "draft",
+      "docId": "letter",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 2,
+      "attempts": 2,
+      "requestIds": [
+        "66d26869-f23e-4c35-85e9-e5087d74fa60",
+        "c10ebad1-e813-44c7-a371-075c788f6787"
+      ],
+      "toolCalls": [
+        {
+          "name": "word_count",
+          "ok": true,
+          "note": "196 of 400"
+        }
+      ],
+      "usage": {
+        "input": 6600,
+        "cached": 3944,
+        "output": 2243,
+        "reasoning": 1314
+      },
+      "costUsd": 0.0562728,
+      "firstEventMs": 1031,
+      "firstOutputMs": 6410,
+      "totalMs": 13238,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3940069
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:42.240Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "dc071cf7-79e2-4d86-a8c5-a3fabec87390"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 3709,
+        "cached": 628,
+        "output": 590,
+        "reasoning": 380
+      },
+      "costUsd": 0.0242496,
+      "firstEventMs": 2988,
+      "firstOutputMs": 5267,
+      "totalMs": 6045,
+      "rateLimit": {
+        "remainingRequests": 2975,
+        "remainingTokens": 3940960
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "draft",
+      "at": "2026-11-03T13:49:48.288Z"
+    },
+    {
+      "step": "extract",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "low",
+      "turns": 3,
+      "attempts": 3,
+      "requestIds": [
+        "de46c2a1-4410-49ed-8cbb-21380f15f1cb",
+        "22874a25-166f-4700-8b87-8819b31ac1fd",
+        "d071282e-8836-4464-a16e-eb7b94e1031c"
+      ],
+      "toolCalls": [
+        {
+          "name": "form_requirements",
+          "ok": true,
+          "note": "read"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        },
+        {
+          "name": "verify_quote",
+          "ok": true,
+          "note": "verbatim"
+        }
+      ],
+      "usage": {
+        "input": 7375,
+        "cached": 5980,
+        "output": 960,
+        "reasoning": 636
+      },
+      "costUsd": 0.025976,
+      "firstEventMs": 1055,
+      "firstOutputMs": 3028,
+      "totalMs": 9840,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3937570
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "read",
+      "at": "2026-11-03T13:49:58.163Z"
+    },
+    {
+      "step": "repair",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "6d0fef3c-087e-4702-9d40-8a23e0841958"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 2816,
+        "cached": 884,
+        "output": 920,
+        "reasoning": 870
+      },
+      "costUsd": 0.0263048,
+      "firstEventMs": 950,
+      "firstOutputMs": 6178,
+      "totalMs": 6322,
+      "rateLimit": {
+        "remainingRequests": 2972,
+        "remainingTokens": 3940490
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:50:04.509Z"
+    },
+    {
+      "step": "review",
+      "provider": "meta",
+      "isMeta": true,
+      "model": "muse-wonder-1.0",
+      "host": "api.meta.ai",
+      "effort": "medium",
+      "turns": 1,
+      "attempts": 1,
+      "requestIds": [
+        "3f1362db-c994-41b5-8ea8-ac9401904ee0"
+      ],
+      "toolCalls": [],
+      "usage": {
+        "input": 1399,
+        "cached": 628,
+        "output": 849,
+        "reasoning": 763
+      },
+      "costUsd": 0.0201896,
+      "firstEventMs": 1407,
+      "firstOutputMs": 6157,
+      "totalMs": 6616,
+      "rateLimit": {
+        "remainingRequests": 2974,
+        "remainingTokens": 3946165
+      },
+      "unsettled": 0,
+      "injectedFaults": 0,
+      "flow": "repair",
+      "at": "2026-11-03T13:50:11.127Z"
+    }
+  ],
+  "endedAt": "2026-11-03T13:50:11.155Z",
+  "invariants": {
+    "quotesVerbatim": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "confirmed": 16,
+        "notInOwnSource": [],
+        "notInAnySource": []
+      }
+    },
+    "withinLimits": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "atExport": {
+          "answer": "271/300",
+          "letter": "196/400"
+        },
+        "afterDraft": {
+          "answer": "272/300",
+          "letter": "196/400"
+        },
+        "over": [],
+        "overDraft": []
+      }
+    },
+    "citationsConfirmed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "sentences": 29,
+        "badCitations": [],
+        "uncitedClaims": []
+      }
+    },
+    "onlyCitingSentencesChanged": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "changed": [
+          "answer/answer-13"
+        ],
+        "changedWithoutCitingTheFact": [],
+        "sameStructure": true,
+        "repairOpened": true
+      }
+    },
+    "manualSentenceIntact": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "expected": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project.",
+        "afterCorrection": "Between October 2025 and April 2026, four of us in Edinburgh built a feature flag service for a local travel booking company that sponsored our final-year project.",
+        "author": "user",
+        "normalisedByApp": true
+      }
+    },
+    "approvalsClearedAndRenewed": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "afterFirstApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        },
+        "afterCorrectingNote": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterCorrection": {
+          "answer": "none",
+          "letter": "none"
+        },
+        "afterSecondApproval": {
+          "answer": "approved",
+          "letter": "approved"
+        }
+      }
+    },
+    "exportNotSubmitted": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "status": "NOT SUBMITTED"
+      }
+    },
+    "noServerErrors": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "http5xx": [],
+        "streamed5xxClass": [],
+        "unhandled": 0
+      }
+    },
+    "noUncitedNumbers": {
+      "pass": true,
+      "evaluable": true,
+      "detail": {
+        "checked": 24,
+        "flagged": []
+      }
+    }
+  },
+  "metrics": {
+    "steps": 22,
+    "stepRetries": 0,
+    "providerAttempts": 22,
+    "providerTurns": 22,
+    "toolCalls": 26,
+    "receipts": 12,
+    "receiptErrors": 0,
+    "usage": {
+      "input": 66257,
+      "cached": 37624,
+      "output": 15132,
+      "reasoning": 8662
+    },
+    "costReceiptsUsd": 0.4246968,
+    "costUnknownReceipts": 0,
+    "costLedgerUsd": 0.97542,
+    "wallMs": 98143,
+    "modelStepMs": {
+      "read the notes": 14187,
+      "check what the form still needs": 2923,
+      "read the answer": 6818,
+      "write both documents": 51297,
+      "read the correcting note": 9846,
+      "propose the changes": 12945
+    },
+    "medianModelStepMs": 11395.5,
+    "worstModelStep": "write both documents",
+    "worstModelStepMs": 51297
+  }
+}
