@@ -65,3 +65,5 @@
 @media (prefers-reduced-motion: reduce) {
   .working-stroke::after { animation: none; }
 }
+
+.working-wait { font-size: 0.9rem; opacity: 0.85; }

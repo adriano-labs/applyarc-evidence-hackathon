@@ -145,3 +145,7 @@
     display: none;
   }
 }
+
+/* Start again, armed: the second press clears everything (4 Nov). */
+.topbar-btn.danger { border-color: #b42318; color: #b42318; font-weight: 600; }
+.reset-confirm { color: #b42318; font-size: 0.85rem; font-weight: 600; margin-right: 0.5rem; }

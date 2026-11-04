@@ -378,3 +378,6 @@ button.guided-step:focus-visible {
 @media (max-width: 560px) {
   .guided-main { width: 100%; min-height: 44px; }
 }
+
+.guided-coverage { font-weight: 600; margin: 0.5rem 0; }
+.guided-open-point { margin: 1rem 0; }

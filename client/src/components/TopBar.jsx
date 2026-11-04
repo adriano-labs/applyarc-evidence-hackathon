@@ -14,7 +14,7 @@ function getModeBadgeText(mode) {
 // Muse Spark Open's licence requires this notice to be shown prominently.
 const builtWithSparkOpen = (mode) => mode?.id === 'compatible' && /muse-spark-open/i.test(mode?.model ?? '');
 
-export function TopBar({ company, role, mode, onCommands, onReset, onReceipts, earlier, receipts = [] }) {
+export function TopBar({ company, role, mode, onCommands, onReset, onReceipts, earlier, receipts = [], resetArmed = false }) {
   const modeText = getModeBadgeText(mode);
   const modeClass = mode.id === 'fixture' ? 'mode fixture' : mode.isMeta ? 'mode meta' : 'mode ' + mode.id;
   const earlierCount = typeof earlier === 'number' ? earlier : 0;
@@ -74,7 +74,8 @@ export function TopBar({ company, role, mode, onCommands, onReset, onReceipts, e
           <Command size={14} aria-hidden="true" />
           <kbd>K</kbd>
         </button>
-        <button type="button" className="topbar-btn" onClick={onReset}>
+        {resetArmed ? <span className="reset-confirm" role="alert">Press Start again once more to clear everything</span> : null}
+        <button type="button" className={resetArmed ? 'topbar-btn danger' : 'topbar-btn'} onClick={onReset}>
           Start again
         </button>
       </div>

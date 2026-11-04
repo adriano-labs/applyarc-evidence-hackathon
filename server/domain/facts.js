@@ -45,8 +45,17 @@ function link(ws, factId, requirementIds) {
 function linkable(ws, source, requirementId) {
   const requirement = requirements(ws).find((r) => r.id === requirementId);
   if (!requirement?.direct) return true;
-  return ws.application.questions.some((q) => q.id === source?.questionId && q.requirementId === requirementId);
+  return answersItsQuestion(ws, source, requirementId);
 }
+
+const answersItsQuestion = (ws, source, requirementId) =>
+  ws.application.questions.some((q) => q.id === source?.questionId && q.requirementId === requirementId);
+
+// A point whose fact was corrected stays Needs review until the applicant answers its question:
+// the model may not cover it again with another fact (the open link re-linked "3 years in a care
+// home" to evenings and weekends on 4 Nov). Only her answer to that point's own question covers it.
+const reopened = (ws, source, requirementId) =>
+  (ws.application.coverageReview?.[requirementId]?.length ?? 0) > 0 && !answersItsQuestion(ws, source, requirementId);
 
 // Proposals come from the model; only those quoting the source verbatim enter
 // the workspace, and they enter as "proposed" until the applicant decides.
@@ -73,7 +82,7 @@ export function proposeFacts(ws, sourceId, proposals) {
     // In another language the statement is the English meaning, and the actor says who did it.
     if (!isEnglish(source)) Object.assign(fact, { language: source.language, actor: proposal.actor });
     ws.applicant.facts.push(fact);
-    link(ws, fact.id, (proposal.requirementIds ?? []).filter((id) => known.has(id) && linkable(ws, source, id)));
+    link(ws, fact.id, (proposal.requirementIds ?? []).filter((id) => known.has(id) && linkable(ws, source, id) && !reopened(ws, source, id)));
     accepted.push(fact.id);
   }
   return { accepted, refused };
@@ -187,6 +196,10 @@ export function linkFacts(ws, links) {
         continue;
       }
       if (list.includes(factId)) {
+        continue;
+      }
+      if (reopened(ws, findSource(ws, fact.sourceId), requirementId)) {
+        refused.push({ requirementId, factId, reason: 'A fact this point relied on was corrected; only the applicant’s answer to its question covers it again.' });
         continue;
       }
       link(ws, factId, [requirementId]);

@@ -1,6 +1,6 @@
 # Build log
 
-Commit times (UTC) and subjects from the private development repository, oldest first: 272 commits from `925f815` to `038f56f`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
+Commit times (UTC) and subjects from the private development repository, oldest first: 277 commits from `925f815` to `34c1b5c`. The history itself stays private; the organisers may ask to see it. Subjects that name a development-only third-party service are withheld and marked; nothing else is edited.
 
 | Day (UTC) | Commits |
 |---|---:|
@@ -12,7 +12,7 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-10-31 | 1 |
 | 2026-11-02 | 31 |
 | 2026-11-03 | 62 |
-| 2026-11-04 | 32 |
+| 2026-11-04 | 37 |
 
 | Time (UTC) | Commit | Subject |
 |---|---|---|
@@ -288,3 +288,8 @@ Commit times (UTC) and subjects from the private development repository, oldest 
 | 2026-11-04 15:37 | `4fed839` | Docs: both live links now run 6fa948a |
 | 2026-11-04 15:37 | `48ee98c` | docs: regenerate the build log |
 | 2026-11-04 15:43 | `038f56f` | Docs: quotes checked against the transcript you reviewed; current test count |
+| 2026-11-04 15:43 | `9d08bf4` | docs: regenerate the build log |
+| 2026-11-04 15:55 | `0cde37a` | Judge flow: a clear next step after the correction, the covered count with the point that needs review, a visible Start again confirm, and a still-working line |
+| 2026-11-04 16:08 | `6f8c212` | Count the form's requirements apart from the optional cover-letter check |
+| 2026-11-04 16:29 | `3ee23f2` | A corrected point stays Needs review: the model may not cover it with another fact until the applicant answers its question |
+| 2026-11-04 16:38 | `34c1b5c` | Docs: both live links now run 3ee23f2 |
